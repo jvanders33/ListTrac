@@ -23,6 +23,7 @@ CREATE TABLE player (
     draft_pick_id INTEGER REFERENCES draft_pick(id),
     afl_tables_id TEXT,                -- external ID for reconciliation
     footywire_id TEXT,
+    draftguru_id TEXT,                 -- /players/{slug}/{n} path from draftguru
     status TEXT CHECK (status IN ('listed','delisted','retired','unattached')) NOT NULL DEFAULT 'listed'
 );
 
