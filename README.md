@@ -17,9 +17,28 @@ AFL player movement, list, contract-status, and draft tracker — Spotrac/Tankat
 ## Data sources
 - AFL Tables (afltables.com) — historical player/club data
 - Footywire — current squads, stats
+- Draftguru (draftguru.com.au) — historical drafts, trades, lists by year
+- Zerohanger + AFL.com.au — contract status / free agent lists
 - Squiggle API (squiggle.com.au) — ladder/standings, proper public API
 - Manual/reporter-sourced — trades, draft picks, contract status
+
+## Roadmap: v1.5 — fantasy context layer
+Fantasy-as-context, not fantasy-tools. FanFooty owns live scoring, planners,
+projections, and editorial player news — don't compete there. ListTrac's wedge
+is fantasy data alongside the structural layer nobody else has: contract
+status, FA class, trade history, draft pedigree on the same player page.
+
+- `fantasy_score` table: player_id, year, round, sc_points, af_points,
+  af_price, breakeven
+- FootyWire scraper for SC/AF points per round (fitzRoy has a reference
+  implementation; doubles as the footywire_id reconciliation source)
+- AFL Fantasy JSON feed for prices/ownership
+- Generated "player notes" view merging scoring trends with movement/contract
+  flags — e.g. "off-contract 2026, restricted FA, SC average up 18 on last
+  year". Data-driven blurbs only; no editorial, no live scores.
+- FanFooty is a competitor reference, not a data source (proprietary feed)
 
 ## Non-goals (v1)
 - Contract dollar values (no public source, don't fabricate)
 - NRL/NBL support (planned expansion, not v1)
+- Live fantasy scoring, team planners, projections (FanFooty's turf — see v1.5)
