@@ -9,10 +9,17 @@ AFL player movement, list, contract-status, and draft tracker — Spotrac/Tankat
 - Contract status board (status only — no salary figures; AFL doesn't disclose these)
 
 ## Structure
-- `scraper/` — data ingestion (AFL Tables, Footywire, Squiggle API)
-- `data/` — schema + normalized data store
+- `scraper/` — data ingestion (AFL Tables, Draftguru, Zerohanger, AFL.com.au, Squiggle API)
+- `data/` — schema.sql + load.py (builds listtrac.db from the scrapers via identity.py)
+- `api/` — FastAPI read API over the SQLite DB (`uvicorn api.app:app`)
 - `admin/` — manual entry tool for trades/contract status (no clean public source exists)
 - `web/` — frontend
+
+## News spotlights (web layer)
+Aggregate existing contract/trade/free-agency coverage, Spotrac-spotlights
+style: headline + source + link out only. Paywalled/firewalled pieces get
+linked like everything else — never reproduced or summarized around the
+paywall.
 
 ## Data sources
 - AFL Tables (afltables.com) — historical player/club data

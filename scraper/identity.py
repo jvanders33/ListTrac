@@ -20,25 +20,25 @@ import unicodedata
 
 # canonical club name -> how each source refers to it
 CLUBS: dict[str, dict[str, str]] = {
-    "Adelaide":               {"afltables": "Adelaide",               "draftguru": "adelaide",               "zerohanger": "Adelaide"},
-    "Brisbane":               {"afltables": "Brisbane Lions",         "draftguru": "brisbane",               "zerohanger": "Brisbane"},
-    "Carlton":                {"afltables": "Carlton",                "draftguru": "carlton",                "zerohanger": "Carlton"},
-    "Collingwood":            {"afltables": "Collingwood",            "draftguru": "collingwood",            "zerohanger": "Collingwood"},
-    "Essendon":               {"afltables": "Essendon",               "draftguru": "essendon",               "zerohanger": "Essendon"},
-    "Fremantle":              {"afltables": "Fremantle",              "draftguru": "fremantle",              "zerohanger": "Fremantle"},
-    "Geelong":                {"afltables": "Geelong",                "draftguru": "geelong",                "zerohanger": "Geelong"},
-    "Gold Coast":             {"afltables": "Gold Coast",             "draftguru": "gold-coast",             "zerohanger": "Gold Coast"},
-    "Greater Western Sydney": {"afltables": "Greater Western Sydney", "draftguru": "greater-western-sydney", "zerohanger": "GWS"},
-    "Hawthorn":               {"afltables": "Hawthorn",               "draftguru": "hawthorn",               "zerohanger": "Hawthorn"},
-    "Melbourne":              {"afltables": "Melbourne",              "draftguru": "melbourne",              "zerohanger": "Melbourne"},
-    "North Melbourne":        {"afltables": "North Melbourne",        "draftguru": "north-melbourne",        "zerohanger": "North Melbourne"},
-    "Port Adelaide":          {"afltables": "Port Adelaide",          "draftguru": "port-adelaide",          "zerohanger": "Port Adelaide"},
-    "Richmond":               {"afltables": "Richmond",               "draftguru": "richmond",               "zerohanger": "Richmond"},
-    "St Kilda":               {"afltables": "St Kilda",               "draftguru": "st-kilda",               "zerohanger": "St Kilda"},
-    "Sydney":                 {"afltables": "Sydney",                 "draftguru": "sydney",                 "zerohanger": "Sydney"},
-    "Tasmania":               {"afltables": "Tasmania",               "draftguru": "tasmania",               "zerohanger": "Tasmania"},
-    "West Coast":             {"afltables": "West Coast",             "draftguru": "west-coast",             "zerohanger": "West Coast"},
-    "Western Bulldogs":       {"afltables": "Western Bulldogs",       "draftguru": "western-bulldogs",       "zerohanger": "Bulldogs"},
+    "Adelaide":               {"abbrev": "ADE", "afltables": "Adelaide",               "draftguru": "adelaide",               "zerohanger": "Adelaide"},
+    "Brisbane":               {"abbrev": "BRI", "afltables": "Brisbane Lions",         "draftguru": "brisbane",               "zerohanger": "Brisbane"},
+    "Carlton":                {"abbrev": "CAR", "afltables": "Carlton",                "draftguru": "carlton",                "zerohanger": "Carlton"},
+    "Collingwood":            {"abbrev": "COL", "afltables": "Collingwood",            "draftguru": "collingwood",            "zerohanger": "Collingwood"},
+    "Essendon":               {"abbrev": "ESS", "afltables": "Essendon",               "draftguru": "essendon",               "zerohanger": "Essendon"},
+    "Fremantle":              {"abbrev": "FRE", "afltables": "Fremantle",              "draftguru": "fremantle",              "zerohanger": "Fremantle"},
+    "Geelong":                {"abbrev": "GEE", "afltables": "Geelong",                "draftguru": "geelong",                "zerohanger": "Geelong"},
+    "Gold Coast":             {"abbrev": "GCS", "afltables": "Gold Coast",             "draftguru": "gold-coast",             "zerohanger": "Gold Coast"},
+    "Greater Western Sydney": {"abbrev": "GWS", "afltables": "Greater Western Sydney", "draftguru": "greater-western-sydney", "zerohanger": "GWS"},
+    "Hawthorn":               {"abbrev": "HAW", "afltables": "Hawthorn",               "draftguru": "hawthorn",               "zerohanger": "Hawthorn"},
+    "Melbourne":              {"abbrev": "MEL", "afltables": "Melbourne",              "draftguru": "melbourne",              "zerohanger": "Melbourne"},
+    "North Melbourne":        {"abbrev": "NM", "afltables": "North Melbourne",        "draftguru": "north-melbourne",        "zerohanger": "North Melbourne"},
+    "Port Adelaide":          {"abbrev": "PA", "afltables": "Port Adelaide",          "draftguru": "port-adelaide",          "zerohanger": "Port Adelaide"},
+    "Richmond":               {"abbrev": "RIC", "afltables": "Richmond",               "draftguru": "richmond",               "zerohanger": "Richmond"},
+    "St Kilda":               {"abbrev": "STK", "afltables": "St Kilda",               "draftguru": "st-kilda",               "zerohanger": "St Kilda"},
+    "Sydney":                 {"abbrev": "SYD", "afltables": "Sydney",                 "draftguru": "sydney",                 "zerohanger": "Sydney"},
+    "Tasmania":               {"abbrev": "TAS", "afltables": "Tasmania",               "draftguru": "tasmania",               "zerohanger": "Tasmania"},
+    "West Coast":             {"abbrev": "WCE", "afltables": "West Coast",             "draftguru": "west-coast",             "zerohanger": "West Coast"},
+    "Western Bulldogs":       {"abbrev": "WB", "afltables": "Western Bulldogs",       "draftguru": "western-bulldogs",       "zerohanger": "Bulldogs"},
 }
 
 
@@ -60,7 +60,9 @@ def normalize_name(name: str) -> str:
     # AFL Tables drops apostrophes entirely ("OBrien") — remove rather than
     # split so O'Brien normalizes identically from every source
     name = name.replace("'", "").replace("’", "")
-    return re.sub(r"[^a-z]+", " ", name.lower()).strip()
+    norm = re.sub(r"[^a-z]+", " ", name.lower()).strip()
+    # generational suffixes appear inconsistently across sources ("Hansen Jr")
+    return re.sub(r"\s+(jr|snr|sr|jnr)$", "", norm)
 
 
 def _initial_key(norm: str) -> str:

@@ -39,7 +39,8 @@ CREATE TABLE contract_status (
     is_current BOOLEAN NOT NULL DEFAULT 1   -- flip to 0 when superseded; keep history
 );
 
-CREATE TABLE transaction (
+-- named player_transaction because TRANSACTION is a SQL reserved word
+CREATE TABLE player_transaction (
     id INTEGER PRIMARY KEY,
     player_id INTEGER NOT NULL REFERENCES player(id),
     type TEXT CHECK (type IN ('trade','delist','retire','sign_fa','rookie_elevate','sign_rookie')) NOT NULL,
@@ -65,15 +66,18 @@ CREATE TABLE draft_pick (
 
 CREATE TABLE draft_pick_trade_history (
     id INTEGER PRIMARY KEY,
-    draft_pick_id INTEGER NOT NULL REFERENCES draft_pick(id),
+    -- NULL when a traded future pick can't be tied to a specific selection
+    -- (lapsed, passed, or unresolved at scrape time) — description keeps the raw text
+    draft_pick_id INTEGER REFERENCES draft_pick(id),
+    description TEXT,
     from_club_id INTEGER NOT NULL REFERENCES club(id),
     to_club_id INTEGER NOT NULL REFERENCES club(id),
-    transaction_id INTEGER REFERENCES transaction(id),
+    transaction_id INTEGER REFERENCES player_transaction(id),
     date DATE NOT NULL
 );
 
 -- Indexes for the lookups the UI will hammer
 CREATE INDEX idx_player_current_club ON player(current_club_id);
 CREATE INDEX idx_contract_status_player ON contract_status(player_id, is_current);
-CREATE INDEX idx_transaction_player ON transaction(player_id);
+CREATE INDEX idx_transaction_player ON player_transaction(player_id);
 CREATE INDEX idx_draft_pick_year ON draft_pick(year, draft_type);
