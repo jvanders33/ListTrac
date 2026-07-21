@@ -153,7 +153,8 @@ async function landingView() {
             <thead><tr><th class="num">Pick</th><th>Club</th><th class="num">W–L</th><th class="num">%</th></tr></thead>
             <tbody>${order.picks.slice(0, 8).map(p => `
               <tr><td class="num"><b>${p.pick}</b></td>
-                <td><i class="dot" style="background:${esc(p.primary_color || "#888")}"></i>${esc(p.club)}</td>
+                <td><i class="dot" style="background:${esc(p.primary_color || "#888")}"></i>${esc(p.club)}
+                  ${p.via ? `<span class="chip warn">via ${esc(p.via)}</span>` : ""}</td>
                 <td class="num">${p.wins}–${p.losses}</td><td class="num">${p.percentage}</td></tr>`).join("")}
             </tbody>
           </table></div>
@@ -817,6 +818,7 @@ async function playerView(id) {
           ${p.jumper_number ? `<div><dt>Guernsey</dt><dd>#${p.jumper_number}</dd></div>` : ""}
           ${p.drafted ? `<div><dt>Drafted</dt><dd>${p.drafted.year} ${esc(p.drafted.draft_type)}${p.drafted.pick_number ? " · Pick " + p.drafted.pick_number : ""}</dd></div>
           <div><dt>Drafted by</dt><dd>${esc(p.drafted.club)}</dd></div>` : ""}
+          ${current && current.contracted_through_year ? `<div><dt>Contracted through</dt><dd>${current.contracted_through_year}</dd></div>` : ""}
         </dl>
       </div>
     </div>
