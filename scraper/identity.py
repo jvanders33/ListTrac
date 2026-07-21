@@ -18,6 +18,29 @@ ties at load time.
 import re
 import unicodedata
 
+# canonical club name -> guernsey colours (primary, secondary) for UI chrome
+CLUB_COLORS: dict[str, tuple[str, str]] = {
+    "Adelaide":               ("#002B5C", "#FFD200"),
+    "Brisbane":               ("#69163A", "#FDBE57"),
+    "Carlton":                ("#031A29", "#E9EDF0"),
+    "Collingwood":            ("#101010", "#E9EDF0"),
+    "Essendon":               ("#CC2031", "#101010"),
+    "Fremantle":              ("#2A1A54", "#E9EDF0"),
+    "Geelong":                ("#1C3C63", "#E9EDF0"),
+    "Gold Coast":             ("#D93E39", "#FFC42D"),
+    "Greater Western Sydney": ("#F47920", "#3E3E3E"),
+    "Hawthorn":               ("#4D2004", "#FBBF15"),
+    "Melbourne":              ("#061A33", "#CC2031"),
+    "North Melbourne":        ("#013B9F", "#E9EDF0"),
+    "Port Adelaide":          ("#008AAB", "#101010"),
+    "Richmond":               ("#1A1A1A", "#FFD200"),
+    "St Kilda":               ("#C1272D", "#101010"),
+    "Sydney":                 ("#ED171F", "#E9EDF0"),
+    "Tasmania":               ("#1B4D3E", "#F0C244"),
+    "West Coast":             ("#003087", "#F2A900"),
+    "Western Bulldogs":       ("#014896", "#DC2830"),
+}
+
 # canonical club name -> how each source refers to it
 CLUBS: dict[str, dict[str, str]] = {
     "Adelaide":               {"abbrev": "ADE", "afltables": "Adelaide",               "draftguru": "adelaide",               "zerohanger": "Adelaide"},

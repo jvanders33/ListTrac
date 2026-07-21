@@ -37,7 +37,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scraper"))
 
 from afl_free_agents import fetch_free_agents
 from draftguru import fetch_club_list, fetch_year_movements, fetch_year_trades
-from identity import CLUBS, canonical_club, match_players, normalize_name
+from identity import CLUB_COLORS, CLUBS, canonical_club, match_players, normalize_name
 from zerohanger import fetch_off_contract
 
 DB_PATH = Path(__file__).resolve().parent / "listtrac.db"
@@ -61,7 +61,10 @@ def create_db() -> sqlite3.Connection:
 def load_clubs(conn) -> dict[str, int]:
     ids = {}
     for name, v in CLUBS.items():
-        cur = conn.execute("INSERT INTO club (name, abbreviation) VALUES (?, ?)", (name, v["abbrev"]))
+        primary, secondary = CLUB_COLORS[name]
+        cur = conn.execute(
+            "INSERT INTO club (name, abbreviation, primary_color, secondary_color) VALUES (?, ?, ?, ?)",
+            (name, v["abbrev"], primary, secondary))
         ids[name] = cur.lastrowid
     return ids
 

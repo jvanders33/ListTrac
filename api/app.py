@@ -12,8 +12,10 @@ import sqlite3
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 
 DB_PATH = Path(__file__).resolve().parent.parent / "data" / "listtrac.db"
+WEB_DIR = Path(__file__).resolve().parent.parent / "web"
 
 app = FastAPI(title="ListTrac API", version="0.1.0",
               description="AFL player movement, lists, contract status, and draft history. No salary data.")
@@ -31,12 +33,13 @@ def rows(query: str, params: tuple = ()) -> list[dict]:
 
 
 PLAYER_COLS = """p.id, p.first_name, p.last_name, p.dob, p.height_cm, p.jumper_number,
-                 p.status player_status, c.name club, c.abbreviation club_abbrev"""
+                 p.status player_status, c.name club, c.abbreviation club_abbrev,
+                 c.primary_color club_primary, c.secondary_color club_secondary"""
 
 
 @app.get("/clubs")
 def clubs():
-    return rows("""SELECT c.id, c.name, c.abbreviation,
+    return rows("""SELECT c.id, c.name, c.abbreviation, c.primary_color, c.secondary_color,
                           COUNT(p.id) listed_players
                    FROM club c LEFT JOIN player p
                         ON p.current_club_id = c.id AND p.status = 'listed'
@@ -45,10 +48,12 @@ def clubs():
 
 @app.get("/clubs/{abbrev}/list")
 def club_list(abbrev: str):
-    result = rows(f"""SELECT {PLAYER_COLS}, cs.status contract_status, cs.contracted_through_year
+    result = rows(f"""SELECT {PLAYER_COLS}, cs.status contract_status, cs.contracted_through_year,
+                             dp.year draft_year, dp.draft_type, dp.pick_number
                       FROM player p
                       JOIN club c ON c.id = p.current_club_id
                       LEFT JOIN contract_status cs ON cs.player_id = p.id AND cs.is_current = 1
+                      LEFT JOIN draft_pick dp ON dp.id = p.draft_pick_id
                       WHERE c.abbreviation = ? COLLATE NOCASE
                       ORDER BY p.jumper_number""", (abbrev,))
     if not result:
@@ -132,6 +137,18 @@ def trades(year: int):
     return {"year": year, "players": player_moves, "picks": pick_moves}
 
 
+@app.get("/api/summary")
+def summary():
+    with db() as conn:
+        statuses = {r["status"]: r["n"] for r in conn.execute(
+            "SELECT status, COUNT(*) n FROM contract_status WHERE is_current = 1 GROUP BY status")}
+        counts = {t: conn.execute(f"SELECT COUNT(*) c FROM {t}").fetchone()["c"]
+                  for t in ("player", "player_transaction", "draft_pick", "draft_pick_trade_history")}
+        years = conn.execute("SELECT MIN(year) lo, MAX(year) hi FROM draft_pick").fetchone()
+    return {"contract_statuses": statuses, "counts": counts,
+            "draft_years": {"min": years["lo"], "max": years["hi"]}}
+
+
 @app.get("/contract-status")
 def contract_status(status: str | None = None, club: str | None = None):
     query = f"""SELECT {PLAYER_COLS}, cs.status contract_status,
@@ -148,3 +165,7 @@ def contract_status(status: str | None = None, club: str | None = None):
         query += " AND c.abbreviation = ? COLLATE NOCASE"
         params.append(club)
     return rows(query + " ORDER BY c.name, p.last_name", tuple(params))
+
+
+# static frontend — mounted last so API routes win
+app.mount("/", StaticFiles(directory=WEB_DIR, html=True), name="web")
