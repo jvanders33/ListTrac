@@ -1,0 +1,62 @@
+# Weekly data refresh: re-scrape everything, rebuild the SQLite snapshot,
+# commit it — the push triggers Vercel's auto-redeploy of list-trac.vercel.app.
+#
+# Runs Mondays 6am Melbourne time (Sunday 20:00 UTC), after the weekend's
+# games. Also triggerable by hand from the Actions tab (workflow_dispatch).
+#
+# NOTE for the 2027 rollover: --end is pinned to 2026 because the contract
+# sources are year-bound. When the 2026 season wraps, bump --end below AND
+# update DEFAULT_URL in scraper/afl_free_agents.py to the AFL's 2027 FA
+# article (they publish updates at new URLs).
+name: Weekly data refresh
+
+on:
+  schedule:
+    - cron: "0 20 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install scraper dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Rebuild database from live sources
+        run: python data/load.py --start 1986 --end 2026
+
+      - name: Sanity-check the rebuilt snapshot
+        run: |
+          python - <<'EOF'
+          import sqlite3
+          conn = sqlite3.connect("data/listtrac.db")
+          players = conn.execute("SELECT COUNT(*) FROM player").fetchone()[0]
+          picks = conn.execute("SELECT COUNT(*) FROM draft_pick").fetchone()[0]
+          statuses = conn.execute("SELECT COUNT(*) FROM contract_status WHERE is_current=1").fetchone()[0]
+          print(f"players={players} picks={picks} current_statuses={statuses}")
+          # refuse to publish a snapshot that lost most of its data
+          assert players > 4000, "player count collapsed - source layout change?"
+          assert picks > 4000, "draft pick count collapsed - source layout change?"
+          assert statuses > 700, "contract statuses collapsed - source layout change?"
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "listtrac-refresh[bot]"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f data/listtrac.db
+          if git diff --cached --quiet; then
+            echo "No data changes this week."
+          else
+            git commit -m "Weekly data refresh ($(date -u +%Y-%m-%d))"
+            git push
+          fi
