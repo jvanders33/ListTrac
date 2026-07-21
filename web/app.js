@@ -52,7 +52,118 @@ const SPOTLIGHTS = `
 
 /* ---------- views ---------- */
 
-async function homeView() {
+const timeAgo = iso => {
+  if (!iso) return "";
+  const mins = Math.max(1, Math.round((Date.now() - new Date(iso)) / 60000));
+  if (mins < 60) return `${mins}m ago`;
+  const hrs = Math.round(mins / 60);
+  if (hrs < 24) return `${hrs}h ago`;
+  return `${Math.round(hrs / 24)}d ago`;
+};
+
+async function landingView() {
+  const [summary, order, newsItems, trend] = await Promise.all([
+    api("/api/summary"),
+    api("/api/draft-order").catch(() => null),
+    api("/api/news").catch(() => []),
+    api("/api/trending").catch(() => []),
+  ]);
+  const s = summary.contract_statuses;
+
+  const rfas = trend.filter(t => t.kind === "rfa");
+  view.innerHTML = `
+    <div class="cols">
+      <div>
+        <div class="feature">
+          <p class="eyebrow feature-eyebrow">The story of the season</p>
+          <h2>Free agency class of 2026</h2>
+          <p class="feature-sub">${(s.restricted_fa || 0) + (s.unrestricted_fa || 0)} free agents and
+            ${s.out_of_contract || 0} more out of contract at season's end — the biggest movement
+            pool ListTrac has tracked. Six are restricted:</p>
+          <p class="rfa-row">${rfas.map(t =>
+            `<a class="rfa-chip" href="#/player/${t.id}">${esc(t.first_name)} ${esc(t.last_name)} <span>${esc(t.abbrev)}</span></a>`).join("")}</p>
+          <p class="feature-ctas">
+            <a class="cta" href="#/free-agents">Free agent board</a>
+            <a class="cta ghost" href="#/free-agents/out_of_contract">Full off-contract list</a>
+          </p>
+        </div>
+
+        ${order ? `
+        <div class="card">
+          <h3>Projected 2026 draft order</h3>
+          <p class="sub">Live — reverse ladder, ${order.as_of_round} games into the season,
+            via ${esc(order.source)}. No academy, father-son or priority adjustments yet.</p>
+          <div class="tablewrap"><table>
+            <thead><tr><th class="num">Pick</th><th>Club</th><th class="num">W–L</th><th class="num">%</th></tr></thead>
+            <tbody>${order.picks.slice(0, 8).map(p => `
+              <tr><td class="num"><b>${p.pick}</b></td>
+                <td><i class="dot" style="background:${esc(p.primary_color || "#888")}"></i>${esc(p.club)}</td>
+                <td class="num">${p.wins}–${p.losses}</td><td class="num">${p.percentage}</td></tr>`).join("")}
+            </tbody>
+          </table></div>
+          <p class="srcline"><a href="#/draft-order">Full 18-pick order →</a> · interactive mock draft is next on the roadmap</p>
+        </div>` : ""}
+
+        <div class="card">
+          <h3>Key dates</h3>
+          <p class="sub">Indicative windows — confirmed dates land closer to season's end.</p>
+          <div class="tablewrap"><table><tbody>
+            <tr><td class="thin">Early October</td><td>Free agency window opens</td></tr>
+            <tr><td class="thin">Mid October</td><td>Trade period — the admin tool's moment</td></tr>
+            <tr><td class="thin">Late November</td><td>National draft</td></tr>
+            <tr><td class="thin">Early December</td><td>Rookie draft · pre-season supplemental signings</td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+
+      <aside class="rail">
+        <div class="card">
+          <p class="eyebrow">Movement news</p>
+          <p class="sub">Live from around the league — every headline links to its source.</p>
+          ${newsItems.length ? newsItems.slice(0, 12).map(n => `
+            <div class="spot">
+              <span class="src">${esc(n.source)} <span class="thin">· ${timeAgo(n.published)}</span></span>
+              <p><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a></p>
+            </div>`).join("") : `<p class="thin">News feed unavailable right now.</p>`}
+        </div>
+        <div class="card">
+          <p class="eyebrow">Trending</p>
+          <p class="sub">From the data — FA class, newest picks, latest trades.</p>
+          ${trend.map(t => `
+            <div class="spot">
+              <p><a href="#/player/${t.id}">${esc(t.first_name)} ${esc(t.last_name)}</a>
+                <span class="thin">· ${esc(t.club)}</span></p>
+              <span class="src">${esc(t.reason)}</span>
+            </div>`).join("")}
+        </div>
+      </aside>
+    </div>`;
+}
+
+async function draftOrderView() {
+  const order = await api("/api/draft-order");
+  view.innerHTML = `
+    <div class="card">
+      <h3>Projected 2026 national draft order</h3>
+      <p class="sub">Reverse ladder ${order.as_of_round} games into the season, live from ${esc(order.source)} —
+        the Tankathon method. First pass: no academy, father-son, priority-pick or finals adjustments.
+        Interactive mock draft is the next build.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th class="num">Pick</th><th>Club</th><th class="num">Ladder</th><th class="num">W–L</th><th class="num">%</th><th></th></tr></thead>
+        <tbody>${order.picks.map(p => `
+          <tr><td class="num"><b>${p.pick}</b></td>
+            <td><i class="dot" style="background:${esc(p.primary_color || "#888")}"></i>
+              ${p.abbrev ? `<a href="#/club/${esc(p.abbrev)}">${esc(p.club)}</a>` : esc(p.club)}</td>
+            <td class="num thin">${p.ladder_rank}</td>
+            <td class="num">${p.wins}–${p.losses}</td><td class="num">${p.percentage}</td>
+            <td>${p.pick <= 3 ? '<span class="chip rfa">Prime pick</span>' : ""}</td></tr>`).join("")}
+        </tbody>
+      </table></div>
+      <p class="srcline">Ladder refreshes hourly · pick trades from October will re-map ownership here</p>
+    </div>`;
+}
+
+async function clubsView() {
   const [clubs, summary] = await Promise.all([api("/clubs"), api("/api/summary")]);
   const s = summary.contract_statuses, c = summary.counts;
   view.innerHTML = `
@@ -305,7 +416,9 @@ async function searchView(q) {
 /* ---------- router ---------- */
 
 const routes = [
-  [/^#?\/?$/,                       () => homeView()],
+  [/^#?\/?$/,                       () => landingView()],
+  [/^#\/clubs$/,                    () => clubsView()],
+  [/^#\/draft-order$/,              () => draftOrderView()],
   [/^#\/club\/([A-Za-z]+)$/,        m => clubView(m[1])],
   [/^#\/player\/(\d+)$/,            m => playerView(m[1])],
   [/^#\/draft\/(\d{4})(?:\/(\w+))?$/, m => draftView(m[1], m[2] || "national")],

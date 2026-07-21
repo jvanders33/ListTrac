@@ -200,10 +200,12 @@ def load_year_history(conn, club_ids: dict[str, int], year: int) -> None:
     for t in trades:
         two_sided = len(t["sides"]) == 2
         for i, side in enumerate(t["sides"]):
-            giver = canonical_club(side["club"])
-            receiver = canonical_club(t["sides"][1 - i]["club"]) if two_sided else None
-            giver_id = club_ids.get(giver or "")
+            # a side's components are what that club RECEIVED; the giver is
+            # the other side (only resolvable for two-club trades)
+            receiver = canonical_club(side["club"])
+            giver = canonical_club(t["sides"][1 - i]["club"]) if two_sided else None
             receiver_id = club_ids.get(receiver or "")
+            giver_id = club_ids.get(giver or "")
             for comp in side["components"]:
                 if comp["type"] == "player" and receiver_id:
                     # trade blocks only carry surnames; resolve against this

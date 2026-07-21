@@ -8,9 +8,14 @@ Read-only by design: the DB is rebuilt by the loader, and trade-period manual
 entry will get its own admin tool. No dollar figures anywhere — contract
 status only, per project scope.
 """
+import re
 import sqlite3
+import time
+import xml.etree.ElementTree as ET
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 
+import requests
 from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 
@@ -139,6 +144,129 @@ def trades(year: int):
     if not player_moves and not pick_moves:
         raise HTTPException(404, f"no trade data for {year}")
     return {"year": year, "players": player_moves, "picks": pick_moves}
+
+
+# --- aggregation endpoints for the landing page ---------------------------
+
+_cache: dict[str, tuple[float, object]] = {}
+
+
+def cached(key: str, ttl: int, build):
+    hit = _cache.get(key)
+    if hit and time.time() - hit[0] < ttl:
+        return hit[1]
+    value = build()
+    _cache[key] = (time.time(), value)
+    return value
+
+
+NEWS_FEED = ("https://news.google.com/rss/search"
+             "?q=AFL%20(trade%20OR%20contract%20OR%20%22free%20agency%22%20OR%20draft)"
+             "&hl=en-AU&gl=AU&ceid=AU:en")
+
+
+@app.get("/api/news")
+def news():
+    """Movement news aggregated from Google News RSS. Headline + source +
+    link out only — paywalled outlets get linked like everyone else, never
+    reproduced. Cached 15 minutes per serverless instance."""
+    def build():
+        try:
+            resp = requests.get(NEWS_FEED, headers={"User-Agent": "ListTrac (github.com/jvanders33/ListTrac)"},
+                                timeout=10)
+            resp.raise_for_status()
+            items = []
+            for it in ET.fromstring(resp.content).findall(".//item")[:40]:
+                title = it.findtext("title") or ""
+                source = it.find("source")
+                source_name = source.text if source is not None else ""
+                # Google News suffixes titles with " - Source" — strip the echo
+                title = re.sub(r"\s+-\s+" + re.escape(source_name) + r"\s*$", "", title) if source_name else title
+                published = None
+                if it.findtext("pubDate"):
+                    try:
+                        published = parsedate_to_datetime(it.findtext("pubDate")).isoformat()
+                    except ValueError:
+                        pass
+                items.append({"title": title, "source": source_name,
+                              "url": it.findtext("link") or "", "published": published})
+            items.sort(key=lambda x: x["published"] or "", reverse=True)
+            return items[:20]
+        except requests.RequestException:
+            return []  # feed down -> landing page degrades gracefully
+    return cached("news", 900, build)
+
+
+SQUIGGLE = "https://api.squiggle.com.au/"
+SQUIGGLE_ALIASES = {"Brisbane Lions": "Brisbane"}  # Squiggle name -> DB club name
+
+
+@app.get("/api/draft-order")
+def draft_order():
+    """Projected 2026 national draft order: live Squiggle ladder, reversed —
+    the Tankathon methodology. First-pass only: no academy, father-son,
+    priority-pick, or finals-position adjustments yet. Cached 1 hour."""
+    def build():
+        resp = requests.get(SQUIGGLE, params={"q": "standings", "year": 2026},
+                            headers={"User-Agent": "ListTrac (github.com/jvanders33/ListTrac)"}, timeout=10)
+        resp.raise_for_status()
+        ladder = sorted(resp.json()["standings"], key=lambda t: t["rank"])
+        with db() as conn:
+            club_info = {r["name"]: dict(r) for r in conn.execute(
+                "SELECT name, abbreviation, primary_color, secondary_color FROM club")}
+        order = []
+        for team in reversed(ladder):
+            name = SQUIGGLE_ALIASES.get(team["name"], team["name"])
+            info = club_info.get(name, {})
+            order.append({
+                "pick": len(order) + 1, "club": name,
+                "abbrev": info.get("abbreviation"), "primary_color": info.get("primary_color"),
+                "ladder_rank": team["rank"], "wins": team["wins"],
+                "losses": team["losses"], "percentage": round(team["percentage"], 1),
+            })
+        # standings entries carry no round number — derive games played from W+L+D
+        games_played = max(t["wins"] + t["losses"] + t.get("draws", 0) for t in ladder)
+        return {"year": 2026, "as_of_round": games_played,
+                "picks": order, "source": "api.squiggle.com.au",
+                "method": "reverse ladder; no academy/father-son/priority adjustments"}
+    try:
+        return cached("draft_order", 3600, build)
+    except requests.RequestException:
+        raise HTTPException(503, "Squiggle ladder unavailable")
+
+
+@app.get("/api/trending")
+def trending():
+    """Players worth watching, from our own data signals — no traffic
+    faked as popularity: the FA class, newest top picks, latest trades."""
+    def build():
+        out = []
+        with db() as conn:
+            for r in conn.execute(
+                    """SELECT p.id, p.first_name, p.last_name, c.name club, c.abbreviation abbrev
+                       FROM contract_status cs JOIN player p ON p.id = cs.player_id
+                       JOIN club c ON c.id = cs.club_id
+                       WHERE cs.is_current = 1 AND cs.status = 'restricted_fa' ORDER BY p.last_name"""):
+                out.append({**dict(r), "reason": "Restricted free agent 2026", "kind": "rfa"})
+            for r in conn.execute(
+                    """SELECT p.id, p.first_name, p.last_name, c.name club, c.abbreviation abbrev,
+                              dp.pick_number
+                       FROM draft_pick dp JOIN player p ON p.id = dp.player_selected_id
+                       JOIN club c ON c.id = dp.current_owner_club_id
+                       WHERE dp.year = 2025 AND dp.draft_type = 'national' AND dp.pick_number <= 3
+                       ORDER BY dp.pick_number"""):
+                out.append({**{k: r[k] for k in ("id", "first_name", "last_name", "club", "abbrev")},
+                            "reason": f"Pick {r['pick_number']}, 2025 national draft", "kind": "pick"})
+            for r in conn.execute(
+                    """SELECT p.id, p.first_name, p.last_name, c.name club, c.abbreviation abbrev
+                       FROM player_transaction pt JOIN player p ON p.id = pt.player_id
+                       JOIN club c ON c.id = pt.to_club_id
+                       WHERE pt.type = 'trade' AND pt.trade_period_year = 2025
+                         AND pt.from_club_id IS NOT NULL
+                       ORDER BY pt.id LIMIT 3"""):
+                out.append({**dict(r), "reason": f"Traded to {r['club']} in 2025", "kind": "trade"})
+        return out
+    return cached("trending", 3600, build)
 
 
 @app.get("/api/debug")

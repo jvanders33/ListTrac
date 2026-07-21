@@ -52,8 +52,17 @@ MOVEMENT_SLUGS = {
 
 
 def _get_soup(path: str) -> BeautifulSoup:
-    resp = requests.get(BASE + path, headers=HEADERS, timeout=15)
-    resp.raise_for_status()
+    # a full backfill is ~100 requests — transient resets happen, so retry
+    # with backoff before giving up (matters most for the weekly CI refresh)
+    for attempt in range(3):
+        try:
+            resp = requests.get(BASE + path, headers=HEADERS, timeout=15)
+            resp.raise_for_status()
+            break
+        except (requests.ConnectionError, requests.Timeout):
+            if attempt == 2:
+                raise
+            time.sleep(5 * (attempt + 1))
     time.sleep(1)  # politeness delay, same as afltables.py
     return BeautifulSoup(resp.text, "html.parser")
 
@@ -137,7 +146,9 @@ def _parse_trade_component(text: str, extra: str | None) -> dict:
 
 def fetch_year_trades(year: int) -> list[dict]:
     """All trades for a year as blocks: {slug, title, source_url, sides},
-    sides = [{club, components}] where each component says what that club GAVE."""
+    sides = [{club, components}] where each component says what that club
+    RECEIVED (verified against known trades: Reidy appears on Carlton's row
+    of the 2025 deal that sent him Fremantle -> Carlton)."""
     soup = _get_soup(f"/trades/year/{year}")
     table = soup.find("table", class_="all-trades")
     if table is None:

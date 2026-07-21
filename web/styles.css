@@ -204,6 +204,39 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .controls select:focus-visible, .controls .filterbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
 .srcline { font-size: 11.5px; color: var(--ink-2); margin-top: 14px; }
+
+/* ---------- landing hub ---------- */
+.feature {
+  margin-top: 24px; border-radius: 8px; padding: 26px 28px 24px;
+  background: var(--ink); color: var(--ground);
+  border-top: 5px solid var(--accent);
+}
+.feature-eyebrow { color: var(--accent); }
+.feature h2 {
+  margin: 2px 0 0; font-size: clamp(26px, 4vw, 36px); font-weight: 800;
+  letter-spacing: -0.02em; line-height: 1.08; text-wrap: balance;
+}
+.feature-sub { font-size: 14px; opacity: 0.85; margin: 12px 0 0; max-width: 60ch; }
+.rfa-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; }
+.rfa-chip {
+  font-size: 12.5px; font-weight: 700; color: var(--ground);
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 4px; padding: 5px 10px; text-decoration: none;
+}
+.rfa-chip span { font-weight: 600; opacity: 0.65; margin-left: 4px; font-size: 11px; }
+.rfa-chip:hover { background: var(--accent); border-color: var(--accent); text-decoration: none; }
+.feature-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 0; }
+.cta {
+  font-size: 12.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  background: var(--accent); color: #fff; border-radius: 4px; padding: 9px 16px;
+  text-decoration: none;
+}
+.cta:hover { filter: brightness(1.12); text-decoration: none; }
+.cta.ghost { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: var(--ground); }
+.dot {
+  display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+  margin-right: 8px; vertical-align: -1px;
+}
 footer.pagefoot {
   margin-top: 44px; padding-top: 14px; border-top: 1px solid var(--line);
   font-size: 12px; color: var(--ink-2);

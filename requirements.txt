@@ -1,3 +1,4 @@
 # API runtime (Vercel installs this for the function; also enough to run locally)
 fastapi
 uvicorn
+requests
