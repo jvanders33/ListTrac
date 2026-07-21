@@ -29,36 +29,72 @@ body {
   background: var(--ground); color: var(--ink);
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   margin: 0; line-height: 1.45;
+  overflow-x: hidden;
 }
+/* grid/flex children may not force the page wider than the viewport */
+.cols > *, .mockcols > *, .tmcols > *, .rail, .card { min-width: 0; }
+.card iframe, .twitter-timeline { max-width: 100% !important; }
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px 64px; }
 
-/* ---------- masthead ---------- */
-.masthead {
-  display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap;
-  padding: 22px 0 14px; border-bottom: 3px solid var(--ink);
+/* ---------- masthead band ---------- */
+.mast {
+  background: linear-gradient(120deg, #131c24 0%, #1a2833 100%);
+  border-bottom: 3px solid var(--accent);
+}
+:root[data-theme="light"] .mast, .mast { color: #F2F4F3; }
+.mast-top {
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+  max-width: 1120px; margin: 0 auto; padding: 16px 20px 8px;
 }
 .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.03em; margin: 0; }
-.wordmark a { color: inherit; text-decoration: none; }
+.wordmark a { color: #F2F4F3; text-decoration: none; }
 .wordmark em { font-style: normal; color: var(--accent); }
 .wordmark small {
-  display: block; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--ink-2);
+  display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: rgba(242, 244, 243, 0.55);
 }
-.viewtabs { display: flex; gap: 4px; }
-.viewtabs a {
-  font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
-  color: var(--ink-2); text-decoration: none;
-  border-bottom: 3px solid transparent; margin-bottom: -3px; padding: 8px 12px 11px;
-}
-.viewtabs a:hover { color: var(--ink); }
-.viewtabs a.active { color: var(--accent); border-bottom-color: var(--accent); }
-.search { margin-left: auto; }
+.search { margin-left: auto; flex: 1; max-width: 320px; }
 .search input {
-  font: inherit; font-size: 13.5px; color: var(--ink);
-  background: var(--card); border: 1px solid var(--line); border-radius: 5px;
-  padding: 7px 12px; width: 200px;
+  font: inherit; font-size: 13.5px; color: #F2F4F3;
+  background: rgba(255, 255, 255, 0.09); border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 5px; padding: 8px 14px; width: 100%;
 }
+.search input::placeholder { color: rgba(242, 244, 243, 0.5); }
 .search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.navband {
+  display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none;
+  max-width: 1120px; margin: 0 auto; padding: 0 12px;
+}
+.navband::-webkit-scrollbar { display: none; }
+.navband a {
+  color: rgba(242, 244, 243, 0.7); text-decoration: none; white-space: nowrap;
+  font-size: 12.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+  padding: 10px 14px 12px; border-bottom: 3px solid transparent; margin-bottom: -3px;
+}
+.navband a:hover { color: #fff; }
+.navband a.active { color: #fff; border-bottom-color: var(--accent); }
+.navband a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+/* section sub-tabs */
+.subtabs {
+  display: flex; gap: 2px; margin: 20px 0 0; border-bottom: 2px solid var(--line);
+  overflow-x: auto; scrollbar-width: none;
+}
+.subtabs::-webkit-scrollbar { display: none; }
+.subtabs a {
+  padding: 8px 14px 10px; font-size: 13px; font-weight: 700; white-space: nowrap;
+  color: var(--ink-2); text-decoration: none;
+  border-bottom: 3px solid transparent; margin-bottom: -2px;
+}
+.subtabs a:hover { color: var(--ink); text-decoration: none; }
+.subtabs a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+@media (max-width: 640px) {
+  .mast-top { gap: 10px; padding: 12px 14px 6px; }
+  .search { max-width: none; flex-basis: 100%; margin-left: 0; }
+  .wrap { padding: 0 12px 48px; }
+  .hero-inner, .feature { padding: 18px 16px 16px; }
+}
 
 /* ---------- shared ---------- */
 .eyebrow {
@@ -329,6 +365,8 @@ footer.pagefoot {
 .insiders .thin { font-weight: 500; }
 
 /* trade machine */
+.tmcols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+@media (max-width: 720px) { .tmcols { grid-template-columns: 1fr; } }
 .tm-head { display: flex; align-items: center; gap: 10px; }
 .tm-club {
   font: inherit; font-size: 14px; font-weight: 700; color: var(--ink);

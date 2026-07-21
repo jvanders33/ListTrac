@@ -59,17 +59,14 @@ function loadXWidgets() {
   document.head.appendChild(s);
 }
 
-/* Sample rail content until the v1.5 news aggregator lands. Links out only. */
+/* Player-page rail: key movement reading. */
 const SPOTLIGHTS = `
   <div class="card">
     <p class="eyebrow">Spotlights</p>
-    <p class="sub">Contract &amp; trade coverage from around the league. <strong>Sample content</strong> — the aggregator ships with v1.5; headlines will always link out to the original source.</p>
     <div class="spot"><span class="src">AFL.com.au</span>
       <p><a href="https://www.afl.com.au/news/1484077/2026afl-free-agentslist" target="_blank" rel="noopener">2026 free agents revealed: the official list</a></p></div>
     <div class="spot"><span class="src">Zero Hanger</span>
       <p><a href="https://www.zerohanger.com/afl/players/off-contract-2026/" target="_blank" rel="noopener">The out-of-contract class of 2026</a></p></div>
-    <div class="spot"><span class="src">Herald Sun <span class="lock">· subscriber 🔒</span></span>
-      <p><a href="#" onclick="return false">Paywalled coverage appears here — linked, never reproduced</a></p></div>
   </div>`;
 
 /* ---------- views ---------- */
@@ -158,7 +155,7 @@ async function landingView() {
                 <td class="num">${p.wins}–${p.losses}</td><td class="num">${p.percentage}</td></tr>`).join("")}
             </tbody>
           </table></div>
-          <p class="srcline"><a href="#/draft-order">Full order with pick outcome stats →</a> · <a href="#/mock-draft">run your own mock draft →</a></p>
+          <p class="srcline"><a href="#/draft">Full order with pick outcome stats →</a> · <a href="#/draft/mock">run your own mock draft →</a></p>
         </div>` : ""}
 
         ${clubList.length ? `
@@ -196,8 +193,6 @@ async function landingView() {
         </div>
         <div class="card">
           <p class="eyebrow">Insider feed</p>
-          <p class="sub">Movement reporters only — curation is by account (X embeds can't filter
-            post topics), so the list stays strictly contracts / trades / FA / draft beat writers.</p>
           <a class="twitter-timeline" data-height="380" data-dnt="true" data-tweet-limit="5"
              href="${esc(INSIDER_LIST_URL)}">Posts from AFL insiders</a>
           <div class="insiders">
@@ -229,7 +224,7 @@ const intelTip = (intel, n) => {
     + (s.rs_pct != null ? ` · Rising Star ${s.rs_pct}%` : "");
 };
 
-async function draftOrderView() {
+async function draftOrderView(chrome = "") {
   const [order, intel] = await Promise.all([
     api("/api/draft-order"), api("/api/pick-intel").catch(() => null)]);
   const cell = (n, key, suffix = "") => {
@@ -247,13 +242,12 @@ async function draftOrderView() {
       <td class="num">${cell(p.pick, "aa_pct", "%")}</td>
       <td class="num">${cell(p.pick, "prem_pct", "%")}</td>
       <td class="num">${cell(p.pick, "rs_pct", "%")}</td></tr>`;
-  view.innerHTML = `
+  view.innerHTML = `${chrome}
     <div class="card">
       <h3>Projected 2026 national draft order — all rounds</h3>
-      <p class="sub">Reverse ladder ${order.as_of_round} games into the season (${esc(order.source)}),
-        with the ${order.traded_slots} already-traded 2026 picks applied to ownership ("via" = the
-        club whose natural slot it is). Still excluded: academy/father-son bid compensation and
-        priority picks. Outcome stats show what history says each slot is worth.</p>
+      <p class="sub">Live reverse ladder, ${order.as_of_round} games in, with all
+        ${order.traded_slots} already-traded 2026 picks applied ("via" = the club whose natural
+        slot it is). Outcome stats show what history says each slot is worth.</p>
       <div class="tablewrap"><table>
         <thead><tr><th class="num">Pick</th><th>Owner</th><th class="num">W–L</th>
           <th class="num">DVI pts</th><th class="num">Avg games</th>
@@ -264,10 +258,8 @@ async function draftOrderView() {
           ${r.picks.map(rowHTML).join("")}`).join("")}
         </tbody>
       </table></div>
-      <p class="srcline">${intel ? `Outcome stats: every national-draft selection at that pick,
-        ${intel.cohort.from}–${intel.cohort.to} drafts only (recent draftees would skew careers-in-progress).
-        Sources: Draftguru pick histories · Wikipedia Rising Star nominations · official DVI.`
-        : "Outcome stats not built yet."} Pick trades from Draftguru trade blocks + admin entries · ladder refreshes hourly.</p>
+      ${intel ? `<p class="srcline">Outcome stats cover ${intel.cohort.from}–${intel.cohort.to} drafts —
+        recent draftees would skew careers still in progress.</p>` : ""}
     </div>`;
 }
 
@@ -385,7 +377,7 @@ function simulateDraft(events, orderPicks, byName, rounds) {
   return { rows, ledger, drafted, currentRow };
 }
 
-async function mockDraftView() {
+async function mockDraftView(chrome = "") {
   const [order, pool, intel] = await Promise.all([
     api("/api/draft-order"), api("/api/prospects"), api("/api/pick-intel").catch(() => null)]);
   const prospects = pool.prospects;
@@ -402,7 +394,7 @@ async function mockDraftView() {
     const done = !cur;
     let shown = 0;
 
-    view.innerHTML = `
+    view.innerHTML = `${chrome}
       <div class="controls">
         <button class="cta" id="auto" ${done ? "disabled" : ""}>Auto pick</button>
         <button class="filterbtn" id="simbtn" ${done ? "disabled" : ""}>Sim to end</button>
@@ -415,9 +407,8 @@ async function mockDraftView() {
         <div>
           <div class="card">
             <h3>2026 mock draft — first round${done ? " · complete" : ""}</h3>
-            <p class="sub">Bid matching is live: pick a club-tied player with a rival on the clock
-              and the tied club matches if it can afford the points. Matched bids insert an extra
-              selection, exactly like the real thing.</p>
+            <p class="sub">Pick a club-tied player with a rival on the clock and the tied club
+              matches if it can afford the points — matched bids insert an extra selection.</p>
             <div class="boardlist">
               ${sim.rows.map(r => {
                 const isCur = r === cur;
@@ -444,8 +435,6 @@ async function mockDraftView() {
           ${sim.ledger.length ? `
           <div class="card">
             <h3>Bid ledger</h3>
-            <p class="sub">Costs use the official Draft Value Index with 2026 ladder loadings
-              (top two +20%, prelim finalists +10%, bottom five −10%). Max two picks per match.</p>
             <div class="tablewrap"><table>
               <thead><tr><th class="num">Bid</th><th>Bidder</th><th>Player</th><th>Outcome</th></tr></thead>
               <tbody>${sim.ledger.map(l => `
@@ -458,15 +447,11 @@ async function mockDraftView() {
                   </td></tr>`).join("")}
               </tbody>
             </table></div>
-            <p class="srcline">Model: standard pick hands (rounds 1–4, 2026 pick trades not applied),
-              clubs match whenever affordable, dual-tied players nominate their first-listed club.
-              Round-2 compensation picks and pick sliding beyond the bid aren&#39;t modelled yet.</p>
           </div>` : ""}
         </div>
         <div class="card">
           <h3>Prospect pool <span class="thin" style="font-weight:400">(${available.length} of ${prospects.length})</span></h3>
-          <p class="sub">2026 U18 championships squads, ranked per Reading the Play&#39;s Top 50.
-            Click a player to make the pick.</p>
+          <p class="sub">The 2026 U18 championships pool in ranked order — click a player to make the pick.</p>
           <input id="poolsearch" class="poolsearch" type="search" placeholder="Filter by name, position, state, club…" value="${esc(filter)}">
           <div class="poollist">
             ${available
@@ -481,9 +466,6 @@ async function mockDraftView() {
                 ${tieBadge(p)}
               </button>`).join("")}
           </div>
-          <p class="srcline">Squads: <a href="${esc(pool.sources.squads)}" target="_blank" rel="noopener">Rookie Me Central ↗</a>
-            · Rankings: <a href="${esc(pool.sources.rankings)}" target="_blank" rel="noopener">Reading the Play ↗</a>
-            (${esc(pool.sources.rankings_note)})</p>
         </div>
       </div>`;
 
@@ -540,22 +522,29 @@ function tmPicks(abbrev, order) {
       dvi: p.dvi ?? dvi(p.pick),
     });
   }));
-  picks.push({ id: "2027-R1", label: "2027 1st round (future)", dvi: null });
-  picks.push({ id: "2027-R2", label: "2027 2nd round (future)", dvi: null });
+  for (const year of [2027, 2028]) {
+    for (const round of [1, 2, 3, 4]) {
+      picks.push({ id: `${year}-R${round}`, label: `${year} round ${round} (future)`, dvi: null });
+    }
+  }
   return picks;
 }
 
-async function tradeMachineView() {
+async function tradeMachineView(chrome = "") {
   const [clubList, order] = await Promise.all([api("/clubs"), api("/api/draft-order")]);
   const clubs = clubList.filter(c => c.listed_players > 0);
   let state = tmLoad() || {
-    a: { club: "CAR", players: [], picks: [] },
-    b: { club: "FRE", players: [], picks: [] },
+    a: { club: clubs[0].abbreviation, players: [], picks: [] },
+    b: { club: clubs[1].abbreviation, players: [], picks: [] },
   };
   const rosters = {};  // abbrev -> list rows
 
   async function roster(abbrev) {
-    if (!rosters[abbrev]) rosters[abbrev] = await api(`/clubs/${abbrev}/list`);
+    if (!rosters[abbrev]) {
+      const list = await api(`/clubs/${abbrev}/list`);
+      rosters[abbrev] = list.sort((a, b) =>
+        `${a.last_name} ${a.first_name}`.localeCompare(`${b.last_name} ${b.first_name}`));
+    }
     return rosters[abbrev];
   }
 
@@ -628,14 +617,12 @@ async function tradeMachineView() {
         </div>
       </div>`;
 
-    view.innerHTML = `
+    view.innerHTML = `${chrome}
       <div class="controls">
         <button class="filterbtn" id="tm-reset">Reset</button>
         <button class="filterbtn" id="tm-copy">Copy trade</button>
-        <span class="thin" style="font-size:12px">Pick values: official DVI. Players carry no dollar values —
-          the AFL doesn't disclose salaries, so the machine won't invent them.</span>
       </div>
-      <div class="mockcols" style="grid-template-columns: 1fr 1fr">
+      <div class="tmcols">
         ${sideHTML(A)}
         ${sideHTML(B)}
       </div>
@@ -660,8 +647,6 @@ async function tradeMachineView() {
         </table></div>
         <p class="sub" style="margin-top:12px">${esc(verdict)}</p>
         ${[...A.warnings, ...B.warnings].map(w => `<p class="tm-warn">⚠ ${esc(w)}</p>`).join("")}
-        <p class="srcline">Rules of thumb only — actual trades also weigh salary, contract lengths and list
-          strategy that public data can't see. Future picks are shown without points until their draft order exists.</p>
         ` : `<p class="thin">Select players and picks on each side to build a trade.</p>`}
       </div>`;
 
@@ -692,6 +677,56 @@ async function tradeMachineView() {
     });
   }
   await render();
+}
+
+async function playersView() {
+  const clubList = await api("/clubs").catch(() => []);
+  view.innerHTML = `
+    <div class="card">
+      <h3>Find a player</h3>
+      <input id="pfind" class="poolsearch" type="search" placeholder="Start typing a name…" autocomplete="off">
+      <div id="presults"></div>
+    </div>
+    <div class="card">
+      <h3>Quick lists</h3>
+      <p class="feature-ctas" style="margin-top:10px">
+        <a class="cta" href="#/free-agents">Free agents 2026</a>
+        <a class="cta quiet" href="#/free-agents/restricted_fa">Restricted FAs</a>
+        <a class="cta quiet" href="#/free-agents/out_of_contract">Out of contract</a>
+      </p>
+    </div>
+    <div class="card">
+      <h3>Browse by club</h3>
+      <div class="clubstrip" style="margin-top:10px">
+        ${clubList.filter(c => c.listed_players > 0).map(c => `
+          <a href="#/club/${esc(c.abbreviation)}">
+            <span class="badge" style="--club:${esc(c.primary_color || "#888")}">${esc(c.abbreviation)}</span>
+            ${esc(c.name)}</a>`).join("")}
+      </div>
+    </div>
+    <div class="card">
+      <h3>Player rankings</h3>
+      <p class="sub">Season-by-season player ratings, historical and aggregated across publishers — in the works.</p>
+    </div>`;
+
+  const box = document.getElementById("pfind"), out = document.getElementById("presults");
+  let timer;
+  box.addEventListener("input", () => {
+    clearTimeout(timer);
+    timer = setTimeout(async () => {
+      const q = box.value.trim();
+      if (q.length < 2) { out.innerHTML = ""; return; }
+      const players = await api(`/players?q=${encodeURIComponent(q)}`).catch(() => []);
+      out.innerHTML = players.length ? `
+        <div class="tablewrap" style="margin-top:10px"><table>
+          <tbody>${players.map(x => `
+            <tr><td>${playerLink(x)}</td><td class="thin">${esc(x.club || "—")}</td>
+              <td class="num">${age(x.dob)}</td></tr>`).join("")}
+          </tbody>
+        </table></div>` : `<p class="thin" style="margin-top:10px">No matches.</p>`;
+    }, 250);
+  });
+  box.focus();
 }
 
 async function clubsView() {
@@ -744,7 +779,6 @@ async function clubView(abbrev) {
           </tr>`).join("")}
         </tbody>
       </table></div>
-      <p class="srcline">Lists: Draftguru · off-contract: Zero Hanger · FA status: AFL.com.au — every row carries its source URL in the API.</p>
     </div>`;
 }
 
@@ -780,20 +814,17 @@ async function playerView(id) {
   const txRows = [];
   if (p.drafted) txRows.push(`
     <tr><td class="thin">Nov ${p.drafted.year}</td><td><span class="chip ok">Drafted</span></td>
-      <td>${p.drafted.year} ${esc(p.drafted.draft_type)} draft${p.drafted.pick_number ? ", pick " + p.drafted.pick_number : ""} — ${esc(p.drafted.club)}</td>
-      <td><a href="https://www.draftguru.com.au/years/${p.drafted.year}" target="_blank" rel="noopener">Draftguru ↗</a></td></tr>`);
+      <td>${p.drafted.year} ${esc(p.drafted.draft_type)} draft${p.drafted.pick_number ? ", pick " + p.drafted.pick_number : ""} — ${esc(p.drafted.club)}</td></tr>`);
   for (const t of p.transactions) {
     const label = { trade: "Trade", sign_fa: "FA signing", sign_rookie: "Rookie signing", delist: "Delisted", retire: "Retired", rookie_elevate: "Elevated" }[t.type] || t.type;
     const cls = t.type === "trade" ? "warn" : "plain";
     txRows.push(`
       <tr><td class="thin">${esc((t.date || "").slice(0, 4))}</td><td><span class="chip ${cls}">${esc(label)}</span></td>
-        <td>${t.from_club ? esc(t.from_club) + " → " : ""}${esc(t.to_club || "")}${t.notes ? ` <span class="thin">· ${esc(t.notes.replace("; date approximate (year-level from Draftguru)", ""))}</span>` : ""}</td>
-        <td>${t.source_url ? `<a href="${esc(t.source_url)}" target="_blank" rel="noopener">source ↗</a>` : ""}</td></tr>`);
+        <td>${t.from_club ? esc(t.from_club) + " → " : ""}${esc(t.to_club || "")}${t.notes ? ` <span class="thin">· ${esc(t.notes.replace("; date approximate (year-level from Draftguru)", ""))}</span>` : ""}</td></tr>`);
   }
   if (current && isFA) txRows.push(`
     <tr><td class="thin">Jul 2026</td><td>${chip(current.status)}</td>
-      <td>Named ${esc(STATUS[current.status].label.toLowerCase())} for end of ${current.contracted_through_year}</td>
-      <td>${current.source_url ? `<a href="${esc(current.source_url)}" target="_blank" rel="noopener">AFL.com.au ↗</a>` : ""}</td></tr>`);
+      <td>Named ${esc(STATUS[current.status].label.toLowerCase())} for end of ${current.contracted_through_year}</td></tr>`);
 
   let sameBoat = "";
   if (isFA) {
@@ -828,13 +859,12 @@ async function playerView(id) {
           <h3>Contract status</h3>
           <p class="sub">Status by season — ListTrac tracks status, never dollars.</p>
           ${timelineHTML(p)}
-          ${current.source_url ? `<p class="srcline">Status per <a href="${esc(current.source_url)}" target="_blank" rel="noopener">source ↗</a> · confirmed ${esc(current.last_confirmed_date || "")}</p>` : `<p class="srcline">${esc(current.source_note || "")}</p>`}
         </div>` : ""}
         <div class="card">
           <h3>Transactions</h3>
           <p class="sub">Every list move on record, provenance attached. Historical dates are trade-period-year approximations.</p>
           <div class="tablewrap"><table>
-            <thead><tr><th>When</th><th>Type</th><th>Detail</th><th>Source</th></tr></thead>
+            <thead><tr><th>When</th><th>Type</th><th>Detail</th></tr></thead>
             <tbody>${txRows.join("") || `<tr><td colspan="4" class="thin">No recorded movements — original-list player.</td></tr>`}</tbody>
           </table></div>
         </div>
@@ -843,7 +873,7 @@ async function playerView(id) {
     </div>`;
 }
 
-async function draftView(year, draftType = "national") {
+async function draftView(year, draftType = "national", chrome = "") {
   let picks = [], picksErr = "";
   const intel = await api("/api/pick-intel").catch(() => null);
   try { picks = await api(`/drafts/${year}?draft_type=${encodeURIComponent(draftType)}`); }
@@ -853,7 +883,7 @@ async function draftView(year, draftType = "national") {
 
   const years = [];
   for (let y = 2026; y >= 1986; y--) years.push(y);
-  view.innerHTML = `
+  view.innerHTML = `${chrome}
     <div class="controls">
       <label class="eyebrow" style="margin:0" for="dyear">Year</label>
       <select id="dyear">${years.map(y => `<option ${y === +year ? "selected" : ""}>${y}</option>`).join("")}</select>
@@ -880,8 +910,8 @@ async function draftView(year, draftType = "national") {
               : "<span class='thin'>own selection</span>"}</td></tr>`).join("")}
         </tbody>
       </table></div>
-      <p class="srcline">Hover a row for the pick's historical outcome profile (avg games, AA%, premiership%,
-        Rising Star%). Trade chains from Draftguru; <a href="#/trades/${esc(year)}">full trade period →</a></p>`}
+      <p class="srcline">Hover a row for the pick's historical outcome profile ·
+        <a href="#/trades/history/${esc(year)}">full ${esc(year)} trade period →</a></p>`}
     </div>
     ${trades.players.length || trades.picks.length ? `
     <div class="card">
@@ -904,24 +934,22 @@ async function draftView(year, draftType = "national") {
             <td class="num ${t.resolved_pick ? "" : "thin"}">${t.resolved_pick ? "#" + t.resolved_pick : "—"}</td></tr>`).join("")}
         </tbody>
       </table></div>` : ""}
-      <p class="srcline">Draftguru provenance on every row · dates approximate to the trade period.</p>
     </div>` : ""}`;
 
-  document.getElementById("dyear").addEventListener("change", e => location.hash = `#/draft/${e.target.value}/${document.getElementById("dtype").value}`);
-  document.getElementById("dtype").addEventListener("change", e => location.hash = `#/draft/${document.getElementById("dyear").value}/${e.target.value}`);
+  document.getElementById("dyear").addEventListener("change", e => location.hash = `#/draft/history/${e.target.value}/${document.getElementById("dtype").value}`);
+  document.getElementById("dtype").addEventListener("change", e => location.hash = `#/draft/history/${document.getElementById("dyear").value}/${e.target.value}`);
 }
 
-async function tradesView(year) {
+async function tradesView(year, chrome = "") {
   let trades = { players: [], picks: [] };
   let empty = "";
   try { trades = await api(`/trades/${year}`); } catch { empty = `No trade data recorded for ${year}.`; }
   const years = [];
   for (let y = 2025; y >= 1986; y--) years.push(y);
-  view.innerHTML = `
+  view.innerHTML = `${chrome}
     <div class="controls">
       <label class="eyebrow" style="margin:0" for="tyear">Trade period</label>
       <select id="tyear">${years.map(y => `<option ${y === +year ? "selected" : ""}>${y}</option>`).join("")}</select>
-      <span class="thin" style="font-size:12px">Interactive trade machine is next on the roadmap.</span>
     </div>
     ${empty ? `<div class="card"><p class="thin">${esc(empty)}</p></div>` : `
     <div class="card">
@@ -946,9 +974,9 @@ async function tradesView(year) {
             <td class="num ${t.resolved_pick ? "" : "thin"}">${t.resolved_pick ? "#" + t.resolved_pick : "—"}</td></tr>`).join("")}
         </tbody>
       </table></div>
-      <p class="srcline">Draftguru provenance on every row · <a href="#/draft/${esc(year)}">see the resulting draft board →</a></p>
+      <p class="srcline"><a href="#/draft/history/${esc(year)}">see the resulting draft board →</a></p>
     </div>`}`;
-  document.getElementById("tyear").addEventListener("change", e => location.hash = `#/trades/${e.target.value}`);
+  document.getElementById("tyear").addEventListener("change", e => location.hash = `#/trades/history/${e.target.value}`);
 }
 
 async function faView(filter = "all") {
@@ -963,13 +991,12 @@ async function faView(filter = "all") {
     </div>
     <div class="card">
       <h3>${esc(buttons.find(b => b[0] === filter)[1])} — end of 2026</h3>
-      <p class="sub">${players.length} players. FA status per the official AFL list; off-contract per Zero Hanger.</p>
+      <p class="sub">${players.length} players.</p>
       <div class="tablewrap"><table>
-        <thead><tr><th>Player</th><th>Club</th><th class="num">Age</th><th>Status</th><th>Source</th></tr></thead>
+        <thead><tr><th>Player</th><th>Club</th><th class="num">Age</th><th>Status</th></tr></thead>
         <tbody>${players.map(x => `
           <tr><td>${playerLink(x)}</td><td class="thin">${esc(x.club)}</td>
-            <td class="num">${age(x.dob)}</td><td>${chip(x.contract_status)}</td>
-            <td>${x.source_url ? `<a href="${esc(x.source_url)}" target="_blank" rel="noopener">↗</a>` : ""}</td></tr>`).join("")}
+            <td class="num">${age(x.dob)}</td><td>${chip(x.contract_status)}</td></tr>`).join("")}
         </tbody>
       </table></div>
     </div>`;
@@ -1009,25 +1036,46 @@ async function searchView(q) {
 
 /* ---------- router ---------- */
 
+const draftChrome = act => `<div class="subtabs">
+  <a href="#/draft" class="${act === "order" ? "active" : ""}">Projected order</a>
+  <a href="#/draft/mock" class="${act === "mock" ? "active" : ""}">Mock draft</a>
+  <a href="#/draft/history/2025" class="${act === "history" ? "active" : ""}">Draft history</a>
+</div>`;
+const tradesChrome = act => `<div class="subtabs">
+  <a href="#/trades" class="${act === "machine" ? "active" : ""}">Trade machine</a>
+  <a href="#/trades/history/2025" class="${act === "history" ? "active" : ""}">Trade history</a>
+</div>`;
+const go = hash => { location.replace(hash); return Promise.resolve(); };
+
 const routes = [
   [/^#?\/?$/,                       () => landingView()],
   [/^#\/clubs$/,                    () => clubsView()],
-  [/^#\/draft-order$/,              () => draftOrderView()],
-  [/^#\/mock-draft$/,               () => mockDraftView()],
-  [/^#\/trades\/(\d{4})$/,          m => tradesView(m[1])],
-  [/^#\/trade-machine$/,            () => tradeMachineView()],
+  [/^#\/players$/,                  () => playersView()],
+  [/^#\/draft$/,                    () => draftOrderView(draftChrome("order"))],
+  [/^#\/draft\/mock$/,              () => mockDraftView(draftChrome("mock"))],
+  [/^#\/draft\/history\/(\d{4})(?:\/(\w+))?$/, m => draftView(m[1], m[2] || "national", draftChrome("history"))],
+  [/^#\/trades$/,                   () => tradeMachineView(tradesChrome("machine"))],
+  [/^#\/trades\/history\/(\d{4})$/, m => tradesView(m[1], tradesChrome("history"))],
+  // legacy hashes redirect into the hubs
+  [/^#\/draft-order$/,              () => go("#/draft")],
+  [/^#\/mock-draft$/,               () => go("#/draft/mock")],
+  [/^#\/trade-machine$/,            () => go("#/trades")],
+  [/^#\/trades\/(\d{4})$/,          m => go(`#/trades/history/${m[1]}`)],
+  [/^#\/draft\/(\d{4})(?:\/(\w+))?$/, m => go(`#/draft/history/${m[1]}${m[2] ? "/" + m[2] : ""}`)],
   [/^#\/club\/([A-Za-z]+)$/,        m => clubView(m[1])],
   [/^#\/player\/(\d+)$/,            m => playerView(m[1])],
-  [/^#\/draft\/(\d{4})(?:\/(\w+))?$/, m => draftView(m[1], m[2] || "national")],
   [/^#\/free-agents(?:\/(\w+))?$/,  m => faView(m[1] || "all")],
   [/^#\/search\/(.+)$/,             m => searchView(decodeURIComponent(m[1]))],
 ];
 
 async function route() {
   const hash = location.hash || "#/";
-  document.querySelectorAll("#nav a").forEach(a =>
-    a.classList.toggle("active", hash === a.getAttribute("href") ||
-      (a.getAttribute("href") !== "#/" && hash.startsWith(a.getAttribute("href").split("/").slice(0, 2).join("/")))));
+  document.querySelectorAll("#nav a").forEach(a => {
+    const href = a.getAttribute("href");
+    a.classList.toggle("active", href === "#/"
+      ? (hash === "#/" || hash === "" || hash === "#")
+      : hash === href || hash.startsWith(href + "/"));
+  });
   for (const [re, fn] of routes) {
     const m = hash.match(re);
     if (m) {

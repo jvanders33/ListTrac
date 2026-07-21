@@ -4,67 +4,61 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ListTrac — AFL lists, movement, contracts, draft</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=2">
 </head>
 <body>
-  <div class="wrap">
-    <header class="masthead">
+  <div class="mast">
+    <div class="mast-top">
       <h1 class="wordmark"><a href="#/">List<em>Trac</em></a>
         <small>AFL lists · movement · contracts · draft</small>
       </h1>
-      <nav class="viewtabs" id="nav">
-        <a href="#/clubs">Clubs</a>
-        <a href="#/free-agents">Free agents</a>
-        <a href="#/trades/2025">Trades</a>
-        <a href="#/trade-machine">Trade machine</a>
-        <a href="#/draft/2025">Draft</a>
-        <a href="#/draft-order">Draft order</a>
-        <a href="#/mock-draft">Mock draft</a>
-      </nav>
       <form class="search" id="search-form" role="search">
         <input id="search-input" type="search" placeholder="Search for a player or club…" aria-label="Search for a player or club">
       </form>
-    </header>
+    </div>
+    <nav class="navband" id="nav">
+      <a href="#/">Home</a>
+      <a href="#/clubs">Clubs</a>
+      <a href="#/players">Players</a>
+      <a href="#/free-agents">Free agents</a>
+      <a href="#/trades">Trades</a>
+      <a href="#/draft">Draft</a>
+    </nav>
+  </div>
+  <div class="wrap">
     <main id="view" aria-live="polite"></main>
     <footer class="pagefoot">
       <div class="footcols">
         <div>
           <p class="eyebrow">Sections</p>
           <a href="#/clubs">Clubs</a>
+          <a href="#/players">Players</a>
           <a href="#/free-agents">Free agents</a>
-          <a href="#/trades/2025">Trade periods</a>
-          <a href="#/trade-machine">Trade machine</a>
-          <a href="#/draft/2025">Draft boards</a>
-          <a href="#/draft-order">Projected order</a>
-          <a href="#/mock-draft">Mock draft</a>
+          <a href="#/trades">Trade machine</a>
+          <a href="#/trades/history/2025">Trade history</a>
+        </div>
+        <div>
+          <p class="eyebrow">Draft</p>
+          <a href="#/draft">Projected order</a>
+          <a href="#/draft/mock">Mock draft</a>
+          <a href="#/draft/history/2025">Draft history</a>
         </div>
         <div>
           <p class="eyebrow">Coming up</p>
+          <span class="thin">Player rankings</span>
           <span class="thin">Fantasy context</span>
           <span class="thin">U16 prospect runway</span>
-          <span class="thin">Player news feeds</span>
-          <span class="thin">Admin trade entry</span>
-        </div>
-        <div>
-          <p class="eyebrow">Data sources</p>
-          <a href="https://www.draftguru.com.au" target="_blank" rel="noopener">Draftguru</a>
-          <a href="https://afltables.com" target="_blank" rel="noopener">AFL Tables</a>
-          <a href="https://www.zerohanger.com" target="_blank" rel="noopener">Zero Hanger</a>
-          <a href="https://squiggle.com.au" target="_blank" rel="noopener">Squiggle</a>
-          <a href="https://www.afl.com.au" target="_blank" rel="noopener">AFL.com.au</a>
         </div>
         <div>
           <p class="eyebrow">About</p>
           <a href="https://github.com/jvanders33/ListTrac" target="_blank" rel="noopener">GitHub</a>
-          <span class="thin">Contact</span>
-          <span class="thin">Methodology</span>
         </div>
       </div>
-      <p class="footnote">ListTrac tracks contract <em>status</em>, never salary figures — the AFL doesn't
-        disclose them and we don't estimate them. Every record carries its source.
+      <p class="footnote">ListTrac tracks contract <em>status</em>, never salary figures.
+        Data: Draftguru · AFL Tables · Zero Hanger · AFL.com.au · Squiggle · Footywire.
         Not affiliated with the AFL or any club.</p>
     </footer>
   </div>
-  <script src="/app.js"></script>
+  <script src="/app.js?v=2"></script>
 </body>
 </html>
