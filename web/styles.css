@@ -247,6 +247,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   padding: 8px 10px; border-bottom: 1px solid var(--line); font-size: 13.5px;
 }
 .pickrow.otc { background: var(--warn-bg); border-left: 3px solid var(--warn); }
+.pickrow.matched { background: var(--rfa-bg); border-left: 3px solid var(--rfa); }
+.pickrow.absorbed { opacity: 0.55; }
+.pickrow .chip { font-size: 9.5px; padding: 2px 6px; }
 .picknum {
   font-weight: 800; font-variant-numeric: tabular-nums; width: 24px;
   text-align: right; color: var(--ink-2);

@@ -166,64 +166,193 @@ async function draftOrderView() {
 /* ---------- interactive mock draft ---------- */
 
 const MOCK_KEY = "mock_draft_2026";
-const loadMock = () => { try { return JSON.parse(localStorage.getItem(MOCK_KEY)) || []; } catch { return []; } };
-const saveMock = picks => localStorage.setItem(MOCK_KEY, JSON.stringify(picks));
+const loadMock = () => { try { return (JSON.parse(localStorage.getItem(MOCK_KEY)) || []).filter(Boolean); } catch { return []; } };
+const saveMock = events => localStorage.setItem(MOCK_KEY, JSON.stringify(events));
+
+/* Official AFL Draft Value Index (54 picks, current revision — sourced from
+   draftguru.com.au's pick value calculator; matches AFL-published values). */
+const DVI = [3000, 2481, 2178, 1962, 1795, 1659, 1543, 1443, 1355, 1276, 1205, 1140,
+  1080, 1024, 973, 924, 879, 836, 796, 757, 721, 686, 653, 621, 590, 561, 533, 505,
+  479, 454, 429, 405, 382, 360, 338, 317, 297, 277, 257, 238, 220, 202, 184, 167,
+  150, 134, 118, 102, 86, 71, 57, 42, 28, 14];
+const dvi = n => (n >= 1 && n <= DVI.length) ? DVI[n - 1] : 0;
+
+/* Map a prospect's tie string to the matching club. A dual tie
+   ("Sydney Academy & North Melbourne F/S") resolves to the first listed —
+   we model that as the player's nomination. Tasmania isn't in the 2026 draft. */
+const TIE_CLUBS = [["Western Bulldogs", "WB"], ["West Coast", "WCE"], ["North Melbourne", "NM"],
+  ["Carlton", "CAR"], ["Fremantle", "FRE"], ["Essendon", "ESS"], ["Richmond", "RIC"],
+  ["Brisbane", "BRI"], ["Gold Coast", "GCS"], ["GWS", "GWS"], ["Sydney", "SYD"]];
+const tieClub = tie => {
+  if (!tie) return null;
+  let best = null;
+  for (const [name, ab] of TIE_CLUBS) {
+    const i = tie.indexOf(name);
+    if (i !== -1 && (best === null || i < best.i)) best = { i, ab };
+  }
+  return best && best.ab;
+};
+
+/* Ladder-based loading on bid cost (2026 rule change): top two pay a 20%
+   premium, preliminary finalists 10%, bottom five get a 10% discount. */
+const bidLoading = rank => rank <= 2 ? 1.2 : rank <= 4 ? 1.1 : rank >= 14 ? 0.9 : 1.0;
+
+/* Replay the selection events into a board state. Assumptions (shown in UI):
+   standard pick hands (each club holds its natural picks in rounds 1-4 —
+   2026 pick trades aren't applied), clubs always match when affordable,
+   max two picks per match, matched bids insert an extra selection. */
+function simulateDraft(events, orderPicks, byName) {
+  const rows = orderPicks.map((pk, i) => ({ kind: "order", club: pk, slot: i + 1, assigned: null, absorbed: null }));
+  const hands = {}, rankOf = {};
+  orderPicks.forEach((pk, i) => {
+    hands[pk.abbrev] = [i + 1, i + 19, i + 37, i + 55].map(n => ({ n, spent: false }));
+    rankOf[pk.abbrev] = pk.ladder_rank;
+  });
+  const ledger = [], drafted = new Set();
+
+  const currentRow = () => rows.find(r => r.kind === "order" && !r.assigned && !r.absorbed);
+  const displayNum = row => {
+    let n = 0;
+    for (const r of rows) { if (!r.absorbed) n++; if (r === row) return n; }
+    return n;
+  };
+
+  for (const name of events) {
+    const row = currentRow();
+    if (!row) break;
+    const p = byName[name];
+    if (!p || drafted.has(name)) continue;
+
+    const tied = tieClub(p.tie);
+    if (tied && tied !== row.club.abbrev && hands[tied]) {
+      const pickNo = displayNum(row);
+      const cost = Math.round(dvi(Math.min(pickNo, 54)) * bidLoading(rankOf[tied]));
+      const avail = hands[tied].filter(x => !x.spent);
+      let best = null;
+      const consider = combo => {
+        const pts = combo.reduce((s, x) => s + dvi(x.n), 0);
+        if (pts < cost) return;
+        const cand = { combo, pts, waste: pts - cost, usesR1: combo.some(x => x.n <= 18) ? 1 : 0 };
+        if (!best || cand.waste < best.waste || (cand.waste === best.waste && cand.usesR1 < best.usesR1)) best = cand;
+      };
+      avail.forEach(a => consider([a]));
+      for (let i = 0; i < avail.length; i++)
+        for (let j = i + 1; j < avail.length; j++) consider([avail[i], avail[j]]);
+
+      if (best) {
+        best.combo.forEach(x => { x.spent = true; });
+        for (const x of best.combo) {
+          if (x.n <= 18) {
+            const r1 = rows.find(r => r.kind === "order" && r.club.abbrev === tied);
+            if (r1 && !r1.assigned && !r1.absorbed) r1.absorbed = "pick used to match bid for " + name;
+          }
+        }
+        rows.splice(rows.indexOf(row), 0, {
+          kind: "matched", club: orderPicks.find(pk => pk.abbrev === tied),
+          assigned: p, matchNote: "matched bid at pick " + pickNo,
+        });
+        drafted.add(name);
+        ledger.push({ pick: pickNo, bidder: row.club.abbrev, club: tied, player: name,
+                      cost, paid: best.combo.map(x => x.n), pts: best.pts });
+        continue; // the bidding club stays on the clock
+      }
+      ledger.push({ pick: pickNo, bidder: row.club.abbrev, club: tied, player: name, cost, failed: true });
+    }
+    row.assigned = p;
+    drafted.add(name);
+    // the club's own R1 pick is now used — it can't also fund a later match
+    const own = hands[row.club.abbrev].find(x => x.n === row.slot);
+    if (own) own.spent = true;
+  }
+  return { rows, ledger, drafted, currentRow };
+}
 
 async function mockDraftView() {
   const [order, pool] = await Promise.all([api("/api/draft-order"), api("/api/prospects")]);
   const prospects = pool.prospects;
-  let picks = loadMock(); // array of prospect names, index = pick-1
+  const byName = Object.fromEntries(prospects.map(p => [p.name, p]));
+  let events = loadMock();
   let filter = "";
 
-  const byName = Object.fromEntries(prospects.map(p => [p.name, p]));
-  const available = () => prospects.filter(p => !picks.includes(p.name));
-  const currentPick = () => picks.findIndex(x => !x) === -1
-    ? (picks.length < order.picks.length ? picks.length : -1)
-    : picks.findIndex(x => !x);
-
-  const tieBadge = p => p.tie ? `<span class="chip warn" title="Club-tied — bids not simulated in v1">${esc(p.tie)}</span>` : "";
+  const tieBadge = p => p.tie ? `<span class="chip warn" title="Club-tied — a rival selection triggers a bid">${esc(p.tie)}</span>` : "";
 
   function render() {
-    const cur = currentPick();
+    const sim = simulateDraft(events, order.picks, byName);
+    const cur = sim.currentRow();
+    const available = prospects.filter(p => !sim.drafted.has(p.name));
+    const done = !cur;
+    let shown = 0;
+
     view.innerHTML = `
       <div class="controls">
-        <button class="cta" id="auto" ${cur === -1 ? "disabled" : ""}>Auto pick</button>
-        <button class="filterbtn" id="sim" ${cur === -1 ? "disabled" : ""}>Sim to end</button>
-        <button class="filterbtn" id="undo" ${picks.filter(Boolean).length ? "" : "disabled"}>Undo</button>
+        <button class="cta" id="auto" ${done ? "disabled" : ""}>Auto pick</button>
+        <button class="filterbtn" id="simbtn" ${done ? "disabled" : ""}>Sim to end</button>
+        <button class="filterbtn" id="undo" ${events.length ? "" : "disabled"}>Undo</button>
         <button class="filterbtn" id="reset">Reset</button>
         <button class="filterbtn" id="copy">Copy board</button>
-        <span class="thin" style="font-size:12px">Your board saves automatically in this browser.</span>
+        <span class="thin" style="font-size:12px">Saves automatically in this browser.</span>
       </div>
       <div class="mockcols">
-        <div class="card">
-          <h3>2026 mock draft — first round</h3>
-          <p class="sub">Order: live reverse ladder (${order.as_of_round} games in). Club-tied players
-            show a badge — bid matching isn't simulated yet.</p>
-          <div class="boardlist">
-            ${order.picks.map((pk, i) => {
-              const chosen = picks[i] ? byName[picks[i]] : null;
-              return `<div class="pickrow ${i === cur ? "otc" : ""}">
-                <span class="picknum">${pk.pick}</span>
-                <i class="dot" style="background:${esc(pk.primary_color || "#888")}"></i>
-                <span class="pickclub">${esc(pk.abbrev || pk.club)}</span>
-                ${chosen
-                  ? `<span class="picked"><b>${esc(chosen.name)}</b> <span class="thin">${esc(chosen.position || chosen.state_team)}</span></span>`
-                  : i === cur ? `<span class="otc-label">On the clock</span>` : ""}
-              </div>`;
-            }).join("")}
+        <div>
+          <div class="card">
+            <h3>2026 mock draft — first round${done ? " · complete" : ""}</h3>
+            <p class="sub">Bid matching is live: pick a club-tied player with a rival on the clock
+              and the tied club matches if it can afford the points. Matched bids insert an extra
+              selection, exactly like the real thing.</p>
+            <div class="boardlist">
+              ${sim.rows.map(r => {
+                const isCur = r === cur;
+                if (r.absorbed) return `<div class="pickrow absorbed">
+                  <span class="picknum">·</span><i class="dot" style="background:${esc(r.club.primary_color || "#888")}"></i>
+                  <span class="pickclub">${esc(r.club.abbrev)}</span>
+                  <span class="thin" style="font-size:12px">${esc(r.absorbed)}</span></div>`;
+                shown++;
+                return `<div class="pickrow ${isCur ? "otc" : ""} ${r.kind === "matched" ? "matched" : ""}">
+                  <span class="picknum">${shown}</span>
+                  <i class="dot" style="background:${esc(r.club.primary_color || "#888")}"></i>
+                  <span class="pickclub">${esc(r.club.abbrev)}</span>
+                  ${r.assigned
+                    ? `<span class="picked"><b>${esc(r.assigned.name)}</b>
+                        <span class="thin">${esc(r.assigned.position || r.assigned.state_team)}</span>
+                        ${r.kind === "matched" ? `<span class="chip rfa">Matched bid</span>` : ""}</span>`
+                    : isCur ? `<span class="otc-label">On the clock</span>` : ""}
+                </div>`;
+              }).join("")}
+            </div>
           </div>
+          ${sim.ledger.length ? `
+          <div class="card">
+            <h3>Bid ledger</h3>
+            <p class="sub">Costs use the official Draft Value Index with 2026 ladder loadings
+              (top two +20%, prelim finalists +10%, bottom five −10%). Max two picks per match.</p>
+            <div class="tablewrap"><table>
+              <thead><tr><th class="num">Bid</th><th>Bidder</th><th>Player</th><th>Outcome</th></tr></thead>
+              <tbody>${sim.ledger.map(l => `
+                <tr><td class="num">${l.pick}</td><td class="thin">${esc(l.bidder)}</td>
+                  <td><b>${esc(l.player)}</b></td>
+                  <td>${l.failed
+                    ? `<span class="chip warn">${esc(l.club)} couldn&#39;t match</span> <span class="thin">needed ${l.cost} pts</span>`
+                    : `<span class="chip ok">${esc(l.club)} matched</span> <span class="thin">${l.cost} pts,
+                       paid with pick${l.paid.length > 1 ? "s" : ""} ${l.paid.join(" + ")}${l.pts > l.cost ? `, ${l.pts - l.cost} pts forfeited` : ""}</span>`}
+                  </td></tr>`).join("")}
+              </tbody>
+            </table></div>
+            <p class="srcline">Model: standard pick hands (rounds 1–4, 2026 pick trades not applied),
+              clubs match whenever affordable, dual-tied players nominate their first-listed club.
+              Round-2 compensation picks and pick sliding beyond the bid aren&#39;t modelled yet.</p>
+          </div>` : ""}
         </div>
         <div class="card">
-          <h3>Prospect pool <span class="thin" style="font-weight:400">(${available().length} available of ${prospects.length})</span></h3>
-          <p class="sub">2026 U18 championships squads, ranked per Reading the Play's Top 50.
+          <h3>Prospect pool <span class="thin" style="font-weight:400">(${available.length} of ${prospects.length})</span></h3>
+          <p class="sub">2026 U18 championships squads, ranked per Reading the Play&#39;s Top 50.
             Click a player to make the pick.</p>
           <input id="poolsearch" class="poolsearch" type="search" placeholder="Filter by name, position, state, club…" value="${esc(filter)}">
           <div class="poollist">
-            ${available()
+            ${available
               .filter(p => !filter || [p.name, p.position, p.state_team, p.junior_club, p.tie]
                 .join(" ").toLowerCase().includes(filter.toLowerCase()))
               .slice(0, 60).map(p => `
-              <button class="poolrow" data-name="${esc(p.name)}" ${cur === -1 ? "disabled" : ""}>
+              <button class="poolrow" data-name="${esc(p.name)}" ${done ? "disabled" : ""}>
                 <span class="rankchip ${p.rank ? "" : "unranked"}">${p.rank ?? "–"}</span>
                 <span class="poolinfo"><b>${esc(p.name)}</b>
                   <span class="thin">${[p.position, p.height_cm ? p.height_cm + "cm" : null, p.state_team, p.junior_club]
@@ -237,36 +366,27 @@ async function mockDraftView() {
         </div>
       </div>`;
 
-    view.querySelectorAll(".poolrow").forEach(b => b.addEventListener("click", () => {
-      const cur2 = currentPick();
-      if (cur2 === -1) return;
-      picks[cur2] = b.dataset.name;
-      saveMock(picks); render();
-    }));
-    view.querySelector("#auto").addEventListener("click", () => {
-      const cur2 = currentPick();
-      if (cur2 === -1) return;
-      picks[cur2] = available()[0].name;
-      saveMock(picks); render();
+    const commit = name => { events.push(name); saveMock(events); render(); };
+    view.querySelectorAll(".poolrow").forEach(b => b.addEventListener("click", () => commit(b.dataset.name)));
+    view.querySelector("#auto").addEventListener("click", () => available.length && commit(available[0].name));
+    view.querySelector("#simbtn").addEventListener("click", () => {
+      let s = simulateDraft(events, order.picks, byName);
+      while (s.currentRow()) {
+        const next = prospects.find(p => !s.drafted.has(p.name));
+        if (!next) break;
+        events.push(next.name);
+        s = simulateDraft(events, order.picks, byName);
+      }
+      saveMock(events); render();
     });
-    view.querySelector("#sim").addEventListener("click", () => {
-      let cur2;
-      while ((cur2 = currentPick()) !== -1) picks[cur2] = available()[0].name;
-      saveMock(picks); render();
-    });
-    view.querySelector("#undo").addEventListener("click", () => {
-      const last = picks.reduce((acc, v, i) => v ? i : acc, -1);
-      if (last >= 0) picks[last] = undefined;
-      while (picks.length && !picks[picks.length - 1]) picks.pop();
-      saveMock(picks); render();
-    });
-    view.querySelector("#reset").addEventListener("click", () => {
-      picks = []; saveMock(picks); render();
-    });
+    view.querySelector("#undo").addEventListener("click", () => { events.pop(); saveMock(events); render(); });
+    view.querySelector("#reset").addEventListener("click", () => { events = []; saveMock(events); render(); });
     view.querySelector("#copy").addEventListener("click", async () => {
-      const text = order.picks.map((pk, i) =>
-        `${pk.pick}. ${pk.club}: ${picks[i] || "—"}`).join("\n");
-      try { await navigator.clipboard.writeText(`ListTrac 2026 mock draft\n${text}`); } catch {}
+      const s = simulateDraft(events, order.picks, byName);
+      let n = 0;
+      const lines = s.rows.filter(r => !r.absorbed).map(r =>
+        `${++n}. ${r.club.club}: ${r.assigned ? r.assigned.name : "—"}${r.kind === "matched" ? " (matched bid)" : ""}`);
+      try { await navigator.clipboard.writeText(`ListTrac 2026 mock draft\n${lines.join("\n")}`); } catch {}
     });
     const search = view.querySelector("#poolsearch");
     search.addEventListener("input", () => {
