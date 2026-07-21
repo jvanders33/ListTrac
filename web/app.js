@@ -757,10 +757,31 @@ async function playersView() {
             ${esc(c.name)}</a>`).join("")}
       </div>
     </div>
-    <div class="card">
+    <div class="card" id="ratings-card">
       <h3>Player rankings</h3>
-      <p class="sub">Season-by-season player ratings, historical and aggregated across publishers — in the works.</p>
+      <p class="sub">Loading the official ratings…</p>
     </div>`;
+
+  api("/api/ratings?limit=50").then(data => {
+    const card = document.getElementById("ratings-card");
+    if (!card) return;
+    card.innerHTML = `
+      <h3>Player rankings <span class="thin" style="font-weight:400">· 2026</span></h3>
+      <p class="sub">${esc(data.attribution)} — top ${data.ratings.length} of ${data.count} rated players.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th class="num">Rank</th><th>Player</th><th>Club</th><th class="num">Games</th><th class="num">Rating</th></tr></thead>
+        <tbody>${data.ratings.map(r => `
+          <tr><td class="num"><b>${r.rank ?? "—"}</b></td>
+            <td>${r.player_id ? `<a href="#/player/${r.player_id}">${esc(r.name)}</a>` : esc(r.name)}</td>
+            <td class="thin">${esc(r.team)}</td><td class="num">${r.games ?? ""}</td>
+            <td class="num"><b>${r.rating}</b></td></tr>`).join("")}
+        </tbody>
+      </table></div>
+      <p class="srcline">Source: <a href="${esc(data.source_url)}" target="_blank" rel="noopener">${esc(data.attribution)} ↗</a></p>`;
+  }).catch(() => {
+    const card = document.getElementById("ratings-card");
+    if (card) card.querySelector(".sub").textContent = "Ratings unavailable right now.";
+  });
 
   const box = document.getElementById("pfind"), out = document.getElementById("presults");
   let timer;
@@ -897,7 +918,8 @@ async function playerView(id) {
       <div class="hero-inner">
         <p class="club-line">${p.club ? `<a href="#/club/${esc(p.club_abbrev)}">${esc(p.club)}</a>` : "Unattached"}</p>
         <h2>${esc(p.first_name)} ${esc(p.last_name)}</h2>
-        ${current ? `<p class="statusline">${chip(current.status)}</p>` : ""}
+        <p class="statusline">${current ? chip(current.status) : ""}${p.rating ? `
+          <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Player Rating #${p.rating.rank} · ${p.rating.rating}</span>` : ""}</p>
         <dl class="hero-facts">
           ${p.dob ? `<div><dt>Age</dt><dd>${age(p.dob)} (${esc(p.dob)})</dd></div>` : ""}
           ${p.height_cm ? `<div><dt>Height</dt><dd>${p.height_cm} cm</dd></div>` : ""}

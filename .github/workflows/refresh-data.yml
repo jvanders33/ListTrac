@@ -34,6 +34,10 @@ jobs:
       - name: Rebuild database from live sources
         run: python data/load.py --start 1986 --end 2026
 
+      - name: Refresh official player ratings (Champion Data)
+        run: python scraper/afl_ratings.py
+        continue-on-error: true  # token/feed hiccup shouldn't block the data push
+
       - name: Sanity-check the rebuilt snapshot
         run: |
           python - <<'EOF'

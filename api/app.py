@@ -104,6 +104,8 @@ def player(player_id: int):
         """SELECT dp.year, dp.draft_type, dp.pick_number, c.name club
            FROM draft_pick dp JOIN club c ON c.id = dp.original_club_id
            WHERE dp.player_selected_id = ?""", (player_id,))), None)
+    rating = _ratings_by_name().get(_norm(f"{profile['first_name']} {profile['last_name']}"))
+    profile["rating"] = {"rank": rating["rank"], "rating": rating["rating"]} if rating else None
     return profile
 
 
@@ -375,6 +377,40 @@ def updates():
 
 PROSPECTS_PATH = Path(__file__).resolve().parent.parent / "data" / "prospects_2026.json"
 PICK_INTEL_PATH = Path(__file__).resolve().parent.parent / "data" / "pick_intel.json"
+RATINGS_PATH = Path(__file__).resolve().parent.parent / "data" / "ratings_2026.json"
+
+
+def _norm(name: str) -> str:
+    import unicodedata
+    name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z]+", " ", name.lower()).strip()
+
+
+def _ratings_by_name() -> dict:
+    import json
+    if not RATINGS_PATH.exists():
+        return {}
+    data = json.loads(RATINGS_PATH.read_text(encoding="utf-8"))
+    return {_norm(r["name"]): r for r in data["ratings"]}
+
+
+@app.get("/api/ratings")
+def ratings(limit: int = 100, club: str | None = None):
+    """Official AFL Player Ratings (Champion Data), ranked. Matched to
+    ListTrac player pages by name so the table links through."""
+    import json
+    if not RATINGS_PATH.exists():
+        raise HTTPException(404, "ratings not built yet")
+    data = json.loads(RATINGS_PATH.read_text(encoding="utf-8"))
+    with db() as conn:
+        pid = {_norm(f"{r['first_name']} {r['last_name']}"): r["id"]
+               for r in conn.execute("SELECT id, first_name, last_name FROM player")}
+    rows = data["ratings"]
+    if club:
+        rows = [r for r in rows if r["team"].upper() == club.upper()]
+    rows = [{**r, "player_id": pid.get(_norm(r["name"]))} for r in rows[:limit]]
+    return {"year": data["year"], "attribution": data["attribution"],
+            "source_url": data["source_url"], "count": len(data["ratings"]), "ratings": rows}
 
 
 @app.get("/api/prospects")
