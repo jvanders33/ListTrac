@@ -37,6 +37,28 @@ const draftedShort = p => p.draft_year
   : "—";
 const playerLink = p => `<a href="#/player/${p.id}">${esc(p.first_name)} ${esc(p.last_name)}</a>`;
 
+/* Player-movement insiders on X. Set INSIDER_LIST_URL to an X List URL
+   (e.g. https://twitter.com/i/lists/123...) to embed the whole list; the
+   handle links below always render regardless of whether X allows the
+   embedded timeline for logged-out viewers. */
+const INSIDER_LIST_URL = "https://twitter.com/CalTwomey";
+const INSIDERS = [
+  ["CalTwomey", "Callum Twomey — AFL.com.au"],
+  ["MitchCleary", "Mitch Cleary — AFL.com.au"],
+  ["barrettdamian", "Damian Barrett — AFL.com.au"],
+  ["sammcclure", "Sam McClure — The Age"],
+  ["tommorris32", "Tom Morris"],
+  ["RalphyHeraldSun", "Jon Ralph — Herald Sun"],
+];
+
+function loadXWidgets() {
+  if (window.twttr) { window.twttr.widgets && window.twttr.widgets.load(view); return; }
+  const s = document.createElement("script");
+  s.src = "https://platform.twitter.com/widgets.js";
+  s.async = true;
+  document.head.appendChild(s);
+}
+
 /* Sample rail content until the v1.5 news aggregator lands. Links out only. */
 const SPOTLIGHTS = `
   <div class="card">
@@ -139,6 +161,17 @@ async function landingView() {
             </div>`).join("") : `<p class="thin">News feed unavailable right now.</p>`}
         </div>
         <div class="card">
+          <p class="eyebrow">Insider feed</p>
+          <p class="sub">The journalists who break player movement first.</p>
+          <a class="twitter-timeline" data-height="380" data-dnt="true"
+             href="${esc(INSIDER_LIST_URL)}">Posts from AFL insiders</a>
+          <div class="insiders">
+            ${INSIDERS.map(([h, label]) => `
+              <a href="https://twitter.com/${esc(h)}" target="_blank" rel="noopener">@${esc(h)}
+                <span class="thin">· ${esc(label)}</span></a>`).join("")}
+          </div>
+        </div>
+        <div class="card">
           <p class="eyebrow">Trending players</p>
           <p class="sub">From the data — FA class, newest picks, latest trades.</p>
           ${trend.map((t, i) => `
@@ -151,6 +184,7 @@ async function landingView() {
         </div>
       </aside>
     </div>`;
+  loadXWidgets();
 }
 
 const intelTip = (intel, n) => {

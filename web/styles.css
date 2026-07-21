@@ -320,6 +320,11 @@ footer.pagefoot {
 }
 .trendrow .treason { margin-left: auto; font-size: 11px; color: var(--ink-2); text-align: right; }
 
+/* insider feed */
+.insiders { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+.insiders a { font-size: 12.5px; font-weight: 700; }
+.insiders .thin { font-weight: 500; }
+
 /* trade machine */
 .tm-head { display: flex; align-items: center; gap: 10px; }
 .tm-club {
