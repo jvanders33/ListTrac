@@ -320,6 +320,27 @@ footer.pagefoot {
 }
 .trendrow .treason { margin-left: auto; font-size: 11px; color: var(--ink-2); text-align: right; }
 
+/* trade machine */
+.tm-head { display: flex; align-items: center; gap: 10px; }
+.tm-club {
+  font: inherit; font-size: 14px; font-weight: 700; color: var(--ink);
+  background: var(--ground); border: 1px solid var(--line); border-radius: 5px;
+  padding: 7px 10px; flex: 1; cursor: pointer;
+}
+.tm-assets { max-height: 300px; overflow-y: auto; border: 1px solid var(--line); border-radius: 5px; }
+.tm-asset {
+  display: flex; align-items: center; gap: 9px; padding: 6px 10px;
+  border-bottom: 1px solid var(--line); font-size: 13px; cursor: pointer;
+}
+.tm-asset:last-child { border-bottom: none; }
+.tm-asset:hover { background: var(--card-2); }
+.tm-asset.on { background: var(--ok-bg); }
+.tm-asset input { accent-color: var(--accent); }
+.tm-warn {
+  font-size: 12.5px; color: var(--warn); background: var(--warn-bg);
+  border-radius: 4px; padding: 7px 10px; margin: 8px 0 0;
+}
+
 /* compact clubs module on the landing page */
 .clubstrip {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));

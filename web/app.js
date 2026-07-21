@@ -434,6 +434,176 @@ async function mockDraftView() {
   render();
 }
 
+/* ---------- trade machine ---------- */
+
+const TM_KEY = "trade_machine_v1";
+const tmLoad = () => { try { return JSON.parse(localStorage.getItem(TM_KEY)) || null; } catch { return null; } };
+const tmSave = s => localStorage.setItem(TM_KEY, JSON.stringify(s));
+
+/* A club's tradeable 2026 picks: projected R1 slot from the live order plus
+   standard R2-R4 slots, valued by DVI. Future picks carry no points yet. */
+function tmPicks(abbrev, order) {
+  const idx = order.picks.findIndex(p => p.abbrev === abbrev);
+  if (idx === -1) return [];
+  const slot = idx + 1;
+  const picks = [1, 2, 3, 4].map(round => {
+    const n = slot + (round - 1) * 18;
+    return { id: `2026-R${round}`, label: `2026 pick ${n} (R${round})`, dvi: dvi(n) };
+  });
+  picks.push({ id: "2027-R1", label: "2027 1st round (future)", dvi: null });
+  picks.push({ id: "2027-R2", label: "2027 2nd round (future)", dvi: null });
+  return picks;
+}
+
+async function tradeMachineView() {
+  const [clubList, order] = await Promise.all([api("/clubs"), api("/api/draft-order")]);
+  const clubs = clubList.filter(c => c.listed_players > 0);
+  let state = tmLoad() || {
+    a: { club: "CAR", players: [], picks: [] },
+    b: { club: "FRE", players: [], picks: [] },
+  };
+  const rosters = {};  // abbrev -> list rows
+
+  async function roster(abbrev) {
+    if (!rosters[abbrev]) rosters[abbrev] = await api(`/clubs/${abbrev}/list`);
+    return rosters[abbrev];
+  }
+
+  const statusWarn = p => {
+    if (!p.contract_status || p.contract_status === "contracted") return null;
+    const label = (STATUS[p.contract_status] || {}).label || p.contract_status;
+    return `${p.first_name} ${p.last_name} is ${label.toLowerCase()} — uncontracted players can't be traded without re-signing first`;
+  };
+
+  async function render() {
+    const [ra, rb] = await Promise.all([roster(state.a.club), roster(state.b.club)]);
+    const sides = [
+      { key: "a", other: "b", list: ra },
+      { key: "b", other: "a", list: rb },
+    ];
+    // prune selections that no longer exist (club changed)
+    for (const s of sides) {
+      const st = state[s.key];
+      const ids = new Set(s.list.map(p => p.id));
+      st.players = st.players.filter(id => ids.has(id));
+      const pickIds = new Set(tmPicks(st.club, order).map(p => p.id));
+      st.picks = st.picks.filter(id => pickIds.has(id));
+    }
+    tmSave(state);
+
+    const sideData = sides.map(s => {
+      const st = state[s.key];
+      const info = clubs.find(c => c.abbreviation === st.club) || {};
+      const chosen = s.list.filter(p => st.players.includes(p.id));
+      const picks = tmPicks(st.club, order).filter(p => st.picks.includes(p.id));
+      const points = picks.reduce((t, p) => t + (p.dvi || 0), 0);
+      const warnings = chosen.map(statusWarn).filter(Boolean);
+      return { ...s, st, info, chosen, picks, points, warnings };
+    });
+
+    const [A, B] = sideData;
+    const diff = A.points - B.points;
+    const anyAssets = A.chosen.length + A.picks.length + B.chosen.length + B.picks.length > 0;
+    const verdict = !anyAssets ? "" :
+      Math.abs(diff) <= 300 ? "Pick points are roughly balanced."
+      : `${(diff > 0 ? A : B).info.name} sends ${Math.abs(diff)} more DVI points — the player side of the deal has to justify it.`;
+
+    const sideHTML = s => `
+      <div class="card tm-side">
+        <div class="tm-head">
+          <span class="badge" style="--club:${esc(s.info.primary_color || "#888")}">${esc(s.st.club)}</span>
+          <select data-side="${s.key}" class="tm-club">
+            ${clubs.map(c => `<option value="${esc(c.abbreviation)}" ${c.abbreviation === s.st.club ? "selected" : ""}>${esc(c.name)}</option>`).join("")}
+          </select>
+        </div>
+        <p class="eyebrow" style="margin-top:12px">Players out</p>
+        <div class="tm-assets">
+          ${s.list.map(p => `
+            <label class="tm-asset ${s.st.players.includes(p.id) ? "on" : ""}">
+              <input type="checkbox" data-side="${s.key}" data-kind="players" data-id="${p.id}"
+                ${s.st.players.includes(p.id) ? "checked" : ""}>
+              <span><b>${esc(p.first_name)} ${esc(p.last_name)}</b>
+                <span class="thin">${age(p.dob)}yo${p.contract_status && p.contract_status !== "contracted" ? " · " : ""}</span>
+                ${p.contract_status && p.contract_status !== "contracted" ? chip(p.contract_status) : ""}</span>
+            </label>`).join("")}
+        </div>
+        <p class="eyebrow" style="margin-top:12px">Picks out</p>
+        <div class="tm-assets">
+          ${tmPicks(s.st.club, order).map(p => `
+            <label class="tm-asset ${s.st.picks.includes(p.id) ? "on" : ""}">
+              <input type="checkbox" data-side="${s.key}" data-kind="picks" data-id="${esc(p.id)}"
+                ${s.st.picks.includes(p.id) ? "checked" : ""}>
+              <span><b>${esc(p.label)}</b> <span class="thin">${p.dvi != null ? p.dvi + " pts" : "value TBD"}</span></span>
+            </label>`).join("")}
+        </div>
+      </div>`;
+
+    view.innerHTML = `
+      <div class="controls">
+        <button class="filterbtn" id="tm-reset">Reset</button>
+        <button class="filterbtn" id="tm-copy">Copy trade</button>
+        <span class="thin" style="font-size:12px">Pick values: official DVI. Players carry no dollar values —
+          the AFL doesn't disclose salaries, so the machine won't invent them.</span>
+      </div>
+      <div class="mockcols" style="grid-template-columns: 1fr 1fr">
+        ${sideHTML(A)}
+        ${sideHTML(B)}
+      </div>
+      <div class="card">
+        <h3>The deal</h3>
+        ${anyAssets ? `
+        <div class="tablewrap"><table>
+          <thead><tr><th></th><th>${esc(A.info.name)} receives</th><th>${esc(B.info.name)} receives</th></tr></thead>
+          <tbody>
+            <tr><td class="thin">Players</td>
+              <td>${B.chosen.map(p => `${esc(p.first_name)} ${esc(p.last_name)}`).join(", ") || "—"}</td>
+              <td>${A.chosen.map(p => `${esc(p.first_name)} ${esc(p.last_name)}`).join(", ") || "—"}</td></tr>
+            <tr><td class="thin">Picks</td>
+              <td>${B.picks.map(p => esc(p.label)).join(", ") || "—"}</td>
+              <td>${A.picks.map(p => esc(p.label)).join(", ") || "—"}</td></tr>
+            <tr><td class="thin">Pick points</td>
+              <td class="num">${B.points}</td><td class="num">${A.points}</td></tr>
+            <tr><td class="thin">Net list spots</td>
+              <td class="num">${B.chosen.length - A.chosen.length > 0 ? "+" : ""}${B.chosen.length - A.chosen.length}</td>
+              <td class="num">${A.chosen.length - B.chosen.length > 0 ? "+" : ""}${A.chosen.length - B.chosen.length}</td></tr>
+          </tbody>
+        </table></div>
+        <p class="sub" style="margin-top:12px">${esc(verdict)}</p>
+        ${[...A.warnings, ...B.warnings].map(w => `<p class="tm-warn">⚠ ${esc(w)}</p>`).join("")}
+        <p class="srcline">Rules of thumb only — actual trades also weigh salary, contract lengths and list
+          strategy that public data can't see. Future picks are shown without points until their draft order exists.</p>
+        ` : `<p class="thin">Select players and picks on each side to build a trade.</p>`}
+      </div>`;
+
+    view.querySelectorAll(".tm-club").forEach(sel => sel.addEventListener("change", async e => {
+      const side = e.target.dataset.side;
+      state[side] = { club: e.target.value, players: [], picks: [] };
+      tmSave(state); await render();
+    }));
+    view.querySelectorAll(".tm-asset input").forEach(cb => cb.addEventListener("change", async e => {
+      const { side, kind, id } = e.target.dataset;
+      const arr = state[side][kind];
+      const val = kind === "players" ? Number(id) : id;
+      const i = arr.indexOf(val);
+      if (i === -1) arr.push(val); else arr.splice(i, 1);
+      tmSave(state); await render();
+    }));
+    view.querySelector("#tm-reset").addEventListener("click", async () => {
+      state = { a: { club: state.a.club, players: [], picks: [] }, b: { club: state.b.club, players: [], picks: [] } };
+      tmSave(state); await render();
+    });
+    view.querySelector("#tm-copy").addEventListener("click", async () => {
+      const line = (name, recv) => `${name} receive: ${recv.join(", ") || "nothing"}`;
+      const text = ["ListTrac trade machine",
+        line(A.info.name, [...B.chosen.map(p => p.first_name + " " + p.last_name), ...B.picks.map(p => p.label)]),
+        line(B.info.name, [...A.chosen.map(p => p.first_name + " " + p.last_name), ...A.picks.map(p => p.label)]),
+        verdict].filter(Boolean).join("\n");
+      try { await navigator.clipboard.writeText(text); } catch {}
+    });
+  }
+  await render();
+}
+
 async function clubsView() {
   const [clubs, summary] = await Promise.all([api("/clubs"), api("/api/summary")]);
   const s = summary.contract_statuses, c = summary.counts;
@@ -754,6 +924,7 @@ const routes = [
   [/^#\/draft-order$/,              () => draftOrderView()],
   [/^#\/mock-draft$/,               () => mockDraftView()],
   [/^#\/trades\/(\d{4})$/,          m => tradesView(m[1])],
+  [/^#\/trade-machine$/,            () => tradeMachineView()],
   [/^#\/club\/([A-Za-z]+)$/,        m => clubView(m[1])],
   [/^#\/player\/(\d+)$/,            m => playerView(m[1])],
   [/^#\/draft\/(\d{4})(?:\/(\w+))?$/, m => draftView(m[1], m[2] || "national")],
