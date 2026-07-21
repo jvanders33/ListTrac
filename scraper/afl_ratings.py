@@ -5,14 +5,17 @@ The AFL's stats site loads player ratings from api.afl.com.au's statspro feed,
 gated by a short-lived MIS token that any client can mint from the public
 WMCTok endpoint (same call the site's own JavaScript makes on load). Each
 player record carries `totals.ratingPoints` — the Champion Data AFL Player
-Rating — and `totals.ranking`, their official season rank.
+Rating — `totals.ranking` (official season rank), and a stable Champion Data
+`playerId` used to stitch a player's rating across seasons.
 
 This is Champion Data / AFL data: ListTrac surfaces the rating as a fact with
 clear attribution and a link back, never as its own metric. Seasons are
-addressed as CD_S{year}014 and history reaches back well over a decade.
+addressed as CD_S{year}014; the feed reaches back to at least 2015.
 
-    python scraper/afl_ratings.py           # current season -> data/ratings_2026.json
+    python scraper/afl_ratings.py                # current season -> ratings_2026.json
+    python scraper/afl_ratings.py --history 2015 # all seasons 2015..2026 -> ratings_history.json
 """
+import argparse
 import json
 import time
 from pathlib import Path
@@ -25,9 +28,12 @@ HEADERS = {
     "Origin": "https://www.afl.com.au",
     "Referer": "https://www.afl.com.au/",
 }
-OUT_PATH = Path(__file__).resolve().parent.parent / "data" / "ratings_2026.json"
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+CURRENT_PATH = DATA_DIR / "ratings_2026.json"
+HISTORY_PATH = DATA_DIR / "ratings_history.json"
 ATTRIBUTION = "Official AFL Player Ratings, powered by Champion Data"
 SOURCE_URL = "https://www.afl.com.au/stats/player-ratings"
+CURRENT_YEAR = 2026
 
 
 def mint_token() -> str:
@@ -36,11 +42,8 @@ def mint_token() -> str:
     return resp.json()["token"]
 
 
-def fetch_season_ratings(year: int, token: str | None = None) -> list[dict]:
-    """Every rated player for a season, ranked. Returns
-    [{rank, rating, name, first_name, last_name, team, games, draft_year,
-      draft_position}]."""
-    token = token or mint_token()
+def fetch_season_ratings(year: int, token: str) -> list[dict]:
+    """Every rated player for a season, ranked best-first."""
     resp = requests.get(
         f"{API}/statspro/playersStats/seasons/CD_S{year}014",
         headers={**HEADERS, "x-media-mis-token": token}, timeout=20)
@@ -53,6 +56,7 @@ def fetch_season_ratings(year: int, token: str | None = None) -> list[dict]:
         if t.get("ratingPoints") is None:
             continue
         out.append({
+            "cd_id": pl["playerId"],
             "rank": int(t["ranking"]) if t.get("ranking") else None,
             "rating": round(t["ratingPoints"], 1),
             "first_name": d["givenName"], "last_name": d["surname"],
@@ -65,14 +69,50 @@ def fetch_season_ratings(year: int, token: str | None = None) -> list[dict]:
     return out
 
 
-if __name__ == "__main__":
-    token = mint_token()
-    ratings = fetch_season_ratings(2026, token)
-    payload = {
-        "year": 2026, "attribution": ATTRIBUTION, "source_url": SOURCE_URL,
+def write_current(ratings: list[dict]) -> None:
+    CURRENT_PATH.write_text(json.dumps({
+        "year": CURRENT_YEAR, "attribution": ATTRIBUTION, "source_url": SOURCE_URL,
         "count": len(ratings), "ratings": ratings,
-    }
-    OUT_PATH.write_text(json.dumps(payload, indent=1), encoding="utf-8", newline="\n")
-    print(f"wrote {OUT_PATH.name}: {len(ratings)} rated players")
-    for r in ratings[:5]:
+    }, indent=1), encoding="utf-8", newline="\n")
+
+
+def build_history(start: int, end: int, token: str) -> None:
+    """Compact per-season ratings for start..end into one file, plus a
+    per-player timeline keyed by Champion Data id so profiles can show a
+    rating history even as the player changes clubs."""
+    by_season: dict[str, list[dict]] = {}
+    timelines: dict[str, dict] = {}
+    for year in range(start, end + 1):
+        rows = fetch_season_ratings(year, token)
+        by_season[str(year)] = [
+            {k: r[k] for k in ("cd_id", "rank", "rating", "name", "team", "games")} for r in rows]
+        for r in rows:
+            tl = timelines.setdefault(str(r["cd_id"]), {"name": r["name"], "seasons": []})
+            tl["name"] = r["name"]  # keep the most recent spelling
+            tl["seasons"].append({"year": year, "rank": r["rank"], "rating": r["rating"], "team": r["team"]})
+        print(f"  {year}: {len(rows)} rated players")
+
+    HISTORY_PATH.write_text(json.dumps({
+        "attribution": ATTRIBUTION, "source_url": SOURCE_URL,
+        "years": list(range(start, end + 1)),
+        "by_season": by_season, "timelines": timelines,
+    }, indent=1), encoding="utf-8", newline="\n")
+    print(f"wrote {HISTORY_PATH.name}: {end - start + 1} seasons, {len(timelines)} distinct players")
+
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--history", type=int, metavar="START_YEAR",
+                    help="also build ratings_history.json from START_YEAR to current")
+    args = ap.parse_args()
+
+    token = mint_token()
+    current = fetch_season_ratings(CURRENT_YEAR, token)
+    write_current(current)
+    print(f"wrote {CURRENT_PATH.name}: {len(current)} rated players")
+    for r in current[:5]:
         print(f"  {r['rank']:>3}  {r['name']:<22} {r['team']}  {r['rating']}")
+
+    if args.history:
+        print(f"\nBuilding history {args.history}..{CURRENT_YEAR}...")
+        build_history(args.history, CURRENT_YEAR, token)

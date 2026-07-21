@@ -257,6 +257,23 @@ async function landingView() {
 }
 let heroTimer = null;
 
+/* Inline SVG sparkline of a rating timeline — higher is better, so the y-axis
+   is rating value; endpoint emphasised. */
+function sparkline(seasons) {
+  if (seasons.length < 2) return "";
+  const w = 320, h = 56, pad = 4;
+  const vals = seasons.map(s => s.rating);
+  const lo = Math.min(...vals), hi = Math.max(...vals), span = hi - lo || 1;
+  const x = i => pad + i * (w - 2 * pad) / (seasons.length - 1);
+  const y = v => pad + (h - 2 * pad) * (1 - (v - lo) / span);
+  const pts = seasons.map((s, i) => `${x(i).toFixed(1)},${y(s.rating).toFixed(1)}`).join(" ");
+  const last = seasons[seasons.length - 1];
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" width="100%" height="${h}" preserveAspectRatio="none" aria-hidden="true">
+    <polyline fill="none" stroke="var(--accent)" stroke-width="2" points="${pts}"/>
+    <circle cx="${x(seasons.length - 1).toFixed(1)}" cy="${y(last.rating).toFixed(1)}" r="3.5" fill="var(--accent)"/>
+  </svg>`;
+}
+
 const intelTip = (intel, n) => {
   const s = intel && intel.picks[n];
   if (!s) return "";
@@ -762,12 +779,18 @@ async function playersView() {
       <p class="sub">Loading the official ratings…</p>
     </div>`;
 
-  api("/api/ratings?limit=50").then(data => {
+  const loadRatings = year => api(`/api/ratings?limit=50${year ? "&year=" + year : ""}`).then(data => {
     const card = document.getElementById("ratings-card");
     if (!card) return;
+    const yrs = data.years || [data.year];
     card.innerHTML = `
-      <h3>Player rankings <span class="thin" style="font-weight:400">· 2026</span></h3>
-      <p class="sub">${esc(data.attribution)} — top ${data.ratings.length} of ${data.count} rated players.</p>
+      <h3>Player rankings</h3>
+      <div class="controls" style="margin-top:6px">
+        <label class="eyebrow" style="margin:0" for="ratingsyear">Season</label>
+        <select id="ratingsyear">${yrs.slice().reverse().map(y =>
+          `<option ${y === data.year ? "selected" : ""}>${y}</option>`).join("")}</select>
+      </div>
+      <p class="sub" style="margin-top:10px">${esc(data.attribution)} — top ${data.ratings.length} of ${data.count} rated players, ${data.year}.</p>
       <div class="tablewrap"><table>
         <thead><tr><th class="num">Rank</th><th>Player</th><th>Club</th><th class="num">Games</th><th class="num">Rating</th></tr></thead>
         <tbody>${data.ratings.map(r => `
@@ -778,10 +801,12 @@ async function playersView() {
         </tbody>
       </table></div>
       <p class="srcline">Source: <a href="${esc(data.source_url)}" target="_blank" rel="noopener">${esc(data.attribution)} ↗</a></p>`;
+    document.getElementById("ratingsyear").addEventListener("change", e => loadRatings(+e.target.value));
   }).catch(() => {
     const card = document.getElementById("ratings-card");
     if (card) card.querySelector(".sub").textContent = "Ratings unavailable right now.";
   });
+  loadRatings();
 
   const box = document.getElementById("pfind"), out = document.getElementById("presults");
   let timer;
@@ -944,6 +969,20 @@ async function playerView(id) {
             <tbody>${txRows.join("") || `<tr><td colspan="4" class="thin">No recorded movements — original-list player.</td></tr>`}</tbody>
           </table></div>
         </div>
+        ${p.rating_history && p.rating_history.length ? `
+        <div class="card">
+          <h3>AFL Player Rating history</h3>
+          <p class="sub">Champion Data season rating and league rank, ${p.rating_history[0].year}–${p.rating_history[p.rating_history.length - 1].year}.</p>
+          ${sparkline(p.rating_history)}
+          <div class="tablewrap"><table>
+            <thead><tr><th class="num">Season</th><th>Club</th><th class="num">Rating</th><th class="num">League rank</th></tr></thead>
+            <tbody>${p.rating_history.slice().reverse().map(s => `
+              <tr><td class="num">${s.year}</td><td class="thin">${esc(s.team)}</td>
+                <td class="num"><b>${s.rating}</b></td><td class="num">${s.rank ? "#" + s.rank : "—"}</td></tr>`).join("")}
+            </tbody>
+          </table></div>
+          <p class="srcline">Official AFL Player Ratings, powered by Champion Data.</p>
+        </div>` : ""}
         ${p.contract_status.length > 1 ? `
         <div class="card">
           <h3>Contract status history</h3>

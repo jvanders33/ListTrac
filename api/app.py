@@ -23,6 +23,7 @@ DB_PATH = Path(__file__).resolve().parent.parent / "data" / "listtrac.db"
 # NOTE: must not be named "public" — Vercel special-cases that folder as
 # static assets and strips it from Python function bundles
 WEB_DIR = Path(__file__).resolve().parent.parent / "web"
+CURRENT_YEAR = 2026
 
 app = FastAPI(title="ListTrac API", version="0.1.0",
               description="AFL player movement, lists, contract status, and draft history. No salary data.")
@@ -106,6 +107,18 @@ def player(player_id: int):
            WHERE dp.player_selected_id = ?""", (player_id,))), None)
     rating = _ratings_by_name().get(_norm(f"{profile['first_name']} {profile['last_name']}"))
     profile["rating"] = {"rank": rating["rank"], "rating": rating["rating"]} if rating else None
+    # rating history — find the player's Champion Data timeline by matching the
+    # current-season record's cd_id, else by name across the history file
+    profile["rating_history"] = []
+    hist = _load_history()
+    if hist:
+        target = _norm(f"{profile['first_name']} {profile['last_name']}")
+        cd_id = rating.get("cd_id") if rating else None
+        tl = hist["timelines"].get(str(cd_id)) if cd_id else None
+        if tl is None:
+            tl = next((t for t in hist["timelines"].values() if _norm(t["name"]) == target), None)
+        if tl:
+            profile["rating_history"] = tl["seasons"]
     return profile
 
 
@@ -378,6 +391,15 @@ def updates():
 PROSPECTS_PATH = Path(__file__).resolve().parent.parent / "data" / "prospects_2026.json"
 PICK_INTEL_PATH = Path(__file__).resolve().parent.parent / "data" / "pick_intel.json"
 RATINGS_PATH = Path(__file__).resolve().parent.parent / "data" / "ratings_2026.json"
+RATINGS_HISTORY_PATH = Path(__file__).resolve().parent.parent / "data" / "ratings_history.json"
+_history_cache: dict = {}
+
+
+def _load_history() -> dict:
+    import json
+    if not _history_cache and RATINGS_HISTORY_PATH.exists():
+        _history_cache.update(json.loads(RATINGS_HISTORY_PATH.read_text(encoding="utf-8")))
+    return _history_cache
 
 
 def _norm(name: str) -> str:
@@ -395,22 +417,34 @@ def _ratings_by_name() -> dict:
 
 
 @app.get("/api/ratings")
-def ratings(limit: int = 100, club: str | None = None):
-    """Official AFL Player Ratings (Champion Data), ranked. Matched to
-    ListTrac player pages by name so the table links through."""
+def ratings(limit: int = 100, club: str | None = None, year: int | None = None):
+    """Official AFL Player Ratings (Champion Data), ranked, for any season
+    2015–current. Matched to ListTrac player pages by name so rows link through."""
     import json
-    if not RATINGS_PATH.exists():
-        raise HTTPException(404, "ratings not built yet")
-    data = json.loads(RATINGS_PATH.read_text(encoding="utf-8"))
     with db() as conn:
         pid = {_norm(f"{r['first_name']} {r['last_name']}"): r["id"]
                for r in conn.execute("SELECT id, first_name, last_name FROM player")}
-    rows = data["ratings"]
+
+    if year and year != CURRENT_YEAR:
+        hist = _load_history()
+        if not hist or str(year) not in hist.get("by_season", {}):
+            raise HTTPException(404, f"no ratings for {year}")
+        rows, attribution, source_url, total = (
+            hist["by_season"][str(year)], hist["attribution"], hist["source_url"],
+            len(hist["by_season"][str(year)]))
+    else:
+        if not RATINGS_PATH.exists():
+            raise HTTPException(404, "ratings not built yet")
+        data = json.loads(RATINGS_PATH.read_text(encoding="utf-8"))
+        rows, attribution, source_url, total, year = (
+            data["ratings"], data["attribution"], data["source_url"], len(data["ratings"]), data["year"])
+
     if club:
         rows = [r for r in rows if r["team"].upper() == club.upper()]
     rows = [{**r, "player_id": pid.get(_norm(r["name"]))} for r in rows[:limit]]
-    return {"year": data["year"], "attribution": data["attribution"],
-            "source_url": data["source_url"], "count": len(data["ratings"]), "ratings": rows}
+    return {"year": year, "attribution": attribution, "source_url": source_url,
+            "years": _load_history().get("years", [CURRENT_YEAR]) or [CURRENT_YEAR],
+            "count": total, "ratings": rows}
 
 
 @app.get("/api/prospects")

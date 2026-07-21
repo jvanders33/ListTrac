@@ -370,6 +370,8 @@ footer.pagefoot {
 }
 .trendrow .treason { margin-left: auto; font-size: 11px; color: var(--ink-2); text-align: right; }
 
+.spark { display: block; margin: 4px 0 12px; overflow: visible; }
+
 /* stats legend */
 .statlegend {
   margin-top: 16px; padding: 12px 16px; background: var(--card-2);
