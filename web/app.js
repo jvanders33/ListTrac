@@ -163,6 +163,123 @@ async function draftOrderView() {
     </div>`;
 }
 
+/* ---------- interactive mock draft ---------- */
+
+const MOCK_KEY = "mock_draft_2026";
+const loadMock = () => { try { return JSON.parse(localStorage.getItem(MOCK_KEY)) || []; } catch { return []; } };
+const saveMock = picks => localStorage.setItem(MOCK_KEY, JSON.stringify(picks));
+
+async function mockDraftView() {
+  const [order, pool] = await Promise.all([api("/api/draft-order"), api("/api/prospects")]);
+  const prospects = pool.prospects;
+  let picks = loadMock(); // array of prospect names, index = pick-1
+  let filter = "";
+
+  const byName = Object.fromEntries(prospects.map(p => [p.name, p]));
+  const available = () => prospects.filter(p => !picks.includes(p.name));
+  const currentPick = () => picks.findIndex(x => !x) === -1
+    ? (picks.length < order.picks.length ? picks.length : -1)
+    : picks.findIndex(x => !x);
+
+  const tieBadge = p => p.tie ? `<span class="chip warn" title="Club-tied — bids not simulated in v1">${esc(p.tie)}</span>` : "";
+
+  function render() {
+    const cur = currentPick();
+    view.innerHTML = `
+      <div class="controls">
+        <button class="cta" id="auto" ${cur === -1 ? "disabled" : ""}>Auto pick</button>
+        <button class="filterbtn" id="sim" ${cur === -1 ? "disabled" : ""}>Sim to end</button>
+        <button class="filterbtn" id="undo" ${picks.filter(Boolean).length ? "" : "disabled"}>Undo</button>
+        <button class="filterbtn" id="reset">Reset</button>
+        <button class="filterbtn" id="copy">Copy board</button>
+        <span class="thin" style="font-size:12px">Your board saves automatically in this browser.</span>
+      </div>
+      <div class="mockcols">
+        <div class="card">
+          <h3>2026 mock draft — first round</h3>
+          <p class="sub">Order: live reverse ladder (${order.as_of_round} games in). Club-tied players
+            show a badge — bid matching isn't simulated yet.</p>
+          <div class="boardlist">
+            ${order.picks.map((pk, i) => {
+              const chosen = picks[i] ? byName[picks[i]] : null;
+              return `<div class="pickrow ${i === cur ? "otc" : ""}">
+                <span class="picknum">${pk.pick}</span>
+                <i class="dot" style="background:${esc(pk.primary_color || "#888")}"></i>
+                <span class="pickclub">${esc(pk.abbrev || pk.club)}</span>
+                ${chosen
+                  ? `<span class="picked"><b>${esc(chosen.name)}</b> <span class="thin">${esc(chosen.position || chosen.state_team)}</span></span>`
+                  : i === cur ? `<span class="otc-label">On the clock</span>` : ""}
+              </div>`;
+            }).join("")}
+          </div>
+        </div>
+        <div class="card">
+          <h3>Prospect pool <span class="thin" style="font-weight:400">(${available().length} available of ${prospects.length})</span></h3>
+          <p class="sub">2026 U18 championships squads, ranked per Reading the Play's Top 50.
+            Click a player to make the pick.</p>
+          <input id="poolsearch" class="poolsearch" type="search" placeholder="Filter by name, position, state, club…" value="${esc(filter)}">
+          <div class="poollist">
+            ${available()
+              .filter(p => !filter || [p.name, p.position, p.state_team, p.junior_club, p.tie]
+                .join(" ").toLowerCase().includes(filter.toLowerCase()))
+              .slice(0, 60).map(p => `
+              <button class="poolrow" data-name="${esc(p.name)}" ${cur === -1 ? "disabled" : ""}>
+                <span class="rankchip ${p.rank ? "" : "unranked"}">${p.rank ?? "–"}</span>
+                <span class="poolinfo"><b>${esc(p.name)}</b>
+                  <span class="thin">${[p.position, p.height_cm ? p.height_cm + "cm" : null, p.state_team, p.junior_club]
+                    .filter(Boolean).map(esc).join(" · ")}</span></span>
+                ${tieBadge(p)}
+              </button>`).join("")}
+          </div>
+          <p class="srcline">Squads: <a href="${esc(pool.sources.squads)}" target="_blank" rel="noopener">Rookie Me Central ↗</a>
+            · Rankings: <a href="${esc(pool.sources.rankings)}" target="_blank" rel="noopener">Reading the Play ↗</a>
+            (${esc(pool.sources.rankings_note)})</p>
+        </div>
+      </div>`;
+
+    view.querySelectorAll(".poolrow").forEach(b => b.addEventListener("click", () => {
+      const cur2 = currentPick();
+      if (cur2 === -1) return;
+      picks[cur2] = b.dataset.name;
+      saveMock(picks); render();
+    }));
+    view.querySelector("#auto").addEventListener("click", () => {
+      const cur2 = currentPick();
+      if (cur2 === -1) return;
+      picks[cur2] = available()[0].name;
+      saveMock(picks); render();
+    });
+    view.querySelector("#sim").addEventListener("click", () => {
+      let cur2;
+      while ((cur2 = currentPick()) !== -1) picks[cur2] = available()[0].name;
+      saveMock(picks); render();
+    });
+    view.querySelector("#undo").addEventListener("click", () => {
+      const last = picks.reduce((acc, v, i) => v ? i : acc, -1);
+      if (last >= 0) picks[last] = undefined;
+      while (picks.length && !picks[picks.length - 1]) picks.pop();
+      saveMock(picks); render();
+    });
+    view.querySelector("#reset").addEventListener("click", () => {
+      picks = []; saveMock(picks); render();
+    });
+    view.querySelector("#copy").addEventListener("click", async () => {
+      const text = order.picks.map((pk, i) =>
+        `${pk.pick}. ${pk.club}: ${picks[i] || "—"}`).join("\n");
+      try { await navigator.clipboard.writeText(`ListTrac 2026 mock draft\n${text}`); } catch {}
+    });
+    const search = view.querySelector("#poolsearch");
+    search.addEventListener("input", () => {
+      filter = search.value;
+      const pos = search.selectionStart;
+      render();
+      const s2 = view.querySelector("#poolsearch");
+      s2.focus(); s2.setSelectionRange(pos, pos);
+    });
+  }
+  render();
+}
+
 async function clubsView() {
   const [clubs, summary] = await Promise.all([api("/clubs"), api("/api/summary")]);
   const s = summary.contract_statuses, c = summary.counts;
@@ -419,6 +536,7 @@ const routes = [
   [/^#?\/?$/,                       () => landingView()],
   [/^#\/clubs$/,                    () => clubsView()],
   [/^#\/draft-order$/,              () => draftOrderView()],
+  [/^#\/mock-draft$/,               () => mockDraftView()],
   [/^#\/club\/([A-Za-z]+)$/,        m => clubView(m[1])],
   [/^#\/player\/(\d+)$/,            m => playerView(m[1])],
   [/^#\/draft\/(\d{4})(?:\/(\w+))?$/, m => draftView(m[1], m[2] || "national")],

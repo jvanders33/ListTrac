@@ -1,0 +1,1790 @@
+{
+ "year": 2026,
+ "sources": {
+  "squads": "https://central.rookieme.com/afl/2026/06/12/need-to-know-2026-afl-under-18-national-championships/",
+  "rankings": "https://readingtheplay.wordpress.com/2026/04/19/rolling-2026-draft-power-rankings-1-50/",
+  "rankings_note": "Reading the Play rolling Top 50, V1.0 (19 Apr 2026)"
+ },
+ "prospects": [
+  {
+   "name": "Dougie Cochrane",
+   "state_team": "South Australia",
+   "junior_club": "Central District",
+   "jumper": 32,
+   "rank": 1,
+   "position": "Key Forward/Utility",
+   "height_cm": 195,
+   "tie": null
+  },
+  {
+   "name": "Harry Van Hattum",
+   "state_team": "Vic Metro",
+   "junior_club": "Northern Knights",
+   "jumper": 36,
+   "rank": 2,
+   "position": "Ruck/Key Forward",
+   "height_cm": 205,
+   "tie": null
+  },
+  {
+   "name": "Cody Walker",
+   "state_team": "Vic Country",
+   "junior_club": "Bendigo Pioneers",
+   "jumper": 1,
+   "rank": 3,
+   "position": "Midfielder",
+   "height_cm": 184,
+   "tie": "Carlton F/S"
+  },
+  {
+   "name": "Arki Butler",
+   "state_team": "Vic Metro",
+   "junior_club": "Sandringham Dragons",
+   "jumper": 17,
+   "rank": 4,
+   "position": "Medium Forward/Midfielder",
+   "height_cm": 182,
+   "tie": null
+  },
+  {
+   "name": "Kodah Edwards",
+   "state_team": "South Australia",
+   "junior_club": "South Adelaide",
+   "jumper": 15,
+   "rank": 5,
+   "position": "Midfielder/Medium Forward",
+   "height_cm": 183,
+   "tie": null
+  },
+  {
+   "name": "Noah Williams",
+   "state_team": "Vic Country",
+   "junior_club": "Geelong Falcons",
+   "jumper": 5,
+   "rank": 6,
+   "position": "Midfield/Rebounding Defender",
+   "height_cm": 177,
+   "tie": null
+  },
+  {
+   "name": "Clancy Snell",
+   "state_team": "Vic Country",
+   "junior_club": "Gippsland Power",
+   "jumper": 34,
+   "rank": 7,
+   "position": "Key Defender",
+   "height_cm": 196,
+   "tie": null
+  },
+  {
+   "name": "Lucas Robinson",
+   "state_team": "Western Australia",
+   "junior_club": "South Fremantle",
+   "jumper": 25,
+   "rank": 8,
+   "position": "Inside Midfielder",
+   "height_cm": 191,
+   "tie": "Fremantle NGA"
+  },
+  {
+   "name": "Marlon Neocleous",
+   "state_team": "Vic Country",
+   "junior_club": "Gippsland Power",
+   "jumper": 6,
+   "rank": 9,
+   "position": "Small Forward",
+   "height_cm": 168,
+   "tie": null
+  },
+  {
+   "name": "Ethan Herbert",
+   "state_team": "South Australia",
+   "junior_club": "North Adelaide",
+   "jumper": 39,
+   "rank": 10,
+   "position": "Ruck/Key Forward",
+   "height_cm": 200,
+   "tie": null
+  },
+  {
+   "name": "Xavier Ladbrook",
+   "state_team": "Vic Country",
+   "junior_club": "Gippsland Power",
+   "jumper": 33,
+   "rank": 11,
+   "position": "Key Defender",
+   "height_cm": 201,
+   "tie": null
+  },
+  {
+   "name": "Gus Teixeira",
+   "state_team": "Vic Metro",
+   "junior_club": "Sandringham Dragons",
+   "jumper": 9,
+   "rank": 12,
+   "position": "Midfielder/Medium Forward",
+   "height_cm": 181,
+   "tie": null
+  },
+  {
+   "name": "Gabe Patterson",
+   "state_team": "South Australia",
+   "junior_club": "Glenelg",
+   "jumper": 12,
+   "rank": 13,
+   "position": "Medium Forward",
+   "height_cm": 184,
+   "tie": null
+  },
+  {
+   "name": "Koby LeCras",
+   "state_team": "Western Australia",
+   "junior_club": "West Perth",
+   "jumper": 9,
+   "rank": 14,
+   "position": "Medium Forward/Winger",
+   "height_cm": 192,
+   "tie": null
+  },
+  {
+   "name": "Ethan Drever",
+   "state_team": "Vic Country",
+   "junior_club": "GWV Rebels",
+   "jumper": 4,
+   "rank": 15,
+   "position": "Inside Midfielder",
+   "height_cm": 188,
+   "tie": null
+  },
+  {
+   "name": "Lewis Houndsome",
+   "state_team": "Vic Metro",
+   "junior_club": "Northern Knights",
+   "jumper": 34,
+   "rank": 16,
+   "position": "Key Forward/Ruck",
+   "height_cm": 199,
+   "tie": null
+  },
+  {
+   "name": "Jackson Phillips",
+   "state_team": "Vic Country",
+   "junior_club": "Dandenong Stingrays",
+   "jumper": 11,
+   "rank": 17,
+   "position": "Midfielder/Forward",
+   "height_cm": 182,
+   "tie": null
+  },
+  {
+   "name": "Heath Mellody",
+   "state_team": "Western Australia",
+   "junior_club": "Claremont",
+   "jumper": 35,
+   "rank": 18,
+   "position": "Winger/Rebounding Defender",
+   "height_cm": 184,
+   "tie": null
+  },
+  {
+   "name": "Darcy Szerszyn",
+   "state_team": "Vic Country",
+   "junior_club": "Dandenong Stingrays",
+   "jumper": 19,
+   "rank": 19,
+   "position": "Medium Defender",
+   "height_cm": 188,
+   "tie": null
+  },
+  {
+   "name": "Aiden McCartney",
+   "state_team": "Allies",
+   "junior_club": "Swans Academy",
+   "jumper": 31,
+   "rank": 20,
+   "position": "Medium Forward",
+   "height_cm": 191,
+   "tie": "Sydney Academy & North Melbourne F/S"
+  },
+  {
+   "name": "Jack Pickett",
+   "state_team": "Vic Country",
+   "junior_club": "Geelong Falcons",
+   "jumper": 31,
+   "rank": 21,
+   "position": "Key Forward",
+   "height_cm": 193,
+   "tie": null
+  },
+  {
+   "name": "Blake Justice",
+   "state_team": "Vic Metro",
+   "junior_club": "Calder Cannons",
+   "jumper": 23,
+   "rank": 22,
+   "position": "Midfielder/Medium Forward",
+   "height_cm": 191,
+   "tie": "Essendon NGA"
+  },
+  {
+   "name": "Jacob McNicol",
+   "state_team": "South Australia",
+   "junior_club": "Glenelg",
+   "jumper": 4,
+   "rank": 23,
+   "position": "Midfielder",
+   "height_cm": 177,
+   "tie": null
+  },
+  {
+   "name": "Tanner Armstrong",
+   "state_team": "Vic Country",
+   "junior_club": "Murray Bushrangers",
+   "jumper": 2,
+   "rank": 24,
+   "position": "Midfielder/Small Utility",
+   "height_cm": 177,
+   "tie": "Richmond NGA"
+  },
+  {
+   "name": "Archie Van Dyk",
+   "state_team": "South Australia",
+   "junior_club": "South Adelaide",
+   "jumper": 27,
+   "rank": 25,
+   "position": "Midfielder",
+   "height_cm": 185,
+   "tie": null
+  },
+  {
+   "name": "Cody Templeton",
+   "state_team": "Vic Country",
+   "junior_club": "Gippsland Power",
+   "jumper": 10,
+   "rank": 26,
+   "position": "Midfielder/Small Forward",
+   "height_cm": 180,
+   "tie": null
+  },
+  {
+   "name": "Kale Matthews-Hampton",
+   "state_team": "South Australia",
+   "junior_club": "Sturt",
+   "jumper": 28,
+   "rank": 27,
+   "position": "Medium Defender/Midfielder",
+   "height_cm": 189,
+   "tie": null
+  },
+  {
+   "name": "Harrison Chapman",
+   "state_team": "Vic Metro",
+   "junior_club": "Eastern Ranges",
+   "jumper": 24,
+   "rank": 28,
+   "position": "Midfielder/Outside Utility",
+   "height_cm": 189,
+   "tie": null
+  },
+  {
+   "name": "Wil Malady",
+   "state_team": "Vic Country",
+   "junior_club": "Gippsland Power",
+   "jumper": 9,
+   "rank": 29,
+   "position": "Medium Forward",
+   "height_cm": 190,
+   "tie": null
+  },
+  {
+   "name": "Khaled El Souki",
+   "state_team": "Vic Metro",
+   "junior_club": "Western Jets",
+   "jumper": 4,
+   "rank": 30,
+   "position": "Small Forward/Midfielder",
+   "height_cm": 175,
+   "tie": "Western Bulldogs NGA"
+  },
+  {
+   "name": "Lachie Hicks",
+   "state_team": "Vic Metro",
+   "junior_club": "Western Jets",
+   "jumper": 16,
+   "rank": 31,
+   "position": "Midfielder",
+   "height_cm": 183,
+   "tie": null
+  },
+  {
+   "name": "Seb Marsic",
+   "state_team": "Vic Metro",
+   "junior_club": "Oakleigh Chargers",
+   "jumper": 31,
+   "rank": 32,
+   "position": "Key Forward",
+   "height_cm": 194,
+   "tie": null
+  },
+  {
+   "name": "Harvie Cooke",
+   "state_team": "Vic Metro",
+   "junior_club": "Northern Knights",
+   "jumper": 3,
+   "rank": 34,
+   "position": "Midfielder/Small Forward",
+   "height_cm": 176,
+   "tie": null
+  },
+  {
+   "name": "Caylen Murray",
+   "state_team": "Allies",
+   "junior_club": "Lions Academy",
+   "jumper": 14,
+   "rank": 35,
+   "position": "Rebounding Defender/Midfielder",
+   "height_cm": 183,
+   "tie": "Brisbane Academy"
+  },
+  {
+   "name": "Jack Gordon",
+   "state_team": "South Australia",
+   "junior_club": "Central District",
+   "jumper": 22,
+   "rank": 36,
+   "position": "Midfielder/Medium Defender",
+   "height_cm": 185,
+   "tie": null
+  },
+  {
+   "name": "Albert MacGowan",
+   "state_team": "Vic Metro",
+   "junior_club": "Sandringham Dragons",
+   "jumper": 18,
+   "rank": 37,
+   "position": "Midfielder",
+   "height_cm": 187,
+   "tie": null
+  },
+  {
+   "name": "Max Downes",
+   "state_team": "Vic Metro",
+   "junior_club": "Northern Knights",
+   "jumper": 10,
+   "rank": 38,
+   "position": "Medium Forward/Midfielder",
+   "height_cm": 182,
+   "tie": null
+  },
+  {
+   "name": "Jordan Knapp",
+   "state_team": "Vic Metro",
+   "junior_club": "Eastern Ranges",
+   "jumper": 6,
+   "rank": 39,
+   "position": "Midfielder",
+   "height_cm": 179,
+   "tie": null
+  },
+  {
+   "name": "Tate Hodgson",
+   "state_team": "Vic Metro",
+   "junior_club": "Northern Knights",
+   "jumper": 35,
+   "rank": 40,
+   "position": "Key Defender",
+   "height_cm": 197,
+   "tie": null
+  },
+  {
+   "name": "Garrison Kenh",
+   "state_team": "Western Australia",
+   "junior_club": "East Perth",
+   "jumper": 26,
+   "rank": 41,
+   "position": "Medium Defender",
+   "height_cm": 182,
+   "tie": "West Coast NGA"
+  },
+  {
+   "name": "Gus Kennedy",
+   "state_team": "Vic Country",
+   "junior_club": "Dandenong Stingrays",
+   "jumper": 3,
+   "rank": 42,
+   "position": "Utility",
+   "height_cm": 186,
+   "tie": null
+  },
+  {
+   "name": "Archie Hill",
+   "state_team": "Allies",
+   "junior_club": "Suns Academy",
+   "jumper": 10,
+   "rank": 43,
+   "position": "Rebounding Defender",
+   "height_cm": 182,
+   "tie": "Gold Coast Academy"
+  },
+  {
+   "name": "Sam Gayfer",
+   "state_team": "Vic Metro",
+   "junior_club": "Northern Knights",
+   "jumper": 28,
+   "rank": 44,
+   "position": "Key Forward",
+   "height_cm": 194,
+   "tie": null
+  },
+  {
+   "name": "Ethan Matthews",
+   "state_team": "Allies",
+   "junior_club": "Giants Academy",
+   "jumper": 23,
+   "rank": 45,
+   "position": "Winger/Small Defender",
+   "height_cm": 185,
+   "tie": "GWS Academy"
+  },
+  {
+   "name": "Benji Van Rooyen",
+   "state_team": "Western Australia",
+   "junior_club": "Claremont",
+   "jumper": 3,
+   "rank": 46,
+   "position": "Ruck/Key Forward",
+   "height_cm": 203,
+   "tie": null
+  },
+  {
+   "name": "Archie Elliott",
+   "state_team": "Vic Country",
+   "junior_club": "GWV Rebels",
+   "jumper": 14,
+   "rank": 47,
+   "position": "Medium Forward",
+   "height_cm": 182,
+   "tie": null
+  },
+  {
+   "name": "Lachlan McGlade",
+   "state_team": "Western Australia",
+   "junior_club": "East Perth",
+   "jumper": 43,
+   "rank": 48,
+   "position": "Small Forward",
+   "height_cm": 175,
+   "tie": "West Coast NGA"
+  },
+  {
+   "name": "George Gale",
+   "state_team": "Western Australia",
+   "junior_club": "Claremont",
+   "jumper": 23,
+   "rank": 49,
+   "position": "Winger/Medium Defender",
+   "height_cm": 187,
+   "tie": null
+  },
+  {
+   "name": "Angus Tippett",
+   "state_team": "Vic Metro",
+   "junior_club": "Western Jets",
+   "jumper": 29,
+   "rank": 50,
+   "position": "Inside Midfielder",
+   "height_cm": 194,
+   "tie": null
+  },
+  {
+   "name": "Andrio Sousa",
+   "state_team": "Vic Country",
+   "junior_club": "Dandenong Stingrays",
+   "jumper": 20,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Angus Brown",
+   "state_team": "Vic Metro",
+   "junior_club": "Sandringham Dragons",
+   "jumper": 39,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Anthony Long",
+   "state_team": "South Australia",
+   "junior_club": "West Adelaide",
+   "jumper": 25,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Archie Devine",
+   "state_team": "Allies",
+   "junior_club": "Tasmania Devils",
+   "jumper": 7,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Tasmania priority access"
+  },
+  {
+   "name": "Archie Fogarty",
+   "state_team": "Vic Metro",
+   "junior_club": "Oakleigh Chargers",
+   "jumper": 25,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Archie Spencer",
+   "state_team": "Vic Metro",
+   "junior_club": "Eastern Ranges",
+   "jumper": 12,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Archie Watts",
+   "state_team": "Allies",
+   "junior_club": "Lions Academy",
+   "jumper": 16,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Brisbane Academy"
+  },
+  {
+   "name": "Axel Walsh",
+   "state_team": "Western Australia",
+   "junior_club": "East Perth",
+   "jumper": 1,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Baxter Sruk",
+   "state_team": "Vic Metro",
+   "junior_club": "Eastern Ranges",
+   "jumper": 40,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Ben Barnard",
+   "state_team": "Allies",
+   "junior_club": "Northern Territory",
+   "jumper": 18,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Ben Copping",
+   "state_team": "South Australia",
+   "junior_club": "Glenelg",
+   "jumper": 20,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Ben Pignatelli",
+   "state_team": "Allies",
+   "junior_club": "Swans Academy",
+   "jumper": 20,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Sydney Academy"
+  },
+  {
+   "name": "Ben Wood",
+   "state_team": "Western Australia",
+   "junior_club": "East Fremantle",
+   "jumper": 16,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Billy Wigmore",
+   "state_team": "Vic Metro",
+   "junior_club": "Western Jets",
+   "jumper": 20,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Blake Karpany",
+   "state_team": "South Australia",
+   "junior_club": "Woodville-West Torrens",
+   "jumper": 3,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Brynley Ryan",
+   "state_team": "Allies",
+   "junior_club": "Giants Academy",
+   "jumper": 2,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "GWS Academy"
+  },
+  {
+   "name": "Byron Foster",
+   "state_team": "Western Australia",
+   "junior_club": "South Fremantle",
+   "jumper": 7,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Cain Florance",
+   "state_team": "South Australia",
+   "junior_club": "South Adelaide",
+   "jumper": 14,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Cameron Maynard",
+   "state_team": "Western Australia",
+   "junior_club": "South Fremantle",
+   "jumper": 45,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Campbell Creyk",
+   "state_team": "Western Australia",
+   "junior_club": "West Perth",
+   "jumper": 36,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Charlie Bovill",
+   "state_team": "Allies",
+   "junior_club": "Tasmania Devils",
+   "jumper": 24,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Tasmania priority access"
+  },
+  {
+   "name": "Charlie Bradford",
+   "state_team": "South Australia",
+   "junior_club": "West Adelaide",
+   "jumper": 31,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Charlie Hanegraaf",
+   "state_team": "Vic Country",
+   "junior_club": "Geelong Falcons",
+   "jumper": 12,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Cody Lee",
+   "state_team": "Western Australia",
+   "junior_club": "Perth",
+   "jumper": 13,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Coen Hardy",
+   "state_team": "Allies",
+   "junior_club": "Swans Academy",
+   "jumper": 28,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Sydney Academy"
+  },
+  {
+   "name": "Cohen Dent",
+   "state_team": "Vic Country",
+   "junior_club": "Gippsland Power",
+   "jumper": 38,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Conor Bushe-Jones",
+   "state_team": "Western Australia",
+   "junior_club": "South Fremantle",
+   "jumper": 11,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Cooper French",
+   "state_team": "Allies",
+   "junior_club": "Giants Academy",
+   "jumper": 3,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "GWS Academy"
+  },
+  {
+   "name": "Cooper Hodge",
+   "state_team": "Allies",
+   "junior_club": "Lions Academy",
+   "jumper": 12,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Brisbane Academy"
+  },
+  {
+   "name": "Cooper Ramsay",
+   "state_team": "Western Australia",
+   "junior_club": "East Fremantle",
+   "jumper": 4,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Cooper White",
+   "state_team": "Vic Country",
+   "junior_club": "Dandenong Stingrays",
+   "jumper": 15,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Darcy Harrington",
+   "state_team": "Vic Country",
+   "junior_club": "Geelong Falcons",
+   "jumper": 24,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Dean Hatedakis",
+   "state_team": "South Australia",
+   "junior_club": "West Adelaide",
+   "jumper": 9,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Eamon Austin",
+   "state_team": "Vic Country",
+   "junior_club": "Bendigo Pioneers",
+   "jumper": 27,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Elijah Dennis",
+   "state_team": "Western Australia",
+   "junior_club": "Claremont",
+   "jumper": 12,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Elijah Williams",
+   "state_team": "Western Australia",
+   "junior_club": "Claremont",
+   "jumper": 24,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Ethan Turner",
+   "state_team": "Western Australia",
+   "junior_club": "East Perth",
+   "jumper": 42,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Finlay Yeo",
+   "state_team": "Western Australia",
+   "junior_club": "East Fremantle",
+   "jumper": 50,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Flynn Woolhouse",
+   "state_team": "Vic Metro",
+   "junior_club": "Oakleigh Chargers",
+   "jumper": 30,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Frazer Rickson",
+   "state_team": "Western Australia",
+   "junior_club": "Subiaco",
+   "jumper": 5,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Fynn Tomasini",
+   "state_team": "Western Australia",
+   "junior_club": "Perth",
+   "jumper": 20,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "George Dimer",
+   "state_team": "Vic Metro",
+   "junior_club": "Sandringham Dragons",
+   "jumper": 1,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Guy Jenkin",
+   "state_team": "Allies",
+   "junior_club": "Swans Academy",
+   "jumper": 4,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Sydney Academy"
+  },
+  {
+   "name": "Harper Banfield",
+   "state_team": "Western Australia",
+   "junior_club": "Claremont",
+   "jumper": 29,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Harper McCullough",
+   "state_team": "Vic Metro",
+   "junior_club": "Oakleigh Chargers",
+   "jumper": 2,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Harrison Leeder",
+   "state_team": "Vic Metro",
+   "junior_club": "Northern Knights",
+   "jumper": 27,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Harry Franz",
+   "state_team": "South Australia",
+   "junior_club": "Glenelg",
+   "jumper": 36,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Harvey Chapman",
+   "state_team": "South Australia",
+   "junior_club": "Sturt",
+   "jumper": 30,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Harvey Croker",
+   "state_team": "South Australia",
+   "junior_club": "Glenelg",
+   "jumper": 18,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Harvey Spawton-Guy",
+   "state_team": "Western Australia",
+   "junior_club": "West Perth",
+   "jumper": 10,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Heath Wilson",
+   "state_team": "Western Australia",
+   "junior_club": "South Fremantle",
+   "jumper": 21,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Henry Meaney",
+   "state_team": "Allies",
+   "junior_club": "Swans Academy",
+   "jumper": 17,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Sydney Academy"
+  },
+  {
+   "name": "Henry Thomas",
+   "state_team": "Vic Metro",
+   "junior_club": "Sandringham Dragons",
+   "jumper": 26,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Hudson Boal",
+   "state_team": "South Australia",
+   "junior_club": "South Adelaide",
+   "jumper": 17,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Hudson Graham",
+   "state_team": "Western Australia",
+   "junior_club": "South Fremantle",
+   "jumper": 8,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Hugo Jaeschke",
+   "state_team": "South Australia",
+   "junior_club": "Sturt",
+   "jumper": 23,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Hugo Timms",
+   "state_team": "Allies",
+   "junior_club": "Northern Territory",
+   "jumper": 22,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Hunter Hearn",
+   "state_team": "Western Australia",
+   "junior_club": "East Fremantle",
+   "jumper": 39,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Jack Leys",
+   "state_team": "South Australia",
+   "junior_club": "Woodville-West Torrens",
+   "jumper": 11,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Jack Nelson",
+   "state_team": "South Australia",
+   "junior_club": "Sturt",
+   "jumper": 21,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Jack Slattery",
+   "state_team": "South Australia",
+   "junior_club": "Woodville-West Torrens",
+   "jumper": 34,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Jackson Bridge",
+   "state_team": "Allies",
+   "junior_club": "Lions Academy",
+   "jumper": 19,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Brisbane Academy"
+  },
+  {
+   "name": "Jackson O'Brien",
+   "state_team": "Vic Country",
+   "junior_club": "GWV Rebels",
+   "jumper": 37,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Jacob Kee",
+   "state_team": "Western Australia",
+   "junior_club": "Claremont",
+   "jumper": 15,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Jake Beams",
+   "state_team": "Allies",
+   "junior_club": "Tasmania Devils",
+   "jumper": 6,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Tasmania priority access"
+  },
+  {
+   "name": "Jake Eime",
+   "state_team": "South Australia",
+   "junior_club": "Central District",
+   "jumper": 6,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Jake Medved",
+   "state_team": "Allies",
+   "junior_club": "Swans Academy",
+   "jumper": 21,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Sydney Academy"
+  },
+  {
+   "name": "Jake Miller",
+   "state_team": "Vic Metro",
+   "junior_club": "Western Jets",
+   "jumper": 32,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "James Artemis",
+   "state_team": "Western Australia",
+   "junior_club": "East Fremantle",
+   "jumper": 40,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Jayden Clarke",
+   "state_team": "Western Australia",
+   "junior_club": "Perth",
+   "jumper": 47,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Jett Elek",
+   "state_team": "Vic Country",
+   "junior_club": "Geelong Falcons",
+   "jumper": 35,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Jett Flower",
+   "state_team": "Vic Metro",
+   "junior_club": "Eastern Ranges",
+   "jumper": 15,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Jobe Janeway",
+   "state_team": "South Australia",
+   "junior_club": "Glenelg",
+   "jumper": 41,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Jonah Harris",
+   "state_team": "Allies",
+   "junior_club": "Suns Academy",
+   "jumper": 30,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Gold Coast Academy"
+  },
+  {
+   "name": "Josh Bell",
+   "state_team": "South Australia",
+   "junior_club": "West Adelaide",
+   "jumper": 1,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Kai Edwards",
+   "state_team": "South Australia",
+   "junior_club": "Glenelg",
+   "jumper": 35,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Kai Ivins",
+   "state_team": "South Australia",
+   "junior_club": "Norwood",
+   "jumper": 10,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Kai Parker",
+   "state_team": "Vic Metro",
+   "junior_club": "Northern Knights",
+   "jumper": 19,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Keenan Boi",
+   "state_team": "Vic Country",
+   "junior_club": "Gippsland Power",
+   "jumper": 17,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Klay Nicholls",
+   "state_team": "Vic Country",
+   "junior_club": "GWV Rebels",
+   "jumper": 22,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Koby Bewick",
+   "state_team": "Vic Metro",
+   "junior_club": "Calder Cannons",
+   "jumper": 5,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Kyan Perera",
+   "state_team": "Western Australia",
+   "junior_club": "Subiaco",
+   "jumper": 49,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Lachie Burrows",
+   "state_team": "Vic Metro",
+   "junior_club": "Sandringham Dragons",
+   "jumper": 13,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Lachie Price",
+   "state_team": "Allies",
+   "junior_club": "Swans Academy",
+   "jumper": 5,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Sydney Academy"
+  },
+  {
+   "name": "Lachie Werts",
+   "state_team": "South Australia",
+   "junior_club": "Sturt",
+   "jumper": 8,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Lachlan Sheldrick",
+   "state_team": "Western Australia",
+   "junior_club": "Claremont",
+   "jumper": 34,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Laurence Andriani",
+   "state_team": "South Australia",
+   "junior_club": "West Adelaide",
+   "jumper": 2,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Leo Ellerton",
+   "state_team": "Vic Country",
+   "junior_club": "GWV Rebels",
+   "jumper": 26,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Leo Steed",
+   "state_team": "Western Australia",
+   "junior_club": "Swan Districts",
+   "jumper": 44,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Levi Macumber",
+   "state_team": "Vic Country",
+   "junior_club": "Gippsland Power",
+   "jumper": 13,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Lincoln Pitt",
+   "state_team": "South Australia",
+   "junior_club": "West Adelaide",
+   "jumper": 43,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Macauli Buck",
+   "state_team": "Vic Metro",
+   "junior_club": "Western Jets",
+   "jumper": 38,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Marcus Motton",
+   "state_team": "Western Australia",
+   "junior_club": "East Fremantle",
+   "jumper": 27,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Mason McGroder",
+   "state_team": "Allies",
+   "junior_club": "Swans Academy",
+   "jumper": 26,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Sydney Academy"
+  },
+  {
+   "name": "Matthew Owen",
+   "state_team": "Allies",
+   "junior_club": "Lions Academy",
+   "jumper": 15,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Brisbane Academy"
+  },
+  {
+   "name": "Max Thompson",
+   "state_team": "Vic Country",
+   "junior_club": "Bendigo Pioneers",
+   "jumper": 7,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Maxim Collins",
+   "state_team": "Western Australia",
+   "junior_club": "West Perth",
+   "jumper": 14,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Memphis Webb",
+   "state_team": "South Australia",
+   "junior_club": "North Adelaide",
+   "jumper": 19,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Mitch Harris",
+   "state_team": "South Australia",
+   "junior_club": "Woodville-West Torrens",
+   "jumper": 38,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Mitchell Stirling",
+   "state_team": "Western Australia",
+   "junior_club": "Peel Thunder",
+   "jumper": 6,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Nate Mensch",
+   "state_team": "Vic Country",
+   "junior_club": "Geelong Falcons",
+   "jumper": 36,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Nathaniel Jenkins",
+   "state_team": "Vic Metro",
+   "junior_club": "Calder Cannons",
+   "jumper": 37,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Ned Badrock",
+   "state_team": "Vic Country",
+   "junior_club": "Geelong Falcons",
+   "jumper": 18,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Nic Staropoli",
+   "state_team": "Vic Metro",
+   "junior_club": "Calder Cannons",
+   "jumper": 22,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Noah Braun",
+   "state_team": "Western Australia",
+   "junior_club": "Claremont",
+   "jumper": 37,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Noah Hannaford",
+   "state_team": "Western Australia",
+   "junior_club": "East Fremantle",
+   "jumper": 17,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Oscar Henwood",
+   "state_team": "Vic Country",
+   "junior_club": "Gippsland Power",
+   "jumper": 16,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Oscar Richardson",
+   "state_team": "Western Australia",
+   "junior_club": "East Fremantle",
+   "jumper": 19,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Rafe Williamson",
+   "state_team": "Western Australia",
+   "junior_club": "West Perth",
+   "jumper": 30,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Reece Thompson",
+   "state_team": "Allies",
+   "junior_club": "Lions Academy",
+   "jumper": 27,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Brisbane Academy"
+  },
+  {
+   "name": "Robert Farmer",
+   "state_team": "Western Australia",
+   "junior_club": "Claremont",
+   "jumper": 33,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Sam Devers",
+   "state_team": "Vic Metro",
+   "junior_club": "Eastern Ranges",
+   "jumper": 21,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Sam Harris",
+   "state_team": "Vic Metro",
+   "junior_club": "Calder Cannons",
+   "jumper": 8,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Sam O'Brien",
+   "state_team": "Western Australia",
+   "junior_club": "Subiaco",
+   "jumper": 32,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Sam Tassone",
+   "state_team": "South Australia",
+   "junior_club": "North Adelaide",
+   "jumper": 5,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Sheldon Pickett",
+   "state_team": "Western Australia",
+   "junior_club": "Swan Districts",
+   "jumper": 38,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Sonny Smiler",
+   "state_team": "Allies",
+   "junior_club": "Northern Territory",
+   "jumper": 1,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Taj Allan",
+   "state_team": "Western Australia",
+   "junior_club": "Swan Districts",
+   "jumper": 48,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Taj Garrett",
+   "state_team": "South Australia",
+   "junior_club": "Sturt",
+   "jumper": 16,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Taj Murray",
+   "state_team": "Allies",
+   "junior_club": "Northern Territory",
+   "jumper": 29,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Tevita Rodan",
+   "state_team": "Vic Metro",
+   "junior_club": "Calder Cannons",
+   "jumper": 11,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Thomas Gribben",
+   "state_team": "South Australia",
+   "junior_club": "Norwood",
+   "jumper": 26,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Toby Krasna",
+   "state_team": "Vic Metro",
+   "junior_club": "Northern Knights",
+   "jumper": 7,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Tom Brown",
+   "state_team": "Western Australia",
+   "junior_club": "Claremont",
+   "jumper": 22,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Tyson Bradley",
+   "state_team": "Vic Metro",
+   "junior_club": "Sandringham Dragons",
+   "jumper": 33,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Wil Antrobus",
+   "state_team": "Vic Country",
+   "junior_club": "Dandenong Stingrays",
+   "jumper": 8,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Will Morahan",
+   "state_team": "Allies",
+   "junior_club": "Swans Academy",
+   "jumper": 25,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": "Sydney Academy"
+  },
+  {
+   "name": "Zac Antonellos",
+   "state_team": "Vic Metro",
+   "junior_club": "Eastern Ranges",
+   "jumper": 14,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  },
+  {
+   "name": "Zacky Young",
+   "state_team": "South Australia",
+   "junior_club": "North Adelaide",
+   "jumper": 7,
+   "rank": null,
+   "position": null,
+   "height_cm": null,
+   "tie": null
+  }
+ ]
+}

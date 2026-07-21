@@ -269,6 +269,17 @@ def trending():
     return cached("trending", 3600, build)
 
 
+PROSPECTS_PATH = Path(__file__).resolve().parent.parent / "data" / "prospects_2026.json"
+
+
+@app.get("/api/prospects")
+def prospects():
+    """2026 draft prospect pool: U18 championships squads (Rookie Me Central)
+    merged with Reading the Play's Top 50. Regenerate: python scraper/u18_champs.py"""
+    import json
+    return json.loads(PROSPECTS_PATH.read_text(encoding="utf-8"))
+
+
 @app.get("/api/debug")
 def debug():
     """What actually made it into the serverless bundle (safe to expose: file names only)."""

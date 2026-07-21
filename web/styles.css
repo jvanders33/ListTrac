@@ -237,6 +237,53 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   display: inline-block; width: 10px; height: 10px; border-radius: 2px;
   margin-right: 8px; vertical-align: -1px;
 }
+
+/* ---------- mock draft ---------- */
+.mockcols { display: grid; grid-template-columns: 420px 1fr; gap: 24px; align-items: start; }
+@media (max-width: 940px) { .mockcols { grid-template-columns: 1fr; } }
+.boardlist { display: flex; flex-direction: column; }
+.pickrow {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 10px; border-bottom: 1px solid var(--line); font-size: 13.5px;
+}
+.pickrow.otc { background: var(--warn-bg); border-left: 3px solid var(--warn); }
+.picknum {
+  font-weight: 800; font-variant-numeric: tabular-nums; width: 24px;
+  text-align: right; color: var(--ink-2);
+}
+.pickrow.otc .picknum { color: var(--warn); }
+.pickclub { font-weight: 700; width: 44px; letter-spacing: 0.03em; }
+.picked { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.otc-label {
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--warn);
+}
+.poolsearch {
+  font: inherit; font-size: 13.5px; color: var(--ink); width: 100%;
+  background: var(--ground); border: 1px solid var(--line); border-radius: 5px;
+  padding: 8px 12px; margin-bottom: 10px;
+}
+.poolsearch:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.poollist { display: flex; flex-direction: column; max-height: 560px; overflow-y: auto; }
+.poolrow {
+  display: flex; align-items: center; gap: 10px; text-align: left;
+  font: inherit; font-size: 13.5px; color: var(--ink); cursor: pointer;
+  background: none; border: none; border-bottom: 1px solid var(--line);
+  padding: 8px 10px; width: 100%;
+}
+.poolrow:hover:not(:disabled) { background: var(--card-2); }
+.poolrow:disabled { opacity: 0.5; cursor: default; }
+.poolrow:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.rankchip {
+  flex: none; width: 28px; height: 28px; border-radius: 4px;
+  display: grid; place-items: center; font-size: 12px; font-weight: 800;
+  font-variant-numeric: tabular-nums; background: var(--accent); color: #fff;
+}
+.rankchip.unranked { background: var(--card-2); color: var(--ink-2); }
+.poolinfo { display: flex; flex-direction: column; min-width: 0; }
+.poolinfo .thin { font-size: 11.5px; }
+.controls .cta { border: none; cursor: pointer; }
+.controls .cta:disabled, .controls .filterbtn:disabled { opacity: 0.5; cursor: default; }
 footer.pagefoot {
   margin-top: 44px; padding-top: 14px; border-top: 1px solid var(--line);
   font-size: 12px; color: var(--ink-2);
