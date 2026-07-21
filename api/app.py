@@ -139,6 +139,18 @@ def trades(year: int):
     return {"year": year, "players": player_moves, "picks": pick_moves}
 
 
+@app.get("/api/debug")
+def debug():
+    """What actually made it into the serverless bundle (safe to expose: file names only)."""
+    root = Path(__file__).resolve().parent.parent
+    return {
+        "root": str(root),
+        "entries": sorted(p.name + ("/" if p.is_dir() else "") for p in root.iterdir()),
+        "web_dir_exists": WEB_DIR.is_dir(),
+        "db_exists": DB_PATH.exists(),
+    }
+
+
 @app.get("/api/summary")
 def summary():
     with db() as conn:

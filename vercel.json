@@ -4,7 +4,7 @@
     {
       "src": "api/index.py",
       "use": "@vercel/python",
-      "config": { "includeFiles": ["data/listtrac.db", "public/**"] }
+      "config": { "includeFiles": "**" }
     }
   ],
   "routes": [
