@@ -155,6 +155,8 @@ def load_contract_status(conn, club_ids: dict[str, int], year: int) -> None:
 
 TRANSACTION_TYPE = {"Free Agency": "sign_fa", "Trade": "trade",
                     "Pre-Draft": "sign_rookie", "Post-Draft": "sign_rookie"}
+# Anything else (expansion-era oddities like "Training Squad Selection",
+# "Zone Selection") is recorded as sign_rookie with the original label in notes.
 
 
 def load_year_history(conn, club_ids: dict[str, int], year: int) -> None:
@@ -184,8 +186,11 @@ def load_year_history(conn, club_ids: dict[str, int], year: int) -> None:
                 """INSERT INTO player_transaction (player_id, type, to_club_id, date,
                                                    trade_period_year, source_url, notes)
                    VALUES (?, ?, ?, ?, ?, ?, ?)""",
-                (pid, TRANSACTION_TYPE[m["movement"]], club_id, date, year, m["source_url"],
-                 f"{m['signing']}; {note}".strip("; ")))
+                (pid, TRANSACTION_TYPE.get(m["movement"], "sign_rookie"), club_id, date, year,
+                 m["source_url"],
+                 "; ".join(x for x in (
+                     m["movement"] if m["movement"] not in TRANSACTION_TYPE else "",
+                     m["signing"], note) if x)))
 
     trades = fetch_year_trades(year)
     linked = set()

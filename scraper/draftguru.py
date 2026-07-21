@@ -38,6 +38,18 @@ DRAFT_TYPE_MAP = {
     "Mid-Season": "mid_season",
 }
 
+# /years/{year}/{slug} sub-link -> movement label, for years where the table
+# omits the Draft column because only one movement category existed (e.g. 1987)
+MOVEMENT_SLUGS = {
+    "national_draft": "National",
+    "rookie_draft": "Rookie",
+    "preseason_draft": "Pre-Season",
+    "midseason_draft": "Mid-Season",
+    "free-agency": "Free Agency",
+    "pre-draft": "Pre-Draft",
+    "post-draft": "Post-Draft",
+}
+
 
 def _get_soup(path: str) -> BeautifulSoup:
     resp = requests.get(BASE + path, headers=HEADERS, timeout=15)
@@ -66,13 +78,23 @@ def fetch_year_movements(year: int) -> list[dict]:
     if table is None:
         return []
 
+    # single-category years drop the Draft column; the sub-nav tells us which
+    categories = {MOVEMENT_SLUGS[a["href"].rsplit("/", 1)[-1]]
+                  for a in soup.find_all("a", href=True)
+                  if a["href"].startswith(f"/years/{year}/")
+                  and a["href"].rsplit("/", 1)[-1] in MOVEMENT_SLUGS}
+    sole_category = categories.pop() if len(categories) == 1 else None
+
     movements = []
     for row in table.find_all("tr"):
         player_cell = row.find("td", class_="player")
         if player_cell is None or player_cell.a is None:
             continue  # header row
 
-        movement = row.find("td", class_="draft").get_text(strip=True)
+        draft_cell = row.find("td", class_="draft")
+        movement = draft_cell.get_text(strip=True) if draft_cell else sole_category
+        if movement is None:
+            continue  # no Draft column and no unambiguous category to infer
         number_text = row.find("td", class_="number").get_text(strip=True)
         club_a = row.find("td", class_="club").a
         # Two td.category cells: the first is the "Pick" column (usually empty),
