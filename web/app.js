@@ -59,6 +59,14 @@ function loadXWidgets() {
   document.head.appendChild(s);
 }
 
+/* Hand-picked must-reads pinned to the top of the movement news rail.
+   Swap entries as better editions drop (Twomey's guide is ~monthly). */
+const FEATURED_NEWS = [{
+  title: "Cal Twomey's Phantom Form Guide: the July top-25 draft prospect rankings",
+  source: "AFL.com.au",
+  url: "https://www.afl.com.au/news/1565947/cal-twomeys-phantom-form-guide-top-draft-prospects-july-ranking",
+}];
+
 /* Player-page rail: key movement reading. */
 const SPOTLIGHTS = `
   <div class="card">
@@ -92,40 +100,48 @@ async function landingView() {
   const s = summary.contract_statuses;
   const rfas = trend.filter(t => t.kind === "rfa");
 
-  // Lead story: a first-party update (admin-recorded move) from the last
-  // 7 days beats the aggregated news cycle; otherwise the freshest headline.
-  const upd = adminUpdates.find(u => u.player_name && (Date.now() - new Date(u.ts)) < 7 * 86400e3);
-  let lead;
-  if (upd) {
-    const dest = upd.action === "trade" || upd.action === "fa-sign" ? ` to ${upd.to}` : "";
-    const through = upd.through_year ? ` through ${upd.through_year}` : "";
-    lead = {
-      eyebrow: `ListTrac update · ${timeAgo(upd.ts)}`,
-      title: `${upd.player_name} ${upd.verb}${dest}${through}`,
-      sub: upd.notes || "",
-      ctas: `<a class="cta" href="#/search/${encodeURIComponent(upd.player_name)}">Player page</a>
-             ${upd.source_url ? `<a class="cta ghost" href="${esc(upd.source_url)}" target="_blank" rel="noopener">Source ↗</a>` : ""}`,
-    };
-  } else if (newsItems.length) {
-    const n = newsItems[0];
-    lead = {
-      eyebrow: `Latest movement news · ${esc(n.source)} · ${timeAgo(n.published)}`,
-      title: n.title,
-      sub: "Aggregated live — every headline links to its original source.",
-      ctas: `<a class="cta" href="${esc(n.url)}" target="_blank" rel="noopener">Read at ${esc(n.source)} ↗</a>
-             <a class="cta ghost" href="#/free-agents">Free agent board</a>`,
-    };
-  }
+  // Top stories: first-party updates and aggregated headlines compete on
+  // recency alone — news moves fast. The freshest three rotate in the hero.
+  const stories = [];
+  adminUpdates.filter(u => u.player_name && (Date.now() - new Date(u.ts)) < 7 * 86400e3)
+    .forEach(u => {
+      const dest = u.action === "trade" || u.action === "fa-sign" ? ` to ${u.to}` : "";
+      const through = u.through_year ? ` through ${u.through_year}` : "";
+      stories.push({
+        ts: +new Date(u.ts),
+        eyebrow: `ListTrac update · ${timeAgo(u.ts)}`,
+        title: `${u.player_name} ${u.verb}${dest}${through}`,
+        sub: u.notes || "",
+        ctas: `<a class="cta" href="#/search/${encodeURIComponent(u.player_name)}">Player page</a>
+               ${u.source_url ? `<a class="cta ghost" href="${esc(u.source_url)}" target="_blank" rel="noopener">Source ↗</a>` : ""}`,
+      });
+    });
+  newsItems.slice(0, 6).forEach(n => stories.push({
+    ts: +new Date(n.published || 0),
+    eyebrow: `${esc(n.source)} · ${timeAgo(n.published)}`,
+    title: n.title,
+    sub: "",
+    ctas: `<a class="cta" href="${esc(n.url)}" target="_blank" rel="noopener">Read at ${esc(n.source)} ↗</a>
+           <a class="cta ghost" href="#/free-agents">Free agent board</a>`,
+  }));
+  stories.sort((a, b) => b.ts - a.ts);
+  const leads = stories.slice(0, 3);
 
   view.innerHTML = `
     <div class="cols">
       <div>
-        ${lead ? `
-        <div class="feature">
-          <p class="eyebrow feature-eyebrow">${lead.eyebrow}</p>
-          <h2>${esc(lead.title)}</h2>
-          ${lead.sub ? `<p class="feature-sub">${esc(lead.sub)}</p>` : ""}
-          <p class="feature-ctas">${lead.ctas}</p>
+        ${leads.length ? `
+        <div class="feature" id="hero-rotor">
+          ${leads.map((s, i) => `
+          <div class="hero-slide ${i === 0 ? "on" : ""}" data-i="${i}">
+            <p class="eyebrow feature-eyebrow">${s.eyebrow}</p>
+            <h2>${esc(s.title)}</h2>
+            ${s.sub ? `<p class="feature-sub">${esc(s.sub)}</p>` : ""}
+            <p class="feature-ctas">${s.ctas}</p>
+          </div>`).join("")}
+          ${leads.length > 1 ? `<div class="hero-dots">
+            ${leads.map((_, i) => `<button data-i="${i}" class="${i === 0 ? "on" : ""}" aria-label="Story ${i + 1}"></button>`).join("")}
+          </div>` : ""}
         </div>` : ""}
 
         <div class="card">
@@ -185,6 +201,11 @@ async function landingView() {
         <div class="card">
           <p class="eyebrow">Movement news</p>
           <p class="sub">Live from around the league — every headline links to its source.</p>
+          ${FEATURED_NEWS.filter(f => !newsItems.some(n => n.url === f.url)).map(f => `
+            <div class="spot">
+              <span class="src">${esc(f.source)} <span class="chip rfa" style="font-size:9px">Featured</span></span>
+              <p><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.title)}</a></p>
+            </div>`).join("")}
           ${newsItems.length ? newsItems.slice(0, 12).map(n => `
             <div class="spot">
               <span class="src">${esc(n.source)} <span class="thin">· ${timeAgo(n.published)}</span></span>
@@ -215,7 +236,26 @@ async function landingView() {
       </aside>
     </div>`;
   loadXWidgets();
+
+  // hero rotation — one timer, dies with the element
+  const rotor = document.getElementById("hero-rotor");
+  if (rotor && leads.length > 1) {
+    let cur = 0;
+    const show = i => {
+      cur = i;
+      rotor.querySelectorAll(".hero-slide").forEach(s => s.classList.toggle("on", +s.dataset.i === i));
+      rotor.querySelectorAll(".hero-dots button").forEach(b => b.classList.toggle("on", +b.dataset.i === i));
+    };
+    if (heroTimer) clearInterval(heroTimer);
+    heroTimer = setInterval(() => {
+      if (!document.contains(rotor)) { clearInterval(heroTimer); return; }
+      show((cur + 1) % leads.length);
+    }, 7000);
+    rotor.querySelectorAll(".hero-dots button").forEach(b =>
+      b.addEventListener("click", () => show(+b.dataset.i)));
+  }
 }
+let heroTimer = null;
 
 const intelTip = (intel, n) => {
   const s = intel && intel.picks[n];

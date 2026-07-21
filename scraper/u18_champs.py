@@ -84,6 +84,24 @@ RANKINGS = [
     (50, "Angus Tippett", "Inside Midfielder", 194, None),
 ]
 
+# Cal Twomey's Phantom Form Guide, July 2026 edition — the sharpest current
+# read on the top of the order. Primary ranking; Reading the Play covers the
+# tail. Bump when the next edition drops (they're roughly monthly).
+TWOMEY_URL = ("https://www.afl.com.au/news/1565947/"
+              "cal-twomeys-phantom-form-guide-top-draft-prospects-july-ranking")
+TWOMEY_JULY = [
+    "Dougie Cochrane", "Cody Walker", "Gus Teixeira", "Arki Butler",
+    "Harry Van Hattum", "Ethan Drever", "Heath Mellody", "Ethan Matthews",
+    "Clancy Snell", "Leo Steed", "Wil Malady", "Noah Williams",
+    "Mitchell Harris", "Caylen Murray", "Kodah Edwards", "Jackson Phillips",
+    "Jack Pickett", "Sam Gayfer", "Ethan Herbert", "Toby Krasna",
+    "Tyson Bradley", "Jake Eime", "Jack Slattery", "Marlon Neocleous",
+    "George Gale",
+]
+
+# ties confirmed by later reporting that the ranking lists missed
+TIE_OVERRIDES = {"Dougie Cochrane": "Port Adelaide NGA"}
+
 # Allies academies imply a club tie even without a top-50 note
 ACADEMY_TIES = {
     "Giants Academy": "GWS Academy",
@@ -129,11 +147,26 @@ def build_pool() -> list[dict]:
               for r, n, pos, h, tie in RANKINGS]
     matched, unmatched_rank, _ = match_players(ranked, prospects)
     for rank_row, prospect in matched:
-        prospect.update({k: rank_row[k] for k in ("rank", "position", "height_cm")})
+        prospect["rank_rtp"] = rank_row["rank"]
+        prospect.update({k: rank_row[k] for k in ("position", "height_cm")})
         if rank_row["tie"]:
             prospect["tie"] = rank_row["tie"]
     if unmatched_rank:
-        print("! ranked players not found in any squad:", [r["name"] for r in unmatched_rank])
+        print("! RTP-ranked players not found in any squad:", [r["name"] for r in unmatched_rank])
+
+    ct = [{"name": n, "rank": i + 1} for i, n in enumerate(TWOMEY_JULY)]
+    ct_matched, ct_unmatched, _ = match_players(ct, prospects)
+    for row, prospect in ct_matched:
+        prospect["rank_ct"] = row["rank"]
+    if ct_unmatched:
+        print("! Twomey-ranked players not found in any squad:", [r["name"] for r in ct_unmatched])
+
+    for prospect in prospects:
+        if prospect["name"] in TIE_OVERRIDES:
+            prospect["tie"] = TIE_OVERRIDES[prospect["name"]]
+        # display rank: Twomey July where he ranks them, RTP for the tail
+        prospect["rank"] = prospect.get("rank_ct") or (
+            (25 + prospect["rank_rtp"]) if prospect.get("rank_rtp") else None)
 
     prospects.sort(key=lambda p: (p["rank"] is None, p["rank"] or 0, p["name"]))
     return prospects
@@ -146,8 +179,10 @@ if __name__ == "__main__":
         "year": 2026,
         "sources": {
             "squads": SQUADS_URL,
-            "rankings": RANKINGS_URL,
-            "rankings_note": "Reading the Play rolling Top 50, V1.0 (19 Apr 2026)",
+            "rankings": TWOMEY_URL,
+            "rankings_note": "Cal Twomey's Phantom Form Guide (July 2026) first, "
+                             "Reading the Play Top 50 (Apr 2026) for the tail",
+            "rankings_secondary": RANKINGS_URL,
         },
         "prospects": pool,
     }

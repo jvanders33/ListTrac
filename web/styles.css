@@ -261,6 +261,17 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 }
 .rfa-chip span { font-weight: 600; opacity: 0.65; margin-left: 4px; font-size: 11px; }
 .rfa-chip:hover { background: var(--accent); border-color: var(--accent); text-decoration: none; }
+.hero-slide { display: none; }
+.hero-slide.on { display: block; animation: heroIn 0.35s ease; }
+@keyframes heroIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .hero-slide.on { animation: none; } }
+.hero-dots { display: flex; gap: 7px; margin-top: 16px; }
+.hero-dots button {
+  width: 9px; height: 9px; border-radius: 50%; border: none; cursor: pointer;
+  background: rgba(255, 255, 255, 0.3); padding: 0;
+}
+.hero-dots button.on { background: var(--accent); }
+.hero-dots button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .rfa-chip.light { color: var(--ink); background: var(--card-2); border-color: var(--line); }
 .rfa-chip.light:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
 .cta.quiet { background: transparent; border: 1px solid var(--line); color: var(--ink); }
