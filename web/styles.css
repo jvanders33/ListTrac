@@ -225,6 +225,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 }
 .rfa-chip span { font-weight: 600; opacity: 0.65; margin-left: 4px; font-size: 11px; }
 .rfa-chip:hover { background: var(--accent); border-color: var(--accent); text-decoration: none; }
+.rfa-chip.light { color: var(--ink); background: var(--card-2); border-color: var(--line); }
+.rfa-chip.light:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.cta.quiet { background: transparent; border: 1px solid var(--line); color: var(--ink); }
 .feature-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 0; }
 .cta {
   font-size: 12.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;

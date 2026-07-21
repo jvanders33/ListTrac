@@ -215,9 +215,11 @@ SQUIGGLE_ALIASES = {"Brisbane Lions": "Brisbane"}  # Squiggle name -> DB club na
 
 @app.get("/api/draft-order")
 def draft_order():
-    """Projected 2026 national draft order: live Squiggle ladder, reversed —
-    the Tankathon methodology. First-pass only: no academy, father-son,
-    priority-pick, or finals-position adjustments yet. Cached 1 hour."""
+    """Projected 2026 national draft order, rounds 1-4: live Squiggle ladder
+    reversed for slot order, then recorded 2026 pick trades (from Draftguru's
+    2025 trade-period blocks + admin entries) applied to ownership. Traded
+    slots carry a "via" marker. Still excluded: academy/father-son bid
+    compensation and priority picks. Cached 1 hour."""
     def build():
         resp = requests.get(SQUIGGLE, params={"q": "standings", "year": 2026},
                             headers={"User-Agent": "ListTrac (github.com/jvanders33/ListTrac)"}, timeout=10)
@@ -226,21 +228,50 @@ def draft_order():
         with db() as conn:
             club_info = {r["name"]: dict(r) for r in conn.execute(
                 "SELECT name, abbreviation, primary_color, secondary_color FROM club")}
-        order = []
-        for team in reversed(ladder):
-            name = SQUIGGLE_ALIASES.get(team["name"], team["name"])
-            info = club_info.get(name, {})
-            order.append({
-                "pick": len(order) + 1, "club": name,
-                "abbrev": info.get("abbreviation"), "primary_color": info.get("primary_color"),
-                "ladder_rank": team["rank"], "wins": team["wins"],
-                "losses": team["losses"], "percentage": round(team["percentage"], 1),
-            })
-        # standings entries carry no round number — derive games played from W+L+D
+            # "2026 R2 (St Kilda)" records: latest transfer of each natural slot wins
+            ownership: dict[tuple[int, str], str] = {}
+            for h in conn.execute(
+                    """SELECT h.description, ct.abbreviation owner
+                       FROM draft_pick_trade_history h JOIN club ct ON ct.id = h.to_club_id
+                       WHERE h.description LIKE '2026 R%' ORDER BY h.id"""):
+                m = re.match(r"2026 R(\d) \((.+)\)", h["description"])
+                origin = club_info.get(m.group(2)) if m else None
+                if origin:
+                    ownership[(int(m.group(1)), origin["abbreviation"])] = h["owner"]
+
+        abbrev_info = {v["abbreviation"]: v for v in club_info.values()}
+        slot_order = [SQUIGGLE_ALIASES.get(t["name"], t["name"]) for t in reversed(ladder)]
+        DVI_LOCAL = [3000, 2481, 2178, 1962, 1795, 1659, 1543, 1443, 1355, 1276, 1205, 1140,
+                     1080, 1024, 973, 924, 879, 836, 796, 757, 721, 686, 653, 621, 590, 561,
+                     533, 505, 479, 454, 429, 405, 382, 360, 338, 317, 297, 277, 257, 238,
+                     220, 202, 184, 167, 150, 134, 118, 102, 86, 71, 57, 42, 28, 14]
+
+        rounds, pick_no = [], 0
+        for rnd in (1, 2, 3, 4):
+            rp = []
+            for i, slot_name in enumerate(slot_order):
+                pick_no += 1
+                origin = club_info.get(slot_name, {}).get("abbreviation")
+                owner = ownership.get((rnd, origin), origin)
+                oinfo = abbrev_info.get(owner, {})
+                team = ladder[len(ladder) - 1 - i]
+                rp.append({
+                    "pick": pick_no, "round": rnd,
+                    "club": oinfo.get("name", slot_name), "abbrev": owner,
+                    "primary_color": oinfo.get("primary_color"),
+                    "via": origin if owner != origin else None,
+                    "ladder_rank": team["rank"], "wins": team["wins"],
+                    "losses": team["losses"], "percentage": round(team["percentage"], 1),
+                    "dvi": DVI_LOCAL[pick_no - 1] if pick_no <= len(DVI_LOCAL) else 0,
+                })
+            rounds.append({"round": rnd, "picks": rp})
+
         games_played = max(t["wins"] + t["losses"] + t.get("draws", 0) for t in ladder)
         return {"year": 2026, "as_of_round": games_played,
-                "picks": order, "source": "api.squiggle.com.au",
-                "method": "reverse ladder; no academy/father-son/priority adjustments"}
+                "picks": rounds[0]["picks"], "rounds": rounds,
+                "traded_slots": len(ownership), "source": "api.squiggle.com.au",
+                "method": ("reverse ladder + recorded 2026 pick trades; "
+                           "no academy/father-son bid compensation or priority picks")}
     try:
         return cached("draft_order", 3600, build)
     except requests.RequestException:
@@ -279,6 +310,33 @@ def trending():
                 out.append({**dict(r), "reason": f"Traded to {r['club']} in 2025", "kind": "trade"})
         return out
     return cached("trending", 3600, build)
+
+
+ADMIN_JOURNAL = Path(__file__).resolve().parent.parent / "data" / "admin_entries.jsonl"
+
+
+@app.get("/api/updates")
+def updates():
+    """First-party updates — the admin journal, newest first. These are moves
+    ListTrac recorded directly (often ahead of the aggregated news cycle)."""
+    import json
+    if not ADMIN_JOURNAL.exists():
+        return []
+    out = []
+    for line in ADMIN_JOURNAL.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        e = json.loads(line)
+        p = e["payload"]
+        verb = {"trade": "traded", "fa-sign": "signs as a free agent", "re-sign": "re-signs",
+                "delist": "delisted", "pick-trade": "pick trade"}.get(e["action"], e["action"])
+        out.append({
+            "ts": e["ts"], "action": e["action"], "verb": verb,
+            "player_name": p.get("player_name"), "player_club": p.get("player_club"),
+            "to": p.get("to"), "through_year": p.get("through_year"),
+            "notes": p.get("notes"), "source_url": p.get("source_url"),
+        })
+    return sorted(out, key=lambda x: x["ts"], reverse=True)[:10]
 
 
 PROSPECTS_PATH = Path(__file__).resolve().parent.parent / "data" / "prospects_2026.json"

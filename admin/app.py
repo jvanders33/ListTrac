@@ -23,8 +23,30 @@ from fastapi.responses import HTMLResponse
 
 ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = ROOT / "data" / "listtrac.db"
+JOURNAL = ROOT / "data" / "admin_entries.jsonl"
 
 app = FastAPI(title="ListTrac admin (local)")
+
+
+def journal(action: str, payload: dict) -> None:
+    """Every admin action is journalled so data/load.py can replay it after a
+    rebuild — otherwise the weekly re-scrape would revert manual entries the
+    sources haven't caught up on yet. Player identity is stored as name+club,
+    NOT id: a rebuild reassigns database ids."""
+    import json
+    from datetime import datetime
+    data = dict(payload)
+    if data.get("player_id"):
+        with db() as conn:
+            r = conn.execute(
+                """SELECT p.first_name || ' ' || p.last_name AS name, c.abbreviation abbrev
+                   FROM player p LEFT JOIN club c ON c.id = p.current_club_id
+                   WHERE p.id = ?""", (data["player_id"],)).fetchone()
+            if r:
+                data["player_name"], data["player_club"] = r["name"], r["abbrev"]
+    with JOURNAL.open("a", encoding="utf-8") as f:
+        f.write(json.dumps({"ts": datetime.now().isoformat(timespec="seconds"),
+                            "action": action, "payload": data}) + "\n")
 
 
 def db() -> sqlite3.Connection:
@@ -83,6 +105,7 @@ def clubs():
 
 @app.post("/api/trade")
 def trade(payload: dict):
+    journal("trade", payload)
     when = payload.get("date") or date.today().isoformat()
     with db() as conn:
         to_id = club_id(conn, payload["to"])
@@ -102,6 +125,7 @@ def trade(payload: dict):
 
 @app.post("/api/fa-sign")
 def fa_sign(payload: dict):
+    journal("fa-sign", payload)
     when = payload.get("date") or date.today().isoformat()
     with db() as conn:
         to_id = club_id(conn, payload["to"])
@@ -119,6 +143,7 @@ def fa_sign(payload: dict):
 
 @app.post("/api/re-sign")
 def re_sign(payload: dict):
+    journal("re-sign", payload)
     """Contract extension at the current club — e.g. an FA taken off the market."""
     with db() as conn:
         p = conn.execute("SELECT current_club_id FROM player WHERE id = ?", (payload["player_id"],)).fetchone()
@@ -133,6 +158,7 @@ def re_sign(payload: dict):
 
 @app.post("/api/delist")
 def delist(payload: dict):
+    journal("delist", payload)
     when = payload.get("date") or date.today().isoformat()
     tx = "retire" if payload.get("retired") else "delist"
     with db() as conn:
@@ -149,6 +175,7 @@ def delist(payload: dict):
 
 @app.post("/api/pick-trade")
 def pick_trade(payload: dict):
+    journal("pick-trade", payload)
     when = payload.get("date") or date.today().isoformat()
     with db() as conn:
         f_id, t_id = club_id(conn, payload["from"]), club_id(conn, payload["to"])
@@ -175,7 +202,7 @@ def publish():
     """Commit the DB snapshot and push — Vercel redeploys with the update."""
     git = ["git", "-C", str(ROOT)]
     try:
-        subprocess.run(git + ["add", "-f", "data/listtrac.db"], check=True, capture_output=True)
+        subprocess.run(git + ["add", "-f", "data/listtrac.db", "data/admin_entries.jsonl"], check=True, capture_output=True)
         diff = subprocess.run(git + ["diff", "--cached", "--quiet"], capture_output=True)
         if diff.returncode == 0:
             return {"ok": True, "message": "No data changes to publish."}

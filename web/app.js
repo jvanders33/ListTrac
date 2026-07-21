@@ -84,38 +84,71 @@ const timeAgo = iso => {
 };
 
 async function landingView() {
-  const [summary, order, newsItems, trend, clubList] = await Promise.all([
+  const [summary, order, newsItems, trend, clubList, adminUpdates] = await Promise.all([
     api("/api/summary"),
     api("/api/draft-order").catch(() => null),
     api("/api/news").catch(() => []),
     api("/api/trending").catch(() => []),
     api("/clubs").catch(() => []),
+    api("/api/updates").catch(() => []),
   ]);
   const s = summary.contract_statuses;
-
   const rfas = trend.filter(t => t.kind === "rfa");
+
+  // Lead story: a first-party update (admin-recorded move) from the last
+  // 7 days beats the aggregated news cycle; otherwise the freshest headline.
+  const upd = adminUpdates.find(u => u.player_name && (Date.now() - new Date(u.ts)) < 7 * 86400e3);
+  let lead;
+  if (upd) {
+    const dest = upd.action === "trade" || upd.action === "fa-sign" ? ` to ${upd.to}` : "";
+    const through = upd.through_year ? ` through ${upd.through_year}` : "";
+    lead = {
+      eyebrow: `ListTrac update · ${timeAgo(upd.ts)}`,
+      title: `${upd.player_name} ${upd.verb}${dest}${through}`,
+      sub: upd.notes || "",
+      ctas: `<a class="cta" href="#/search/${encodeURIComponent(upd.player_name)}">Player page</a>
+             ${upd.source_url ? `<a class="cta ghost" href="${esc(upd.source_url)}" target="_blank" rel="noopener">Source ↗</a>` : ""}`,
+    };
+  } else if (newsItems.length) {
+    const n = newsItems[0];
+    lead = {
+      eyebrow: `Latest movement news · ${esc(n.source)} · ${timeAgo(n.published)}`,
+      title: n.title,
+      sub: "Aggregated live — every headline links to its original source.",
+      ctas: `<a class="cta" href="${esc(n.url)}" target="_blank" rel="noopener">Read at ${esc(n.source)} ↗</a>
+             <a class="cta ghost" href="#/free-agents">Free agent board</a>`,
+    };
+  }
+
   view.innerHTML = `
     <div class="cols">
       <div>
+        ${lead ? `
         <div class="feature">
-          <p class="eyebrow feature-eyebrow">The story of the season</p>
-          <h2>Free agency class of 2026</h2>
-          <p class="feature-sub">${(s.restricted_fa || 0) + (s.unrestricted_fa || 0)} free agents and
-            ${s.out_of_contract || 0} more out of contract at season's end — the biggest movement
-            pool ListTrac has tracked. ${rfas.length} are restricted:</p>
+          <p class="eyebrow feature-eyebrow">${lead.eyebrow}</p>
+          <h2>${esc(lead.title)}</h2>
+          ${lead.sub ? `<p class="feature-sub">${esc(lead.sub)}</p>` : ""}
+          <p class="feature-ctas">${lead.ctas}</p>
+        </div>` : ""}
+
+        <div class="card">
+          <h3>Free agency class of 2026</h3>
+          <p class="sub">${(s.restricted_fa || 0) + (s.unrestricted_fa || 0)} free agents and
+            ${s.out_of_contract || 0} more out of contract at season's end. ${rfas.length} are restricted:</p>
           <p class="rfa-row">${rfas.map(t =>
-            `<a class="rfa-chip" href="#/player/${t.id}">${esc(t.first_name)} ${esc(t.last_name)} <span>${esc(t.abbrev)}</span></a>`).join("")}</p>
-          <p class="feature-ctas">
+            `<a class="rfa-chip light" href="#/player/${t.id}">${esc(t.first_name)} ${esc(t.last_name)} <span>${esc(t.abbrev)}</span></a>`).join("")}</p>
+          <p class="feature-ctas" style="margin-top:14px">
             <a class="cta" href="#/free-agents">Free agent board</a>
-            <a class="cta ghost" href="#/free-agents/out_of_contract">Full off-contract list</a>
+            <a class="cta quiet" href="#/free-agents/out_of_contract">Full off-contract list</a>
           </p>
         </div>
 
         ${order ? `
         <div class="card">
           <h3>Projected 2026 draft order</h3>
-          <p class="sub">Live — reverse ladder, ${order.as_of_round} games into the season,
-            via ${esc(order.source)}. No academy, father-son or priority adjustments yet.</p>
+          <p class="sub">Live — reverse ladder, ${order.as_of_round} games in, with
+            ${order.traded_slots || 0} already-traded 2026 picks applied. No bid-compensation
+            or priority adjustments yet.</p>
           <div class="tablewrap"><table>
             <thead><tr><th class="num">Pick</th><th>Club</th><th class="num">W–L</th><th class="num">%</th></tr></thead>
             <tbody>${order.picks.slice(0, 8).map(p => `
@@ -202,31 +235,38 @@ async function draftOrderView() {
     const s = intel && intel.picks[n];
     return s ? `${s[key] ?? "—"}${s[key] != null ? suffix : ""}` : "—";
   };
+  const rowHTML = p => `
+    <tr><td class="num"><b>${p.pick}</b></td>
+      <td><i class="dot" style="background:${esc(p.primary_color || "#888")}"></i>
+        ${p.abbrev ? `<a href="#/club/${esc(p.abbrev)}">${esc(p.club)}</a>` : esc(p.club)}
+        ${p.via ? `<span class="chip warn" title="Natural slot belongs to ${esc(p.via)} — traded">via ${esc(p.via)}</span>` : ""}</td>
+      <td class="num">${p.round === 1 ? `${p.wins}–${p.losses}` : ""}</td>
+      <td class="num">${p.dvi || "—"}</td>
+      <td class="num">${cell(p.pick, "avg_games")}</td>
+      <td class="num">${cell(p.pick, "aa_pct", "%")}</td>
+      <td class="num">${cell(p.pick, "prem_pct", "%")}</td>
+      <td class="num">${cell(p.pick, "rs_pct", "%")}</td></tr>`;
   view.innerHTML = `
     <div class="card">
-      <h3>Projected 2026 national draft order</h3>
-      <p class="sub">Reverse ladder ${order.as_of_round} games into the season, live from ${esc(order.source)} —
-        the Tankathon method, plus what history says each slot is worth.</p>
+      <h3>Projected 2026 national draft order — all rounds</h3>
+      <p class="sub">Reverse ladder ${order.as_of_round} games into the season (${esc(order.source)}),
+        with the ${order.traded_slots} already-traded 2026 picks applied to ownership ("via" = the
+        club whose natural slot it is). Still excluded: academy/father-son bid compensation and
+        priority picks. Outcome stats show what history says each slot is worth.</p>
       <div class="tablewrap"><table>
-        <thead><tr><th class="num">Pick</th><th>Club</th><th class="num">W–L</th>
+        <thead><tr><th class="num">Pick</th><th>Owner</th><th class="num">W–L</th>
           <th class="num">DVI pts</th><th class="num">Avg games</th>
           <th class="num">AA %</th><th class="num">Prem %</th><th class="num">Rising Star %</th></tr></thead>
-        <tbody>${order.picks.map(p => `
-          <tr><td class="num"><b>${p.pick}</b></td>
-            <td><i class="dot" style="background:${esc(p.primary_color || "#888")}"></i>
-              ${p.abbrev ? `<a href="#/club/${esc(p.abbrev)}">${esc(p.club)}</a>` : esc(p.club)}</td>
-            <td class="num">${p.wins}–${p.losses}</td>
-            <td class="num">${cell(p.pick, "dvi")}</td>
-            <td class="num">${cell(p.pick, "avg_games")}</td>
-            <td class="num">${cell(p.pick, "aa_pct", "%")}</td>
-            <td class="num">${cell(p.pick, "prem_pct", "%")}</td>
-            <td class="num">${cell(p.pick, "rs_pct", "%")}</td></tr>`).join("")}
+        <tbody>${(order.rounds || [{ round: 1, picks: order.picks }]).map(r => `
+          <tr><td colspan="8" style="background:var(--card-2);font-weight:800;font-size:11px;
+            letter-spacing:0.1em;text-transform:uppercase;padding:6px 12px">Round ${r.round}</td></tr>
+          ${r.picks.map(rowHTML).join("")}`).join("")}
         </tbody>
       </table></div>
       <p class="srcline">${intel ? `Outcome stats: every national-draft selection at that pick,
         ${intel.cohort.from}–${intel.cohort.to} drafts only (recent draftees would skew careers-in-progress).
         Sources: Draftguru pick histories · Wikipedia Rising Star nominations · official DVI.`
-        : "Outcome stats not built yet."} Ladder refreshes hourly.</p>
+        : "Outcome stats not built yet."} Pick trades from Draftguru trade blocks + admin entries · ladder refreshes hourly.</p>
     </div>`;
 }
 
@@ -268,13 +308,23 @@ const bidLoading = rank => rank <= 2 ? 1.2 : rank <= 4 ? 1.1 : rank >= 14 ? 0.9 
    standard pick hands (each club holds its natural picks in rounds 1-4 —
    2026 pick trades aren't applied), clubs always match when affordable,
    max two picks per match, matched bids insert an extra selection. */
-function simulateDraft(events, orderPicks, byName) {
+function simulateDraft(events, orderPicks, byName, rounds) {
   const rows = orderPicks.map((pk, i) => ({ kind: "order", club: pk, slot: i + 1, assigned: null, absorbed: null }));
   const hands = {}, rankOf = {};
-  orderPicks.forEach((pk, i) => {
-    hands[pk.abbrev] = [i + 1, i + 19, i + 37, i + 55].map(n => ({ n, spent: false }));
-    rankOf[pk.abbrev] = pk.ladder_rank;
-  });
+  if (rounds) {
+    // real ownership: each club's hand is the picks it actually holds
+    rounds.forEach(r => r.picks.forEach(p => {
+      (hands[p.abbrev] = hands[p.abbrev] || []).push({ n: p.pick, spent: false });
+    }));
+    // bid loadings key off the matching club's own ladder finish
+    orderPicks.forEach(pk => { rankOf[pk.via || pk.abbrev] = pk.ladder_rank; });
+    orderPicks.forEach(pk => { if (!(pk.abbrev in hands)) hands[pk.abbrev] = []; });
+  } else {
+    orderPicks.forEach((pk, i) => {
+      hands[pk.abbrev] = [i + 1, i + 19, i + 37, i + 55].map(n => ({ n, spent: false }));
+      rankOf[pk.abbrev] = pk.ladder_rank;
+    });
+  }
   const ledger = [], drafted = new Set();
 
   const currentRow = () => rows.find(r => r.kind === "order" && !r.assigned && !r.absorbed);
@@ -310,7 +360,7 @@ function simulateDraft(events, orderPicks, byName) {
         best.combo.forEach(x => { x.spent = true; });
         for (const x of best.combo) {
           if (x.n <= 18) {
-            const r1 = rows.find(r => r.kind === "order" && r.club.abbrev === tied);
+            const r1 = rows.find(r => r.kind === "order" && r.slot === x.n);
             if (r1 && !r1.assigned && !r1.absorbed) r1.absorbed = "pick used to match bid for " + name;
           }
         }
@@ -327,8 +377,8 @@ function simulateDraft(events, orderPicks, byName) {
     }
     row.assigned = p;
     drafted.add(name);
-    // the club's own R1 pick is now used — it can't also fund a later match
-    const own = hands[row.club.abbrev].find(x => x.n === row.slot);
+    // the pick just used can't also fund a later match
+    const own = (hands[row.club.abbrev] || []).find(x => x.n === row.slot);
     if (own) own.spent = true;
   }
   return { rows, ledger, drafted, currentRow };
@@ -345,7 +395,7 @@ async function mockDraftView() {
   const tieBadge = p => p.tie ? `<span class="chip warn" title="Club-tied — a rival selection triggers a bid">${esc(p.tie)}</span>` : "";
 
   function render() {
-    const sim = simulateDraft(events, order.picks, byName);
+    const sim = simulateDraft(events, order.picks, byName, order.rounds);
     const cur = sim.currentRow();
     const available = prospects.filter(p => !sim.drafted.has(p.name));
     const done = !cur;
@@ -380,6 +430,7 @@ async function mockDraftView() {
                   <span class="picknum">${shown}</span>
                   <i class="dot" style="background:${esc(r.club.primary_color || "#888")}"></i>
                   <span class="pickclub">${esc(r.club.abbrev)}</span>
+                  ${r.club.via ? `<span class="thin" style="font-size:10px">via ${esc(r.club.via)}</span>` : ""}
                   ${r.assigned
                     ? `<span class="picked"><b>${esc(r.assigned.name)}</b>
                         <span class="thin">${esc(r.assigned.position || r.assigned.state_team)}</span>
@@ -439,19 +490,19 @@ async function mockDraftView() {
     view.querySelectorAll(".poolrow").forEach(b => b.addEventListener("click", () => commit(b.dataset.name)));
     view.querySelector("#auto").addEventListener("click", () => available.length && commit(available[0].name));
     view.querySelector("#simbtn").addEventListener("click", () => {
-      let s = simulateDraft(events, order.picks, byName);
+      let s = simulateDraft(events, order.picks, byName, order.rounds);
       while (s.currentRow()) {
         const next = prospects.find(p => !s.drafted.has(p.name));
         if (!next) break;
         events.push(next.name);
-        s = simulateDraft(events, order.picks, byName);
+        s = simulateDraft(events, order.picks, byName, order.rounds);
       }
       saveMock(events); render();
     });
     view.querySelector("#undo").addEventListener("click", () => { events.pop(); saveMock(events); render(); });
     view.querySelector("#reset").addEventListener("click", () => { events = []; saveMock(events); render(); });
     view.querySelector("#copy").addEventListener("click", async () => {
-      const s = simulateDraft(events, order.picks, byName);
+      const s = simulateDraft(events, order.picks, byName, order.rounds);
       let n = 0;
       const lines = s.rows.filter(r => !r.absorbed).map(r =>
         `${++n}. ${r.club.club}: ${r.assigned ? r.assigned.name : "—"}${r.kind === "matched" ? " (matched bid)" : ""}`);
@@ -478,13 +529,16 @@ const tmSave = s => localStorage.setItem(TM_KEY, JSON.stringify(s));
 /* A club's tradeable 2026 picks: projected R1 slot from the live order plus
    standard R2-R4 slots, valued by DVI. Future picks carry no points yet. */
 function tmPicks(abbrev, order) {
-  const idx = order.picks.findIndex(p => p.abbrev === abbrev);
-  if (idx === -1) return [];
-  const slot = idx + 1;
-  const picks = [1, 2, 3, 4].map(round => {
-    const n = slot + (round - 1) * 18;
-    return { id: `2026-R${round}`, label: `2026 pick ${n} (R${round})`, dvi: dvi(n) };
-  });
+  // the picks a club ACTUALLY holds — natural slots minus traded away,
+  // plus anything acquired (marked "via")
+  const picks = [];
+  (order.rounds || [{ round: 1, picks: order.picks }]).forEach(r => r.picks.forEach(p => {
+    if (p.abbrev === abbrev) picks.push({
+      id: `2026-${p.pick}`,
+      label: `2026 pick ${p.pick} (R${r.round}${p.via ? ", via " + p.via : ""})`,
+      dvi: p.dvi ?? dvi(p.pick),
+    });
+  }));
   picks.push({ id: "2027-R1", label: "2027 1st round (future)", dvi: null });
   picks.push({ id: "2027-R2", label: "2027 2nd round (future)", dvi: null });
   return picks;

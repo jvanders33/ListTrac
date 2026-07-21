@@ -133,15 +133,18 @@ def fetch_year_movements(year: int) -> list[dict]:
 
 
 def _parse_trade_component(text: str, extra: str | None) -> dict:
-    """One side-component of a trade: a pick ("#53"), a future pick
-    ("2026 1st round pick"), or a player (anything else)."""
+    """One side-component of a trade: a current-year pick ("#53"), a future
+    pick ("#2026R2 (St Kilda)" — round + the club whose natural pick it is),
+    or a player (anything else)."""
+    comp = {"type": "player", "text": text, "pick_number": None, "resolved": extra}
     if m := re.fullmatch(r"#(\d+)", text):
-        kind, pick = "pick", int(m.group(1))
+        comp.update(type="pick", pick_number=int(m.group(1)))
+    elif m := re.fullmatch(r"#(\d{4})R(\d)\s*\((.+?)\)", text):
+        comp.update(type="future_pick", future_year=int(m.group(1)),
+                    future_round=int(m.group(2)), origin_club=m.group(3).strip())
     elif "round" in text.lower() or "pick" in text.lower():
-        kind, pick = "future_pick", None
-    else:
-        kind, pick = "player", None
-    return {"type": kind, "text": text, "pick_number": pick, "resolved": extra}
+        comp["type"] = "future_pick"
+    return comp
 
 
 def fetch_year_trades(year: int) -> list[dict]:
