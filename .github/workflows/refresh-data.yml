@@ -35,7 +35,9 @@ jobs:
         run: python data/load.py --start 1986 --end 2026
 
       - name: Refresh official player ratings (Champion Data)
-        run: python scraper/afl_ratings.py
+        # rebuild history too so the current season's ratings stay live all
+        # year and new seasons roll in automatically
+        run: python scraper/afl_ratings.py --history 2015
         continue-on-error: true  # token/feed hiccup shouldn't block the data push
 
       - name: Sanity-check the rebuilt snapshot
