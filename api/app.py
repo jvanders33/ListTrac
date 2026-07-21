@@ -15,14 +15,16 @@ from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 
 DB_PATH = Path(__file__).resolve().parent.parent / "data" / "listtrac.db"
-WEB_DIR = Path(__file__).resolve().parent.parent / "web"
+WEB_DIR = Path(__file__).resolve().parent.parent / "public"
 
 app = FastAPI(title="ListTrac API", version="0.1.0",
               description="AFL player movement, lists, contract status, and draft history. No salary data.")
 
 
 def db() -> sqlite3.Connection:
-    conn = sqlite3.connect(DB_PATH)
+    # mode=ro: the DB is a committed snapshot and serverless filesystems are
+    # read-only anyway — never open it writable
+    conn = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True)
     conn.row_factory = sqlite3.Row
     return conn
 
