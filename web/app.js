@@ -102,7 +102,7 @@ async function landingView() {
           <h2>Free agency class of 2026</h2>
           <p class="feature-sub">${(s.restricted_fa || 0) + (s.unrestricted_fa || 0)} free agents and
             ${s.out_of_contract || 0} more out of contract at season's end — the biggest movement
-            pool ListTrac has tracked. Six are restricted:</p>
+            pool ListTrac has tracked. ${rfas.length} are restricted:</p>
           <p class="rfa-row">${rfas.map(t =>
             `<a class="rfa-chip" href="#/player/${t.id}">${esc(t.first_name)} ${esc(t.last_name)} <span>${esc(t.abbrev)}</span></a>`).join("")}</p>
           <p class="feature-ctas">
@@ -162,8 +162,9 @@ async function landingView() {
         </div>
         <div class="card">
           <p class="eyebrow">Insider feed</p>
-          <p class="sub">The journalists who break player movement first.</p>
-          <a class="twitter-timeline" data-height="380" data-dnt="true"
+          <p class="sub">Movement reporters only — curation is by account (X embeds can't filter
+            post topics), so the list stays strictly contracts / trades / FA / draft beat writers.</p>
+          <a class="twitter-timeline" data-height="380" data-dnt="true" data-tweet-limit="5"
              href="${esc(INSIDER_LIST_URL)}">Posts from AFL insiders</a>
           <div class="insiders">
             ${INSIDERS.map(([h, label]) => `
