@@ -13,15 +13,16 @@ AFL player movement, list, contract-status, and draft tracker — Spotrac/Tankat
 - `data/` — schema.sql + load.py (builds listtrac.db from the scrapers via identity.py)
 - `api/` — FastAPI read API over the SQLite DB (`uvicorn api.app:app` serves API + frontend)
 - `admin/` — manual entry tool for trades/contract status (no clean public source exists)
-- `public/` — frontend (vanilla SPA, no build step; Vercel serves it statically)
+- `web/` — frontend (vanilla SPA, no build step; served by FastAPI everywhere).
+  Must NOT be renamed `public/` — Vercel strips that folder from function bundles.
 
 ## Deploy (Vercel)
-Zero-config: `public/` is served statically, `api/index.py` runs the FastAPI
-app as a Python function (vercel.json rewrites non-static routes to it), and
-`data/listtrac.db` is a **committed read-only snapshot** that ships with each
-deploy. To refresh the data: `python data/load.py`, commit the new DB, push —
-Vercel redeploys. Scraper-only deps live in `scraper/requirements.txt` so the
-function stays lean.
+Everything routes through the Python function (`api/index.py`): vercel.json
+bundles the whole repo into it (`includeFiles: "**"`) and FastAPI serves both
+the API and `web/` static files. `data/listtrac.db` is a **committed
+read-only snapshot** that ships with each deploy. To refresh the data:
+`python data/load.py`, commit the new DB, push — Vercel redeploys.
+Scraper-only deps live in `scraper/requirements.txt` so the function stays lean.
 
 ## News spotlights (web layer)
 Aggregate existing contract/trade/free-agency coverage, Spotrac-spotlights

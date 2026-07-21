@@ -15,7 +15,9 @@ from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 
 DB_PATH = Path(__file__).resolve().parent.parent / "data" / "listtrac.db"
-WEB_DIR = Path(__file__).resolve().parent.parent / "public"
+# NOTE: must not be named "public" — Vercel special-cases that folder as
+# static assets and strips it from Python function bundles
+WEB_DIR = Path(__file__).resolve().parent.parent / "web"
 
 app = FastAPI(title="ListTrac API", version="0.1.0",
               description="AFL player movement, lists, contract status, and draft history. No salary data.")
