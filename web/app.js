@@ -258,8 +258,21 @@ async function draftOrderView(chrome = "") {
           ${r.picks.map(rowHTML).join("")}`).join("")}
         </tbody>
       </table></div>
-      ${intel ? `<p class="srcline">Outcome stats cover ${intel.cohort.from}–${intel.cohort.to} drafts —
-        recent draftees would skew careers still in progress.</p>` : ""}
+      ${intel ? `
+      <div class="statlegend">
+        <p class="eyebrow">Reading this table</p>
+        <dl>
+          <div><dt>via</dt><dd>the pick changed hands — shown against the club that now owns it, named for the club whose ladder position sets the slot</dd></div>
+          <div><dt>DVI pts</dt><dd>the pick's value on the AFL's official Draft Value Index — the points currency used to match academy and father-son bids</dd></div>
+          <div><dt>Avg games</dt><dd>average career games played by every player ever taken at that pick</dd></div>
+          <div><dt>AA %</dt><dd>share of players taken at that pick who made an All-Australian team</dd></div>
+          <div><dt>Prem %</dt><dd>share who played in a premiership</dd></div>
+          <div><dt>Rising Star %</dt><dd>share who earned a Rising Star nomination in their early seasons</dd></div>
+        </dl>
+        <p class="thin" style="font-size:11.5px;margin:8px 0 0">Outcome stats cover the
+          ${intel.cohort.from}–${intel.cohort.to} drafts — more recent draftees are still mid-career
+          and would drag the numbers down.</p>
+      </div>` : ""}
     </div>`;
 }
 
@@ -807,6 +820,8 @@ function timelineHTML(p) {
 
 async function playerView(id) {
   const p = await api(`/players/${id}`);
+  const fullName = `${p.first_name} ${p.last_name}`;
+  const news = await api(`/api/player-news?name=${encodeURIComponent(fullName)}`).catch(() => []);
   const current = p.contract_status.find(cs => cs.is_current);
   const heroA = p.club_primary || "#333", heroTrim = p.club_secondary || "#ddd";
   const isFA = current && (current.status === "restricted_fa" || current.status === "unrestricted_fa");
@@ -862,14 +877,36 @@ async function playerView(id) {
         </div>` : ""}
         <div class="card">
           <h3>Transactions</h3>
-          <p class="sub">Every list move on record, provenance attached. Historical dates are trade-period-year approximations.</p>
           <div class="tablewrap"><table>
             <thead><tr><th>When</th><th>Type</th><th>Detail</th></tr></thead>
             <tbody>${txRows.join("") || `<tr><td colspan="4" class="thin">No recorded movements — original-list player.</td></tr>`}</tbody>
           </table></div>
         </div>
+        ${p.contract_status.length > 1 ? `
+        <div class="card">
+          <h3>Contract status history</h3>
+          <p class="sub">How ListTrac has tracked ${esc(p.first_name)}'s status over time.</p>
+          <div class="tablewrap"><table>
+            <thead><tr><th>Recorded</th><th>Club</th><th>Status</th><th class="num">Through</th></tr></thead>
+            <tbody>${p.contract_status.map(cs => `
+              <tr><td class="thin">${esc(cs.last_confirmed_date || "")}</td>
+                <td>${esc(cs.club)}</td><td>${chip(cs.status)}${cs.is_current ? "" : ` <span class="thin">superseded</span>`}</td>
+                <td class="num">${cs.contracted_through_year ?? "—"}</td></tr>`).join("")}
+            </tbody>
+          </table></div>
+        </div>` : ""}
       </div>
-      <aside class="rail">${SPOTLIGHTS}${sameBoat}</aside>
+      <aside class="rail">
+        <div class="card">
+          <p class="eyebrow">${esc(p.last_name)} in the news</p>
+          ${news.length ? news.slice(0, 8).map(n => `
+            <div class="spot">
+              <span class="src">${esc(n.source)} <span class="thin">· ${timeAgo(n.published)}</span></span>
+              <p><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a></p>
+            </div>`).join("") : `<p class="thin">No recent movement coverage.</p>`}
+        </div>
+        ${sameBoat}
+      </aside>
     </div>`;
 }
 

@@ -278,6 +278,40 @@ def draft_order():
         raise HTTPException(503, "Squiggle ladder unavailable")
 
 
+@app.get("/api/player-news")
+def player_news(name: str):
+    """Movement news for one player: Google News RSS scoped to their name +
+    contract/trade context. Headline + source + link out only. 30-min cache
+    per player name."""
+    key = f"pnews:{name.lower().strip()}"
+    def build():
+        q = f'"{name}" AFL (contract OR trade OR "free agent" OR re-sign OR delist OR draft)'
+        try:
+            resp = requests.get(
+                "https://news.google.com/rss/search",
+                params={"q": q, "hl": "en-AU", "gl": "AU", "ceid": "AU:en"},
+                headers={"User-Agent": "ListTrac (github.com/jvanders33/ListTrac)"}, timeout=10)
+            resp.raise_for_status()
+            items = []
+            for it in ET.fromstring(resp.content).findall(".//item")[:10]:
+                title = it.findtext("title") or ""
+                source = it.find("source")
+                source_name = source.text if source is not None else ""
+                title = re.sub(r"\s+-\s+" + re.escape(source_name) + r"\s*$", "", title) if source_name else title
+                published = None
+                if it.findtext("pubDate"):
+                    try:
+                        published = parsedate_to_datetime(it.findtext("pubDate")).isoformat()
+                    except ValueError:
+                        pass
+                items.append({"title": title, "source": source_name,
+                              "url": it.findtext("link") or "", "published": published})
+            return items
+        except requests.RequestException:
+            return []
+    return cached(key, 1800, build)
+
+
 @app.get("/api/trending")
 def trending():
     """Players worth watching, from our own data signals — no traffic

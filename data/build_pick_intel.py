@@ -26,7 +26,7 @@ from draftguru import fetch_pick_history
 from identity import normalize_name
 from rising_star import fetch_all as fetch_rising_star
 
-MAX_PICK = 40
+MAX_PICK = 72  # covers all four projected rounds; cohorts stay ≥20 this deep
 COHORT = (1986, 2020)  # national draft era, mature careers only
 
 # Official AFL Draft Value Index (current 54-pick revision)

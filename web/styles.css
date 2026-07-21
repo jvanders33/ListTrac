@@ -359,6 +359,19 @@ footer.pagefoot {
 }
 .trendrow .treason { margin-left: auto; font-size: 11px; color: var(--ink-2); text-align: right; }
 
+/* stats legend */
+.statlegend {
+  margin-top: 16px; padding: 12px 16px; background: var(--card-2);
+  border-radius: 6px;
+}
+.statlegend dl { margin: 8px 0 0; display: flex; flex-direction: column; gap: 5px; }
+.statlegend dl div { display: flex; gap: 10px; font-size: 12.5px; }
+.statlegend dt {
+  flex: none; width: 92px; font-weight: 800; color: var(--accent);
+  font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; padding-top: 1px;
+}
+.statlegend dd { margin: 0; color: var(--ink-2); }
+
 /* insider feed */
 .insiders { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
 .insiders a { font-size: 12.5px; font-weight: 700; }

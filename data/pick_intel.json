@@ -329,6 +329,262 @@
    "aa_pct": 26,
    "prem_pct": 21,
    "rs_pct": 8
+  },
+  "41": {
+   "dvi": 220,
+   "cohort_n": 35,
+   "avg_games": 67,
+   "aa_pct": 9,
+   "prem_pct": 9,
+   "rs_pct": 15
+  },
+  "42": {
+   "dvi": 202,
+   "cohort_n": 34,
+   "avg_games": 60,
+   "aa_pct": 12,
+   "prem_pct": 12,
+   "rs_pct": 15
+  },
+  "43": {
+   "dvi": 184,
+   "cohort_n": 35,
+   "avg_games": 72,
+   "aa_pct": 14,
+   "prem_pct": 14,
+   "rs_pct": 19
+  },
+  "44": {
+   "dvi": 167,
+   "cohort_n": 35,
+   "avg_games": 64,
+   "aa_pct": 9,
+   "prem_pct": 9,
+   "rs_pct": 19
+  },
+  "45": {
+   "dvi": 150,
+   "cohort_n": 35,
+   "avg_games": 57,
+   "aa_pct": 9,
+   "prem_pct": 17,
+   "rs_pct": 26
+  },
+  "46": {
+   "dvi": 134,
+   "cohort_n": 35,
+   "avg_games": 63,
+   "aa_pct": 6,
+   "prem_pct": 9,
+   "rs_pct": 22
+  },
+  "47": {
+   "dvi": 118,
+   "cohort_n": 35,
+   "avg_games": 61,
+   "aa_pct": 11,
+   "prem_pct": 17,
+   "rs_pct": 19
+  },
+  "48": {
+   "dvi": 102,
+   "cohort_n": 34,
+   "avg_games": 63,
+   "aa_pct": 12,
+   "prem_pct": 15,
+   "rs_pct": 15
+  },
+  "49": {
+   "dvi": 86,
+   "cohort_n": 35,
+   "avg_games": 60,
+   "aa_pct": 3,
+   "prem_pct": 6,
+   "rs_pct": 15
+  },
+  "50": {
+   "dvi": 71,
+   "cohort_n": 35,
+   "avg_games": 57,
+   "aa_pct": 6,
+   "prem_pct": 11,
+   "rs_pct": 11
+  },
+  "51": {
+   "dvi": 57,
+   "cohort_n": 34,
+   "avg_games": 29,
+   "aa_pct": 3,
+   "prem_pct": 3,
+   "rs_pct": 8
+  },
+  "52": {
+   "dvi": 42,
+   "cohort_n": 32,
+   "avg_games": 44,
+   "aa_pct": 3,
+   "prem_pct": 9,
+   "rs_pct": 17
+  },
+  "53": {
+   "dvi": 28,
+   "cohort_n": 34,
+   "avg_games": 66,
+   "aa_pct": 6,
+   "prem_pct": 12,
+   "rs_pct": 19
+  },
+  "54": {
+   "dvi": 14,
+   "cohort_n": 34,
+   "avg_games": 38,
+   "aa_pct": 6,
+   "prem_pct": 9,
+   "rs_pct": 4
+  },
+  "55": {
+   "dvi": 0,
+   "cohort_n": 35,
+   "avg_games": 63,
+   "aa_pct": 11,
+   "prem_pct": 9,
+   "rs_pct": 19
+  },
+  "56": {
+   "dvi": 0,
+   "cohort_n": 35,
+   "avg_games": 87,
+   "aa_pct": 23,
+   "prem_pct": 9,
+   "rs_pct": 22
+  },
+  "57": {
+   "dvi": 0,
+   "cohort_n": 34,
+   "avg_games": 39,
+   "aa_pct": 6,
+   "prem_pct": 15,
+   "rs_pct": 12
+  },
+  "58": {
+   "dvi": 0,
+   "cohort_n": 35,
+   "avg_games": 45,
+   "aa_pct": 6,
+   "prem_pct": 9,
+   "rs_pct": 7
+  },
+  "59": {
+   "dvi": 0,
+   "cohort_n": 34,
+   "avg_games": 31,
+   "aa_pct": 0,
+   "prem_pct": 6,
+   "rs_pct": 0
+  },
+  "60": {
+   "dvi": 0,
+   "cohort_n": 34,
+   "avg_games": 40,
+   "aa_pct": 3,
+   "prem_pct": 12,
+   "rs_pct": 23
+  },
+  "61": {
+   "dvi": 0,
+   "cohort_n": 33,
+   "avg_games": 52,
+   "aa_pct": 6,
+   "prem_pct": 6,
+   "rs_pct": 20
+  },
+  "62": {
+   "dvi": 0,
+   "cohort_n": 32,
+   "avg_games": 34,
+   "aa_pct": 3,
+   "prem_pct": 9,
+   "rs_pct": 8
+  },
+  "63": {
+   "dvi": 0,
+   "cohort_n": 33,
+   "avg_games": 25,
+   "aa_pct": 0,
+   "prem_pct": 3,
+   "rs_pct": 16
+  },
+  "64": {
+   "dvi": 0,
+   "cohort_n": 31,
+   "avg_games": 39,
+   "aa_pct": 3,
+   "prem_pct": 6,
+   "rs_pct": 17
+  },
+  "65": {
+   "dvi": 0,
+   "cohort_n": 29,
+   "avg_games": 13,
+   "aa_pct": 0,
+   "prem_pct": 3,
+   "rs_pct": 19
+  },
+  "66": {
+   "dvi": 0,
+   "cohort_n": 27,
+   "avg_games": 63,
+   "aa_pct": 11,
+   "prem_pct": 4,
+   "rs_pct": 14
+  },
+  "67": {
+   "dvi": 0,
+   "cohort_n": 24,
+   "avg_games": 61,
+   "aa_pct": 17,
+   "prem_pct": 17,
+   "rs_pct": 16
+  },
+  "68": {
+   "dvi": 0,
+   "cohort_n": 25,
+   "avg_games": 32,
+   "aa_pct": 4,
+   "prem_pct": 0,
+   "rs_pct": 10
+  },
+  "69": {
+   "dvi": 0,
+   "cohort_n": 26,
+   "avg_games": 35,
+   "aa_pct": 0,
+   "prem_pct": 8,
+   "rs_pct": 5
+  },
+  "70": {
+   "dvi": 0,
+   "cohort_n": 27,
+   "avg_games": 44,
+   "aa_pct": 11,
+   "prem_pct": 11,
+   "rs_pct": 14
+  },
+  "71": {
+   "dvi": 0,
+   "cohort_n": 24,
+   "avg_games": 42,
+   "aa_pct": 8,
+   "prem_pct": 8,
+   "rs_pct": 5
+  },
+  "72": {
+   "dvi": 0,
+   "cohort_n": 20,
+   "avg_games": 29,
+   "aa_pct": 10,
+   "prem_pct": 0,
+   "rs_pct": 7
   }
  }
 }
