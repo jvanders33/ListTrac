@@ -62,11 +62,12 @@ const timeAgo = iso => {
 };
 
 async function landingView() {
-  const [summary, order, newsItems, trend] = await Promise.all([
+  const [summary, order, newsItems, trend, clubList] = await Promise.all([
     api("/api/summary"),
     api("/api/draft-order").catch(() => null),
     api("/api/news").catch(() => []),
     api("/api/trending").catch(() => []),
+    api("/clubs").catch(() => []),
   ]);
   const s = summary.contract_statuses;
 
@@ -101,15 +102,26 @@ async function landingView() {
                 <td class="num">${p.wins}–${p.losses}</td><td class="num">${p.percentage}</td></tr>`).join("")}
             </tbody>
           </table></div>
-          <p class="srcline"><a href="#/draft-order">Full 18-pick order →</a> · interactive mock draft is next on the roadmap</p>
+          <p class="srcline"><a href="#/draft-order">Full order with pick outcome stats →</a> · <a href="#/mock-draft">run your own mock draft →</a></p>
+        </div>` : ""}
+
+        ${clubList.length ? `
+        <div class="card">
+          <h3>Clubs</h3>
+          <div class="clubstrip" style="margin-top:10px">
+            ${clubList.map(c => `
+              <a href="#/club/${esc(c.abbreviation)}">
+                <span class="badge" style="--club:${esc(c.primary_color || "#888")}">${esc(c.abbreviation)}</span>
+                ${esc(c.name)}</a>`).join("")}
+          </div>
         </div>` : ""}
 
         <div class="card">
-          <h3>Key dates</h3>
+          <h3>Upcoming deadlines</h3>
           <p class="sub">Indicative windows — confirmed dates land closer to season's end.</p>
           <div class="tablewrap"><table><tbody>
             <tr><td class="thin">Early October</td><td>Free agency window opens</td></tr>
-            <tr><td class="thin">Mid October</td><td>Trade period — the admin tool's moment</td></tr>
+            <tr><td class="thin">Mid October</td><td>Trade period</td></tr>
             <tr><td class="thin">Late November</td><td>National draft</td></tr>
             <tr><td class="thin">Early December</td><td>Rookie draft · pre-season supplemental signings</td></tr>
           </tbody></table></div>
@@ -127,39 +139,59 @@ async function landingView() {
             </div>`).join("") : `<p class="thin">News feed unavailable right now.</p>`}
         </div>
         <div class="card">
-          <p class="eyebrow">Trending</p>
+          <p class="eyebrow">Trending players</p>
           <p class="sub">From the data — FA class, newest picks, latest trades.</p>
-          ${trend.map(t => `
-            <div class="spot">
-              <p><a href="#/player/${t.id}">${esc(t.first_name)} ${esc(t.last_name)}</a>
-                <span class="thin">· ${esc(t.club)}</span></p>
-              <span class="src">${esc(t.reason)}</span>
+          ${trend.map((t, i) => `
+            <div class="trendrow">
+              <span class="tn">${i + 1}</span>
+              <span class="badge" style="--club:${esc((clubList.find(c => c.abbreviation === t.abbrev) || {}).primary_color || "#888")};width:22px;height:22px;font-size:8.5px">${esc(t.abbrev)}</span>
+              <a href="#/player/${t.id}">${esc(t.first_name)} ${esc(t.last_name)}</a>
+              <span class="treason">${esc(t.reason)}</span>
             </div>`).join("")}
         </div>
       </aside>
     </div>`;
 }
 
+const intelTip = (intel, n) => {
+  const s = intel && intel.picks[n];
+  if (!s) return "";
+  return `DVI ${s.dvi} pts · avg ${s.avg_games} games · AA ${s.aa_pct}% · Prem ${s.prem_pct}%`
+    + (s.rs_pct != null ? ` · Rising Star ${s.rs_pct}%` : "");
+};
+
 async function draftOrderView() {
-  const order = await api("/api/draft-order");
+  const [order, intel] = await Promise.all([
+    api("/api/draft-order"), api("/api/pick-intel").catch(() => null)]);
+  const cell = (n, key, suffix = "") => {
+    const s = intel && intel.picks[n];
+    return s ? `${s[key] ?? "—"}${s[key] != null ? suffix : ""}` : "—";
+  };
   view.innerHTML = `
     <div class="card">
       <h3>Projected 2026 national draft order</h3>
       <p class="sub">Reverse ladder ${order.as_of_round} games into the season, live from ${esc(order.source)} —
-        the Tankathon method. First pass: no academy, father-son, priority-pick or finals adjustments.
-        Interactive mock draft is the next build.</p>
+        the Tankathon method, plus what history says each slot is worth.</p>
       <div class="tablewrap"><table>
-        <thead><tr><th class="num">Pick</th><th>Club</th><th class="num">Ladder</th><th class="num">W–L</th><th class="num">%</th><th></th></tr></thead>
+        <thead><tr><th class="num">Pick</th><th>Club</th><th class="num">W–L</th>
+          <th class="num">DVI pts</th><th class="num">Avg games</th>
+          <th class="num">AA %</th><th class="num">Prem %</th><th class="num">Rising Star %</th></tr></thead>
         <tbody>${order.picks.map(p => `
           <tr><td class="num"><b>${p.pick}</b></td>
             <td><i class="dot" style="background:${esc(p.primary_color || "#888")}"></i>
               ${p.abbrev ? `<a href="#/club/${esc(p.abbrev)}">${esc(p.club)}</a>` : esc(p.club)}</td>
-            <td class="num thin">${p.ladder_rank}</td>
-            <td class="num">${p.wins}–${p.losses}</td><td class="num">${p.percentage}</td>
-            <td>${p.pick <= 3 ? '<span class="chip rfa">Prime pick</span>' : ""}</td></tr>`).join("")}
+            <td class="num">${p.wins}–${p.losses}</td>
+            <td class="num">${cell(p.pick, "dvi")}</td>
+            <td class="num">${cell(p.pick, "avg_games")}</td>
+            <td class="num">${cell(p.pick, "aa_pct", "%")}</td>
+            <td class="num">${cell(p.pick, "prem_pct", "%")}</td>
+            <td class="num">${cell(p.pick, "rs_pct", "%")}</td></tr>`).join("")}
         </tbody>
       </table></div>
-      <p class="srcline">Ladder refreshes hourly · pick trades from October will re-map ownership here</p>
+      <p class="srcline">${intel ? `Outcome stats: every national-draft selection at that pick,
+        ${intel.cohort.from}–${intel.cohort.to} drafts only (recent draftees would skew careers-in-progress).
+        Sources: Draftguru pick histories · Wikipedia Rising Star nominations · official DVI.`
+        : "Outcome stats not built yet."} Ladder refreshes hourly.</p>
     </div>`;
 }
 
@@ -268,7 +300,8 @@ function simulateDraft(events, orderPicks, byName) {
 }
 
 async function mockDraftView() {
-  const [order, pool] = await Promise.all([api("/api/draft-order"), api("/api/prospects")]);
+  const [order, pool, intel] = await Promise.all([
+    api("/api/draft-order"), api("/api/prospects"), api("/api/pick-intel").catch(() => null)]);
   const prospects = pool.prospects;
   const byName = Object.fromEntries(prospects.map(p => [p.name, p]));
   let events = loadMock();
@@ -307,7 +340,8 @@ async function mockDraftView() {
                   <span class="pickclub">${esc(r.club.abbrev)}</span>
                   <span class="thin" style="font-size:12px">${esc(r.absorbed)}</span></div>`;
                 shown++;
-                return `<div class="pickrow ${isCur ? "otc" : ""} ${r.kind === "matched" ? "matched" : ""}">
+                return `<div class="pickrow ${isCur ? "otc" : ""} ${r.kind === "matched" ? "matched" : ""}"
+                    title="${esc(intelTip(intel, shown))}">
                   <span class="picknum">${shown}</span>
                   <i class="dot" style="background:${esc(r.club.primary_color || "#888")}"></i>
                   <span class="pickclub">${esc(r.club.abbrev)}</span>
@@ -550,6 +584,7 @@ async function playerView(id) {
 
 async function draftView(year, draftType = "national") {
   let picks = [], picksErr = "";
+  const intel = await api("/api/pick-intel").catch(() => null);
   try { picks = await api(`/drafts/${year}?draft_type=${encodeURIComponent(draftType)}`); }
   catch { picksErr = `No ${draftType.replace("_", "-")} draft recorded for ${year}.`; }
   let trades = { players: [], picks: [] };
@@ -572,13 +607,20 @@ async function draftView(year, draftType = "national") {
       <p class="sub">Pick, club on the night, and the player taken.</p>
       ${picksErr ? `<p class="thin">${esc(picksErr)}</p>` : `
       <div class="tablewrap"><table>
-        <thead><tr><th class="num">Pick</th><th>Club</th><th>Player</th><th>Status</th></tr></thead>
+        <thead><tr><th class="num">Pick</th><th class="num">DVI</th><th>Club</th><th>Player</th><th>How the pick arrived</th></tr></thead>
         <tbody>${picks.map(pk => `
-          <tr><td class="num">${pk.pick_number ?? "—"}</td><td>${esc(pk.club)}</td>
+          <tr title="${esc(intelTip(intel, pk.pick_number))}">
+            <td class="num">${pk.pick_number ?? "—"}</td>
+            <td class="num thin">${intel && intel.picks[pk.pick_number] ? intel.picks[pk.pick_number].dvi : "—"}</td>
+            <td>${esc(pk.club)}</td>
             <td>${pk.player_id ? `<a href="#/player/${pk.player_id}">${esc(pk.first_name)} ${esc(pk.last_name)}</a>` : "<span class='thin'>passed</span>"}</td>
-            <td>${pk.status === "traded" ? `<span class="chip warn">via trade</span>` : ""}</td></tr>`).join("")}
+            <td>${pk.status === "traded"
+              ? `<span class="chip warn">via trade</span> <span class="thin">${esc(pk.trade_detail || "chain unresolved")}</span>`
+              : "<span class='thin'>own selection</span>"}</td></tr>`).join("")}
         </tbody>
-      </table></div>`}
+      </table></div>
+      <p class="srcline">Hover a row for the pick's historical outcome profile (avg games, AA%, premiership%,
+        Rising Star%). Trade chains from Draftguru; <a href="#/trades/${esc(year)}">full trade period →</a></p>`}
     </div>
     ${trades.players.length || trades.picks.length ? `
     <div class="card">
@@ -608,6 +650,46 @@ async function draftView(year, draftType = "national") {
   document.getElementById("dtype").addEventListener("change", e => location.hash = `#/draft/${document.getElementById("dyear").value}/${e.target.value}`);
 }
 
+async function tradesView(year) {
+  let trades = { players: [], picks: [] };
+  let empty = "";
+  try { trades = await api(`/trades/${year}`); } catch { empty = `No trade data recorded for ${year}.`; }
+  const years = [];
+  for (let y = 2025; y >= 1986; y--) years.push(y);
+  view.innerHTML = `
+    <div class="controls">
+      <label class="eyebrow" style="margin:0" for="tyear">Trade period</label>
+      <select id="tyear">${years.map(y => `<option ${y === +year ? "selected" : ""}>${y}</option>`).join("")}</select>
+      <span class="thin" style="font-size:12px">Interactive trade machine is next on the roadmap.</span>
+    </div>
+    ${empty ? `<div class="card"><p class="thin">${esc(empty)}</p></div>` : `
+    <div class="card">
+      <h3>${esc(year)} trade period — player moves</h3>
+      <p class="sub">${trades.players.length} players changed clubs. Dates are trade-period approximations.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Player</th><th>From</th><th>To</th><th>Deal</th></tr></thead>
+        <tbody>${trades.players.map(t => `
+          <tr><td><a href="#/player/${t.player_id}">${esc(t.first_name)} ${esc(t.last_name)}</a></td>
+            <td class="thin">${esc(t.from_club || "—")}</td><td>${esc(t.to_club || "")}</td>
+            <td>${t.source_url ? `<a href="${esc(t.source_url)}" target="_blank" rel="noopener">detail ↗</a>` : ""}</td></tr>`).join("")}
+        </tbody>
+      </table></div>
+    </div>
+    <div class="card">
+      <h3>Pick moves</h3>
+      <p class="sub">${trades.picks.length} picks changed hands — "became" shows the selection each pick resolved to.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Pick traded</th><th>From</th><th>To</th><th class="num">Became</th></tr></thead>
+        <tbody>${trades.picks.map(t => `
+          <tr><td>${esc(t.description || "")}</td><td class="thin">${esc(t.from_club)}</td><td>${esc(t.to_club)}</td>
+            <td class="num ${t.resolved_pick ? "" : "thin"}">${t.resolved_pick ? "#" + t.resolved_pick : "—"}</td></tr>`).join("")}
+        </tbody>
+      </table></div>
+      <p class="srcline">Draftguru provenance on every row · <a href="#/draft/${esc(year)}">see the resulting draft board →</a></p>
+    </div>`}`;
+  document.getElementById("tyear").addEventListener("change", e => location.hash = `#/trades/${e.target.value}`);
+}
+
 async function faView(filter = "all") {
   const statuses = filter === "all" ? ["restricted_fa", "unrestricted_fa"] : [filter];
   const lists = await Promise.all(statuses.map(s => api(`/contract-status?status=${s}`)));
@@ -635,8 +717,22 @@ async function faView(filter = "all") {
 }
 
 async function searchView(q) {
-  const players = await api(`/players?q=${encodeURIComponent(q)}`);
+  const [players, allClubs] = await Promise.all([
+    api(`/players?q=${encodeURIComponent(q)}`), api("/clubs").catch(() => [])]);
+  const ql = q.toLowerCase();
+  const clubHits = allClubs.filter(c =>
+    c.name.toLowerCase().includes(ql) || c.abbreviation.toLowerCase() === ql);
   view.innerHTML = `
+    ${clubHits.length ? `
+    <div class="card">
+      <h3>Clubs</h3>
+      <div class="clubstrip" style="margin-top:10px">
+        ${clubHits.map(c => `
+          <a href="#/club/${esc(c.abbreviation)}">
+            <span class="badge" style="--club:${esc(c.primary_color || "#888")}">${esc(c.abbreviation)}</span>
+            ${esc(c.name)}</a>`).join("")}
+      </div>
+    </div>` : ""}
     <div class="card">
       <h3>Search: “${esc(q)}”</h3>
       <p class="sub">${players.length} match${players.length === 1 ? "" : "es"} (first 25 shown).</p>
@@ -657,6 +753,7 @@ const routes = [
   [/^#\/clubs$/,                    () => clubsView()],
   [/^#\/draft-order$/,              () => draftOrderView()],
   [/^#\/mock-draft$/,               () => mockDraftView()],
+  [/^#\/trades\/(\d{4})$/,          m => tradesView(m[1])],
   [/^#\/club\/([A-Za-z]+)$/,        m => clubView(m[1])],
   [/^#\/player\/(\d+)$/,            m => playerView(m[1])],
   [/^#\/draft\/(\d{4})(?:\/(\w+))?$/, m => draftView(m[1], m[2] || "national")],

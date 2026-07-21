@@ -38,6 +38,19 @@ paywall.
 - Squiggle API (squiggle.com.au) — ladder/standings, proper public API
 - Manual/reporter-sourced — trades, draft picks, contract status
 
+## Roadmap: draft & trade depth (agreed 2026-07-21)
+- **Trade machine** (Spotrac's NBA trade machine as the case study): build
+  multi-club trades from players + picks with DVI valuation and contract
+  status context. Sits in the Trades section alongside the historical
+  browser. Next major build.
+- **3-year prospect runway** (nbadraft.net as the case study): extend the
+  prospect pool back to U16 National Championships squads, so 2027/2028
+  draft classes are trackable from their U16 year. Rookie Me Central
+  covers U16 champs the same way it covers U18s.
+- **Pick intel** (shipped): per-pick DVI, avg games, AA%, premiership%,
+  Rising Star% from Draftguru pick histories + Wikipedia nominee lists,
+  1986–2020 cohort.
+
 ## Roadmap: v1.5 — fantasy context layer
 Fantasy-as-context, not fantasy-tools. FanFooty owns live scoring, planners,
 projections, and editorial player news — don't compete there. ListTrac's wedge

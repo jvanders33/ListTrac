@@ -188,6 +188,35 @@ def fetch_year_trades(year: int) -> list[dict]:
     return trades
 
 
+def fetch_pick_history(pick_number: int) -> list[dict]:
+    """Every national-draft selection ever made at a pick number, from
+    /picks/{n}: year, player, career games, honour codes (AA, Prem, B&F,
+    Coleman, Norm Smith, AFLCA...). Feeds the per-pick outcome stats."""
+    soup = _get_soup(f"/picks/{pick_number}")
+    table = soup.find("table", class_="general")
+    if table is None:
+        return []
+
+    history = []
+    for row in table.find_all("tr"):
+        year_cell = row.find("td", class_="year")
+        name_cell = row.find("td", class_="name")
+        if year_cell is None or name_cell is None or name_cell.a is None:
+            continue
+        games_cell = row.find("td", class_="games")
+        games = games_cell.get("data-sorttable_customkey", "") if games_cell else ""
+        honours_cell = row.find("td", class_="honours")
+        honours = [s.get_text(strip=True) for s in honours_cell.find_all("span", class_="honour")] if honours_cell else []
+        history.append({
+            "pick_number": pick_number,
+            "year": int(year_cell.get_text(strip=True)),
+            **_player_ref(name_cell.a),
+            "games": int(games) if games.lstrip("-").isdigit() else None,
+            "honours": honours,
+        })
+    return history
+
+
 def fetch_club_list(year: int, club_slug: str) -> list[dict]:
     """A club's list for a season: jumper, name, draftguru_id, DOB, height, grade."""
     soup = _get_soup(f"/lists/{year}/{club_slug}")

@@ -15,18 +15,52 @@
       <nav class="viewtabs" id="nav">
         <a href="#/clubs">Clubs</a>
         <a href="#/free-agents">Free agents</a>
+        <a href="#/trades/2025">Trades</a>
         <a href="#/draft/2025">Draft</a>
         <a href="#/draft-order">Draft order</a>
         <a href="#/mock-draft">Mock draft</a>
       </nav>
       <form class="search" id="search-form" role="search">
-        <input id="search-input" type="search" placeholder="Search players…" aria-label="Search players">
+        <input id="search-input" type="search" placeholder="Search for a player or club…" aria-label="Search for a player or club">
       </form>
     </header>
     <main id="view" aria-live="polite"></main>
     <footer class="pagefoot">
-      ListTrac tracks contract <em>status</em>, never salary figures — the AFL doesn't disclose them and we don't estimate them.
-      Data: Draftguru · AFL Tables · Zero Hanger · AFL.com.au · Squiggle. Every record carries its source.
+      <div class="footcols">
+        <div>
+          <p class="eyebrow">Sections</p>
+          <a href="#/clubs">Clubs</a>
+          <a href="#/free-agents">Free agents</a>
+          <a href="#/trades/2025">Trade periods</a>
+          <a href="#/draft/2025">Draft boards</a>
+          <a href="#/draft-order">Projected order</a>
+          <a href="#/mock-draft">Mock draft</a>
+        </div>
+        <div>
+          <p class="eyebrow">Coming up</p>
+          <span class="thin">Trade machine</span>
+          <span class="thin">Fantasy context</span>
+          <span class="thin">U16 prospect runway</span>
+          <span class="thin">Player news feeds</span>
+        </div>
+        <div>
+          <p class="eyebrow">Data sources</p>
+          <a href="https://www.draftguru.com.au" target="_blank" rel="noopener">Draftguru</a>
+          <a href="https://afltables.com" target="_blank" rel="noopener">AFL Tables</a>
+          <a href="https://www.zerohanger.com" target="_blank" rel="noopener">Zero Hanger</a>
+          <a href="https://squiggle.com.au" target="_blank" rel="noopener">Squiggle</a>
+          <a href="https://www.afl.com.au" target="_blank" rel="noopener">AFL.com.au</a>
+        </div>
+        <div>
+          <p class="eyebrow">About</p>
+          <a href="https://github.com/jvanders33/ListTrac" target="_blank" rel="noopener">GitHub</a>
+          <span class="thin">Contact</span>
+          <span class="thin">Methodology</span>
+        </div>
+      </div>
+      <p class="footnote">ListTrac tracks contract <em>status</em>, never salary figures — the AFL doesn't
+        disclose them and we don't estimate them. Every record carries its source.
+        Not affiliated with the AFL or any club.</p>
     </footer>
   </div>
   <script src="/app.js"></script>

@@ -120,6 +120,18 @@ def draft(year: int, draft_type: str = "national"):
                      ORDER BY dp.pick_number""", (year, draft_type))
     if not result:
         raise HTTPException(404, f"no {draft_type} draft data for {year}")
+
+    # attach the trade chain to picks that arrived via trade
+    chains: dict[int, list[str]] = {}
+    for h in rows("""SELECT dp.pick_number, cf.abbreviation f, ct.abbreviation t
+                     FROM draft_pick_trade_history h
+                     JOIN draft_pick dp ON dp.id = h.draft_pick_id
+                     JOIN club cf ON cf.id = h.from_club_id
+                     JOIN club ct ON ct.id = h.to_club_id
+                     WHERE dp.year = ? AND dp.draft_type = ? ORDER BY h.id""", (year, draft_type)):
+        chains.setdefault(h["pick_number"], []).append(f"{h['f']} → {h['t']}")
+    for r in result:
+        r["trade_detail"] = "; ".join(chains.get(r["pick_number"], [])) or None
     return result
 
 
@@ -270,6 +282,7 @@ def trending():
 
 
 PROSPECTS_PATH = Path(__file__).resolve().parent.parent / "data" / "prospects_2026.json"
+PICK_INTEL_PATH = Path(__file__).resolve().parent.parent / "data" / "pick_intel.json"
 
 
 @app.get("/api/prospects")
@@ -278,6 +291,16 @@ def prospects():
     merged with Reading the Play's Top 50. Regenerate: python scraper/u18_champs.py"""
     import json
     return json.loads(PROSPECTS_PATH.read_text(encoding="utf-8"))
+
+
+@app.get("/api/pick-intel")
+def pick_intel():
+    """Historical outcome stats per pick number (1986-2020 cohort): DVI, avg
+    games, AA%, premiership%, Rising Star%. Regenerate: python data/build_pick_intel.py"""
+    import json
+    if not PICK_INTEL_PATH.exists():
+        raise HTTPException(404, "pick intel not built yet")
+    return json.loads(PICK_INTEL_PATH.read_text(encoding="utf-8"))
 
 
 @app.get("/api/debug")

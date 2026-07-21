@@ -1,0 +1,334 @@
+{
+ "cohort": {
+  "from": 1986,
+  "to": 2020,
+  "note": "national drafts only; games/honours as recorded by Draftguru; Rising Star rates use 1994+ draftees (award introduced 1994)"
+ },
+ "sources": {
+  "pick_histories": "https://www.draftguru.com.au/picks/{n}",
+  "rising_star": "https://en.wikipedia.org/wiki/{year}_AFL_Rising_Star",
+  "dvi": "official AFL Draft Value Index (54-pick revision)"
+ },
+ "picks": {
+  "1": {
+   "dvi": 3000,
+   "cohort_n": 35,
+   "avg_games": 180,
+   "aa_pct": 51,
+   "prem_pct": 14,
+   "rs_pct": 78
+  },
+  "2": {
+   "dvi": 2481,
+   "cohort_n": 35,
+   "avg_games": 165,
+   "aa_pct": 49,
+   "prem_pct": 23,
+   "rs_pct": 63
+  },
+  "3": {
+   "dvi": 2178,
+   "cohort_n": 35,
+   "avg_games": 158,
+   "aa_pct": 34,
+   "prem_pct": 34,
+   "rs_pct": 70
+  },
+  "4": {
+   "dvi": 1962,
+   "cohort_n": 35,
+   "avg_games": 130,
+   "aa_pct": 26,
+   "prem_pct": 20,
+   "rs_pct": 37
+  },
+  "5": {
+   "dvi": 1795,
+   "cohort_n": 35,
+   "avg_games": 150,
+   "aa_pct": 37,
+   "prem_pct": 20,
+   "rs_pct": 67
+  },
+  "6": {
+   "dvi": 1659,
+   "cohort_n": 35,
+   "avg_games": 78,
+   "aa_pct": 9,
+   "prem_pct": 6,
+   "rs_pct": 44
+  },
+  "7": {
+   "dvi": 1543,
+   "cohort_n": 35,
+   "avg_games": 141,
+   "aa_pct": 37,
+   "prem_pct": 20,
+   "rs_pct": 63
+  },
+  "8": {
+   "dvi": 1443,
+   "cohort_n": 35,
+   "avg_games": 120,
+   "aa_pct": 20,
+   "prem_pct": 17,
+   "rs_pct": 44
+  },
+  "9": {
+   "dvi": 1355,
+   "cohort_n": 35,
+   "avg_games": 125,
+   "aa_pct": 20,
+   "prem_pct": 23,
+   "rs_pct": 37
+  },
+  "10": {
+   "dvi": 1276,
+   "cohort_n": 35,
+   "avg_games": 107,
+   "aa_pct": 23,
+   "prem_pct": 11,
+   "rs_pct": 44
+  },
+  "11": {
+   "dvi": 1205,
+   "cohort_n": 35,
+   "avg_games": 121,
+   "aa_pct": 23,
+   "prem_pct": 17,
+   "rs_pct": 48
+  },
+  "12": {
+   "dvi": 1140,
+   "cohort_n": 35,
+   "avg_games": 108,
+   "aa_pct": 29,
+   "prem_pct": 20,
+   "rs_pct": 37
+  },
+  "13": {
+   "dvi": 1080,
+   "cohort_n": 35,
+   "avg_games": 135,
+   "aa_pct": 31,
+   "prem_pct": 20,
+   "rs_pct": 48
+  },
+  "14": {
+   "dvi": 1024,
+   "cohort_n": 35,
+   "avg_games": 106,
+   "aa_pct": 20,
+   "prem_pct": 17,
+   "rs_pct": 33
+  },
+  "15": {
+   "dvi": 973,
+   "cohort_n": 35,
+   "avg_games": 99,
+   "aa_pct": 23,
+   "prem_pct": 14,
+   "rs_pct": 30
+  },
+  "16": {
+   "dvi": 924,
+   "cohort_n": 35,
+   "avg_games": 104,
+   "aa_pct": 17,
+   "prem_pct": 11,
+   "rs_pct": 30
+  },
+  "17": {
+   "dvi": 879,
+   "cohort_n": 35,
+   "avg_games": 90,
+   "aa_pct": 9,
+   "prem_pct": 17,
+   "rs_pct": 26
+  },
+  "18": {
+   "dvi": 836,
+   "cohort_n": 35,
+   "avg_games": 102,
+   "aa_pct": 20,
+   "prem_pct": 23,
+   "rs_pct": 41
+  },
+  "19": {
+   "dvi": 796,
+   "cohort_n": 35,
+   "avg_games": 109,
+   "aa_pct": 14,
+   "prem_pct": 14,
+   "rs_pct": 37
+  },
+  "20": {
+   "dvi": 757,
+   "cohort_n": 35,
+   "avg_games": 85,
+   "aa_pct": 11,
+   "prem_pct": 9,
+   "rs_pct": 22
+  },
+  "21": {
+   "dvi": 721,
+   "cohort_n": 35,
+   "avg_games": 78,
+   "aa_pct": 9,
+   "prem_pct": 9,
+   "rs_pct": 33
+  },
+  "22": {
+   "dvi": 686,
+   "cohort_n": 35,
+   "avg_games": 59,
+   "aa_pct": 3,
+   "prem_pct": 11,
+   "rs_pct": 30
+  },
+  "23": {
+   "dvi": 653,
+   "cohort_n": 35,
+   "avg_games": 65,
+   "aa_pct": 14,
+   "prem_pct": 9,
+   "rs_pct": 26
+  },
+  "24": {
+   "dvi": 621,
+   "cohort_n": 35,
+   "avg_games": 95,
+   "aa_pct": 9,
+   "prem_pct": 20,
+   "rs_pct": 19
+  },
+  "25": {
+   "dvi": 590,
+   "cohort_n": 35,
+   "avg_games": 82,
+   "aa_pct": 9,
+   "prem_pct": 14,
+   "rs_pct": 33
+  },
+  "26": {
+   "dvi": 561,
+   "cohort_n": 35,
+   "avg_games": 88,
+   "aa_pct": 17,
+   "prem_pct": 23,
+   "rs_pct": 30
+  },
+  "27": {
+   "dvi": 533,
+   "cohort_n": 35,
+   "avg_games": 76,
+   "aa_pct": 6,
+   "prem_pct": 9,
+   "rs_pct": 33
+  },
+  "28": {
+   "dvi": 505,
+   "cohort_n": 35,
+   "avg_games": 68,
+   "aa_pct": 9,
+   "prem_pct": 20,
+   "rs_pct": 26
+  },
+  "29": {
+   "dvi": 479,
+   "cohort_n": 35,
+   "avg_games": 101,
+   "aa_pct": 17,
+   "prem_pct": 29,
+   "rs_pct": 30
+  },
+  "30": {
+   "dvi": 454,
+   "cohort_n": 35,
+   "avg_games": 75,
+   "aa_pct": 14,
+   "prem_pct": 14,
+   "rs_pct": 22
+  },
+  "31": {
+   "dvi": 429,
+   "cohort_n": 35,
+   "avg_games": 73,
+   "aa_pct": 9,
+   "prem_pct": 20,
+   "rs_pct": 15
+  },
+  "32": {
+   "dvi": 405,
+   "cohort_n": 35,
+   "avg_games": 76,
+   "aa_pct": 9,
+   "prem_pct": 11,
+   "rs_pct": 26
+  },
+  "33": {
+   "dvi": 382,
+   "cohort_n": 35,
+   "avg_games": 81,
+   "aa_pct": 11,
+   "prem_pct": 20,
+   "rs_pct": 19
+  },
+  "34": {
+   "dvi": 360,
+   "cohort_n": 35,
+   "avg_games": 67,
+   "aa_pct": 11,
+   "prem_pct": 14,
+   "rs_pct": 11
+  },
+  "35": {
+   "dvi": 338,
+   "cohort_n": 35,
+   "avg_games": 41,
+   "aa_pct": 0,
+   "prem_pct": 9,
+   "rs_pct": 4
+  },
+  "36": {
+   "dvi": 317,
+   "cohort_n": 35,
+   "avg_games": 52,
+   "aa_pct": 6,
+   "prem_pct": 6,
+   "rs_pct": 22
+  },
+  "37": {
+   "dvi": 297,
+   "cohort_n": 35,
+   "avg_games": 102,
+   "aa_pct": 11,
+   "prem_pct": 9,
+   "rs_pct": 30
+  },
+  "38": {
+   "dvi": 277,
+   "cohort_n": 35,
+   "avg_games": 51,
+   "aa_pct": 9,
+   "prem_pct": 11,
+   "rs_pct": 15
+  },
+  "39": {
+   "dvi": 257,
+   "cohort_n": 35,
+   "avg_games": 63,
+   "aa_pct": 14,
+   "prem_pct": 11,
+   "rs_pct": 22
+  },
+  "40": {
+   "dvi": 238,
+   "cohort_n": 34,
+   "avg_games": 104,
+   "aa_pct": 26,
+   "prem_pct": 21,
+   "rs_pct": 8
+  }
+ }
+}
