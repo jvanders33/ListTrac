@@ -169,5 +169,8 @@ def contract_status(status: str | None = None, club: str | None = None):
     return rows(query + " ORDER BY c.name, p.last_name", tuple(params))
 
 
-# static frontend — mounted last so API routes win
-app.mount("/", StaticFiles(directory=WEB_DIR, html=True), name="web")
+# static frontend — mounted last so API routes win. Guarded: if the directory
+# is missing from a serverless bundle, degrade to API-only instead of crashing
+# the whole function at import time (StaticFiles raises on a missing dir).
+if WEB_DIR.is_dir():
+    app.mount("/", StaticFiles(directory=WEB_DIR, html=True), name="web")
