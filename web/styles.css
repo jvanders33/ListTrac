@@ -477,6 +477,27 @@ footer.pagefoot {
 .dchip.ufa { border-left-color: var(--ufa); background: var(--ufa-bg); }
 @media (max-width: 620px) { .depthline { grid-template-columns: 1fr; gap: 6px; } }
 
+/* player comparison */
+.cmp-pickers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0 6px; }
+@media (max-width: 560px) { .cmp-pickers { grid-template-columns: 1fr; } }
+.cmp-pick { position: relative; }
+.cmp-pick .poolsearch { margin: 4px 0 0; }
+.cmp-results { position: absolute; z-index: 5; left: 0; right: 0; background: var(--card); border: 1px solid var(--line); border-radius: 6px; margin-top: 2px; overflow: hidden; }
+.cmp-results:empty { display: none; }
+.cmp-results button { display: block; width: 100%; text-align: left; background: none; border: 0; padding: 7px 10px; font: inherit; font-size: 13px; color: var(--ink); cursor: pointer; }
+.cmp-results button:hover { background: var(--card-2); }
+.cmp-legendrow { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 6px; }
+.cmp-key { display: inline-flex; align-items: center; gap: 7px; }
+.cmp-key > i { width: 11px; height: 11px; border-radius: 3px; flex: none; }
+.cmp-name b { font-size: 14px; }
+.cmp-name .thin { font-size: 11.5px; }
+.cmptable { width: 100%; }
+.cmptable th, .cmptable td { padding: 5px 8px; }
+.cmptable thead th { font-size: 11px; }
+.cmp-stat { text-align: center; color: var(--ink-2); font-size: 11.5px; white-space: nowrap; }
+.cmp-win { background: var(--ok-bg); }
+.cmptable .num b { font-size: 13px; }
+
 /* scouting report — radar + percentile bars */
 .scoutcols { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 20px; align-items: center; margin-top: 12px; }
 @media (max-width: 720px) { .scoutcols { grid-template-columns: 1fr; } }

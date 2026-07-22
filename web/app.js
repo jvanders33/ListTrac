@@ -1228,6 +1228,7 @@ async function tradeMachineView(chrome = "") {
 const playersChrome = act => `<div class="subtabs">
   <a href="#/players" class="${act === "dir" ? "active" : ""}">Directory</a>
   <a href="#/players/rankings" class="${act === "rank" ? "active" : ""}">Rankings</a>
+  <a href="#/players/compare" class="${act === "compare" ? "active" : ""}">Compare</a>
   <a href="#/players/fantasy" class="${act === "fantasy" ? "active" : ""}">Fantasy</a>
   <a href="#/players/top10" class="${act === "top10" ? "active" : ""}">Build a Top 10</a>
 </div>`;
@@ -1921,9 +1922,10 @@ function scoutingBars(sc) {
       <span class="sc-val"><b>${s.pct}</b><span class="thin"> · ${s.avg}</span></span></div>`;
   }).join("");
 }
-function scoutingCard(sc) {
+function scoutingCard(sc, pid) {
   return `<div class="card scouting">
-    <h3>Scouting report <span class="thin" style="font-weight:400">· percentile vs ${esc(sc.position_label)}s</span></h3>
+    <h3>Scouting report <span class="thin" style="font-weight:400">· percentile vs ${esc(sc.position_label)}s</span>
+      ${pid ? `<a class="cta quiet" href="#/players/compare?a=${pid}" style="float:right;margin:0;font-size:12px;padding:4px 10px">Compare →</a>` : ""}</h3>
     <p class="sub">How this season's per-game output ranks against every ${esc(sc.position_label).toLowerCase()} in the league (min ${sc.min_games} games). 100 = best.</p>
     <div class="scoutcols">
       <div class="scoutradar">${scoutingRadar(sc)}
@@ -2027,7 +2029,7 @@ async function playerView(id) {
             <tbody>${txRows.join("") || `<tr><td colspan="4" class="thin">No recorded movements — original-list player.</td></tr>`}</tbody>
           </table></div>
         </div>
-        ${p.scouting ? scoutingCard(p.scouting) : ""}
+        ${p.scouting ? scoutingCard(p.scouting, id) : ""}
         ${p.rating_history && p.rating_history.length ? `
         <div class="card">
           <h3>AFL Player Rating history</h3>
@@ -2280,11 +2282,92 @@ const tradesChrome = act => `<div class="subtabs">
 </div>`;
 const go = hash => { location.replace(hash); return Promise.resolve(); };
 
+/* Player comparison — overlay two scouting radars + a head-to-head table.
+   State lives in the URL (?a=&b=) so a matchup is shareable. */
+function compareRadar(a, b) {
+  const order = a.scouting.order.filter(k => a.scouting.stats[k] && b.scouting.stats[k]);
+  const n = order.length, cx = 190, cy = 168, R = 108;
+  const pt = (i, r) => { const g = (-90 + i * 360 / n) * Math.PI / 180; return [cx + r * Math.cos(g), cy + r * Math.sin(g)]; };
+  const poly = pts => pts.map(p => p.map(v => v.toFixed(1)).join(",")).join(" ");
+  const rings = [25, 50, 75, 100].map(pc => `<polygon points="${poly(order.map((_, i) => pt(i, R * pc / 100)))}" fill="none" stroke="var(--line)" stroke-width="1"/>`).join("");
+  const axes = order.map((_, i) => { const [x, y] = pt(i, R); return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)" stroke-width="0.5"/>`; }).join("");
+  const shape = sc => poly(order.map((k, i) => pt(i, R * sc.stats[k].pct / 100)));
+  const labels = order.map((k, i) => {
+    const [x, y] = pt(i, R + 13), c = Math.cos((-90 + i * 360 / n) * Math.PI / 180);
+    const anchor = c > 0.3 ? "start" : c < -0.3 ? "end" : "middle";
+    return `<text x="${x.toFixed(1)}" y="${(y + 3).toFixed(1)}" text-anchor="${anchor}" font-size="10" fill="var(--ink-2)">${esc(a.scouting.stats[k].label)}</text>`;
+  }).join("");
+  return `<svg viewBox="0 0 380 335" class="radar" width="100%">${rings}${axes}
+    <polygon points="${shape(b.scouting)}" fill="var(--ufa)" fill-opacity="0.13" stroke="var(--ufa)" stroke-width="1.6" stroke-linejoin="round"/>
+    <polygon points="${shape(a.scouting)}" fill="var(--accent)" fill-opacity="0.13" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/>
+    ${labels}</svg>`;
+}
+function compareTable(a, b) {
+  const order = a.scouting.order.filter(k => a.scouting.stats[k] && b.scouting.stats[k]);
+  return `<div class="tablewrap"><table class="cmptable">
+    <thead><tr><th class="num">${esc(a.last_name)}</th><th></th><th class="num">${esc(b.last_name)}</th></tr></thead>
+    <tbody>${order.map(k => { const sa = a.scouting.stats[k], sb = b.scouting.stats[k], aw = sa.pct >= sb.pct;
+      return `<tr>
+        <td class="num ${aw ? "cmp-win" : ""}"><b>${sa.avg}</b> <span class="thin">${sa.pct}</span></td>
+        <td class="cmp-stat">${esc(sa.label)}</td>
+        <td class="num ${!aw ? "cmp-win" : ""}"><span class="thin">${sb.pct}</span> <b>${sb.avg}</b></td></tr>`; }).join("")}
+    </tbody></table></div>`;
+}
+async function compareView() {
+  const q = k => { const m = location.hash.match(new RegExp(`[?&]${k}=(\\d+)`)); return m ? m[1] : null; };
+  const idA = q("a"), idB = q("b");
+  const [a, b] = await Promise.all([
+    idA ? api(`/players/${idA}`).catch(() => null) : Promise.resolve(null),
+    idB ? api(`/players/${idB}`).catch(() => null) : Promise.resolve(null)]);
+  const setUrl = (na, nb) => { const p = []; if (na) p.push("a=" + na); if (nb) p.push("b=" + nb); location.hash = `#/players/compare${p.length ? "?" + p.join("&") : ""}`; };
+  const who = (p, cls) => p ? `<span class="cmp-name ${cls}"><b>${esc(p.first_name)} ${esc(p.last_name)}</b>
+    <span class="thin">${p.club ? esc(p.club) : ""}${p.scouting ? " · " + esc(p.scouting.position_label) : ""}${p.rating ? " · rating " + p.rating.rating : ""}</span></span>` : "";
+  const picker = (slot, p) => `<div class="cmp-pick">
+    <label class="eyebrow">Player ${slot.toUpperCase()}</label>
+    <input class="poolsearch cmp-search" data-slot="${slot}" placeholder="Search a player…" autocomplete="off" value="${p ? esc(p.first_name + " " + p.last_name) : ""}">
+    <div class="cmp-results" data-slot="${slot}"></div></div>`;
+  let body;
+  if (a && b && a.scouting && b.scouting) {
+    body = `<div class="cmp-legendrow"><span class="cmp-key"><i style="background:var(--accent)"></i>${who(a, "")}</span>
+        <span class="cmp-key"><i style="background:var(--ufa)"></i>${who(b, "")}</span></div>
+      <p class="thin" style="font-size:11.5px;margin:2px 0 8px">Each ring = 25 percentile points, ranked within each player's own position.</p>
+      <div class="scoutcols"><div class="scoutradar">${compareRadar(a, b)}</div>
+        <div class="scoutbars">${compareTable(a, b)}</div></div>`;
+  } else if (a && b) {
+    body = `<p class="thin">${!a.scouting ? esc(a.first_name + " " + a.last_name) : esc(b.first_name + " " + b.last_name)} has no 2026 scouting data yet (needs 4+ games).</p>`;
+  } else {
+    body = `<p class="thin">Choose two players above to overlay their scouting radars and compare per-game output.</p>`;
+  }
+  view.innerHTML = `${playersChrome("compare")}
+    <div class="card">
+      <h3>Compare players</h3>
+      <p class="sub">Overlay two players' scouting radars, head to head. Percentiles are ranked against each player's own position; the raw per-game averages sit alongside.</p>
+      <div class="cmp-pickers">${picker("a", a)}${picker("b", b)}</div>
+      <div id="cmp-out">${body}</div>
+    </div>`;
+  view.querySelectorAll(".cmp-search").forEach(inp => {
+    const slot = inp.dataset.slot, box = view.querySelector(`.cmp-results[data-slot="${slot}"]`);
+    let t;
+    inp.addEventListener("input", () => {
+      clearTimeout(t);
+      t = setTimeout(async () => {
+        const s = inp.value.trim();
+        if (s.length < 2) { box.innerHTML = ""; return; }
+        const res = await api(`/players?q=${encodeURIComponent(s)}`).catch(() => []);
+        box.innerHTML = res.slice(0, 8).map(x => `<button data-id="${x.id}">${esc(x.first_name)} ${esc(x.last_name)} <span class="thin">${esc(x.club || "")}</span></button>`).join("");
+        box.querySelectorAll("button").forEach(btn => btn.addEventListener("click", () =>
+          slot === "a" ? setUrl(btn.dataset.id, idB) : setUrl(idA, btn.dataset.id)));
+      }, 250);
+    });
+  });
+}
+
 const routes = [
   [/^#?\/?$/,                       () => landingView()],
   [/^#\/clubs$/,                    () => clubsView()],
   [/^#\/players$/,                  () => playersView()],
   [/^#\/players\/rankings$/,        () => rankingsView()],
+  [/^#\/players\/compare(?:\?.*)?$/, () => compareView()],
   [/^#\/players\/fantasy$/,         () => fantasyView()],
   [/^#\/players\/top10(?:\?.*)?$/,  () => top10View()],
   [/^#\/draft$/,                    () => draftOrderView(draftChrome("order"))],
