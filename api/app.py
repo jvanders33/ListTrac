@@ -107,6 +107,28 @@ def club_info(abbrev: str):
             info["last_flag"] = club_h["premierships"][0] if club_h["premierships"] else None
             info["honours"] = club_h["awards"]
             info["honours_sources"] = h.get("sources")
+            # Link medallists to a player page only when the name matches a
+            # currently-listed player (the pages with live content); prefer the
+            # same club so same-name coincidences don't cross-link. Retired
+            # greats stay as plain text — we have no meaningful page for them.
+            with db() as conn:
+                listed: dict = {}
+                for r in conn.execute(
+                        """SELECT p.id, p.first_name, p.last_name, c.abbreviation ab
+                           FROM player p LEFT JOIN club c ON c.id = p.current_club_id
+                           WHERE p.status = 'listed'"""):
+                    listed.setdefault(_norm(f"{r['first_name']} {r['last_name']}"), []).append((r["id"], r["ab"]))
+            for winners in info["honours"].values():
+                for w in winners:
+                    cands = listed.get(_norm(w["p"]))
+                    if not cands:
+                        continue
+                    if len(cands) == 1:
+                        w["player_id"] = cands[0][0]
+                    else:
+                        same = [pid for pid, ab in cands if (ab or "").upper() == key]
+                        if same:
+                            w["player_id"] = same[0]
 
     # top-rated players currently on the list, matched to player pages
     top_rated = []

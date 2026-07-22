@@ -1612,7 +1612,7 @@ function honourRollCard(info) {
       <div class="award-head"><span class="aw-num">${wins.length}</span>
         <span><b>${label}</b><span class="thin"> · ${sub}</span></span></div>
       ${wins.length
-        ? `<div class="award-chips">${wins.map(w => `<span class="aw-win"><i>${w.y}</i> ${esc(w.p)}</span>`).join("")}</div>`
+        ? `<div class="award-chips">${wins.map(w => `<span class="aw-win"><i>${w.y}</i> ${w.player_id ? `<a href="#/player/${w.player_id}">${esc(w.p)}</a>` : esc(w.p)}</span>`).join("")}</div>`
         : `<p class="thin" style="margin:4px 0 0;font-size:12px">No winners yet.</p>`}
     </div>`;
   }).join("");
