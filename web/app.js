@@ -557,8 +557,19 @@ async function prospectsView(year = 2027) {
     ${pool ? prospectPoolCard(pool, year) : `<div class="card"><p class="thin">No prospect pool for ${year}.</p></div>`}`;
 }
 
+/* Award text -> honour chip class. Top honours (championship medals, AA
+   captaincy) get the gold treatment; state/team MVPs a lighter one. */
+function honourChip(award) {
+  if (!award) return "";
+  const top = /Kevin Sheehan|Alan McLean|captain|All-Australian/i.test(award);
+  return `<span class="honour-chip ${top ? "gold" : ""}">${esc(award)}</span>`;
+}
+
 function prospectPoolCard(pool, year) {
   const ps = pool.prospects || [];
+  const src = pool.sources || {};
+  const srcLink = `<p class="srcline">Source: <a href="${esc(src.all_australian || src.mvps || src.rankings || src.afl || "#")}" target="_blank" rel="noopener">${esc(src.rankings_note || "Rookie Me Central / AFL")} ↗</a></p>`;
+
   if (pool.forming || !ps.length) {
     return `<div class="card">
       <h3>${year} class — forming</h3>
@@ -566,25 +577,47 @@ function prospectPoolCard(pool, year) {
       ${pool.pool_results ? `<div class="tablewrap"><table>
         <thead><tr><th>Pool</th><th>Winner</th></tr></thead>
         <tbody>${pool.pool_results.map(r => `<tr><td class="thin">Pool ${esc(r.pool)}</td><td>${esc(r.winner)}</td></tr>`).join("")}</tbody>
-      </table></div>` : ""}
-      <p class="srcline">Source: <a href="${esc((pool.sources || {}).afl || "#")}" target="_blank" rel="noopener">AFL National Championships ↗</a></p>
+      </table></div>` : ""}${srcLink}
     </div>`;
   }
-  const ranked = [...ps].sort((a, b) => (a.rank || 999) - (b.rank || 999));
+
+  // U18 (2026) has a genuine ranking (Twomey/RTP); keep the numbered ladder.
+  if ((pool.stage || "u18") === "u18") {
+    const ranked = [...ps].sort((a, b) => (a.rank || 999) - (b.rank || 999));
+    return `<div class="card">
+      <h3>${year} prospect pool <span class="thin" style="font-weight:400">· ${ranked.length}</span></h3>
+      <p class="sub">${esc(pool.note || "")}</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th class="num">#</th><th>Player</th><th>State / academy</th><th>Position</th></tr></thead>
+        <tbody>${ranked.map(p => `
+          <tr><td class="num"><b>${p.rank ?? "—"}</b></td>
+            <td>${esc(p.name)}${p.tie ? ` <span class="chip warn" style="font-size:9px">${esc(p.tie)}</span>` : ""}</td>
+            <td class="thin">${esc(p.state_team || "")}</td>
+            <td class="thin">${esc(p.position || "")}</td></tr>`).join("")}
+        </tbody>
+      </table></div>${srcLink}
+    </div>`;
+  }
+
+  // U16 (2027/2028): NOT a ranking this far out — a watchlist of named
+  // honours, award-winners first, tagged rather than numbered.
+  const order = [...ps].sort((a, b) => (a.rank || 999) - (b.rank || 999));
   return `<div class="card">
-    <h3>${year} prospect pool <span class="thin" style="font-weight:400">· ${ranked.length}</span></h3>
-    <p class="sub">${esc(pool.note || "")}</p>
-    <div class="tablewrap"><table>
-      <thead><tr><th class="num">#</th><th>Player</th><th>State / academy</th><th>Position</th><th>Note</th></tr></thead>
-      <tbody>${ranked.map(p => `
-        <tr><td class="num"><b>${p.rank ?? "—"}</b></td>
-          <td>${esc(p.name)}${p.tie ? ` <span class="chip warn" style="font-size:9px">${esc(p.tie)}</span>` : ""}</td>
-          <td class="thin">${esc(p.state_team || "")}</td>
-          <td class="thin">${esc(p.position || "")}</td>
-          <td class="thin">${esc(p.award || "")}</td></tr>`).join("")}
-      </tbody>
-    </table></div>
-    <p class="srcline">Source: <a href="${esc((pool.sources || {}).all_australian || (pool.sources || {}).rankings || "#")}" target="_blank" rel="noopener">${esc((pool.sources || {}).rankings_note || "Rookie Me Central / AFL")} ↗</a></p>
+    <h3>${year} watchlist <span class="thin" style="font-weight:400">· ${order.length} named so far</span></h3>
+    <p class="sub">${esc(pool.note || "")} <b>Not a ranked order</b> this far out — these are the players who've
+      already earned honours; the list grows and firms up as more championship and talent-league football is played.</p>
+    <div class="watchlist">
+      ${order.map(p => `
+        <div class="watchrow">
+          <span class="badge" style="--club:#3a4750">${esc((p.state_team || "").split(" ").map(w => w[0]).join("").slice(0, 3).toUpperCase())}</span>
+          <span class="watch-body">
+            <b>${esc(p.name)}</b>
+            <span class="thin">${esc(p.state_team || "")}${p.position ? " · " + esc(p.position) : ""}</span>
+          </span>
+          ${p.award ? honourChip(p.award) : ""}
+          ${p.tie ? `<span class="chip warn" style="font-size:9px">${esc(p.tie)}</span>` : ""}
+        </div>`).join("")}
+    </div>${srcLink}
   </div>`;
 }
 
