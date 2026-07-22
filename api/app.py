@@ -236,6 +236,7 @@ def player(player_id: int):
     scout = _scouting_index()
     sc = scout.get("_players", {}).get(key)
     profile["scouting"] = {**sc, **scout.get("_meta", {})} if sc else None
+    profile["trade_value"] = _trade_value_board().get("by_id", {}).get(player_id)
     # rating history — find the player's Champion Data timeline by matching the
     # current-season record's cd_id, else by name across the history file
     profile["rating_history"] = []
@@ -669,6 +670,107 @@ def _scouting_index() -> dict:
         _scouting_cache["_players"] = data.get("players", {})
         _scouting_cache["_meta"] = {k: data[k] for k in ("order", "labels", "min_games", "attribution") if k in data}
     return _scouting_cache
+
+
+import datetime
+
+_trade_value_cache: dict = {}
+
+
+def _age_2026(dob):
+    if not dob:
+        return None
+    try:
+        d = datetime.date.fromisoformat(str(dob)[:10])
+    except ValueError:
+        return None
+    ref = datetime.date(CURRENT_YEAR, 6, 30)
+    return ref.year - d.year - ((ref.month, ref.day) < (d.month, d.day))
+
+
+def _age_factor(age):
+    if age is None:
+        return 1.0
+    if age <= 20:
+        return 1.10
+    if age <= 23:
+        return 1.15
+    if age <= 27:
+        return 1.00
+    if age <= 29:
+        return 0.82
+    if age <= 31:
+        return 0.60
+    return 0.40
+
+
+def _contract_factor(status, years_left):
+    if status == "unrestricted_fa":
+        return 0.62
+    if status == "restricted_fa":
+        return 0.80
+    if status == "out_of_contract":
+        return 0.85
+    if years_left >= 3:
+        return 1.20
+    if years_left == 2:
+        return 1.08
+    if years_left == 1:
+        return 0.98
+    return 0.85
+
+
+def _trade_value_board() -> dict:
+    """League-wide player trade values: AFL Player Rating x age factor x
+    contract factor. Ranked; cached. Contract re-signings (overrides) applied."""
+    if _trade_value_cache:
+        return _trade_value_cache
+    rb = _ratings_by_name()
+    ov = _contract_overrides()
+    out = []
+    with db() as conn:
+        for r in conn.execute(
+                """SELECT p.id, p.first_name, p.last_name, p.dob, c.abbreviation club, c.name club_name,
+                          cs.status, cs.contracted_through_year
+                   FROM player p JOIN club c ON c.id = p.current_club_id
+                   LEFT JOIN contract_status cs ON cs.player_id = p.id AND cs.is_current = 1
+                   WHERE p.status = 'listed'"""):
+            nm = _norm(f"{r['first_name']} {r['last_name']}")
+            rr = rb.get(nm)
+            if not rr or not rr.get("rating"):
+                continue
+            status, through = r["status"], r["contracted_through_year"]
+            o = ov.get((nm, (r["club"] or "").upper()))
+            if o:  # a confirmed re-signing supersedes a stale status
+                status, through = "contracted", o["end_year"]
+            age = _age_2026(r["dob"])
+            years_left = max(0, (through or CURRENT_YEAR) - CURRENT_YEAR)
+            af, cf = _age_factor(age), _contract_factor(status, years_left)
+            out.append({
+                "id": r["id"], "name": f"{r['first_name']} {r['last_name']}",
+                "club": r["club"], "club_name": r["club_name"],
+                "rating": rr["rating"], "age": age, "years_left": years_left,
+                "status": status or "unknown", "age_factor": af, "contract_factor": cf,
+                "value": round(rr["rating"] * af * cf),
+            })
+    out.sort(key=lambda x: -x["value"])
+    for i, x in enumerate(out):
+        x["rank"] = i + 1
+    _trade_value_cache["list"] = out
+    _trade_value_cache["by_id"] = {x["id"]: x for x in out}
+    _trade_value_cache["count"] = len(out)
+    return _trade_value_cache
+
+
+@app.get("/api/trade-values")
+def trade_values(limit: int = 100, club: str | None = None):
+    """Player trade-value board — rating x age x contract. Transparent weights."""
+    board = _trade_value_board()["list"]
+    if club:
+        board = [x for x in board if (x["club"] or "").upper() == club.upper()]
+    return {"count": len(board), "year": CURRENT_YEAR,
+            "note": "Trade Value = AFL Player Rating x age factor x contract factor.",
+            "players": board[:limit]}
 
 
 def _contracts_by_name() -> dict:

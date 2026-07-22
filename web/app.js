@@ -1228,6 +1228,7 @@ async function tradeMachineView(chrome = "") {
 const playersChrome = act => `<div class="subtabs">
   <a href="#/players" class="${act === "dir" ? "active" : ""}">Directory</a>
   <a href="#/players/rankings" class="${act === "rank" ? "active" : ""}">Rankings</a>
+  <a href="#/players/trade-values" class="${act === "tradeval" ? "active" : ""}">Trade value</a>
   <a href="#/players/compare" class="${act === "compare" ? "active" : ""}">Compare</a>
   <a href="#/players/fantasy" class="${act === "fantasy" ? "active" : ""}">Fantasy</a>
   <a href="#/players/top10" class="${act === "top10" ? "active" : ""}">Build a Top 10</a>
@@ -1935,6 +1936,23 @@ function scoutingCard(sc, pid) {
     </div>
   </div>`;
 }
+function tradeValueCard(tv) {
+  const ctr = tv.status === "contracted"
+    ? `${tv.years_left} yr${tv.years_left === 1 ? "" : "s"} left`
+    : (STATUS[tv.status] || {}).label || tv.status;
+  return `<div class="card tradeval">
+    <h3>Trade value <span class="thin" style="font-weight:400">· #${tv.rank} in the AFL</span></h3>
+    <div class="tv-headline">
+      <div class="tv-num">${tv.value}</div>
+      <div class="tv-formula">
+        <span class="tvf"><b>${tv.rating}</b><small>rating</small></span><span class="tvx">×</span>
+        <span class="tvf"><b>${tv.age_factor.toFixed(2)}</b><small>age ${tv.age ?? "?"}</small></span><span class="tvx">×</span>
+        <span class="tvf"><b>${tv.contract_factor.toFixed(2)}</b><small>${esc(ctr)}</small></span>
+      </div>
+    </div>
+    <p class="sub" style="margin:8px 0 0">ListTrac's index of a player's worth as a trade asset — current form adjusted for age and contract control. <a href="#/players/trade-values">See the full board →</a></p>
+  </div>`;
+}
 
 async function playerView(id) {
   const p = await api(`/players/${id}`);
@@ -2029,6 +2047,7 @@ async function playerView(id) {
             <tbody>${txRows.join("") || `<tr><td colspan="4" class="thin">No recorded movements — original-list player.</td></tr>`}</tbody>
           </table></div>
         </div>
+        ${p.trade_value ? tradeValueCard(p.trade_value) : ""}
         ${p.scouting ? scoutingCard(p.scouting, id) : ""}
         ${p.rating_history && p.rating_history.length ? `
         <div class="card">
@@ -2362,9 +2381,35 @@ async function compareView() {
   });
 }
 
+async function tradeValueView() {
+  const data = await api("/api/trade-values?limit=150").catch(() => null);
+  if (!data) { view.innerHTML = `${playersChrome("tradeval")}<div class="card"><p class="error">Trade values unavailable.</p></div>`; return; }
+  view.innerHTML = `${playersChrome("tradeval")}
+    <div class="card">
+      <h3>Trade Value Index <span class="thin" style="font-weight:400">· ${data.count} rated players</span></h3>
+      <p class="sub">Our estimate of each player as a trade asset — current AFL Player Rating adjusted for age and contract control. No dollars (the AFL doesn't disclose them); this is about who's worth most to prise loose.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th class="num">#</th><th>Player</th><th>Club</th><th class="num">Age</th><th>Contract</th><th class="num">Rating</th><th class="num">Value</th></tr></thead>
+        <tbody>${data.players.map(x => `
+          <tr><td class="num thin">${x.rank}</td>
+            <td><a href="#/player/${x.id}">${esc(x.name)}</a></td>
+            <td>${clubTag(x.club, x.club)}</td>
+            <td class="num">${x.age ?? ""}</td>
+            <td>${chip(x.status)}${x.status === "contracted" ? ` <span class="thin">${x.years_left}yr</span>` : ""}</td>
+            <td class="num">${x.rating}</td>
+            <td class="num"><b>${x.value}</b></td></tr>`).join("")}
+        </tbody>
+      </table></div>
+      <p class="thin" style="font-size:11.5px;margin-top:10px">Value = AFL Player Rating × age factor × contract factor.
+        Age: 21–23 ×1.15, 24–27 ×1.00, 28–29 ×0.82, 30–31 ×0.60, 32+ ×0.40.
+        Contract: 3+yr ×1.20, 2yr ×1.08, 1yr ×0.98, out of contract ×0.85, restricted FA ×0.80, unrestricted FA ×0.62.</p>
+    </div>`;
+}
+
 const routes = [
   [/^#?\/?$/,                       () => landingView()],
   [/^#\/clubs$/,                    () => clubsView()],
+  [/^#\/players\/trade-values$/,    () => tradeValueView()],
   [/^#\/players$/,                  () => playersView()],
   [/^#\/players\/rankings$/,        () => rankingsView()],
   [/^#\/players\/compare(?:\?.*)?$/, () => compareView()],

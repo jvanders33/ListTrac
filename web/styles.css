@@ -477,6 +477,15 @@ footer.pagefoot {
 .dchip.ufa { border-left-color: var(--ufa); background: var(--ufa-bg); }
 @media (max-width: 620px) { .depthline { grid-template-columns: 1fr; gap: 6px; } }
 
+/* trade value card */
+.tv-headline { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+.tv-num { font-size: 46px; font-weight: 800; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.tv-formula { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.tvf { display: inline-flex; flex-direction: column; align-items: center; background: var(--card-2); border-radius: 8px; padding: 6px 12px; }
+.tvf b { font-size: 17px; font-variant-numeric: tabular-nums; }
+.tvf small { font-size: 10px; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.03em; margin-top: 2px; }
+.tvx { color: var(--ink-2); font-size: 14px; }
+
 /* player comparison */
 .cmp-pickers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0 6px; }
 @media (max-width: 560px) { .cmp-pickers { grid-template-columns: 1fr; } }
