@@ -1848,6 +1848,53 @@ function playerCardSVG(p, heroA, heroTrim) {
   </svg>`;
 }
 
+/* Percentile scouting report (the FBref move): a radar of the player's output
+   ranked against same-position peers, plus per-stat percentile bars. */
+const SCOUT_GROUP = { ball: "var(--ufa)", attack: "var(--accent)", defence: "var(--ok)" };
+function scoutingRadar(sc) {
+  const items = sc.order.filter(k => sc.stats[k]);
+  const n = items.length, cx = 190, cy = 162, R = 106;
+  const pt = (i, r) => {
+    const a = (-90 + i * 360 / n) * Math.PI / 180;
+    return [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+  };
+  const poly = pts => pts.map(p => p.map(v => v.toFixed(1)).join(",")).join(" ");
+  const rings = [25, 50, 75, 100].map(pc =>
+    `<polygon points="${poly(items.map((_, i) => pt(i, R * pc / 100)))}" fill="none" stroke="var(--line)" stroke-width="1"/>`).join("");
+  const axes = items.map((_, i) => { const [x, y] = pt(i, R); return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)" stroke-width="0.5"/>`; }).join("");
+  const shape = poly(items.map((k, i) => pt(i, R * sc.stats[k].pct / 100)));
+  const dots = items.map((k, i) => { const [x, y] = pt(i, R * sc.stats[k].pct / 100); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2.6" fill="${SCOUT_GROUP[sc.stats[k].group]}"/>`; }).join("");
+  const labels = items.map((k, i) => {
+    const [x, y] = pt(i, R + 13), c = Math.cos((-90 + i * 360 / n) * Math.PI / 180);
+    const anchor = c > 0.3 ? "start" : c < -0.3 ? "end" : "middle";
+    return `<text x="${x.toFixed(1)}" y="${(y + 3).toFixed(1)}" text-anchor="${anchor}" font-size="10" fill="var(--ink-2)">${esc(sc.stats[k].label)}</text>`;
+  }).join("");
+  return `<svg viewBox="0 0 380 330" class="radar" width="100%">${rings}${axes}
+    <polygon points="${shape}" fill="var(--accent)" fill-opacity="0.18" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/>
+    ${dots}${labels}</svg>`;
+}
+function scoutingBars(sc) {
+  return sc.order.filter(k => sc.stats[k]).map(k => {
+    const s = sc.stats[k];
+    return `<div class="scrow" style="--pct:${s.pct}%;--g:${SCOUT_GROUP[s.group]}">
+      <span class="sc-lab">${esc(s.label)}</span>
+      <span class="sc-bar"><i></i></span>
+      <span class="sc-val"><b>${s.pct}</b><span class="thin"> · ${s.avg}</span></span></div>`;
+  }).join("");
+}
+function scoutingCard(sc) {
+  return `<div class="card scouting">
+    <h3>Scouting report <span class="thin" style="font-weight:400">· percentile vs ${esc(sc.position_label)}s</span></h3>
+    <p class="sub">How this season's per-game output ranks against every ${esc(sc.position_label).toLowerCase()} in the league (min ${sc.min_games} games). 100 = best.</p>
+    <div class="scoutcols">
+      <div class="scoutradar">${scoutingRadar(sc)}
+        <div class="scoutlegend"><span><i style="background:var(--ufa)"></i>Ball use</span><span><i style="background:var(--accent)"></i>Attack</span><span><i style="background:var(--ok)"></i>Defence</span></div>
+      </div>
+      <div class="scoutbars">${scoutingBars(sc)}</div>
+    </div>
+  </div>`;
+}
+
 async function playerView(id) {
   const p = await api(`/players/${id}`);
   const fullName = `${p.first_name} ${p.last_name}`;
@@ -1941,6 +1988,7 @@ async function playerView(id) {
             <tbody>${txRows.join("") || `<tr><td colspan="4" class="thin">No recorded movements — original-list player.</td></tr>`}</tbody>
           </table></div>
         </div>
+        ${p.scouting ? scoutingCard(p.scouting) : ""}
         ${p.rating_history && p.rating_history.length ? `
         <div class="card">
           <h3>AFL Player Rating history</h3>

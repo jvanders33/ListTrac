@@ -46,6 +46,11 @@ jobs:
         run: python scraper/prospect_stats.py
         continue-on-error: true
 
+      - name: Build percentile scouting reports (AFL/Champion Data)
+        # ranks each player's per-game output vs same-position peers
+        run: python scraper/scouting.py
+        continue-on-error: true
+
       - name: Enrich prospect stats from the AFL (Champion Data)
         # official Coates Talent League / U18 champs / VFL / SANFL stats —
         # current-season + senior games RMC misses. Runs AFTER RMC to merge on.

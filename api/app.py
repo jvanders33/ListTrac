@@ -227,6 +227,9 @@ def player(player_id: int):
     profile["rating"] = {"rank": rating["rank"], "rating": rating["rating"]} if rating else None
     fant = _fantasy_index().get(key)
     profile["fantasy"] = {"af_avg": fant["af_avg"], "position": fant.get("position")} if fant else None
+    scout = _scouting_index()
+    sc = scout.get("_players", {}).get(key)
+    profile["scouting"] = {**sc, **scout.get("_meta", {})} if sc else None
     # rating history — find the player's Champion Data timeline by matching the
     # current-season record's cd_id, else by name across the history file
     profile["rating_history"] = []
@@ -646,6 +649,20 @@ def _contract_overrides() -> dict:
             for e in json.loads(CONTRACTS_MANUAL_PATH.read_text(encoding="utf-8")).get("events", []):
                 add(e)
     return _overrides_cache
+
+
+SCOUTING_PATH = Path(__file__).resolve().parent.parent / "data" / "scouting_2026.json"
+_scouting_cache: dict = {}
+
+
+def _scouting_index() -> dict:
+    """Percentile scouting reports keyed by normalised name, + the stat order/labels."""
+    import json
+    if not _scouting_cache and SCOUTING_PATH.exists():
+        data = json.loads(SCOUTING_PATH.read_text(encoding="utf-8"))
+        _scouting_cache["_players"] = data.get("players", {})
+        _scouting_cache["_meta"] = {k: data[k] for k in ("order", "labels", "min_games", "attribution") if k in data}
+    return _scouting_cache
 
 
 def _contracts_by_name() -> dict:

@@ -458,6 +458,20 @@ footer.pagefoot {
 .clubmeta { margin: 3px 0 0; font-size: 13px; color: var(--ink-2); }
 .clubactions { margin-left: auto; display: flex; align-items: center; gap: 12px; }
 
+/* scouting report — radar + percentile bars */
+.scoutcols { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 20px; align-items: center; margin-top: 12px; }
+@media (max-width: 720px) { .scoutcols { grid-template-columns: 1fr; } }
+.radar { max-width: 400px; display: block; margin: 0 auto; }
+.scoutlegend { display: flex; justify-content: center; gap: 14px; font-size: 11px; color: var(--ink-2); margin-top: 4px; }
+.scoutlegend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 4px; vertical-align: -1px; }
+.scoutbars { display: flex; flex-direction: column; gap: 6px; }
+.scrow { display: grid; grid-template-columns: 92px 1fr 54px; align-items: center; gap: 8px; font-size: 12px; }
+.sc-lab { color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sc-bar { height: 8px; background: var(--card-2); border-radius: 4px; overflow: hidden; }
+.sc-bar i { display: block; height: 100%; width: var(--pct); background: var(--g); border-radius: 4px; }
+.sc-val { text-align: right; font-variant-numeric: tabular-nums; }
+.sc-val b { font-size: 12.5px; }
+
 /* club honour roll */
 .card.honours { margin-top: 16px; }
 .honour-prem { display: flex; align-items: flex-start; gap: 14px; padding: 12px 0 4px; }
