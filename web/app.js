@@ -290,7 +290,7 @@ async function landingView() {
             ${trendingPlayers.map((t, i) => `
               <a class="trendcard" href="${t.id ? `#/player/${t.id}` : "#/players"}">
                 <span class="tc-rank">${i + 1}</span>
-                <span class="badge" style="--club:${esc(clubColor(t.abbrev))}">${esc(t.abbrev || "")}</span>
+                ${guernsey(t.abbrev, 26)}
                 <span class="tc-body">
                   <b>${esc(t.first_name)} ${esc(t.last_name)}</b>
                   <span class="tc-why">${t.mentions
@@ -337,7 +337,7 @@ async function landingView() {
           <div class="clubstrip" style="margin-top:10px">
             ${clubList.map(c => `
               <a href="#/club/${esc(c.abbreviation)}">
-                <span class="badge" style="--club:${esc(c.primary_color || "#888")}">${esc(c.abbreviation)}</span>
+                ${guernsey(c.abbreviation, 20)}
                 ${esc(c.name)}</a>`).join("")}
           </div>
         </div>` : ""}
@@ -1091,7 +1091,7 @@ async function tradeMachineView(chrome = "") {
     const sideHTML = s => `
       <div class="card tm-side">
         <div class="tm-head">
-          <span class="badge" style="--club:${esc(s.info.primary_color || "#888")}">${esc(s.st.club)}</span>
+          ${guernsey(s.st.club, 24)}
           <select data-side="${s.key}" class="tm-club">
             ${clubs.map(c => `<option value="${esc(c.abbreviation)}" ${c.abbreviation === s.st.club ? "selected" : ""}>${esc(c.name)}</option>`).join("")}
           </select>
@@ -1657,7 +1657,7 @@ async function clubView(abbrev) {
   const renderBody = () => clubViewMode === "grid" ? contractGridHTML(list) : clubListHTML(sorted, first);
   view.innerHTML = `
     <div class="clubhead">
-      <span class="badge" style="--club:${esc(first.club_primary || "#888")};width:44px;height:44px;font-size:14px">${esc(abbrev.toUpperCase())}</span>
+      ${guernsey(abbrev, 38)}
       <div class="clubtitle">
         <h2>${esc(first.club)}${info && info.nickname ? ` <span class="clubnick">${esc(info.nickname)}</span>` : ""}</h2>
         ${clubMetaLine(info)}
@@ -2074,7 +2074,7 @@ async function searchView(q) {
       <div class="clubstrip" style="margin-top:10px">
         ${clubHits.map(c => `
           <a href="#/club/${esc(c.abbreviation)}">
-            <span class="badge" style="--club:${esc(c.primary_color || "#888")}">${esc(c.abbreviation)}</span>
+            ${guernsey(c.abbreviation, 20)}
             ${esc(c.name)}</a>`).join("")}
       </div>
     </div>` : ""}
