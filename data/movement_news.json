@@ -1,0 +1,40 @@
+{
+ "source": "AFL.com.au",
+ "source_url": "https://www.afl.com.au/news",
+ "note": "Contract / free-agency / trade movement coverage from the AFL — headline & link only.",
+ "count": 4,
+ "items": [
+  {
+   "title": "Hawks great locked in, Swan set for talks, big call looms for Port star",
+   "summary": "Check out all the latest trade news from around the League",
+   "date": "2026-07-22",
+   "author": "Callum Twomey, Riley Beveridge, Josh Gabelich",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1566216/hawks-great-locked-in-swan-set-for-talks-big-call-looms-for-port-star"
+  },
+  {
+   "title": "The uncontracted player at your club on Tasmania's radar",
+   "summary": "Our reporters have their say on the players that the Devils could eye as part of their original list build",
+   "date": "2026-07-21",
+   "author": "staff writers",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1566158/deals-with-the-devils-the-out-of-contracted-players-and-free-agents-at-your-club-on-tasmanias-radar"
+  },
+  {
+   "title": "In-demand Eagles ruck rejects free agency to sign long-term deal",
+   "summary": "West Coast ruck Bailey Williams has penned a six-year contract extension",
+   "date": "2026-07-21",
+   "author": "Martin Smith",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1566322/in-demand-eagle-rejects-free-agency-to-sign-long-term-deal"
+  },
+  {
+   "title": "Player managers push for earlier free agency access",
+   "summary": "Player managers gathered on Tuesday for a late-season conference with the potential for earlier free agency on the agenda",
+   "date": "2026-07-21",
+   "author": "Callum Twomey",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1566306/managers-push-for-earlier-free-agency-access"
+  }
+ ]
+}

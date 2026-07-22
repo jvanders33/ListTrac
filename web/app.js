@@ -1074,8 +1074,24 @@ function tmPicks(abbrev, order) {
   return picks;
 }
 
+function movementWatchCard(items) {
+  if (!items || !items.length) return "";
+  const TAGCLS = { "Contract": "ok", "Free agency": "ufa", "Trade": "warn" };
+  return `<div class="card watchcard">
+    <h3>Movement watch <span class="thin" style="font-weight:400">· contract &amp; trade coverage from AFL.com.au</span></h3>
+    <div class="watchlist2">
+      ${items.slice(0, 6).map(x => `
+        <a class="watchitem" href="${esc(x.url)}" target="_blank" rel="noopener">
+          <span class="chip ${TAGCLS[x.tag] || "plain"}" style="font-size:9px">${esc(x.tag)}</span>
+          <span class="wi-body"><b>${esc(x.title)}</b>${x.summary ? `<span class="thin">${esc(x.summary)}</span>` : ""}</span>
+          <span class="wi-when thin">${timeAgo(x.date)}</span></a>`).join("")}
+    </div>
+  </div>`;
+}
+
 async function tradeMachineView(chrome = "") {
-  const [clubList, order] = await Promise.all([api("/clubs"), api("/api/draft-order")]);
+  const [clubList, order, watch] = await Promise.all([
+    api("/clubs"), api("/api/draft-order"), api("/api/movement-watch").catch(() => ({ items: [] }))]);
   const clubs = clubList.filter(c => c.listed_players > 0);
   let state = tmLoad() || {
     a: { club: clubs[0].abbreviation, players: [], picks: [] },
@@ -1164,6 +1180,7 @@ async function tradeMachineView(chrome = "") {
       </div>`;
 
     view.innerHTML = `${chrome}
+      ${movementWatchCard(watch.items)}
       <div class="controls">
         <button class="filterbtn" id="tm-reset">Reset</button>
         <button class="filterbtn" id="tm-copy">Copy trade</button>

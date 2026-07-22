@@ -31,6 +31,7 @@ from pathlib import Path
 BASE = "https://aflapi.afl.com.au/content/afl/news/en"
 DB = Path(__file__).resolve().parent.parent / "data" / "listtrac.db"
 OUT = Path(__file__).resolve().parent.parent / "data" / "afl_signings.json"
+WATCH_OUT = Path(__file__).resolve().parent.parent / "data" / "movement_news.json"
 
 CONFIRM = re.compile(r"\b(re-?sign|re-?commit|resign|extend|penned|pens|inked|inks|"
                      r"signs? (?:a )?(?:new|long-term|multi-year|\w+-year)|"
@@ -112,7 +113,28 @@ def article_url(a: dict) -> str:
     return f"https://www.afl.com.au/news/{a['id']}/{seg}" if seg else (a.get("canonicalUrl") or "")
 
 
-def build() -> list[dict]:
+def build_watch(articles) -> list[dict]:
+    """All contract / free-agency / trade-tagged AFL articles as a movement-watch
+    (rumour-mill) feed — headline + link out only, confirmed or not."""
+    out, seen = [], set()
+    for a in sorted(articles, key=lambda a: a.get("date") or "", reverse=True):
+        tags = {(t.get("label") or "").lower() for t in (a.get("tags") or [])}
+        if not (tags & {"contracts", "free-agency", "trade"}):
+            continue
+        title = a.get("title") or ""
+        if title in seen:
+            continue
+        seen.add(title)
+        out.append({
+            "title": title, "summary": a.get("summary") or a.get("description") or "",
+            "date": (a.get("date") or "")[:10], "author": a.get("author") or "AFL.com.au",
+            "tag": "Contract" if "contracts" in tags else "Free agency" if "free-agency" in tags else "Trade",
+            "url": article_url(a),
+        })
+    return out
+
+
+def build(articles) -> list[dict]:
     con = sqlite3.connect(DB)
     listed: dict[str, list] = {}
     for pid, f, l, club in con.execute(
@@ -122,7 +144,7 @@ def build() -> list[dict]:
         listed.setdefault(_norm(f"{f} {l}"), []).append({"first": f, "last": l, "club": club})
 
     events = []
-    for a in fetch_articles():
+    for a in articles:
         refs = a.get("references") or []
         if not any(r.get("type") == "AFL_PLAYER" for r in refs):
             continue
@@ -170,16 +192,22 @@ def build() -> list[dict]:
 
 
 def main():
-    events = build()
+    articles = fetch_articles()
+    events = build(articles)
     OUT.write_text(json.dumps({
         "source": "AFL.com.au (AFL content API)",
         "source_url": "https://www.afl.com.au/news",
         "note": "Confirmed contract signings extracted from the AFL news content API; recent window only.",
         "count": len(events), "events": events,
     }, indent=1, ensure_ascii=False), encoding="utf-8")
+    watch = build_watch(articles)
+    WATCH_OUT.write_text(json.dumps({
+        "source": "AFL.com.au", "source_url": "https://www.afl.com.au/news",
+        "note": "Contract / free-agency / trade movement coverage from the AFL — headline & link only.",
+        "count": len(watch), "items": watch,
+    }, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"wrote {len(events)} confirmed signings -> {OUT}")
-    for e in events:
-        print(f"  {e['date']} {e['name']} ({e['club']}) -> end {e['end_year']} [{e['length']}yr] · {e['reporter']}")
+    print(f"wrote {len(watch)} movement-watch items -> {WATCH_OUT}")
 
 
 if __name__ == "__main__":

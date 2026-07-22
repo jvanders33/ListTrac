@@ -361,6 +361,20 @@ def news():
     return _news_items()[:20]
 
 
+MOVEMENT_NEWS_PATH = Path(__file__).resolve().parent.parent / "data" / "movement_news.json"
+
+
+@app.get("/api/movement-watch")
+def movement_watch(limit: int = 10):
+    """Contract / free-agency / trade coverage from the AFL's own feed — the
+    rumour-mill, headline + link out only (never reproduced)."""
+    import json
+    if not MOVEMENT_NEWS_PATH.exists():
+        return {"items": []}
+    data = json.loads(MOVEMENT_NEWS_PATH.read_text(encoding="utf-8"))
+    return {"source": data.get("source"), "items": data.get("items", [])[:limit]}
+
+
 @app.get("/api/trending-players")
 def trending_players(limit: int = 10):
     """Players actually in the movement conversation — ranked by how many of

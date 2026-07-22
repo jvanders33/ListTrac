@@ -477,6 +477,17 @@ footer.pagefoot {
 .dchip.ufa { border-left-color: var(--ufa); background: var(--ufa-bg); }
 @media (max-width: 620px) { .depthline { grid-template-columns: 1fr; gap: 6px; } }
 
+/* movement watch (rumour-mill) */
+.watchlist2 { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; }
+.watchitem { display: grid; grid-template-columns: auto 1fr auto; align-items: start; gap: 10px; padding: 9px 6px; border-top: 1px solid var(--line); color: var(--ink); }
+.watchitem:first-child { border-top: 0; }
+.watchitem:hover { background: var(--card-2); text-decoration: none; }
+.watchitem .chip { margin-top: 2px; }
+.wi-body { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.wi-body b { font-size: 13.5px; line-height: 1.3; }
+.wi-body .thin { font-size: 12px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.wi-when { white-space: nowrap; font-size: 11px; }
+
 /* trade value card */
 .tv-headline { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
 .tv-num { font-size: 46px; font-weight: 800; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
