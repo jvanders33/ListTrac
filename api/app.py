@@ -75,6 +75,45 @@ def club_socials(abbrev: str):
     }
 
 
+CLUB_INFO_PATH = Path(__file__).resolve().parent.parent / "data" / "club_info.json"
+
+# Our club abbreviation -> Champion Data ratings team code.
+_RATINGS_TEAM = {
+    "ADE": "ADEL", "BRI": "BL", "CAR": "CARL", "COL": "COLL", "ESS": "ESS",
+    "FRE": "FRE", "GCS": "GCFC", "GEE": "GEEL", "GWS": "GWS", "HAW": "HAW",
+    "MEL": "MELB", "NM": "NMFC", "PA": "PORT", "RIC": "RICH", "STK": "STK",
+    "SYD": "SYD", "TAS": None, "WCE": "WCE", "WB": "WB",
+}
+
+
+@app.get("/api/club-info")
+def club_info(abbrev: str):
+    """Header facts for a club: static history (founded, premierships, honour
+    rolls — from data/club_info.json) merged with live-derived data (the club's
+    top-rated players this season, from our own Champion Data ratings)."""
+    import json
+    key = abbrev.upper()
+    data = json.loads(CLUB_INFO_PATH.read_text(encoding="utf-8")) if CLUB_INFO_PATH.exists() else {}
+    info = {k: v for k, v in (data.get(key) or {}).items() if not k.startswith("_")}
+
+    # top-rated players currently on the list, matched to player pages
+    top_rated = []
+    team = _RATINGS_TEAM.get(key)
+    if team and RATINGS_PATH.exists():
+        with db() as conn:
+            pid = {_norm(f"{r['first_name']} {r['last_name']}"): r["id"]
+                   for r in conn.execute("SELECT id, first_name, last_name FROM player")}
+        ratings = json.loads(RATINGS_PATH.read_text(encoding="utf-8"))["ratings"]
+        club_rows = sorted((r for r in ratings if r["team"].upper() == team and r.get("rank")),
+                           key=lambda r: r["rank"])[:5]
+        top_rated = [{"name": r["name"], "rank": r["rank"], "rating": r["rating"],
+                      "player_id": pid.get(_norm(r["name"]))} for r in club_rows]
+
+    info["top_rated"] = top_rated
+    info["ratings_year"] = CURRENT_YEAR
+    return info
+
+
 @app.get("/clubs/{abbrev}/list")
 def club_list(abbrev: str):
     result = rows(f"""SELECT {PLAYER_COLS}, cs.status contract_status, cs.contracted_through_year,

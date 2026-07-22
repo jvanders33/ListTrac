@@ -1403,21 +1403,110 @@ async function clubsView() {
     </div>`;
 }
 
+let clubViewMode = "list";  // persists the chosen club view between navigations
+
+function clubMetaLine(info) {
+  if (!info) return "";
+  const bits = [];
+  if (info.founded) bits.push(`Est. ${info.founded}`);
+  if (typeof info.premierships === "number")
+    bits.push(info.premierships === 0
+      ? "No premierships yet"
+      : `${info.premierships} premiership${info.premierships === 1 ? "" : "s"}${info.last_flag ? ` · last ${info.last_flag}` : ""}`);
+  if (info.state) bits.push(info.state);
+  return bits.length ? `<p class="clubmeta">${bits.map(esc).join(" &nbsp;·&nbsp; ")}</p>` : "";
+}
+
+function ratingLeadersCard(info) {
+  const leaders = (info && info.top_rated || []).filter(r => r.rating);
+  if (!leaders.length) return "";
+  return `<div class="card leaders">
+    <h3>Rating leaders <span class="sub" style="font-weight:600">AFL Player Rating · ${esc(info.ratings_year)}</span></h3>
+    <div class="leaderrow">${leaders.map((r, i) => `
+      <div class="leader">
+        <span class="lrank">${i === 0 ? "★" : "#" + r.rank}</span>
+        <span class="lname">${r.player_id ? `<a href="#/player/${r.player_id}">${esc(r.name)}</a>` : esc(r.name)}</span>
+        <span class="lval">${esc(r.rating)}</span>
+      </div>`).join("")}</div>
+  </div>`;
+}
+
+/* Year-by-year contract grid: each player sits in the column of the year
+   their deal expires; free agents & out-of-contract players cluster in 2026.
+   Colour = current contract status. Reads as a "contract cliff" per season. */
+function contractGridHTML(list) {
+  const STATUS_CLS = { contracted: "ok", restricted_fa: "rfa", unrestricted_fa: "ufa", out_of_contract: "warn" };
+  const expiry = p => p.contracted_through_year || 2026;
+  const maxYear = Math.max(2026, ...list.map(expiry));
+  const years = [];
+  for (let y = 2026; y <= maxYear; y++) years.push(y);
+  const cols = years.map(y => {
+    const players = list.filter(p => expiry(p) === y).sort((a, b) =>
+      (URGENCY[a.contract_status] ?? 9) - (URGENCY[b.contract_status] ?? 9) ||
+      String(a.last_name || "").localeCompare(String(b.last_name || "")));
+    const chips = players.map(p =>
+      `<a class="gchip ${STATUS_CLS[p.contract_status] || "plain"}" href="#/player/${p.id}"
+          title="${esc((STATUS[p.contract_status] || {}).label || "")}">${esc((p.first_name || " ")[0])}. ${esc(p.last_name)}</a>`).join("");
+    return `<div class="gcol${y === 2026 ? " now" : ""}">
+      <div class="gcount">${players.length}<span>${players.length === 1 ? "player" : "players"}</span></div>
+      <div class="gstack">${chips || '<span class="gempty">—</span>'}</div>
+      <div class="gyear">${y}${y === 2026 ? '<span class="thin">expiring / FA</span>' : ""}</div>
+    </div>`;
+  }).join("");
+  return `<div class="card">
+    <h3>Contract timeline</h3>
+    <p class="sub">Each player sits under the year their deal ends. Off-contract players &amp; free agents cluster in 2026 — the taller a column, the bigger that year's list turnover.</p>
+    <div class="gridscroll"><div class="cgrid">${cols}</div></div>
+    <div class="legend">
+      <span><i style="background:var(--ok)"></i>Contracted</span>
+      <span><i style="background:var(--warn)"></i>Out of contract</span>
+      <span><i style="background:var(--rfa)"></i>Restricted FA</span>
+      <span><i style="background:var(--ufa)"></i>Unrestricted FA</span>
+    </div>
+  </div>`;
+}
+
+function clubListHTML(sorted, first) {
+  return `<div class="card">
+    <h3>${esc(first.club)} — 2026 list</h3>
+    <p class="sub">Sorted by contract urgency.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th class="num">#</th><th>Player</th><th class="num">Age</th><th class="num">Ht</th><th>Drafted</th><th>Contract status</th><th class="num">Through</th></tr></thead>
+      <tbody>${sorted.map(p => `
+        <tr>
+          <td class="num thin">${p.jumper_number ?? ""}</td>
+          <td>${playerLink(p)}</td>
+          <td class="num">${age(p.dob)}</td>
+          <td class="num">${p.height_cm ?? ""}</td>
+          <td class="thin">${esc(draftedShort(p))}</td>
+          <td>${chip(p.contract_status)}</td>
+          <td class="num ${p.contracted_through_year ? "" : "thin"}">${p.contracted_through_year ?? "—"}</td>
+        </tr>`).join("")}
+      </tbody>
+    </table></div>
+  </div>`;
+}
+
 async function clubView(abbrev) {
-  const [list, socials] = await Promise.all([
+  const [list, socials, info] = await Promise.all([
     api(`/clubs/${encodeURIComponent(abbrev)}/list`),
     api(`/api/club-socials?abbrev=${encodeURIComponent(abbrev)}`).catch(() => ({})),
+    api(`/api/club-info?abbrev=${encodeURIComponent(abbrev)}`).catch(() => ({})),
   ]);
   const first = list[0];
   const n = k => list.filter(p => p.contract_status === k).length;
   const sorted = [...list].sort((a, b) =>
     (URGENCY[a.contract_status] ?? 9) - (URGENCY[b.contract_status] ?? 9) ||
     (a.jumper_number ?? 99) - (b.jumper_number ?? 99));
+  const renderBody = () => clubViewMode === "grid" ? contractGridHTML(list) : clubListHTML(sorted, first);
   view.innerHTML = `
     <div class="clubhead">
-      <span class="badge" style="--club:${esc(first.club_primary || "#888")};width:40px;height:40px;font-size:13px">${esc(abbrev.toUpperCase())}</span>
-      <h2 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-0.02em">${esc(first.club)}</h2>
-      <span style="margin-left:auto;display:flex;align-items:center;gap:12px">${starButton("club", abbrev)}${socialLinks(socials || {})}</span>
+      <span class="badge" style="--club:${esc(first.club_primary || "#888")};width:44px;height:44px;font-size:14px">${esc(abbrev.toUpperCase())}</span>
+      <div class="clubtitle">
+        <h2>${esc(first.club)}${info && info.nickname ? ` <span class="clubnick">${esc(info.nickname)}</span>` : ""}</h2>
+        ${clubMetaLine(info)}
+      </div>
+      <span class="clubactions">${starButton("club", abbrev)}${socialLinks(socials || {})}</span>
     </div>
     <div class="tiles">
       <div class="tile" style="border-left-color:${esc(first.club_primary || "var(--accent)")}"><p class="eyebrow">List size</p><b>${list.length}</b><span>players · 2026</span></div>
@@ -1425,24 +1514,26 @@ async function clubView(abbrev) {
       <div class="tile w"><p class="eyebrow">Off contract '26</p><b>${list.length - n("contracted")}</b><span>incl. free agents</span></div>
       <div class="tile r"><p class="eyebrow">Free agents</p><b>${n("restricted_fa") + n("unrestricted_fa")}</b><span>${n("restricted_fa")} restricted · ${n("unrestricted_fa")} unrestricted</span></div>
     </div>
-    <div class="card">
-      <h3>${esc(first.club)} — 2026 list</h3>
-      <p class="sub">Sorted by contract urgency.</p>
-      <div class="tablewrap"><table>
-        <thead><tr><th class="num">#</th><th>Player</th><th class="num">Age</th><th class="num">Ht</th><th>Drafted</th><th>Contract status</th><th class="num">Through</th></tr></thead>
-        <tbody>${sorted.map(p => `
-          <tr>
-            <td class="num thin">${p.jumper_number ?? ""}</td>
-            <td>${playerLink(p)}</td>
-            <td class="num">${age(p.dob)}</td>
-            <td class="num">${p.height_cm ?? ""}</td>
-            <td class="thin">${esc(draftedShort(p))}</td>
-            <td>${chip(p.contract_status)}</td>
-            <td class="num ${p.contracted_through_year ? "" : "thin"}">${p.contracted_through_year ?? "—"}</td>
-          </tr>`).join("")}
-        </tbody>
-      </table></div>
-    </div>`;
+    ${ratingLeadersCard(info)}
+    <div class="viewtoggle" role="tablist" aria-label="Club view">
+      <button data-mode="list" role="tab">List</button>
+      <button data-mode="grid" role="tab">Contract grid</button>
+    </div>
+    <div id="clubbody">${renderBody()}</div>`;
+  const body = view.querySelector("#clubbody");
+  view.querySelectorAll(".viewtoggle button").forEach(b => {
+    b.classList.toggle("on", b.dataset.mode === clubViewMode);
+    b.setAttribute("aria-selected", b.dataset.mode === clubViewMode);
+    b.addEventListener("click", () => {
+      if (clubViewMode === b.dataset.mode) return;
+      clubViewMode = b.dataset.mode;
+      view.querySelectorAll(".viewtoggle button").forEach(x => {
+        const on = x.dataset.mode === clubViewMode;
+        x.classList.toggle("on", on); x.setAttribute("aria-selected", on);
+      });
+      body.innerHTML = renderBody();
+    });
+  });
   mountStars();
 }
 

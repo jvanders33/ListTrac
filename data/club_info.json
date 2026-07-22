@@ -1,0 +1,22 @@
+{
+ "_note": "Static club facts. Editable — correct any value here. premierships = VFL/AFL flag count; last_flag = most recent premiership year (null = none). Honour rolls (brownlow/coleman/rising_star) are best-effort recent winners; extend/verify against official records. Live data (top-rated players, list metrics) is derived by the API from our own datasets, not stored here.",
+ "ADE": {"nickname": "Crows", "founded": 1990, "state": "SA", "premierships": 2, "last_flag": 1998, "rising_star": []},
+ "BRI": {"nickname": "Lions", "founded": 1996, "state": "QLD", "premierships": 4, "last_flag": 2024, "rising_star": []},
+ "CAR": {"nickname": "Blues", "founded": 1864, "state": "VIC", "premierships": 16, "last_flag": 1995, "rising_star": []},
+ "COL": {"nickname": "Magpies", "founded": 1892, "state": "VIC", "premierships": 16, "last_flag": 2023, "rising_star": []},
+ "ESS": {"nickname": "Bombers", "founded": 1872, "state": "VIC", "premierships": 16, "last_flag": 2000, "rising_star": []},
+ "FRE": {"nickname": "Dockers", "founded": 1994, "state": "WA", "premierships": 0, "last_flag": null, "rising_star": []},
+ "GEE": {"nickname": "Cats", "founded": 1859, "state": "VIC", "premierships": 10, "last_flag": 2022, "rising_star": []},
+ "GCS": {"nickname": "Suns", "founded": 2009, "state": "QLD", "premierships": 0, "last_flag": null, "rising_star": []},
+ "GWS": {"nickname": "Giants", "founded": 2009, "state": "NSW", "premierships": 0, "last_flag": null, "rising_star": []},
+ "HAW": {"nickname": "Hawks", "founded": 1902, "state": "VIC", "premierships": 13, "last_flag": 2015, "rising_star": []},
+ "MEL": {"nickname": "Demons", "founded": 1858, "state": "VIC", "premierships": 13, "last_flag": 2021, "rising_star": []},
+ "NM": {"nickname": "Kangaroos", "founded": 1869, "state": "VIC", "premierships": 4, "last_flag": 1999, "rising_star": []},
+ "PA": {"nickname": "Power", "founded": 1870, "state": "SA", "premierships": 1, "last_flag": 2004, "rising_star": []},
+ "RIC": {"nickname": "Tigers", "founded": 1885, "state": "VIC", "premierships": 13, "last_flag": 2020, "rising_star": []},
+ "STK": {"nickname": "Saints", "founded": 1873, "state": "VIC", "premierships": 1, "last_flag": 1966, "rising_star": []},
+ "SYD": {"nickname": "Swans", "founded": 1874, "state": "NSW", "premierships": 5, "last_flag": 2012, "rising_star": []},
+ "TAS": {"nickname": "Devils", "founded": 2025, "state": "TAS", "premierships": 0, "last_flag": null, "rising_star": []},
+ "WCE": {"nickname": "Eagles", "founded": 1986, "state": "WA", "premierships": 4, "last_flag": 2018, "rising_star": []},
+ "WB": {"nickname": "Bulldogs", "founded": 1877, "state": "VIC", "premierships": 2, "last_flag": 2016, "rising_star": []}
+}
