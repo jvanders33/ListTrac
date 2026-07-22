@@ -1,0 +1,5 @@
+{
+ "_note": "Hand-curated draft rankings overlay, merged onto the DOB-classified pools by scraper/draft_pool.py (survives rebuilds). Add {name, rank, note?, source?} per class. Names are matched to the pool by normalised full name; a ranked name not in the pool is added as a curated entry.",
+ "2027": [],
+ "2028": []
+}

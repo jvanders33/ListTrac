@@ -109,11 +109,22 @@ def build():
     return people
 
 
+def load_ranks(draft_class: int) -> dict:
+    """Hand-curated rankings overlay (data/prospect_ranks.json) that survives
+    rebuilds: {"2028": [{"name","rank","note"?,"source"?}, ...]}."""
+    path = DATA_DIR / "prospect_ranks.json"
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return {_norm(r["name"]): r for r in data.get(str(draft_class), [])}
+
+
 def rebuild_class(draft_class: int, people: dict):
     path = DATA_DIR / f"prospects_{draft_class}.json"
     curated = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"prospects": []}
     # index curated honours by normalised name
     honours = {_norm(p["name"]): p for p in curated.get("prospects", [])}
+    ranks = load_ranks(draft_class)
 
     by_name: dict[str, dict] = {}
     # start from AFL people of this class (played at least one game)
@@ -138,6 +149,14 @@ def rebuild_class(draft_class: int, people: dict):
         if key not in by_name:
             by_name[key] = {**c, "source": "curated"}
             added_curated += 1
+
+    # apply the hand-curated rankings overlay (survives rebuilds)
+    for key, r in ranks.items():
+        entry = by_name.get(key) or {"name": r["name"], "source": "curated"}
+        entry["rank"] = r["rank"]
+        if r.get("note"):
+            entry["ranked_note"] = r["note"]
+        by_name[key] = entry
 
     prospects = sorted(by_name.values(),
                        key=lambda p: (p.get("rank") or 999, -(p.get("games") or 0), p["name"]))
