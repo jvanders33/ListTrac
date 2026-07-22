@@ -1,0 +1,35 @@
+{
+ "year": 2027,
+ "stage": "u16",
+ "note": "Preliminary — these are the 2025 U16 National Championships All-Australians, draft-eligible at the end of 2027. This far out the All-Australian selection itself is the signal; award winners are ranked first, the rest listed as the AA squad without false precision.",
+ "sources": {
+  "all_australian": "https://central.rookieme.com/afl/2025/08/01/profiled-2025-afl-under-16-all-australian-team/",
+  "afl": "https://www.afl.com.au/news/1376809/2025-u16-boys-all-australian-team-and-mvps-crowned",
+  "rankings_note": "2025 U16 All-Australian team (Rookie Me Central / AFL). Award winners ranked first."
+ },
+ "prospects": [
+  {"name": "Baxter Sruk", "state_team": "Vic Metro", "position": "Ruck-rover", "rank": 1, "award": "Kevin Sheehan Medal (Pool A B&F) + MVP"},
+  {"name": "Max Gulliver", "state_team": "Tasmania", "position": "Midfielder", "rank": 2, "award": "All-Australian captain"},
+  {"name": "Jackson Bridge", "state_team": "Brisbane Academy", "position": "Half-back", "rank": 3, "award": "Alan McLean Medal (Pool B B&F)", "tie": "Brisbane Academy"},
+  {"name": "Max Thompson", "state_team": "Vic Country", "position": "Forward", "rank": 4, "award": "Vic Country MVP"},
+  {"name": "James Artemis", "state_team": "Western Australia", "position": "Forward", "rank": 5, "award": "WA MVP"},
+  {"name": "Monte Cairns", "state_team": "Sydney Academy", "position": "Utility", "rank": 6, "award": "Swans Academy MVP", "tie": "Sydney Academy"},
+  {"name": "Cooper French", "state_team": "GWS Academy", "position": "Midfielder", "rank": 7, "award": "Giants Academy MVP", "tie": "GWS Academy"},
+  {"name": "Tevita Rodan", "state_team": "Vic Metro", "position": "Back pocket", "rank": 8},
+  {"name": "Harvey Chapman", "state_team": "South Australia", "position": "Full-back", "rank": 9},
+  {"name": "Gus Trigwell", "state_team": "Northern Territory", "position": "Back pocket", "rank": 10},
+  {"name": "Louis Salopek", "state_team": "Vic Country", "position": "Half-back", "rank": 11},
+  {"name": "Tom Steinfort", "state_team": "Vic Country", "position": "Centre half-back", "rank": 12},
+  {"name": "Charlie McClennan", "state_team": "Sydney Academy", "position": "Wing", "rank": 13, "tie": "Sydney Academy"},
+  {"name": "Taj Garrett", "state_team": "South Australia", "position": "Wing", "rank": 14},
+  {"name": "Kai Ivins", "state_team": "South Australia", "position": "Half-forward", "rank": 15},
+  {"name": "Zemes Pilot", "state_team": "South Australia", "position": "Centre half-forward", "rank": 16},
+  {"name": "Duke Marshall-Orr", "state_team": "Sydney Academy", "position": "Half-forward", "rank": 17, "tie": "Sydney Academy"},
+  {"name": "Jake Miller", "state_team": "Vic Metro", "position": "Full-forward", "rank": 18},
+  {"name": "Axel Walsh", "state_team": "Western Australia", "position": "Ruck", "rank": 19},
+  {"name": "Koby Bewick", "state_team": "Vic Metro", "position": "Rover", "rank": 20},
+  {"name": "Angus Abbonizio", "state_team": "Western Australia", "position": "Midfielder", "rank": 21},
+  {"name": "Sam Husband", "state_team": "Tasmania", "position": "Utility", "rank": 22},
+  {"name": "Harper McCullough", "state_team": "Vic Metro", "position": "Midfielder", "rank": 23}
+ ]
+}

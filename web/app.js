@@ -532,6 +532,62 @@ async function shareMock(sim, events) {
   catch { if (msg) msg.textContent = link; }
 }
 
+async function prospectsView(year = 2027) {
+  const [runway, pool] = await Promise.all([
+    api("/api/prospect-runway").catch(() => []),
+    api(`/api/prospects?year=${year}`).catch(() => null),
+  ]);
+  const stageLabel = { u18: "U18 championships", u16: "U16 championships" };
+  view.innerHTML = `${draftChrome("prospects")}
+    <div class="card">
+      <h3>Draft prospect runway</h3>
+      <p class="sub">Three draft classes in the pipeline. The 2026 class comes from this year's U18
+        championships; 2027 and 2028 are the U16 cohorts — this far out, All-Australian selection is
+        the signal, so treat the order as preliminary.</p>
+      <div class="runway">
+        ${runway.map(r => `
+          <a class="runwaycard ${r.year === year ? "on" : ""}" href="#/draft/prospects/${r.year}">
+            <div class="rw-year">${r.year}<span>draft</span></div>
+            <div class="rw-stage">${esc(stageLabel[r.stage] || r.stage)}</div>
+            <div class="rw-count">${r.forming ? "class forming" : r.count + " prospects"}</div>
+            ${r.top.length ? `<div class="rw-top">${r.top.map(t => esc(t.name.split(" ").slice(-1)[0])).join(" · ")}</div>` : ""}
+          </a>`).join("")}
+      </div>
+    </div>
+    ${pool ? prospectPoolCard(pool, year) : `<div class="card"><p class="thin">No prospect pool for ${year}.</p></div>`}`;
+}
+
+function prospectPoolCard(pool, year) {
+  const ps = pool.prospects || [];
+  if (pool.forming || !ps.length) {
+    return `<div class="card">
+      <h3>${year} class — forming</h3>
+      <p class="sub">${esc(pool.note || "")}</p>
+      ${pool.pool_results ? `<div class="tablewrap"><table>
+        <thead><tr><th>Pool</th><th>Winner</th></tr></thead>
+        <tbody>${pool.pool_results.map(r => `<tr><td class="thin">Pool ${esc(r.pool)}</td><td>${esc(r.winner)}</td></tr>`).join("")}</tbody>
+      </table></div>` : ""}
+      <p class="srcline">Source: <a href="${esc((pool.sources || {}).afl || "#")}" target="_blank" rel="noopener">AFL National Championships ↗</a></p>
+    </div>`;
+  }
+  const ranked = [...ps].sort((a, b) => (a.rank || 999) - (b.rank || 999));
+  return `<div class="card">
+    <h3>${year} prospect pool <span class="thin" style="font-weight:400">· ${ranked.length}</span></h3>
+    <p class="sub">${esc(pool.note || "")}</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th class="num">#</th><th>Player</th><th>State / academy</th><th>Position</th><th>Note</th></tr></thead>
+      <tbody>${ranked.map(p => `
+        <tr><td class="num"><b>${p.rank ?? "—"}</b></td>
+          <td>${esc(p.name)}${p.tie ? ` <span class="chip warn" style="font-size:9px">${esc(p.tie)}</span>` : ""}</td>
+          <td class="thin">${esc(p.state_team || "")}</td>
+          <td class="thin">${esc(p.position || "")}</td>
+          <td class="thin">${esc(p.award || "")}</td></tr>`).join("")}
+      </tbody>
+    </table></div>
+    <p class="srcline">Source: <a href="${esc((pool.sources || {}).all_australian || (pool.sources || {}).rankings || "#")}" target="_blank" rel="noopener">${esc((pool.sources || {}).rankings_note || "Rookie Me Central / AFL")} ↗</a></p>
+  </div>`;
+}
+
 async function mockDraftView(chrome = "") {
   const [order, pool, intel] = await Promise.all([
     api("/api/draft-order"), api("/api/prospects"), api("/api/pick-intel").catch(() => null)]);
@@ -1609,6 +1665,7 @@ async function searchView(q) {
 const draftChrome = act => `<div class="subtabs">
   <a href="#/draft" class="${act === "order" ? "active" : ""}">Projected order</a>
   <a href="#/draft/mock" class="${act === "mock" ? "active" : ""}">Mock draft</a>
+  <a href="#/draft/prospects" class="${act === "prospects" ? "active" : ""}">Prospects</a>
   <a href="#/draft/history/2025" class="${act === "history" ? "active" : ""}">Draft history</a>
 </div>`;
 const tradesChrome = act => `<div class="subtabs">
@@ -1626,6 +1683,7 @@ const routes = [
   [/^#\/players\/top10(?:\?.*)?$/,  () => top10View()],
   [/^#\/draft$/,                    () => draftOrderView(draftChrome("order"))],
   [/^#\/draft\/mock(?:\?.*)?$/,     () => mockDraftView(draftChrome("mock"))],
+  [/^#\/draft\/prospects(?:\/(\d{4}))?$/, m => prospectsView(+(m[1] || 2027))],
   [/^#\/draft\/history\/(\d{4})(?:\/(\w+))?$/, m => draftView(m[1], m[2] || "national", draftChrome("history"))],
   [/^#\/trades$/,                   () => tradeMachineView(tradesChrome("machine"))],
   [/^#\/trades\/history\/(\d{4})$/, m => tradesView(m[1], tradesChrome("history"))],

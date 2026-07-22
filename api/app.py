@@ -526,12 +526,43 @@ def ratings(limit: int = 100, club: str | None = None, year: int | None = None):
             "count": total, "ratings": rows}
 
 
+PROSPECTS_DIR = Path(__file__).resolve().parent.parent / "data"
+
+
 @app.get("/api/prospects")
-def prospects():
-    """2026 draft prospect pool: U18 championships squads (Rookie Me Central)
-    merged with Reading the Play's Top 50. Regenerate: python scraper/u18_champs.py"""
+def prospects(year: int = 2026):
+    """Draft prospect pool for a class. 2026 = U18 championships pool (Rookie
+    Me Central + Reading the Play + Twomey). 2027/2028 = the U16-championships
+    runway (All-Australian teams), preliminary this far out."""
     import json
-    return json.loads(PROSPECTS_PATH.read_text(encoding="utf-8"))
+    path = PROSPECTS_PATH if year == 2026 else PROSPECTS_DIR / f"prospects_{year}.json"
+    if not path.exists():
+        raise HTTPException(404, f"no prospect pool for {year}")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+@app.get("/api/prospect-runway")
+def prospect_runway():
+    """The 3-year draft runway — one summary card per class."""
+    import json
+    out = []
+    for year in (2026, 2027, 2028):
+        path = PROSPECTS_PATH if year == 2026 else PROSPECTS_DIR / f"prospects_{year}.json"
+        if not path.exists():
+            continue
+        d = json.loads(path.read_text(encoding="utf-8"))
+        ps = d.get("prospects", [])
+        top = sorted((p for p in ps if p.get("rank")), key=lambda p: p["rank"])[:3]
+        out.append({
+            "year": year,
+            "stage": d.get("stage", "u18"),
+            "forming": d.get("forming", False),
+            "count": len(ps),
+            "note": d.get("note", ""),
+            "top": [{"name": p["name"], "state_team": p.get("state_team"),
+                     "position": p.get("position"), "rank": p.get("rank")} for p in top],
+        })
+    return out
 
 
 @app.get("/api/fantasy")

@@ -1,0 +1,16 @@
+{
+ "year": 2028,
+ "stage": "u16",
+ "forming": true,
+ "note": "The 2026 U16 National Championships concluded in July 2026 (Western Australia won Pool A, the GWS Giants Academy Pool B). The U16 All-Australian team — the first real ranking signal for this class — hasn't been published yet. This class fills in once it is.",
+ "sources": {
+  "afl": "https://www.afl.com.au/nat-champs/u16s/boys",
+  "rookieme": "https://central.rookieme.com/afl/",
+  "rankings_note": "Awaiting 2026 U16 All-Australian team."
+ },
+ "pool_results": [
+  {"pool": "A", "winner": "Western Australia"},
+  {"pool": "B", "winner": "GWS Giants Academy"}
+ ],
+ "prospects": []
+}
