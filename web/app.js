@@ -808,7 +808,7 @@ async function prospectProfileView(name) {
     </div>
     <div class="card">
       <h3>Playing history</h3>
-      <p class="sub">Games across the Coates Talent League, SANFL, WAFL, national championships and academy football.</p>
+      <p class="sub">Games across the Coates Talent League, national championships, VFL/SANFL/WAFL and academy football — including senior state-league games as they step up.</p>
       ${hist.length ? `
       <div class="tablewrap"><table>
         <thead><tr><th>Season</th><th>Competition</th><th>Team</th><th class="num">Games</th>

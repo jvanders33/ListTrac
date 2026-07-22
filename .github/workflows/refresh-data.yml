@@ -46,6 +46,12 @@ jobs:
         run: python scraper/prospect_stats.py
         continue-on-error: true
 
+      - name: Enrich prospect stats from the AFL (Champion Data)
+        # official Coates Talent League / U18 champs / VFL / SANFL stats —
+        # current-season + senior games RMC misses. Runs AFTER RMC to merge on.
+        run: python scraper/afl_talent.py
+        continue-on-error: true
+
       - name: Refresh contract-event history (AFLRATINGS)
         # dated signings/extensions/trades/delistings — the missing middle of
         # each player's timeline between draft and free agency
