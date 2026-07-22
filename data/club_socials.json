@@ -1,0 +1,22 @@
+{
+ "_note": "Official AFL club social handles. Edit here to correct — the value after the last slash is the handle. Verified against official club link-in-bios where possible; flag any that 404.",
+ "ADE": {"x": "Adelaide_FC", "instagram": "adelaidefc", "tiktok": "adelaidefootballclub", "website": "https://www.afc.com.au"},
+ "BRI": {"x": "brisbanelions", "instagram": "brisbanelions", "tiktok": "brisbanelions", "website": "https://www.lions.com.au"},
+ "CAR": {"x": "CarltonFC", "instagram": "carlton_fc", "tiktok": "carltonfc", "website": "https://www.carltonfc.com.au"},
+ "COL": {"x": "CollingwoodFC", "instagram": "collingwood_fc", "tiktok": "collingwood_fc", "website": "https://www.collingwoodfc.com.au"},
+ "ESS": {"x": "essendonfc", "instagram": "essendonfc", "tiktok": "essendonfc", "website": "https://www.essendonfc.com.au"},
+ "FRE": {"x": "freodockers", "instagram": "fremantledockers", "tiktok": "fremantledockers", "website": "https://www.fremantlefc.com.au"},
+ "GEE": {"x": "GeelongCats", "instagram": "geelongcats", "tiktok": "geelongcats", "website": "https://www.geelongcats.com.au"},
+ "GCS": {"x": "GoldCoastSUNS", "instagram": "goldcoastsuns", "tiktok": "goldcoastsuns", "website": "https://www.goldcoastfc.com.au"},
+ "GWS": {"x": "GWSGIANTS", "instagram": "gwsgiants", "tiktok": "gwsgiants", "website": "https://www.gwsgiants.com.au"},
+ "HAW": {"x": "HawthornFC", "instagram": "hawthornfc", "tiktok": "hawthornfc", "website": "https://www.hawthornfc.com.au"},
+ "MEL": {"x": "melbournefc", "instagram": "melbournefc", "tiktok": "melbournefc", "website": "https://www.melbournefc.com.au"},
+ "NM": {"x": "NMFCOfficial", "instagram": "nmfcofficial", "tiktok": "northmelbournefc", "website": "https://www.nmfc.com.au"},
+ "PA": {"x": "PAFC", "instagram": "pafc", "tiktok": "pafc", "website": "https://www.portadelaidefc.com.au"},
+ "RIC": {"x": "Richmond_FC", "instagram": "richmond_fc", "tiktok": "richmond_fc", "website": "https://www.richmondfc.com.au"},
+ "STK": {"x": "stkildafc", "instagram": "stkildafc", "tiktok": "stkildafc", "website": "https://www.saints.com.au"},
+ "SYD": {"x": "sydneyswans", "instagram": "sydneyswans", "tiktok": "sydneyswans", "website": "https://www.sydneyswans.com.au"},
+ "TAS": {"x": "tasmaniafc", "instagram": "tasmaniafc", "tiktok": "tasmaniafc", "website": "https://www.tasmaniafc.com.au"},
+ "WCE": {"x": "WestCoastEagles", "instagram": "westcoasteagles", "tiktok": "westcoasteagles", "website": "https://www.westcoasteagles.com.au"},
+ "WB": {"x": "westernbulldogs", "instagram": "westernbulldogs", "tiktok": "westernbulldogs", "website": "https://www.westernbulldogs.com.au"}
+}

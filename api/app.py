@@ -56,6 +56,25 @@ def clubs():
                    GROUP BY c.id ORDER BY c.name""")
 
 
+CLUB_SOCIALS_PATH = Path(__file__).resolve().parent.parent / "data" / "club_socials.json"
+
+
+@app.get("/api/club-socials")
+def club_socials(abbrev: str):
+    """Official social handles for a club, as ready-to-use profile URLs."""
+    import json
+    data = json.loads(CLUB_SOCIALS_PATH.read_text(encoding="utf-8")) if CLUB_SOCIALS_PATH.exists() else {}
+    s = data.get(abbrev.upper())
+    if not s:
+        return {}
+    return {
+        "x": f"https://x.com/{s['x']}" if s.get("x") else None,
+        "instagram": f"https://www.instagram.com/{s['instagram']}" if s.get("instagram") else None,
+        "tiktok": f"https://www.tiktok.com/@{s['tiktok']}" if s.get("tiktok") else None,
+        "website": s.get("website"),
+    }
+
+
 @app.get("/clubs/{abbrev}/list")
 def club_list(abbrev: str):
     result = rows(f"""SELECT {PLAYER_COLS}, cs.status contract_status, cs.contracted_through_year,
@@ -693,6 +712,60 @@ def debug():
         "web_dir_exists": WEB_DIR.is_dir(),
         "db_exists": DB_PATH.exists(),
     }
+
+
+import os
+
+# Star/like counters need a writable store (the DB is a read-only snapshot).
+# Uses an Upstash Redis REST endpoint — set UPSTASH_REDIS_REST_URL +
+# UPSTASH_REDIS_REST_TOKEN (or Vercel KV's KV_REST_API_URL/TOKEN) in the
+# environment. Absent → the API reports unconfigured and the UI hides stars.
+_KV_URL = os.environ.get("UPSTASH_REDIS_REST_URL") or os.environ.get("KV_REST_API_URL")
+_KV_TOKEN = os.environ.get("UPSTASH_REDIS_REST_TOKEN") or os.environ.get("KV_REST_API_TOKEN")
+
+
+def _kv(*command: str):
+    """Run one Redis command via the Upstash REST API. Returns the result, or
+    None if no store is configured / the call fails."""
+    if not (_KV_URL and _KV_TOKEN):
+        return None
+    try:
+        resp = requests.post(_KV_URL.rstrip("/"), json=list(command),
+                             headers={"Authorization": f"Bearer {_KV_TOKEN}"}, timeout=6)
+        resp.raise_for_status()
+        return resp.json().get("result")
+    except requests.RequestException:
+        return None
+
+
+def _star_key(kind: str, ident: str) -> str:
+    kind = "player" if kind == "player" else "club"
+    return f"stars:{kind}:{re.sub(r'[^A-Za-z0-9_-]', '', ident)}"
+
+
+@app.get("/api/stars")
+def stars(kind: str, ids: str):
+    """Current star counts for a comma-separated list of player/club ids."""
+    id_list = [i for i in ids.split(",") if i][:100]
+    if not (_KV_URL and _KV_TOKEN) or not id_list:
+        return {"configured": bool(_KV_URL and _KV_TOKEN), "counts": {}}
+    keys = [_star_key(kind, i) for i in id_list]
+    result = _kv("MGET", *keys) or []
+    counts = {i: int(v) for i, v in zip(id_list, result) if v is not None}
+    return {"configured": True, "counts": counts}
+
+
+@app.post("/api/star")
+def star(payload: dict):
+    """Add or remove a star for a player/club. `delta` is +1 (default) or -1."""
+    kind, ident = payload.get("kind"), str(payload.get("id", ""))
+    if kind not in ("player", "club") or not ident:
+        raise HTTPException(400, "kind (player|club) and id required")
+    if not (_KV_URL and _KV_TOKEN):
+        raise HTTPException(503, "star store not configured")
+    delta = -1 if payload.get("delta") == -1 else 1
+    new = _kv("INCRBY", _star_key(kind, ident), str(delta))
+    return {"count": int(new) if new is not None else 0}
 
 
 @app.get("/api/summary")

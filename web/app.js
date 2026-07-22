@@ -12,6 +12,58 @@ async function api(path) {
   return res.json();
 }
 
+/* Star / popularity button. Renders a placeholder; mountStars() wires counts
+   + toggle after the view renders. One star per person, tracked in localStorage. */
+const starButton = (kind, id, label = "") => id
+  ? `<button class="starbtn" data-kind="${esc(kind)}" data-id="${esc(String(id))}" hidden>
+       <span class="star-ico">★</span><span class="starcount"></span>${label ? ` <span class="thin">${esc(label)}</span>` : ""}</button>`
+  : "";
+
+async function mountStars() {
+  const btns = [...document.querySelectorAll(".starbtn:not([data-mounted])")];
+  if (!btns.length) return;
+  const byKind = {};
+  btns.forEach(b => (byKind[b.dataset.kind] = byKind[b.dataset.kind] || []).push(b.dataset.id));
+  for (const kind of Object.keys(byKind)) {
+    const data = await api(`/api/stars?kind=${kind}&ids=${encodeURIComponent([...new Set(byKind[kind])].join(","))}`).catch(() => null);
+    btns.filter(b => b.dataset.kind === kind).forEach(b => {
+      b.dataset.mounted = "1";
+      if (!data || !data.configured) return;  // store not set up — leave hidden
+      const starredKey = `starred:${kind}:${b.dataset.id}`;
+      const setUI = (count, on) => {
+        b.hidden = false;
+        b.classList.toggle("on", on);
+        b.querySelector(".starcount").textContent = count > 0 ? count : "";
+        b.title = on ? "Remove your star" : "Star this";
+      };
+      let count = (data.counts || {})[b.dataset.id] || 0;
+      let on = localStorage.getItem(starredKey) === "1";
+      setUI(count, on);
+      b.addEventListener("click", async () => {
+        on = !on; count += on ? 1 : -1;
+        localStorage.setItem(starredKey, on ? "1" : "0");
+        setUI(Math.max(0, count), on);
+        const res = await api("/api/star", { method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ kind, id: b.dataset.id, delta: on ? 1 : -1 }) }).catch(() => null);
+        if (res && typeof res.count === "number") setUI(res.count, on);
+      });
+    });
+  }
+}
+
+const SOCIAL_ICON = { x: "𝕏", instagram: "IG", tiktok: "TT", website: "WWW" };
+const socialLinks = (links, extraClass = "") => {
+  const order = ["x", "instagram", "tiktok", "website"];
+  const items = order.filter(k => links[k]).map(k =>
+    `<a class="social ${k}" href="${esc(links[k])}" target="_blank" rel="noopener" aria-label="${k}">${SOCIAL_ICON[k]}</a>`);
+  return items.length ? `<span class="socials ${extraClass}">${items.join("")}</span>` : "";
+};
+const playerSocialSearch = name => socialLinks({
+  x: `https://x.com/search?q=${encodeURIComponent(name + " AFL")}`,
+  instagram: `https://www.instagram.com/explore/search/keyword/?q=${encodeURIComponent(name)}`,
+  tiktok: `https://www.tiktok.com/search?q=${encodeURIComponent(name + " AFL")}`,
+});
+
 const STATUS = {
   contracted:      { cls: "ok",   label: "Contracted" },
   out_of_contract: { cls: "warn", label: "Out of contract" },
@@ -1352,13 +1404,21 @@ async function clubsView() {
 }
 
 async function clubView(abbrev) {
-  const list = await api(`/clubs/${encodeURIComponent(abbrev)}/list`);
+  const [list, socials] = await Promise.all([
+    api(`/clubs/${encodeURIComponent(abbrev)}/list`),
+    api(`/api/club-socials?abbrev=${encodeURIComponent(abbrev)}`).catch(() => ({})),
+  ]);
   const first = list[0];
   const n = k => list.filter(p => p.contract_status === k).length;
   const sorted = [...list].sort((a, b) =>
     (URGENCY[a.contract_status] ?? 9) - (URGENCY[b.contract_status] ?? 9) ||
     (a.jumper_number ?? 99) - (b.jumper_number ?? 99));
   view.innerHTML = `
+    <div class="clubhead">
+      <span class="badge" style="--club:${esc(first.club_primary || "#888")};width:40px;height:40px;font-size:13px">${esc(abbrev.toUpperCase())}</span>
+      <h2 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-0.02em">${esc(first.club)}</h2>
+      <span style="margin-left:auto;display:flex;align-items:center;gap:12px">${starButton("club", abbrev)}${socialLinks(socials || {})}</span>
+    </div>
     <div class="tiles">
       <div class="tile" style="border-left-color:${esc(first.club_primary || "var(--accent)")}"><p class="eyebrow">List size</p><b>${list.length}</b><span>players · 2026</span></div>
       <div class="tile g"><p class="eyebrow">Contracted past '26</p><b>${n("contracted")}</b><span>players</span></div>
@@ -1383,6 +1443,7 @@ async function clubView(abbrev) {
         </tbody>
       </table></div>
     </div>`;
+  mountStars();
 }
 
 function timelineHTML(p) {
@@ -1497,7 +1558,9 @@ async function playerView(id) {
           <div><dt>Drafted by</dt><dd>${esc(p.drafted.club)}</dd></div>` : ""}
           ${current && current.contracted_through_year ? `<div><dt>Contracted through</dt><dd>${current.contracted_through_year}</dd></div>` : ""}
         </dl>
-        <p class="feature-ctas" style="margin-top:16px">
+        <p class="feature-ctas" style="margin-top:16px;align-items:center">
+          ${starButton("player", id)}
+          ${playerSocialSearch(fullName)}
           <button class="cta quiet" id="pc-download" style="border-color:rgba(255,255,255,0.4);color:#fff">Download card</button>
           <button class="cta quiet" id="pc-share" style="border-color:rgba(255,255,255,0.4);color:#fff">Share</button>
         </p>
@@ -1558,6 +1621,7 @@ async function playerView(id) {
       </aside>
     </div>`;
 
+  mountStars();
   const cardPng = () => svgToPng(playerCardSVG(p, heroA, heroTrim));
   const dl = document.getElementById("pc-download");
   if (dl) dl.addEventListener("click", async () => {

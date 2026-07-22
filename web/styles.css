@@ -394,6 +394,39 @@ footer.pagefoot {
 
 .spark { display: block; margin: 4px 0 12px; overflow: visible; }
 
+/* star / popularity button */
+.starbtn {
+  display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 13px;
+  font-weight: 700; cursor: pointer; border: 1px solid var(--line); border-radius: 20px;
+  padding: 7px 14px; background: var(--card); color: var(--ink-2);
+}
+.starbtn .star-ico { font-size: 15px; line-height: 1; color: var(--ink-2); }
+.starbtn:hover { border-color: var(--warn); color: var(--ink); }
+.starbtn.on { border-color: var(--warn); color: var(--warn); background: var(--warn-bg); }
+.starbtn.on .star-ico { color: var(--warn); }
+.starcount { font-variant-numeric: tabular-nums; }
+/* on the dark player hero */
+.hero .starbtn { background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.4); color: #fff; }
+.hero .starbtn .star-ico { color: #fff; }
+.hero .starbtn.on { background: #f0b450; color: #3a2a00; border-color: #f0b450; }
+.hero .starbtn.on .star-ico { color: #3a2a00; }
+
+/* social links */
+.socials { display: inline-flex; gap: 6px; align-items: center; }
+.social {
+  display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 8px;
+  font-size: 11px; font-weight: 800; text-decoration: none; border: 1px solid var(--line);
+  background: var(--card); color: var(--ink-2);
+}
+.social:hover { color: var(--ink); border-color: var(--accent); text-decoration: none; }
+.social.x { font-size: 15px; }
+.hero .social, .clubhead .social { background: rgba(0,0,0,0.28); border-color: rgba(255,255,255,0.35); color: #fff; }
+.clubhead .social { background: var(--card); border-color: var(--line); color: var(--ink-2); }
+.clubhead .social:hover { color: var(--accent); }
+
+/* club header */
+.clubhead { display: flex; align-items: center; gap: 14px; margin-top: 22px; flex-wrap: wrap; }
+
 /* prospect playing history (expandable) */
 .prospect-history { padding: 0 4px; }
 .prospect-history:not([hidden]) { padding: 6px 4px 12px; }
