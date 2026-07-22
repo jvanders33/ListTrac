@@ -1266,6 +1266,45 @@ function timelineHTML(p) {
     </div>`;
 }
 
+/* Shareable individual player card — club-coloured, key facts + headline
+   metrics. Reuses the SVG->PNG pipeline. */
+function playerCardSVG(p, heroA, heroTrim) {
+  const W = 1080, H = 1350;
+  const current = p.contract_status.find(cs => cs.is_current);
+  const facts = [];
+  if (p.dob) facts.push(["Age", age(p.dob)]);
+  if (p.height_cm) facts.push(["Height", p.height_cm + " cm"]);
+  if (p.jumper_number) facts.push(["Guernsey", "#" + p.jumper_number]);
+  if (p.drafted) facts.push(["Drafted", `${p.drafted.year}${p.drafted.pick_number ? " · Pick " + p.drafted.pick_number : ""}`]);
+  if (current && current.contracted_through_year) facts.push(["Contracted to", current.contracted_through_year]);
+  const metrics = [];
+  if (p.rating) metrics.push(["AFL Player Rating", `#${p.rating.rank} · ${p.rating.rating}`]);
+  if (p.fantasy) metrics.push(["AFL Fantasy avg", p.fantasy.af_avg]);
+  if (current) metrics.push(["Contract status", (STATUS[current.status] || {}).label || current.status]);
+
+  const factRows = facts.map((f, i) => `
+    <text x="70" y="${560 + i * 60}" font-size="24" fill="#93A1A8" font-family="system-ui,sans-serif">${esc(f[0])}</text>
+    <text x="1010" y="${560 + i * 60}" font-size="26" font-weight="700" fill="#E6EBE9" text-anchor="end" font-family="system-ui,sans-serif">${esc(String(f[1]))}</text>`).join("");
+  const metricRows = metrics.map((m, i) => `
+    <g transform="translate(60 ${900 + i * 96})">
+      <rect width="960" height="80" rx="10" fill="#182129"/>
+      <text x="26" y="50" font-size="24" fill="#93A1A8" font-family="system-ui,sans-serif">${esc(m[0])}</text>
+      <text x="934" y="50" font-size="30" font-weight="800" fill="#BF4226" text-anchor="end" font-family="system-ui,sans-serif">${esc(String(m[1]))}</text>
+    </g>`).join("");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+    <rect width="${W}" height="${H}" fill="#10171C"/>
+    <rect width="${W}" height="440" fill="${heroA}"/>
+    <rect y="440" width="${W}" height="6" fill="${heroTrim}"/>
+    <text x="60" y="90" font-size="30" font-weight="800" fill="#F2F4F3" font-family="system-ui,sans-serif" opacity="0.85">List<tspan fill="#BF4226">Trac</tspan></text>
+    <text x="60" y="300" font-size="72" font-weight="800" fill="#F5F2EC" font-family="system-ui,sans-serif">${esc(p.first_name)}</text>
+    <text x="60" y="380" font-size="72" font-weight="800" fill="#F5F2EC" font-family="system-ui,sans-serif">${esc(p.last_name)}</text>
+    <text x="60" y="425" font-size="26" font-weight="700" fill="${heroTrim}" font-family="system-ui,sans-serif" letter-spacing="1">${esc((p.club || "Unattached").toUpperCase())}${p.fantasy && p.fantasy.position ? " · " + esc(p.fantasy.position.replace(/_/g, " ")) : ""}</text>
+    ${factRows}
+    ${metricRows}
+    <text x="60" y="${H - 40}" font-size="20" fill="#55636D" font-family="system-ui,sans-serif">list-trac.vercel.app · ratings: Champion Data / AFL</text>
+  </svg>`;
+}
+
 async function playerView(id) {
   const p = await api(`/players/${id}`);
   const fullName = `${p.first_name} ${p.last_name}`;
@@ -1316,6 +1355,10 @@ async function playerView(id) {
           <div><dt>Drafted by</dt><dd>${esc(p.drafted.club)}</dd></div>` : ""}
           ${current && current.contracted_through_year ? `<div><dt>Contracted through</dt><dd>${current.contracted_through_year}</dd></div>` : ""}
         </dl>
+        <p class="feature-ctas" style="margin-top:16px">
+          <button class="cta quiet" id="pc-download" style="border-color:rgba(255,255,255,0.4);color:#fff">Download card</button>
+          <button class="cta quiet" id="pc-share" style="border-color:rgba(255,255,255,0.4);color:#fff">Share</button>
+        </p>
       </div>
     </div>
     <div class="cols">
@@ -1372,6 +1415,32 @@ async function playerView(id) {
         ${sameBoat}
       </aside>
     </div>`;
+
+  const cardPng = () => svgToPng(playerCardSVG(p, heroA, heroTrim));
+  const dl = document.getElementById("pc-download");
+  if (dl) dl.addEventListener("click", async () => {
+    try {
+      const png = await cardPng();
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(png);
+      a.download = `listtrac-${fullName.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}.png`;
+      a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    } catch { /* unsupported browser */ }
+  });
+  const sh = document.getElementById("pc-share");
+  if (sh) sh.addEventListener("click", async () => {
+    const link = `${location.origin}/#/player/${id}`;
+    try {
+      const png = await cardPng();
+      const file = new File([png], "listtrac-player.png", { type: "image/png" });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({ title: fullName, text: `${fullName} — ListTrac`, files: [file] });
+        return;
+      }
+      if (navigator.share) { await navigator.share({ title: fullName, url: link }); return; }
+    } catch { /* clipboard fallback */ }
+    try { await navigator.clipboard.writeText(link); } catch { /* noop */ }
+  });
 }
 
 async function draftView(year, draftType = "national", chrome = "") {
