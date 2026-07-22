@@ -835,6 +835,7 @@ async function tradeMachineView(chrome = "") {
 const playersChrome = act => `<div class="subtabs">
   <a href="#/players" class="${act === "dir" ? "active" : ""}">Directory</a>
   <a href="#/players/rankings" class="${act === "rank" ? "active" : ""}">Rankings</a>
+  <a href="#/players/fantasy" class="${act === "fantasy" ? "active" : ""}">Fantasy</a>
   <a href="#/players/top10" class="${act === "top10" ? "active" : ""}">Build a Top 10</a>
 </div>`;
 
@@ -1073,6 +1074,40 @@ async function shareCard(state, colorOf) {
   catch { if (msg) msg.textContent = link; }
 }
 
+async function fantasyView() {
+  view.innerHTML = `${playersChrome("fantasy")}
+    <div class="card" id="fantasy-card"><h3>AFL Fantasy</h3><p class="sub">Loading fantasy averages…</p></div>`;
+  const POS = [["", "All"], ["MID", "Midfielders"], ["FOR", "Forwards"], ["DEF", "Defenders"], ["RUC", "Rucks"]];
+  const load = pos => api(`/api/fantasy?limit=100${pos ? "&position=" + pos : ""}`).then(data => {
+    const card = document.getElementById("fantasy-card");
+    if (!card) return;
+    card.innerHTML = `
+      <h3>AFL Fantasy <span class="thin" style="font-weight:400">· ${data.year}</span></h3>
+      <div class="controls" style="margin-top:6px">
+        ${POS.map(([k, label]) => `<button class="filterbtn ${k === pos ? "active" : ""}" data-pos="${k}">${label}</button>`).join("")}
+      </div>
+      <p class="sub" style="margin-top:10px">${esc(data.attribution)} — ranked by season average.
+        SuperCoach scoring is a separate metric, coming soon.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th class="num">#</th><th>Player</th><th>Club</th><th>Pos</th><th class="num">Games</th><th class="num">Avg</th><th class="num">Total</th></tr></thead>
+        <tbody>${data.players.map((p, i) => `
+          <tr><td class="num">${i + 1}</td>
+            <td>${p.player_id ? `<a href="#/player/${p.player_id}">${esc(p.name)}</a>` : esc(p.name)}</td>
+            <td class="thin">${esc(p.team)}</td>
+            <td class="thin">${esc((p.position || "").slice(0, 3))}</td>
+            <td class="num">${p.games ?? ""}</td>
+            <td class="num"><b>${p.af_avg}</b></td><td class="num">${p.af_total ?? ""}</td></tr>`).join("")}
+        </tbody>
+      </table></div>
+      <p class="srcline">Source: <a href="${esc(data.source_url)}" target="_blank" rel="noopener">${esc(data.attribution)} ↗</a></p>`;
+    card.querySelectorAll("[data-pos]").forEach(b => b.addEventListener("click", () => load(b.dataset.pos)));
+  }).catch(() => {
+    const card = document.getElementById("fantasy-card");
+    if (card) card.querySelector(".sub").textContent = "Fantasy data unavailable right now.";
+  });
+  load("");
+}
+
 async function rankingsView() {
   view.innerHTML = `${playersChrome("rank")}
     <div class="card" id="ratings-card"><h3>Player rankings</h3><p class="sub">Loading the official ratings…</p></div>`;
@@ -1119,6 +1154,7 @@ async function playersView() {
       <h3>Quick lists</h3>
       <p class="feature-ctas" style="margin-top:10px">
         <a class="cta" href="#/players/rankings">Player rankings</a>
+        <a class="cta quiet" href="#/players/fantasy">AFL Fantasy</a>
         <a class="cta quiet" href="#/players/top10">Build a Top 10</a>
         <a class="cta quiet" href="#/free-agents">Free agents 2026</a>
         <a class="cta quiet" href="#/free-agents/out_of_contract">Out of contract</a>
@@ -1270,7 +1306,8 @@ async function playerView(id) {
         <p class="club-line">${p.club ? `<a href="#/club/${esc(p.club_abbrev)}">${esc(p.club)}</a>` : "Unattached"}</p>
         <h2>${esc(p.first_name)} ${esc(p.last_name)}</h2>
         <p class="statusline">${current ? chip(current.status) : ""}${p.rating ? `
-          <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Player Rating #${p.rating.rank} · ${p.rating.rating}</span>` : ""}</p>
+          <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Player Rating #${p.rating.rank} · ${p.rating.rating}</span>` : ""}${p.fantasy ? `
+          <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Fantasy avg ${p.fantasy.af_avg}</span>` : ""}</p>
         <dl class="hero-facts">
           ${p.dob ? `<div><dt>Age</dt><dd>${age(p.dob)} (${esc(p.dob)})</dd></div>` : ""}
           ${p.height_cm ? `<div><dt>Height</dt><dd>${p.height_cm} cm</dd></div>` : ""}
@@ -1516,6 +1553,7 @@ const routes = [
   [/^#\/clubs$/,                    () => clubsView()],
   [/^#\/players$/,                  () => playersView()],
   [/^#\/players\/rankings$/,        () => rankingsView()],
+  [/^#\/players\/fantasy$/,         () => fantasyView()],
   [/^#\/players\/top10(?:\?.*)?$/,  () => top10View()],
   [/^#\/draft$/,                    () => draftOrderView(draftChrome("order"))],
   [/^#\/draft\/mock(?:\?.*)?$/,     () => mockDraftView(draftChrome("mock"))],

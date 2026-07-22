@@ -14,6 +14,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 103.6,
+   "af_total": 1864,
    "draft_year": "2013",
    "draft_position": 4
   },
@@ -27,6 +30,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 99.7,
+   "af_total": 1695,
    "draft_year": "2017",
    "draft_position": 16
   },
@@ -40,6 +46,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 16.0,
+   "position": "MIDFIELDER",
+   "af_avg": 107.4,
+   "af_total": 1719,
    "draft_year": "2014",
    "draft_position": 18
   },
@@ -53,6 +62,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 18.0,
+   "position": "RUCK",
+   "af_avg": 108.2,
+   "af_total": 1948,
    "draft_year": "2009",
    "draft_position": 34
   },
@@ -66,6 +78,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 120.4,
+   "af_total": 2047,
    "draft_year": "2021",
    "draft_position": 4
   },
@@ -79,6 +94,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 104.5,
+   "af_total": 1777,
    "draft_year": "2018",
    "draft_position": 12
   },
@@ -92,6 +110,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 107.1,
+   "af_total": 1500,
    "draft_year": "2021",
    "draft_position": 11
   },
@@ -105,6 +126,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 14.0,
+   "position": "RUCK",
+   "af_avg": 98.2,
+   "af_total": 1375,
    "draft_year": "2017",
    "draft_position": 72
   },
@@ -118,6 +142,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 18.0,
+   "position": "RUCK",
+   "af_avg": 101.7,
+   "af_total": 1831,
    "draft_year": "2019",
    "draft_position": 3
   },
@@ -131,6 +158,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 17.0,
+   "position": "RUCK",
+   "af_avg": 101.8,
+   "af_total": 1730,
    "draft_year": "2012",
    "draft_position": 18
   },
@@ -144,6 +174,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 102.4,
+   "af_total": 1843,
    "draft_year": "2020",
    "draft_position": 20
   },
@@ -157,6 +190,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 15.0,
+   "position": "MIDFIELDER",
+   "af_avg": 114.5,
+   "af_total": 1717,
    "draft_year": "2015",
    "draft_position": 56
   },
@@ -170,6 +206,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 119.1,
+   "af_total": 2025,
    "draft_year": "2018",
    "draft_position": 7
   },
@@ -183,6 +222,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 15.0,
+   "position": "MIDFIELDER",
+   "af_avg": 91.5,
+   "af_total": 1372,
    "draft_year": "2019",
    "draft_position": 8
   },
@@ -196,6 +238,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 96.0,
+   "af_total": 1728,
    "draft_year": "2019",
    "draft_position": 12
   },
@@ -209,6 +254,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 18.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 89.9,
+   "af_total": 1618,
    "draft_year": "2019",
    "draft_position": 39
   },
@@ -222,6 +270,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 100.8,
+   "af_total": 1714,
    "draft_year": "2019",
    "draft_position": 2
   },
@@ -235,6 +286,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 16.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 87.8,
+   "af_total": 1405,
    "draft_year": "2014",
    "draft_position": 2
   },
@@ -248,6 +302,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 13.0,
+   "position": "MIDFIELDER",
+   "af_avg": 90.5,
+   "af_total": 1176,
    "draft_year": "2019",
    "draft_position": 1
   },
@@ -261,6 +318,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 104.9,
+   "af_total": 1888,
    "draft_year": "2011",
    "draft_position": 58
   },
@@ -274,6 +334,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 96.9,
+   "af_total": 1745,
    "draft_year": "2021",
    "draft_position": 3
   },
@@ -287,6 +350,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 91.2,
+   "af_total": 1642,
    "draft_year": "2017",
    "draft_position": 4
   },
@@ -300,6 +366,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 83.8,
+   "af_total": 1509,
    "draft_year": "2018",
    "draft_position": 10
   },
@@ -313,6 +382,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2019",
    "draft_position": 10
   },
@@ -326,6 +398,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 94.5,
+   "af_total": 1606,
    "draft_year": "2014",
    "draft_position": 45
   },
@@ -339,6 +414,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 7.0,
+   "position": "MIDFIELDER",
+   "af_avg": 86.3,
+   "af_total": 604,
    "draft_year": "2010",
    "draft_position": 41
   },
@@ -352,6 +430,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 15.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 99.1,
+   "af_total": 1486,
    "draft_year": "2015",
    "draft_position": null
   },
@@ -365,6 +446,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 95.2,
+   "af_total": 1714,
    "draft_year": "2017",
    "draft_position": 2
   },
@@ -378,6 +462,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 87.1,
+   "af_total": 1568,
    "draft_year": "2021",
    "draft_position": 2
   },
@@ -391,6 +478,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 18.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 89.1,
+   "af_total": 1603,
    "draft_year": "2014",
    "draft_position": 29
   },
@@ -404,6 +494,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 106.7,
+   "af_total": 1921,
    "draft_year": "2013",
    "draft_position": 26
   },
@@ -417,6 +510,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 11.0,
+   "position": "MIDFIELDER",
+   "af_avg": 67.1,
+   "af_total": 738,
    "draft_year": "2016",
    "draft_position": 3
   },
@@ -430,6 +526,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 76.0,
+   "af_total": 1292,
    "draft_year": "2021",
    "draft_position": 9
   },
@@ -443,6 +542,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 99.3,
+   "af_total": 1787,
    "draft_year": "2015",
    "draft_position": 4
   },
@@ -456,6 +558,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 91.7,
+   "af_total": 1650,
    "draft_year": "2013",
    "draft_position": 13
   },
@@ -469,6 +574,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 83.6,
+   "af_total": 1171,
    "draft_year": "2013",
    "draft_position": 32
   },
@@ -482,6 +590,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 18.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 86.7,
+   "af_total": 1561,
    "draft_year": "2024",
    "draft_position": 4
   },
@@ -495,6 +606,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 17.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 91.2,
+   "af_total": 1551,
    "draft_year": "2017",
    "draft_position": 15
   },
@@ -508,6 +622,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 15.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 86.6,
+   "af_total": 1299,
    "draft_year": "2018",
    "draft_position": 3
   },
@@ -521,6 +638,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 16.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 67.7,
+   "af_total": 1083,
    "draft_year": "2023",
    "draft_position": 5
   },
@@ -534,6 +654,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 104.6,
+   "af_total": 1883,
    "draft_year": "2019",
    "draft_position": 4
   },
@@ -547,6 +670,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 16.0,
+   "position": "MIDFIELDER",
+   "af_avg": 91.7,
+   "af_total": 1467,
    "draft_year": "2016",
    "draft_position": 2
   },
@@ -560,6 +686,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 87.5,
+   "af_total": 1575,
    "draft_year": "2012",
    "draft_position": 86
   },
@@ -573,6 +702,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 7.0,
+   "position": "RUCK",
+   "af_avg": 76.7,
+   "af_total": 537,
    "draft_year": "2013",
    "draft_position": 35
   },
@@ -586,6 +718,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 12.0,
+   "position": "RUCK",
+   "af_avg": 86.3,
+   "af_total": 1036,
    "draft_year": "2016",
    "draft_position": 19
   },
@@ -599,6 +734,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 17.0,
+   "position": "RUCK",
+   "af_avg": 83.7,
+   "af_total": 1423,
    "draft_year": "2016",
    "draft_position": 10
   },
@@ -612,6 +750,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 15.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 64.8,
+   "af_total": 972,
    "draft_year": "2014",
    "draft_position": 61
   },
@@ -625,6 +766,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 12.0,
+   "position": "RUCK",
+   "af_avg": 66.3,
+   "af_total": 796,
    "draft_year": "2011",
    "draft_position": 67
   },
@@ -638,6 +782,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 97.9,
+   "af_total": 1762,
    "draft_year": "2018",
    "draft_position": 1
   },
@@ -651,6 +798,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 85.2,
+   "af_total": 1448,
    "draft_year": "2016",
    "draft_position": 29
   },
@@ -664,6 +814,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 72.4,
+   "af_total": 1304,
    "draft_year": "2018",
    "draft_position": 11
   },
@@ -677,6 +830,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 88.7,
+   "af_total": 1596,
    "draft_year": "2021",
    "draft_position": 16
   },
@@ -690,6 +846,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 95.1,
+   "af_total": 1616,
    "draft_year": "2021",
    "draft_position": 1
   },
@@ -703,6 +862,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 105.3,
+   "af_total": 1896,
    "draft_year": "2022",
    "draft_position": 2
   },
@@ -716,6 +878,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 10.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 88.1,
+   "af_total": 881,
    "draft_year": "2017",
    "draft_position": 57
   },
@@ -729,6 +894,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 15.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 68.1,
+   "af_total": 1022,
    "draft_year": "2020",
    "draft_position": 2
   },
@@ -742,6 +910,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 14.0,
+   "position": "RUCK",
+   "af_avg": 75.4,
+   "af_total": 1056,
    "draft_year": "2018",
    "draft_position": 34
   },
@@ -755,6 +926,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 9.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 94.6,
+   "af_total": 851,
    "draft_year": "2011",
    "draft_position": null
   },
@@ -768,6 +942,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 17.0,
+   "position": "RUCK",
+   "af_avg": 85.4,
+   "af_total": 1451,
    "draft_year": "2016",
    "draft_position": 48
   },
@@ -781,6 +958,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 16.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 79.0,
+   "af_total": 1264,
    "draft_year": "2011",
    "draft_position": null
   },
@@ -794,6 +974,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 119.3,
+   "af_total": 2147,
    "draft_year": "2022",
    "draft_position": 3
   },
@@ -807,6 +990,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 90.4,
+   "af_total": 1627,
    "draft_year": "2015",
    "draft_position": 13
   },
@@ -820,6 +1006,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 70.0,
+   "af_total": 1260,
    "draft_year": "2023",
    "draft_position": 36
   },
@@ -833,6 +1022,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 80.1,
+   "af_total": 1441,
    "draft_year": "2020",
    "draft_position": 7
   },
@@ -846,6 +1038,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 90.8,
+   "af_total": 1634,
    "draft_year": "2015",
    "draft_position": 25
   },
@@ -859,6 +1054,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 92.9,
+   "af_total": 1673,
    "draft_year": "2014",
    "draft_position": 24
   },
@@ -872,6 +1070,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 69.9,
+   "af_total": 1259,
    "draft_year": "2018",
    "draft_position": 15
   },
@@ -885,6 +1086,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 74.9,
+   "af_total": 1349,
    "draft_year": "2021",
    "draft_position": 15
   },
@@ -898,6 +1102,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 81.3,
+   "af_total": 1463,
    "draft_year": "2021",
    "draft_position": 7
   },
@@ -911,6 +1118,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 13.0,
+   "position": "MIDFIELDER",
+   "af_avg": 80.8,
+   "af_total": 1050,
    "draft_year": "2005",
    "draft_position": 5
   },
@@ -924,6 +1134,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 18.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 99.1,
+   "af_total": 1784,
    "draft_year": "2018",
    "draft_position": 3
   },
@@ -937,6 +1150,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 18.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 71.6,
+   "af_total": 1288,
    "draft_year": "2023",
    "draft_position": 45
   },
@@ -950,6 +1166,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 99.2,
+   "af_total": 1785,
    "draft_year": "2016",
    "draft_position": 57
   },
@@ -963,6 +1182,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 18.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 85.2,
+   "af_total": 1533,
    "draft_year": "2011",
    "draft_position": 11
   },
@@ -976,6 +1198,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 88.7,
+   "af_total": 1597,
    "draft_year": "2021",
    "draft_position": null
   },
@@ -989,6 +1214,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 77.0,
+   "af_total": 1386,
    "draft_year": "2016",
    "draft_position": 33
   },
@@ -1002,6 +1230,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 18.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 60.9,
+   "af_total": 1097,
    "draft_year": "2015",
    "draft_position": 55
   },
@@ -1015,6 +1246,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 12.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 72.6,
+   "af_total": 871,
    "draft_year": "2009",
    "draft_position": 29
   },
@@ -1028,6 +1262,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 17.0,
+   "position": "RUCK",
+   "af_avg": 61.9,
+   "af_total": 1052,
    "draft_year": "2018",
    "draft_position": 65
   },
@@ -1041,6 +1278,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 17.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 74.8,
+   "af_total": 1272,
    "draft_year": "2017",
    "draft_position": 67
   },
@@ -1054,6 +1294,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 11.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 77.3,
+   "af_total": 850,
    "draft_year": "2019",
    "draft_position": 32
   },
@@ -1067,6 +1310,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 81.2,
+   "af_total": 1462,
    "draft_year": "2018",
    "draft_position": 15
   },
@@ -1080,6 +1326,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 67.8,
+   "af_total": 1221,
    "draft_year": "2017",
    "draft_position": 1
   },
@@ -1093,6 +1342,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 94.1,
+   "af_total": 1693,
    "draft_year": "2010",
    "draft_position": 40
   },
@@ -1106,6 +1358,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 17.0,
+   "position": "RUCK",
+   "af_avg": 78.1,
+   "af_total": 1328,
    "draft_year": "2023",
    "draft_position": null
   },
@@ -1119,6 +1374,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 76.4,
+   "af_total": 1376,
    "draft_year": "2021",
    "draft_position": 6
   },
@@ -1132,6 +1390,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 6.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 63.5,
+   "af_total": 381,
    "draft_year": "2021",
    "draft_position": 2
   },
@@ -1145,6 +1406,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 10.0,
+   "position": "MIDFIELDER",
+   "af_avg": 73.0,
+   "af_total": 730,
    "draft_year": "2012",
    "draft_position": 6
   },
@@ -1158,6 +1422,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 10.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 91.8,
+   "af_total": 918,
    "draft_year": "2020",
    "draft_position": 21
   },
@@ -1171,6 +1438,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 83.2,
+   "af_total": 1165,
    "draft_year": "2018",
    "draft_position": 43
   },
@@ -1184,6 +1454,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 93.3,
+   "af_total": 1680,
    "draft_year": "2020",
    "draft_position": 28
   },
@@ -1197,6 +1470,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 16.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 98.6,
+   "af_total": 1578,
    "draft_year": "2012",
    "draft_position": 1
   },
@@ -1210,6 +1486,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 78.8,
+   "af_total": 1418,
    "draft_year": "2016",
    "draft_position": 12
   },
@@ -1223,6 +1502,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 75.7,
+   "af_total": 1362,
    "draft_year": "2023",
    "draft_position": 1
   },
@@ -1236,6 +1518,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 59.4,
+   "af_total": 1009,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -1249,6 +1534,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 89.7,
+   "af_total": 1614,
    "draft_year": "2023",
    "draft_position": 50
   },
@@ -1262,6 +1550,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 65.9,
+   "af_total": 1187,
    "draft_year": "2019",
    "draft_position": 7
   },
@@ -1275,6 +1566,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 18.0,
+   "position": "RUCK",
+   "af_avg": 71.2,
+   "af_total": 1282,
    "draft_year": "2017",
    "draft_position": 69
   },
@@ -1288,6 +1582,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 11.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 75.3,
+   "af_total": 828,
    "draft_year": "2015",
    "draft_position": 30
   },
@@ -1301,6 +1598,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 14.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 60.2,
+   "af_total": 843,
    "draft_year": "2007",
    "draft_position": 10
   },
@@ -1314,6 +1614,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 16.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 94.2,
+   "af_total": 1507,
    "draft_year": "2015",
    "draft_position": 11
   },
@@ -1327,6 +1630,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 17.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 85.7,
+   "af_total": 1457,
    "draft_year": "2013",
    "draft_position": 56
   },
@@ -1340,6 +1646,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 90.4,
+   "af_total": 1536,
    "draft_year": "2015",
    "draft_position": 3
   },
@@ -1353,6 +1662,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 18.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 71.6,
+   "af_total": 1288,
    "draft_year": "2018",
    "draft_position": 25
   },
@@ -1366,6 +1678,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 17.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 58.8,
+   "af_total": 1000,
    "draft_year": "2018",
    "draft_position": 26
   },
@@ -1379,6 +1694,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 15.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 66.6,
+   "af_total": 999,
    "draft_year": "2016",
    "draft_position": 1
   },
@@ -1392,6 +1710,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 62.1,
+   "af_total": 1118,
    "draft_year": "2022",
    "draft_position": 12
   },
@@ -1405,6 +1726,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 15.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 68.9,
+   "af_total": 1034,
    "draft_year": "2022",
    "draft_position": 18
   },
@@ -1418,6 +1742,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 62.0,
+   "af_total": 1116,
    "draft_year": "2024",
    "draft_position": 6
   },
@@ -1431,6 +1758,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 78.2,
+   "af_total": 1408,
    "draft_year": "2018",
    "draft_position": 61
   },
@@ -1444,6 +1774,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 63.9,
+   "af_total": 1151,
    "draft_year": "2012",
    "draft_position": 5
   },
@@ -1457,6 +1790,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 65.6,
+   "af_total": 1181,
    "draft_year": "2015",
    "draft_position": 16
   },
@@ -1470,6 +1806,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 91.3,
+   "af_total": 1644,
    "draft_year": "2018",
    "draft_position": 27
   },
@@ -1483,6 +1822,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 16.0,
+   "position": "MIDFIELDER",
+   "af_avg": 80.8,
+   "af_total": 1292,
    "draft_year": "2017",
    "draft_position": 24
   },
@@ -1496,6 +1838,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 16.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 76.3,
+   "af_total": 1220,
    "draft_year": "2017",
    "draft_position": 19
   },
@@ -1509,6 +1854,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 61.7,
+   "af_total": 1111,
    "draft_year": "2017",
    "draft_position": 9
   },
@@ -1522,6 +1870,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 16.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 77.3,
+   "af_total": 1237,
    "draft_year": "2016",
    "draft_position": 40
   },
@@ -1535,6 +1886,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 16.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 88.9,
+   "af_total": 1423,
    "draft_year": "2013",
    "draft_position": 21
   },
@@ -1548,6 +1902,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 76.2,
+   "af_total": 1372,
    "draft_year": "2015",
    "draft_position": 44
   },
@@ -1561,6 +1918,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 14.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 74.4,
+   "af_total": 1041,
    "draft_year": "2010",
    "draft_position": 33
   },
@@ -1574,6 +1934,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 18.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 82.3,
+   "af_total": 1482,
    "draft_year": "2024",
    "draft_position": 17
   },
@@ -1587,6 +1950,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 15.0,
+   "position": "RUCK",
+   "af_avg": 69.5,
+   "af_total": 1043,
    "draft_year": "2014",
    "draft_position": 50
   },
@@ -1600,6 +1966,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 10.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 59.6,
+   "af_total": 596,
    "draft_year": "2015",
    "draft_position": 1
   },
@@ -1613,6 +1982,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 98.9,
+   "af_total": 1780,
    "draft_year": "2019",
    "draft_position": 14
   },
@@ -1626,6 +1998,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 15.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 56.4,
+   "af_total": 846,
    "draft_year": "2022",
    "draft_position": 6
   },
@@ -1639,6 +2014,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 15.0,
+   "position": "MIDFIELDER",
+   "af_avg": 79.5,
+   "af_total": 1192,
    "draft_year": "2017",
    "draft_position": 5
   },
@@ -1652,6 +2030,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 83.1,
+   "af_total": 1496,
    "draft_year": "2023",
    "draft_position": null
   },
@@ -1665,6 +2046,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 7.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 56.6,
+   "af_total": 396,
    "draft_year": "2017",
    "draft_position": 28
   },
@@ -1678,6 +2062,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 13.0,
+   "position": "MIDFIELDER",
+   "af_avg": 84.6,
+   "af_total": 1100,
    "draft_year": "2018",
    "draft_position": 44
   },
@@ -1691,6 +2078,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 9.0,
+   "position": "MIDFIELDER",
+   "af_avg": 69.9,
+   "af_total": 629,
    "draft_year": "2016",
    "draft_position": 10
   },
@@ -1704,6 +2094,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 15.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 64.0,
+   "af_total": 960,
    "draft_year": "2013",
    "draft_position": 29
   },
@@ -1717,6 +2110,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 16.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 79.6,
+   "af_total": 1273,
    "draft_year": "2014",
    "draft_position": 30
   },
@@ -1730,6 +2126,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 83.3,
+   "af_total": 1500,
    "draft_year": "2021",
    "draft_position": 8
   },
@@ -1743,6 +2142,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 12.0,
+   "position": "MIDFIELDER",
+   "af_avg": 82.2,
+   "af_total": 986,
    "draft_year": "2015",
    "draft_position": 48
   },
@@ -1756,6 +2158,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 17.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 58.3,
+   "af_total": 991,
    "draft_year": "2020",
    "draft_position": 44
   },
@@ -1769,6 +2174,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 12.0,
+   "position": "MIDFIELDER",
+   "af_avg": 91.9,
+   "af_total": 1103,
    "draft_year": "2019",
    "draft_position": 11
   },
@@ -1782,6 +2190,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 94.7,
+   "af_total": 1705,
    "draft_year": "2011",
    "draft_position": 33
   },
@@ -1795,6 +2206,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 15.0,
+   "position": "RUCK",
+   "af_avg": 65.9,
+   "af_total": 988,
    "draft_year": "2017",
    "draft_position": 30
   },
@@ -1808,6 +2222,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 64.1,
+   "af_total": 1153,
    "draft_year": "2020",
    "draft_position": 33
   },
@@ -1821,6 +2238,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 9.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 44.0,
+   "af_total": 396,
    "draft_year": "2017",
    "draft_position": null
   },
@@ -1834,6 +2254,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 17.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 68.5,
+   "af_total": 1164,
    "draft_year": "2015",
    "draft_position": 12
   },
@@ -1847,6 +2270,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 18.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 71.1,
+   "af_total": 1279,
    "draft_year": "2013",
    "draft_position": 44
   },
@@ -1860,6 +2286,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 2.0,
+   "position": "MIDFIELDER",
+   "af_avg": 80.5,
+   "af_total": 161,
    "draft_year": "2018",
    "draft_position": 5
   },
@@ -1873,6 +2302,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 69.7,
+   "af_total": 1255,
    "draft_year": "2022",
    "draft_position": 12
   },
@@ -1886,6 +2318,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 5.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 60.6,
+   "af_total": 303,
    "draft_year": "2018",
    "draft_position": null
   },
@@ -1899,6 +2334,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 15.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 68.3,
+   "af_total": 1024,
    "draft_year": "2021",
    "draft_position": 35
   },
@@ -1912,6 +2350,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 16.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 68.0,
+   "af_total": 1088,
    "draft_year": "2021",
    "draft_position": 36
   },
@@ -1925,6 +2366,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 11.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 55.2,
+   "af_total": 607,
    "draft_year": "2011",
    "draft_position": null
   },
@@ -1938,6 +2382,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 51.1,
+   "af_total": 919,
    "draft_year": "2017",
    "draft_position": 73
   },
@@ -1951,6 +2398,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 70.7,
+   "af_total": 1202,
    "draft_year": "2021",
    "draft_position": 18
   },
@@ -1964,6 +2414,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 16.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 81.8,
+   "af_total": 1309,
    "draft_year": "2016",
    "draft_position": 39
   },
@@ -1977,6 +2430,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 13.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 60.8,
+   "af_total": 790,
    "draft_year": "2018",
    "draft_position": 45
   },
@@ -1990,6 +2446,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 16.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 61.9,
+   "af_total": 990,
    "draft_year": "2017",
    "draft_position": 31
   },
@@ -2003,6 +2462,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 90.6,
+   "af_total": 1630,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -2016,6 +2478,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 82.8,
+   "af_total": 1408,
    "draft_year": "2019",
    "draft_position": 28
   },
@@ -2029,6 +2494,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 15.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 84.5,
+   "af_total": 1267,
    "draft_year": "2013",
    "draft_position": 68
   },
@@ -2042,6 +2510,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 16.0,
+   "position": "MIDFIELDER",
+   "af_avg": 83.8,
+   "af_total": 1341,
    "draft_year": "2023",
    "draft_position": 6
   },
@@ -2055,6 +2526,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 11.0,
+   "position": "MIDFIELDER",
+   "af_avg": 66.1,
+   "af_total": 727,
    "draft_year": "2023",
    "draft_position": 8
   },
@@ -2068,6 +2542,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 74.4,
+   "af_total": 1265,
    "draft_year": "2023",
    "draft_position": 59
   },
@@ -2081,6 +2558,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 75.1,
+   "af_total": 1276,
    "draft_year": "2020",
    "draft_position": null
   },
@@ -2094,6 +2574,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 14.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 72.3,
+   "af_total": 1012,
    "draft_year": "2022",
    "draft_position": 15
   },
@@ -2107,6 +2590,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 18.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 74.3,
+   "af_total": 1338,
    "draft_year": "2021",
    "draft_position": 5
   },
@@ -2120,6 +2606,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 13.0,
+   "position": "MIDFIELDER",
+   "af_avg": 70.5,
+   "af_total": 916,
    "draft_year": "2022",
    "draft_position": 4
   },
@@ -2133,6 +2622,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 14.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 71.0,
+   "af_total": 994,
    "draft_year": "2011",
    "draft_position": 7
   },
@@ -2146,6 +2638,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 7.0,
+   "position": "MIDFIELDER",
+   "af_avg": 77.4,
+   "af_total": 542,
    "draft_year": "2017",
    "draft_position": 45
   },
@@ -2159,6 +2654,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 16.0,
+   "position": "MIDFIELDER",
+   "af_avg": 64.2,
+   "af_total": 1027,
    "draft_year": "2008",
    "draft_position": 11
   },
@@ -2172,6 +2670,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 90.5,
+   "af_total": 1629,
    "draft_year": "2014",
    "draft_position": 46
   },
@@ -2185,6 +2686,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 59.2,
+   "af_total": 1066,
    "draft_year": "2014",
    "draft_position": 43
   },
@@ -2198,6 +2702,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 14.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 61.7,
+   "af_total": 864,
    "draft_year": "2018",
    "draft_position": 75
   },
@@ -2211,6 +2718,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 87.1,
+   "af_total": 1568,
    "draft_year": "2021",
    "draft_position": 26
   },
@@ -2224,6 +2734,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 58.6,
+   "af_total": 821,
    "draft_year": "2014",
    "draft_position": null
   },
@@ -2237,6 +2750,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 15.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 73.6,
+   "af_total": 1104,
    "draft_year": "2015",
    "draft_position": 15
   },
@@ -2250,6 +2766,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 15.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 77.1,
+   "af_total": 1157,
    "draft_year": "2017",
    "draft_position": 33
   },
@@ -2263,6 +2782,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 65.4,
+   "af_total": 1178,
    "draft_year": "2014",
    "draft_position": null
   },
@@ -2276,6 +2798,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 17.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 74.6,
+   "af_total": 1268,
    "draft_year": "2014",
    "draft_position": 40
   },
@@ -2289,6 +2814,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 79.2,
+   "af_total": 1426,
    "draft_year": "2022",
    "draft_position": 3
   },
@@ -2302,6 +2830,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 17.0,
+   "position": "RUCK",
+   "af_avg": 62.8,
+   "af_total": 1068,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -2315,6 +2846,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 12.0,
+   "position": "MIDFIELDER",
+   "af_avg": 66.8,
+   "af_total": 802,
    "draft_year": "2015",
    "draft_position": 7
   },
@@ -2328,6 +2862,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 16.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 62.8,
+   "af_total": 1005,
    "draft_year": "2021",
    "draft_position": 24
   },
@@ -2341,6 +2878,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 1.0,
+   "position": "RUCK",
+   "af_avg": 31.0,
+   "af_total": 31,
    "draft_year": "2016",
    "draft_position": null
   },
@@ -2354,6 +2894,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 10.0,
+   "position": "MIDFIELDER",
+   "af_avg": 73.4,
+   "af_total": 734,
    "draft_year": "2016",
    "draft_position": null
   },
@@ -2367,6 +2910,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 83.6,
+   "af_total": 1421,
    "draft_year": "2023",
    "draft_position": 63
   },
@@ -2380,6 +2926,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 14.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 38.2,
+   "af_total": 535,
    "draft_year": "2013",
    "draft_position": 43
   },
@@ -2393,6 +2942,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 77.4,
+   "af_total": 1393,
    "draft_year": "2016",
    "draft_position": 11
   },
@@ -2406,6 +2958,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 59.4,
+   "af_total": 1010,
    "draft_year": "2012",
    "draft_position": 9
   },
@@ -2419,6 +2974,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 13.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 56.2,
+   "af_total": 730,
    "draft_year": "2022",
    "draft_position": 9
   },
@@ -2432,6 +2990,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 9.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 65.9,
+   "af_total": 593,
    "draft_year": "2013",
    "draft_position": 95
   },
@@ -2445,6 +3006,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 75.6,
+   "af_total": 1361,
    "draft_year": "2023",
    "draft_position": 2
   },
@@ -2458,6 +3022,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 17.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 84.9,
+   "af_total": 1443,
    "draft_year": "2023",
    "draft_position": 18
   },
@@ -2471,6 +3038,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 17.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 75.9,
+   "af_total": 1290,
    "draft_year": "2016",
    "draft_position": 28
   },
@@ -2484,6 +3054,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 4.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 26.5,
+   "af_total": 106,
    "draft_year": "2014",
    "draft_position": 9
   },
@@ -2497,6 +3070,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 11.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 62.8,
+   "af_total": 691,
    "draft_year": "2019",
    "draft_position": 14
   },
@@ -2510,6 +3086,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 59.9,
+   "af_total": 1019,
    "draft_year": "2021",
    "draft_position": 21
   },
@@ -2523,6 +3102,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2022",
    "draft_position": 21
   },
@@ -2536,6 +3118,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 12.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 52.9,
+   "af_total": 635,
    "draft_year": "2017",
    "draft_position": 17
   },
@@ -2549,6 +3134,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 17.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 71.7,
+   "af_total": 1219,
    "draft_year": "2023",
    "draft_position": 31
   },
@@ -2562,6 +3150,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 81.2,
+   "af_total": 1381,
    "draft_year": "2016",
    "draft_position": 66
   },
@@ -2575,6 +3166,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 69.6,
+   "af_total": 974,
    "draft_year": "2021",
    "draft_position": 34
   },
@@ -2588,6 +3182,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 17.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 56.9,
+   "af_total": 967,
    "draft_year": "2019",
    "draft_position": 19
   },
@@ -2601,6 +3198,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 17.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 60.6,
+   "af_total": 1030,
    "draft_year": "2010",
    "draft_position": 26
   },
@@ -2614,6 +3214,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 13.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 81.9,
+   "af_total": 1065,
    "draft_year": "2017",
    "draft_position": 51
   },
@@ -2627,6 +3230,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 15.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 90.7,
+   "af_total": 1360,
    "draft_year": "2013",
    "draft_position": 86
   },
@@ -2640,6 +3246,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 13.0,
+   "position": "MIDFIELDER",
+   "af_avg": 74.0,
+   "af_total": 962,
    "draft_year": "2016",
    "draft_position": 17
   },
@@ -2653,6 +3262,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 17.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 73.3,
+   "af_total": 1246,
    "draft_year": "2018",
    "draft_position": 57
   },
@@ -2666,6 +3278,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 8.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 71.3,
+   "af_total": 570,
    "draft_year": "2020",
    "draft_position": 13
   },
@@ -2679,6 +3294,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 10.0,
+   "position": "MIDFIELDER",
+   "af_avg": 71.9,
+   "af_total": 719,
    "draft_year": "2019",
    "draft_position": 7
   },
@@ -2692,6 +3310,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 13.0,
+   "position": "MIDFIELDER",
+   "af_avg": 69.8,
+   "af_total": 907,
    "draft_year": "2010",
    "draft_position": 9
   },
@@ -2705,6 +3326,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 56.5,
+   "af_total": 1017,
    "draft_year": "2021",
    "draft_position": 21
   },
@@ -2718,6 +3342,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 18.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 66.2,
+   "af_total": 1191,
    "draft_year": "2023",
    "draft_position": 11
   },
@@ -2731,6 +3358,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 74.4,
+   "af_total": 1041,
    "draft_year": "2012",
    "draft_position": 7
   },
@@ -2744,6 +3374,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 13.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 63.2,
+   "af_total": 822,
    "draft_year": "2022",
    "draft_position": 1
   },
@@ -2757,6 +3390,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 11.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 44.3,
+   "af_total": 487,
    "draft_year": "2019",
    "draft_position": 14
   },
@@ -2770,6 +3406,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 12.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 57.7,
+   "af_total": 692,
    "draft_year": "2007",
    "draft_position": 75
   },
@@ -2783,6 +3422,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 13.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 54.6,
+   "af_total": 710,
    "draft_year": "2018",
    "draft_position": null
   },
@@ -2796,6 +3438,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 16.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 73.0,
+   "af_total": 1168,
    "draft_year": "2024",
    "draft_position": 19
   },
@@ -2809,6 +3454,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 13.0,
+   "position": "RUCK",
+   "af_avg": 71.0,
+   "af_total": 923,
    "draft_year": "2014",
    "draft_position": 8
   },
@@ -2822,6 +3470,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 10.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 72.1,
+   "af_total": 721,
    "draft_year": "2017",
    "draft_position": 27
   },
@@ -2835,6 +3486,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 79.4,
+   "af_total": 1430,
    "draft_year": "2022",
    "draft_position": 48
   },
@@ -2848,6 +3502,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 9.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 70.8,
+   "af_total": 637,
    "draft_year": "2016",
    "draft_position": 53
   },
@@ -2861,6 +3518,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 16.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 98.8,
+   "af_total": 1581,
    "draft_year": "2023",
    "draft_position": 54
   },
@@ -2874,6 +3534,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 16.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 72.5,
+   "af_total": 1160,
    "draft_year": "2018",
    "draft_position": 13
   },
@@ -2887,6 +3550,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 10.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 57.3,
+   "af_total": 573,
    "draft_year": "2018",
    "draft_position": 22
   },
@@ -2900,6 +3566,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 84.7,
+   "af_total": 1525,
    "draft_year": "2021",
    "draft_position": 60
   },
@@ -2913,6 +3582,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 18.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 50.8,
+   "af_total": 915,
    "draft_year": "2014",
    "draft_position": 84
   },
@@ -2926,6 +3598,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 17.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 60.0,
+   "af_total": 1020,
    "draft_year": "2017",
    "draft_position": 63
   },
@@ -2939,6 +3614,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 72.2,
+   "af_total": 1227,
    "draft_year": "2012",
    "draft_position": 41
   },
@@ -2952,6 +3630,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 9.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 49.1,
+   "af_total": 442,
    "draft_year": "2013",
    "draft_position": 2
   },
@@ -2965,6 +3646,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 17.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 69.3,
+   "af_total": 1178,
    "draft_year": "2016",
    "draft_position": 21
   },
@@ -2978,6 +3662,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 3.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 49.0,
+   "af_total": 147,
    "draft_year": "2015",
    "draft_position": null
   },
@@ -2991,6 +3678,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 67.2,
+   "af_total": 1209,
    "draft_year": "2025",
    "draft_position": 7
   },
@@ -3004,6 +3694,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 57.8,
+   "af_total": 1040,
    "draft_year": "2013",
    "draft_position": 25
   },
@@ -3017,6 +3710,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 84.9,
+   "af_total": 1528,
    "draft_year": "2021",
    "draft_position": 47
   },
@@ -3030,6 +3726,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 16.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 35.9,
+   "af_total": 574,
    "draft_year": "2013",
    "draft_position": 37
   },
@@ -3043,6 +3742,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 64.8,
+   "af_total": 1167,
    "draft_year": "2021",
    "draft_position": 20
   },
@@ -3056,6 +3758,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 71.6,
+   "af_total": 1002,
    "draft_year": "2018",
    "draft_position": 11
   },
@@ -3069,6 +3774,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 8.0,
+   "position": "MIDFIELDER",
+   "af_avg": 71.6,
+   "af_total": 573,
    "draft_year": "2016",
    "draft_position": 74
   },
@@ -3082,6 +3790,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 16.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 90.3,
+   "af_total": 1444,
    "draft_year": "2016",
    "draft_position": null
   },
@@ -3095,6 +3806,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 11.0,
+   "position": "MIDFIELDER",
+   "af_avg": 55.8,
+   "af_total": 614,
    "draft_year": "2014",
    "draft_position": 13
   },
@@ -3108,6 +3822,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 6.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 96.5,
+   "af_total": 579,
    "draft_year": "2020",
    "draft_position": 32
   },
@@ -3121,6 +3838,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 17.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 85.2,
+   "af_total": 1448,
    "draft_year": "2014",
    "draft_position": 5
   },
@@ -3134,6 +3854,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 68.1,
+   "af_total": 1225,
    "draft_year": "2016",
    "draft_position": 33
   },
@@ -3147,6 +3870,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 11.0,
+   "position": "MIDFIELDER",
+   "af_avg": 62.7,
+   "af_total": 690,
    "draft_year": "2016",
    "draft_position": 20
   },
@@ -3160,6 +3886,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 48.5,
+   "af_total": 873,
    "draft_year": "2018",
    "draft_position": 6
   },
@@ -3173,6 +3902,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 14.0,
+   "position": "RUCK",
+   "af_avg": 83.6,
+   "af_total": 1171,
    "draft_year": "2018",
    "draft_position": 35
   },
@@ -3186,6 +3918,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 17.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 61.8,
+   "af_total": 1051,
    "draft_year": "2017",
    "draft_position": 25
   },
@@ -3199,6 +3934,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 15.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 58.8,
+   "af_total": 882,
    "draft_year": "2021",
    "draft_position": 33
   },
@@ -3212,6 +3950,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 53.7,
+   "af_total": 913,
    "draft_year": "2015",
    "draft_position": 67
   },
@@ -3225,6 +3966,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 16.0,
+   "position": "MIDFIELDER",
+   "af_avg": 74.8,
+   "af_total": 1196,
    "draft_year": "2022",
    "draft_position": 7
   },
@@ -3238,6 +3982,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 79.8,
+   "af_total": 1436,
    "draft_year": "2014",
    "draft_position": 54
   },
@@ -3251,6 +3998,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 87.9,
+   "af_total": 1495,
    "draft_year": "2025",
    "draft_position": 1
   },
@@ -3264,6 +4014,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 14.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 39.8,
+   "af_total": 557,
    "draft_year": "2022",
    "draft_position": null
   },
@@ -3277,6 +4030,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 58.7,
+   "af_total": 1056,
    "draft_year": "2018",
    "draft_position": 33
   },
@@ -3290,6 +4046,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 73.3,
+   "af_total": 1026,
    "draft_year": "2024",
    "draft_position": 2
   },
@@ -3303,6 +4062,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 5.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 71.6,
+   "af_total": 358,
    "draft_year": "2013",
    "draft_position": 9
   },
@@ -3316,6 +4078,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 13.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 47.9,
+   "af_total": 623,
    "draft_year": "2017",
    "draft_position": 26
   },
@@ -3329,6 +4094,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 64.4,
+   "af_total": 1159,
    "draft_year": "2021",
    "draft_position": 19
   },
@@ -3342,6 +4110,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2018",
    "draft_position": null
   },
@@ -3355,6 +4126,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 13.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 60.0,
+   "af_total": 780,
    "draft_year": "2019",
    "draft_position": 61
   },
@@ -3368,6 +4142,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 17.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 65.0,
+   "af_total": 1105,
    "draft_year": "2023",
    "draft_position": null
   },
@@ -3381,6 +4158,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 15.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 53.1,
+   "af_total": 796,
    "draft_year": "2016",
    "draft_position": 41
   },
@@ -3394,6 +4174,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 16.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 52.8,
+   "af_total": 844,
    "draft_year": "2016",
    "draft_position": 25
   },
@@ -3407,6 +4190,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 16.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 78.4,
+   "af_total": 1255,
    "draft_year": "2024",
    "draft_position": 41
   },
@@ -3420,6 +4206,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 0.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2021",
    "draft_position": null
   },
@@ -3433,6 +4222,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 9.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 46.9,
+   "af_total": 422,
    "draft_year": "2017",
    "draft_position": null
   },
@@ -3446,6 +4238,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 14.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 69.8,
+   "af_total": 977,
    "draft_year": "2016",
    "draft_position": 14
   },
@@ -3459,6 +4254,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 76.0,
+   "af_total": 1368,
    "draft_year": "2024",
    "draft_position": 5
   },
@@ -3472,6 +4270,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 12.0,
+   "position": "MIDFIELDER",
+   "af_avg": 66.6,
+   "af_total": 799,
    "draft_year": "2015",
    "draft_position": 43
   },
@@ -3485,6 +4286,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 76.8,
+   "af_total": 1383,
    "draft_year": "2013",
    "draft_position": 52
   },
@@ -3498,6 +4302,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 78.0,
+   "af_total": 1404,
    "draft_year": "2014",
    "draft_position": 11
   },
@@ -3511,6 +4318,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 13.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 55.3,
+   "af_total": 719,
    "draft_year": "2021",
    "draft_position": 17
   },
@@ -3524,6 +4334,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 59.4,
+   "af_total": 1070,
    "draft_year": "2016",
    "draft_position": 73
   },
@@ -3537,6 +4350,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 18.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 64.8,
+   "af_total": 1166,
    "draft_year": "2015",
    "draft_position": 53
   },
@@ -3550,6 +4366,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 12.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 65.7,
+   "af_total": 788,
    "draft_year": "2017",
    "draft_position": 12
   },
@@ -3563,6 +4382,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 14.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 43.9,
+   "af_total": 615,
    "draft_year": "2016",
    "draft_position": 16
   },
@@ -3576,6 +4398,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 6.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 59.2,
+   "af_total": 355,
    "draft_year": "2016",
    "draft_position": 7
   },
@@ -3589,6 +4414,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 65.2,
+   "af_total": 1174,
    "draft_year": "2018",
    "draft_position": 18
   },
@@ -3602,6 +4430,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 17.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 66.4,
+   "af_total": 1129,
    "draft_year": "2015",
    "draft_position": 10
   },
@@ -3615,6 +4446,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 12.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 52.9,
+   "af_total": 635,
    "draft_year": "2015",
    "draft_position": 36
   },
@@ -3628,6 +4462,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 73.1,
+   "af_total": 1316,
    "draft_year": "2016",
    "draft_position": 4
   },
@@ -3641,6 +4478,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 10.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 40.9,
+   "af_total": 409,
    "draft_year": "2024",
    "draft_position": 13
   },
@@ -3654,6 +4494,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 56.5,
+   "af_total": 1017,
    "draft_year": "2020",
    "draft_position": null
   },
@@ -3667,6 +4510,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 62.9,
+   "af_total": 1132,
    "draft_year": "2020",
    "draft_position": 14
   },
@@ -3680,6 +4526,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 17.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 54.4,
+   "af_total": 924,
    "draft_year": "2019",
    "draft_position": 31
   },
@@ -3693,6 +4542,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 10.0,
+   "position": "MIDFIELDER",
+   "af_avg": 65.5,
+   "af_total": 655,
    "draft_year": "2023",
    "draft_position": 1
   },
@@ -3706,6 +4558,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 67.4,
+   "af_total": 1146,
    "draft_year": "2019",
    "draft_position": 59
   },
@@ -3719,6 +4574,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 16.0,
+   "position": "MIDFIELDER",
+   "af_avg": 59.0,
+   "af_total": 944,
    "draft_year": "2023",
    "draft_position": 7
   },
@@ -3732,6 +4590,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 16.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 50.3,
+   "af_total": 805,
    "draft_year": "2020",
    "draft_position": 16
   },
@@ -3745,6 +4606,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 15.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 60.8,
+   "af_total": 912,
    "draft_year": "2016",
    "draft_position": null
   },
@@ -3758,6 +4622,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 16.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 59.8,
+   "af_total": 956,
    "draft_year": "2019",
    "draft_position": 41
   },
@@ -3771,6 +4638,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 17.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 66.6,
+   "af_total": 1133,
    "draft_year": "2014",
    "draft_position": 14
   },
@@ -3784,6 +4654,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 11.0,
+   "position": "MIDFIELDER",
+   "af_avg": 49.1,
+   "af_total": 540,
    "draft_year": "2024",
    "draft_position": 51
   },
@@ -3797,6 +4670,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 13.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 59.7,
+   "af_total": 776,
    "draft_year": "2021",
    "draft_position": 29
   },
@@ -3810,6 +4686,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 69.4,
+   "af_total": 1250,
    "draft_year": "2021",
    "draft_position": 10
   },
@@ -3823,6 +4702,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 58.1,
+   "af_total": 1045,
    "draft_year": "2021",
    "draft_position": null
   },
@@ -3836,6 +4718,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 62.3,
+   "af_total": 1121,
    "draft_year": "2016",
    "draft_position": 11
   },
@@ -3849,6 +4734,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 17.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 54.7,
+   "af_total": 930,
    "draft_year": "2020",
    "draft_position": 17
   },
@@ -3862,6 +4750,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 11.0,
+   "position": "MIDFIELDER",
+   "af_avg": 72.4,
+   "af_total": 796,
    "draft_year": "2022",
    "draft_position": 11
   },
@@ -3875,6 +4766,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 15.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 65.8,
+   "af_total": 987,
    "draft_year": "2014",
    "draft_position": 17
   },
@@ -3888,6 +4782,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 15.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 33.1,
+   "af_total": 496,
    "draft_year": "2022",
    "draft_position": null
   },
@@ -3901,6 +4798,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 6.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 38.3,
+   "af_total": 230,
    "draft_year": "2023",
    "draft_position": 12
   },
@@ -3914,6 +4814,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 57.1,
+   "af_total": 970,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -3927,6 +4830,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 13.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 60.7,
+   "af_total": 789,
    "draft_year": "2020",
    "draft_position": 9
   },
@@ -3940,6 +4846,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 11.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 47.5,
+   "af_total": 523,
    "draft_year": "2025",
    "draft_position": 18
   },
@@ -3953,6 +4862,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 73.4,
+   "af_total": 1322,
    "draft_year": "2019",
    "draft_position": 5
   },
@@ -3966,6 +4878,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 18.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 47.2,
+   "af_total": 849,
    "draft_year": "2018",
    "draft_position": null
   },
@@ -3979,6 +4894,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 1.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 34.0,
+   "af_total": 34,
    "draft_year": "2020",
    "draft_position": null
   },
@@ -3992,6 +4910,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 76.3,
+   "af_total": 1373,
    "draft_year": "2021",
    "draft_position": 8
   },
@@ -4005,6 +4926,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 4.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 43.3,
+   "af_total": 173,
    "draft_year": "2015",
    "draft_position": 8
   },
@@ -4018,6 +4942,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 75.2,
+   "af_total": 1279,
    "draft_year": "2023",
    "draft_position": 44
   },
@@ -4031,6 +4958,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 14.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 53.1,
+   "af_total": 743,
    "draft_year": "2017",
    "draft_position": 37
   },
@@ -4044,6 +4974,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 13.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 69.0,
+   "af_total": 897,
    "draft_year": "2016",
    "draft_position": null
   },
@@ -4057,6 +4990,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 61.7,
+   "af_total": 1049,
    "draft_year": "2022",
    "draft_position": 30
   },
@@ -4070,6 +5006,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 17.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 63.5,
+   "af_total": 1079,
    "draft_year": "2013",
    "draft_position": 8
   },
@@ -4083,6 +5022,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 51.3,
+   "af_total": 923,
    "draft_year": "2021",
    "draft_position": 31
   },
@@ -4096,6 +5038,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 10.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 44.4,
+   "af_total": 444,
    "draft_year": "2023",
    "draft_position": 10
   },
@@ -4109,6 +5054,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 58.4,
+   "af_total": 1052,
    "draft_year": "2020",
    "draft_position": 43
   },
@@ -4122,6 +5070,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2012",
    "draft_position": 26
   },
@@ -4135,6 +5086,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 16.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 56.8,
+   "af_total": 908,
    "draft_year": "2021",
    "draft_position": 44
   },
@@ -4148,6 +5102,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 72.3,
+   "af_total": 1301,
    "draft_year": "2024",
    "draft_position": 12
   },
@@ -4161,6 +5118,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 1.0,
+   "position": "RUCK",
+   "af_avg": 80.0,
+   "af_total": 80,
    "draft_year": "2008",
    "draft_position": 47
   },
@@ -4174,6 +5134,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 60.5,
+   "af_total": 1089,
    "draft_year": "2021",
    "draft_position": 8
   },
@@ -4187,6 +5150,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 5.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 48.4,
+   "af_total": 242,
    "draft_year": "2010",
    "draft_position": 24
   },
@@ -4200,6 +5166,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 7.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 52.9,
+   "af_total": 370,
    "draft_year": "2018",
    "draft_position": null
   },
@@ -4213,6 +5182,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 14.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 58.3,
+   "af_total": 816,
    "draft_year": "2012",
    "draft_position": 46
   },
@@ -4226,6 +5198,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 16.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 61.6,
+   "af_total": 985,
    "draft_year": "2014",
    "draft_position": 20
   },
@@ -4239,6 +5214,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 51.0,
+   "af_total": 918,
    "draft_year": "2020",
    "draft_position": 37
   },
@@ -4252,6 +5230,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 8.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 48.4,
+   "af_total": 387,
    "draft_year": "2016",
    "draft_position": 43
   },
@@ -4265,6 +5246,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 17.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 68.9,
+   "af_total": 1172,
    "draft_year": "2019",
    "draft_position": 18
   },
@@ -4278,6 +5262,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 80.9,
+   "af_total": 1132,
    "draft_year": "2015",
    "draft_position": 5
   },
@@ -4291,6 +5278,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 75.1,
+   "af_total": 1351,
    "draft_year": "2016",
    "draft_position": 77
   },
@@ -4304,6 +5294,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 47.4,
+   "af_total": 853,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -4317,6 +5310,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 61.1,
+   "af_total": 1039,
    "draft_year": "2023",
    "draft_position": null
   },
@@ -4330,6 +5326,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 15.0,
+   "position": "MIDFIELDER",
+   "af_avg": 62.1,
+   "af_total": 932,
    "draft_year": "2020",
    "draft_position": 18
   },
@@ -4343,6 +5342,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 7.0,
+   "position": "RUCK",
+   "af_avg": 43.4,
+   "af_total": 304,
    "draft_year": "2016",
    "draft_position": 38
   },
@@ -4356,6 +5358,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 2.0,
+   "position": "MIDFIELDER",
+   "af_avg": 54.0,
+   "af_total": 108,
    "draft_year": "2015",
    "draft_position": 20
   },
@@ -4369,6 +5374,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 62.3,
+   "af_total": 1122,
    "draft_year": "2023",
    "draft_position": 13
   },
@@ -4382,6 +5390,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 9.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 51.3,
+   "af_total": 462,
    "draft_year": "2019",
    "draft_position": 25
   },
@@ -4395,6 +5406,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 5.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 56.0,
+   "af_total": 280,
    "draft_year": "2010",
    "draft_position": 53
   },
@@ -4408,6 +5422,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 10.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 45.3,
+   "af_total": 453,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -4421,6 +5438,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 17.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 58.1,
+   "af_total": 988,
    "draft_year": "2023",
    "draft_position": 10
   },
@@ -4434,6 +5454,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 1.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 67.0,
+   "af_total": 67,
    "draft_year": "2020",
    "draft_position": 5
   },
@@ -4447,6 +5470,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 7.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 48.4,
+   "af_total": 339,
    "draft_year": "2015",
    "draft_position": 18
   },
@@ -4460,6 +5486,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 13.0,
+   "position": "MIDFIELDER",
+   "af_avg": 58.7,
+   "af_total": 763,
    "draft_year": "2022",
    "draft_position": 19
   },
@@ -4473,6 +5502,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 5.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 65.2,
+   "af_total": 326,
    "draft_year": "2020",
    "draft_position": null
   },
@@ -4486,6 +5518,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 11.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 60.0,
+   "af_total": 660,
    "draft_year": "2017",
    "draft_position": null
   },
@@ -4499,6 +5534,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 4.0,
+   "position": "MIDFIELDER",
+   "af_avg": 72.3,
+   "af_total": 289,
    "draft_year": "2024",
    "draft_position": 9
   },
@@ -4512,6 +5550,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 9.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 61.3,
+   "af_total": 552,
    "draft_year": "2019",
    "draft_position": 51
   },
@@ -4525,6 +5566,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 16.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 59.8,
+   "af_total": 956,
    "draft_year": "2011",
    "draft_position": 2
   },
@@ -4538,6 +5582,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 18.0,
+   "position": "RUCK",
+   "af_avg": 85.3,
+   "af_total": 1535,
    "draft_year": "2021",
    "draft_position": 12
   },
@@ -4551,6 +5598,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 15.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 63.7,
+   "af_total": 955,
    "draft_year": "2018",
    "draft_position": null
   },
@@ -4564,6 +5614,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 11.0,
+   "position": "MIDFIELDER",
+   "af_avg": 66.1,
+   "af_total": 727,
    "draft_year": "2020",
    "draft_position": 27
   },
@@ -4577,6 +5630,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 12.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 48.6,
+   "af_total": 583,
    "draft_year": "2023",
    "draft_position": 26
   },
@@ -4590,6 +5646,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 15.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 93.3,
+   "af_total": 1400,
    "draft_year": "2016",
    "draft_position": null
   },
@@ -4603,6 +5662,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 9.0,
+   "position": "MIDFIELDER",
+   "af_avg": 65.6,
+   "af_total": 590,
    "draft_year": "2023",
    "draft_position": 4
   },
@@ -4616,6 +5678,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 66.3,
+   "af_total": 1194,
    "draft_year": "2016",
    "draft_position": 76
   },
@@ -4629,6 +5694,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2013",
    "draft_position": 2
   },
@@ -4642,6 +5710,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 6.0,
+   "position": "MIDFIELDER",
+   "af_avg": 58.0,
+   "af_total": 348,
    "draft_year": "2012",
    "draft_position": 1
   },
@@ -4655,6 +5726,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 6.0,
+   "position": "MIDFIELDER",
+   "af_avg": 87.7,
+   "af_total": 526,
    "draft_year": "2019",
    "draft_position": 13
   },
@@ -4668,6 +5742,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 10.0,
+   "position": "MIDFIELDER",
+   "af_avg": 60.9,
+   "af_total": 609,
    "draft_year": "2019",
    "draft_position": 52
   },
@@ -4681,6 +5758,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 18.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 56.1,
+   "af_total": 1010,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -4694,6 +5774,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 16.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 69.8,
+   "af_total": 1116,
    "draft_year": "2011",
    "draft_position": 30
   },
@@ -4707,6 +5790,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 64.0,
+   "af_total": 896,
    "draft_year": "2023",
    "draft_position": 12
   },
@@ -4720,6 +5806,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 60.2,
+   "af_total": 1083,
    "draft_year": "2025",
    "draft_position": 10
   },
@@ -4733,6 +5822,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 59.9,
+   "af_total": 1079,
    "draft_year": "2021",
    "draft_position": 39
   },
@@ -4746,6 +5838,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 11.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 38.5,
+   "af_total": 424,
    "draft_year": "2016",
    "draft_position": 8
   },
@@ -4759,6 +5854,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 18.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 57.7,
+   "af_total": 1039,
    "draft_year": "2020",
    "draft_position": 10
   },
@@ -4772,6 +5870,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 4.0,
+   "position": "RUCK",
+   "af_avg": 58.0,
+   "af_total": 232,
    "draft_year": "2015",
    "draft_position": 41
   },
@@ -4785,6 +5886,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 5.0,
+   "position": "MIDFIELDER",
+   "af_avg": 85.2,
+   "af_total": 426,
    "draft_year": "2013",
    "draft_position": 19
   },
@@ -4798,6 +5902,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 16.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 40.9,
+   "af_total": 654,
    "draft_year": "2025",
    "draft_position": 13
   },
@@ -4811,6 +5918,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 69.1,
+   "af_total": 1244,
    "draft_year": "2020",
    "draft_position": 25
   },
@@ -4824,6 +5934,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2021",
    "draft_position": 27
   },
@@ -4837,6 +5950,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 10.0,
+   "position": "MIDFIELDER",
+   "af_avg": 57.0,
+   "af_total": 570,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -4850,6 +5966,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 8.0,
+   "position": "MIDFIELDER",
+   "af_avg": 49.0,
+   "af_total": 392,
    "draft_year": "2019",
    "draft_position": 46
   },
@@ -4863,6 +5982,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 14.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 45.6,
+   "af_total": 638,
    "draft_year": "2015",
    "draft_position": 21
   },
@@ -4876,6 +5998,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 62.1,
+   "af_total": 1117,
    "draft_year": "2022",
    "draft_position": 17
   },
@@ -4889,6 +6014,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 8.0,
+   "position": "MIDFIELDER",
+   "af_avg": 67.6,
+   "af_total": 541,
    "draft_year": "2024",
    "draft_position": 1
   },
@@ -4902,6 +6030,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 10.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 53.3,
+   "af_total": 533,
    "draft_year": "2018",
    "draft_position": 55
   },
@@ -4915,6 +6046,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 13.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 71.8,
+   "af_total": 933,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -4928,6 +6062,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 79.1,
+   "af_total": 1423,
    "draft_year": "2024",
    "draft_position": 3
   },
@@ -4941,6 +6078,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 16.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 69.4,
+   "af_total": 1111,
    "draft_year": "2022",
    "draft_position": 10
   },
@@ -4954,6 +6094,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 15.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 57.2,
+   "af_total": 858,
    "draft_year": "2013",
    "draft_position": 1
   },
@@ -4967,6 +6110,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 51.6,
+   "af_total": 929,
    "draft_year": "2024",
    "draft_position": 30
   },
@@ -4980,6 +6126,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 2.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 30.0,
+   "af_total": 60,
    "draft_year": "2017",
    "draft_position": 22
   },
@@ -4993,6 +6142,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 11.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 45.6,
+   "af_total": 502,
    "draft_year": "2012",
    "draft_position": 14
   },
@@ -5006,6 +6158,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 17.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 51.2,
+   "af_total": 871,
    "draft_year": "2022",
    "draft_position": 55
   },
@@ -5019,6 +6174,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 6.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 49.5,
+   "af_total": 297,
    "draft_year": "2017",
    "draft_position": 18
   },
@@ -5032,6 +6190,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 12.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 58.3,
+   "af_total": 700,
    "draft_year": "2021",
    "draft_position": 2
   },
@@ -5045,6 +6206,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 2.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 4.0,
+   "af_total": 8,
    "draft_year": "2018",
    "draft_position": 18
   },
@@ -5058,6 +6222,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 10.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 54.5,
+   "af_total": 545,
    "draft_year": "2020",
    "draft_position": null
   },
@@ -5071,6 +6238,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 6.0,
+   "position": "MIDFIELDER",
+   "af_avg": 84.3,
+   "af_total": 506,
    "draft_year": "2016",
    "draft_position": 5
   },
@@ -5084,6 +6254,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 16.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 81.1,
+   "af_total": 1298,
    "draft_year": "2020",
    "draft_position": 12
   },
@@ -5097,6 +6270,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 7.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 51.9,
+   "af_total": 363,
    "draft_year": "2017",
    "draft_position": 21
   },
@@ -5110,6 +6286,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 9.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 48.7,
+   "af_total": 438,
    "draft_year": "2013",
    "draft_position": 22
   },
@@ -5123,6 +6302,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 16.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 55.4,
+   "af_total": 887,
    "draft_year": "2020",
    "draft_position": 4
   },
@@ -5136,6 +6318,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 5.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 45.0,
+   "af_total": 225,
    "draft_year": "2015",
    "draft_position": 14
   },
@@ -5149,6 +6334,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 12.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 55.8,
+   "af_total": 669,
    "draft_year": "2016",
    "draft_position": null
   },
@@ -5162,6 +6350,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 52.9,
+   "af_total": 952,
    "draft_year": "2024",
    "draft_position": 15
   },
@@ -5175,6 +6366,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2020",
    "draft_position": 22
   },
@@ -5188,6 +6382,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 72.6,
+   "af_total": 1235,
    "draft_year": "2021",
    "draft_position": 53
   },
@@ -5201,6 +6398,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 6.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 45.2,
+   "af_total": 271,
    "draft_year": "2022",
    "draft_position": 14
   },
@@ -5214,6 +6414,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 10.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 46.9,
+   "af_total": 469,
    "draft_year": "2010",
    "draft_position": 11
   },
@@ -5227,6 +6430,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2010",
    "draft_position": null
   },
@@ -5240,6 +6446,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 8.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 37.4,
+   "af_total": 299,
    "draft_year": "2016",
    "draft_position": 49
   },
@@ -5253,6 +6462,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2018",
    "draft_position": 24
   },
@@ -5266,6 +6478,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 6.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 41.5,
+   "af_total": 249,
    "draft_year": "2017",
    "draft_position": 19
   },
@@ -5279,6 +6494,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 18.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 57.3,
+   "af_total": 1032,
    "draft_year": "2024",
    "draft_position": 9
   },
@@ -5292,6 +6510,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 10.0,
+   "position": "RUCK",
+   "af_avg": 62.7,
+   "af_total": 627,
    "draft_year": "2019",
    "draft_position": 38
   },
@@ -5305,6 +6526,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 17.0,
+   "position": "MIDFIELDER",
+   "af_avg": 79.1,
+   "af_total": 1344,
    "draft_year": "2025",
    "draft_position": 1
   },
@@ -5318,6 +6542,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 5.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 57.8,
+   "af_total": 289,
    "draft_year": "2011",
    "draft_position": null
   },
@@ -5331,6 +6558,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 6.0,
+   "position": "MIDFIELDER",
+   "af_avg": 59.3,
+   "af_total": 356,
    "draft_year": "2020",
    "draft_position": null
   },
@@ -5344,6 +6574,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 1.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 47.0,
+   "af_total": 47,
    "draft_year": "2018",
    "draft_position": 37
   },
@@ -5357,6 +6590,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 12.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 51.1,
+   "af_total": 613,
    "draft_year": "2012",
    "draft_position": 107
   },
@@ -5370,6 +6606,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 3.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 34.0,
+   "af_total": 102,
    "draft_year": "2017",
    "draft_position": 66
   },
@@ -5383,6 +6622,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 14.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 44.1,
+   "af_total": 618,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -5396,6 +6638,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 18.0,
+   "position": "MIDFIELDER",
+   "af_avg": 52.1,
+   "af_total": 937,
    "draft_year": "2024",
    "draft_position": 65
   },
@@ -5409,6 +6654,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 4.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 63.3,
+   "af_total": 253,
    "draft_year": "2017",
    "draft_position": 7
   },
@@ -5422,6 +6670,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 12.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 62.2,
+   "af_total": 746,
    "draft_year": "2021",
    "draft_position": 28
   },
@@ -5435,6 +6686,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 16.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 61.9,
+   "af_total": 991,
    "draft_year": "2023",
    "draft_position": 12
   },
@@ -5448,6 +6702,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 15.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 50.4,
+   "af_total": 756,
    "draft_year": "2017",
    "draft_position": 28
   },
@@ -5461,6 +6718,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 61.4,
+   "af_total": 1105,
    "draft_year": "2019",
    "draft_position": 17
   },
@@ -5474,6 +6734,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 13.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 44.6,
+   "af_total": 580,
    "draft_year": "2023",
    "draft_position": 3
   },
@@ -5487,6 +6750,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 7.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 48.4,
+   "af_total": 339,
    "draft_year": "2021",
    "draft_position": 57
   },
@@ -5500,6 +6766,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 13.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 44.9,
+   "af_total": 584,
    "draft_year": "2018",
    "draft_position": 19
   },
@@ -5513,6 +6782,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 16.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 47.7,
+   "af_total": 763,
    "draft_year": "2024",
    "draft_position": 42
   },
@@ -5526,6 +6798,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 10.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 42.0,
+   "af_total": 420,
    "draft_year": "2022",
    "draft_position": 20
   },
@@ -5539,6 +6814,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 15.0,
+   "position": "MIDFIELDER",
+   "af_avg": 54.5,
+   "af_total": 818,
    "draft_year": "2025",
    "draft_position": 8
   },
@@ -5552,6 +6830,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 5.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 48.2,
+   "af_total": 241,
    "draft_year": "2024",
    "draft_position": 1
   },
@@ -5565,6 +6846,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 11.0,
+   "position": "RUCK",
+   "af_avg": 73.9,
+   "af_total": 813,
    "draft_year": "2021",
    "draft_position": 5
   },
@@ -5578,6 +6862,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 6.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 56.8,
+   "af_total": 341,
    "draft_year": "2020",
    "draft_position": 7
   },
@@ -5591,6 +6878,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 4.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 34.5,
+   "af_total": 138,
    "draft_year": "2021",
    "draft_position": null
   },
@@ -5604,6 +6894,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2020",
    "draft_position": 46
   },
@@ -5617,6 +6910,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 14.0,
+   "position": "RUCK",
+   "af_avg": 56.6,
+   "af_total": 793,
    "draft_year": "2018",
    "draft_position": null
   },
@@ -5630,6 +6926,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 7.0,
+   "position": "RUCK",
+   "af_avg": 53.4,
+   "af_total": 374,
    "draft_year": "2021",
    "draft_position": 15
   },
@@ -5643,6 +6942,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 11.0,
+   "position": "RUCK",
+   "af_avg": 44.7,
+   "af_total": 492,
    "draft_year": "2017",
    "draft_position": null
   },
@@ -5656,6 +6958,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 9.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 32.6,
+   "af_total": 293,
    "draft_year": "2020",
    "draft_position": 51
   },
@@ -5669,6 +6974,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2016",
    "draft_position": 18
   },
@@ -5682,6 +6990,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 51.3,
+   "af_total": 718,
    "draft_year": "2020",
    "draft_position": 59
   },
@@ -5695,6 +7006,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 7.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 59.7,
+   "af_total": 418,
    "draft_year": "2021",
    "draft_position": 23
   },
@@ -5708,6 +7022,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 5.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 60.8,
+   "af_total": 304,
    "draft_year": "2024",
    "draft_position": 11
   },
@@ -5721,6 +7038,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 5.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 37.8,
+   "af_total": 189,
    "draft_year": "2021",
    "draft_position": 40
   },
@@ -5734,6 +7054,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 13.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 47.6,
+   "af_total": 619,
    "draft_year": "2023",
    "draft_position": 20
   },
@@ -5747,6 +7070,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 14.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 52.4,
+   "af_total": 733,
    "draft_year": "2017",
    "draft_position": 29
   },
@@ -5760,6 +7086,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 8.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 61.5,
+   "af_total": 492,
    "draft_year": "2018",
    "draft_position": 2
   },
@@ -5773,6 +7102,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2015",
    "draft_position": null
   },
@@ -5786,6 +7118,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 14.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 62.6,
+   "af_total": 877,
    "draft_year": "2025",
    "draft_position": 9
   },
@@ -5799,6 +7134,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 6.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 38.2,
+   "af_total": 229,
    "draft_year": "2024",
    "draft_position": 3
   },
@@ -5812,6 +7150,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2017",
    "draft_position": 54
   },
@@ -5825,6 +7166,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 15.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 70.5,
+   "af_total": 1058,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -5838,6 +7182,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 9.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 53.7,
+   "af_total": 483,
    "draft_year": "2017",
    "draft_position": 48
   },
@@ -5851,6 +7198,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 16.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 50.7,
+   "af_total": 811,
    "draft_year": "2024",
    "draft_position": 20
   },
@@ -5864,6 +7214,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 11.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 45.3,
+   "af_total": 498,
    "draft_year": "2013",
    "draft_position": 41
   },
@@ -5877,6 +7230,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2022",
    "draft_position": null
   },
@@ -5890,6 +7246,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 4.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 44.3,
+   "af_total": 177,
    "draft_year": "2023",
    "draft_position": 23
   },
@@ -5903,6 +7262,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 12.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 69.7,
+   "af_total": 836,
    "draft_year": "2019",
    "draft_position": 37
   },
@@ -5916,6 +7278,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 15.0,
+   "position": "MIDFIELDER",
+   "af_avg": 51.8,
+   "af_total": 777,
    "draft_year": "2024",
    "draft_position": 16
   },
@@ -5929,6 +7294,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 2.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 23.5,
+   "af_total": 47,
    "draft_year": "2021",
    "draft_position": 61
   },
@@ -5942,6 +7310,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 2.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 59.5,
+   "af_total": 119,
    "draft_year": "2019",
    "draft_position": 27
   },
@@ -5955,6 +7326,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 7.0,
+   "position": "MIDFIELDER",
+   "af_avg": 63.3,
+   "af_total": 443,
    "draft_year": "2022",
    "draft_position": 16
   },
@@ -5968,6 +7342,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 5.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 49.6,
+   "af_total": 248,
    "draft_year": "2019",
    "draft_position": 29
   },
@@ -5981,6 +7358,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 16.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 47.4,
+   "af_total": 759,
    "draft_year": "2023",
    "draft_position": null
   },
@@ -5994,6 +7374,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 10.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 41.7,
+   "af_total": 417,
    "draft_year": "2025",
    "draft_position": 6
   },
@@ -6007,6 +7390,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 15.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 36.1,
+   "af_total": 542,
    "draft_year": "2023",
    "draft_position": 4
   },
@@ -6020,6 +7406,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 11.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 43.1,
+   "af_total": 474,
    "draft_year": "2023",
    "draft_position": 9
   },
@@ -6033,6 +7422,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 7.0,
+   "position": "MIDFIELDER",
+   "af_avg": 49.6,
+   "af_total": 347,
    "draft_year": "2022",
    "draft_position": 1
   },
@@ -6046,6 +7438,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 5.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 50.4,
+   "af_total": 252,
    "draft_year": "2023",
    "draft_position": 56
   },
@@ -6059,6 +7454,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 38
   },
@@ -6072,6 +7470,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2021",
    "draft_position": 12
   },
@@ -6085,6 +7486,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 13.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 52.2,
+   "af_total": 678,
    "draft_year": "2021",
    "draft_position": 43
   },
@@ -6098,6 +7502,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 1.0,
+   "position": "MIDFIELDER",
+   "af_avg": 82.0,
+   "af_total": 82,
    "draft_year": "2018",
    "draft_position": 49
   },
@@ -6111,6 +7518,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 63.0,
+   "af_total": 882,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -6124,6 +7534,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 6.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 66.0,
+   "af_total": 396,
    "draft_year": "2016",
    "draft_position": 22
   },
@@ -6137,6 +7550,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 14.0,
+   "position": "MIDFIELDER",
+   "af_avg": 51.9,
+   "af_total": 727,
    "draft_year": "2025",
    "draft_position": 11
   },
@@ -6150,6 +7566,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 10.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 47.3,
+   "af_total": 473,
    "draft_year": "2020",
    "draft_position": 11
   },
@@ -6163,6 +7582,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 8.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 52.3,
+   "af_total": 418,
    "draft_year": "2024",
    "draft_position": 38
   },
@@ -6176,6 +7598,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 3.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 49.0,
+   "af_total": 147,
    "draft_year": "2018",
    "draft_position": null
   },
@@ -6189,6 +7614,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 15.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 48.1,
+   "af_total": 722,
    "draft_year": "2025",
    "draft_position": 3
   },
@@ -6202,6 +7630,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 9.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 42.2,
+   "af_total": 380,
    "draft_year": "2018",
    "draft_position": 39
   },
@@ -6215,6 +7646,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 7.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 58.9,
+   "af_total": 412,
    "draft_year": "2024",
    "draft_position": 21
   },
@@ -6228,6 +7662,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 12.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 37.3,
+   "af_total": 448,
    "draft_year": "2022",
    "draft_position": null
   },
@@ -6241,6 +7678,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 6.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 32.2,
+   "af_total": 193,
    "draft_year": "2022",
    "draft_position": 34
   },
@@ -6254,6 +7694,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 6.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 34.5,
+   "af_total": 207,
    "draft_year": "2024",
    "draft_position": 33
   },
@@ -6267,6 +7710,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 1.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 37.0,
+   "af_total": 37,
    "draft_year": "2023",
    "draft_position": null
   },
@@ -6280,6 +7726,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 9.0,
+   "position": "MIDFIELDER",
+   "af_avg": 68.3,
+   "af_total": 615,
    "draft_year": "2023",
    "draft_position": 40
   },
@@ -6293,6 +7742,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 6.0,
+   "position": "MIDFIELDER",
+   "af_avg": 79.0,
+   "af_total": 474,
    "draft_year": "2022",
    "draft_position": 5
   },
@@ -6306,6 +7758,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 10.0,
+   "position": "RUCK",
+   "af_avg": 42.8,
+   "af_total": 428,
    "draft_year": "2021",
    "draft_position": 56
   },
@@ -6319,6 +7774,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 12.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 66.4,
+   "af_total": 797,
    "draft_year": "2020",
    "draft_position": 41
   },
@@ -6332,6 +7790,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 8.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 48.1,
+   "af_total": 385,
    "draft_year": "2023",
    "draft_position": 24
   },
@@ -6345,6 +7806,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 14.0,
+   "position": "RUCK",
+   "af_avg": 51.1,
+   "af_total": 715,
    "draft_year": "2023",
    "draft_position": 32
   },
@@ -6358,6 +7822,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2022",
    "draft_position": null
   },
@@ -6371,6 +7838,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 16.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 49.2,
+   "af_total": 787,
    "draft_year": "2024",
    "draft_position": 6
   },
@@ -6384,6 +7854,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 10.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 45.0,
+   "af_total": 450,
    "draft_year": "2022",
    "draft_position": 22
   },
@@ -6397,6 +7870,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 13.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 37.5,
+   "af_total": 487,
    "draft_year": "2021",
    "draft_position": 51
   },
@@ -6410,6 +7886,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 10.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 60.0,
+   "af_total": 600,
    "draft_year": "2017",
    "draft_position": 8
   },
@@ -6423,6 +7902,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 6.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 34.2,
+   "af_total": 205,
    "draft_year": "2023",
    "draft_position": 30
   },
@@ -6436,6 +7918,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 10.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 70.5,
+   "af_total": 705,
    "draft_year": "2023",
    "draft_position": 34
   },
@@ -6449,6 +7934,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 5.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 47.0,
+   "af_total": 235,
    "draft_year": "2024",
    "draft_position": 12
   },
@@ -6462,6 +7950,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 7.0,
+   "position": "MIDFIELDER",
+   "af_avg": 49.7,
+   "af_total": 348,
    "draft_year": "2025",
    "draft_position": 9
   },
@@ -6475,6 +7966,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 18.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 46.7,
+   "af_total": 840,
    "draft_year": "2024",
    "draft_position": 33
   },
@@ -6488,6 +7982,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 7.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 47.4,
+   "af_total": 332,
    "draft_year": "2022",
    "draft_position": 50
   },
@@ -6501,6 +7998,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 18.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 54.8,
+   "af_total": 986,
    "draft_year": "2025",
    "draft_position": 5
   },
@@ -6514,6 +8014,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 15.0,
+   "position": "MIDFIELDER",
+   "af_avg": 61.6,
+   "af_total": 924,
    "draft_year": "2025",
    "draft_position": 2
   },
@@ -6527,6 +8030,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 2.0,
+   "position": "RUCK",
+   "af_avg": 71.0,
+   "af_total": 142,
    "draft_year": "2021",
    "draft_position": null
   },
@@ -6540,6 +8046,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 5.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 40.6,
+   "af_total": 203,
    "draft_year": "2023",
    "draft_position": 14
   },
@@ -6553,6 +8062,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 12.0,
+   "position": "MIDFIELDER",
+   "af_avg": 60.3,
+   "af_total": 723,
    "draft_year": "2025",
    "draft_position": 7
   },
@@ -6566,6 +8078,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 13.0,
+   "position": "MIDFIELDER",
+   "af_avg": 69.4,
+   "af_total": 902,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -6579,6 +8094,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 16.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 74.1,
+   "af_total": 1185,
    "draft_year": "2025",
    "draft_position": 10
   },
@@ -6592,6 +8110,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 11.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 59.2,
+   "af_total": 651,
    "draft_year": "2025",
    "draft_position": 57
   },
@@ -6605,6 +8126,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 5.0,
+   "position": "MIDFIELDER",
+   "af_avg": 54.4,
+   "af_total": 272,
    "draft_year": "2024",
    "draft_position": 45
   },
@@ -6618,6 +8142,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 9.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 45.8,
+   "af_total": 412,
    "draft_year": "2021",
    "draft_position": 37
   },
@@ -6631,6 +8158,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 8.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 57.0,
+   "af_total": 456,
    "draft_year": "2024",
    "draft_position": 13
   },
@@ -6644,6 +8174,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 12.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 70.0,
+   "af_total": 840,
    "draft_year": "2025",
    "draft_position": 19
   },
@@ -6657,6 +8190,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 14.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 52.4,
+   "af_total": 733,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -6670,6 +8206,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 10.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 37.0,
+   "af_total": 370,
    "draft_year": "2024",
    "draft_position": 14
   },
@@ -6683,6 +8222,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 6.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 54.3,
+   "af_total": 326,
    "draft_year": "2022",
    "draft_position": 13
   },
@@ -6696,6 +8238,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 4.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 40.3,
+   "af_total": 161,
    "draft_year": "2019",
    "draft_position": 30
   },
@@ -6709,6 +8254,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 15.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 34.9,
+   "af_total": 523,
    "draft_year": "2025",
    "draft_position": 12
   },
@@ -6722,6 +8270,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 8.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 36.9,
+   "af_total": 295,
    "draft_year": "2024",
    "draft_position": 10
   },
@@ -6735,6 +8286,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 2
   },
@@ -6748,6 +8302,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 16.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 57.6,
+   "af_total": 922,
    "draft_year": "2025",
    "draft_position": 8
   },
@@ -6761,6 +8318,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 7.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 39.9,
+   "af_total": 279,
    "draft_year": "2014",
    "draft_position": 67
   },
@@ -6774,6 +8334,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 0.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2019",
    "draft_position": 62
   },
@@ -6787,6 +8350,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 2.0,
+   "position": "MIDFIELDER",
+   "af_avg": 60.0,
+   "af_total": 120,
    "draft_year": "2024",
    "draft_position": 39
   },
@@ -6800,6 +8366,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 11.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 51.5,
+   "af_total": 566,
    "draft_year": "2020",
    "draft_position": 22
   },
@@ -6813,6 +8382,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 6.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 52.7,
+   "af_total": 316,
    "draft_year": "2014",
    "draft_position": 56
   },
@@ -6826,6 +8398,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 4.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 58.3,
+   "af_total": 233,
    "draft_year": "2022",
    "draft_position": 8
   },
@@ -6839,6 +8414,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 6.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 74.5,
+   "af_total": 447,
    "draft_year": "2022",
    "draft_position": 56
   },
@@ -6852,6 +8430,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 11.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 45.0,
+   "af_total": 495,
    "draft_year": "2022",
    "draft_position": 15
   },
@@ -6865,6 +8446,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 12.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 42.7,
+   "af_total": 512,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -6878,6 +8462,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 6.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 36.3,
+   "af_total": 218,
    "draft_year": "2017",
    "draft_position": 42
   },
@@ -6891,6 +8478,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 5.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 61.0,
+   "af_total": 305,
    "draft_year": "2024",
    "draft_position": 70
   },
@@ -6904,6 +8494,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 5.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 54.0,
+   "af_total": 270,
    "draft_year": "2014",
    "draft_position": 53
   },
@@ -6917,6 +8510,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 8.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 51.0,
+   "af_total": 408,
    "draft_year": "2022",
    "draft_position": 51
   },
@@ -6930,6 +8526,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 10.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 44.8,
+   "af_total": 448,
    "draft_year": "2023",
    "draft_position": 61
   },
@@ -6943,6 +8542,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 9.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 30.9,
+   "af_total": 278,
    "draft_year": "2024",
    "draft_position": 16
   },
@@ -6956,6 +8558,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 6.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 45.8,
+   "af_total": 275,
    "draft_year": "2024",
    "draft_position": 31
   },
@@ -6969,6 +8574,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 7.0,
+   "position": "MIDFIELDER",
+   "af_avg": 45.4,
+   "af_total": 318,
    "draft_year": "2020",
    "draft_position": 8
   },
@@ -6982,6 +8590,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 3.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 15.3,
+   "af_total": 46,
    "draft_year": "2017",
    "draft_position": 76
   },
@@ -6995,6 +8606,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2018",
    "draft_position": 64
   },
@@ -7008,6 +8622,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 13.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 44.4,
+   "af_total": 577,
    "draft_year": "2025",
    "draft_position": 45
   },
@@ -7021,6 +8638,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 7.0,
+   "position": "RUCK",
+   "af_avg": 39.6,
+   "af_total": 277,
    "draft_year": "2021",
    "draft_position": 7
   },
@@ -7034,6 +8654,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 10.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 59.7,
+   "af_total": 597,
    "draft_year": "2025",
    "draft_position": 13
   },
@@ -7047,6 +8670,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 8.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 49.9,
+   "af_total": 399,
    "draft_year": "2023",
    "draft_position": null
   },
@@ -7060,6 +8686,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2011",
    "draft_position": 86
   },
@@ -7073,6 +8702,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 4.0,
+   "position": "RUCK",
+   "af_avg": 77.0,
+   "af_total": 308,
    "draft_year": "2022",
    "draft_position": null
   },
@@ -7086,6 +8718,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 12.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 43.0,
+   "af_total": 516,
    "draft_year": "2025",
    "draft_position": 4
   },
@@ -7099,6 +8734,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 2.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 45.5,
+   "af_total": 91,
    "draft_year": "2023",
    "draft_position": 29
   },
@@ -7112,6 +8750,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 5.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 47.4,
+   "af_total": 237,
    "draft_year": "2019",
    "draft_position": 15
   },
@@ -7125,6 +8766,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 2.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 53.5,
+   "af_total": 107,
    "draft_year": "2021",
    "draft_position": 25
   },
@@ -7138,6 +8782,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 2.0,
+   "position": "MIDFIELDER",
+   "af_avg": 56.0,
+   "af_total": 112,
    "draft_year": "2024",
    "draft_position": 25
   },
@@ -7151,6 +8798,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 8.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 48.6,
+   "af_total": 389,
    "draft_year": "2019",
    "draft_position": 9
   },
@@ -7164,6 +8814,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 8.0,
+   "position": "RUCK",
+   "af_avg": 45.9,
+   "af_total": 367,
    "draft_year": "2022",
    "draft_position": null
   },
@@ -7177,6 +8830,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 2.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 38.5,
+   "af_total": 77,
    "draft_year": "2022",
    "draft_position": 44
   },
@@ -7190,6 +8846,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 2.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 33.5,
+   "af_total": 67,
    "draft_year": "2019",
    "draft_position": 60
   },
@@ -7203,6 +8862,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 5.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 39.2,
+   "af_total": 196,
    "draft_year": "2023",
    "draft_position": null
   },
@@ -7216,6 +8878,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 1.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 38.0,
+   "af_total": 38,
    "draft_year": "2020",
    "draft_position": 49
   },
@@ -7229,6 +8894,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 10.0,
+   "position": "MIDFIELDER",
+   "af_avg": 50.8,
+   "af_total": 508,
    "draft_year": "2021",
    "draft_position": 41
   },
@@ -7242,6 +8910,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 10.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 38.2,
+   "af_total": 382,
    "draft_year": "2023",
    "draft_position": 13
   },
@@ -7255,6 +8926,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 7.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 60.0,
+   "af_total": 420,
    "draft_year": "2021",
    "draft_position": 23
   },
@@ -7268,6 +8942,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 13.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 36.8,
+   "af_total": 479,
    "draft_year": "2023",
    "draft_position": 15
   },
@@ -7281,6 +8958,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 1.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 30.0,
+   "af_total": 30,
    "draft_year": "2020",
    "draft_position": 50
   },
@@ -7294,6 +8974,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 9.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 48.0,
+   "af_total": 432,
    "draft_year": "2022",
    "draft_position": 5
   },
@@ -7307,6 +8990,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 11.0,
+   "position": "RUCK",
+   "af_avg": 48.6,
+   "af_total": 535,
    "draft_year": "2024",
    "draft_position": 7
   },
@@ -7320,6 +9006,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 3.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 42.7,
+   "af_total": 128,
    "draft_year": "2024",
    "draft_position": 8
   },
@@ -7333,6 +9022,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 8.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 42.5,
+   "af_total": 340,
    "draft_year": "2024",
    "draft_position": 58
   },
@@ -7346,6 +9038,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 5.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 50.0,
+   "af_total": 250,
    "draft_year": "2023",
    "draft_position": 33
   },
@@ -7359,6 +9054,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 10.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 49.9,
+   "af_total": 499,
    "draft_year": "2016",
    "draft_position": 16
   },
@@ -7372,6 +9070,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 1.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 54.0,
+   "af_total": 54,
    "draft_year": "2016",
    "draft_position": 27
   },
@@ -7385,6 +9086,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 3.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 43.3,
+   "af_total": 130,
    "draft_year": "2025",
    "draft_position": 4
   },
@@ -7398,6 +9102,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 7.0,
+   "position": "RUCK",
+   "af_avg": 39.9,
+   "af_total": 279,
    "draft_year": "2023",
    "draft_position": null
   },
@@ -7411,6 +9118,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 6.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 52.7,
+   "af_total": 316,
    "draft_year": "2026",
    "draft_position": 7
   },
@@ -7424,6 +9134,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 4.0,
+   "position": "RUCK",
+   "af_avg": 54.3,
+   "af_total": 217,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -7437,6 +9150,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 3.0,
+   "position": "MIDFIELDER",
+   "af_avg": 62.3,
+   "af_total": 187,
    "draft_year": "2021",
    "draft_position": 14
   },
@@ -7450,6 +9166,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 9.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 40.9,
+   "af_total": 368,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -7463,6 +9182,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 28
   },
@@ -7476,6 +9198,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 4.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 46.8,
+   "af_total": 187,
    "draft_year": "2024",
    "draft_position": 14
   },
@@ -7489,6 +9214,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 3.0,
+   "position": "MIDFIELDER",
+   "af_avg": 38.3,
+   "af_total": 115,
    "draft_year": "2022",
    "draft_position": 39
   },
@@ -7502,6 +9230,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 7.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 46.0,
+   "af_total": 322,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -7515,6 +9246,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 8.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 58.8,
+   "af_total": 470,
    "draft_year": "2025",
    "draft_position": 14
   },
@@ -7528,6 +9262,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 5.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 42.4,
+   "af_total": 212,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -7541,6 +9278,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 8.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 32.5,
+   "af_total": 260,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -7554,6 +9294,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 1.0,
+   "position": "MIDFIELDER",
+   "af_avg": 56.0,
+   "af_total": 56,
    "draft_year": "2023",
    "draft_position": 57
   },
@@ -7567,6 +9310,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 8.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 64.0,
+   "af_total": 512,
    "draft_year": "2024",
    "draft_position": 29
   },
@@ -7580,6 +9326,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2011",
    "draft_position": 13
   },
@@ -7593,6 +9342,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 7.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 29.7,
+   "af_total": 208,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -7606,6 +9358,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 7.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 35.6,
+   "af_total": 249,
    "draft_year": "2023",
    "draft_position": 43
   },
@@ -7619,6 +9374,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 5.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 49.6,
+   "af_total": 248,
    "draft_year": "2023",
    "draft_position": 17
   },
@@ -7632,6 +9390,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 5.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 40.0,
+   "af_total": 200,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -7645,6 +9406,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 7.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 44.7,
+   "af_total": 313,
    "draft_year": "2019",
    "draft_position": 35
   },
@@ -7658,6 +9422,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 6.0,
+   "position": "RUCK",
+   "af_avg": 34.0,
+   "af_total": 204,
    "draft_year": "2023",
    "draft_position": 22
   },
@@ -7671,6 +9438,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 5.0,
+   "position": "MIDFIELDER",
+   "af_avg": 52.2,
+   "af_total": 261,
    "draft_year": "2025",
    "draft_position": 37
   },
@@ -7684,6 +9454,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2018",
    "draft_position": 17
   },
@@ -7697,6 +9470,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2020",
    "draft_position": 31
   },
@@ -7710,6 +9486,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 5.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 44.8,
+   "af_total": 224,
    "draft_year": "2025",
    "draft_position": 14
   },
@@ -7723,6 +9502,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 6.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 74.0,
+   "af_total": 444,
    "draft_year": "2022",
    "draft_position": 11
   },
@@ -7736,6 +9518,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 28
   },
@@ -7749,6 +9534,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 6.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 32.5,
+   "af_total": 195,
    "draft_year": "2024",
    "draft_position": 56
   },
@@ -7762,6 +9550,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 4.0,
+   "position": "MIDFIELDER",
+   "af_avg": 73.5,
+   "af_total": 294,
    "draft_year": "2019",
    "draft_position": 22
   },
@@ -7775,6 +9566,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 6.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 38.0,
+   "af_total": 228,
    "draft_year": "2023",
    "draft_position": 49
   },
@@ -7788,6 +9582,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 6.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 36.2,
+   "af_total": 217,
    "draft_year": "2024",
    "draft_position": 53
   },
@@ -7801,6 +9598,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 8.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 49.4,
+   "af_total": 395,
    "draft_year": "2025",
    "draft_position": 47
   },
@@ -7814,6 +9614,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 8.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 43.8,
+   "af_total": 350,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -7827,6 +9630,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 9.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 51.4,
+   "af_total": 463,
    "draft_year": "2025",
    "draft_position": 4
   },
@@ -7840,6 +9646,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 40
   },
@@ -7853,6 +9662,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 6.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 46.3,
+   "af_total": 278,
    "draft_year": "2026",
    "draft_position": 2
   },
@@ -7866,6 +9678,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 3.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 43.0,
+   "af_total": 129,
    "draft_year": "2018",
    "draft_position": 9
   },
@@ -7879,6 +9694,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 7.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 37.6,
+   "af_total": 263,
    "draft_year": "2025",
    "draft_position": 36
   },
@@ -7892,6 +9710,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 2.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 55.5,
+   "af_total": 111,
    "draft_year": "2022",
    "draft_position": null
   },
@@ -7905,6 +9726,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2022",
    "draft_position": 49
   },
@@ -7918,6 +9742,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 3.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 19.3,
+   "af_total": 58,
    "draft_year": "2024",
    "draft_position": 23
   },
@@ -7931,6 +9758,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2021",
    "draft_position": 59
   },
@@ -7944,6 +9774,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2022",
    "draft_position": 58
   },
@@ -7957,6 +9790,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 2.0,
+   "position": "MIDFIELDER",
+   "af_avg": 58.0,
+   "af_total": 116,
    "draft_year": "2025",
    "draft_position": 13
   },
@@ -7970,6 +9806,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 16
   },
@@ -7983,6 +9822,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2020",
    "draft_position": 48
   },
@@ -7996,6 +9838,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 2.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 35.5,
+   "af_total": 71,
    "draft_year": "2022",
    "draft_position": 6
   },
@@ -8009,6 +9854,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 1.0,
+   "position": "MIDFIELDER",
+   "af_avg": 60.0,
+   "af_total": 60,
    "draft_year": "2022",
    "draft_position": 37
   },
@@ -8022,6 +9870,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 3.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 72.3,
+   "af_total": 217,
    "draft_year": "2024",
    "draft_position": 35
   },
@@ -8035,6 +9886,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 5.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 69.8,
+   "af_total": 349,
    "draft_year": "2026",
    "draft_position": 13
   },
@@ -8048,6 +9902,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 6.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 53.7,
+   "af_total": 322,
    "draft_year": "2021",
    "draft_position": 52
   },
@@ -8061,6 +9918,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 5.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 45.2,
+   "af_total": 226,
    "draft_year": "2019",
    "draft_position": 24
   },
@@ -8074,6 +9934,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 1.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 51.0,
+   "af_total": 51,
    "draft_year": "2022",
    "draft_position": 43
   },
@@ -8087,6 +9950,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2017",
    "draft_position": 3
   },
@@ -8100,6 +9966,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 3.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 48.0,
+   "af_total": 144,
    "draft_year": "2024",
    "draft_position": 15
   },
@@ -8113,6 +9982,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 5.0,
+   "position": "MIDFIELDER",
+   "af_avg": 64.0,
+   "af_total": 320,
    "draft_year": "2025",
    "draft_position": 18
   },
@@ -8126,6 +9998,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 3.0,
+   "position": "MIDFIELDER",
+   "af_avg": 48.7,
+   "af_total": 146,
    "draft_year": "2024",
    "draft_position": 36
   },
@@ -8139,6 +10014,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 7.0,
+   "position": "MIDFIELDER",
+   "af_avg": 55.3,
+   "af_total": 387,
    "draft_year": "2025",
    "draft_position": 17
   },
@@ -8152,6 +10030,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 3.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 39.7,
+   "af_total": 119,
    "draft_year": "2024",
    "draft_position": 13
   },
@@ -8165,6 +10046,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 2.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 69.0,
+   "af_total": 138,
    "draft_year": "2021",
    "draft_position": 20
   },
@@ -8178,6 +10062,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 3.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 36.3,
+   "af_total": 109,
    "draft_year": "2020",
    "draft_position": 1
   },
@@ -8191,6 +10078,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 1.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 37.0,
+   "af_total": 37,
    "draft_year": "2024",
    "draft_position": 46
   },
@@ -8204,6 +10094,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 3.0,
+   "position": "RUCK",
+   "af_avg": 28.3,
+   "af_total": 85,
    "draft_year": "2022",
    "draft_position": null
   },
@@ -8217,6 +10110,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 3.0,
+   "position": "RUCK",
+   "af_avg": 44.7,
+   "af_total": 134,
    "draft_year": "2020",
    "draft_position": 40
   },
@@ -8230,6 +10126,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 4
   },
@@ -8243,6 +10142,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 5.0,
+   "position": "MIDFIELDER",
+   "af_avg": 71.0,
+   "af_total": 355,
    "draft_year": "2026",
    "draft_position": 16
   },
@@ -8256,6 +10158,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 24
   },
@@ -8269,6 +10174,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 4.0,
+   "position": "MIDFIELDER",
+   "af_avg": 48.0,
+   "af_total": 192,
    "draft_year": "2025",
    "draft_position": 10
   },
@@ -8282,6 +10190,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 5.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 30.8,
+   "af_total": 154,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -8295,6 +10206,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 4.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 52.8,
+   "af_total": 211,
    "draft_year": "2025",
    "draft_position": 34
   },
@@ -8308,6 +10222,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -8321,6 +10238,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 3.0,
+   "position": "MIDFIELDER",
+   "af_avg": 54.7,
+   "af_total": 164,
    "draft_year": "2025",
    "draft_position": 41
   },
@@ -8334,6 +10254,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 4.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 31.0,
+   "af_total": 124,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -8347,6 +10270,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 4.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 39.3,
+   "af_total": 157,
    "draft_year": "2024",
    "draft_position": 62
   },
@@ -8360,6 +10286,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 3.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 33.3,
+   "af_total": 100,
    "draft_year": "2025",
    "draft_position": 9
   },
@@ -8373,6 +10302,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 3.0,
+   "position": "MIDFIELDER",
+   "af_avg": 77.7,
+   "af_total": 233,
    "draft_year": "2026",
    "draft_position": 3
   },
@@ -8386,6 +10318,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 1.0,
+   "position": "RUCK",
+   "af_avg": 39.0,
+   "af_total": 39,
    "draft_year": "2024",
    "draft_position": 68
   },
@@ -8399,6 +10334,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 3.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 39.7,
+   "af_total": 119,
    "draft_year": "2025",
    "draft_position": 2
   },
@@ -8412,6 +10350,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 5.0,
+   "position": "RUCK",
+   "af_avg": 37.8,
+   "af_total": 189,
    "draft_year": "2017",
    "draft_position": 20
   },
@@ -8425,6 +10366,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 3.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 46.3,
+   "af_total": 139,
    "draft_year": "2023",
    "draft_position": 51
   },
@@ -8438,6 +10382,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 2.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 63.0,
+   "af_total": 126,
    "draft_year": "2025",
    "draft_position": 12
   },
@@ -8451,6 +10398,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 3.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 37.0,
+   "af_total": 111,
    "draft_year": "2025",
    "draft_position": 54
   },
@@ -8464,6 +10414,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 5.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 39.8,
+   "af_total": 199,
    "draft_year": "2024",
    "draft_position": 19
   },
@@ -8477,6 +10430,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 2.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 36.5,
+   "af_total": 73,
    "draft_year": "2021",
    "draft_position": null
   },
@@ -8490,6 +10446,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 6.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 38.7,
+   "af_total": 232,
    "draft_year": "2025",
    "draft_position": 16
   },
@@ -8503,6 +10462,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 3.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 33.7,
+   "af_total": 101,
    "draft_year": "2025",
    "draft_position": 5
   },
@@ -8516,6 +10478,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 5.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 24.6,
+   "af_total": 123,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -8529,6 +10494,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 5.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 40.6,
+   "af_total": 203,
    "draft_year": "2023",
    "draft_position": 46
   },
@@ -8542,6 +10510,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 3.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 40.0,
+   "af_total": 120,
    "draft_year": "2024",
    "draft_position": 50
   },
@@ -8555,6 +10526,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 3.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 27.7,
+   "af_total": 83,
    "draft_year": "2026",
    "draft_position": 15
   },
@@ -8568,6 +10542,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 54
   },
@@ -8581,6 +10558,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2020",
    "draft_position": 23
   },
@@ -8594,6 +10574,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 6.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 51.2,
+   "af_total": 307,
    "draft_year": "2026",
    "draft_position": 5
   },
@@ -8607,6 +10590,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 2.0,
+   "position": "MIDFIELDER",
+   "af_avg": 53.0,
+   "af_total": 106,
    "draft_year": "2023",
    "draft_position": 21
   },
@@ -8620,6 +10606,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 3.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 55.0,
+   "af_total": 165,
    "draft_year": "2021",
    "draft_position": 22
   },
@@ -8633,6 +10622,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 1.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 28.0,
+   "af_total": 28,
    "draft_year": "2024",
    "draft_position": 6
   },
@@ -8646,6 +10638,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 2.0,
+   "position": "RUCK",
+   "af_avg": 48.0,
+   "af_total": 96,
    "draft_year": "2023",
    "draft_position": 47
   },
@@ -8659,6 +10654,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 8
   },
@@ -8672,6 +10670,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 2.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 23.0,
+   "af_total": 46,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -8685,6 +10686,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 2.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 29.5,
+   "af_total": 59,
    "draft_year": "2025",
    "draft_position": 11
   },
@@ -8698,6 +10702,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 4.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 47.8,
+   "af_total": 191,
    "draft_year": "2025",
    "draft_position": 20
   },
@@ -8711,6 +10718,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 2.0,
+   "position": "RUCK",
+   "af_avg": 33.0,
+   "af_total": 66,
    "draft_year": "2023",
    "draft_position": 20
   },
@@ -8724,6 +10734,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 1.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 35.0,
+   "af_total": 35,
    "draft_year": "2025",
    "draft_position": 31
   },
@@ -8737,6 +10750,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 35
   },
@@ -8750,6 +10766,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 1.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 11.0,
+   "af_total": 11,
    "draft_year": "2015",
    "draft_position": 59
   },
@@ -8763,6 +10782,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 4.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 42.5,
+   "af_total": 170,
    "draft_year": "2025",
    "draft_position": 42
   },
@@ -8776,6 +10798,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 1.0,
+   "position": "RUCK",
+   "af_avg": 65.0,
+   "af_total": 65,
    "draft_year": "2026",
    "draft_position": 4
   },
@@ -8789,6 +10814,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 1.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 52.0,
+   "af_total": 52,
    "draft_year": "2021",
    "draft_position": 9
   },
@@ -8802,6 +10830,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2020",
    "draft_position": 19
   },
@@ -8815,6 +10846,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 2.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 36.0,
+   "af_total": 72,
    "draft_year": "2024",
    "draft_position": 27
   },
@@ -8828,6 +10862,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 4.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 40.8,
+   "af_total": 163,
    "draft_year": "2023",
    "draft_position": 19
   },
@@ -8841,6 +10878,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2022",
    "draft_position": 38
   },
@@ -8854,6 +10894,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 1.0,
+   "position": "MIDFIELDER",
+   "af_avg": 56.0,
+   "af_total": 56,
    "draft_year": "2016",
    "draft_position": 9
   },
@@ -8867,6 +10910,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 3.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 30.7,
+   "af_total": 92,
    "draft_year": "2024",
    "draft_position": 11
   },
@@ -8880,6 +10926,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 2.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 53.5,
+   "af_total": 107,
    "draft_year": "2023",
    "draft_position": 48
   },
@@ -8893,6 +10942,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 61
   },
@@ -8906,6 +10958,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2022",
    "draft_position": 25
   },
@@ -8919,6 +10974,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2017",
    "draft_position": null
   },
@@ -8932,6 +10990,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 1.0,
+   "position": "MIDFIELDER",
+   "af_avg": 53.0,
+   "af_total": 53,
    "draft_year": "2025",
    "draft_position": 6
   },
@@ -8945,6 +11006,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 4.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 25.8,
+   "af_total": 103,
    "draft_year": "2025",
    "draft_position": 43
   },
@@ -8958,6 +11022,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 5.0,
+   "position": "RUCK",
+   "af_avg": 37.0,
+   "af_total": 185,
    "draft_year": "2025",
    "draft_position": 27
   },
@@ -8971,6 +11038,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2015",
    "draft_position": 17
   },
@@ -8984,6 +11054,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 1.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 40.0,
+   "af_total": 40,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -8997,6 +11070,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 48
   },
@@ -9010,6 +11086,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 5.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 37.2,
+   "af_total": 186,
    "draft_year": "2024",
    "draft_position": 18
   },
@@ -9023,6 +11102,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 1.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 70.0,
+   "af_total": 70,
    "draft_year": "2024",
    "draft_position": 44
   },
@@ -9036,6 +11118,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 2.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 16.0,
+   "af_total": 32,
    "draft_year": "2025",
    "draft_position": 3
   },
@@ -9049,6 +11134,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 0.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 22
   },
@@ -9062,6 +11150,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 2.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 48.5,
+   "af_total": 97,
    "draft_year": "2026",
    "draft_position": 18
   },
@@ -9075,6 +11166,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 1.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 32.0,
+   "af_total": 32,
    "draft_year": "2026",
    "draft_position": 1
   },
@@ -9088,6 +11182,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2016",
    "draft_position": 51
   },
@@ -9101,6 +11198,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 17
   },
@@ -9114,6 +11214,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 1.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 30.0,
+   "af_total": 30,
    "draft_year": "2026",
    "draft_position": 11
   },
@@ -9127,6 +11230,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -9140,6 +11246,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2018",
    "draft_position": 71
   },
@@ -9153,6 +11262,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2018",
    "draft_position": 4
   },
@@ -9166,6 +11278,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2022",
    "draft_position": 16
   },
@@ -9179,6 +11294,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2021",
    "draft_position": 30
   },
@@ -9192,6 +11310,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2021",
    "draft_position": 24
   },
@@ -9205,6 +11326,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2026",
    "draft_position": 14
   },
@@ -9218,6 +11342,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2022",
    "draft_position": 23
   },
@@ -9231,6 +11358,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2022",
    "draft_position": 28
   },
@@ -9244,6 +11374,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 11
   },
@@ -9257,6 +11390,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -9270,6 +11406,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 15
   },
@@ -9283,6 +11422,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2022",
    "draft_position": 33
   },
@@ -9296,6 +11438,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 63
   },
@@ -9309,6 +11454,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2022",
    "draft_position": 26
   },
@@ -9322,6 +11470,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 64
   },
@@ -9335,6 +11486,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 53
   },
@@ -9348,6 +11502,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 24
   },
@@ -9361,6 +11518,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 52
   },
@@ -9374,6 +11534,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2026",
    "draft_position": 9
   },
@@ -9387,6 +11550,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 56
   },
@@ -9400,6 +11566,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 34
   },
@@ -9413,6 +11582,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 43
   },
@@ -9426,6 +11598,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 26
   },
@@ -9439,6 +11614,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 55
   },
@@ -9452,6 +11630,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 25
   },
@@ -9465,6 +11646,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 4
   },
@@ -9478,6 +11662,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 10
   },
@@ -9491,6 +11678,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 40
   },
@@ -9504,6 +11694,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 31
   },
@@ -9517,6 +11710,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 27
   },
@@ -9530,6 +11726,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 16
   },
@@ -9543,6 +11742,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 42
   },
@@ -9556,6 +11758,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 41
   },
@@ -9569,6 +11774,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 7
   },
@@ -9582,6 +11790,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 9
   },
@@ -9595,6 +11806,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 0.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 5
   },
@@ -9608,6 +11822,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 17
   },
@@ -9621,6 +11838,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 32
   },
@@ -9634,6 +11854,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 64
   },
@@ -9647,6 +11870,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 7
   },
@@ -9660,6 +11886,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 47
   },
@@ -9673,6 +11902,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 49
   },
@@ -9686,6 +11918,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 49
   },
@@ -9699,6 +11934,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2026",
    "draft_position": 19
   },
@@ -9712,6 +11950,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 13
   },
@@ -9725,6 +11966,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 37
   },
@@ -9738,6 +11982,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -9751,6 +11998,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 57
   },
@@ -9764,6 +12014,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2026",
    "draft_position": 12
   },
@@ -9777,6 +12030,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 25
   },
@@ -9790,6 +12046,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 28
   },
@@ -9803,6 +12062,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 55
   },
@@ -9816,6 +12078,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 23
   },
@@ -9829,6 +12094,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 26
   },
@@ -9842,6 +12110,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 22
   },
@@ -9855,6 +12126,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 67
   },
@@ -9868,6 +12142,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": 37
   },
@@ -9881,6 +12158,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 66
   },
@@ -9894,6 +12174,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 23
   },
@@ -9907,6 +12190,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 71
   },
@@ -9920,6 +12206,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 35
   },
@@ -9933,6 +12222,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 8
   },
@@ -9946,6 +12238,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -9959,6 +12254,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 28
   },
@@ -9972,6 +12270,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 52
   },
@@ -9985,6 +12286,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 50
   },
@@ -9998,6 +12302,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 0.0,
+   "position": "MIDFIELDER_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 29
   },
@@ -10011,6 +12318,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 51
   },
@@ -10024,6 +12334,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10037,6 +12350,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 3
   },
@@ -10050,6 +12366,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 46
   },
@@ -10063,6 +12382,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10076,6 +12398,9 @@
    "team": "SYD",
    "team_name": "Sydney Swans",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10089,6 +12414,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 21
   },
@@ -10102,6 +12430,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 1
   },
@@ -10115,6 +12446,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10128,6 +12462,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10141,6 +12478,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": null
   },
@@ -10154,6 +12494,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 30
   },
@@ -10167,6 +12510,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2023",
    "draft_position": null
   },
@@ -10180,6 +12526,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2026",
    "draft_position": 8
   },
@@ -10193,6 +12542,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 15
   },
@@ -10206,6 +12558,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 48
   },
@@ -10219,6 +12574,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 39
   },
@@ -10232,6 +12590,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 38
   },
@@ -10245,6 +12606,9 @@
    "team": "FRE",
    "team_name": "Fremantle",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10258,6 +12622,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -10271,6 +12638,9 @@
    "team": "PORT",
    "team_name": "Port Adelaide",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -10284,6 +12654,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 33
   },
@@ -10297,6 +12670,9 @@
    "team": "HAW",
    "team_name": "Hawthorn",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -10310,6 +12686,9 @@
    "team": "GEEL",
    "team_name": "Geelong Cats",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -10323,6 +12702,9 @@
    "team": "CARL",
    "team_name": "Carlton",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -10336,6 +12718,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": null
   },
@@ -10349,6 +12734,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 44
   },
@@ -10362,6 +12750,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 12
   },
@@ -10375,6 +12766,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2026",
    "draft_position": 6
   },
@@ -10388,6 +12782,9 @@
    "team": "COLL",
    "team_name": "Collingwood",
    "games": 0.0,
+   "position": "MIDFIELDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 32
   },
@@ -10401,6 +12798,9 @@
    "team": "WB",
    "team_name": "Western Bulldogs",
    "games": 0.0,
+   "position": "KEY_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": 60
   },
@@ -10414,6 +12814,9 @@
    "team": "ESS",
    "team_name": "Essendon",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10427,6 +12830,9 @@
    "team": "ADEL",
    "team_name": "Adelaide Crows",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10440,6 +12846,9 @@
    "team": "BL",
    "team_name": "Brisbane Lions",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10453,6 +12862,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 0.0,
+   "position": "MEDIUM_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10466,6 +12878,9 @@
    "team": "WCE",
    "team_name": "West Coast Eagles",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10479,6 +12894,9 @@
    "team": "NMFC",
    "team_name": "North Melbourne",
    "games": 0.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10492,6 +12910,9 @@
    "team": "RICH",
    "team_name": "Richmond",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2025",
    "draft_position": null
   },
@@ -10505,6 +12926,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2012",
    "draft_position": 98
   },
@@ -10518,6 +12942,9 @@
    "team": "MELB",
    "team_name": "Melbourne",
    "games": 0.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2018",
    "draft_position": null
   },
@@ -10531,6 +12958,9 @@
    "team": "GCFC",
    "team_name": "Gold Coast SUNS",
    "games": 1.0,
+   "position": "KEY_DEFENDER",
+   "af_avg": 32.0,
+   "af_total": 32,
    "draft_year": "2025",
    "draft_position": 14
   },
@@ -10544,6 +12974,9 @@
    "team": "STK",
    "team_name": "St Kilda",
    "games": 0.0,
+   "position": "RUCK",
+   "af_avg": 0.0,
+   "af_total": 0,
    "draft_year": "2024",
    "draft_position": 53
   },
@@ -10557,6 +12990,9 @@
    "team": "GWS",
    "team_name": "GWS GIANTS",
    "games": 3.0,
+   "position": "MEDIUM_FORWARD",
+   "af_avg": 45.3,
+   "af_total": 136,
    "draft_year": "2025",
    "draft_position": null
   }

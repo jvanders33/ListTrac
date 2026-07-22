@@ -105,8 +105,11 @@ def player(player_id: int):
         """SELECT dp.year, dp.draft_type, dp.pick_number, c.name club
            FROM draft_pick dp JOIN club c ON c.id = dp.original_club_id
            WHERE dp.player_selected_id = ?""", (player_id,))), None)
-    rating = _ratings_by_name().get(_norm(f"{profile['first_name']} {profile['last_name']}"))
+    key = _norm(f"{profile['first_name']} {profile['last_name']}")
+    rating = _ratings_by_name().get(key)
     profile["rating"] = {"rank": rating["rank"], "rating": rating["rating"]} if rating else None
+    fant = _fantasy_index().get(key)
+    profile["fantasy"] = {"af_avg": fant["af_avg"], "position": fant.get("position")} if fant else None
     # rating history — find the player's Champion Data timeline by matching the
     # current-season record's cd_id, else by name across the history file
     profile["rating_history"] = []
@@ -451,6 +454,23 @@ PROSPECTS_PATH = Path(__file__).resolve().parent.parent / "data" / "prospects_20
 PICK_INTEL_PATH = Path(__file__).resolve().parent.parent / "data" / "pick_intel.json"
 RATINGS_PATH = Path(__file__).resolve().parent.parent / "data" / "ratings_2026.json"
 RATINGS_HISTORY_PATH = Path(__file__).resolve().parent.parent / "data" / "ratings_history.json"
+FANTASY_PATH = Path(__file__).resolve().parent.parent / "data" / "fantasy_2026.json"
+_fantasy_by_name: dict = {}
+
+
+def _load_fantasy() -> dict:
+    import json
+    if not FANTASY_PATH.exists():
+        return {}
+    return json.loads(FANTASY_PATH.read_text(encoding="utf-8"))
+
+
+def _fantasy_index() -> dict:
+    if not _fantasy_by_name:
+        data = _load_fantasy()
+        for p in data.get("players", []):
+            _fantasy_by_name[_norm(p["name"])] = p
+    return _fantasy_by_name
 _history_cache: dict = {}
 
 
@@ -512,6 +532,30 @@ def prospects():
     merged with Reading the Play's Top 50. Regenerate: python scraper/u18_champs.py"""
     import json
     return json.loads(PROSPECTS_PATH.read_text(encoding="utf-8"))
+
+
+@app.get("/api/fantasy")
+def fantasy(limit: int = 100, position: str | None = None, club: str | None = None):
+    """AFL Fantasy (Dream Team) season averages, ranked. Matched to player
+    pages by name. SuperCoach scoring is a separate feed (FootyWire) — a
+    later addition."""
+    data = _load_fantasy()
+    if not data:
+        raise HTTPException(404, "fantasy data not built yet")
+    with db() as conn:
+        pid = {_norm(f"{r['first_name']} {r['last_name']}"): r["id"]
+               for r in conn.execute("SELECT id, first_name, last_name FROM player")}
+    rows = data["players"]
+    if position:
+        # UI sends MID/FOR/DEF/RUC; CD positions are compound (MEDIUM_FORWARD etc.)
+        kw = {"MID": "MIDFIELDER", "FOR": "FORWARD", "DEF": "DEFENDER", "RUC": "RUCK"}.get(
+            position.upper(), position.upper())
+        rows = [r for r in rows if kw in (r.get("position") or "").upper()]
+    if club:
+        rows = [r for r in rows if r["team"].upper() == club.upper()]
+    rows = [{**r, "player_id": pid.get(_norm(r["name"]))} for r in rows[:limit]]
+    return {"year": data["year"], "attribution": data["attribution"], "source_url": data["source_url"],
+            "count": data["count"], "players": rows}
 
 
 @app.get("/api/pick-intel")

@@ -31,6 +31,8 @@ HEADERS = {
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 CURRENT_PATH = DATA_DIR / "ratings_2026.json"
 HISTORY_PATH = DATA_DIR / "ratings_history.json"
+FANTASY_PATH = DATA_DIR / "fantasy_2026.json"
+FANTASY_ATTRIBUTION = "AFL Fantasy scoring (Champion Data 'Dream Team' points)"
 ATTRIBUTION = "Official AFL Player Ratings, powered by Champion Data"
 SOURCE_URL = "https://www.afl.com.au/stats/player-ratings"
 CURRENT_YEAR = 2026
@@ -55,6 +57,7 @@ def fetch_season_ratings(year: int, token: str) -> list[dict]:
         d, t = pl["playerDetails"], pl["totals"]
         if t.get("ratingPoints") is None:
             continue
+        avg = pl.get("averages", {})
         out.append({
             "cd_id": pl["playerId"],
             "rank": int(t["ranking"]) if t.get("ranking") else None,
@@ -63,10 +66,26 @@ def fetch_season_ratings(year: int, token: str) -> list[dict]:
             "name": f"{d['givenName']} {d['surname']}",
             "team": pl["team"]["teamAbbr"], "team_name": pl["team"]["teamName"],
             "games": pl.get("gamesPlayed"),
+            "position": d.get("position"),
+            "af_avg": round(avg["dreamTeamPoints"], 1) if avg.get("dreamTeamPoints") is not None else None,
+            "af_total": round(t["dreamTeamPoints"]) if t.get("dreamTeamPoints") is not None else None,
             "draft_year": d.get("draftYear"), "draft_position": d.get("draftPosition"),
         })
     out.sort(key=lambda x: x["rating"], reverse=True)
     return out
+
+
+def write_fantasy(ratings: list[dict]) -> None:
+    """AFL Fantasy (Dream Team) view, ranked by season average. Same source
+    feed as ratings; SuperCoach uses different scoring and isn't in this feed."""
+    rows = [{k: r[k] for k in ("cd_id", "first_name", "last_name", "name", "team",
+                               "position", "games", "af_avg", "af_total")}
+            for r in ratings if r.get("af_avg") and (r.get("games") or 0) >= 1]
+    rows.sort(key=lambda x: x["af_avg"], reverse=True)
+    FANTASY_PATH.write_text(json.dumps({
+        "year": CURRENT_YEAR, "attribution": FANTASY_ATTRIBUTION, "source_url": SOURCE_URL,
+        "count": len(rows), "players": rows,
+    }, indent=1), encoding="utf-8", newline="\n")
 
 
 def write_current(ratings: list[dict]) -> None:
@@ -109,7 +128,9 @@ if __name__ == "__main__":
     token = mint_token()
     current = fetch_season_ratings(CURRENT_YEAR, token)
     write_current(current)
+    write_fantasy(current)
     print(f"wrote {CURRENT_PATH.name}: {len(current)} rated players")
+    print(f"wrote {FANTASY_PATH.name}: {sum(1 for r in current if r.get('af_avg'))} fantasy-scored players")
     for r in current[:5]:
         print(f"  {r['rank']:>3}  {r['name']:<22} {r['team']}  {r['rating']}")
 
