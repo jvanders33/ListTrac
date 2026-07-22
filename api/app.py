@@ -76,6 +76,7 @@ def club_socials(abbrev: str):
 
 
 CLUB_INFO_PATH = Path(__file__).resolve().parent.parent / "data" / "club_info.json"
+CLUB_HONOURS_PATH = Path(__file__).resolve().parent.parent / "data" / "club_honours.json"
 
 # Our club abbreviation -> Champion Data ratings team code.
 _RATINGS_TEAM = {
@@ -95,6 +96,17 @@ def club_info(abbrev: str):
     key = abbrev.upper()
     data = json.loads(CLUB_INFO_PATH.read_text(encoding="utf-8")) if CLUB_INFO_PATH.exists() else {}
     info = {k: v for k, v in (data.get(key) or {}).items() if not k.startswith("_")}
+
+    # honour roll — premierships + major medals, sourced (data/club_honours.json)
+    if CLUB_HONOURS_PATH.exists():
+        h = json.loads(CLUB_HONOURS_PATH.read_text(encoding="utf-8"))
+        club_h = (h.get("clubs") or {}).get(key)
+        if club_h:
+            info["premierships"] = club_h["flags"]
+            info["premiership_years"] = club_h["premierships"]
+            info["last_flag"] = club_h["premierships"][0] if club_h["premierships"] else None
+            info["honours"] = club_h["awards"]
+            info["honours_sources"] = h.get("sources")
 
     # top-rated players currently on the list, matched to player pages
     top_rated = []

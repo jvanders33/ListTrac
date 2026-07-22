@@ -1586,6 +1586,45 @@ function clubMetaLine(info) {
   return bits.length ? `<p class="clubmeta">${bits.map(esc).join(" &nbsp;·&nbsp; ")}</p>` : "";
 }
 
+const AWARD_LABEL = [
+  ["brownlow", "Brownlow Medal", "league best & fairest"],
+  ["coleman", "Coleman Medal", "leading goalkicker"],
+  ["norm_smith", "Norm Smith Medal", "best afield, Grand Final"],
+  ["rising_star", "Rising Star", "best young player"],
+];
+function honourRollCard(info) {
+  const prem = info.premiership_years || [];
+  const h = info.honours;
+  const hasAwards = h && AWARD_LABEL.some(([k]) => (h[k] || []).length);
+  if (!prem.length && !hasAwards) return "";
+  const premBlock = `
+    <div class="honour-prem">
+      <div class="hp-num">${prem.length || 0}</div>
+      <div class="hp-body">
+        <b>VFL/AFL premiership${prem.length === 1 ? "" : "s"}</b>
+        ${prem.length ? `<div class="hp-years">${prem.map(y => `<span>${y}</span>`).join("")}</div>`
+          : `<span class="thin">None yet — ${esc(info.nickname || "the club")} are still chasing a first flag.</span>`}
+      </div>
+    </div>`;
+  const awardBlocks = AWARD_LABEL.map(([key, label, sub]) => {
+    const wins = (h && h[key]) || [];
+    return `<div class="award">
+      <div class="award-head"><span class="aw-num">${wins.length}</span>
+        <span><b>${label}</b><span class="thin"> · ${sub}</span></span></div>
+      ${wins.length
+        ? `<div class="award-chips">${wins.map(w => `<span class="aw-win"><i>${w.y}</i> ${esc(w.p)}</span>`).join("")}</div>`
+        : `<p class="thin" style="margin:4px 0 0;font-size:12px">No winners yet.</p>`}
+    </div>`;
+  }).join("");
+  return `<div class="card honours">
+    <h3>Honour roll</h3>
+    <p class="sub">Premierships and the club's major individual medallists.</p>
+    ${premBlock}
+    <div class="medalgrid">${awardBlocks}</div>
+    <p class="srcline">Premierships &amp; medals compiled from public records (Wikipedia award lists).</p>
+  </div>`;
+}
+
 function ratingLeadersCard(info) {
   const leaders = (info && info.top_rated || []).filter(r => r.rating);
   if (!leaders.length) return "";
@@ -1684,6 +1723,7 @@ async function clubView(abbrev) {
       <div class="tile r"><p class="eyebrow">Free agents</p><b>${n("restricted_fa") + n("unrestricted_fa")}</b><span>${n("restricted_fa")} restricted · ${n("unrestricted_fa")} unrestricted</span></div>
     </div>
     ${ratingLeadersCard(info)}
+    ${honourRollCard(info)}
     <div class="viewtoggle" role="tablist" aria-label="Club view">
       <button data-mode="list" role="tab">List</button>
       <button data-mode="grid" role="tab">Contract grid</button>

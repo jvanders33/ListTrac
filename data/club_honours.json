@@ -1,0 +1,1417 @@
+{
+ "attribution": "Compiled from Wikipedia award lists.",
+ "sources": {
+  "premierships": "https://en.wikipedia.org/wiki/List_of_VFL/AFL_premiers",
+  "brownlow": "https://en.wikipedia.org/wiki/List_of_Brownlow_Medal_winners",
+  "coleman": "https://en.wikipedia.org/wiki/Coleman_Medal",
+  "norm_smith": "https://en.wikipedia.org/wiki/Norm_Smith_Medal",
+  "rising_star": "https://en.wikipedia.org/wiki/AFL_Rising_Star"
+ },
+ "clubs": {
+  "CAR": {
+   "premierships": [
+    1995,
+    1987,
+    1982,
+    1981,
+    1979,
+    1972,
+    1970,
+    1968,
+    1947,
+    1945,
+    1938,
+    1915,
+    1914,
+    1908,
+    1907,
+    1906
+   ],
+   "flags": 16,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2024,
+      "p": "Patrick Cripps"
+     },
+     {
+      "y": 2022,
+      "p": "Patrick Cripps"
+     },
+     {
+      "y": 2010,
+      "p": "Chris Judd"
+     },
+     {
+      "y": 1994,
+      "p": "Greg Williams"
+     },
+     {
+      "y": 1964,
+      "p": "Gordon Collis"
+     },
+     {
+      "y": 1961,
+      "p": "John James"
+     },
+     {
+      "y": 1947,
+      "p": "Bert Deacon"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 2023,
+      "p": "Charlie Curnow"
+     },
+     {
+      "y": 2022,
+      "p": "Charlie Curnow"
+     },
+     {
+      "y": 2021,
+      "p": "Harry McKay"
+     },
+     {
+      "y": 2009,
+      "p": "Brendan Fevola"
+     },
+     {
+      "y": 2006,
+      "p": "Brendan Fevola"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 1995,
+      "p": "Greg Williams"
+     },
+     {
+      "y": 1987,
+      "p": "David Rhys-Jones"
+     },
+     {
+      "y": 1981,
+      "p": "Bruce Doull"
+     },
+     {
+      "y": 1979,
+      "p": "Wayne Harmes"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2019,
+      "p": "Sam Walsh"
+     }
+    ]
+   }
+  },
+  "COL": {
+   "premierships": [
+    2023,
+    2010,
+    1990,
+    1958,
+    1953,
+    1936,
+    1935,
+    1930,
+    1929,
+    1928,
+    1927,
+    1919,
+    1917,
+    1910,
+    1903,
+    1902
+   ],
+   "flags": 16,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2011,
+      "p": "Dane Swan"
+     },
+     {
+      "y": 2003,
+      "p": "Nathan Buckley"
+     },
+     {
+      "y": 1979,
+      "p": "Peter Moore"
+     },
+     {
+      "y": 1972,
+      "p": "Len Thompson"
+     },
+     {
+      "y": 1940,
+      "p": "Des Fothergill"
+     },
+     {
+      "y": 1939,
+      "p": "Marcus Whelan"
+     },
+     {
+      "y": 1930,
+      "p": "Harry Collier"
+     },
+     {
+      "y": 1929,
+      "p": "Albert Collier"
+     },
+     {
+      "y": 1927,
+      "p": "Syd Coventry"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 1986,
+      "p": "Brian Taylor"
+     },
+     {
+      "y": 1973,
+      "p": "Peter McKenna"
+     },
+     {
+      "y": 1972,
+      "p": "Peter McKenna"
+     },
+     {
+      "y": 1958,
+      "p": "Ian Brewer"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 2023,
+      "p": "Bobby Hill"
+     },
+     {
+      "y": 2010,
+      "p": "Scott Pendlebury"
+     },
+     {
+      "y": 2002,
+      "p": "Nathan Buckley"
+     },
+     {
+      "y": 1990,
+      "p": "Tony Shaw"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2022,
+      "p": "Nick Daicos"
+     },
+     {
+      "y": 2018,
+      "p": "Jaidyn Stephenson"
+     }
+    ]
+   }
+  },
+  "ESS": {
+   "premierships": [
+    2000,
+    1993,
+    1985,
+    1984,
+    1965,
+    1962,
+    1950,
+    1949,
+    1946,
+    1942,
+    1924,
+    1923,
+    1912,
+    1911,
+    1901,
+    1897
+   ],
+   "flags": 16,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 1996,
+      "p": "James Hird"
+     },
+     {
+      "y": 1993,
+      "p": "Gavin Wanganeen"
+     },
+     {
+      "y": 1976,
+      "p": "Graham Moss"
+     },
+     {
+      "y": 1953,
+      "p": "Bill Hutchison"
+     },
+     {
+      "y": 1952,
+      "p": "Bill Hutchison"
+     },
+     {
+      "y": 1938,
+      "p": "Dick Reynolds"
+     },
+     {
+      "y": 1937,
+      "p": "Dick Reynolds"
+     },
+     {
+      "y": 1934,
+      "p": "Dick Reynolds"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 2003,
+      "p": "Matthew Lloyd"
+     },
+     {
+      "y": 2001,
+      "p": "Matthew Lloyd"
+     },
+     {
+      "y": 2000,
+      "p": "Matthew Lloyd"
+     },
+     {
+      "y": 1966,
+      "p": "Ted Fordham"
+     },
+     {
+      "y": 1960,
+      "p": "John Evans"
+     },
+     {
+      "y": 1959,
+      "p": "John Evans"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 2000,
+      "p": "James Hird"
+     },
+     {
+      "y": 1993,
+      "p": "Michael Long"
+     },
+     {
+      "y": 1985,
+      "p": "Simon Madden"
+     },
+     {
+      "y": 1984,
+      "p": "Billy Duckworth"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2017,
+      "p": "Andrew McGrath"
+     },
+     {
+      "y": 2011,
+      "p": "Dyson Heppell"
+     }
+    ]
+   }
+  },
+  "HAW": {
+   "premierships": [
+    2015,
+    2014,
+    2013,
+    2008,
+    1991,
+    1989,
+    1988,
+    1986,
+    1983,
+    1978,
+    1976,
+    1971,
+    1961
+   ],
+   "flags": 13,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2018,
+      "p": "Tom Mitchell"
+     },
+     {
+      "y": 2012,
+      "p": "Sam Mitchell"
+     },
+     {
+      "y": 1999,
+      "p": "Shane Crawford"
+     },
+     {
+      "y": 1987,
+      "p": "John Platten"
+     },
+     {
+      "y": 1986,
+      "p": "Robert DiPierdomenico"
+     },
+     {
+      "y": 1949,
+      "p": "Col Austen"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 2013,
+      "p": "Jarryd Roughead"
+     },
+     {
+      "y": 2011,
+      "p": "Lance Franklin"
+     },
+     {
+      "y": 2008,
+      "p": "Lance Franklin"
+     },
+     {
+      "y": 1992,
+      "p": "Jason Dunstall"
+     },
+     {
+      "y": 1989,
+      "p": "Jason Dunstall"
+     },
+     {
+      "y": 1988,
+      "p": "Jason Dunstall"
+     },
+     {
+      "y": 1977,
+      "p": "Peter Hudson"
+     },
+     {
+      "y": 1975,
+      "p": "Leigh Matthews"
+     },
+     {
+      "y": 1971,
+      "p": "Peter Hudson"
+     },
+     {
+      "y": 1970,
+      "p": "Peter Hudson"
+     },
+     {
+      "y": 1968,
+      "p": "Peter Hudson"
+     },
+     {
+      "y": 1965,
+      "p": "John Peck"
+     },
+     {
+      "y": 1964,
+      "p": "John Peck"
+     },
+     {
+      "y": 1963,
+      "p": "John Peck"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 2015,
+      "p": "Cyril Rioli"
+     },
+     {
+      "y": 2014,
+      "p": "Luke Hodge"
+     },
+     {
+      "y": 2013,
+      "p": "Brian Lake"
+     },
+     {
+      "y": 2008,
+      "p": "Luke Hodge"
+     },
+     {
+      "y": 1991,
+      "p": "Paul Dear"
+     },
+     {
+      "y": 1988,
+      "p": "Gary Ayres"
+     },
+     {
+      "y": 1986,
+      "p": "Gary Ayres"
+     },
+     {
+      "y": 1983,
+      "p": "Colin Robertson"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2003,
+      "p": "Sam Mitchell"
+     },
+     {
+      "y": 1995,
+      "p": "Nick Holland"
+     }
+    ]
+   }
+  },
+  "MEL": {
+   "premierships": [
+    2021,
+    1964,
+    1960,
+    1959,
+    1957,
+    1956,
+    1955,
+    1948,
+    1941,
+    1940,
+    1939,
+    1926,
+    1900
+   ],
+   "flags": 13,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2000,
+      "p": "Shane Woewodin"
+     },
+     {
+      "y": 1991,
+      "p": "Jim Stynes"
+     },
+     {
+      "y": 1984,
+      "p": "Peter Moore"
+     },
+     {
+      "y": 1982,
+      "p": "Brian Wilson"
+     },
+     {
+      "y": 1946,
+      "p": "Don Cordner"
+     },
+     {
+      "y": 1928,
+      "p": "Ivor Warne-Smith"
+     },
+     {
+      "y": 1926,
+      "p": "Ivor Warne-Smith"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 2002,
+      "p": "David Neitz"
+     },
+     {
+      "y": 1961,
+      "p": "Athol Webb"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 2021,
+      "p": "Christian Petracca"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2021,
+      "p": "Luke Jackson"
+     },
+     {
+      "y": 2015,
+      "p": "Jesse Hogan"
+     },
+     {
+      "y": 2004,
+      "p": "Jared Rivers"
+     }
+    ]
+   }
+  },
+  "RIC": {
+   "premierships": [
+    2020,
+    2019,
+    2017,
+    1980,
+    1974,
+    1973,
+    1969,
+    1967,
+    1943,
+    1934,
+    1932,
+    1921,
+    1920
+   ],
+   "flags": 13,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2017,
+      "p": "Dustin Martin"
+     },
+     {
+      "y": 2012,
+      "p": "Trent Cotchin"
+     },
+     {
+      "y": 1971,
+      "p": "Ian Stewart"
+     },
+     {
+      "y": 1954,
+      "p": "Roy Wright"
+     },
+     {
+      "y": 1952,
+      "p": "Roy Wright"
+     },
+     {
+      "y": 1948,
+      "p": "Bill Morris"
+     },
+     {
+      "y": 1930,
+      "p": "Stan Judkins"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 2018,
+      "p": "Jack Riewoldt"
+     },
+     {
+      "y": 2012,
+      "p": "Jack Riewoldt"
+     },
+     {
+      "y": 2010,
+      "p": "Jack Riewoldt"
+     },
+     {
+      "y": 1981,
+      "p": "Michael Roach"
+     },
+     {
+      "y": 1980,
+      "p": "Michael Roach"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 2020,
+      "p": "Dustin Martin"
+     },
+     {
+      "y": 2019,
+      "p": "Dustin Martin"
+     },
+     {
+      "y": 2017,
+      "p": "Dustin Martin"
+     },
+     {
+      "y": 1982,
+      "p": "Maurice Rioli"
+     },
+     {
+      "y": 1980,
+      "p": "Kevin Bartlett"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2005,
+      "p": "Brett Deledio"
+     }
+    ]
+   }
+  },
+  "GEE": {
+   "premierships": [
+    2022,
+    2011,
+    2009,
+    2007,
+    1963,
+    1952,
+    1951,
+    1937,
+    1931,
+    1925
+   ],
+   "flags": 10,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2016,
+      "p": "Patrick Dangerfield"
+     },
+     {
+      "y": 2009,
+      "p": "Gary Ablett Jr"
+     },
+     {
+      "y": 2007,
+      "p": "Jimmy Bartel"
+     },
+     {
+      "y": 1989,
+      "p": "Paul Couch"
+     },
+     {
+      "y": 1962,
+      "p": "Alistair Lord"
+     },
+     {
+      "y": 1951,
+      "p": "Bernie Smith"
+     },
+     {
+      "y": 1924,
+      "p": "Edward Greeves"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 2025,
+      "p": "Jeremy Cameron"
+     },
+     {
+      "y": 2020,
+      "p": "Tom Hawkins"
+     },
+     {
+      "y": 1995,
+      "p": "Gary Ablett Sr"
+     },
+     {
+      "y": 1994,
+      "p": "Gary Ablett Sr"
+     },
+     {
+      "y": 1993,
+      "p": "Gary Ablett Sr"
+     },
+     {
+      "y": 1976,
+      "p": "Larry Donohue"
+     },
+     {
+      "y": 1969,
+      "p": "Doug Wade"
+     },
+     {
+      "y": 1967,
+      "p": "Doug Wade"
+     },
+     {
+      "y": 1962,
+      "p": "Doug Wade"
+     },
+     {
+      "y": 1955,
+      "p": "Neil Rayson"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 2022,
+      "p": "Isaac Smith"
+     },
+     {
+      "y": 2011,
+      "p": "Jimmy Bartel"
+     },
+     {
+      "y": 2009,
+      "p": "Paul Chapman"
+     },
+     {
+      "y": 2007,
+      "p": "Steve Johnson"
+     },
+     {
+      "y": 1989,
+      "p": "Gary Ablett Sr"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2024,
+      "p": "Oliver Dempsey"
+     },
+     {
+      "y": 2007,
+      "p": "Joel Selwood"
+     }
+    ]
+   }
+  },
+  "BRI": {
+   "premierships": [
+    2025,
+    2024,
+    2003,
+    2002,
+    2001
+   ],
+   "flags": 5,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2023,
+      "p": "Lachie Neale"
+     },
+     {
+      "y": 2020,
+      "p": "Lachie Neale"
+     },
+     {
+      "y": 2002,
+      "p": "Simon Black"
+     },
+     {
+      "y": 2001,
+      "p": "Jason Akermanis"
+     },
+     {
+      "y": 1996,
+      "p": "Michael Voss"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 2007,
+      "p": "Jonathan Brown"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 2025,
+      "p": "Will Ashcroft"
+     },
+     {
+      "y": 2024,
+      "p": "Will Ashcroft"
+     },
+     {
+      "y": 2003,
+      "p": "Simon Black"
+     },
+     {
+      "y": 2001,
+      "p": "Shaun Hart"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2014,
+      "p": "Lewis Taylor"
+     },
+     {
+      "y": 2009,
+      "p": "Daniel Rich"
+     },
+     {
+      "y": 1994,
+      "p": "Chris Scott"
+     },
+     {
+      "y": 1993,
+      "p": "Nathan Buckley"
+     }
+    ]
+   }
+  },
+  "SYD": {
+   "premierships": [
+    2012,
+    2005,
+    1933,
+    1918,
+    1909
+   ],
+   "flags": 5,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2006,
+      "p": "Adam Goodes"
+     },
+     {
+      "y": 2003,
+      "p": "Adam Goodes"
+     },
+     {
+      "y": 1995,
+      "p": "Paul Kelly"
+     },
+     {
+      "y": 1988,
+      "p": "Gerard Healy"
+     },
+     {
+      "y": 1986,
+      "p": "Greg Williams"
+     },
+     {
+      "y": 1981,
+      "p": "Barry Round"
+     },
+     {
+      "y": 1977,
+      "p": "Graham Teasdale"
+     },
+     {
+      "y": 1970,
+      "p": "Peter Bedford"
+     },
+     {
+      "y": 1968,
+      "p": "Bob Skilton"
+     },
+     {
+      "y": 1963,
+      "p": "Bob Skilton"
+     },
+     {
+      "y": 1959,
+      "p": "Bob Skilton"
+     },
+     {
+      "y": 1955,
+      "p": "Fred Goldsmith"
+     },
+     {
+      "y": 1949,
+      "p": "Ron Clegg"
+     },
+     {
+      "y": 1940,
+      "p": "Herbie Matthews"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 2017,
+      "p": "Lance Franklin"
+     },
+     {
+      "y": 2014,
+      "p": "Lance Franklin"
+     },
+     {
+      "y": 1998,
+      "p": "Tony Lockett"
+     },
+     {
+      "y": 1996,
+      "p": "Tony Lockett"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 2012,
+      "p": "Ryan O'Keefe"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2016,
+      "p": "Callum Mills"
+     },
+     {
+      "y": 2010,
+      "p": "Daniel Hannebery"
+     },
+     {
+      "y": 1999,
+      "p": "Adam Goodes"
+     }
+    ]
+   }
+  },
+  "NM": {
+   "premierships": [
+    1999,
+    1996,
+    1977,
+    1975
+   ],
+   "flags": 4,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 1983,
+      "p": "Ross Glendinning"
+     },
+     {
+      "y": 1978,
+      "p": "Malcolm Blight"
+     },
+     {
+      "y": 1974,
+      "p": "Keith Greig"
+     },
+     {
+      "y": 1973,
+      "p": "Keith Greig"
+     },
+     {
+      "y": 1965,
+      "p": "Noel Teasdale"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 1990,
+      "p": "John Longmire"
+     },
+     {
+      "y": 1982,
+      "p": "Malcolm Blight"
+     },
+     {
+      "y": 1974,
+      "p": "Doug Wade"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 1999,
+      "p": "Shannon Grant"
+     },
+     {
+      "y": 1996,
+      "p": "Glenn Archer"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2023,
+      "p": "Harry Sheezel"
+     },
+     {
+      "y": 1998,
+      "p": "Byron Pickett"
+     }
+    ]
+   }
+  },
+  "WCE": {
+   "premierships": [
+    2018,
+    2006,
+    1994,
+    1992
+   ],
+   "flags": 4,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2014,
+      "p": "Matt Priddis"
+     },
+     {
+      "y": 2005,
+      "p": "Ben Cousins"
+     },
+     {
+      "y": 2004,
+      "p": "Chris Judd"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 2016,
+      "p": "Josh Kennedy"
+     },
+     {
+      "y": 2015,
+      "p": "Josh Kennedy"
+     },
+     {
+      "y": 1999,
+      "p": "Scott Cummings"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 2018,
+      "p": "Luke Shuey"
+     },
+     {
+      "y": 2006,
+      "p": "Andrew Embley"
+     },
+     {
+      "y": 2005,
+      "p": "Chris Judd"
+     },
+     {
+      "y": 1994,
+      "p": "Dean Kemp"
+     },
+     {
+      "y": 1992,
+      "p": "Peter Matera"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 1996,
+      "p": "Ben Cousins"
+     }
+    ]
+   }
+  },
+  "WB": {
+   "premierships": [
+    2016,
+    1954
+   ],
+   "flags": 2,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2008,
+      "p": "Adam Cooney"
+     },
+     {
+      "y": 1992,
+      "p": "Scott Wynd"
+     },
+     {
+      "y": 1990,
+      "p": "Tony Liberatore"
+     },
+     {
+      "y": 1985,
+      "p": "Brad Hardie"
+     },
+     {
+      "y": 1980,
+      "p": "Kelvin Templeton"
+     },
+     {
+      "y": 1975,
+      "p": "Gary Dempsey"
+     },
+     {
+      "y": 1960,
+      "p": "John Schultz"
+     },
+     {
+      "y": 1956,
+      "p": "Peter Box"
+     },
+     {
+      "y": 1941,
+      "p": "Norman Ware"
+     },
+     {
+      "y": 1930,
+      "p": "Allan Hopkins"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 1985,
+      "p": "Simon Beasley"
+     },
+     {
+      "y": 1979,
+      "p": "Kelvin Templeton"
+     },
+     {
+      "y": 1978,
+      "p": "Kelvin Templeton"
+     },
+     {
+      "y": 1957,
+      "p": "Jack Collins"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 2016,
+      "p": "Jason Johannisen"
+     }
+    ],
+    "rising_star": []
+   }
+  },
+  "ADE": {
+   "premierships": [
+    1998,
+    1997
+   ],
+   "flags": 2,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2003,
+      "p": "Mark Ricciuto"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 1997,
+      "p": "Tony Modra"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 1998,
+      "p": "Andrew McLeod"
+     },
+     {
+      "y": 1997,
+      "p": "Andrew McLeod"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2012,
+      "p": "Daniel Talia"
+     }
+    ]
+   }
+  },
+  "STK": {
+   "premierships": [
+    1966
+   ],
+   "flags": 1,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 1998,
+      "p": "Robert Harvey"
+     },
+     {
+      "y": 1997,
+      "p": "Robert Harvey"
+     },
+     {
+      "y": 1987,
+      "p": "Tony Lockett"
+     },
+     {
+      "y": 1967,
+      "p": "Ross Smith"
+     },
+     {
+      "y": 1966,
+      "p": "Ian Stewart"
+     },
+     {
+      "y": 1965,
+      "p": "Ian Stewart"
+     },
+     {
+      "y": 1959,
+      "p": "Verdun Howell"
+     },
+     {
+      "y": 1958,
+      "p": "Neil Roberts"
+     },
+     {
+      "y": 1957,
+      "p": "Brian Gleeson"
+     },
+     {
+      "y": 1925,
+      "p": "Colin Watson"
+     }
+    ],
+    "coleman": [
+     {
+      "y": 2005,
+      "p": "Fraser Gehrig"
+     },
+     {
+      "y": 2004,
+      "p": "Fraser Gehrig"
+     },
+     {
+      "y": 1991,
+      "p": "Tony Lockett"
+     },
+     {
+      "y": 1987,
+      "p": "Tony Lockett"
+     },
+     {
+      "y": 1956,
+      "p": "Bill Young"
+     }
+    ],
+    "norm_smith": [
+     {
+      "y": 2010,
+      "p": "Lenny Hayes"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2002,
+      "p": "Nick Riewoldt"
+     },
+     {
+      "y": 2001,
+      "p": "Justin Koschitzke"
+     }
+    ]
+   }
+  },
+  "PA": {
+   "premierships": [
+    2004
+   ],
+   "flags": 1,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2021,
+      "p": "Ollie Wines"
+     }
+    ],
+    "coleman": [],
+    "norm_smith": [
+     {
+      "y": 2004,
+      "p": "Byron Pickett"
+     }
+    ],
+    "rising_star": [
+     {
+      "y": 2006,
+      "p": "Danyle Pearce"
+     },
+     {
+      "y": 1997,
+      "p": "Michael Wilson"
+     }
+    ]
+   }
+  },
+  "FRE": {
+   "premierships": [],
+   "flags": 0,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2019,
+      "p": "Nat Fyfe"
+     },
+     {
+      "y": 2015,
+      "p": "Nat Fyfe"
+     }
+    ],
+    "coleman": [],
+    "norm_smith": [],
+    "rising_star": [
+     {
+      "y": 2025,
+      "p": "Murphy Reid"
+     },
+     {
+      "y": 2020,
+      "p": "Caleb Serong"
+     },
+     {
+      "y": 2008,
+      "p": "Rhys Palmer"
+     },
+     {
+      "y": 2000,
+      "p": "Paul Hasleby"
+     }
+    ]
+   }
+  },
+  "GCS": {
+   "premierships": [],
+   "flags": 0,
+   "awards": {
+    "brownlow": [
+     {
+      "y": 2025,
+      "p": "Matt Rowell"
+     },
+     {
+      "y": 2013,
+      "p": "Gary Ablett Jr"
+     }
+    ],
+    "coleman": [],
+    "norm_smith": [],
+    "rising_star": [
+     {
+      "y": 2013,
+      "p": "Jaeger O'Meara"
+     }
+    ]
+   }
+  },
+  "GWS": {
+   "premierships": [],
+   "flags": 0,
+   "awards": {
+    "brownlow": [],
+    "coleman": [
+     {
+      "y": 2024,
+      "p": "Jesse Hogan"
+     },
+     {
+      "y": 2019,
+      "p": "Jeremy Cameron"
+     }
+    ],
+    "norm_smith": [],
+    "rising_star": []
+   }
+  },
+  "TAS": {
+   "premierships": [],
+   "flags": 0,
+   "awards": {
+    "brownlow": [],
+    "coleman": [],
+    "norm_smith": [],
+    "rising_star": []
+   }
+  }
+ }
+}
