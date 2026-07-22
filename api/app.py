@@ -164,6 +164,9 @@ def player(player_id: int):
            FROM draft_pick dp JOIN club c ON c.id = dp.original_club_id
            WHERE dp.player_selected_id = ?""", (player_id,))), None)
     key = _norm(f"{profile['first_name']} {profile['last_name']}")
+    contracts = _contracts_by_name()
+    profile["contract_events"] = contracts.get("_by_name", {}).get(key, [])
+    profile["contract_source"] = contracts.get("_meta") if profile["contract_events"] else None
     rating = _ratings_by_name().get(key)
     profile["rating"] = {"rank": rating["rank"], "rating": rating["rating"]} if rating else None
     fant = _fantasy_index().get(key)
@@ -551,6 +554,23 @@ def _ratings_by_name() -> dict:
         return {}
     data = json.loads(RATINGS_PATH.read_text(encoding="utf-8"))
     return {_norm(r["name"]): r for r in data["ratings"]}
+
+
+CONTRACTS_PATH = Path(__file__).resolve().parent.parent / "data" / "contracts.json"
+_contracts_cache: dict = {}
+
+
+def _contracts_by_name() -> dict:
+    """Contract/movement events (AFLRATINGS) grouped by normalised player name."""
+    import json
+    if not _contracts_cache and CONTRACTS_PATH.exists():
+        data = json.loads(CONTRACTS_PATH.read_text(encoding="utf-8"))
+        grouped: dict = {}
+        for e in data.get("events", []):
+            grouped.setdefault(_norm(e["name"]), []).append(e)
+        _contracts_cache["_by_name"] = grouped
+        _contracts_cache["_meta"] = {k: data[k] for k in ("source", "source_url", "attribution", "note") if k in data}
+    return _contracts_cache
 
 
 @app.get("/api/ratings")

@@ -139,6 +139,12 @@ const timeAgo = iso => {
   if (hrs < 24) return `${hrs}h ago`;
   return `${Math.round(hrs / 24)}d ago`;
 };
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const monthYear = d => {
+  if (!d) return "";
+  const [y, m] = d.split("-");
+  return m ? `${MONTHS[+m - 1]} ${y}` : y;
+};
 
 async function landingView() {
   const [summary, order, newsItems, trend, clubList, adminUpdates, trendingPlayers] = await Promise.all([
@@ -1543,20 +1549,32 @@ function timelineHTML(p) {
   const endYear = Math.max((current.contracted_through_year || 2026) + 1, 2027);
   const from = Math.max(startYear, endYear - 11);
   const statusCls = { restricted_fa: "rfa", unrestricted_fa: "ufa", out_of_contract: "warn", contracted: "ok" }[current.status] || "ok";
+  // Reconstruct which seasons were under a known contract from the reported
+  // signings/extensions, and flag the years a deal was actually signed.
+  const covered = new Set(), signedYears = new Set();
+  for (const e of (p.contract_events || [])) {
+    if ((e.kind !== "signing" && e.kind !== "extension") || !e.end_year) continue;
+    const y0 = +String(e.date).slice(0, 4);
+    signedYears.add(y0);
+    for (let y = y0; y <= e.end_year; y++) covered.add(y);
+  }
+  const hasSpans = covered.size > 0;
   let cells = "";
   for (let y = from; y <= endYear; y++) {
     let cls;
     if (y === 2026) cls = statusCls;
-    else if (y < 2026) cls = "faded";
-    else cls = current.status === "contracted" && current.contracted_through_year >= y ? "ok" : "tbd";
-    cells += `<div class="yr"><div class="bar ${cls}"></div><div class="lab">'${String(y).slice(2)}</div></div>`;
+    else if (y < 2026) cls = covered.has(y) ? "ok" : "faded";
+    else cls = (current.status === "contracted" && current.contracted_through_year >= y) || covered.has(y) ? "ok" : "tbd";
+    const mark = signedYears.has(y) ? `<span class="signmark" title="Contract signed ${y}">✎</span>` : "";
+    cells += `<div class="yr"><div class="bar ${cls}">${mark}</div><div class="lab">'${String(y).slice(2)}</div></div>`;
   }
   return `<div class="timeline" aria-label="Contract status timeline">${cells}</div>
     <div class="legend">
-      <span><i style="background:var(--ok);opacity:.75"></i>Contracted</span>
-      <span><i style="background:var(--ok);opacity:.28"></i>On list (status not tracked pre-2026)</span>
+      <span><i style="background:var(--ok);opacity:.75"></i>Contracted${hasSpans ? " (reconstructed from signings)" : ""}</span>
+      <span><i style="background:var(--ok);opacity:.28"></i>On list${hasSpans ? ", no deal on record" : " (status not tracked pre-2026)"}</span>
       <span><i style="background:var(--${statusCls === "ok" ? "rfa" : statusCls})"></i>${esc((STATUS[current.status] || {}).label || "")} year</span>
       <span><i style="background:var(--line)"></i>Unresolved</span>
+      ${hasSpans ? '<span class="thin">✎ deal signed</span>' : ""}
     </div>`;
 }
 
@@ -1607,20 +1625,40 @@ async function playerView(id) {
   const heroA = p.club_primary || "#333", heroTrim = p.club_secondary || "#ddd";
   const isFA = current && (current.status === "restricted_fa" || current.status === "unrestricted_fa");
 
-  const txRows = [];
-  if (p.drafted) txRows.push(`
-    <tr><td class="thin">Nov ${p.drafted.year}</td><td><span class="chip ok">Drafted</span></td>
-      <td>${p.drafted.year} ${esc(p.drafted.draft_type)} draft${p.drafted.pick_number ? ", pick " + p.drafted.pick_number : ""} — ${esc(p.drafted.club)}</td></tr>`);
+  // Unified, chronological movement timeline: draft + DB transactions + the
+  // AFLRATINGS contract signings/extensions that fill the middle + FA naming.
+  const events = [];
+  if (p.drafted) events.push({
+    date: `${p.drafted.year}-11-25`, when: `Nov ${p.drafted.year}`, cls: "ok", label: "Drafted",
+    detail: `${p.drafted.year} ${esc(p.drafted.draft_type)} draft${p.drafted.pick_number ? ", pick " + p.drafted.pick_number : ""} — ${esc(p.drafted.club)}`,
+  });
   for (const t of p.transactions) {
     const label = { trade: "Trade", sign_fa: "FA signing", sign_rookie: "Rookie signing", delist: "Delisted", retire: "Retired", rookie_elevate: "Elevated" }[t.type] || t.type;
-    const cls = t.type === "trade" ? "warn" : "plain";
-    txRows.push(`
-      <tr><td class="thin">${esc((t.date || "").slice(0, 4))}</td><td><span class="chip ${cls}">${esc(label)}</span></td>
-        <td>${t.from_club ? esc(t.from_club) + " → " : ""}${esc(t.to_club || "")}${t.notes ? ` <span class="thin">· ${esc(t.notes.replace("; date approximate (year-level from Draftguru)", ""))}</span>` : ""}</td></tr>`);
+    events.push({
+      date: t.date || "", when: (t.date || "").length >= 7 ? monthYear(t.date) : (t.date || "").slice(0, 4),
+      cls: t.type === "trade" ? "warn" : "plain", label,
+      detail: `${t.from_club ? esc(t.from_club) + " → " : ""}${esc(t.to_club || "")}${t.notes ? ` <span class="thin">· ${esc(t.notes.replace("; date approximate (year-level from Draftguru)", ""))}</span>` : ""}`,
+    });
   }
-  if (current && isFA) txRows.push(`
-    <tr><td class="thin">Jul 2026</td><td>${chip(current.status)}</td>
-      <td>Named ${esc(STATUS[current.status].label.toLowerCase())} for end of ${current.contracted_through_year}</td></tr>`);
+  const contractEvents = (p.contract_events || []).filter(e => e.kind === "signing" || e.kind === "extension");
+  for (const e of contractEvents) {
+    const parts = [];
+    if (e.length) parts.push(`${e.length}-year deal`);
+    if (e.end_year) parts.push(`contracted to end of ${e.end_year}${e.end_estimated ? " (est.)" : ""}`);
+    events.push({
+      date: e.date, when: monthYear(e.date), cls: "ok", label: e.kind === "extension" ? "Re-signed" : "Signed",
+      detail: `${e.club ? esc(e.club) + " — " : ""}${parts.join(", ") || "terms not reported"}`
+        + `${e.reporter ? ` · <span class="thin">${esc(e.reporter)}</span>` : ""}`
+        + `${e.source_url ? ` <a class="srclink" href="${esc(e.source_url)}" target="_blank" rel="noopener">source ↗</a>` : ""}`,
+    });
+  }
+  if (current && isFA) events.push({
+    date: "2026-07-15", when: "Jul 2026", cls: STATUS[current.status].cls, label: STATUS[current.status].label,
+    detail: `Named ${esc(STATUS[current.status].label.toLowerCase())} for end of ${current.contracted_through_year}`,
+  });
+  events.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+  const txRows = events.map(e =>
+    `<tr><td class="thin">${esc(e.when)}</td><td><span class="chip ${e.cls}">${esc(e.label)}</span></td><td>${e.detail}</td></tr>`);
 
   let sameBoat = "";
   if (isFA) {
@@ -1665,11 +1703,13 @@ async function playerView(id) {
           ${timelineHTML(p)}
         </div>` : ""}
         <div class="card">
-          <h3>Transactions</h3>
+          <h3>Movement &amp; contracts</h3>
+          <p class="sub">Draft, trades, contract signings and free agency${contractEvents.length ? " — the middle filled in from reported signings" : ""}. Status &amp; terms only; never dollars.</p>
           <div class="tablewrap"><table>
             <thead><tr><th>When</th><th>Type</th><th>Detail</th></tr></thead>
             <tbody>${txRows.join("") || `<tr><td colspan="4" class="thin">No recorded movements — original-list player.</td></tr>`}</tbody>
           </table></div>
+          ${contractEvents.length && p.contract_source ? `<p class="srcline">Contract signings via <a href="${esc(p.contract_source.source_url)}" target="_blank" rel="noopener">${esc(p.contract_source.source)}</a>, compiled from public reporting. Coverage from late 2021.</p>` : ""}
         </div>
         ${p.rating_history && p.rating_history.length ? `
         <div class="card">
