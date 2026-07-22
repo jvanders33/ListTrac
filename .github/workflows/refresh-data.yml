@@ -40,6 +40,12 @@ jobs:
         run: python scraper/afl_ratings.py --history 2015
         continue-on-error: true  # token/feed hiccup shouldn't block the data push
 
+      - name: Refresh prospect playing history (Rookie Me Central)
+        # per-competition stats for every draft prospect — updates as the
+        # SANFL/WAFL/Coates/championship seasons are played
+        run: python scraper/prospect_stats.py
+        continue-on-error: true
+
       - name: Sanity-check the rebuilt snapshot
         run: |
           python - <<'EOF'

@@ -394,6 +394,14 @@ footer.pagefoot {
 
 .spark { display: block; margin: 4px 0 12px; overflow: visible; }
 
+/* prospect playing history (expandable) */
+.prospect-history { padding: 0 4px; }
+.prospect-history:not([hidden]) { padding: 6px 4px 12px; }
+.histtable { font-size: 12.5px; }
+.histtable th { border-bottom: 1px solid var(--line); }
+.watchrow[data-prospect] { cursor: pointer; text-decoration: none; color: var(--ink); }
+.watchrow[data-prospect]:hover { background: var(--card-2); }
+
 /* prospect watchlist (U16 classes — honours, not a ranking) */
 .watchlist { display: flex; flex-direction: column; gap: 6px; margin-top: 14px; }
 .watchrow {

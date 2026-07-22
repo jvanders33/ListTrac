@@ -541,6 +541,67 @@ def prospects(year: int = 2026):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+PROSPECT_STATS_PATH = Path(__file__).resolve().parent.parent / "data" / "prospect_stats.json"
+_prospect_stats: dict = {}
+
+
+def _load_prospect_stats() -> dict:
+    import json
+    if not _prospect_stats and PROSPECT_STATS_PATH.exists():
+        _prospect_stats.update(json.loads(PROSPECT_STATS_PATH.read_text(encoding="utf-8")))
+    return _prospect_stats
+
+
+@app.get("/api/prospect-stats")
+def prospect_stats(name: str):
+    """A prospect's full cross-competition playing history (Coates Talent
+    League, SANFL, WAFL, national championships…), via Rookie Me Central."""
+    data = _load_prospect_stats()
+    rec = (data.get("players") or {}).get(name)
+    return {"source": data.get("source"), "source_url": data.get("source_url"),
+            "history": rec["history"] if rec else []}
+
+
+def _find_prospect(name: str) -> dict | None:
+    """Locate a prospect's pool metadata across the draft classes. A player can
+    appear in more than one class (a bottom-ager plays up a level) — prefer the
+    entry that carries an honour, since that's the more informative context."""
+    import json
+    matches = []
+    for year in (2026, 2027, 2028):
+        path = PROSPECTS_PATH if year == 2026 else PROSPECTS_DIR / f"prospects_{year}.json"
+        if not path.exists():
+            continue
+        pool = json.loads(path.read_text(encoding="utf-8"))
+        for p in pool.get("prospects", []):
+            if _norm(p["name"]) == _norm(name):
+                matches.append({**p, "draft_year": year, "stage": pool.get("stage", "u18"),
+                                "sources": pool.get("sources", {}),
+                                "also_in": [y for y in (2026, 2027, 2028)]})
+    if not matches:
+        return None
+    matches.sort(key=lambda m: (bool(m.get("award")), m.get("stage") == "u16"), reverse=True)
+    best = matches[0]
+    best["also_in"] = sorted({m["draft_year"] for m in matches})
+    return best
+
+
+@app.get("/api/prospect")
+def prospect(name: str):
+    """Full prospect profile — pool metadata + cross-competition playing
+    history. The prospect equivalent of a player page."""
+    meta = _find_prospect(name)
+    if meta is None:
+        raise HTTPException(404, f"no prospect '{name}'")
+    stats = _load_prospect_stats()
+    rec = (stats.get("players") or {}).get(meta["name"]) or {"history": []}
+    # a headline line: the most recent season with the most games
+    hist = rec["history"]
+    headline = max(hist, key=lambda r: (r["season"], r.get("gamesplayed") or 0)) if hist else None
+    return {**meta, "history": hist, "headline": headline,
+            "stats_source": stats.get("source"), "stats_source_url": stats.get("source_url")}
+
+
 @app.get("/api/prospect-runway")
 def prospect_runway():
     """The 3-year draft runway — one summary card per class."""

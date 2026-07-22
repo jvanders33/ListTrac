@@ -1,0 +1,3386 @@
+{
+ "source": "Rookie Me Central (SportsPress)",
+ "source_url": "https://central.rookieme.com/afl/",
+ "leagues": [
+  "AFL",
+  "NEAFL",
+  "VFL",
+  "SANFL League",
+  "SANFL Reserves",
+  "SANFL U18",
+  "WAFL League",
+  "WAFL Reserves",
+  "WAFL Colts",
+  "Coates Talent League",
+  "U18 Championships",
+  "U16 Championships",
+  "Academy"
+ ],
+ "players": {
+  "Max Gulliver": {
+   "rmc_id": 198785,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Tasmania Devils",
+     "gamesplayed": 2,
+     "disposals": 17,
+     "kicks": 10,
+     "handballs": 7,
+     "marks": 5,
+     "tackles": 9,
+     "clr": 2,
+     "i": 4,
+     "cp": 8,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 8.5,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Max Thompson": {
+   "rmc_id": 190350,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Bendigo Pioneers",
+     "gamesplayed": 5,
+     "disposals": 101,
+     "kicks": 75,
+     "handballs": 26,
+     "marks": 27,
+     "tackles": 4,
+     "clr": 4,
+     "i": 10,
+     "cp": 31,
+     "hitouts": 0,
+     "goals": 3,
+     "avg_disposals": 20.2,
+     "avg_goals": 0.6
+    }
+   ]
+  },
+  "Tevita Rodan": {
+   "rmc_id": 183947,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Calder Cannons",
+     "gamesplayed": 2,
+     "disposals": 14,
+     "kicks": 8,
+     "handballs": 6,
+     "marks": 4,
+     "tackles": 1,
+     "clr": 0,
+     "i": 2,
+     "cp": 6,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 7.0,
+     "avg_goals": 0.5
+    }
+   ]
+  },
+  "Harvey Chapman": {
+   "rmc_id": 164857,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 2,
+     "disposals": 25,
+     "kicks": 19,
+     "handballs": 6,
+     "marks": 7,
+     "tackles": 3,
+     "clr": 0,
+     "i": 1,
+     "cp": 8,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 12.5,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Gus Trigwell": {
+   "rmc_id": 188983,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Northern Territory",
+     "gamesplayed": 3,
+     "disposals": 37,
+     "kicks": 28,
+     "handballs": 9,
+     "marks": 7,
+     "tackles": 3,
+     "clr": 0,
+     "i": 1,
+     "cp": 11,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 12.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Louis Salopek": {
+   "rmc_id": 190356,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Dandenong Stingrays",
+     "gamesplayed": 3,
+     "disposals": 35,
+     "kicks": 24,
+     "handballs": 11,
+     "marks": 13,
+     "tackles": 7,
+     "clr": 2,
+     "i": 9,
+     "cp": 10,
+     "hitouts": 0,
+     "goals": 3,
+     "avg_disposals": 11.7,
+     "avg_goals": 1.0
+    }
+   ]
+  },
+  "Tom Steinfort": {
+   "rmc_id": 194455,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Geelong Falcons",
+     "gamesplayed": 3,
+     "disposals": 14,
+     "kicks": 9,
+     "handballs": 5,
+     "marks": 4,
+     "tackles": 3,
+     "clr": 1,
+     "i": 1,
+     "cp": 8,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 4.7,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Taj Garrett": {
+   "rmc_id": 164841,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 3,
+     "disposals": 35,
+     "kicks": 26,
+     "handballs": 9,
+     "marks": 11,
+     "tackles": 6,
+     "clr": 1,
+     "i": 7,
+     "cp": 9,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 11.7,
+     "avg_goals": 0.7
+    }
+   ]
+  },
+  "Zemes Pilot": {
+   "rmc_id": 164878,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 1,
+     "disposals": 7,
+     "kicks": 6,
+     "handballs": 1,
+     "marks": 3,
+     "tackles": 0,
+     "clr": 0,
+     "i": 1,
+     "cp": 4,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 7.0,
+     "avg_goals": 2.0
+    }
+   ]
+  },
+  "Jake Miller": {
+   "rmc_id": 184450,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Western Jets",
+     "gamesplayed": 6,
+     "disposals": 67,
+     "kicks": 56,
+     "handballs": 11,
+     "marks": 41,
+     "tackles": 6,
+     "clr": 0,
+     "i": 14,
+     "cp": 37,
+     "hitouts": 0,
+     "goals": 14,
+     "avg_disposals": 11.2,
+     "avg_goals": 2.3
+    }
+   ]
+  },
+  "Axel Walsh": {
+   "rmc_id": 164965,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Western Australia",
+     "gamesplayed": 3,
+     "disposals": 30,
+     "kicks": 23,
+     "handballs": 7,
+     "marks": 2,
+     "tackles": 7,
+     "clr": 10,
+     "i": 10,
+     "cp": 17,
+     "hitouts": 58,
+     "goals": 0,
+     "avg_disposals": 10.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Koby Bewick": {
+   "rmc_id": 183937,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Calder Cannons",
+     "gamesplayed": 4,
+     "disposals": 73,
+     "kicks": 47,
+     "handballs": 26,
+     "marks": 16,
+     "tackles": 3,
+     "clr": 4,
+     "i": 7,
+     "cp": 17,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 18.2,
+     "avg_goals": 0.5
+    }
+   ]
+  },
+  "Angus Abbonizio": {
+   "rmc_id": 164930,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Western Australia",
+     "gamesplayed": 3,
+     "disposals": 38,
+     "kicks": 28,
+     "handballs": 10,
+     "marks": 10,
+     "tackles": 9,
+     "clr": 9,
+     "i": 6,
+     "cp": 19,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 12.7,
+     "avg_goals": 0.7
+    }
+   ]
+  },
+  "Sam Husband": {
+   "rmc_id": 197798,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Tasmania Devils",
+     "gamesplayed": 3,
+     "disposals": 32,
+     "kicks": 17,
+     "handballs": 15,
+     "marks": 6,
+     "tackles": 7,
+     "clr": 2,
+     "i": 4,
+     "cp": 12,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 10.7,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Harper McCullough": {
+   "rmc_id": 184298,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Oakleigh Chargers",
+     "gamesplayed": 2,
+     "disposals": 13,
+     "kicks": 5,
+     "handballs": 8,
+     "marks": 1,
+     "tackles": 6,
+     "clr": 1,
+     "i": 4,
+     "cp": 7,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 6.5,
+     "avg_goals": 0.5
+    }
+   ]
+  },
+  "Dougie Cochrane": {
+   "rmc_id": 136045,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 3,
+     "disposals": 72,
+     "kicks": 58,
+     "handballs": 14,
+     "marks": 20,
+     "tackles": 13,
+     "clr": 10,
+     "i": 7,
+     "cp": 26,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 24.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Cody Walker": {
+   "rmc_id": 164983,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Vic Country",
+     "gamesplayed": 4,
+     "disposals": 70,
+     "kicks": 35,
+     "handballs": 35,
+     "marks": 19,
+     "tackles": 8,
+     "clr": 4,
+     "i": 14,
+     "cp": 18,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 17.5,
+     "avg_goals": 0.2
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Bendigo Pioneers",
+     "gamesplayed": 13,
+     "disposals": 333,
+     "kicks": 213,
+     "handballs": 120,
+     "marks": 69,
+     "tackles": 42,
+     "clr": 64,
+     "i": 79,
+     "cp": 129,
+     "hitouts": 0,
+     "goals": 9,
+     "avg_disposals": 25.6,
+     "avg_goals": 0.7
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Country",
+     "gamesplayed": 3,
+     "disposals": 84,
+     "kicks": 50,
+     "handballs": 34,
+     "marks": 9,
+     "tackles": 10,
+     "clr": 21,
+     "i": 14,
+     "cp": 40,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 28.0,
+     "avg_goals": 0.7
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Bendigo Pioneers",
+     "gamesplayed": 3,
+     "disposals": 46,
+     "kicks": 30,
+     "handballs": 16,
+     "marks": 8,
+     "tackles": 5,
+     "clr": 0,
+     "i": 13,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 15.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Gus Teixeira": {
+   "rmc_id": 192367,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Sandringham Dragons",
+     "gamesplayed": 9,
+     "disposals": 176,
+     "kicks": 102,
+     "handballs": 74,
+     "marks": 38,
+     "tackles": 27,
+     "clr": 23,
+     "i": 45,
+     "cp": 81,
+     "hitouts": 0,
+     "goals": 4,
+     "avg_disposals": 19.6,
+     "avg_goals": 0.4
+    }
+   ]
+  },
+  "Arki Butler": {
+   "rmc_id": 165064,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Vic Metro",
+     "gamesplayed": 1,
+     "disposals": 6,
+     "kicks": 3,
+     "handballs": 3,
+     "marks": 1,
+     "tackles": 1,
+     "clr": 0,
+     "i": 2,
+     "cp": 4,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 6.0,
+     "avg_goals": null
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Sandringham Dragons",
+     "gamesplayed": 12,
+     "disposals": 127,
+     "kicks": 84,
+     "handballs": 43,
+     "marks": 43,
+     "tackles": 16,
+     "clr": 5,
+     "i": 18,
+     "cp": 53,
+     "hitouts": 0,
+     "goals": 28,
+     "avg_disposals": 10.6,
+     "avg_goals": 2.3
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Metro",
+     "gamesplayed": 3,
+     "disposals": 58,
+     "kicks": 35,
+     "handballs": 23,
+     "marks": 20,
+     "tackles": 3,
+     "clr": 5,
+     "i": 9,
+     "cp": 26,
+     "hitouts": 0,
+     "goals": 7,
+     "avg_disposals": 19.3,
+     "avg_goals": 2.3
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Sandringham Dragons",
+     "gamesplayed": 1,
+     "disposals": 13,
+     "kicks": 11,
+     "handballs": 2,
+     "marks": 7,
+     "tackles": 1,
+     "clr": 0,
+     "i": 3,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 3,
+     "avg_disposals": 13.0,
+     "avg_goals": 3.0
+    }
+   ]
+  },
+  "Harry Van Hattum": {
+   "rmc_id": 165101,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Vic Metro",
+     "gamesplayed": 1,
+     "disposals": 9,
+     "kicks": 6,
+     "handballs": 3,
+     "marks": 3,
+     "tackles": 3,
+     "clr": 1,
+     "i": 2,
+     "cp": 7,
+     "hitouts": 8,
+     "goals": 0,
+     "avg_disposals": 9.0,
+     "avg_goals": null
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Northern Knights",
+     "gamesplayed": 5,
+     "disposals": 81,
+     "kicks": 45,
+     "handballs": 36,
+     "marks": 24,
+     "tackles": 4,
+     "clr": 22,
+     "i": 17,
+     "cp": 61,
+     "hitouts": 95,
+     "goals": 4,
+     "avg_disposals": 16.2,
+     "avg_goals": 0.8
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Metro",
+     "gamesplayed": 3,
+     "disposals": 33,
+     "kicks": 14,
+     "handballs": 19,
+     "marks": 9,
+     "tackles": 2,
+     "clr": 6,
+     "i": 6,
+     "cp": 23,
+     "hitouts": 57,
+     "goals": 2,
+     "avg_disposals": 11.0,
+     "avg_goals": 0.7
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Northern Knights",
+     "gamesplayed": 1,
+     "disposals": 1,
+     "kicks": 1,
+     "handballs": 0,
+     "marks": 1,
+     "tackles": 0,
+     "clr": 0,
+     "i": 0,
+     "cp": 0,
+     "hitouts": 1,
+     "goals": 0,
+     "avg_disposals": 1.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Ethan Drever": {
+   "rmc_id": 164979,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "GWV Rebels",
+     "gamesplayed": 14,
+     "disposals": 234,
+     "kicks": 113,
+     "handballs": 121,
+     "marks": 40,
+     "tackles": 45,
+     "clr": 19,
+     "i": 34,
+     "cp": 75,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 16.7,
+     "avg_goals": 0.1
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Country",
+     "gamesplayed": 3,
+     "disposals": 42,
+     "kicks": 20,
+     "handballs": 22,
+     "marks": 4,
+     "tackles": 9,
+     "clr": 9,
+     "i": 4,
+     "cp": 24,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 14.0,
+     "avg_goals": null
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "GWV Rebels",
+     "gamesplayed": 2,
+     "disposals": 12,
+     "kicks": 8,
+     "handballs": 4,
+     "marks": 2,
+     "tackles": 2,
+     "clr": 0,
+     "i": 5,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 6.0,
+     "avg_goals": 0.5
+    }
+   ]
+  },
+  "Heath Mellody": {
+   "rmc_id": 190035,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Western Australia",
+     "gamesplayed": 3,
+     "disposals": 32,
+     "kicks": 21,
+     "handballs": 11,
+     "marks": 10,
+     "tackles": 3,
+     "clr": 4,
+     "i": 8,
+     "cp": 13,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 10.7,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Ethan Matthews": {
+   "rmc_id": 181672,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Allies",
+     "gamesplayed": 1,
+     "disposals": 3,
+     "kicks": 1,
+     "handballs": 2,
+     "marks": 0,
+     "tackles": 3,
+     "clr": 0,
+     "i": 0,
+     "cp": 1,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 3.0,
+     "avg_goals": null
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "GIANTS Academy",
+     "gamesplayed": 3,
+     "disposals": 63,
+     "kicks": 26,
+     "handballs": 37,
+     "marks": 11,
+     "tackles": 9,
+     "clr": 9,
+     "i": 7,
+     "cp": 28,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 21.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Clancy Snell": {
+   "rmc_id": 184096,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Gippsland Power",
+     "gamesplayed": 15,
+     "disposals": 109,
+     "kicks": 68,
+     "handballs": 41,
+     "marks": 42,
+     "tackles": 18,
+     "clr": 4,
+     "i": 6,
+     "cp": 44,
+     "hitouts": 2,
+     "goals": 6,
+     "avg_disposals": 7.3,
+     "avg_goals": 0.4
+    }
+   ]
+  },
+  "Leo Steed": {
+   "rmc_id": 164909,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Western Australia",
+     "gamesplayed": 3,
+     "disposals": 62,
+     "kicks": 33,
+     "handballs": 29,
+     "marks": 6,
+     "tackles": 13,
+     "clr": 10,
+     "i": 14,
+     "cp": 31,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 20.7,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Wil Malady": {
+   "rmc_id": 165019,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Vic Country",
+     "gamesplayed": 2,
+     "disposals": 12,
+     "kicks": 9,
+     "handballs": 3,
+     "marks": 7,
+     "tackles": 2,
+     "clr": 0,
+     "i": 2,
+     "cp": 7,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 6.0,
+     "avg_goals": 1.0
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Gippsland Power",
+     "gamesplayed": 7,
+     "disposals": 39,
+     "kicks": 31,
+     "handballs": 8,
+     "marks": 15,
+     "tackles": 6,
+     "clr": 3,
+     "i": 6,
+     "cp": 21,
+     "hitouts": 0,
+     "goals": 10,
+     "avg_disposals": 5.6,
+     "avg_goals": 1.4
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Country",
+     "gamesplayed": 3,
+     "disposals": 24,
+     "kicks": 21,
+     "handballs": 3,
+     "marks": 11,
+     "tackles": 2,
+     "clr": 2,
+     "i": 3,
+     "cp": 16,
+     "hitouts": 0,
+     "goals": 6,
+     "avg_disposals": 8.0,
+     "avg_goals": 2.0
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Gippsland Power",
+     "gamesplayed": 7,
+     "disposals": 43,
+     "kicks": 33,
+     "handballs": 10,
+     "marks": 19,
+     "tackles": 4,
+     "clr": 0,
+     "i": 9,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 11,
+     "avg_disposals": 6.1,
+     "avg_goals": 1.6
+    }
+   ]
+  },
+  "Caylen Murray": {
+   "rmc_id": 166078,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Allies",
+     "gamesplayed": 1,
+     "disposals": 11,
+     "kicks": 6,
+     "handballs": 5,
+     "marks": 3,
+     "tackles": 0,
+     "clr": 0,
+     "i": 2,
+     "cp": 3,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 11.0,
+     "avg_goals": null
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Lions Academy",
+     "gamesplayed": 2,
+     "disposals": 44,
+     "kicks": 29,
+     "handballs": 15,
+     "marks": 8,
+     "tackles": 3,
+     "clr": 5,
+     "i": 3,
+     "cp": 12,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 22.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Kodah Edwards": {
+   "rmc_id": 136004,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 3,
+     "disposals": 57,
+     "kicks": 38,
+     "handballs": 19,
+     "marks": 8,
+     "tackles": 18,
+     "clr": 15,
+     "i": 12,
+     "cp": 29,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 19.0,
+     "avg_goals": 0.3
+    }
+   ]
+  },
+  "Jackson Phillips": {
+   "rmc_id": 164981,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Country",
+     "gamesplayed": 3,
+     "disposals": 39,
+     "kicks": 24,
+     "handballs": 15,
+     "marks": 6,
+     "tackles": 10,
+     "clr": 8,
+     "i": 7,
+     "cp": 19,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 13.0,
+     "avg_goals": 0.3
+    }
+   ]
+  },
+  "Jack Pickett": {
+   "rmc_id": 164990,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Vic Country",
+     "gamesplayed": 2,
+     "disposals": 9,
+     "kicks": 6,
+     "handballs": 3,
+     "marks": 4,
+     "tackles": 2,
+     "clr": 0,
+     "i": 1,
+     "cp": 6,
+     "hitouts": 0,
+     "goals": 3,
+     "avg_disposals": 4.5,
+     "avg_goals": 1.5
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Geelong Falcons",
+     "gamesplayed": 8,
+     "disposals": 70,
+     "kicks": 51,
+     "handballs": 19,
+     "marks": 32,
+     "tackles": 8,
+     "clr": 0,
+     "i": 10,
+     "cp": 30,
+     "hitouts": 0,
+     "goals": 31,
+     "avg_disposals": 8.8,
+     "avg_goals": 3.9
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Country",
+     "gamesplayed": 3,
+     "disposals": 25,
+     "kicks": 14,
+     "handballs": 11,
+     "marks": 9,
+     "tackles": 4,
+     "clr": 0,
+     "i": 5,
+     "cp": 16,
+     "hitouts": 0,
+     "goals": 4,
+     "avg_disposals": 8.3,
+     "avg_goals": 1.3
+    }
+   ]
+  },
+  "Sam Gayfer": {
+   "rmc_id": 165094,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Northern Knights",
+     "gamesplayed": 6,
+     "disposals": 41,
+     "kicks": 25,
+     "handballs": 16,
+     "marks": 17,
+     "tackles": 15,
+     "clr": 2,
+     "i": 5,
+     "cp": 23,
+     "hitouts": 0,
+     "goals": 5,
+     "avg_disposals": 6.8,
+     "avg_goals": 0.8
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Metro",
+     "gamesplayed": 3,
+     "disposals": 16,
+     "kicks": 15,
+     "handballs": 1,
+     "marks": 6,
+     "tackles": 7,
+     "clr": 1,
+     "i": 3,
+     "cp": 7,
+     "hitouts": 0,
+     "goals": 4,
+     "avg_disposals": 5.3,
+     "avg_goals": 1.3
+    }
+   ]
+  },
+  "Ethan Herbert": {
+   "rmc_id": 164880,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 3,
+     "disposals": 50,
+     "kicks": 14,
+     "handballs": 36,
+     "marks": 9,
+     "tackles": 4,
+     "clr": 6,
+     "i": 3,
+     "cp": 27,
+     "hitouts": 54,
+     "goals": 0,
+     "avg_disposals": 16.7,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Toby Krasna": {
+   "rmc_id": 184291,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Northern Knights",
+     "gamesplayed": 6,
+     "disposals": 71,
+     "kicks": 44,
+     "handballs": 27,
+     "marks": 15,
+     "tackles": 12,
+     "clr": 3,
+     "i": 19,
+     "cp": 24,
+     "hitouts": 0,
+     "goals": 3,
+     "avg_disposals": 11.8,
+     "avg_goals": 0.5
+    }
+   ]
+  },
+  "Tyson Bradley": {
+   "rmc_id": 184704,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Sandringham Dragons",
+     "gamesplayed": 11,
+     "disposals": 106,
+     "kicks": 60,
+     "handballs": 46,
+     "marks": 45,
+     "tackles": 19,
+     "clr": 4,
+     "i": 3,
+     "cp": 47,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 9.6,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Marlon Neocleous": {
+   "rmc_id": 164982,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Vic Country",
+     "gamesplayed": 1,
+     "disposals": 8,
+     "kicks": 5,
+     "handballs": 3,
+     "marks": 2,
+     "tackles": 3,
+     "clr": 1,
+     "i": 0,
+     "cp": 4,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 8.0,
+     "avg_goals": 1.0
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Gippsland Power",
+     "gamesplayed": 9,
+     "disposals": 168,
+     "kicks": 92,
+     "handballs": 76,
+     "marks": 25,
+     "tackles": 37,
+     "clr": 24,
+     "i": 32,
+     "cp": 74,
+     "hitouts": 0,
+     "goals": 8,
+     "avg_disposals": 18.7,
+     "avg_goals": 0.9
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Country",
+     "gamesplayed": 3,
+     "disposals": 46,
+     "kicks": 24,
+     "handballs": 22,
+     "marks": 12,
+     "tackles": 12,
+     "clr": 2,
+     "i": 9,
+     "cp": 18,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 15.3,
+     "avg_goals": 0.7
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Gippsland Power",
+     "gamesplayed": 4,
+     "disposals": 44,
+     "kicks": 21,
+     "handballs": 23,
+     "marks": 9,
+     "tackles": 14,
+     "clr": 0,
+     "i": 5,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 11.0,
+     "avg_goals": 0.5
+    }
+   ]
+  },
+  "George Gale": {
+   "rmc_id": 164915,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Western Australia",
+     "gamesplayed": 2,
+     "disposals": 25,
+     "kicks": 16,
+     "handballs": 9,
+     "marks": 8,
+     "tackles": 1,
+     "clr": 1,
+     "i": 4,
+     "cp": 5,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 12.5,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Lucas Robinson": {
+   "rmc_id": 164939,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Western Australia",
+     "gamesplayed": 1,
+     "disposals": 11,
+     "kicks": 2,
+     "handballs": 9,
+     "marks": 0,
+     "tackles": 7,
+     "clr": 2,
+     "i": 0,
+     "cp": 6,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 11.0,
+     "avg_goals": null
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Western Australia",
+     "gamesplayed": 3,
+     "disposals": 74,
+     "kicks": 44,
+     "handballs": 30,
+     "marks": 16,
+     "tackles": 18,
+     "clr": 26,
+     "i": 14,
+     "cp": 56,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 24.7,
+     "avg_goals": 0.3
+    }
+   ]
+  },
+  "Xavier Ladbrook": {
+   "rmc_id": 165024,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Country",
+     "gamesplayed": 3,
+     "disposals": 20,
+     "kicks": 12,
+     "handballs": 8,
+     "marks": 8,
+     "tackles": 3,
+     "clr": 0,
+     "i": 1,
+     "cp": 7,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 6.7,
+     "avg_goals": 0.3
+    }
+   ]
+  },
+  "Koby LeCras": {
+   "rmc_id": 164907,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Western Australia",
+     "gamesplayed": 3,
+     "disposals": 32,
+     "kicks": 23,
+     "handballs": 9,
+     "marks": 11,
+     "tackles": 9,
+     "clr": 0,
+     "i": 5,
+     "cp": 19,
+     "hitouts": 0,
+     "goals": 7,
+     "avg_disposals": 10.7,
+     "avg_goals": 2.3
+    }
+   ]
+  },
+  "Lewis Houndsome": {
+   "rmc_id": 165102,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Northern Knights",
+     "gamesplayed": 13,
+     "disposals": 130,
+     "kicks": 72,
+     "handballs": 58,
+     "marks": 40,
+     "tackles": 23,
+     "clr": 12,
+     "i": 24,
+     "cp": 73,
+     "hitouts": 96,
+     "goals": 12,
+     "avg_disposals": 10.0,
+     "avg_goals": 0.9
+    }
+   ]
+  },
+  "Darcy Szerszyn": {
+   "rmc_id": 168789,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Vic Country",
+     "gamesplayed": 3,
+     "disposals": 35,
+     "kicks": 24,
+     "handballs": 11,
+     "marks": 12,
+     "tackles": 4,
+     "clr": 0,
+     "i": 4,
+     "cp": 10,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 11.7,
+     "avg_goals": null
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Dandenong Stingrays",
+     "gamesplayed": 13,
+     "disposals": 151,
+     "kicks": 105,
+     "handballs": 46,
+     "marks": 46,
+     "tackles": 28,
+     "clr": 5,
+     "i": 13,
+     "cp": 58,
+     "hitouts": 2,
+     "goals": 1,
+     "avg_disposals": 11.6,
+     "avg_goals": 0.1
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Dandenong Stingrays",
+     "gamesplayed": 1,
+     "disposals": 4,
+     "kicks": 4,
+     "handballs": 0,
+     "marks": 2,
+     "tackles": 0,
+     "clr": 0,
+     "i": 0,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 4.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Blake Justice": {
+   "rmc_id": 182511,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Calder Cannons",
+     "gamesplayed": 15,
+     "disposals": 275,
+     "kicks": 157,
+     "handballs": 119,
+     "marks": 64,
+     "tackles": 40,
+     "clr": 49,
+     "i": 43,
+     "cp": 121,
+     "hitouts": 0,
+     "goals": 9,
+     "avg_disposals": 18.3,
+     "avg_goals": 0.6
+    }
+   ]
+  },
+  "Jacob McNicol": {
+   "rmc_id": 20670,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2017",
+     "team": "Calder Cannons",
+     "gamesplayed": 17,
+     "disposals": 119,
+     "kicks": 43,
+     "handballs": 76,
+     "marks": 40,
+     "tackles": 52,
+     "clr": 18,
+     "i": 15,
+     "cp": 60,
+     "hitouts": 188,
+     "goals": 2,
+     "avg_disposals": 7.0,
+     "avg_goals": 0.1
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2016",
+     "team": "Calder Cannons",
+     "gamesplayed": 7,
+     "disposals": 44,
+     "kicks": 19,
+     "handballs": 25,
+     "marks": 11,
+     "tackles": 13,
+     "clr": 0,
+     "i": 0,
+     "cp": 0,
+     "hitouts": 81,
+     "goals": 0,
+     "avg_disposals": 6.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Tanner Armstrong": {
+   "rmc_id": 164977,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Vic Country",
+     "gamesplayed": 1,
+     "disposals": 14,
+     "kicks": 6,
+     "handballs": 8,
+     "marks": 2,
+     "tackles": 2,
+     "clr": 0,
+     "i": 0,
+     "cp": 9,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 14.0,
+     "avg_goals": null
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Murray Bushrangers",
+     "gamesplayed": 6,
+     "disposals": 150,
+     "kicks": 75,
+     "handballs": 75,
+     "marks": 25,
+     "tackles": 18,
+     "clr": 30,
+     "i": 15,
+     "cp": 73,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 25.0,
+     "avg_goals": null
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Country",
+     "gamesplayed": 3,
+     "disposals": 64,
+     "kicks": 36,
+     "handballs": 28,
+     "marks": 9,
+     "tackles": 10,
+     "clr": 3,
+     "i": 4,
+     "cp": 31,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 21.3,
+     "avg_goals": null
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Murray Bushrangers",
+     "gamesplayed": 3,
+     "disposals": 42,
+     "kicks": 24,
+     "handballs": 18,
+     "marks": 4,
+     "tackles": 4,
+     "clr": 0,
+     "i": 10,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 3,
+     "avg_disposals": 14.0,
+     "avg_goals": 1.0
+    }
+   ]
+  },
+  "Archie Van Dyk": {
+   "rmc_id": 164842,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 3,
+     "disposals": 76,
+     "kicks": 42,
+     "handballs": 34,
+     "marks": 13,
+     "tackles": 7,
+     "clr": 13,
+     "i": 12,
+     "cp": 39,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 25.3,
+     "avg_goals": 0.3
+    }
+   ]
+  },
+  "Cody Templeton": {
+   "rmc_id": 164988,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Gippsland Power",
+     "gamesplayed": 17,
+     "disposals": 293,
+     "kicks": 173,
+     "handballs": 120,
+     "marks": 53,
+     "tackles": 70,
+     "clr": 51,
+     "i": 51,
+     "cp": 135,
+     "hitouts": 0,
+     "goals": 21,
+     "avg_disposals": 17.2,
+     "avg_goals": 1.2
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Country",
+     "gamesplayed": 3,
+     "disposals": 40,
+     "kicks": 28,
+     "handballs": 12,
+     "marks": 8,
+     "tackles": 15,
+     "clr": 4,
+     "i": 7,
+     "cp": 17,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 13.3,
+     "avg_goals": 0.3
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Gippsland Power",
+     "gamesplayed": 2,
+     "disposals": 17,
+     "kicks": 11,
+     "handballs": 6,
+     "marks": 3,
+     "tackles": 4,
+     "clr": 0,
+     "i": 2,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 8.5,
+     "avg_goals": 0.5
+    }
+   ]
+  },
+  "Kale Matthews-Hampton": {
+   "rmc_id": 164861,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "South Australia",
+     "gamesplayed": 2,
+     "disposals": 16,
+     "kicks": 12,
+     "handballs": 4,
+     "marks": 7,
+     "tackles": 1,
+     "clr": 0,
+     "i": 0,
+     "cp": 4,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 8.0,
+     "avg_goals": null
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 3,
+     "disposals": 32,
+     "kicks": 26,
+     "handballs": 6,
+     "marks": 12,
+     "tackles": 1,
+     "clr": 0,
+     "i": 1,
+     "cp": 11,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 10.7,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Harrison Chapman": {
+   "rmc_id": 183996,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Eastern Ranges",
+     "gamesplayed": 18,
+     "disposals": 234,
+     "kicks": 133,
+     "handballs": 101,
+     "marks": 61,
+     "tackles": 22,
+     "clr": 17,
+     "i": 48,
+     "cp": 48,
+     "hitouts": 0,
+     "goals": 7,
+     "avg_disposals": 13.0,
+     "avg_goals": 0.4
+    }
+   ]
+  },
+  "Khaled El Souki": {
+   "rmc_id": 184454,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Western Jets",
+     "gamesplayed": 15,
+     "disposals": 185,
+     "kicks": 113,
+     "handballs": 72,
+     "marks": 32,
+     "tackles": 59,
+     "clr": 33,
+     "i": 32,
+     "cp": 111,
+     "hitouts": 0,
+     "goals": 22,
+     "avg_disposals": 12.3,
+     "avg_goals": 1.5
+    }
+   ]
+  },
+  "Harvie Cooke": {
+   "rmc_id": 184243,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Northern Knights",
+     "gamesplayed": 10,
+     "disposals": 149,
+     "kicks": 75,
+     "handballs": 74,
+     "marks": 26,
+     "tackles": 45,
+     "clr": 36,
+     "i": 32,
+     "cp": 78,
+     "hitouts": 0,
+     "goals": 6,
+     "avg_disposals": 14.9,
+     "avg_goals": 0.6
+    }
+   ]
+  },
+  "Jack Gordon": {
+   "rmc_id": 164863,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 3,
+     "disposals": 52,
+     "kicks": 22,
+     "handballs": 30,
+     "marks": 7,
+     "tackles": 6,
+     "clr": 3,
+     "i": 3,
+     "cp": 22,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 17.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Albert MacGowan": {
+   "rmc_id": 165067,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Sandringham Dragons",
+     "gamesplayed": 2,
+     "disposals": 33,
+     "kicks": 15,
+     "handballs": 18,
+     "marks": 7,
+     "tackles": 5,
+     "clr": 1,
+     "i": 5,
+     "cp": 9,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 16.5,
+     "avg_goals": null
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Metro",
+     "gamesplayed": 3,
+     "disposals": 43,
+     "kicks": 25,
+     "handballs": 18,
+     "marks": 12,
+     "tackles": 7,
+     "clr": 1,
+     "i": 3,
+     "cp": 10,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 14.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Max Downes": {
+   "rmc_id": 165063,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Northern Knights",
+     "gamesplayed": 8,
+     "disposals": 94,
+     "kicks": 45,
+     "handballs": 49,
+     "marks": 25,
+     "tackles": 17,
+     "clr": 12,
+     "i": 13,
+     "cp": 47,
+     "hitouts": 0,
+     "goals": 3,
+     "avg_disposals": 11.8,
+     "avg_goals": 0.4
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Metro",
+     "gamesplayed": 3,
+     "disposals": 57,
+     "kicks": 24,
+     "handballs": 33,
+     "marks": 13,
+     "tackles": 9,
+     "clr": 11,
+     "i": 10,
+     "cp": 26,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 19.0,
+     "avg_goals": 0.3
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Northern Knights",
+     "gamesplayed": 6,
+     "disposals": 45,
+     "kicks": 27,
+     "handballs": 18,
+     "marks": 12,
+     "tackles": 21,
+     "clr": 0,
+     "i": 11,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 3,
+     "avg_disposals": 7.5,
+     "avg_goals": 0.5
+    }
+   ]
+  },
+  "Jordan Knapp": {
+   "rmc_id": 165038,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Metro",
+     "gamesplayed": 3,
+     "disposals": 49,
+     "kicks": 35,
+     "handballs": 14,
+     "marks": 11,
+     "tackles": 22,
+     "clr": 8,
+     "i": 14,
+     "cp": 17,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 16.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Tate Hodgson": {
+   "rmc_id": 158622,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Metro",
+     "gamesplayed": 3,
+     "disposals": 43,
+     "kicks": 30,
+     "handballs": 13,
+     "marks": 19,
+     "tackles": 8,
+     "clr": 0,
+     "i": 2,
+     "cp": 10,
+     "hitouts": 1,
+     "goals": 0,
+     "avg_disposals": 14.3,
+     "avg_goals": null
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Northern Knights",
+     "gamesplayed": 10,
+     "disposals": 86,
+     "kicks": 55,
+     "handballs": 31,
+     "marks": 21,
+     "tackles": 18,
+     "clr": 0,
+     "i": 6,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 8.6,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Garrison Kenh": {
+   "rmc_id": 164914,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Western Australia",
+     "gamesplayed": 3,
+     "disposals": 34,
+     "kicks": 19,
+     "handballs": 15,
+     "marks": 8,
+     "tackles": 9,
+     "clr": 1,
+     "i": 6,
+     "cp": 13,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 11.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Gus Kennedy": {
+   "rmc_id": 164980,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Dandenong Stingrays",
+     "gamesplayed": 16,
+     "disposals": 242,
+     "kicks": 103,
+     "handballs": 139,
+     "marks": 31,
+     "tackles": 69,
+     "clr": 41,
+     "i": 32,
+     "cp": 149,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 15.1,
+     "avg_goals": 0.1
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Country",
+     "gamesplayed": 2,
+     "disposals": 29,
+     "kicks": 17,
+     "handballs": 12,
+     "marks": 5,
+     "tackles": 4,
+     "clr": 5,
+     "i": 7,
+     "cp": 17,
+     "hitouts": 1,
+     "goals": 0,
+     "avg_disposals": 14.5,
+     "avg_goals": null
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Dandenong Stingrays",
+     "gamesplayed": 1,
+     "disposals": 8,
+     "kicks": 4,
+     "handballs": 4,
+     "marks": 2,
+     "tackles": 1,
+     "clr": 0,
+     "i": 1,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 8.0,
+     "avg_goals": 1.0
+    }
+   ]
+  },
+  "Benji Van Rooyen": {
+   "rmc_id": 164964,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Western Australia",
+     "gamesplayed": 4,
+     "disposals": 42,
+     "kicks": 10,
+     "handballs": 32,
+     "marks": 2,
+     "tackles": 9,
+     "clr": 16,
+     "i": 2,
+     "cp": 37,
+     "hitouts": 47,
+     "goals": 0,
+     "avg_disposals": 10.5,
+     "avg_goals": null
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Western Australia",
+     "gamesplayed": 3,
+     "disposals": 17,
+     "kicks": 9,
+     "handballs": 8,
+     "marks": 5,
+     "tackles": 1,
+     "clr": 1,
+     "i": 3,
+     "cp": 8,
+     "hitouts": 15,
+     "goals": 1,
+     "avg_disposals": 5.7,
+     "avg_goals": 0.3
+    }
+   ]
+  },
+  "Archie Elliott": {
+   "rmc_id": 184109,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "GWV Rebels",
+     "gamesplayed": 10,
+     "disposals": 74,
+     "kicks": 43,
+     "handballs": 31,
+     "marks": 18,
+     "tackles": 25,
+     "clr": 3,
+     "i": 25,
+     "cp": 29,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 7.4,
+     "avg_goals": 0.2
+    }
+   ]
+  },
+  "Lachlan McGlade": {
+   "rmc_id": 164903,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Western Australia",
+     "gamesplayed": 3,
+     "disposals": 20,
+     "kicks": 15,
+     "handballs": 5,
+     "marks": 6,
+     "tackles": 6,
+     "clr": 0,
+     "i": 10,
+     "cp": 10,
+     "hitouts": 0,
+     "goals": 5,
+     "avg_disposals": 6.7,
+     "avg_goals": 1.7
+    }
+   ]
+  },
+  "Angus Tippett": {
+   "rmc_id": 168907,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Western Jets",
+     "gamesplayed": 6,
+     "disposals": 138,
+     "kicks": 70,
+     "handballs": 68,
+     "marks": 20,
+     "tackles": 29,
+     "clr": 37,
+     "i": 24,
+     "cp": 74,
+     "hitouts": 0,
+     "goals": 3,
+     "avg_disposals": 23.0,
+     "avg_goals": 0.5
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Western Jets",
+     "gamesplayed": 2,
+     "disposals": 17,
+     "kicks": 9,
+     "handballs": 8,
+     "marks": 4,
+     "tackles": 0,
+     "clr": 0,
+     "i": 4,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 8.5,
+     "avg_goals": 1.0
+    }
+   ]
+  },
+  "Andrio Sousa": {
+   "rmc_id": 187519,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Dandenong Stingrays",
+     "gamesplayed": 6,
+     "disposals": 53,
+     "kicks": 24,
+     "handballs": 29,
+     "marks": 16,
+     "tackles": 12,
+     "clr": 3,
+     "i": 6,
+     "cp": 23,
+     "hitouts": 0,
+     "goals": 5,
+     "avg_disposals": 8.8,
+     "avg_goals": 0.8
+    }
+   ]
+  },
+  "Archie Devine": {
+   "rmc_id": 180967,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Tasmania Devils",
+     "gamesplayed": 12,
+     "disposals": 196,
+     "kicks": 130,
+     "handballs": 66,
+     "marks": 36,
+     "tackles": 29,
+     "clr": 8,
+     "i": 10,
+     "cp": 39,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 16.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Archie Fogarty": {
+   "rmc_id": 167935,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Oakleigh Chargers",
+     "gamesplayed": 6,
+     "disposals": 55,
+     "kicks": 32,
+     "handballs": 23,
+     "marks": 19,
+     "tackles": 15,
+     "clr": 1,
+     "i": 4,
+     "cp": 24,
+     "hitouts": 1,
+     "goals": 2,
+     "avg_disposals": 9.2,
+     "avg_goals": 0.3
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Oakleigh Chargers",
+     "gamesplayed": 1,
+     "disposals": 15,
+     "kicks": 8,
+     "handballs": 7,
+     "marks": 3,
+     "tackles": 4,
+     "clr": 0,
+     "i": 0,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 15.0,
+     "avg_goals": 1.0
+    }
+   ]
+  },
+  "Archie Spencer": {
+   "rmc_id": 165061,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Metro",
+     "gamesplayed": 2,
+     "disposals": 38,
+     "kicks": 12,
+     "handballs": 26,
+     "marks": 8,
+     "tackles": 9,
+     "clr": 10,
+     "i": 3,
+     "cp": 20,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 19.0,
+     "avg_goals": 1.0
+    }
+   ]
+  },
+  "Archie Watts": {
+   "rmc_id": 188150,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Lions Academy",
+     "gamesplayed": 3,
+     "disposals": 26,
+     "kicks": 10,
+     "handballs": 16,
+     "marks": 3,
+     "tackles": 10,
+     "clr": 3,
+     "i": 4,
+     "cp": 9,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 8.7,
+     "avg_goals": 0.3
+    }
+   ]
+  },
+  "Ben Barnard": {
+   "rmc_id": 188981,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Northern Territory",
+     "gamesplayed": 2,
+     "disposals": 30,
+     "kicks": 24,
+     "handballs": 6,
+     "marks": 6,
+     "tackles": 1,
+     "clr": 0,
+     "i": 4,
+     "cp": 7,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 15.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Billy Wigmore": {
+   "rmc_id": 165072,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Western Jets",
+     "gamesplayed": 11,
+     "disposals": 188,
+     "kicks": 124,
+     "handballs": 64,
+     "marks": 88,
+     "tackles": 17,
+     "clr": 8,
+     "i": 6,
+     "cp": 83,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 17.1,
+     "avg_goals": 0.2
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Metro",
+     "gamesplayed": 3,
+     "disposals": 33,
+     "kicks": 21,
+     "handballs": 12,
+     "marks": 9,
+     "tackles": 4,
+     "clr": 3,
+     "i": 0,
+     "cp": 19,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 11.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Byron Foster": {
+   "rmc_id": 185745,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Western Australia",
+     "gamesplayed": 1,
+     "disposals": 4,
+     "kicks": 2,
+     "handballs": 2,
+     "marks": 0,
+     "tackles": 0,
+     "clr": 2,
+     "i": 2,
+     "cp": 4,
+     "hitouts": 2,
+     "goals": 0,
+     "avg_disposals": 4.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Cain Florance": {
+   "rmc_id": 136002,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 3,
+     "disposals": 49,
+     "kicks": 27,
+     "handballs": 22,
+     "marks": 10,
+     "tackles": 10,
+     "clr": 3,
+     "i": 11,
+     "cp": 16,
+     "hitouts": 0,
+     "goals": 5,
+     "avg_disposals": 16.3,
+     "avg_goals": 1.7
+    }
+   ]
+  },
+  "Charlie Bovill": {
+   "rmc_id": 159724,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Tasmania Devils",
+     "gamesplayed": 9,
+     "disposals": 75,
+     "kicks": 50,
+     "handballs": 25,
+     "marks": 30,
+     "tackles": 14,
+     "clr": 0,
+     "i": 4,
+     "cp": 34,
+     "hitouts": 1,
+     "goals": 12,
+     "avg_disposals": 8.3,
+     "avg_goals": 1.3
+    }
+   ]
+  },
+  "Charlie Hanegraaf": {
+   "rmc_id": 184077,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Geelong Falcons",
+     "gamesplayed": 5,
+     "disposals": 54,
+     "kicks": 32,
+     "handballs": 22,
+     "marks": 16,
+     "tackles": 16,
+     "clr": 4,
+     "i": 7,
+     "cp": 20,
+     "hitouts": 0,
+     "goals": 3,
+     "avg_disposals": 10.8,
+     "avg_goals": 0.6
+    }
+   ]
+  },
+  "Cohen Dent": {
+   "rmc_id": 194451,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Gippsland Power",
+     "gamesplayed": 6,
+     "disposals": 49,
+     "kicks": 22,
+     "handballs": 27,
+     "marks": 6,
+     "tackles": 4,
+     "clr": 15,
+     "i": 6,
+     "cp": 25,
+     "hitouts": 77,
+     "goals": 0,
+     "avg_disposals": 8.2,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Cooper Hodge": {
+   "rmc_id": 188148,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Lions Academy",
+     "gamesplayed": 4,
+     "disposals": 65,
+     "kicks": 43,
+     "handballs": 22,
+     "marks": 6,
+     "tackles": 34,
+     "clr": 19,
+     "i": 15,
+     "cp": 34,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 16.2,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Cooper Ramsay": {
+   "rmc_id": 164944,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Western Australia",
+     "gamesplayed": 2,
+     "disposals": 18,
+     "kicks": 10,
+     "handballs": 8,
+     "marks": 1,
+     "tackles": 4,
+     "clr": 8,
+     "i": 1,
+     "cp": 14,
+     "hitouts": 29,
+     "goals": 1,
+     "avg_disposals": 9.0,
+     "avg_goals": 0.5
+    }
+   ]
+  },
+  "Darcy Harrington": {
+   "rmc_id": 167952,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Geelong Falcons",
+     "gamesplayed": 5,
+     "disposals": 84,
+     "kicks": 57,
+     "handballs": 27,
+     "marks": 27,
+     "tackles": 14,
+     "clr": 7,
+     "i": 14,
+     "cp": 29,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 16.8,
+     "avg_goals": 0.4
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Geelong Falcons",
+     "gamesplayed": 4,
+     "disposals": 50,
+     "kicks": 34,
+     "handballs": 16,
+     "marks": 15,
+     "tackles": 15,
+     "clr": 0,
+     "i": 13,
+     "cp": 0,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 12.5,
+     "avg_goals": 0.5
+    }
+   ]
+  },
+  "Eamon Austin": {
+   "rmc_id": 183796,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Bendigo Pioneers",
+     "gamesplayed": 7,
+     "disposals": 84,
+     "kicks": 52,
+     "handballs": 32,
+     "marks": 14,
+     "tackles": 17,
+     "clr": 8,
+     "i": 16,
+     "cp": 31,
+     "hitouts": 0,
+     "goals": 11,
+     "avg_disposals": 12.0,
+     "avg_goals": 1.6
+    }
+   ]
+  },
+  "Flynn Woolhouse": {
+   "rmc_id": 158658,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Oakleigh Chargers",
+     "gamesplayed": 9,
+     "disposals": 45,
+     "kicks": 37,
+     "handballs": 8,
+     "marks": 21,
+     "tackles": 12,
+     "clr": 2,
+     "i": 7,
+     "cp": 19,
+     "hitouts": 10,
+     "goals": 12,
+     "avg_disposals": 5.0,
+     "avg_goals": 1.3
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Oakleigh Chargers",
+     "gamesplayed": 1,
+     "disposals": 2,
+     "kicks": 1,
+     "handballs": 1,
+     "marks": 1,
+     "tackles": 0,
+     "clr": 0,
+     "i": 1,
+     "cp": 0,
+     "hitouts": 1,
+     "goals": 0,
+     "avg_disposals": 2.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "George Dimer": {
+   "rmc_id": 194431,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Sandringham Dragons",
+     "gamesplayed": 10,
+     "disposals": 120,
+     "kicks": 64,
+     "handballs": 56,
+     "marks": 18,
+     "tackles": 28,
+     "clr": 22,
+     "i": 23,
+     "cp": 76,
+     "hitouts": 0,
+     "goals": 6,
+     "avg_disposals": 12.0,
+     "avg_goals": 0.6
+    }
+   ]
+  },
+  "Guy Jenkin": {
+   "rmc_id": 166076,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Swans Academy",
+     "gamesplayed": 4,
+     "disposals": 71,
+     "kicks": 40,
+     "handballs": 31,
+     "marks": 25,
+     "tackles": 7,
+     "clr": 4,
+     "i": 5,
+     "cp": 19,
+     "hitouts": 0,
+     "goals": 4,
+     "avg_disposals": 17.8,
+     "avg_goals": 1.0
+    }
+   ]
+  },
+  "Harry Franz": {
+   "rmc_id": 164877,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 3,
+     "disposals": 22,
+     "kicks": 13,
+     "handballs": 9,
+     "marks": 6,
+     "tackles": 7,
+     "clr": 0,
+     "i": 0,
+     "cp": 7,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 7.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Harvey Croker": {
+   "rmc_id": 164838,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 3,
+     "disposals": 54,
+     "kicks": 25,
+     "handballs": 29,
+     "marks": 13,
+     "tackles": 4,
+     "clr": 2,
+     "i": 2,
+     "cp": 14,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 18.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Harvey Spawton-Guy": {
+   "rmc_id": 166317,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Western Australia",
+     "gamesplayed": 1,
+     "disposals": 4,
+     "kicks": 4,
+     "handballs": 0,
+     "marks": 2,
+     "tackles": 0,
+     "clr": 0,
+     "i": 2,
+     "cp": 2,
+     "hitouts": 3,
+     "goals": 0,
+     "avg_disposals": 4.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Hugo Timms": {
+   "rmc_id": 188989,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Northern Territory",
+     "gamesplayed": 3,
+     "disposals": 18,
+     "kicks": 13,
+     "handballs": 5,
+     "marks": 5,
+     "tackles": 1,
+     "clr": 0,
+     "i": 5,
+     "cp": 9,
+     "hitouts": 3,
+     "goals": 0,
+     "avg_disposals": 6.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Jack Leys": {
+   "rmc_id": 164839,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 2,
+     "disposals": 26,
+     "kicks": 13,
+     "handballs": 13,
+     "marks": 6,
+     "tackles": 6,
+     "clr": 2,
+     "i": 5,
+     "cp": 11,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 13.0,
+     "avg_goals": 0.5
+    }
+   ]
+  },
+  "Jayden Clarke": {
+   "rmc_id": 164895,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Western Australia",
+     "gamesplayed": 3,
+     "disposals": 48,
+     "kicks": 27,
+     "handballs": 21,
+     "marks": 7,
+     "tackles": 6,
+     "clr": 5,
+     "i": 10,
+     "cp": 21,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 16.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Jett Elek": {
+   "rmc_id": 184053,
+   "history": [
+    {
+     "league": "U18 Championships",
+     "league_id": "2027",
+     "season": "2025",
+     "team": "Vic Country",
+     "gamesplayed": 1,
+     "disposals": 1,
+     "kicks": 0,
+     "handballs": 1,
+     "marks": 0,
+     "tackles": 1,
+     "clr": 0,
+     "i": 0,
+     "cp": 0,
+     "hitouts": 1,
+     "goals": 0,
+     "avg_disposals": 1.0,
+     "avg_goals": null
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Geelong Falcons",
+     "gamesplayed": 16,
+     "disposals": 146,
+     "kicks": 81,
+     "handballs": 65,
+     "marks": 49,
+     "tackles": 19,
+     "clr": 19,
+     "i": 19,
+     "cp": 80,
+     "hitouts": 52,
+     "goals": 5,
+     "avg_disposals": 9.1,
+     "avg_goals": 0.3
+    }
+   ]
+  },
+  "Kai Parker": {
+   "rmc_id": 165073,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Northern Knights",
+     "gamesplayed": 12,
+     "disposals": 157,
+     "kicks": 109,
+     "handballs": 48,
+     "marks": 48,
+     "tackles": 21,
+     "clr": 5,
+     "i": 19,
+     "cp": 43,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 13.1,
+     "avg_goals": null
+    },
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Metro",
+     "gamesplayed": 3,
+     "disposals": 40,
+     "kicks": 26,
+     "handballs": 14,
+     "marks": 9,
+     "tackles": 7,
+     "clr": 3,
+     "i": 5,
+     "cp": 16,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 13.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Keenan Boi": {
+   "rmc_id": 189382,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Gippsland Power",
+     "gamesplayed": 14,
+     "disposals": 126,
+     "kicks": 85,
+     "handballs": 41,
+     "marks": 35,
+     "tackles": 43,
+     "clr": 4,
+     "i": 35,
+     "cp": 56,
+     "hitouts": 0,
+     "goals": 19,
+     "avg_disposals": 9.0,
+     "avg_goals": 1.4
+    }
+   ]
+  },
+  "Klay Nicholls": {
+   "rmc_id": 184160,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "GWV Rebels",
+     "gamesplayed": 3,
+     "disposals": 18,
+     "kicks": 13,
+     "handballs": 5,
+     "marks": 7,
+     "tackles": 3,
+     "clr": 0,
+     "i": 0,
+     "cp": 7,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 6.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Leo Ellerton": {
+   "rmc_id": 184164,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "GWV Rebels",
+     "gamesplayed": 3,
+     "disposals": 34,
+     "kicks": 20,
+     "handballs": 14,
+     "marks": 3,
+     "tackles": 10,
+     "clr": 2,
+     "i": 0,
+     "cp": 12,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 11.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Macauli Buck": {
+   "rmc_id": 154383,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Western Jets",
+     "gamesplayed": 15,
+     "disposals": 182,
+     "kicks": 96,
+     "handballs": 86,
+     "marks": 40,
+     "tackles": 46,
+     "clr": 50,
+     "i": 35,
+     "cp": 98,
+     "hitouts": 415,
+     "goals": 2,
+     "avg_disposals": 12.1,
+     "avg_goals": 0.1
+    },
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2024",
+     "team": "Western Jets",
+     "gamesplayed": 5,
+     "disposals": 38,
+     "kicks": 19,
+     "handballs": 19,
+     "marks": 7,
+     "tackles": 13,
+     "clr": 0,
+     "i": 9,
+     "cp": 0,
+     "hitouts": 96,
+     "goals": 0,
+     "avg_disposals": 7.6,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Mason McGroder": {
+   "rmc_id": 188038,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Swans Academy",
+     "gamesplayed": 4,
+     "disposals": 25,
+     "kicks": 20,
+     "handballs": 5,
+     "marks": 7,
+     "tackles": 2,
+     "clr": 1,
+     "i": 7,
+     "cp": 7,
+     "hitouts": 1,
+     "goals": 0,
+     "avg_disposals": 6.2,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Matthew Owen": {
+   "rmc_id": 188145,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Lions Academy",
+     "gamesplayed": 4,
+     "disposals": 78,
+     "kicks": 42,
+     "handballs": 36,
+     "marks": 21,
+     "tackles": 5,
+     "clr": 9,
+     "i": 8,
+     "cp": 26,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 19.5,
+     "avg_goals": 0.5
+    }
+   ]
+  },
+  "Memphis Webb": {
+   "rmc_id": 164854,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "South Australia",
+     "gamesplayed": 3,
+     "disposals": 53,
+     "kicks": 17,
+     "handballs": 36,
+     "marks": 6,
+     "tackles": 12,
+     "clr": 6,
+     "i": 4,
+     "cp": 28,
+     "hitouts": 0,
+     "goals": 1,
+     "avg_disposals": 17.7,
+     "avg_goals": 0.3
+    }
+   ]
+  },
+  "Mitchell Stirling": {
+   "rmc_id": 164962,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Western Australia",
+     "gamesplayed": 3,
+     "disposals": 22,
+     "kicks": 18,
+     "handballs": 4,
+     "marks": 8,
+     "tackles": 2,
+     "clr": 0,
+     "i": 1,
+     "cp": 5,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 7.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Nathaniel Jenkins": {
+   "rmc_id": 183941,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Calder Cannons",
+     "gamesplayed": 5,
+     "disposals": 34,
+     "kicks": 25,
+     "handballs": 9,
+     "marks": 14,
+     "tackles": 1,
+     "clr": 1,
+     "i": 1,
+     "cp": 14,
+     "hitouts": 0,
+     "goals": 9,
+     "avg_disposals": 6.8,
+     "avg_goals": 1.8
+    }
+   ]
+  },
+  "Ned Badrock": {
+   "rmc_id": 165026,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Country",
+     "gamesplayed": 3,
+     "disposals": 22,
+     "kicks": 11,
+     "handballs": 11,
+     "marks": 7,
+     "tackles": 4,
+     "clr": 0,
+     "i": 1,
+     "cp": 12,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 7.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Sam Devers": {
+   "rmc_id": 183999,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Eastern Ranges",
+     "gamesplayed": 12,
+     "disposals": 143,
+     "kicks": 81,
+     "handballs": 62,
+     "marks": 41,
+     "tackles": 7,
+     "clr": 10,
+     "i": 15,
+     "cp": 46,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 11.9,
+     "avg_goals": 0.2
+    }
+   ]
+  },
+  "Sonny Smiler": {
+   "rmc_id": 188986,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Northern Territory",
+     "gamesplayed": 3,
+     "disposals": 31,
+     "kicks": 19,
+     "handballs": 12,
+     "marks": 11,
+     "tackles": 4,
+     "clr": 3,
+     "i": 9,
+     "cp": 14,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 10.3,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Taj Murray": {
+   "rmc_id": 188060,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "SUNS Academy",
+     "gamesplayed": 3,
+     "disposals": 54,
+     "kicks": 17,
+     "handballs": 137,
+     "marks": 11,
+     "tackles": 12,
+     "clr": 3,
+     "i": 7,
+     "cp": 13,
+     "hitouts": 0,
+     "goals": 2,
+     "avg_disposals": 18.0,
+     "avg_goals": 0.7
+    }
+   ]
+  },
+  "Will Morahan": {
+   "rmc_id": 183347,
+   "history": [
+    {
+     "league": "Coates Talent League",
+     "league_id": "19",
+     "season": "2025",
+     "team": "Swans Academy",
+     "gamesplayed": 4,
+     "disposals": 36,
+     "kicks": 21,
+     "handballs": 15,
+     "marks": 8,
+     "tackles": 10,
+     "clr": 2,
+     "i": 0,
+     "cp": 23,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 9.0,
+     "avg_goals": null
+    }
+   ]
+  },
+  "Zac Antonellos": {
+   "rmc_id": 165060,
+   "history": [
+    {
+     "league": "U16 Championships",
+     "league_id": "20800",
+     "season": "2024",
+     "team": "Vic Metro",
+     "gamesplayed": 3,
+     "disposals": 42,
+     "kicks": 26,
+     "handballs": 16,
+     "marks": 16,
+     "tackles": 7,
+     "clr": 0,
+     "i": 7,
+     "cp": 10,
+     "hitouts": 0,
+     "goals": 0,
+     "avg_disposals": 14.0,
+     "avg_goals": null
+    }
+   ]
+  }
+ }
+}

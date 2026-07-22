@@ -543,7 +543,8 @@ async function prospectsView(year = 2027) {
       <h3>Draft prospect runway</h3>
       <p class="sub">Three draft classes in the pipeline. The 2026 class comes from this year's U18
         championships; 2027 and 2028 are the U16 cohorts — this far out, All-Australian selection is
-        the signal, so treat the order as preliminary.</p>
+        the signal, so treat the order as preliminary. Click any prospect for their full playing
+        history across the Coates Talent League, SANFL, WAFL and national championships.</p>
       <div class="runway">
         ${runway.map(r => `
           <a class="runwaycard ${r.year === year ? "on" : ""}" href="#/draft/prospects/${r.year}">
@@ -555,6 +556,54 @@ async function prospectsView(year = 2027) {
       </div>
     </div>
     ${pool ? prospectPoolCard(pool, year) : `<div class="card"><p class="thin">No prospect pool for ${year}.</p></div>`}`;
+}
+
+async function prospectProfileView(name) {
+  const p = await api(`/api/prospect?name=${encodeURIComponent(name)}`).catch(() => null);
+  if (!p) { view.innerHTML = `<p class="error">Prospect not found.</p>`; return; }
+  const initials = (p.state_team || "").split(" ").map(w => w[0]).join("").slice(0, 3).toUpperCase();
+  const stageLabel = { u18: "2026 draft class · U18", u16: `${p.draft_year} draft class · U16` };
+  const hist = p.history || [];
+
+  view.innerHTML = `
+    <p class="thin" style="margin:16px 0 0"><a href="#/draft/prospects/${p.draft_year}">← ${p.draft_year} prospects</a></p>
+    <div class="hero" style="--hero-a:#232f38;--hero-b:#2d3a44;--hero-trim:var(--accent)">
+      <div class="hero-inner">
+        <p class="club-line">${esc(p.state_team || "")}${p.position ? " · " + esc(p.position) : ""}</p>
+        <h2>${esc(p.name)}</h2>
+        <p class="statusline">
+          <span class="chip plain" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">${esc(stageLabel[p.stage] || p.draft_year + " draft")}</span>
+          ${p.award ? `<span class="chip" style="background:#f5e3a8;color:#7a5c00">${esc(p.award)}</span>` : ""}
+          ${p.tie ? `<span class="chip warn">${esc(p.tie)}</span>` : ""}
+        </p>
+        <dl class="hero-facts">
+          ${p.rank && p.stage === "u18" ? `<div><dt>Consensus rank</dt><dd>#${p.rank}</dd></div>` : ""}
+          ${p.position ? `<div><dt>Position</dt><dd>${esc(p.position)}</dd></div>` : ""}
+          <div><dt>State / academy</dt><dd>${esc(p.state_team || "")}</dd></div>
+          <div><dt>Draft class</dt><dd>${p.draft_year}</dd></div>
+          ${p.headline ? `<div><dt>Latest form</dt><dd>${p.headline.avg_disposals ?? "—"} disp · ${esc(p.headline.league)}</dd></div>` : ""}
+        </dl>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Playing history</h3>
+      <p class="sub">Games across the Coates Talent League, SANFL, WAFL, national championships and academy football.</p>
+      ${hist.length ? `
+      <div class="tablewrap"><table>
+        <thead><tr><th>Season</th><th>Competition</th><th>Team</th><th class="num">Games</th>
+          <th class="num">Disp</th><th class="num">Avg</th><th class="num">Marks</th><th class="num">Tackles</th>
+          <th class="num">Clear</th><th class="num">I50</th><th class="num">Goals</th></tr></thead>
+        <tbody>${hist.map(r => `
+          <tr><td>${esc(r.season)}</td><td>${esc(r.league)}</td><td class="thin">${esc(r.team)}</td>
+            <td class="num">${r.gamesplayed ?? ""}</td><td class="num">${r.disposals ?? ""}</td>
+            <td class="num"><b>${r.avg_disposals ?? ""}</b></td><td class="num">${r.marks ?? ""}</td>
+            <td class="num">${r.tackles ?? ""}</td><td class="num">${r.clr ?? ""}</td>
+            <td class="num">${r.i ?? ""}</td><td class="num">${r.goals ?? ""}</td></tr>`).join("")}
+        </tbody>
+      </table></div>
+      <p class="srcline">Playing history via <a href="${esc(p.stats_source_url || "#")}" target="_blank" rel="noopener">${esc(p.stats_source || "Rookie Me Central")} ↗</a></p>`
+      : `<p class="thin">No recorded games yet — this profile fills in as ${esc(p.name.split(" ")[0])} plays underage and state-league football.</p>`}
+    </div>`;
 }
 
 /* Award text -> honour chip class. Top honours (championship medals, AA
@@ -591,7 +640,7 @@ function prospectPoolCard(pool, year) {
         <thead><tr><th class="num">#</th><th>Player</th><th>State / academy</th><th>Position</th></tr></thead>
         <tbody>${ranked.map(p => `
           <tr><td class="num"><b>${p.rank ?? "—"}</b></td>
-            <td>${esc(p.name)}${p.tie ? ` <span class="chip warn" style="font-size:9px">${esc(p.tie)}</span>` : ""}</td>
+            <td><a href="#/prospect/${encodeURIComponent(p.name)}">${esc(p.name)}</a>${p.tie ? ` <span class="chip warn" style="font-size:9px">${esc(p.tie)}</span>` : ""}</td>
             <td class="thin">${esc(p.state_team || "")}</td>
             <td class="thin">${esc(p.position || "")}</td></tr>`).join("")}
         </tbody>
@@ -608,7 +657,7 @@ function prospectPoolCard(pool, year) {
       already earned honours; the list grows and firms up as more championship and talent-league football is played.</p>
     <div class="watchlist">
       ${order.map(p => `
-        <div class="watchrow">
+        <a class="watchrow" href="#/prospect/${encodeURIComponent(p.name)}">
           <span class="badge" style="--club:#3a4750">${esc((p.state_team || "").split(" ").map(w => w[0]).join("").slice(0, 3).toUpperCase())}</span>
           <span class="watch-body">
             <b>${esc(p.name)}</b>
@@ -616,7 +665,7 @@ function prospectPoolCard(pool, year) {
           </span>
           ${p.award ? honourChip(p.award) : ""}
           ${p.tie ? `<span class="chip warn" style="font-size:9px">${esc(p.tie)}</span>` : ""}
-        </div>`).join("")}
+        </a>`).join("")}
     </div>${srcLink}
   </div>`;
 }
@@ -1717,6 +1766,7 @@ const routes = [
   [/^#\/draft$/,                    () => draftOrderView(draftChrome("order"))],
   [/^#\/draft\/mock(?:\?.*)?$/,     () => mockDraftView(draftChrome("mock"))],
   [/^#\/draft\/prospects(?:\/(\d{4}))?$/, m => prospectsView(+(m[1] || 2027))],
+  [/^#\/prospect\/(.+)$/,           m => prospectProfileView(decodeURIComponent(m[1]))],
   [/^#\/draft\/history\/(\d{4})(?:\/(\w+))?$/, m => draftView(m[1], m[2] || "national", draftChrome("history"))],
   [/^#\/trades$/,                   () => tradeMachineView(tradesChrome("machine"))],
   [/^#\/trades\/history\/(\d{4})$/, m => tradesView(m[1], tradesChrome("history"))],
