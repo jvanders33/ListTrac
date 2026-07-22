@@ -458,6 +458,25 @@ footer.pagefoot {
 .clubmeta { margin: 3px 0 0; font-size: 13px; color: var(--ink-2); }
 .clubactions { margin-left: auto; display: flex; align-items: center; gap: 12px; }
 
+/* positional depth chart */
+.depthline { display: grid; grid-template-columns: 160px 1fr; gap: 12px; align-items: start; padding: 10px 0; border-top: 1px solid var(--line); }
+.depthline:first-of-type { border-top: 0; }
+.depth-pos { font-size: 12.5px; font-weight: 700; color: var(--ink); padding-top: 4px; }
+.depth-pos span { display: inline-block; margin-left: 6px; font-weight: 800; color: var(--ink-2); background: var(--card-2); border-radius: 10px; padding: 1px 8px; font-size: 11px; }
+.depth-players { display: flex; flex-wrap: wrap; gap: 6px; }
+.dchip {
+  display: inline-flex; align-items: baseline; gap: 6px; padding: 5px 9px; border-radius: 6px;
+  background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--ink-2);
+  font-size: 12.5px; color: var(--ink); white-space: nowrap;
+}
+.dchip:hover { text-decoration: none; background: var(--card-2); }
+.dchip span { font-variant-numeric: tabular-nums; font-size: 11px; color: var(--ink-2); }
+.dchip.ok { border-left-color: var(--ok); }
+.dchip.warn { border-left-color: var(--warn); background: var(--warn-bg); }
+.dchip.rfa { border-left-color: var(--rfa); background: var(--rfa-bg); }
+.dchip.ufa { border-left-color: var(--ufa); background: var(--ufa-bg); }
+@media (max-width: 620px) { .depthline { grid-template-columns: 1fr; gap: 6px; } }
+
 /* scouting report — radar + percentile bars */
 .scoutcols { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 20px; align-items: center; margin-top: 12px; }
 @media (max-width: 720px) { .scoutcols { grid-template-columns: 1fr; } }

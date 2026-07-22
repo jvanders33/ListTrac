@@ -161,12 +161,18 @@ def club_list(abbrev: str):
     if not result:
         raise HTTPException(404, f"no listed players for club '{abbrev}'")
     ov = _contract_overrides()
+    rb = _ratings_by_name()
     for r in result:
-        o = ov.get((_norm(f"{r['first_name']} {r['last_name']}"), (r.get("club_abbrev") or "").upper()))
+        nm = _norm(f"{r['first_name']} {r['last_name']}")
+        o = ov.get((nm, (r.get("club_abbrev") or "").upper()))
         if o and (r.get("contract_status") != "contracted"
                   or (r.get("contracted_through_year") or 0) < o["end_year"]):
             r["contract_status"] = "contracted"
             r["contracted_through_year"] = o["end_year"]
+        rr = rb.get(nm)
+        r["position"] = rr.get("position") if rr else None
+        r["rating"] = rr.get("rating") if rr else None
+        r["rating_rank"] = rr.get("rank") if rr else None
     return result
 
 

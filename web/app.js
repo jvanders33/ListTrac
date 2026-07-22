@@ -1723,6 +1723,42 @@ function clubListHTML(sorted, first) {
   </div>`;
 }
 
+/* Positional depth chart (Transfermarkt-style squad view): players grouped by
+   their Champion Data position line, sorted by rating, coloured by contract
+   status — reveals where a list is thin and who's off contract there. */
+const DEPTH_LINES = [
+  ["KEY_DEFENDER", "Key defenders"], ["MEDIUM_DEFENDER", "Small / medium defenders"],
+  ["MIDFIELDER", "Midfielders"], ["MIDFIELDER_FORWARD", "Mid-forwards"], ["RUCK", "Rucks"],
+  ["KEY_FORWARD", "Key forwards"], ["MEDIUM_FORWARD", "Small / medium forwards"],
+];
+function depthChartHTML(list) {
+  const CLS = { contracted: "ok", restricted_fa: "rfa", unrestricted_fa: "ufa", out_of_contract: "warn" };
+  const byPos = {};
+  list.forEach(p => (byPos[p.position || "OTHER"] = byPos[p.position || "OTHER"] || []).push(p));
+  const chip = p => `<a class="dchip ${CLS[p.contract_status] || "plain"}" href="#/player/${p.id}"
+      title="${esc((STATUS[p.contract_status] || {}).label || "")}${p.rating ? " · AFL Player Rating " + p.rating : ""}">
+      <b>${esc(p.last_name)}</b>${p.rating ? `<span>${p.rating}</span>` : ""}</a>`;
+  const line = ([key, label]) => {
+    const ps = (byPos[key] || []).sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    return ps.length ? `<div class="depthline">
+      <div class="depth-pos">${label}<span>${ps.length}</span></div>
+      <div class="depth-players">${ps.map(chip).join("")}</div></div>` : "";
+  };
+  const other = (byPos["OTHER"] || []).sort((a, b) => String(a.last_name).localeCompare(b.last_name));
+  return `<div class="card">
+    <h3>Positional depth</h3>
+    <p class="sub">Every listed player by Champion Data position, sorted by AFL Player Rating; colour = contract status — so a thin line, or a position full of expiring deals, jumps out.</p>
+    ${DEPTH_LINES.map(line).join("")}
+    ${other.length ? `<div class="depthline"><div class="depth-pos">Rookies / unrated<span>${other.length}</span></div><div class="depth-players">${other.map(chip).join("")}</div></div>` : ""}
+    <div class="legend" style="margin-top:14px">
+      <span><i style="background:var(--ok)"></i>Contracted</span>
+      <span><i style="background:var(--warn)"></i>Out of contract</span>
+      <span><i style="background:var(--rfa)"></i>Restricted FA</span>
+      <span><i style="background:var(--ufa)"></i>Unrestricted FA</span>
+    </div>
+  </div>`;
+}
+
 async function clubView(abbrev) {
   const [list, socials, info] = await Promise.all([
     api(`/clubs/${encodeURIComponent(abbrev)}/list`),
@@ -1734,7 +1770,9 @@ async function clubView(abbrev) {
   const sorted = [...list].sort((a, b) =>
     (URGENCY[a.contract_status] ?? 9) - (URGENCY[b.contract_status] ?? 9) ||
     (a.jumper_number ?? 99) - (b.jumper_number ?? 99));
-  const renderBody = () => clubViewMode === "grid" ? contractGridHTML(list) : clubListHTML(sorted, first);
+  const renderBody = () => clubViewMode === "grid" ? contractGridHTML(list)
+    : clubViewMode === "depth" ? depthChartHTML(list)
+    : clubListHTML(sorted, first);
   view.innerHTML = `
     <div class="clubhead">
       ${guernsey(abbrev, 38)}
@@ -1754,6 +1792,7 @@ async function clubView(abbrev) {
     ${honourRollCard(info)}
     <div class="viewtoggle" role="tablist" aria-label="Club view">
       <button data-mode="list" role="tab">List</button>
+      <button data-mode="depth" role="tab">Depth chart</button>
       <button data-mode="grid" role="tab">Contract grid</button>
     </div>
     <div id="clubbody">${renderBody()}</div>`;
