@@ -394,6 +394,20 @@ footer.pagefoot {
 
 .spark { display: block; margin: 4px 0 12px; overflow: visible; }
 
+/* you vs champion data */
+.cdcompare {
+  margin-top: 14px; padding: 12px 14px; background: var(--card-2);
+  border-radius: 6px; border-left: 3px solid var(--accent);
+}
+.cdcompare .sub { margin: 4px 0 0; }
+.cdc-line { font-size: 12.5px; margin: 8px 0 0; }
+.cdc-tag {
+  display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 0.06em;
+  text-transform: uppercase; padding: 2px 7px; border-radius: 3px; margin-right: 6px;
+}
+.cdc-tag.hot { color: var(--rfa); background: var(--rfa-bg); }
+.cdc-tag.cool { color: var(--ufa); background: var(--ufa-bg); }
+
 /* top 10 builder */
 .top10cols { display: grid; grid-template-columns: 1fr 340px; gap: 24px; align-items: start; }
 @media (max-width: 760px) { .top10cols { grid-template-columns: 1fr; } }

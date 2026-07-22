@@ -853,6 +853,29 @@ const decodeTop10 = () => {
 };
 const encodeTop10 = state => btoa(unescape(encodeURIComponent(JSON.stringify(state)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 
+/* How a user's Top 10 stacks against Champion Data's actual ranking. `pool`
+   is already sorted by rating (CD order), so slices give CD's top N. */
+function cdCompare(picks, pool) {
+  if (picks.length < 3) return "";
+  const cdTop10 = pool.slice(0, 10).map(p => p.name);
+  const cdTop25 = new Set(pool.slice(0, 25).map(p => p.name));
+  const cdRankOf = Object.fromEntries(pool.map((p, i) => [p.name, i + 1]));
+  const inCdTop10 = picks.filter(p => cdTop10.includes(p.name)).length;
+  const bold = picks.filter(p => !cdTop25.has(p.name));            // outside CD's top 25
+  const snubs = pool.slice(0, 10).filter(p => !picks.some(x => x.name === p.name)); // CD top-10 you left out
+  const agree = Math.round(100 * inCdTop10 / Math.min(picks.length, 10));
+  return `
+    <div class="cdcompare">
+      <p class="eyebrow">You vs Champion Data</p>
+      <p class="sub"><b>${agree}% agreement</b> — ${inCdTop10} of your ${Math.min(picks.length, 10)}
+        are in Champion Data's official top 10 this season.</p>
+      ${bold.length ? `<p class="cdc-line"><span class="cdc-tag hot">Hot takes</span>
+        ${bold.map(p => `${esc(p.name)} <span class="thin">(CD #${cdRankOf[p.name] || "200+"})</span>`).join(", ")}</p>` : ""}
+      ${snubs.length ? `<p class="cdc-line"><span class="cdc-tag cool">You snubbed</span>
+        ${snubs.map(p => `${esc(p.name)} <span class="thin">(CD #${cdRankOf[p.name]})</span>`).join(", ")}</p>` : ""}
+    </div>`;
+}
+
 async function top10View() {
   const [ratings, clubs] = await Promise.all([
     api("/api/ratings?limit=812"), api("/clubs")]);
@@ -904,6 +927,7 @@ async function top10View() {
             <button class="cta quiet" id="t10-reset">Reset</button>
           </div>
           <p class="srcline" id="t10-msg"></p>
+          ${cdCompare(state.picks.filter(Boolean), pool)}
         </div>
         <div class="card">
           <h3>Add players <span class="thin" style="font-weight:400">(${filled}/10)</span></h3>
