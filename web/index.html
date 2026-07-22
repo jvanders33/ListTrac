@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ListTrac — AFL lists, movement, contracts, draft</title>
-  <link rel="stylesheet" href="/styles.css?v=33">
+  <link rel="stylesheet" href="/styles.css?v=34">
 </head>
 <body>
   <div class="mast">
@@ -44,21 +44,34 @@
           <a href="#/draft/history/2025">Draft history</a>
         </div>
         <div>
-          <p class="eyebrow">Coming up</p>
-          <span class="thin">Player rankings</span>
-          <span class="thin">Fantasy context</span>
-          <span class="thin">U16 prospect runway</span>
+          <p class="eyebrow">Players</p>
+          <a href="#/players/rankings">Player rankings</a>
+          <a href="#/players/fantasy">AFL Fantasy</a>
+          <a href="#/players/top10">Build a Top 10</a>
+          <a href="#/draft/prospects">Draft prospects</a>
         </div>
         <div>
           <p class="eyebrow">About</p>
           <a href="https://github.com/jvanders33/ListTrac" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-      <p class="footnote">ListTrac tracks contract <em>status</em>, never salary figures.
-        Data: Draftguru · AFL Tables · Zero Hanger · AFL.com.au · Squiggle · Footywire.
-        Not affiliated with the AFL or any club.</p>
+      <details class="acknowledgements" id="acknowledgements">
+        <summary>Data &amp; acknowledgements</summary>
+        <p>ListTrac tracks contract <em>status</em>, never salary figures — the AFL does not disclose contract terms. Built with gratitude on data drawn from:</p>
+        <ul>
+          <li><b>Champion Data / AFL</b> — official AFL Player Ratings, AFL Fantasy scoring, and prospect &amp; state-league statistics (Coates Talent League, U18 Championships, VFL, SANFL).</li>
+          <li><b>Rookie Me Central</b> — junior playing history (WAFL, U16 championships and reserves grades).</li>
+          <li><b>AFLRATINGS</b> — contract, trade and player-movement reporting.</li>
+          <li><b>Draftguru &amp; AFL Tables</b> — draft picks, trades and historical club lists.</li>
+          <li><b>Zero Hanger</b> and <b>AFL.com.au</b> — free agency and contract status.</li>
+          <li><b>Squiggle</b> — live ladder powering the projected draft order.</li>
+          <li><b>Wikipedia</b> — club premiership and individual-medal honour rolls.</li>
+          <li>Individual clubs' official sites — verified contract announcements.</li>
+        </ul>
+        <p class="thin">Club names, colours and guernsey representations are used for identification only. ListTrac is an independent project, not affiliated with or endorsed by the AFL or any club.</p>
+      </details>
     </footer>
   </div>
-  <script src="/app.js?v=33"></script>
+  <script src="/app.js?v=34"></script>
 </body>
 </html>

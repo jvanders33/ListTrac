@@ -809,20 +809,24 @@ async function prospectProfileView(name) {
     <div class="card">
       <h3>Playing history</h3>
       <p class="sub">Games across the Coates Talent League, national championships, VFL/SANFL/WAFL and academy football — including senior state-league games as they step up.</p>
+      <p class="sub" style="margin-top:-6px;font-size:11.5px">Per-game averages.</p>
       ${hist.length ? `
       <div class="tablewrap"><table>
-        <thead><tr><th>Season</th><th>Competition</th><th>Team</th><th class="num">Games</th>
-          <th class="num">Disp</th><th class="num">Avg</th><th class="num">Marks</th><th class="num">Tackles</th>
-          <th class="num">Clear</th><th class="num">I50</th><th class="num">Goals</th></tr></thead>
-        <tbody>${hist.map(r => `
+        <thead><tr><th>Season</th><th>Competition</th><th>Team</th><th class="num">GP</th>
+          <th class="num">Disp</th><th class="num">Kick</th><th class="num">HB</th><th class="num">Mark</th>
+          <th class="num">Tack</th><th class="num">Clr</th><th class="num">I50</th><th class="num">Goal</th></tr></thead>
+        <tbody>${hist.map(r => {
+          const per = (t) => (t == null || !r.gamesplayed) ? "—" : (t / r.gamesplayed).toFixed(1);
+          return `
           <tr><td>${esc(r.season)}</td><td>${esc(r.league)}</td><td class="thin">${esc(r.team)}</td>
-            <td class="num">${r.gamesplayed ?? ""}</td><td class="num">${r.disposals ?? ""}</td>
-            <td class="num"><b>${r.avg_disposals ?? ""}</b></td><td class="num">${r.marks ?? ""}</td>
-            <td class="num">${r.tackles ?? ""}</td><td class="num">${r.clr ?? ""}</td>
-            <td class="num">${r.i ?? ""}</td><td class="num">${r.goals ?? ""}</td></tr>`).join("")}
+            <td class="num">${r.gamesplayed ?? ""}</td>
+            <td class="num"><b>${per(r.disposals)}</b></td><td class="num">${per(r.kicks)}</td>
+            <td class="num">${per(r.handballs)}</td><td class="num">${per(r.marks)}</td>
+            <td class="num">${per(r.tackles)}</td><td class="num">${per(r.clr)}</td>
+            <td class="num">${per(r.i)}</td><td class="num">${per(r.goals)}</td></tr>`;
+        }).join("")}
         </tbody>
-      </table></div>
-      <p class="srcline">Playing history via <a href="${esc(p.stats_source_url || "#")}" target="_blank" rel="noopener">${esc(p.stats_source || "Rookie Me Central")} ↗</a></p>`
+      </table></div>`
       : `<p class="thin">No recorded games yet — this profile fills in as ${esc(p.name.split(" ")[0])} plays underage and state-league football.</p>`}
     </div>`;
 }
@@ -838,7 +842,7 @@ function honourChip(award) {
 function prospectPoolCard(pool, year) {
   const ps = pool.prospects || [];
   const src = pool.sources || {};
-  const srcLink = `<p class="srcline">Source: <a href="${esc(src.all_australian || src.mvps || src.rankings || src.afl || "#")}" target="_blank" rel="noopener">${esc(src.rankings_note || "Rookie Me Central / AFL")} ↗</a></p>`;
+  const srcLink = "";  // provenance lives in the footer acknowledgements
 
   if (pool.forming || !ps.length) {
     return `<div class="card">
@@ -1306,7 +1310,6 @@ async function top10View() {
                   <span class="thin">${esc(p.abbr)} · rating ${p.rating}</span></span>
               </button>`).join("")}
           </div>
-          <p class="srcline">Player pool &amp; ratings: ${esc(ratings.attribution)}.</p>
         </div>
       </div>`;
 
@@ -1462,7 +1465,7 @@ async function fantasyView() {
             <td class="num"><b>${p.af_avg}</b></td><td class="num">${p.af_total ?? ""}</td></tr>`).join("")}
         </tbody>
       </table></div>
-      <p class="srcline">Source: <a href="${esc(data.source_url)}" target="_blank" rel="noopener">${esc(data.attribution)} ↗</a></p>`;
+      `;
     card.querySelectorAll("[data-pos]").forEach(b => b.addEventListener("click", () => load(b.dataset.pos)));
   }).catch(() => {
     const card = document.getElementById("fantasy-card");
@@ -1496,7 +1499,7 @@ async function rankingsView() {
             <td class="num"><b>${r.rating}</b></td></tr>`).join("")}
         </tbody>
       </table></div>
-      <p class="srcline">Source: <a href="${esc(data.source_url)}" target="_blank" rel="noopener">${esc(data.attribution)} ↗</a></p>`;
+      `;
     document.getElementById("ratingsyear").addEventListener("change", e => loadRatings(+e.target.value));
   }).catch(() => {
     const card = document.getElementById("ratings-card");
@@ -1621,7 +1624,6 @@ function honourRollCard(info) {
     <p class="sub">Premierships and the club's major individual medallists.</p>
     ${premBlock}
     <div class="medalgrid">${awardBlocks}</div>
-    <p class="srcline">Premierships &amp; medals compiled from public records (Wikipedia award lists).</p>
   </div>`;
 }
 
@@ -1912,7 +1914,6 @@ async function playerView(id) {
             <thead><tr><th>When</th><th>Type</th><th>Detail</th></tr></thead>
             <tbody>${txRows.join("") || `<tr><td colspan="4" class="thin">No recorded movements — original-list player.</td></tr>`}</tbody>
           </table></div>
-          ${contractEvents.length && p.contract_source ? `<p class="srcline">Contract signings via <a href="${esc(p.contract_source.source_url)}" target="_blank" rel="noopener">${esc(p.contract_source.source)}</a>, compiled from public reporting. Coverage from late 2021.</p>` : ""}
         </div>
         ${p.rating_history && p.rating_history.length ? `
         <div class="card">
@@ -1926,7 +1927,6 @@ async function playerView(id) {
                 <td class="num"><b>${s.rating}</b></td><td class="num">${s.rank ? "#" + s.rank : "—"}</td></tr>`).join("")}
             </tbody>
           </table></div>
-          <p class="srcline">Official AFL Player Ratings, powered by Champion Data.</p>
         </div>` : ""}
         ${p.contract_status.length > 1 ? `
         <div class="card">
