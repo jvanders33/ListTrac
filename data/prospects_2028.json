@@ -1,27 +1,406 @@
 {
  "year": 2028,
- "stage": "u16",
- "forming": false,
- "note": "Preliminary — the confirmed standouts from the 2026 U16 National Championships (Western Australia won Pool A, GWS Giants Academy Pool B). Troy Warner led the way as Kevin Sheehan medallist; the rest are their team's MVPs, listed by state. This class expands and re-ranks when the U16 All-Australian team publishes.",
+ "stage": "pool",
+ "note": "The 2028 potential-draftee pool — every talent-league and national-championship player eligible for the 2028 draft (classified by date of birth). Award winners and All-Australians are tagged; this is a wide pool this far out, not a ranking.",
  "sources": {
   "mvps": "https://central.rookieme.com/afl/2026/07/20/remember-the-names-2026-afl-under-16-mvps/",
-  "afl": "https://www.afl.com.au/nat-champs/u16s/boys",
-  "rankings_note": "2026 U16 championship MVPs (Rookie Me Central). Kevin Sheehan medallist first, team MVPs by state."
+  "afl": "https://www.afl.com.au/stats",
+  "rankings_note": "Pathway pool: AFL/Champion Data (Coates Talent League + U18 Championships) by DOB, plus curated All-Australian/award honours."
  },
- "pool_results": [
-  {"pool": "A", "winner": "Western Australia"},
-  {"pool": "B", "winner": "GWS Giants Academy"}
- ],
  "prospects": [
-  {"name": "Troy Warner", "state_team": "Western Australia", "position": "Forward/Midfielder", "rank": 1, "award": "Kevin Sheehan Medal (championship MVP)"},
-  {"name": "Darcy Pearson", "state_team": "Brisbane Academy", "position": "Defender", "rank": 2, "award": "Brisbane Academy MVP", "tie": "Brisbane Academy"},
-  {"name": "Hunter Weatherley", "state_team": "Gold Coast Academy", "position": "Defender", "rank": 3, "award": "Gold Coast Academy MVP", "tie": "Gold Coast Academy"},
-  {"name": "Alexander Maher", "state_team": "GWS Academy", "position": "Midfielder", "rank": 4, "award": "Giants Academy MVP", "tie": "GWS Academy"},
-  {"name": "Billy Brown", "state_team": "Northern Territory", "position": "Tall defender", "rank": 5, "award": "Northern Territory MVP"},
-  {"name": "Logan Treverton", "state_team": "South Australia", "position": "Midfielder", "rank": 6, "award": "South Australia MVP"},
-  {"name": "Noah Keam", "state_team": "Sydney Academy", "position": "Midfielder", "rank": 7, "award": "Swans Academy MVP", "tie": "Sydney Academy"},
-  {"name": "Jordan Stevenson", "state_team": "Tasmania", "position": "Defender", "rank": 8, "award": "Tasmania MVP"},
-  {"name": "Eamon Hyde", "state_team": "Vic Country", "position": "Tall defender", "rank": 9, "award": "Vic Country MVP"},
-  {"name": "Louis Grinter", "state_team": "Vic Metro", "position": "Midfielder", "rank": 10, "award": "Vic Metro MVP"}
+  {
+   "name": "Troy Warner",
+   "state_team": "Western Australia",
+   "position": "Forward/Midfielder",
+   "rank": 1,
+   "award": "Kevin Sheehan Medal (championship MVP)",
+   "source": "curated"
+  },
+  {
+   "name": "Darcy Pearson",
+   "state_team": "Brisbane Academy",
+   "position": "Defender",
+   "rank": 2,
+   "award": "Brisbane Academy MVP",
+   "tie": "Brisbane Academy",
+   "source": "curated"
+  },
+  {
+   "name": "Hunter Weatherley",
+   "state_team": "Gold Coast Academy",
+   "position": "Defender",
+   "rank": 3,
+   "award": "Gold Coast Academy MVP",
+   "tie": "Gold Coast Academy",
+   "source": "curated"
+  },
+  {
+   "name": "Alexander Maher",
+   "state_team": "GWS Academy",
+   "position": "Midfielder",
+   "junior_club": "GWS GIANTS Academy",
+   "games": 3,
+   "source": "afl",
+   "rank": 4,
+   "award": "Giants Academy MVP",
+   "tie": "GWS Academy"
+  },
+  {
+   "name": "Billy Brown",
+   "state_team": "Northern Territory",
+   "position": "Tall defender",
+   "junior_club": "Northern Territory Academy",
+   "games": 3,
+   "source": "afl",
+   "rank": 5,
+   "award": "Northern Territory MVP"
+  },
+  {
+   "name": "Logan Treverton",
+   "state_team": "South Australia",
+   "position": "Midfielder",
+   "rank": 6,
+   "award": "South Australia MVP",
+   "source": "curated"
+  },
+  {
+   "name": "Noah Keam",
+   "state_team": "Sydney Academy",
+   "position": "Midfielder",
+   "rank": 7,
+   "award": "Swans Academy MVP",
+   "tie": "Sydney Academy",
+   "source": "curated"
+  },
+  {
+   "name": "Jordan Stevenson",
+   "state_team": "Tasmania",
+   "position": "Defender",
+   "rank": 8,
+   "award": "Tasmania MVP",
+   "source": "curated"
+  },
+  {
+   "name": "Eamon Hyde",
+   "state_team": "Vic Country",
+   "position": "Tall defender",
+   "junior_club": "Murray Bushrangers",
+   "games": 5,
+   "source": "afl",
+   "rank": 9,
+   "award": "Vic Country MVP"
+  },
+  {
+   "name": "Louis Grinter",
+   "state_team": "Vic Metro",
+   "position": "Midfielder",
+   "rank": 10,
+   "award": "Vic Metro MVP",
+   "source": "curated"
+  },
+  {
+   "name": "Dex Rizzoli",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "GWV Rebels",
+   "games": 6,
+   "source": "afl"
+  },
+  {
+   "name": "Paddy Fitzgibbon",
+   "state_team": "Gold Coast Academy",
+   "position": null,
+   "junior_club": "Gold Coast SUNS Academy",
+   "games": 5,
+   "source": "afl"
+  },
+  {
+   "name": "Alex Ingham",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
+   "games": 4,
+   "source": "afl"
+  },
+  {
+   "name": "Daniel May",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
+   "games": 4,
+   "source": "afl"
+  },
+  {
+   "name": "Xavier Salvana",
+   "state_team": "Brisbane Academy",
+   "position": null,
+   "junior_club": "Brisbane Lions Academy",
+   "games": 4,
+   "source": "afl"
+  },
+  {
+   "name": "Harry Metcher",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "GWV Rebels",
+   "games": 3,
+   "source": "afl"
+  },
+  {
+   "name": "Hayden Gardiner",
+   "state_team": "GWS Academy",
+   "position": null,
+   "junior_club": "GWS GIANTS Academy",
+   "games": 3,
+   "source": "afl"
+  },
+  {
+   "name": "James Rice",
+   "state_team": "GWS Academy",
+   "position": null,
+   "junior_club": "GWS GIANTS Academy",
+   "games": 3,
+   "source": "afl"
+  },
+  {
+   "name": "Lenny Sims",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Murray Bushrangers",
+   "games": 3,
+   "source": "afl"
+  },
+  {
+   "name": "Nate Wade",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Bendigo Pioneers",
+   "games": 3,
+   "source": "afl"
+  },
+  {
+   "name": "Ryan Hutchings",
+   "state_team": "Brisbane Academy",
+   "position": null,
+   "junior_club": "Brisbane Lions Academy",
+   "games": 3,
+   "source": "afl"
+  },
+  {
+   "name": "Samuel Brown",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Bendigo Pioneers",
+   "games": 3,
+   "source": "afl"
+  },
+  {
+   "name": "Aiden Zoobi",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Bachar Houli Academy",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Ali Kassab",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Calder Cannons",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Ali Merhi",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Bachar Houli Academy",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Archie Richards",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Northern Knights",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Callum Samuelson",
+   "state_team": "Gold Coast Academy",
+   "position": null,
+   "junior_club": "Gold Coast SUNS Academy",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Jackson Butterworth",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Bendigo Pioneers",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Paddy Connelly",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Bendigo Pioneers",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Preston Singer",
+   "state_team": "GWS Academy",
+   "position": null,
+   "junior_club": "GWS GIANTS Academy",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Zayd El-Hosni",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Bachar Houli Academy",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Aidan Farr",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Angus Dunham",
+   "state_team": "Tasmania",
+   "position": null,
+   "junior_club": "Tasmania Devils",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Archie Symons",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Murray Bushrangers",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Ben Atkin",
+   "state_team": "Tasmania",
+   "position": null,
+   "junior_club": "Tasmania Devils",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Billy Brundell",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Calder Cannons",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Charlie Sutton",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Bendigo Pioneers",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Clancy Cunningham",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Cuan Roberts",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Dwaine Ah Sam",
+   "state_team": "Northern Territory",
+   "position": null,
+   "junior_club": "Northern Territory Academy",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Freddie Hardman",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Oakleigh Chargers",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Harry Lindsay",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Hudson Brown",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Hudson Greene",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "GWV Rebels",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Nikita Trikilis",
+   "state_team": "Northern Territory",
+   "position": null,
+   "junior_club": "Northern Territory Academy",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Oscar Roydhouse",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Sullivan Jennings",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Zen Blythe",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
+   "games": 1,
+   "source": "afl"
+  }
  ]
 }

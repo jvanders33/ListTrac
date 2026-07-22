@@ -762,10 +762,11 @@ async function prospectsView(year = 2027) {
   view.innerHTML = `${draftChrome("prospects")}
     <div class="card">
       <h3>Draft prospect runway</h3>
-      <p class="sub">Three draft classes in the pipeline. The 2026 class comes from this year's U18
-        championships; 2027 and 2028 are the U16 cohorts — this far out, All-Australian selection is
-        the signal, so treat the order as preliminary. Click any prospect for their full playing
-        history across the Coates Talent League, SANFL, WAFL and national championships.</p>
+      <p class="sub">Three draft classes in the pipeline. The 2026 class is this year's U18 championships
+        pool; 2027 and 2028 are the full pathway pools — every Coates Talent League and national-
+        championship player eligible for that draft, classified by date of birth. Award winners are
+        tagged; it's a wide field this far out, not a ranking. Click any prospect for their full
+        playing history across the Coates Talent League, VFL/SANFL/WAFL and national championships.</p>
       <div class="runway">
         ${runway.map(r => `
           <a class="runwaycard ${r.year === year ? "on" : ""}" href="#/draft/prospects/${r.year}">
@@ -777,6 +778,25 @@ async function prospectsView(year = 2027) {
       </div>
     </div>
     ${pool ? prospectPoolCard(pool, year) : `<div class="card"><p class="thin">No prospect pool for ${year}.</p></div>`}`;
+
+  const psearch = document.getElementById("poolsearch");
+  if (psearch) {
+    const pstate = document.getElementById("poolstate");
+    const prows = [...document.querySelectorAll("#poollist tr")];
+    const pcount = document.getElementById("poolcount");
+    const applyPool = () => {
+      const q = psearch.value.toLowerCase().trim(), st = pstate.value;
+      let shown = 0;
+      prows.forEach(r => {
+        const ok = (!q || r.dataset.name.includes(q)) && (!st || r.dataset.state === st);
+        r.hidden = !ok; if (ok) shown++;
+      });
+      pcount.textContent = `${shown} of ${prows.length} shown`;
+    };
+    psearch.addEventListener("input", applyPool);
+    pstate.addEventListener("change", applyPool);
+    applyPool();
+  }
 }
 
 async function prospectProfileView(name) {
@@ -875,25 +895,31 @@ function prospectPoolCard(pool, year) {
     </div>`;
   }
 
-  // U16 (2027/2028): NOT a ranking this far out — a watchlist of named
-  // honours, award-winners first, tagged rather than numbered.
-  const order = [...ps].sort((a, b) => (a.rank || 999) - (b.rank || 999));
+  // 2027/2028: the full potential-draftee pool — every pathway player,
+  // searchable and filterable by state, honour winners flagged (not ranked).
+  const order = [...ps].sort((a, b) =>
+    (a.rank || 999) - (b.rank || 999) || (b.games || 0) - (a.games || 0) || a.name.localeCompare(b.name));
+  const states = [...new Set(order.map(p => p.state_team).filter(Boolean))].sort();
   return `<div class="card">
-    <h3>${year} watchlist <span class="thin" style="font-weight:400">· ${order.length} named so far</span></h3>
-    <p class="sub">${esc(pool.note || "")} <b>Not a ranked order</b> this far out — these are the players who've
-      already earned honours; the list grows and firms up as more championship and talent-league football is played.</p>
-    <div class="watchlist">
-      ${order.map(p => `
-        <a class="watchrow" href="#/prospect/${encodeURIComponent(p.name)}">
-          ${pathwayIcon(p.state_team, 24)}
-          <span class="watch-body">
-            <b>${esc(p.name)}</b>
-            <span class="thin">${esc(p.state_team || "")}${p.position ? " · " + esc(p.position) : ""}</span>
-          </span>
-          ${p.award ? honourChip(p.award) : ""}
-          ${p.tie ? `<span class="chip warn" style="font-size:9px">${esc(p.tie)}</span>` : ""}
-        </a>`).join("")}
-    </div>${srcLink}
+    <h3>${year} draft pool <span class="thin" style="font-weight:400">· ${order.length} players</span></h3>
+    <p class="sub">${esc(pool.note || "")}</p>
+    <div class="poolctl">
+      <input id="poolsearch" class="poolsearch" type="search" placeholder="Search ${order.length} prospects…" autocomplete="off">
+      <select id="poolstate" class="poolstate"><option value="">All states / pathways</option>${states.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join("")}</select>
+      <span class="thin" id="poolcount"></span>
+    </div>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Player</th><th>State / pathway</th><th>Club</th><th>Pos</th><th class="num">GP</th></tr></thead>
+      <tbody id="poollist">${order.map(p => `
+        <tr data-name="${esc((p.name || "").toLowerCase())}" data-state="${esc(p.state_team || "")}">
+          <td><a href="#/prospect/${encodeURIComponent(p.name)}">${esc(p.name)}</a>${p.award ? " " + honourChip(p.award) : ""}${p.tie ? ` <span class="chip warn" style="font-size:9px">${esc(p.tie)}</span>` : ""}</td>
+          <td>${pathwayTag(p.state_team)}</td>
+          <td class="thin">${esc(p.junior_club || "")}</td>
+          <td class="thin">${esc(p.position || "")}</td>
+          <td class="num">${p.games ?? ""}</td>
+        </tr>`).join("")}
+      </tbody>
+    </table></div>
   </div>`;
 }
 

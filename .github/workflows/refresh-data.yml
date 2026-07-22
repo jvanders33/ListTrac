@@ -52,6 +52,12 @@ jobs:
         run: python scraper/afl_talent.py
         continue-on-error: true
 
+      - name: Rebuild full draft-prospect pools (AFL by DOB)
+        # every pathway player eligible for the 2027/2028 drafts, classified by
+        # date of birth, with curated All-Australian/award honours merged back
+        run: python scraper/draft_pool.py
+        continue-on-error: true
+
       - name: Refresh contract-event history (AFLRATINGS)
         # dated signings/extensions/trades/delistings — the missing middle of
         # each player's timeline between draft and free agency
