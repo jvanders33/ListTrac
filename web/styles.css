@@ -462,6 +462,18 @@ footer.pagefoot {
 .draftviews button:hover { color: var(--ink); border-color: var(--ink-2); }
 .draftviews button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
 .rndhead { background: var(--card-2); font-weight: 800; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 12px; }
+
+/* draft board — fixed columns so numbers space evenly; club column takes slack */
+.drafttable { table-layout: fixed; width: 100%; min-width: 720px; }
+.drafttable th, .drafttable td { overflow: hidden; text-overflow: ellipsis; }
+.drafttable .clubcell { white-space: nowrap; }
+.drafttable .clubcell .chip { font-size: 9px; padding: 1px 5px; vertical-align: 1px; }
+.drafttable col.c-pick { width: 6%; }
+.drafttable col.c-club { width: 26%; }
+.drafttable col.c-wl { width: 9%; }
+.drafttable col.c-pct { width: 8%; }
+.drafttable col.c-dvi { width: 9%; }
+.drafttable col.c-st { width: 10.5%; }
 .totrow td { border-top: 2px solid var(--line); color: var(--ink-2); font-size: 12px; }
 .dvibar { position: relative; display: inline-block; padding: 2px 8px; border-radius: 4px; min-width: 62px; text-align: right; }
 .dvibar::before { content: ""; position: absolute; inset: 0; width: var(--w); background: var(--accent); opacity: 0.16; border-radius: 4px; }

@@ -441,23 +441,30 @@ async function draftOrderView(chrome = "") {
   const viaChip = p => p.via
     ? ` <span class="chip warn" title="Natural slot belongs to ${esc(p.via)} — traded">via ${esc(p.via)}</span>` : "";
 
-  // Board = full list with outcome intel
+  // Board = full list with outcome intel. Fixed column widths keep the numeric
+  // columns evenly spaced; the club column absorbs the slack. Short stat
+  // headers (AA/RS/Prem) are spelled out in the legend below.
   const boardRow = p => `
     <tr><td class="num"><b>${p.pick}</b></td>
-      <td>${clubTag(p.abbrev, p.club)}${viaChip(p)}</td>
+      <td class="clubcell">${clubTag(p.abbrev, p.club)}${viaChip(p)}</td>
       <td class="num">${p.round === 1 ? `${p.wins}–${p.losses}` : ""}</td>
+      <td class="num thin">${p.round === 1 && p.percentage != null ? p.percentage.toFixed(1) : ""}</td>
       <td class="num">${p.dvi || "—"}</td>
       <td class="num">${cell(p.pick, "avg_games")}</td>
       <td class="num">${cell(p.pick, "aa_pct", "%")}</td>
       <td class="num">${cell(p.pick, "prem_pct", "%")}</td>
       <td class="num">${cell(p.pick, "rs_pct", "%")}</td></tr>`;
   const boardHTML = () => `
-    <div class="tablewrap"><table>
-      <thead><tr><th class="num">Pick</th><th>Owner</th><th class="num">W–L</th>
-        <th class="num">DVI pts</th><th class="num">Avg games</th>
-        <th class="num">AA %</th><th class="num">Prem %</th><th class="num">Rising Star %</th></tr></thead>
+    <div class="tablewrap"><table class="drafttable">
+      <colgroup><col class="c-pick"><col class="c-club"><col class="c-wl"><col class="c-pct"><col class="c-dvi">
+        <col class="c-st"><col class="c-st"><col class="c-st"><col class="c-st"></colgroup>
+      <thead><tr><th class="num">Pick</th><th>Owner</th><th class="num">W–L</th><th class="num">%</th>
+        <th class="num">DVI</th><th class="num">Games</th>
+        <th class="num" title="All-Australian rate">AA %</th>
+        <th class="num" title="Premiership rate">Prem %</th>
+        <th class="num" title="Rising Star nomination rate">RS %</th></tr></thead>
       <tbody>${rounds.map(r => `
-        <tr><td colspan="8" class="rndhead">Round ${r.round}</td></tr>
+        <tr><td colspan="9" class="rndhead">Round ${r.round}</td></tr>
         ${r.picks.map(boardRow).join("")}`).join("")}
       </tbody>
     </table></div>
@@ -466,11 +473,12 @@ async function draftOrderView(chrome = "") {
       <p class="eyebrow">Reading this table</p>
       <dl>
         <div><dt>via</dt><dd>the pick changed hands — shown against the club that now owns it, named for the club whose ladder position sets the slot</dd></div>
-        <div><dt>DVI pts</dt><dd>the pick's value on the AFL's official Draft Value Index — the points currency used to match academy and father-son bids</dd></div>
-        <div><dt>Avg games</dt><dd>average career games played by every player ever taken at that pick</dd></div>
+        <div><dt>%</dt><dd>the club's ladder percentage — the tiebreaker that orders clubs level on wins–losses</dd></div>
+        <div><dt>DVI</dt><dd>the pick's value on the AFL's official Draft Value Index — the points currency used to match academy and father-son bids</dd></div>
+        <div><dt>Games</dt><dd>average career games played by every player ever taken at that pick</dd></div>
         <div><dt>AA %</dt><dd>share of players taken at that pick who made an All-Australian team</dd></div>
         <div><dt>Prem %</dt><dd>share who played in a premiership</dd></div>
-        <div><dt>Rising Star %</dt><dd>share who earned a Rising Star nomination in their early seasons</dd></div>
+        <div><dt>RS %</dt><dd>share who earned a Rising Star nomination in their early seasons</dd></div>
       </dl>
       <p class="thin" style="font-size:11.5px;margin:8px 0 0">Outcome stats cover the
         ${intel.cohort.from}–${intel.cohort.to} drafts — more recent draftees are still mid-career
