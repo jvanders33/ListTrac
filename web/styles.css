@@ -372,6 +372,38 @@ footer.pagefoot {
 
 .spark { display: block; margin: 4px 0 12px; overflow: visible; }
 
+/* top 10 builder */
+.top10cols { display: grid; grid-template-columns: 1fr 340px; gap: 24px; align-items: start; }
+@media (max-width: 760px) { .top10cols { grid-template-columns: 1fr; } }
+.t10-title {
+  font: inherit; font-size: 20px; font-weight: 800; color: var(--ink);
+  background: var(--ground); border: 1px solid var(--line); border-radius: 6px;
+  padding: 8px 12px; width: 100%; margin-bottom: 12px;
+}
+.t10-board { display: flex; flex-direction: column; gap: 6px; }
+.t10-slot {
+  display: flex; align-items: center; gap: 10px; padding: 8px 10px;
+  border: 1px solid var(--line); border-radius: 7px; background: var(--card);
+}
+.t10-slot.filled { cursor: grab; }
+.t10-slot.filled:active { cursor: grabbing; }
+.t10-slot.empty { border-style: dashed; opacity: 0.7; }
+.t10-rank {
+  flex: none; width: 30px; text-align: center; font-size: 20px; font-weight: 800;
+  color: var(--accent); font-variant-numeric: tabular-nums;
+}
+.t10-name { display: flex; flex-direction: column; min-width: 0; font-weight: 700; font-size: 14px; }
+.t10-name .thin { font-weight: 500; font-size: 12px; }
+.t10-empty-label { font-size: 12.5px; color: var(--ink-2); }
+.t10-ctrls { margin-left: auto; display: flex; gap: 3px; flex: none; }
+.t10-ctrls button {
+  font: inherit; font-size: 12px; line-height: 1; width: 26px; height: 26px;
+  border: 1px solid var(--line); border-radius: 5px; background: var(--card);
+  color: var(--ink-2); cursor: pointer;
+}
+.t10-ctrls button:hover:not(:disabled) { color: var(--accent); border-color: var(--accent); }
+.t10-ctrls button:disabled { opacity: 0.35; cursor: default; }
+
 /* stats legend */
 .statlegend {
   margin-top: 16px; padding: 12px 16px; background: var(--card-2);

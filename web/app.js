@@ -749,37 +749,229 @@ async function tradeMachineView(chrome = "") {
   await render();
 }
 
-async function playersView() {
-  const clubList = await api("/clubs").catch(() => []);
-  view.innerHTML = `
-    <div class="card">
-      <h3>Find a player</h3>
-      <input id="pfind" class="poolsearch" type="search" placeholder="Start typing a name…" autocomplete="off">
-      <div id="presults"></div>
-    </div>
-    <div class="card">
-      <h3>Quick lists</h3>
-      <p class="feature-ctas" style="margin-top:10px">
-        <a class="cta" href="#/free-agents">Free agents 2026</a>
-        <a class="cta quiet" href="#/free-agents/restricted_fa">Restricted FAs</a>
-        <a class="cta quiet" href="#/free-agents/out_of_contract">Out of contract</a>
-      </p>
-    </div>
-    <div class="card">
-      <h3>Browse by club</h3>
-      <div class="clubstrip" style="margin-top:10px">
-        ${clubList.filter(c => c.listed_players > 0).map(c => `
-          <a href="#/club/${esc(c.abbreviation)}">
-            <span class="badge" style="--club:${esc(c.primary_color || "#888")}">${esc(c.abbreviation)}</span>
-            ${esc(c.name)}</a>`).join("")}
-      </div>
-    </div>
-    <div class="card" id="ratings-card">
-      <h3>Player rankings</h3>
-      <p class="sub">Loading the official ratings…</p>
-    </div>`;
+/* ---------- Top 10 builder (interactive, shareable) ---------- */
 
-  const loadRatings = year => api(`/api/ratings?limit=50${year ? "&year=" + year : ""}`).then(data => {
+const playersChrome = act => `<div class="subtabs">
+  <a href="#/players" class="${act === "dir" ? "active" : ""}">Directory</a>
+  <a href="#/players/rankings" class="${act === "rank" ? "active" : ""}">Rankings</a>
+  <a href="#/players/top10" class="${act === "top10" ? "active" : ""}">Build a Top 10</a>
+</div>`;
+
+/* Champion Data team code -> our club abbreviation, for colour + linking. */
+const CD_TEAM = {
+  ADEL: "ADE", BL: "BRI", CARL: "CAR", COLL: "COL", ESS: "ESS", FRE: "FRE",
+  GCFC: "GCS", GEEL: "GEE", GWS: "GWS", HAW: "HAW", MELB: "MEL", NMFC: "NM",
+  PORT: "PA", RICH: "RIC", STK: "STK", SYD: "SYD", WB: "WB", WCE: "WCE",
+};
+
+const TOP10_KEY = "top10_v1";
+const decodeTop10 = () => {
+  const m = location.hash.match(/[?&]t=([^&]+)/);
+  if (m) { try { return JSON.parse(decodeURIComponent(escape(atob(m[1].replace(/-/g, "+").replace(/_/g, "/"))))); } catch { /* fall through */ } }
+  try { return JSON.parse(localStorage.getItem(TOP10_KEY)); } catch { return null; }
+};
+const encodeTop10 = state => btoa(unescape(encodeURIComponent(JSON.stringify(state)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+
+async function top10View() {
+  const [ratings, clubs] = await Promise.all([
+    api("/api/ratings?limit=812"), api("/clubs")]);
+  const colorOf = ab => (clubs.find(c => c.abbreviation === ab) || {}).primary_color || "#555";
+  const pool = ratings.ratings.map(r => ({
+    name: r.name, cd: r.team, abbr: CD_TEAM[r.team] || r.team,
+    rating: r.rating, rank: r.rank, player_id: r.player_id,
+  }));
+  const byName = Object.fromEntries(pool.map(p => [p.name, p]));
+
+  let state = decodeTop10() || { title: "My Top 10", picks: [] };
+  state.picks = (state.picks || []).slice(0, 10);
+  let filter = "";
+
+  const save = () => { localStorage.setItem(TOP10_KEY, JSON.stringify(state)); };
+
+  function render() {
+    const filled = state.picks.filter(Boolean).length;
+    const available = pool.filter(p => !state.picks.some(x => x && x.name === p.name));
+
+    view.innerHTML = `${playersChrome("top10")}
+      <p class="sub" style="margin-top:14px">Pick your ten best players, drag the order how you like it,
+        then save the card or share the link. Ratings are the current-season <strong>AFL Player Rating</strong>.</p>
+      <div class="top10cols">
+        <div class="card">
+          <input id="t10-title" class="t10-title" value="${esc(state.title)}" maxlength="42" aria-label="Board title">
+          <div class="t10-board" id="t10-board">
+            ${Array.from({ length: 10 }, (_, i) => {
+              const p = state.picks[i];
+              return `<div class="t10-slot ${p ? "filled" : "empty"}" data-i="${i}"
+                        ${p ? 'draggable="true"' : ""}>
+                <span class="t10-rank">${i + 1}</span>
+                ${p ? `
+                  <span class="badge" style="--club:${esc(colorOf(p.abbr))}">${esc(p.abbr)}</span>
+                  <span class="t10-name">${p.player_id ? `<a href="#/player/${p.player_id}">${esc(p.name)}</a>` : esc(p.name)}
+                    <span class="thin">${esc(p.abbr)} · rating ${p.rating}</span></span>
+                  <span class="t10-ctrls">
+                    <button data-up="${i}" ${i === 0 ? "disabled" : ""} aria-label="Move up">▲</button>
+                    <button data-down="${i}" ${i === filled - 1 || i >= filled ? "disabled" : ""} aria-label="Move down">▼</button>
+                    <button data-rm="${i}" aria-label="Remove">✕</button>
+                  </span>`
+                  : `<span class="t10-empty-label">Empty — pick a player →</span>`}
+              </div>`;
+            }).join("")}
+          </div>
+          <div class="feature-ctas" style="margin-top:14px">
+            <button class="cta" id="t10-save" ${filled ? "" : "disabled"}>Download card</button>
+            <button class="cta quiet" id="t10-share" ${filled ? "" : "disabled"}>Share</button>
+            <button class="cta quiet" id="t10-reset">Reset</button>
+          </div>
+          <p class="srcline" id="t10-msg"></p>
+        </div>
+        <div class="card">
+          <h3>Add players <span class="thin" style="font-weight:400">(${filled}/10)</span></h3>
+          <input id="t10-search" class="poolsearch" type="search" placeholder="Filter by name or club…" value="${esc(filter)}">
+          <div class="poollist">
+            ${available
+              .filter(p => !filter || `${p.name} ${p.abbr}`.toLowerCase().includes(filter.toLowerCase()))
+              .slice(0, 80).map(p => `
+              <button class="poolrow" data-add="${esc(p.name)}" ${filled >= 10 ? "disabled" : ""}>
+                <span class="rankchip">${p.rank ?? "–"}</span>
+                <span class="poolinfo"><b>${esc(p.name)}</b>
+                  <span class="thin">${esc(p.abbr)} · rating ${p.rating}</span></span>
+              </button>`).join("")}
+          </div>
+          <p class="srcline">Player pool &amp; ratings: ${esc(ratings.attribution)}.</p>
+        </div>
+      </div>`;
+
+    const board = document.getElementById("t10-board");
+    const compact = () => { state.picks = state.picks.filter(Boolean); save(); };
+
+    view.querySelectorAll("[data-add]").forEach(b => b.addEventListener("click", () => {
+      if (state.picks.filter(Boolean).length >= 10) return;
+      state.picks.push(byName[b.dataset.add]); compact(); render();
+    }));
+    board.querySelectorAll("[data-rm]").forEach(b => b.addEventListener("click", () => {
+      state.picks.splice(+b.dataset.rm, 1); compact(); render();
+    }));
+    board.querySelectorAll("[data-up]").forEach(b => b.addEventListener("click", () => {
+      const i = +b.dataset.up;[state.picks[i - 1], state.picks[i]] = [state.picks[i], state.picks[i - 1]];
+      compact(); render();
+    }));
+    board.querySelectorAll("[data-down]").forEach(b => b.addEventListener("click", () => {
+      const i = +b.dataset.down;[state.picks[i + 1], state.picks[i]] = [state.picks[i], state.picks[i + 1]];
+      compact(); render();
+    }));
+
+    // drag to reorder
+    let dragI = null;
+    board.querySelectorAll(".t10-slot.filled").forEach(s => {
+      s.addEventListener("dragstart", () => { dragI = +s.dataset.i; });
+      s.addEventListener("dragover", e => e.preventDefault());
+      s.addEventListener("drop", e => {
+        e.preventDefault();
+        const to = +s.dataset.i;
+        if (dragI === null || dragI === to) return;
+        const [m] = state.picks.splice(dragI, 1);
+        state.picks.splice(to, 0, m); compact(); render();
+      });
+    });
+
+    const title = document.getElementById("t10-title");
+    title.addEventListener("input", () => { state.title = title.value; save(); });
+
+    document.getElementById("t10-reset").addEventListener("click", () => {
+      state = { title: "My Top 10", picks: [] }; save();
+      location.hash = "#/players/top10"; render();
+    });
+    document.getElementById("t10-save").addEventListener("click", () => downloadCard(state, colorOf));
+    document.getElementById("t10-share").addEventListener("click", () => shareCard(state, colorOf));
+
+    const search = document.getElementById("t10-search");
+    search.addEventListener("input", () => {
+      filter = search.value; const pos = search.selectionStart; render();
+      const s2 = document.getElementById("t10-search"); s2.focus(); s2.setSelectionRange(pos, pos);
+    });
+  }
+  render();
+}
+
+/* Build the shareable card as an SVG we fully control (no external libs,
+   CSP-safe), rasterise to PNG via canvas. */
+function top10SVG(state, colorOf) {
+  const W = 1080, H = 1350, picks = state.picks.filter(Boolean).slice(0, 10);
+  const rowH = 104, top = 250;
+  const rows = picks.map((p, i) => {
+    const y = top + i * rowH, c = colorOf(p.abbr);
+    return `
+      <g transform="translate(60 ${y})">
+        <rect x="0" y="0" width="960" height="88" rx="12" fill="#182129"/>
+        <rect x="0" y="0" width="8" height="88" rx="4" fill="${c}"/>
+        <text x="34" y="58" font-size="44" font-weight="800" fill="#BF4226" font-family="system-ui,sans-serif">${i + 1}</text>
+        <rect x="86" y="22" width="86" height="44" rx="8" fill="${c}"/>
+        <text x="129" y="52" font-size="20" font-weight="800" fill="#fff" text-anchor="middle" font-family="system-ui,sans-serif">${esc(p.abbr)}</text>
+        <text x="196" y="56" font-size="34" font-weight="700" fill="#E6EBE9" font-family="system-ui,sans-serif">${esc(p.name)}</text>
+        <text x="944" y="56" font-size="30" font-weight="800" fill="#93A1A8" text-anchor="end" font-family="system-ui,sans-serif">${p.rating}</text>
+      </g>`;
+  }).join("");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+    <rect width="${W}" height="${H}" fill="#10171C"/>
+    <rect width="${W}" height="150" fill="#131c24"/>
+    <rect y="150" width="${W}" height="5" fill="#BF4226"/>
+    <text x="60" y="80" font-size="46" font-weight="800" fill="#F2F4F3" font-family="system-ui,sans-serif">List<tspan fill="#BF4226">Trac</tspan></text>
+    <text x="60" y="120" font-size="24" font-weight="700" fill="#93A1A8" font-family="system-ui,sans-serif" letter-spacing="1">${esc((state.title || "My Top 10").toUpperCase())}</text>
+    ${rows}
+    <text x="60" y="${H - 40}" font-size="22" fill="#55636D" font-family="system-ui,sans-serif">list-trac.vercel.app · ratings: Champion Data / AFL</text>
+  </svg>`;
+}
+
+function svgToPng(svg) {
+  return new Promise((resolve, reject) => {
+    const blob = new Blob([svg], { type: "image/svg+xml;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      canvas.width = 1080; canvas.height = 1350;
+      canvas.getContext("2d").drawImage(img, 0, 0);
+      URL.revokeObjectURL(url);
+      canvas.toBlob(b => b ? resolve(b) : reject(new Error("render failed")), "image/png");
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error("render failed")); };
+    img.src = url;
+  });
+}
+
+async function downloadCard(state, colorOf) {
+  const msg = document.getElementById("t10-msg");
+  try {
+    const png = await svgToPng(top10SVG(state, colorOf));
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(png);
+    a.download = `listtrac-top10-${(state.title || "top10").replace(/[^a-z0-9]+/gi, "-").toLowerCase()}.png`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    if (msg) msg.textContent = "Card downloaded. The link below reopens this exact board.";
+  } catch { if (msg) msg.textContent = "Couldn't render the card in this browser."; }
+}
+
+async function shareCard(state, colorOf) {
+  const msg = document.getElementById("t10-msg");
+  const link = `${location.origin}/#/players/top10?t=${encodeTop10(state)}`;
+  try {
+    const png = await svgToPng(top10SVG(state, colorOf));
+    const file = new File([png], "listtrac-top10.png", { type: "image/png" });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({ title: state.title || "My AFL Top 10", text: "My AFL Top 10 — built on ListTrac", files: [file] });
+      return;
+    }
+    if (navigator.share) { await navigator.share({ title: state.title, text: "My AFL Top 10 — built on ListTrac", url: link }); return; }
+  } catch { /* fall through to clipboard */ }
+  try { await navigator.clipboard.writeText(link); if (msg) msg.textContent = "Share link copied to clipboard."; }
+  catch { if (msg) msg.textContent = link; }
+}
+
+async function rankingsView() {
+  view.innerHTML = `${playersChrome("rank")}
+    <div class="card" id="ratings-card"><h3>Player rankings</h3><p class="sub">Loading the official ratings…</p></div>`;
+  const loadRatings = year => api(`/api/ratings?limit=100${year ? "&year=" + year : ""}`).then(data => {
     const card = document.getElementById("ratings-card");
     if (!card) return;
     const yrs = data.years || [data.year];
@@ -789,6 +981,7 @@ async function playersView() {
         <label class="eyebrow" style="margin:0" for="ratingsyear">Season</label>
         <select id="ratingsyear">${yrs.slice().reverse().map(y =>
           `<option ${y === data.year ? "selected" : ""}>${y}</option>`).join("")}</select>
+        <a class="cta" href="#/players/top10" style="margin:0">Build your own Top 10 →</a>
       </div>
       <p class="sub" style="margin-top:10px">${esc(data.attribution)} — top ${data.ratings.length} of ${data.count} rated players, ${data.year}.</p>
       <div class="tablewrap"><table>
@@ -807,6 +1000,34 @@ async function playersView() {
     if (card) card.querySelector(".sub").textContent = "Ratings unavailable right now.";
   });
   loadRatings();
+}
+
+async function playersView() {
+  const clubList = await api("/clubs").catch(() => []);
+  view.innerHTML = `${playersChrome("dir")}
+    <div class="card">
+      <h3>Find a player</h3>
+      <input id="pfind" class="poolsearch" type="search" placeholder="Start typing a name…" autocomplete="off">
+      <div id="presults"></div>
+    </div>
+    <div class="card">
+      <h3>Quick lists</h3>
+      <p class="feature-ctas" style="margin-top:10px">
+        <a class="cta" href="#/players/rankings">Player rankings</a>
+        <a class="cta quiet" href="#/players/top10">Build a Top 10</a>
+        <a class="cta quiet" href="#/free-agents">Free agents 2026</a>
+        <a class="cta quiet" href="#/free-agents/out_of_contract">Out of contract</a>
+      </p>
+    </div>
+    <div class="card">
+      <h3>Browse by club</h3>
+      <div class="clubstrip" style="margin-top:10px">
+        ${clubList.filter(c => c.listed_players > 0).map(c => `
+          <a href="#/club/${esc(c.abbreviation)}">
+            <span class="badge" style="--club:${esc(c.primary_color || "#888")}">${esc(c.abbreviation)}</span>
+            ${esc(c.name)}</a>`).join("")}
+      </div>
+    </div>`;
 
   const box = document.getElementById("pfind"), out = document.getElementById("presults");
   let timer;
@@ -1189,6 +1410,8 @@ const routes = [
   [/^#?\/?$/,                       () => landingView()],
   [/^#\/clubs$/,                    () => clubsView()],
   [/^#\/players$/,                  () => playersView()],
+  [/^#\/players\/rankings$/,        () => rankingsView()],
+  [/^#\/players\/top10(?:\?.*)?$/,  () => top10View()],
   [/^#\/draft$/,                    () => draftOrderView(draftChrome("order"))],
   [/^#\/draft\/mock$/,              () => mockDraftView(draftChrome("mock"))],
   [/^#\/draft\/history\/(\d{4})(?:\/(\w+))?$/, m => draftView(m[1], m[2] || "national", draftChrome("history"))],
