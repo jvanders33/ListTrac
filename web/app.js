@@ -89,6 +89,53 @@ const draftedShort = p => p.draft_year
   : "—";
 const playerLink = p => `<a href="#/player/${p.id}">${esc(p.first_name)} ${esc(p.last_name)}</a>`;
 
+/* Guernsey icons — our own abstract colour/pattern tiles, generated from each
+   club's colours. No official logos or crests: just base colour + a
+   representative jumper pattern (stripes / sash / hoops / chevron / yoke), so
+   there's no trademark on a club design. Used wherever a club is listed. */
+const CLUB_GUERNSEY = {
+  ADE: { b: "#002B5C", t: "#FFD200", p: "yoke" },
+  BRI: { b: "#7A0033", t: "#FDBE57", p: "yoke" },
+  CAR: { b: "#0E1E2D", t: "#B6C1CC", p: "solid" },
+  COL: { b: "#101010", t: "#FFFFFF", p: "stripesV" },
+  ESS: { b: "#CC2031", t: "#101010", p: "sash" },
+  FRE: { b: "#2A1A54", t: "#FFFFFF", p: "chevron" },
+  GEE: { b: "#1C3C63", t: "#FFFFFF", p: "hoopsH" },
+  GCS: { b: "#D93E39", t: "#FFC42D", p: "yoke" },
+  GWS: { b: "#3E3E3E", t: "#F47920", p: "sash" },
+  HAW: { b: "#4D2004", t: "#FBBF15", p: "stripesV" },
+  MEL: { b: "#061A33", t: "#CC2031", p: "chevron" },
+  NM:  { b: "#013B9F", t: "#FFFFFF", p: "stripesV" },
+  PA:  { b: "#101010", t: "#00B4C6", p: "chevron" },
+  RIC: { b: "#1A1A1A", t: "#FFD200", p: "sash" },
+  STK: { b: "#ED1B2E", t: "#101010", p: "sash" },
+  SYD: { b: "#ED171F", t: "#FFFFFF", p: "sash" },
+  TAS: { b: "#0E3D2E", t: "#F0C244", p: "yoke" },
+  WB:  { b: "#014896", t: "#DC2830", p: "hoopsH" },
+  WCE: { b: "#003087", t: "#F2A900", p: "chevron" },
+};
+let _gsyId = 0;
+function guernsey(abbrev, size = 22) {
+  const c = CLUB_GUERNSEY[String(abbrev || "").toUpperCase()] || { b: "#556270", t: "#AAB4BE", p: "solid" };
+  const id = "gsy" + (++_gsyId), W = 24, H = 28;
+  let pat = "";
+  if (c.p === "stripesV") pat = [4.8, 14.4].map(x => `<rect x="${x}" width="4.8" height="${H}" fill="${c.t}"/>`).join("");
+  else if (c.p === "hoopsH") pat = [5.6, 16.8].map(y => `<rect y="${y}" width="${W}" height="5.6" fill="${c.t}"/>`).join("");
+  else if (c.p === "sash") pat = `<path d="M-3,${H} L${W},1" stroke="${c.t}" stroke-width="8"/>`;
+  else if (c.p === "chevron") pat = `<polyline points="2,7 12,19 22,7" fill="none" stroke="${c.t}" stroke-width="5"/>`;
+  else if (c.p === "yoke") pat = `<rect width="${W}" height="9" fill="${c.t}"/>`;
+  return `<svg class="gsy" width="${size}" height="${(size * H / W).toFixed(1)}" viewBox="0 0 ${W} ${H}" aria-hidden="true">`
+    + `<defs><clipPath id="${id}"><rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="4"/></clipPath></defs>`
+    + `<g clip-path="url(#${id})"><rect width="${W}" height="${H}" fill="${c.b}"/>${pat}</g>`
+    + `<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="4" fill="none" stroke="rgba(0,0,0,0.28)"/></svg>`;
+}
+// guernsey + club name, optionally linked
+const clubTag = (abbrev, name, link = true) => {
+  const g = guernsey(abbrev, 20);
+  const label = link && abbrev ? `<a href="#/club/${esc(abbrev)}">${esc(name)}</a>` : esc(name);
+  return `<span class="clubtag">${g}${label}</span>`;
+};
+
 /* Player-movement insiders on X. Set INSIDER_LIST_URL to an X List URL
    (e.g. https://twitter.com/i/lists/123...) to embed the whole list; the
    handle links below always render regardless of whether X allows the
@@ -350,56 +397,121 @@ const intelTip = (intel, n) => {
     + (s.rs_pct != null ? ` · Rising Star ${s.rs_pct}%` : "");
 };
 
+let draftBoardMode = "board";  // board | 1 | 2 | 3 | 4 | club
+
 async function draftOrderView(chrome = "") {
   const [order, intel] = await Promise.all([
     api("/api/draft-order"), api("/api/pick-intel").catch(() => null)]);
+  const rounds = order.rounds || [{ round: 1, picks: order.picks }];
+  const allPicks = rounds.flatMap(r => r.picks);
   const cell = (n, key, suffix = "") => {
     const s = intel && intel.picks[n];
     return s ? `${s[key] ?? "—"}${s[key] != null ? suffix : ""}` : "—";
   };
-  const rowHTML = p => `
+  const viaChip = p => p.via
+    ? ` <span class="chip warn" title="Natural slot belongs to ${esc(p.via)} — traded">via ${esc(p.via)}</span>` : "";
+
+  // Board = full list with outcome intel
+  const boardRow = p => `
     <tr><td class="num"><b>${p.pick}</b></td>
-      <td><i class="dot" style="background:${esc(p.primary_color || "#888")}"></i>
-        ${p.abbrev ? `<a href="#/club/${esc(p.abbrev)}">${esc(p.club)}</a>` : esc(p.club)}
-        ${p.via ? `<span class="chip warn" title="Natural slot belongs to ${esc(p.via)} — traded">via ${esc(p.via)}</span>` : ""}</td>
+      <td>${clubTag(p.abbrev, p.club)}${viaChip(p)}</td>
       <td class="num">${p.round === 1 ? `${p.wins}–${p.losses}` : ""}</td>
       <td class="num">${p.dvi || "—"}</td>
       <td class="num">${cell(p.pick, "avg_games")}</td>
       <td class="num">${cell(p.pick, "aa_pct", "%")}</td>
       <td class="num">${cell(p.pick, "prem_pct", "%")}</td>
       <td class="num">${cell(p.pick, "rs_pct", "%")}</td></tr>`;
+  const boardHTML = () => `
+    <div class="tablewrap"><table>
+      <thead><tr><th class="num">Pick</th><th>Owner</th><th class="num">W–L</th>
+        <th class="num">DVI pts</th><th class="num">Avg games</th>
+        <th class="num">AA %</th><th class="num">Prem %</th><th class="num">Rising Star %</th></tr></thead>
+      <tbody>${rounds.map(r => `
+        <tr><td colspan="8" class="rndhead">Round ${r.round}</td></tr>
+        ${r.picks.map(boardRow).join("")}`).join("")}
+      </tbody>
+    </table></div>
+    ${intel ? `
+    <div class="statlegend">
+      <p class="eyebrow">Reading this table</p>
+      <dl>
+        <div><dt>via</dt><dd>the pick changed hands — shown against the club that now owns it, named for the club whose ladder position sets the slot</dd></div>
+        <div><dt>DVI pts</dt><dd>the pick's value on the AFL's official Draft Value Index — the points currency used to match academy and father-son bids</dd></div>
+        <div><dt>Avg games</dt><dd>average career games played by every player ever taken at that pick</dd></div>
+        <div><dt>AA %</dt><dd>share of players taken at that pick who made an All-Australian team</dd></div>
+        <div><dt>Prem %</dt><dd>share who played in a premiership</dd></div>
+        <div><dt>Rising Star %</dt><dd>share who earned a Rising Star nomination in their early seasons</dd></div>
+      </dl>
+      <p class="thin" style="font-size:11.5px;margin:8px 0 0">Outcome stats cover the
+        ${intel.cohort.from}–${intel.cohort.to} drafts — more recent draftees are still mid-career
+        and would drag the numbers down.</p>
+    </div>` : ""}`;
+
+  // Single round — clean pick / club / via / DVI
+  const roundHTML = n => {
+    const r = rounds.find(x => x.round === n) || { picks: [] };
+    const total = r.picks.reduce((s, p) => s + (p.dvi || 0), 0);
+    return `<div class="tablewrap"><table>
+      <thead><tr><th class="num">Pick</th><th>Club</th><th>From</th><th class="num">DVI pts</th></tr></thead>
+      <tbody>${r.picks.map(p => `
+        <tr><td class="num"><b>${p.pick}</b></td>
+          <td>${clubTag(p.abbrev, p.club)}</td>
+          <td class="thin">${p.via ? "received from " + esc(p.via) : ""}</td>
+          <td class="num">${p.dvi || "—"}</td></tr>`).join("")}
+        <tr class="totrow"><td></td><td colspan="2">Round ${n} — ${r.picks.length} picks</td>
+          <td class="num"><b>${total.toLocaleString()}</b></td></tr>
+      </tbody>
+    </table></div>`;
+  };
+
+  // By club — draft capital summary
+  const clubHTML = () => {
+    const byClub = {};
+    for (const p of allPicks) {
+      const k = p.abbrev || p.club;
+      (byClub[k] = byClub[k] || { abbrev: p.abbrev, club: p.club, picks: [], pts: 0 });
+      byClub[k].picks.push(p.pick); byClub[k].pts += p.dvi || 0;
+    }
+    const clubs = Object.values(byClub).sort((a, b) => b.pts - a.pts);
+    const maxPts = Math.max(...clubs.map(c => c.pts), 1);
+    return `<p class="sub">Every 2026 pick a club currently holds across all four rounds, and its total Draft Value Index capital. Sorted by draft capital.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Club</th><th>Picks</th><th class="num">Total DVI</th></tr></thead>
+        <tbody>${clubs.map((c, i) => `
+          <tr><td>${clubTag(c.abbrev, c.club)}</td>
+            <td class="thin">${c.picks.sort((a, b) => a - b).join(", ")}</td>
+            <td class="num"><span class="dvibar" style="--w:${(c.pts / maxPts * 100).toFixed(1)}%"><b>${c.pts.toLocaleString()}</b></span></td></tr>`).join("")}
+        </tbody>
+      </table></div>`;
+  };
+
+  const renderBody = () =>
+    draftBoardMode === "board" ? boardHTML()
+      : draftBoardMode === "club" ? clubHTML()
+        : roundHTML(+draftBoardMode);
+
+  const TABS = [["board", "Board"], ["1", "R1"], ["2", "R2"], ["3", "R3"], ["4", "R4"], ["club", "By club"]];
   view.innerHTML = `${chrome}
     <div class="card">
-      <h3>Projected 2026 national draft order — all rounds</h3>
+      <h3>Projected 2026 national draft order</h3>
       <p class="sub">Live reverse ladder, ${order.as_of_round} games in, with all
-        ${order.traded_slots} already-traded 2026 picks applied ("via" = the club whose natural
-        slot it is). Outcome stats show what history says each slot is worth.</p>
-      <div class="tablewrap"><table>
-        <thead><tr><th class="num">Pick</th><th>Owner</th><th class="num">W–L</th>
-          <th class="num">DVI pts</th><th class="num">Avg games</th>
-          <th class="num">AA %</th><th class="num">Prem %</th><th class="num">Rising Star %</th></tr></thead>
-        <tbody>${(order.rounds || [{ round: 1, picks: order.picks }]).map(r => `
-          <tr><td colspan="8" style="background:var(--card-2);font-weight:800;font-size:11px;
-            letter-spacing:0.1em;text-transform:uppercase;padding:6px 12px">Round ${r.round}</td></tr>
-          ${r.picks.map(rowHTML).join("")}`).join("")}
-        </tbody>
-      </table></div>
-      ${intel ? `
-      <div class="statlegend">
-        <p class="eyebrow">Reading this table</p>
-        <dl>
-          <div><dt>via</dt><dd>the pick changed hands — shown against the club that now owns it, named for the club whose ladder position sets the slot</dd></div>
-          <div><dt>DVI pts</dt><dd>the pick's value on the AFL's official Draft Value Index — the points currency used to match academy and father-son bids</dd></div>
-          <div><dt>Avg games</dt><dd>average career games played by every player ever taken at that pick</dd></div>
-          <div><dt>AA %</dt><dd>share of players taken at that pick who made an All-Australian team</dd></div>
-          <div><dt>Prem %</dt><dd>share who played in a premiership</dd></div>
-          <div><dt>Rising Star %</dt><dd>share who earned a Rising Star nomination in their early seasons</dd></div>
-        </dl>
-        <p class="thin" style="font-size:11.5px;margin:8px 0 0">Outcome stats cover the
-          ${intel.cohort.from}–${intel.cohort.to} drafts — more recent draftees are still mid-career
-          and would drag the numbers down.</p>
-      </div>` : ""}
+        ${order.traded_slots} already-traded 2026 picks applied ("via" / "from" = the club whose natural slot it is).</p>
+      <div class="draftviews" role="tablist">
+        ${TABS.map(([m, l]) => `<button data-m="${m}" role="tab">${l}</button>`).join("")}
+      </div>
+      <div id="draftbody">${renderBody()}</div>
     </div>`;
+  const body = view.querySelector("#draftbody");
+  const buttons = [...view.querySelectorAll(".draftviews button")];
+  const syncTabs = () => buttons.forEach(b => {
+    const on = b.dataset.m === draftBoardMode;
+    b.classList.toggle("on", on); b.setAttribute("aria-selected", on);
+  });
+  buttons.forEach(b => b.addEventListener("click", () => {
+    if (draftBoardMode === b.dataset.m) return;
+    draftBoardMode = b.dataset.m; syncTabs(); body.innerHTML = renderBody();
+  }));
+  syncTabs();
 }
 
 /* ---------- interactive mock draft ---------- */
@@ -1403,7 +1515,7 @@ async function clubsView() {
     <div class="clubgrid">
       ${clubs.map(cl => `
         <a class="clubcard" href="#/club/${esc(cl.abbreviation)}" style="--club:${esc(cl.primary_color || "#888")}">
-          <b>${esc(cl.name)}</b>
+          <div class="cchead">${guernsey(cl.abbreviation, 26)}<b>${esc(cl.name)}</b></div>
           <span>${cl.listed_players ? cl.listed_players + " listed · 2026" : "list forms for 2028 entry"}</span>
         </a>`).join("")}
     </div>`;
