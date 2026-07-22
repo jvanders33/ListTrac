@@ -802,7 +802,7 @@ async function prospectProfileView(name) {
           ${p.position ? `<div><dt>Position</dt><dd>${esc(p.position)}</dd></div>` : ""}
           <div><dt>State / academy</dt><dd>${esc(p.state_team || "")}</dd></div>
           <div><dt>Draft class</dt><dd>${p.draft_year}</dd></div>
-          ${p.headline ? `<div><dt>Latest form</dt><dd>${p.headline.avg_disposals ?? "—"} disp · ${esc(p.headline.league)}</dd></div>` : ""}
+          ${p.headline ? `<div><dt>Latest form</dt><dd>${p.headline.avg_disposals ?? "—"} disp · ${esc(p.headline.season)} ${esc(p.headline.league)}</dd></div>` : ""}
         </dl>
       </div>
     </div>
