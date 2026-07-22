@@ -1977,6 +1977,32 @@ function tradeValueCard(tv) {
     <p class="sub" style="margin:8px 0 0">ListTrac's index of a player's worth as a trade asset — current form adjusted for age and contract control. <a href="#/players/trade-values">See the full board →</a></p>
   </div>`;
 }
+function formCard(form, sc) {
+  const games = form.games || [];
+  if (!games.length) return "";
+  const maxD = Math.max(...games.map(g => g.disp), 1);
+  const RESCLS = { W: "ok", L: "warn", D: "plain" };
+  const seasonDisp = sc && sc.stats && sc.stats.disposals ? sc.stats.disposals.avg : null;
+  const trend = seasonDisp != null && form.l5_disp != null ? form.l5_disp - seasonDisp : null;
+  const arrow = trend == null ? "" : trend >= 1 ? `<span class="fm-up">▲ ${Math.abs(trend).toFixed(1)}</span>`
+    : trend <= -1 ? `<span class="fm-down">▼ ${Math.abs(trend).toFixed(1)}</span>` : `<span class="thin">≈ steady</span>`;
+  return `<div class="card form">
+    <h3>Recent form <span class="thin" style="font-weight:400">· last ${games.length} games</span></h3>
+    <div class="form-headline">
+      <div class="fm-stat"><b>${form.l5_disp ?? "—"}</b><small>disposals${seasonDisp != null ? " · season " + seasonDisp : ""}</small></div>
+      <div class="fm-stat"><b>${form.l5_af ?? "—"}</b><small>AFL Fantasy / gm</small></div>
+      ${form.l5_goals ? `<div class="fm-stat"><b>${form.l5_goals}</b><small>goals / gm</small></div>` : ""}
+      ${arrow ? `<div class="fm-trend">${arrow}<small>disp vs season</small></div>` : ""}
+    </div>
+    <div class="form-bars">
+      ${games.map(g => `<div class="fm-bar" title="R${g.rnd} v ${esc(g.opp || "")}: ${g.disp} disposals${g.af ? `, ${g.af} AF` : ""}${g.goals ? `, ${g.goals}g` : ""} (${g.result || "?"})">
+        <span class="fm-fill ${RESCLS[g.result] || "plain"}" style="height:${Math.round(g.disp / maxD * 100)}%"></span>
+        <span class="fm-val">${g.disp}</span>
+        <span class="fm-rnd thin">${g.opp ? esc(g.opp) : "R" + g.rnd}</span></div>`).join("")}
+    </div>
+    <p class="thin" style="font-size:11px;margin-top:4px">Bars = disposals per game, newest at right, coloured by result (green win · amber loss). "Last 5" averages above.</p>
+  </div>`;
+}
 
 async function playerView(id) {
   const p = await api(`/players/${id}`);
@@ -2072,6 +2098,7 @@ async function playerView(id) {
           </table></div>
         </div>
         ${p.trade_value ? tradeValueCard(p.trade_value) : ""}
+        ${p.form ? formCard(p.form, p.scouting) : ""}
         ${p.scouting ? scoutingCard(p.scouting, id) : ""}
         ${p.rating_history && p.rating_history.length ? `
         <div class="card">

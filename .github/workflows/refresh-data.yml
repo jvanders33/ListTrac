@@ -51,6 +51,11 @@ jobs:
         run: python scraper/scouting.py
         continue-on-error: true
 
+      - name: Build recent form (AFL per-round stats)
+        # last ~8 rounds game-by-game for the form card
+        run: python scraper/form.py
+        continue-on-error: true
+
       - name: Enrich prospect stats from the AFL (Champion Data)
         # official Coates Talent League / U18 champs / VFL / SANFL stats —
         # current-season + senior games RMC misses. Runs AFTER RMC to merge on.

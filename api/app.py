@@ -239,6 +239,7 @@ def player(player_id: int):
     sc = scout.get("_players", {}).get(key)
     profile["scouting"] = {**sc, **scout.get("_meta", {})} if sc else None
     profile["trade_value"] = _trade_value_board().get("by_id", {}).get(player_id)
+    profile["form"] = _form_index().get("_players", {}).get(key)
     # rating history — find the player's Champion Data timeline by matching the
     # current-season record's cd_id, else by name across the history file
     profile["rating_history"] = []
@@ -686,6 +687,18 @@ def _scouting_index() -> dict:
         _scouting_cache["_players"] = data.get("players", {})
         _scouting_cache["_meta"] = {k: data[k] for k in ("order", "labels", "min_games", "attribution") if k in data}
     return _scouting_cache
+
+
+FORM_PATH = Path(__file__).resolve().parent.parent / "data" / "form_2026.json"
+_form_cache: dict = {}
+
+
+def _form_index() -> dict:
+    """Recent per-round form keyed by normalised name."""
+    import json
+    if not _form_cache and FORM_PATH.exists():
+        _form_cache["_players"] = json.loads(FORM_PATH.read_text(encoding="utf-8")).get("players", {})
+    return _form_cache
 
 
 import datetime

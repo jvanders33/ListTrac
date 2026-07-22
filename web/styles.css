@@ -488,6 +488,23 @@ footer.pagefoot {
 .wi-body .thin { font-size: 12px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .wi-when { white-space: nowrap; font-size: 11px; }
 
+/* recent form card */
+.form-headline { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 10px 0 14px; }
+.fm-stat { display: flex; flex-direction: column; }
+.fm-stat b { font-size: 22px; line-height: 1; font-variant-numeric: tabular-nums; }
+.fm-stat small { font-size: 10.5px; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.03em; margin-top: 3px; }
+.fm-trend { display: flex; flex-direction: column; margin-left: auto; text-align: right; }
+.fm-trend small { font-size: 10.5px; color: var(--ink-2); margin-top: 3px; }
+.fm-up { color: var(--ok); font-weight: 800; font-size: 15px; }
+.fm-down { color: var(--rfa); font-weight: 800; font-size: 15px; }
+.form-bars { display: flex; align-items: flex-end; gap: 6px; height: 96px; }
+.fm-bar { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; gap: 2px; min-width: 0; }
+.fm-fill { width: 78%; max-width: 26px; border-radius: 3px 3px 0 0; background: var(--ink-2); min-height: 3px; }
+.fm-fill.ok { background: var(--ok); }
+.fm-fill.warn { background: var(--warn); }
+.fm-val { font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.fm-rnd { font-size: 10px; white-space: nowrap; }
+
 /* trade value card */
 .tv-headline { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
 .tv-num { font-size: 46px; font-weight: 800; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
