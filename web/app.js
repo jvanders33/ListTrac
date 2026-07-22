@@ -2202,10 +2202,15 @@ async function tradesView(year, chrome = "") {
   document.getElementById("tyear").addEventListener("change", e => location.hash = `#/trades/history/${e.target.value}`);
 }
 
+const POS_SHORT = { MIDFIELDER: "Mid", MIDFIELDER_FORWARD: "Mid-fwd", KEY_FORWARD: "Key fwd",
+  MEDIUM_FORWARD: "Sml fwd", KEY_DEFENDER: "Key def", MEDIUM_DEFENDER: "Sml def", RUCK: "Ruck" };
+
 async function faView(filter = "all") {
   const statuses = filter === "all" ? ["restricted_fa", "unrestricted_fa"] : [filter];
   const lists = await Promise.all(statuses.map(s => api(`/contract-status?status=${s}`)));
-  const players = lists.flat();
+  const players = lists.flat().sort((a, b) =>
+    (b.rating || 0) - (a.rating || 0) || String(a.last_name).localeCompare(b.last_name));
+  const rated = players.filter(p => p.rating).length;
   const buttons = [["all", "All free agents"], ["restricted_fa", "Restricted"], ["unrestricted_fa", "Unrestricted"], ["out_of_contract", "Out of contract"]];
   view.innerHTML = `
     <div class="controls">
@@ -2214,12 +2219,16 @@ async function faView(filter = "all") {
     </div>
     <div class="card">
       <h3>${esc(buttons.find(b => b[0] === filter)[1])} — end of 2026</h3>
-      <p class="sub">${players.length} players.</p>
+      <p class="sub">${players.length} players, ranked by AFL Player Rating — the best talent available on the open market. Players with no 2026 rating sit at the bottom.</p>
       <div class="tablewrap"><table>
-        <thead><tr><th>Player</th><th>Club</th><th class="num">Age</th><th>Status</th></tr></thead>
-        <tbody>${players.map(x => `
-          <tr><td>${playerLink(x)}</td><td class="thin">${esc(x.club)}</td>
-            <td class="num">${age(x.dob)}</td><td>${chip(x.contract_status)}</td></tr>`).join("")}
+        <thead><tr><th class="num">#</th><th>Player</th><th>Club</th><th>Pos</th><th class="num">Age</th><th class="num">Rating</th><th>Status</th></tr></thead>
+        <tbody>${players.map((x, i) => `
+          <tr><td class="num thin">${x.rating ? i + 1 : ""}</td>
+            <td>${playerLink(x)}</td><td class="thin">${esc(x.club)}</td>
+            <td class="thin">${esc(POS_SHORT[x.position] || "")}</td>
+            <td class="num">${age(x.dob)}</td>
+            <td class="num">${x.rating ? `<b>${x.rating}</b>${x.rating_rank ? ` <span class="thin">#${x.rating_rank}</span>` : ""}` : "—"}</td>
+            <td>${chip(x.contract_status)}</td></tr>`).join("")}
         </tbody>
       </table></div>
     </div>`;

@@ -967,15 +967,21 @@ def contract_status(status: str | None = None, club: str | None = None):
         params.append(club)
     result = rows(query + " ORDER BY c.name, p.last_name", tuple(params))
     ov = _contract_overrides()
+    rb = _ratings_by_name()
     out = []
     for r in result:
-        o = ov.get((_norm(f"{r['first_name']} {r['last_name']}"), (r.get("club_abbrev") or "").upper()))
+        nm = _norm(f"{r['first_name']} {r['last_name']}")
+        o = ov.get((nm, (r.get("club_abbrev") or "").upper()))
         if o and (r.get("contract_status") != "contracted"
                   or (r.get("contracted_through_year") or 0) < o["end_year"]):
             r["contract_status"] = "contracted"
             r["contracted_through_year"] = o["end_year"]
         if status and r["contract_status"] != status:
             continue  # re-signed out of the requested bucket
+        rr = rb.get(nm)
+        r["rating"] = rr.get("rating") if rr else None
+        r["rating_rank"] = rr.get("rank") if rr else None
+        r["position"] = rr.get("position") if rr else None
         out.append(r)
     return out
 
