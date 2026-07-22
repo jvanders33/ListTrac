@@ -336,8 +336,14 @@ async function draftOrderView(chrome = "") {
 /* ---------- interactive mock draft ---------- */
 
 const MOCK_KEY = "mock_draft_2026";
-const loadMock = () => { try { return (JSON.parse(localStorage.getItem(MOCK_KEY)) || []).filter(Boolean); } catch { return []; } };
+const loadMock = () => {
+  // a shared board in the URL (?d=) beats whatever's saved locally
+  const m = location.hash.match(/[?&]d=([^&]+)/);
+  if (m) { try { return JSON.parse(decodeURIComponent(escape(atob(m[1].replace(/-/g, "+").replace(/_/g, "/"))))).filter(Boolean); } catch { /* fall through */ } }
+  try { return (JSON.parse(localStorage.getItem(MOCK_KEY)) || []).filter(Boolean); } catch { return []; }
+};
 const saveMock = events => localStorage.setItem(MOCK_KEY, JSON.stringify(events));
+const encodeMock = events => btoa(unescape(encodeURIComponent(JSON.stringify(events)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 
 /* Official AFL Draft Value Index (54 picks, current revision — sourced from
    draftguru.com.au's pick value calculator; matches AFL-published values). */
@@ -447,6 +453,74 @@ function simulateDraft(events, orderPicks, byName, rounds) {
   return { rows, ledger, drafted, currentRow };
 }
 
+/* how many picks are actually made — controls whether share/download is live */
+const shownAny = sim => sim.rows.some(r => !r.absorbed && r.assigned);
+
+/* Shareable mock-draft graphic: the first-round board, club-coloured, matched
+   bids marked. Two columns so a full round fits one social card. */
+function mockSVG(sim) {
+  const picks = [];
+  let n = 0;
+  for (const r of sim.rows) {
+    if (r.absorbed) continue;
+    n++;
+    if (!r.assigned && n > 30) break;
+    picks.push({ n, club: r.club, p: r.assigned, matched: r.kind === "matched" });
+  }
+  const shown = picks.filter(p => p.p).length ? picks.filter((p, i) => p.p || i < 24) : picks.slice(0, 24);
+  const W = 1080, H = 1350, cols = 2, per = Math.ceil(shown.length / cols);
+  const colW = 480, rowH = 40, top = 210, gap = 60;
+  const rows = shown.map((pk, i) => {
+    const col = Math.floor(i / per), row = i % per;
+    const x = 40 + col * (colW + gap), y = top + row * rowH;
+    const c = pk.club.primary_color || "#555";
+    const name = pk.p ? pk.p.name : "—";
+    return `<g transform="translate(${x} ${y})">
+      <rect x="0" y="0" width="${colW}" height="34" rx="6" fill="#182129"/>
+      <rect x="0" y="0" width="6" height="34" rx="3" fill="${c}"/>
+      <text x="20" y="24" font-size="19" font-weight="800" fill="#BF4226" font-family="system-ui,sans-serif">${pk.n}</text>
+      <text x="58" y="24" font-size="16" font-weight="800" fill="#93A1A8" font-family="system-ui,sans-serif">${esc(pk.club.abbrev || "")}</text>
+      <text x="128" y="24" font-size="18" font-weight="600" fill="#E6EBE9" font-family="system-ui,sans-serif">${esc(name.length > 24 ? name.slice(0, 23) + "…" : name)}</text>
+      ${pk.matched ? `<circle cx="${colW - 16}" cy="17" r="5" fill="#E07A8B"/>` : ""}
+    </g>`;
+  }).join("");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+    <rect width="${W}" height="${H}" fill="#10171C"/>
+    <rect width="${W}" height="130" fill="#131c24"/><rect y="130" width="${W}" height="5" fill="#BF4226"/>
+    <text x="40" y="66" font-size="42" font-weight="800" fill="#F2F4F3" font-family="system-ui,sans-serif">List<tspan fill="#BF4226">Trac</tspan></text>
+    <text x="40" y="104" font-size="22" font-weight="700" fill="#93A1A8" font-family="system-ui,sans-serif" letter-spacing="1">MY 2026 MOCK DRAFT · FIRST ROUND</text>
+    ${rows}
+    <text x="40" y="${H - 34}" font-size="20" fill="#55636D" font-family="system-ui,sans-serif">list-trac.vercel.app · ● = matched academy/father-son bid</text>
+  </svg>`;
+}
+
+async function downloadMock(sim) {
+  const msg = document.getElementById("md-msg");
+  try {
+    const png = await svgToPng(mockSVG(sim));
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(png); a.download = "listtrac-mock-draft-2026.png"; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    if (msg) msg.textContent = "Board downloaded.";
+  } catch { if (msg) msg.textContent = "Couldn't render the board here."; }
+}
+
+async function shareMock(sim, events) {
+  const msg = document.getElementById("md-msg");
+  const link = `${location.origin}/#/draft/mock?d=${encodeMock(events)}`;
+  try {
+    const png = await svgToPng(mockSVG(sim));
+    const file = new File([png], "listtrac-mock-draft.png", { type: "image/png" });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({ title: "My 2026 AFL mock draft", text: "My 2026 AFL mock draft — built on ListTrac", files: [file] });
+      return;
+    }
+    if (navigator.share) { await navigator.share({ title: "My 2026 AFL mock draft", url: link }); return; }
+  } catch { /* clipboard fallback */ }
+  try { await navigator.clipboard.writeText(link); if (msg) msg.textContent = "Share link copied — it rebuilds your exact board."; }
+  catch { if (msg) msg.textContent = link; }
+}
+
 async function mockDraftView(chrome = "") {
   const [order, pool, intel] = await Promise.all([
     api("/api/draft-order"), api("/api/prospects"), api("/api/pick-intel").catch(() => null)]);
@@ -470,8 +544,9 @@ async function mockDraftView(chrome = "") {
         <button class="filterbtn" id="simbtn" ${done ? "disabled" : ""}>Sim to end</button>
         <button class="filterbtn" id="undo" ${events.length ? "" : "disabled"}>Undo</button>
         <button class="filterbtn" id="reset">Reset</button>
-        <button class="filterbtn" id="copy">Copy board</button>
-        <span class="thin" style="font-size:12px">Saves automatically in this browser.</span>
+        <button class="cta quiet" id="md-download" ${shownAny(sim) ? "" : "disabled"}>Download board</button>
+        <button class="cta quiet" id="md-share" ${shownAny(sim) ? "" : "disabled"}>Share</button>
+        <span class="thin" style="font-size:12px" id="md-msg">Saves automatically in this browser.</span>
       </div>
       <div class="mockcols">
         <div>
@@ -554,13 +629,8 @@ async function mockDraftView(chrome = "") {
     });
     view.querySelector("#undo").addEventListener("click", () => { events.pop(); saveMock(events); render(); });
     view.querySelector("#reset").addEventListener("click", () => { events = []; saveMock(events); render(); });
-    view.querySelector("#copy").addEventListener("click", async () => {
-      const s = simulateDraft(events, order.picks, byName, order.rounds);
-      let n = 0;
-      const lines = s.rows.filter(r => !r.absorbed).map(r =>
-        `${++n}. ${r.club.club}: ${r.assigned ? r.assigned.name : "—"}${r.kind === "matched" ? " (matched bid)" : ""}`);
-      try { await navigator.clipboard.writeText(`ListTrac 2026 mock draft\n${lines.join("\n")}`); } catch {}
-    });
+    view.querySelector("#md-download").addEventListener("click", () => downloadMock(sim));
+    view.querySelector("#md-share").addEventListener("click", () => shareMock(sim, events));
     const search = view.querySelector("#poolsearch");
     search.addEventListener("input", () => {
       filter = search.value;
@@ -1413,7 +1483,7 @@ const routes = [
   [/^#\/players\/rankings$/,        () => rankingsView()],
   [/^#\/players\/top10(?:\?.*)?$/,  () => top10View()],
   [/^#\/draft$/,                    () => draftOrderView(draftChrome("order"))],
-  [/^#\/draft\/mock$/,              () => mockDraftView(draftChrome("mock"))],
+  [/^#\/draft\/mock(?:\?.*)?$/,     () => mockDraftView(draftChrome("mock"))],
   [/^#\/draft\/history\/(\d{4})(?:\/(\w+))?$/, m => draftView(m[1], m[2] || "national", draftChrome("history"))],
   [/^#\/trades$/,                   () => tradeMachineView(tradesChrome("machine"))],
   [/^#\/trades\/history\/(\d{4})$/, m => tradesView(m[1], tradesChrome("history"))],
