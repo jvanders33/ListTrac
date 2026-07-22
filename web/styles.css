@@ -358,6 +358,28 @@ footer.pagefoot {
   text-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
 
+/* trending player cards (landing) */
+.trendcards {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 8px; margin-top: 12px;
+}
+.trendcard {
+  display: flex; align-items: center; gap: 10px; padding: 10px 12px;
+  border: 1px solid var(--line); border-radius: 7px; background: var(--card);
+  color: var(--ink); text-decoration: none;
+}
+.trendcard:hover { background: var(--card-2); text-decoration: none; }
+.tc-rank {
+  flex: none; width: 22px; text-align: center; font-size: 18px; font-weight: 800;
+  color: var(--accent); font-variant-numeric: tabular-nums;
+}
+.tc-body { display: flex; flex-direction: column; min-width: 0; }
+.tc-body b { font-size: 14px; }
+.tc-why {
+  font-size: 11.5px; color: var(--ink-2); white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis;
+}
+
 /* numbered trending list, Spotrac-style */
 .trendrow {
   display: flex; align-items: center; gap: 10px;

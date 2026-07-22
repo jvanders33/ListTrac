@@ -192,11 +192,10 @@ NEWS_FEED = ("https://news.google.com/rss/search"
              "&hl=en-AU&gl=AU&ceid=AU:en")
 
 
-@app.get("/api/news")
-def news():
-    """Movement news aggregated from Google News RSS. Headline + source +
-    link out only — paywalled outlets get linked like everyone else, never
-    reproduced. Cached 15 minutes per serverless instance."""
+def _news_items() -> list[dict]:
+    """Up to 40 movement-news items from Google News RSS, newest first.
+    Cached 15 minutes per serverless instance; shared by /api/news and the
+    trending signal."""
     def build():
         try:
             resp = requests.get(NEWS_FEED, headers={"User-Agent": "ListTrac (github.com/jvanders33/ListTrac)"},
@@ -207,7 +206,6 @@ def news():
                 title = it.findtext("title") or ""
                 source = it.find("source")
                 source_name = source.text if source is not None else ""
-                # Google News suffixes titles with " - Source" — strip the echo
                 title = re.sub(r"\s+-\s+" + re.escape(source_name) + r"\s*$", "", title) if source_name else title
                 published = None
                 if it.findtext("pubDate"):
@@ -218,10 +216,71 @@ def news():
                 items.append({"title": title, "source": source_name,
                               "url": it.findtext("link") or "", "published": published})
             items.sort(key=lambda x: x["published"] or "", reverse=True)
-            return items[:20]
+            return items
         except requests.RequestException:
-            return []  # feed down -> landing page degrades gracefully
+            return []  # feed down -> pages degrade gracefully
     return cached("news", 900, build)
+
+
+@app.get("/api/news")
+def news():
+    """Movement news, headline + source + link out only. Paywalled outlets get
+    linked like everyone else, never reproduced."""
+    return _news_items()[:20]
+
+
+@app.get("/api/trending-players")
+def trending_players(limit: int = 10):
+    """Players actually in the movement conversation — ranked by how many of
+    the current news headlines mention them, newest headline attached. Padded
+    with movement-signal players (RFA class, latest trades) if the feed is thin.
+    (Click-through weighting is a future layer once a writable store exists.)"""
+    items = _news_items()
+    with db() as conn:
+        players = [dict(r) for r in conn.execute(
+            """SELECT p.id, p.first_name, p.last_name, c.name club, c.abbreviation abbrev
+               FROM player p JOIN club c ON c.id = p.current_club_id
+               WHERE p.current_club_id IS NOT NULL""")]
+    # A full "First Last" match is unambiguous. A surname alone is only trusted
+    # when it's distinctive: unique among listed players, 4+ chars, not a common
+    # English word, appearing capitalised, and NOT followed by another capitalised
+    # word (which would mean it's actually a first name, e.g. "Heath Mellody" or
+    # the "Marsh"/"Coleman Medal" sponsor/award names).
+    from collections import Counter
+    surname_counts = Counter(p["last_name"].lower() for p in players)
+    SURNAME_STOP = {"day", "king", "marsh", "heath", "green", "brown", "gray", "grey",
+                    "little", "power", "love", "best", "sun", "gun", "english", "rush", "moore"}
+
+    tally: dict[int, dict] = {}
+    for item in items:
+        title, title_l = item["title"], item["title"].lower()
+        for p in players:
+            full = f"{p['first_name']} {p['last_name']}".lower()
+            surname = p["last_name"]
+            hit = full in title_l or (
+                surname_counts[surname.lower()] == 1 and len(surname) >= 4
+                and surname.lower() not in SURNAME_STOP
+                and re.search(rf"\b{re.escape(surname)}\b(?!\s+[A-Z])", title))
+            if not hit:
+                continue
+            t = tally.setdefault(p["id"], {**p, "mentions": 0, "headline": None,
+                                           "source": None, "url": None, "published": None})
+            t["mentions"] += 1
+            if t["published"] is None or (item["published"] or "") > (t["published"] or ""):
+                t.update(headline=item["title"], source=item["source"],
+                         url=item["url"], published=item["published"])
+
+    ranked = sorted(tally.values(), key=lambda x: (x["mentions"], x["published"] or ""), reverse=True)
+
+    if len(ranked) < limit:
+        # pad with movement-signal players not already trending on news
+        have = {t["id"] for t in ranked}
+        for extra in trending():
+            if extra["id"] not in have and len(ranked) < limit:
+                ranked.append({**extra, "mentions": 0, "headline": None,
+                               "reason": extra.get("reason"), "url": None, "source": None})
+                have.add(extra["id"])
+    return ranked[:limit]
 
 
 SQUIGGLE = "https://api.squiggle.com.au/"

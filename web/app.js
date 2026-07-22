@@ -89,16 +89,18 @@ const timeAgo = iso => {
 };
 
 async function landingView() {
-  const [summary, order, newsItems, trend, clubList, adminUpdates] = await Promise.all([
+  const [summary, order, newsItems, trend, clubList, adminUpdates, trendingPlayers] = await Promise.all([
     api("/api/summary"),
     api("/api/draft-order").catch(() => null),
     api("/api/news").catch(() => []),
     api("/api/trending").catch(() => []),
     api("/clubs").catch(() => []),
     api("/api/updates").catch(() => []),
+    api("/api/trending-players").catch(() => []),
   ]);
   const s = summary.contract_statuses;
   const rfas = trend.filter(t => t.kind === "rfa");
+  const clubColor = ab => (clubList.find(c => c.abbreviation === ab) || {}).primary_color || "#555";
 
   // Top stories: first-party updates and aggregated headlines compete on
   // recency alone — news moves fast. The freshest three rotate in the hero.
@@ -142,6 +144,26 @@ async function landingView() {
           ${leads.length > 1 ? `<div class="hero-dots">
             ${leads.map((_, i) => `<button data-i="${i}" class="${i === 0 ? "on" : ""}" aria-label="Story ${i + 1}"></button>`).join("")}
           </div>` : ""}
+        </div>` : ""}
+
+        ${trendingPlayers.length ? `
+        <div class="card">
+          <h3>Trending players</h3>
+          <p class="sub">Who the league is talking about right now — ranked by how often they're
+            appearing in movement coverage.</p>
+          <div class="trendcards">
+            ${trendingPlayers.map((t, i) => `
+              <a class="trendcard" href="${t.id ? `#/player/${t.id}` : "#/players"}">
+                <span class="tc-rank">${i + 1}</span>
+                <span class="badge" style="--club:${esc(clubColor(t.abbrev))}">${esc(t.abbrev || "")}</span>
+                <span class="tc-body">
+                  <b>${esc(t.first_name)} ${esc(t.last_name)}</b>
+                  <span class="tc-why">${t.mentions
+                    ? esc(t.headline || `${t.mentions} recent mentions`)
+                    : esc(t.reason || t.club || "")}</span>
+                </span>
+              </a>`).join("")}
+          </div>
         </div>` : ""}
 
         <div class="card">
@@ -221,17 +243,6 @@ async function landingView() {
               <a href="https://twitter.com/${esc(h)}" target="_blank" rel="noopener">@${esc(h)}
                 <span class="thin">· ${esc(label)}</span></a>`).join("")}
           </div>
-        </div>
-        <div class="card">
-          <p class="eyebrow">Trending players</p>
-          <p class="sub">From the data — FA class, newest picks, latest trades.</p>
-          ${trend.map((t, i) => `
-            <div class="trendrow">
-              <span class="tn">${i + 1}</span>
-              <span class="badge" style="--club:${esc((clubList.find(c => c.abbreviation === t.abbrev) || {}).primary_color || "#888")};width:22px;height:22px;font-size:8.5px">${esc(t.abbrev)}</span>
-              <a href="#/player/${t.id}">${esc(t.first_name)} ${esc(t.last_name)}</a>
-              <span class="treason">${esc(t.reason)}</span>
-            </div>`).join("")}
         </div>
       </aside>
     </div>`;
