@@ -162,7 +162,7 @@ def club_list(abbrev: str):
         raise HTTPException(404, f"no listed players for club '{abbrev}'")
     ov = _contract_overrides()
     for r in result:
-        o = ov.get(_norm(f"{r['first_name']} {r['last_name']}"))
+        o = ov.get((_norm(f"{r['first_name']} {r['last_name']}"), (r.get("club_abbrev") or "").upper()))
         if o and (r.get("contract_status") != "contracted"
                   or (r.get("contracted_through_year") or 0) < o["end_year"]):
             r["contract_status"] = "contracted"
@@ -205,11 +205,17 @@ def player(player_id: int):
            FROM draft_pick dp JOIN club c ON c.id = dp.original_club_id
            WHERE dp.player_selected_id = ?""", (player_id,))), None)
     key = _norm(f"{profile['first_name']} {profile['last_name']}")
+    club_ab = (profile.get("club_abbrev") or "").upper()
     contracts = _contracts_by_name()
-    profile["contract_events"] = contracts.get("_by_name", {}).get(key, [])
-    profile["contract_source"] = contracts.get("_meta") if profile["contract_events"] else None
-    # a manual `current` re-signing supersedes a stale free-agent/OOC status
-    o = _contract_overrides().get(key)
+    events = contracts.get("_by_name", {}).get(key, [])
+    # drop a same-name player's confirmed signing (club-tagged current events
+    # must match this player's club); untagged historical events stay
+    events = [e for e in events if not (e.get("club") and (e.get("current") or e.get("afl_official") or e.get("manual"))
+                                        and e["club"].upper() != club_ab)]
+    profile["contract_events"] = events
+    profile["contract_source"] = contracts.get("_meta") if events else None
+    # a confirmed `current` re-signing supersedes a stale free-agent/OOC status
+    o = _contract_overrides().get((key, club_ab))
     cur = next((cs for cs in profile["contract_status"] if cs["is_current"]), None)
     if o and cur and (cur["status"] != "contracted" or (cur["contracted_through_year"] or 0) < o["end_year"]):
         cur["status"] = "contracted"
@@ -613,18 +619,32 @@ _overrides_cache = None
 
 
 def _contract_overrides() -> dict:
-    """Manual `current` re-signings (data/contracts_manual.json) that supersede a
-    stale contract status, keyed by normalised name → {end_year, source...}."""
+    """`current` re-signings that supersede a stale contract status, keyed by
+    normalised name → {end_year, source...}. Sourced from confirmed official
+    signings in contracts.json (AFL.com.au) and hand-verified corrections in
+    contracts_manual.json; the latest end year wins."""
     global _overrides_cache
     if _overrides_cache is None:
         import json
         _overrides_cache = {}
-        if CONTRACTS_MANUAL_PATH.exists():
-            for e in json.loads(CONTRACTS_MANUAL_PATH.read_text(encoding="utf-8")).get("events", []):
-                if e.get("current") and e.get("end_year"):
-                    _overrides_cache[_norm(e["name"])] = {
+
+        def add(e):
+            # keyed by (name, club) so same-name players at different clubs don't cross
+            if e.get("current") and e.get("end_year") and e.get("club"):
+                key = (_norm(e["name"]), e["club"].upper())
+                prev = _overrides_cache.get(key)
+                if not prev or e["end_year"] >= prev["end_year"]:
+                    _overrides_cache[key] = {
                         "end_year": e["end_year"], "reporter": e.get("reporter"),
                         "source_url": e.get("source_url"), "date": e.get("date")}
+
+        if CONTRACTS_PATH.exists():
+            for e in json.loads(CONTRACTS_PATH.read_text(encoding="utf-8")).get("events", []):
+                if e.get("afl_official"):
+                    add(e)
+        if CONTRACTS_MANUAL_PATH.exists():  # hand-verified wins last
+            for e in json.loads(CONTRACTS_MANUAL_PATH.read_text(encoding="utf-8")).get("events", []):
+                add(e)
     return _overrides_cache
 
 
@@ -926,7 +946,7 @@ def contract_status(status: str | None = None, club: str | None = None):
     ov = _contract_overrides()
     out = []
     for r in result:
-        o = ov.get(_norm(f"{r['first_name']} {r['last_name']}"))
+        o = ov.get((_norm(f"{r['first_name']} {r['last_name']}"), (r.get("club_abbrev") or "").upper()))
         if o and (r.get("contract_status") != "contracted"
                   or (r.get("contracted_through_year") or 0) < o["end_year"]):
             r["contract_status"] = "contracted"

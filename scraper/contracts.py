@@ -166,17 +166,36 @@ def load_manual() -> list[dict]:
     return out
 
 
+def load_afl_signings() -> list[dict]:
+    """Confirmed signings from the AFL's own content API (scraper/afl_signings.py)."""
+    path = MANUAL.parent / "afl_signings.json"
+    if not path.exists():
+        return []
+    out = []
+    for e in json.loads(path.read_text(encoding="utf-8")).get("events", []):
+        out.append({**e, "afl_official": True})
+    return out
+
+
+def _dedupe_key(e):
+    # same signing from two feeds (same player + end year) collapses to one
+    return (e["norm"], e["end_year"]) if e.get("end_year") else (e["norm"], e["date"])
+
+
 def main():
-    events = fetch_all()
-    manual = load_manual()
-    # manual entries win on the same (player, date) so corrections override
-    seen = {(e["norm"], e["date"]) for e in manual}
-    events = [e for e in events if (e["norm"], e["date"]) not in seen] + manual
-    events.sort(key=lambda e: e["date"])
+    # priority low->high so higher-trust sources overwrite on the same key
+    by_key = {}
+    for e in fetch_all():            # AFLRATINGS aggregator (base)
+        by_key[_dedupe_key(e)] = e
+    for e in load_afl_signings():    # AFL.com.au official content API
+        by_key[_dedupe_key(e)] = e
+    for e in load_manual():          # hand-verified corrections win outright
+        by_key[_dedupe_key(e)] = e
+    events = sorted(by_key.values(), key=lambda e: e["date"])
     payload = {
-        "source": "AFLRATINGS — AFL Trade News",
-        "source_url": "https://aflratings.com.au/category/afl-trade-news/",
-        "attribution": "Contract & movement events compiled by AFLRATINGS from public reporting; each event links to its post and cites the breaking reporter. The AFL does not disclose contract terms — no dollar figures are tracked.",
+        "source": "AFL.com.au + AFLRATINGS",
+        "source_url": "https://www.afl.com.au/news",
+        "attribution": "Contract & movement events from the AFL's own content API and AFLRATINGS' reporting, with hand-verified corrections; each event links to its source. The AFL does not disclose contract terms — no dollar figures are tracked.",
         "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
         "count": len(events),
         "events": events,

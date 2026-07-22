@@ -58,7 +58,13 @@ jobs:
         run: python scraper/draft_pool.py
         continue-on-error: true
 
-      - name: Refresh contract-event history (AFLRATINGS)
+      - name: Fetch confirmed signings from the AFL content API
+        # official contract signings from afl.com.au — runs BEFORE contracts.py
+        # so they merge into the timeline (and catch what AFLRATINGS misses)
+        run: python scraper/afl_signings.py
+        continue-on-error: true
+
+      - name: Refresh contract-event history (AFL.com.au + AFLRATINGS)
         # dated signings/extensions/trades/delistings — the missing middle of
         # each player's timeline between draft and free agency
         run: python scraper/contracts.py

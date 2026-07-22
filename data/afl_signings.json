@@ -1,0 +1,21 @@
+{
+ "source": "AFL.com.au (AFL content API)",
+ "source_url": "https://www.afl.com.au/news",
+ "note": "Confirmed contract signings extracted from the AFL news content API; recent window only.",
+ "count": 1,
+ "events": [
+  {
+   "name": "Bailey Williams",
+   "norm": "bailey williams",
+   "date": "2026-07-21",
+   "kind": "signing",
+   "club": "WCE",
+   "length": 6,
+   "end_year": 2032,
+   "end_estimated": false,
+   "current": true,
+   "reporter": "Martin Smith",
+   "source_url": "https://www.afl.com.au/news/1566322/in-demand-eagle-rejects-free-agency-to-sign-long-term-deal"
+  }
+ ]
+}
