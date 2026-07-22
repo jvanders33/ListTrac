@@ -89,45 +89,58 @@ const draftedShort = p => p.draft_year
   : "—";
 const playerLink = p => `<a href="#/player/${p.id}">${esc(p.first_name)} ${esc(p.last_name)}</a>`;
 
-/* Guernsey icons — our own abstract colour/pattern tiles, generated from each
-   club's colours. No official logos or crests: just base colour + a
-   representative jumper pattern (stripes / sash / hoops / chevron / yoke), so
-   there's no trademark on a club design. Used wherever a club is listed. */
+/* Guernsey icons — our own hand-drawn jumper tiles, one per club, matching
+   each side's real design and full colour scheme (base + inner markup on a
+   fixed 24x28 canvas). Drawn from scratch: no official logos, crests or
+   third-party assets — just the colours and patterns of the jumper itself. */
 const CLUB_GUERNSEY = {
-  ADE: { b: "#002B5C", t: "#FFD200", p: "yoke" },
-  BRI: { b: "#7A0033", t: "#FDBE57", p: "yoke" },
-  CAR: { b: "#0E1E2D", t: "#B6C1CC", p: "solid" },
-  COL: { b: "#101010", t: "#FFFFFF", p: "stripesV" },
-  ESS: { b: "#CC2031", t: "#101010", p: "sash" },
-  FRE: { b: "#2A1A54", t: "#FFFFFF", p: "chevron" },
-  GEE: { b: "#1C3C63", t: "#FFFFFF", p: "hoopsH" },
-  GCS: { b: "#D93E39", t: "#FFC42D", p: "yoke" },
-  GWS: { b: "#3E3E3E", t: "#F47920", p: "sash" },
-  HAW: { b: "#4D2004", t: "#FBBF15", p: "stripesV" },
-  MEL: { b: "#061A33", t: "#CC2031", p: "chevron" },
-  NM:  { b: "#013B9F", t: "#FFFFFF", p: "stripesV" },
-  PA:  { b: "#101010", t: "#00B4C6", p: "chevron" },
-  RIC: { b: "#1A1A1A", t: "#FFD200", p: "sash" },
-  STK: { b: "#ED1B2E", t: "#101010", p: "sash" },
-  SYD: { b: "#ED171F", t: "#FFFFFF", p: "sash" },
-  TAS: { b: "#0E3D2E", t: "#F0C244", p: "yoke" },
-  WB:  { b: "#014896", t: "#DC2830", p: "hoopsH" },
-  WCE: { b: "#003087", t: "#F2A900", p: "chevron" },
+  // Crows — navy with red/gold radiating centre stripes
+  ADE: { b: "#002B5C", in: `<rect x="9" width="6" height="28" fill="#FFD200"/><rect x="7" width="2" height="28" fill="#E4002B"/><rect x="15" width="2" height="28" fill="#E4002B"/>` },
+  // Lions — maroon with royal-blue centre panel, gold trim
+  BRI: { b: "#6A0F2E", in: `<rect x="9" width="6" height="28" fill="#0C4DA2"/><rect x="8" width="1" height="28" fill="#F2C14E"/><rect x="15" width="1" height="28" fill="#F2C14E"/>` },
+  // Blues — solid navy
+  CAR: { b: "#0A1F33", in: `` },
+  // Magpies — black & white vertical stripes
+  COL: { b: "#0A0A0A", in: `<rect x="3.4" width="3.4" height="28" fill="#fff"/><rect x="10.3" width="3.4" height="28" fill="#fff"/><rect x="17.2" width="3.4" height="28" fill="#fff"/>` },
+  // Bombers — red with black sash
+  ESS: { b: "#C7132B", in: `<path d="M-4,28 L24,0" stroke="#0A0A0A" stroke-width="8"/>` },
+  // Dockers — purple with white anchor chevrons
+  FRE: { b: "#2A1A54", in: `<polyline points="0,6 12,15 24,6" fill="none" stroke="#fff" stroke-width="3"/><polyline points="0,13 12,22 24,13" fill="none" stroke="#fff" stroke-width="3"/>` },
+  // Cats — navy & white hoops
+  GEE: { b: "#11315C", in: `<rect y="4.5" width="24" height="3" fill="#fff"/><rect y="12.5" width="24" height="3" fill="#fff"/><rect y="20.5" width="24" height="3" fill="#fff"/>` },
+  // Suns — red with gold sash, navy edge
+  GCS: { b: "#D2222A", in: `<path d="M-4,28 L24,0" stroke="#FFC72C" stroke-width="7"/><path d="M3,29 L27,5" stroke="#0C2340" stroke-width="1.6"/>` },
+  // Giants — charcoal with orange flash
+  GWS: { b: "#3A3A3C", in: `<path d="M-4,28 L24,0" stroke="#F47920" stroke-width="8"/>` },
+  // Hawks — brown & gold vertical stripes
+  HAW: { b: "#4A1D03", in: `<rect x="3.4" width="3.4" height="28" fill="#F4B41A"/><rect x="10.3" width="3.4" height="28" fill="#F4B41A"/><rect x="17.2" width="3.4" height="28" fill="#F4B41A"/>` },
+  // Demons — navy with red V
+  MEL: { b: "#0B1A38", in: `<polyline points="0,5 12,16 24,5" fill="none" stroke="#C7132B" stroke-width="5"/>` },
+  // Kangaroos — royal blue & white vertical stripes
+  NM:  { b: "#0A3EA0", in: `<rect x="3.4" width="3.4" height="28" fill="#fff"/><rect x="10.3" width="3.4" height="28" fill="#fff"/><rect x="17.2" width="3.4" height="28" fill="#fff"/>` },
+  // Power — black with teal + white "prison bar" chevrons
+  PA:  { b: "#0A0A0A", in: `<polyline points="0,5 12,16 24,5" fill="none" stroke="#00A9B7" stroke-width="4.5"/><polyline points="0,11 12,22 24,11" fill="none" stroke="#fff" stroke-width="1.8"/>` },
+  // Tigers — black with yellow sash
+  RIC: { b: "#151515", in: `<path d="M-4,28 L24,0" stroke="#FFD200" stroke-width="8"/>` },
+  // Saints — white with red & black vertical tricolour
+  STK: { b: "#FFFFFF", in: `<rect x="8" width="3" height="28" fill="#ED1B2E"/><rect x="13" width="3" height="28" fill="#0A0A0A"/>` },
+  // Swans — red with white V yoke
+  SYD: { b: "#E1121C", in: `<polyline points="0,5 12,16 24,5" fill="none" stroke="#fff" stroke-width="5"/>` },
+  // Devils — green with gold band, red edges
+  TAS: { b: "#0E5A3C", in: `<rect y="10.5" width="24" height="6" fill="#F0C244"/><rect y="9" width="24" height="1.5" fill="#C7132B"/><rect y="16.5" width="24" height="1.5" fill="#C7132B"/>` },
+  // Bulldogs — royal blue / white / red horizontal tricolour
+  WB:  { b: "#0A47A1", in: `<rect y="9.33" width="24" height="9.33" fill="#fff"/><rect y="18.66" width="24" height="9.34" fill="#D2222A"/>` },
+  // Eagles — royal blue with gold V
+  WCE: { b: "#062F87", in: `<polyline points="0,5 12,16 24,5" fill="none" stroke="#F2A900" stroke-width="5"/>` },
 };
 let _gsyId = 0;
 function guernsey(abbrev, size = 22) {
-  const c = CLUB_GUERNSEY[String(abbrev || "").toUpperCase()] || { b: "#556270", t: "#AAB4BE", p: "solid" };
+  const c = CLUB_GUERNSEY[String(abbrev || "").toUpperCase()] || { b: "#556270", in: "" };
   const id = "gsy" + (++_gsyId), W = 24, H = 28;
-  let pat = "";
-  if (c.p === "stripesV") pat = [4.8, 14.4].map(x => `<rect x="${x}" width="4.8" height="${H}" fill="${c.t}"/>`).join("");
-  else if (c.p === "hoopsH") pat = [5.6, 16.8].map(y => `<rect y="${y}" width="${W}" height="5.6" fill="${c.t}"/>`).join("");
-  else if (c.p === "sash") pat = `<path d="M-3,${H} L${W},1" stroke="${c.t}" stroke-width="8"/>`;
-  else if (c.p === "chevron") pat = `<polyline points="2,7 12,19 22,7" fill="none" stroke="${c.t}" stroke-width="5"/>`;
-  else if (c.p === "yoke") pat = `<rect width="${W}" height="9" fill="${c.t}"/>`;
   return `<svg class="gsy" width="${size}" height="${(size * H / W).toFixed(1)}" viewBox="0 0 ${W} ${H}" aria-hidden="true">`
     + `<defs><clipPath id="${id}"><rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="4"/></clipPath></defs>`
-    + `<g clip-path="url(#${id})"><rect width="${W}" height="${H}" fill="${c.b}"/>${pat}</g>`
-    + `<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="4" fill="none" stroke="rgba(0,0,0,0.28)"/></svg>`;
+    + `<g clip-path="url(#${id})"><rect width="${W}" height="${H}" fill="${c.b}"/>${c.in}</g>`
+    + `<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="4" fill="none" stroke="rgba(0,0,0,0.3)"/></svg>`;
 }
 // guernsey + club name, optionally linked
 const clubTag = (abbrev, name, link = true) => {
