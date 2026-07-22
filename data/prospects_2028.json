@@ -1,16 +1,27 @@
 {
  "year": 2028,
  "stage": "u16",
- "forming": true,
- "note": "The 2026 U16 National Championships concluded in July 2026 (Western Australia won Pool A, the GWS Giants Academy Pool B). The U16 All-Australian team — the first real ranking signal for this class — hasn't been published yet. This class fills in once it is.",
+ "forming": false,
+ "note": "Preliminary — the confirmed standouts from the 2026 U16 National Championships (Western Australia won Pool A, GWS Giants Academy Pool B). Troy Warner led the way as Kevin Sheehan medallist; the rest are their team's MVPs, listed by state. This class expands and re-ranks when the U16 All-Australian team publishes.",
  "sources": {
+  "mvps": "https://central.rookieme.com/afl/2026/07/20/remember-the-names-2026-afl-under-16-mvps/",
   "afl": "https://www.afl.com.au/nat-champs/u16s/boys",
-  "rookieme": "https://central.rookieme.com/afl/",
-  "rankings_note": "Awaiting 2026 U16 All-Australian team."
+  "rankings_note": "2026 U16 championship MVPs (Rookie Me Central). Kevin Sheehan medallist first, team MVPs by state."
  },
  "pool_results": [
   {"pool": "A", "winner": "Western Australia"},
   {"pool": "B", "winner": "GWS Giants Academy"}
  ],
- "prospects": []
+ "prospects": [
+  {"name": "Troy Warner", "state_team": "Western Australia", "position": "Forward/Midfielder", "rank": 1, "award": "Kevin Sheehan Medal (championship MVP)"},
+  {"name": "Darcy Pearson", "state_team": "Brisbane Academy", "position": "Defender", "rank": 2, "award": "Brisbane Academy MVP", "tie": "Brisbane Academy"},
+  {"name": "Hunter Weatherley", "state_team": "Gold Coast Academy", "position": "Defender", "rank": 3, "award": "Gold Coast Academy MVP", "tie": "Gold Coast Academy"},
+  {"name": "Alexander Maher", "state_team": "GWS Academy", "position": "Midfielder", "rank": 4, "award": "Giants Academy MVP", "tie": "GWS Academy"},
+  {"name": "Billy Brown", "state_team": "Northern Territory", "position": "Tall defender", "rank": 5, "award": "Northern Territory MVP"},
+  {"name": "Logan Treverton", "state_team": "South Australia", "position": "Midfielder", "rank": 6, "award": "South Australia MVP"},
+  {"name": "Noah Keam", "state_team": "Sydney Academy", "position": "Midfielder", "rank": 7, "award": "Swans Academy MVP", "tie": "Sydney Academy"},
+  {"name": "Jordan Stevenson", "state_team": "Tasmania", "position": "Defender", "rank": 8, "award": "Tasmania MVP"},
+  {"name": "Eamon Hyde", "state_team": "Vic Country", "position": "Tall defender", "rank": 9, "award": "Vic Country MVP"},
+  {"name": "Louis Grinter", "state_team": "Vic Metro", "position": "Midfielder", "rank": 10, "award": "Vic Metro MVP"}
+ ]
 }
