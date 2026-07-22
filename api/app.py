@@ -529,16 +529,39 @@ def ratings(limit: int = 100, club: str | None = None, year: int | None = None):
 PROSPECTS_DIR = Path(__file__).resolve().parent.parent / "data"
 
 
+def _bottom_ager_names() -> set:
+    """Players who appear in a younger class's list are bottom-agers playing up
+    a level — their true draft year is the younger class, and they are NOT
+    eligible for the older draft. Reliable where we have the younger list;
+    full coverage needs date-of-birth (not exposed by our current sources)."""
+    import json
+    names = set()
+    for year in (2027, 2028):
+        path = PROSPECTS_DIR / f"prospects_{year}.json"
+        if path.exists():
+            for p in json.loads(path.read_text(encoding="utf-8")).get("prospects", []):
+                names.add((_norm(p["name"]), year))
+    return names
+
+
 @app.get("/api/prospects")
 def prospects(year: int = 2026):
     """Draft prospect pool for a class. 2026 = U18 championships pool (Rookie
     Me Central + Reading the Play + Twomey). 2027/2028 = the U16-championships
-    runway (All-Australian teams), preliminary this far out."""
+    runway (All-Australian teams), preliminary this far out. Bottom-agers who
+    belong to a younger class are tagged (not draft-eligible in this year)."""
     import json
     path = PROSPECTS_PATH if year == 2026 else PROSPECTS_DIR / f"prospects_{year}.json"
     if not path.exists():
         raise HTTPException(404, f"no prospect pool for {year}")
-    return json.loads(path.read_text(encoding="utf-8"))
+    pool = json.loads(path.read_text(encoding="utf-8"))
+    younger = {name: y for name, y in _bottom_ager_names()}
+    for p in pool.get("prospects", []):
+        true_year = younger.get(_norm(p["name"]))
+        if true_year and true_year > year:
+            p["bottom_ager"] = True
+            p["true_class"] = true_year
+    return pool
 
 
 PROSPECT_STATS_PATH = Path(__file__).resolve().parent.parent / "data" / "prospect_stats.json"

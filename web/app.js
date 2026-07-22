@@ -639,12 +639,14 @@ function prospectPoolCard(pool, year) {
       <div class="tablewrap"><table>
         <thead><tr><th class="num">#</th><th>Player</th><th>State / academy</th><th>Position</th></tr></thead>
         <tbody>${ranked.map(p => `
-          <tr><td class="num"><b>${p.rank ?? "—"}</b></td>
-            <td><a href="#/prospect/${encodeURIComponent(p.name)}">${esc(p.name)}</a>${p.tie ? ` <span class="chip warn" style="font-size:9px">${esc(p.tie)}</span>` : ""}</td>
+          <tr${p.bottom_ager ? ' class="thin"' : ""}><td class="num"><b>${p.rank ?? "—"}</b></td>
+            <td><a href="#/prospect/${encodeURIComponent(p.name)}">${esc(p.name)}</a>${p.tie ? ` <span class="chip warn" style="font-size:9px">${esc(p.tie)}</span>` : ""}${p.bottom_ager ? ` <span class="chip ufa" style="font-size:9px">→ ${p.true_class} bottom-age</span>` : ""}</td>
             <td class="thin">${esc(p.state_team || "")}</td>
             <td class="thin">${esc(p.position || "")}</td></tr>`).join("")}
         </tbody>
-      </table></div>${srcLink}
+      </table></div>
+      <p class="thin" style="font-size:12px;margin-top:8px">Players tagged <span class="chip ufa" style="font-size:9px">bottom-age</span>
+        played up a level and are draft-eligible in their tagged year, not ${year}.</p>${srcLink}
     </div>`;
   }
 
@@ -673,7 +675,9 @@ function prospectPoolCard(pool, year) {
 async function mockDraftView(chrome = "") {
   const [order, pool, intel] = await Promise.all([
     api("/api/draft-order"), api("/api/prospects"), api("/api/pick-intel").catch(() => null)]);
-  const prospects = pool.prospects;
+  // only draft-eligible prospects — bottom-agers playing up a level can't be
+  // drafted this year, so they're excluded from the pool
+  const prospects = pool.prospects.filter(p => !p.bottom_ager);
   const byName = Object.fromEntries(prospects.map(p => [p.name, p]));
   let events = loadMock();
   let filter = "";
