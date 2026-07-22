@@ -1120,16 +1120,18 @@ async function tradeMachineView(chrome = "") {
       const chosen = s.list.filter(p => st.players.includes(p.id));
       const picks = tmPicks(st.club, order).filter(p => st.picks.includes(p.id));
       const points = picks.reduce((t, p) => t + (p.dvi || 0), 0);
+      const playerVal = chosen.reduce((t, p) => t + (p.trade_value || 0), 0);
       const warnings = chosen.map(statusWarn).filter(Boolean);
-      return { ...s, st, info, chosen, picks, points, warnings };
+      return { ...s, st, info, chosen, picks, points, playerVal, total: points + playerVal, warnings };
     });
 
     const [A, B] = sideData;
-    const diff = A.points - B.points;
+    const diff = A.total - B.total;
     const anyAssets = A.chosen.length + A.picks.length + B.chosen.length + B.picks.length > 0;
+    const tol = Math.max(350, Math.max(A.total, B.total) * 0.1);
     const verdict = !anyAssets ? "" :
-      Math.abs(diff) <= 300 ? "Pick points are roughly balanced."
-      : `${(diff > 0 ? A : B).info.name} sends ${Math.abs(diff)} more DVI points — the player side of the deal has to justify it.`;
+      Math.abs(diff) <= tol ? "Roughly even value both ways — a fair deal on paper."
+      : `${(diff > 0 ? A : B).info.name} gives up ${Math.abs(diff)} more in combined value (players + picks) — they'd want more coming back.`;
 
     const sideHTML = s => `
       <div class="card tm-side">
@@ -1146,7 +1148,7 @@ async function tradeMachineView(chrome = "") {
               <input type="checkbox" data-side="${s.key}" data-kind="players" data-id="${p.id}"
                 ${s.st.players.includes(p.id) ? "checked" : ""}>
               <span><b>${esc(p.first_name)} ${esc(p.last_name)}</b>
-                <span class="thin">${age(p.dob)}yo${p.contract_status && p.contract_status !== "contracted" ? " · " : ""}</span>
+                <span class="thin">${age(p.dob)}yo${p.trade_value ? ` · ${p.trade_value} TV` : ""}${p.contract_status && p.contract_status !== "contracted" ? " · " : ""}</span>
                 ${p.contract_status && p.contract_status !== "contracted" ? chip(p.contract_status) : ""}</span>
             </label>`).join("")}
         </div>
@@ -1182,13 +1184,18 @@ async function tradeMachineView(chrome = "") {
             <tr><td class="thin">Picks</td>
               <td>${B.picks.map(p => esc(p.label)).join(", ") || "—"}</td>
               <td>${A.picks.map(p => esc(p.label)).join(", ") || "—"}</td></tr>
+            <tr><td class="thin">Player value</td>
+              <td class="num">${B.playerVal || "—"}</td><td class="num">${A.playerVal || "—"}</td></tr>
             <tr><td class="thin">Pick points</td>
-              <td class="num">${B.points}</td><td class="num">${A.points}</td></tr>
+              <td class="num">${B.points || "—"}</td><td class="num">${A.points || "—"}</td></tr>
+            <tr class="tm-total"><td class="thin">Total value</td>
+              <td class="num"><b>${B.total}</b></td><td class="num"><b>${A.total}</b></td></tr>
             <tr><td class="thin">Net list spots</td>
               <td class="num">${B.chosen.length - A.chosen.length > 0 ? "+" : ""}${B.chosen.length - A.chosen.length}</td>
               <td class="num">${A.chosen.length - B.chosen.length > 0 ? "+" : ""}${A.chosen.length - B.chosen.length}</td></tr>
           </tbody>
         </table></div>
+        <p class="thin" style="font-size:11.5px;margin-top:6px">Player value = ListTrac Trade Value Index (rating × age × contract); pick points = AFL Draft Value Index. Same currency, so they add up.</p>
         <p class="sub" style="margin-top:12px">${esc(verdict)}</p>
         ${[...A.warnings, ...B.warnings].map(w => `<p class="tm-warn">⚠ ${esc(w)}</p>`).join("")}
         ` : `<p class="thin">Select players and picks on each side to build a trade.</p>`}

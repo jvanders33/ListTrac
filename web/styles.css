@@ -485,6 +485,8 @@ footer.pagefoot {
 .tvf b { font-size: 17px; font-variant-numeric: tabular-nums; }
 .tvf small { font-size: 10px; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.03em; margin-top: 2px; }
 .tvx { color: var(--ink-2); font-size: 14px; }
+.tm-total td { border-top: 2px solid var(--ink-2); }
+.tm-total b { font-size: 15px; }
 
 /* player comparison */
 .cmp-pickers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0 6px; }

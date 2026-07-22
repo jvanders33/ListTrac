@@ -173,6 +173,8 @@ def club_list(abbrev: str):
         r["position"] = rr.get("position") if rr else None
         r["rating"] = rr.get("rating") if rr else None
         r["rating_rank"] = rr.get("rank") if rr else None
+        tv = _trade_value_board().get("by_id", {}).get(r["id"])
+        r["trade_value"] = tv.get("value") if tv else None
     return result
 
 
