@@ -135,6 +135,36 @@ const clubTag = (abbrev, name, link = true) => {
   const label = link && abbrev ? `<a href="#/club/${esc(abbrev)}">${esc(name)}</a>` : esc(name);
   return `<span class="clubtag">${g}${label}</span>`;
 };
+// Champion Data team code (ratings/fantasy feeds) -> our club abbreviation
+const CD_ABBR = {
+  ADEL: "ADE", BL: "BRI", CARL: "CAR", COLL: "COL", ESS: "ESS", FRE: "FRE",
+  GCFC: "GCS", GEEL: "GEE", GWS: "GWS", HAW: "HAW", MELB: "MEL", NMFC: "NM",
+  PORT: "PA", RICH: "RIC", STK: "STK", SYD: "SYD", WB: "WB", WCE: "WCE",
+};
+const teamTag = cd => { const a = CD_ABBR[String(cd || "").toUpperCase()] || cd; return clubTag(a, a); };
+
+/* Draft-pathway icons — our own shield tiles for a prospect's championship
+   zone or academy. Zones get their own colour; academy-tied prospects take
+   their club's base colour + code, so you can see who has priority access. */
+const ACADEMY_CLUB = { "brisbane academy": "BRI", "gws academy": "GWS", "gold coast academy": "GCS", "sydney academy": "SYD" };
+const STATE_META = {
+  "vic metro": { code: "VM", c: "#1F3A93" }, "vic country": { code: "VC", c: "#1E7A46" },
+  "south australia": { code: "SA", c: "#C8102E" }, "western australia": { code: "WA", c: "#C08A1E" },
+  "allies": { code: "ALL", c: "#6A2C91" }, "tasmania": { code: "TAS", c: "#0E7C4B" },
+  "northern territory": { code: "NT", c: "#B5651D" },
+};
+function pathwayIcon(stateTeam, size = 22) {
+  const key = String(stateTeam || "").toLowerCase().trim();
+  let code, color;
+  if (ACADEMY_CLUB[key]) { const ab = ACADEMY_CLUB[key]; code = ab; color = (CLUB_GUERNSEY[ab] || {}).b || "#3a4750"; }
+  else { const m = STATE_META[key]; code = m ? m.code : (stateTeam || "?").split(" ").map(w => w[0]).join("").slice(0, 3).toUpperCase(); color = m ? m.c : "#3a4750"; }
+  const W = 22, H = 26, fs = code.length >= 3 ? 7 : 9;
+  return `<svg class="pway" width="${size}" height="${(size * H / W).toFixed(1)}" viewBox="0 0 ${W} ${H}" aria-hidden="true">`
+    + `<path d="M2,2 H20 V13 C20,20 11,24 11,24 C11,24 2,20 2,13 Z" fill="${color}" stroke="rgba(0,0,0,0.22)"/>`
+    + `<text x="11" y="${fs >= 9 ? 15 : 14.5}" text-anchor="middle" font-size="${fs}" font-weight="800" fill="#fff" font-family="system-ui,sans-serif">${esc(code)}</text></svg>`;
+}
+const pathwayTag = stateTeam => stateTeam
+  ? `<span class="clubtag">${pathwayIcon(stateTeam, 18)}<span>${esc(stateTeam)}</span></span>` : "";
 
 /* Player-movement insiders on X. Set INSIDER_LIST_URL to an X List URL
    (e.g. https://twitter.com/i/lists/123...) to embed the whole list; the
@@ -293,7 +323,7 @@ async function landingView() {
             <thead><tr><th class="num">Pick</th><th>Club</th><th class="num">W–L</th><th class="num">%</th></tr></thead>
             <tbody>${order.picks.slice(0, 8).map(p => `
               <tr><td class="num"><b>${p.pick}</b></td>
-                <td><i class="dot" style="background:${esc(p.primary_color || "#888")}"></i>${esc(p.club)}
+                <td>${clubTag(p.abbrev, p.club)}
                   ${p.via ? `<span class="chip warn">via ${esc(p.via)}</span>` : ""}</td>
                 <td class="num">${p.wins}–${p.losses}</td><td class="num">${p.percentage}</td></tr>`).join("")}
             </tbody>
@@ -739,7 +769,7 @@ async function prospectProfileView(name) {
     <p class="thin" style="margin:16px 0 0"><a href="#/draft/prospects/${p.draft_year}">← ${p.draft_year} prospects</a></p>
     <div class="hero" style="--hero-a:#232f38;--hero-b:#2d3a44;--hero-trim:var(--accent)">
       <div class="hero-inner">
-        <p class="club-line">${esc(p.state_team || "")}${p.position ? " · " + esc(p.position) : ""}</p>
+        <p class="club-line">${p.state_team ? pathwayIcon(p.state_team, 20) : ""}${esc(p.state_team || "")}${p.position ? " · " + esc(p.position) : ""}</p>
         <h2>${esc(p.name)}</h2>
         <p class="statusline">
           <span class="chip plain" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">${esc(stageLabel[p.stage] || p.draft_year + " draft")}</span>
@@ -811,7 +841,7 @@ function prospectPoolCard(pool, year) {
         <tbody>${ranked.map(p => `
           <tr${p.bottom_ager ? ' class="thin"' : ""}><td class="num"><b>${p.rank ?? "—"}</b></td>
             <td><a href="#/prospect/${encodeURIComponent(p.name)}">${esc(p.name)}</a>${p.tie ? ` <span class="chip warn" style="font-size:9px">${esc(p.tie)}</span>` : ""}${p.bottom_ager ? ` <span class="chip ufa" style="font-size:9px">→ ${p.true_class} bottom-age</span>` : ""}</td>
-            <td class="thin">${esc(p.state_team || "")}</td>
+            <td>${pathwayTag(p.state_team)}</td>
             <td class="thin">${esc(p.position || "")}</td></tr>`).join("")}
         </tbody>
       </table></div>
@@ -830,7 +860,7 @@ function prospectPoolCard(pool, year) {
     <div class="watchlist">
       ${order.map(p => `
         <a class="watchrow" href="#/prospect/${encodeURIComponent(p.name)}">
-          <span class="badge" style="--club:#3a4750">${esc((p.state_team || "").split(" ").map(w => w[0]).join("").slice(0, 3).toUpperCase())}</span>
+          ${pathwayIcon(p.state_team, 24)}
           <span class="watch-body">
             <b>${esc(p.name)}</b>
             <span class="thin">${esc(p.state_team || "")}${p.position ? " · " + esc(p.position) : ""}</span>
@@ -881,14 +911,14 @@ async function mockDraftView(chrome = "") {
               ${sim.rows.map(r => {
                 const isCur = r === cur;
                 if (r.absorbed) return `<div class="pickrow absorbed">
-                  <span class="picknum">·</span><i class="dot" style="background:${esc(r.club.primary_color || "#888")}"></i>
+                  <span class="picknum">·</span>${guernsey(r.club.abbrev, 18)}
                   <span class="pickclub">${esc(r.club.abbrev)}</span>
                   <span class="thin" style="font-size:12px">${esc(r.absorbed)}</span></div>`;
                 shown++;
                 return `<div class="pickrow ${isCur ? "otc" : ""} ${r.kind === "matched" ? "matched" : ""}"
                     title="${esc(intelTip(intel, shown))}">
                   <span class="picknum">${shown}</span>
-                  <i class="dot" style="background:${esc(r.club.primary_color || "#888")}"></i>
+                  ${guernsey(r.club.abbrev, 18)}
                   <span class="pickclub">${esc(r.club.abbrev)}</span>
                   ${r.club.via ? `<span class="thin" style="font-size:10px">via ${esc(r.club.via)}</span>` : ""}
                   ${r.assigned
@@ -1222,7 +1252,7 @@ async function top10View() {
                         ${p ? 'draggable="true"' : ""}>
                 <span class="t10-rank">${i + 1}</span>
                 ${p ? `
-                  <span class="badge" style="--club:${esc(colorOf(p.abbr))}">${esc(p.abbr)}</span>
+                  ${guernsey(p.abbr, 22)}
                   <span class="t10-name">${p.player_id ? `<a href="#/player/${p.player_id}">${esc(p.name)}</a>` : esc(p.name)}
                     <span class="thin">${esc(p.abbr)} · rating ${p.rating}</span></span>
                   <span class="t10-ctrls">
@@ -1405,7 +1435,7 @@ async function fantasyView() {
         <tbody>${data.players.map((p, i) => `
           <tr><td class="num">${i + 1}</td>
             <td>${p.player_id ? `<a href="#/player/${p.player_id}">${esc(p.name)}</a>` : esc(p.name)}</td>
-            <td class="thin">${esc(p.team)}</td>
+            <td>${teamTag(p.team)}</td>
             <td class="thin">${esc((p.position || "").slice(0, 3))}</td>
             <td class="num">${p.games ?? ""}</td>
             <td class="num"><b>${p.af_avg}</b></td><td class="num">${p.af_total ?? ""}</td></tr>`).join("")}
@@ -1441,7 +1471,7 @@ async function rankingsView() {
         <tbody>${data.ratings.map(r => `
           <tr><td class="num"><b>${r.rank ?? "—"}</b></td>
             <td>${r.player_id ? `<a href="#/player/${r.player_id}">${esc(r.name)}</a>` : esc(r.name)}</td>
-            <td class="thin">${esc(r.team)}</td><td class="num">${r.games ?? ""}</td>
+            <td>${teamTag(r.team)}</td><td class="num">${r.games ?? ""}</td>
             <td class="num"><b>${r.rating}</b></td></tr>`).join("")}
         </tbody>
       </table></div>
@@ -1477,7 +1507,7 @@ async function playersView() {
       <div class="clubstrip" style="margin-top:10px">
         ${clubList.filter(c => c.listed_players > 0).map(c => `
           <a href="#/club/${esc(c.abbreviation)}">
-            <span class="badge" style="--club:${esc(c.primary_color || "#888")}">${esc(c.abbreviation)}</span>
+            ${guernsey(c.abbreviation, 20)}
             ${esc(c.name)}</a>`).join("")}
       </div>
     </div>`;
@@ -1786,7 +1816,7 @@ async function playerView(id) {
   view.innerHTML = `
     <div class="hero" style="--hero-a:${esc(heroA)};--hero-b:${esc(heroA)}CC;--hero-trim:${esc(heroTrim)}">
       <div class="hero-inner">
-        <p class="club-line">${p.club ? `<a href="#/club/${esc(p.club_abbrev)}">${esc(p.club)}</a>` : "Unattached"}</p>
+        <p class="club-line">${p.club ? `${guernsey(p.club_abbrev, 20)}<a href="#/club/${esc(p.club_abbrev)}">${esc(p.club)}</a>` : "Unattached"}</p>
         <h2>${esc(p.first_name)} ${esc(p.last_name)}</h2>
         <p class="statusline">${current ? chip(current.status) : ""}${p.rating ? `
           <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Player Rating #${p.rating.rank} · ${p.rating.rating}</span>` : ""}${p.fantasy ? `
