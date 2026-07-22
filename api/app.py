@@ -160,6 +160,13 @@ def club_list(abbrev: str):
                       ORDER BY p.jumper_number""", (abbrev,))
     if not result:
         raise HTTPException(404, f"no listed players for club '{abbrev}'")
+    ov = _contract_overrides()
+    for r in result:
+        o = ov.get(_norm(f"{r['first_name']} {r['last_name']}"))
+        if o and (r.get("contract_status") != "contracted"
+                  or (r.get("contracted_through_year") or 0) < o["end_year"]):
+            r["contract_status"] = "contracted"
+            r["contracted_through_year"] = o["end_year"]
     return result
 
 
@@ -201,6 +208,15 @@ def player(player_id: int):
     contracts = _contracts_by_name()
     profile["contract_events"] = contracts.get("_by_name", {}).get(key, [])
     profile["contract_source"] = contracts.get("_meta") if profile["contract_events"] else None
+    # a manual `current` re-signing supersedes a stale free-agent/OOC status
+    o = _contract_overrides().get(key)
+    cur = next((cs for cs in profile["contract_status"] if cs["is_current"]), None)
+    if o and cur and (cur["status"] != "contracted" or (cur["contracted_through_year"] or 0) < o["end_year"]):
+        cur["status"] = "contracted"
+        cur["contracted_through_year"] = o["end_year"]
+        cur["source_url"] = o.get("source_url") or cur.get("source_url")
+        rep = o.get("reporter")
+        cur["source_note"] = f"Re-signed — {rep} (supersedes earlier status)" if rep else "Re-signed (supersedes earlier status)"
     rating = _ratings_by_name().get(key)
     profile["rating"] = {"rank": rating["rank"], "rating": rating["rating"]} if rating else None
     fant = _fantasy_index().get(key)
@@ -591,7 +607,25 @@ def _ratings_by_name() -> dict:
 
 
 CONTRACTS_PATH = Path(__file__).resolve().parent.parent / "data" / "contracts.json"
+CONTRACTS_MANUAL_PATH = Path(__file__).resolve().parent.parent / "data" / "contracts_manual.json"
 _contracts_cache: dict = {}
+_overrides_cache = None
+
+
+def _contract_overrides() -> dict:
+    """Manual `current` re-signings (data/contracts_manual.json) that supersede a
+    stale contract status, keyed by normalised name → {end_year, source...}."""
+    global _overrides_cache
+    if _overrides_cache is None:
+        import json
+        _overrides_cache = {}
+        if CONTRACTS_MANUAL_PATH.exists():
+            for e in json.loads(CONTRACTS_MANUAL_PATH.read_text(encoding="utf-8")).get("events", []):
+                if e.get("current") and e.get("end_year"):
+                    _overrides_cache[_norm(e["name"])] = {
+                        "end_year": e["end_year"], "reporter": e.get("reporter"),
+                        "source_url": e.get("source_url"), "date": e.get("date")}
+    return _overrides_cache
 
 
 def _contracts_by_name() -> dict:
@@ -888,7 +922,19 @@ def contract_status(status: str | None = None, club: str | None = None):
     if club:
         query += " AND c.abbreviation = ? COLLATE NOCASE"
         params.append(club)
-    return rows(query + " ORDER BY c.name, p.last_name", tuple(params))
+    result = rows(query + " ORDER BY c.name, p.last_name", tuple(params))
+    ov = _contract_overrides()
+    out = []
+    for r in result:
+        o = ov.get(_norm(f"{r['first_name']} {r['last_name']}"))
+        if o and (r.get("contract_status") != "contracted"
+                  or (r.get("contracted_through_year") or 0) < o["end_year"]):
+            r["contract_status"] = "contracted"
+            r["contracted_through_year"] = o["end_year"]
+        if status and r["contract_status"] != status:
+            continue  # re-signed out of the requested bucket
+        out.append(r)
+    return out
 
 
 # static frontend — mounted last so API routes win. Guarded: if the directory

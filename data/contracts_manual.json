@@ -1,0 +1,16 @@
+{
+ "note": "Authoritative contract events the automated AFLRATINGS feed missed or got wrong. Each merges into the player timeline; when current=true it also corrects the player's displayed contract status/through-year (e.g. a re-signing that supersedes a stale free-agent tag). Add an entry whenever a gap is found and cite the official source (club site or AFL.com.au).",
+ "events": [
+  {
+   "name": "Jarman Impey",
+   "date": "2026-05-22",
+   "kind": "extension",
+   "club": "HAW",
+   "length": 3,
+   "end_year": 2029,
+   "current": true,
+   "reporter": "Hawthorn FC",
+   "source_url": "https://www.hawthornfc.com.au/news/2039261/impey-extends"
+  }
+ ]
+}

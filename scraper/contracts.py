@@ -27,6 +27,7 @@ from pathlib import Path
 BASE = "https://aflratings.com.au/wp-json/wp/v2"
 TRADE_NEWS_CAT = 38647
 OUT = Path(__file__).resolve().parent.parent / "data" / "contracts.json"
+MANUAL = Path(__file__).resolve().parent.parent / "data" / "contracts_manual.json"
 
 # AFLRATINGS team category id -> our club abbreviation
 TEAM_CAT = {
@@ -147,8 +148,31 @@ def fetch_all() -> list[dict]:
     return events
 
 
+def load_manual() -> list[dict]:
+    """Hand-curated events that fill gaps in the AFLRATINGS feed. Normalised to
+    the same shape and flagged manual=true; current=true also corrects status."""
+    if not MANUAL.exists():
+        return []
+    out = []
+    for e in json.loads(MANUAL.read_text(encoding="utf-8")).get("events", []):
+        out.append({
+            "name": e["name"], "norm": _norm(e["name"]), "date": e["date"],
+            "kind": e.get("kind", "signing"), "club": e.get("club"),
+            "length": e.get("length"), "end_year": e.get("end_year"),
+            "end_estimated": bool(e.get("end_estimated", False)),
+            "reporter": e.get("reporter"), "source_url": e.get("source_url"),
+            "manual": True, "current": bool(e.get("current", False)),
+        })
+    return out
+
+
 def main():
     events = fetch_all()
+    manual = load_manual()
+    # manual entries win on the same (player, date) so corrections override
+    seen = {(e["norm"], e["date"]) for e in manual}
+    events = [e for e in events if (e["norm"], e["date"]) not in seen] + manual
+    events.sort(key=lambda e: e["date"])
     payload = {
         "source": "AFLRATINGS — AFL Trade News",
         "source_url": "https://aflratings.com.au/category/afl-trade-news/",

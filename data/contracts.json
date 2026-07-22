@@ -3,7 +3,7 @@
  "source_url": "https://aflratings.com.au/category/afl-trade-news/",
  "attribution": "Contract & movement events compiled by AFLRATINGS from public reporting; each event links to its post and cites the breaking reporter. The AFL does not disclose contract terms — no dollar figures are tracked.",
  "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
- "count": 392,
+ "count": 393,
  "events": [
   {
    "name": "2021 AFL Draft: All the Picks",
@@ -4432,6 +4432,20 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2025/11/25/harry-schoenberg-joins-west-coast/"
+  },
+  {
+   "name": "Jarman Impey",
+   "norm": "jarmanimpey",
+   "date": "2026-05-22",
+   "kind": "extension",
+   "club": "HAW",
+   "length": 3,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": "Hawthorn FC",
+   "source_url": "https://www.hawthornfc.com.au/news/2039261/impey-extends",
+   "manual": true,
+   "current": true
   },
   {
    "name": "Billy Frampton - COL",
