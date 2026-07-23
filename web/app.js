@@ -1506,6 +1506,31 @@ const AA_FIELD = [
 const AA_BENCH = ["Interchange", "Interchange", "Interchange", "Interchange"];
 const AA_SLOTS = [...AA_FIELD.flat(), ...AA_BENCH];   // 22, indexed field-then-bench
 const lastName = n => String(n || "").split(" ").slice(-1)[0];
+// which Champion Data positions can fill each slot (null = any, for bench)
+const AA_ELIG = {
+  "Full forward": ["KEY_FORWARD"], "Centre half-forward": ["KEY_FORWARD"],
+  "Forward pocket": ["MEDIUM_FORWARD", "KEY_FORWARD"], "Half-forward flank": ["MEDIUM_FORWARD", "MIDFIELDER_FORWARD"],
+  "Wing": ["MIDFIELDER", "MIDFIELDER_FORWARD"], "Centre": ["MIDFIELDER"],
+  "Ruck": ["RUCK"], "Ruck-rover": ["MIDFIELDER"], "Rover": ["MIDFIELDER", "MIDFIELDER_FORWARD"],
+  "Full back": ["KEY_DEFENDER"], "Centre half-back": ["KEY_DEFENDER"],
+  "Back pocket": ["MEDIUM_DEFENDER", "KEY_DEFENDER"], "Half-back flank": ["MEDIUM_DEFENDER"],
+  "Interchange": null,
+};
+// fill specialists (ruck, keys, centre) first, flanks/pockets next, bench last
+const AA_FILL_ORDER = [9, 1, 4, 16, 13, 7, 6, 8, 10, 11, 3, 5, 12, 14, 0, 2, 15, 17, 18, 19, 20, 21];
+function autoPickTeam(pool) {
+  const byPos = {};                       // pool is already rating-sorted (CD order)
+  pool.forEach(p => { if (p.position) (byPos[p.position] = byPos[p.position] || []).push(p); });
+  const used = new Set(), picks = Array(22).fill(null);
+  for (const i of AA_FILL_ORDER) {
+    const elig = AA_ELIG[AA_SLOTS[i]];
+    let cand;
+    if (elig) for (const pos of elig) { cand = (byPos[pos] || []).find(p => !used.has(p.name)); if (cand) break; }
+    if (!cand) cand = pool.find(p => !used.has(p.name));   // interchange / fallback: best remaining
+    if (cand) { picks[i] = cand; used.add(cand.name); }
+  }
+  return picks;
+}
 const decodeTeam = () => {
   const m = location.hash.match(/[?&]a=([^&]+)/);
   if (m) { try { return JSON.parse(decodeURIComponent(escape(atob(m[1].replace(/-/g, "+").replace(/_/g, "/"))))); } catch { /* fall through */ } }
@@ -1517,7 +1542,7 @@ async function aaTeamView() {
   const ratings = await api("/api/ratings?limit=812");
   const clubs = await api("/clubs");
   const colorOf = ab => (clubs.find(c => c.abbreviation === ab) || {}).primary_color || "#555";
-  const pool = ratings.ratings.map(r => ({ name: r.name, abbr: CD_TEAM[r.team] || r.team, rating: r.rating, rank: r.rank, player_id: r.player_id }));
+  const pool = ratings.ratings.map(r => ({ name: r.name, abbr: CD_TEAM[r.team] || r.team, rating: r.rating, rank: r.rank, player_id: r.player_id, position: r.position }));
   const byName = Object.fromEntries(pool.map(p => [p.name, p]));
 
   let state = decodeTeam() || { title: "My All-Australian Team", picks: [] };
@@ -1550,6 +1575,7 @@ async function aaTeamView() {
           </div>
           <div class="aabench"><p class="eyebrow" style="margin:0 0 6px">Interchange</p><div class="aaline bench">${AA_BENCH.map(slot).join("")}</div></div>
           <div class="feature-ctas" style="margin-top:16px">
+            <button class="cta quiet" id="aa-auto" title="Fill with the highest-rated player in each position">✨ Auto-pick top-rated</button>
             <button class="cta" id="aa-save" ${filled ? "" : "disabled"}>Download team</button>
             <button class="cta quiet" id="aa-share" ${filled ? "" : "disabled"}>Share</button>
             <button class="cta quiet" id="aa-reset">Reset</button>
@@ -1585,6 +1611,11 @@ async function aaTeamView() {
     document.getElementById("aa-reset").addEventListener("click", () => {
       state = { title: "My All-Australian Team", picks: Array(22).fill(null) }; selected = null;
       save(); location.hash = "#/players/team"; render();
+    });
+    document.getElementById("aa-auto").addEventListener("click", () => {
+      state.picks = autoPickTeam(pool);
+      if (!state.title || state.title === "My All-Australian Team") state.title = "Team of the Year (by rating)";
+      selected = null; save(); render();
     });
     document.getElementById("aa-save").addEventListener("click", () => downloadTeam(state, colorOf));
     document.getElementById("aa-share").addEventListener("click", () => shareTeam(state, colorOf));
