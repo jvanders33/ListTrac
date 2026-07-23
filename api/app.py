@@ -302,9 +302,10 @@ def player(player_id: int):
     club_ab = (profile.get("club_abbrev") or "").upper()
     contracts = _contracts_by_name()
     events = contracts.get("_by_name", {}).get(key, [])
-    # drop a same-name player's confirmed signing (club-tagged current events
-    # must match this player's club); untagged historical events stay
-    events = [e for e in events if not (e.get("club") and (e.get("current") or e.get("afl_official") or e.get("manual"))
+    # guard against same-name collisions: an auto-matched (AFL.com.au) signing
+    # tagged to another club is likely a different player of the same name.
+    # Hand-curated events are trusted (a player's own former-club history stays).
+    events = [e for e in events if not (e.get("club") and e.get("afl_official") and not e.get("manual")
                                         and e["club"].upper() != club_ab)]
     profile["contract_events"] = events
     profile["contract_source"] = contracts.get("_meta") if events else None

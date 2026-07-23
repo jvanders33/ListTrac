@@ -11,6 +11,30 @@
    "current": true,
    "reporter": "Hawthorn FC",
    "source_url": "https://www.hawthornfc.com.au/news/2039261/impey-extends"
+  },
+  {
+   "name": "Jack Gunston", "date": "2022-10-12", "kind": "signing", "club": "BRI",
+   "length": 2, "end_year": 2024, "end_estimated": true, "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1052188/veteran-brisbane-lions-forward-jack-gunston-wants-trade-back-to-hawthorn-hawks",
+   "note": "Left Hawthorn (211 games, 3 flags) as an unrestricted free agent to join Brisbane."
+  },
+  {
+   "name": "Jack Gunston", "date": "2023-10-13", "kind": "signing", "club": "HAW",
+   "length": 1, "end_year": 2024, "end_estimated": true, "reporter": "Hawthorn FC",
+   "source_url": "https://www.hawthornfc.com.au/news/1453917/gunston-back-in-brown-and-gold",
+   "note": "Traded back to Hawthorn after one season at Brisbane."
+  },
+  {
+   "name": "Jack Gunston", "date": "2025-08-20", "kind": "extension", "club": "HAW",
+   "length": 1, "end_year": 2026, "end_estimated": true, "reporter": "Hawthorn FC",
+   "source_url": "https://www.hawthornfc.com.au/news/1870460/gunston-to-go-on",
+   "note": "One-year deal for a 17th season (2026)."
+  },
+  {
+   "name": "Jack Gunston", "date": "2026-07-10", "kind": "extension", "club": "HAW",
+   "length": 1, "end_year": 2027, "current": true, "end_estimated": true, "reporter": "Hawthorn FC",
+   "source_url": "https://www.hawthornfc.com.au/news/2077064/gunston-going-around-again-in-2027",
+   "note": "One-year deal for an 18th season (2027) after a career-best, All-Australian 2026."
   }
  ]
 }

@@ -3,7 +3,7 @@
  "source_url": "https://www.afl.com.au/news",
  "attribution": "Contract & movement events from the AFL's own content API and AFLRATINGS' reporting, with hand-verified corrections; each event links to its source. The AFL does not disclose contract terms — no dollar figures are tracked.",
  "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
- "count": 380,
+ "count": 397,
  "events": [
   {
    "name": "2021 AFL Draft: All the Picks",
@@ -486,6 +486,18 @@
    "source_url": "https://aflratings.com.au/2022/03/09/contract-updates-west-coast/"
   },
   {
+   "name": "Contract Updates: Port Adelaide",
+   "norm": "contractupdatesportadelaide",
+   "date": "2022-03-10",
+   "kind": "extension",
+   "club": "PA",
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": true,
+   "reporter": "Port",
+   "source_url": "https://aflratings.com.au/2022/03/10/contract-updates-port-adelaide/"
+  },
+  {
    "name": "Ben King",
    "norm": "benking",
    "date": "2022-03-10",
@@ -496,6 +508,18 @@
    "end_estimated": true,
    "reporter": "Sam Edmund",
    "source_url": "https://aflratings.com.au/2022/03/10/contract-update-ben-king-2/"
+  },
+  {
+   "name": "Contract Updates: Brisbane",
+   "norm": "contractupdatesbrisbane",
+   "date": "2022-03-11",
+   "kind": "extension",
+   "club": "BRI",
+   "length": 1,
+   "end_year": 2023,
+   "end_estimated": true,
+   "reporter": "Brisbane",
+   "source_url": "https://aflratings.com.au/2022/03/11/contract-updates-brisbane/"
   },
   {
    "name": "Contract Updates: Port Adelaide",
@@ -546,6 +570,18 @@
    "source_url": "https://aflratings.com.au/2022/03/22/contract-update-logan-mcdonald/"
   },
   {
+   "name": "Contract Updates: Carlton",
+   "norm": "contractupdatescarlton",
+   "date": "2022-03-28",
+   "kind": "extension",
+   "club": null,
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": true,
+   "reporter": "Carlton",
+   "source_url": "https://aflratings.com.au/2022/03/28/contract-updates-carlton/"
+  },
+  {
    "name": "Ned Moyle",
    "norm": "nedmoyle",
    "date": "2022-03-31",
@@ -570,6 +606,18 @@
    "source_url": "https://aflratings.com.au/2022/04/01/contract-update-jack-carroll/"
   },
   {
+   "name": "Contract Updates: Collingwood",
+   "norm": "contractupdatescollingwood",
+   "date": "2022-04-05",
+   "kind": "extension",
+   "club": "COL",
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": false,
+   "reporter": "Collingwood",
+   "source_url": "https://aflratings.com.au/2022/04/05/contract-update-collingwood/"
+  },
+  {
    "name": "Sam Durham",
    "norm": "samdurham",
    "date": "2022-04-05",
@@ -580,6 +628,18 @@
    "end_estimated": false,
    "reporter": "Essendon",
    "source_url": "https://aflratings.com.au/2022/04/05/contract-update-sam-durham/"
+  },
+  {
+   "name": "Contract Updates: Collingwood",
+   "norm": "contractupdatescollingwood",
+   "date": "2022-04-06",
+   "kind": "extension",
+   "club": "COL",
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": false,
+   "reporter": "Collingwood",
+   "source_url": "https://aflratings.com.au/2022/04/06/contract-updates-collingwood/"
   },
   {
    "name": "Connor Budarick",
@@ -628,6 +688,18 @@
    "end_estimated": false,
    "reporter": "Essendon",
    "source_url": "https://aflratings.com.au/2022/04/12/contract-update-jayden-laverde/"
+  },
+  {
+   "name": "Contract Updates: GWS Giants",
+   "norm": "contractupdatesgwsgiants",
+   "date": "2022-04-13",
+   "kind": "extension",
+   "club": "GWS",
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": false,
+   "reporter": "GWS",
+   "source_url": "https://aflratings.com.au/2022/04/13/contract-updates-gws-giants/"
   },
   {
    "name": "Mac Andrew",
@@ -930,6 +1002,18 @@
    "source_url": "https://aflratings.com.au/2022/06/16/contract-update-bailey-dale/"
   },
   {
+   "name": "Contract Updates: Western Bulldogs",
+   "norm": "contractupdateswesternbulldogs",
+   "date": "2022-06-22",
+   "kind": "extension",
+   "club": "WB",
+   "length": 1,
+   "end_year": 2023,
+   "end_estimated": true,
+   "reporter": "Mitch Cleary",
+   "source_url": "https://aflratings.com.au/2022/06/22/contract-updates-western-bulldogs/"
+  },
+  {
    "name": "Conor Nash",
    "norm": "conornash",
    "date": "2022-06-22",
@@ -1218,18 +1302,6 @@
    "source_url": "https://aflratings.com.au/2022/07/12/contract-update-taylor-walker/"
   },
   {
-   "name": "Contract Updates: GWS Giants",
-   "norm": "contractupdatesgwsgiants",
-   "date": "2022-07-14",
-   "kind": "extension",
-   "club": "GWS",
-   "length": 2,
-   "end_year": 2024,
-   "end_estimated": false,
-   "reporter": "GWS",
-   "source_url": "https://aflratings.com.au/2022/07/14/contract-updates-gws-giants-2/"
-  },
-  {
    "name": "St Kilda Update: Jarryn Geary",
    "norm": "stkildaupdatejarryngeary",
    "date": "2022-07-14",
@@ -1240,6 +1312,18 @@
    "end_estimated": false,
    "reporter": "St Kilda",
    "source_url": "https://aflratings.com.au/2022/07/14/st-kilda-update-jarryn-geary-2/"
+  },
+  {
+   "name": "Contract Updates: GWS Giants",
+   "norm": "contractupdatesgwsgiants",
+   "date": "2022-07-14",
+   "kind": "extension",
+   "club": "GWS",
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": false,
+   "reporter": "GWS",
+   "source_url": "https://aflratings.com.au/2022/07/14/contract-updates-gws-giants-2/"
   },
   {
    "name": "Josh Dunkley",
@@ -1480,6 +1564,18 @@
    "end_estimated": false,
    "reporter": "Josh Gabelich",
    "source_url": "https://aflratings.com.au/2022/08/03/contract-update-josh-battle/"
+  },
+  {
+   "name": "Contract Updates: Port Adelaide",
+   "norm": "contractupdatesportadelaide",
+   "date": "2022-08-04",
+   "kind": "extension",
+   "club": "PA",
+   "length": 1,
+   "end_year": 2023,
+   "end_estimated": false,
+   "reporter": "Port",
+   "source_url": "https://aflratings.com.au/2022/08/04/contract-updates-port-adelaide-3/"
   },
   {
    "name": "Brandan Parfitt",
@@ -1794,6 +1890,18 @@
    "source_url": "https://aflratings.com.au/2022/08/26/list-change-update-carlton/"
   },
   {
+   "name": "Hawthorn Update: Karl Amon",
+   "norm": "hawthornupdatekarlamon",
+   "date": "2022-08-26",
+   "kind": "signing",
+   "club": "HAW",
+   "length": 4,
+   "end_year": 2026,
+   "end_estimated": true,
+   "reporter": "Hawthorn Mitch",
+   "source_url": "https://aflratings.com.au/2022/08/26/hawthorn-update-karl-amon/"
+  },
+  {
    "name": "Joel Smith",
    "norm": "joelsmith",
    "date": "2022-08-26",
@@ -1804,6 +1912,18 @@
    "end_estimated": false,
    "reporter": "Melbourne",
    "source_url": "https://aflratings.com.au/2022/08/26/contract-update-joel-smith/"
+  },
+  {
+   "name": "Contract Updates: Richmond",
+   "norm": "contractupdatesrichmond",
+   "date": "2022-08-27",
+   "kind": "extension",
+   "club": "RIC",
+   "length": 2,
+   "end_year": 2025,
+   "end_estimated": false,
+   "reporter": "Richmond",
+   "source_url": "https://aflratings.com.au/2022/08/27/contract-updates-richmond-2/"
   },
   {
    "name": "Retirement Updates: Sydney",
@@ -1988,14 +2108,14 @@
   {
    "name": "Contract Updates: Carlton",
    "norm": "contractupdatescarlton",
-   "date": "2022-09-07",
+   "date": "2022-09-06",
    "kind": "extension",
    "club": "CAR",
    "length": 2,
    "end_year": 2024,
    "end_estimated": false,
    "reporter": "Carlton",
-   "source_url": "https://aflratings.com.au/2022/09/07/contract-updates-carlton-3/"
+   "source_url": "https://aflratings.com.au/2022/09/06/contract-updates-carlton-2/"
   },
   {
    "name": "Bailey Banfield",
@@ -2044,6 +2164,18 @@
    "end_estimated": false,
    "reporter": "Sydney",
    "source_url": "https://aflratings.com.au/2022/09/07/contract-update-robbie-fox/"
+  },
+  {
+   "name": "Contract Updates: Carlton",
+   "norm": "contractupdatescarlton",
+   "date": "2022-09-07",
+   "kind": "extension",
+   "club": "CAR",
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": false,
+   "reporter": "Carlton",
+   "source_url": "https://aflratings.com.au/2022/09/07/contract-updates-carlton-3/"
   },
   {
    "name": "Richmond Update: Jacob Hopper",
@@ -2550,16 +2682,16 @@
    "source_url": "https://aflratings.com.au/2022/09/27/contract-update-dayne-zorko/"
   },
   {
-   "name": "Contract Updates: Brisbane",
-   "norm": "contractupdatesbrisbane",
-   "date": "2022-09-28",
+   "name": "Sep. 27 Updates",
+   "norm": "sepupdates",
+   "date": "2022-09-27",
    "kind": "extension",
-   "club": "BRI",
+   "club": null,
    "length": 1,
    "end_year": 2023,
-   "end_estimated": false,
-   "reporter": "Brisbane",
-   "source_url": "https://aflratings.com.au/2022/09/28/contract-updates-brisbane-2/"
+   "end_estimated": true,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2022/09/27/afl-trade-news-sep-27-updates/"
   },
   {
    "name": "Jaxon Prior",
@@ -2598,6 +2730,18 @@
    "source_url": "https://aflratings.com.au/2022/09/28/contract-updates-hawthorn/"
   },
   {
+   "name": "Contract Updates: Brisbane",
+   "norm": "contractupdatesbrisbane",
+   "date": "2022-09-28",
+   "kind": "extension",
+   "club": "BRI",
+   "length": 1,
+   "end_year": 2023,
+   "end_estimated": false,
+   "reporter": "Brisbane",
+   "source_url": "https://aflratings.com.au/2022/09/28/contract-updates-brisbane-2/"
+  },
+  {
    "name": "Geelong Update: Joel Selwood",
    "norm": "geelongupdatejoelselwood",
    "date": "2022-09-28",
@@ -2622,16 +2766,16 @@
    "source_url": "https://aflratings.com.au/2022/09/28/list-change-update-geelong/"
   },
   {
-   "name": "Sep. 29 Updates",
+   "name": "Sep. 28 Updates",
    "norm": "sepupdates",
-   "date": "2022-09-29",
-   "kind": "retire",
+   "date": "2022-09-28",
+   "kind": "delist",
    "club": null,
-   "length": 3,
+   "length": 1,
    "end_year": 2023,
    "end_estimated": false,
    "reporter": null,
-   "source_url": "https://aflratings.com.au/2022/09/29/afl-trade-news-sep-29-updates/"
+   "source_url": "https://aflratings.com.au/2022/09/28/afl-trade-news-sep-28-updates/"
   },
   {
    "name": "Brisbane Update: Tom Berry",
@@ -2670,16 +2814,16 @@
    "source_url": "https://aflratings.com.au/2022/09/29/contract-updates-st-kilda-2/"
   },
   {
-   "name": "Hawthorn Update: Karl Amon",
-   "norm": "hawthornupdatekarlamon",
-   "date": "2022-09-30",
-   "kind": "signing",
-   "club": "HAW",
-   "length": 4,
-   "end_year": 2026,
-   "end_estimated": true,
-   "reporter": "Hawthorn",
-   "source_url": "https://aflratings.com.au/2022/09/30/hawthorn-update-karl-amon-2/"
+   "name": "Sep. 29 Updates",
+   "norm": "sepupdates",
+   "date": "2022-09-29",
+   "kind": "retire",
+   "club": null,
+   "length": 3,
+   "end_year": 2023,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2022/09/29/afl-trade-news-sep-29-updates/"
   },
   {
    "name": "List Change Update: West Coast",
@@ -2728,6 +2872,18 @@
    "end_estimated": false,
    "reporter": "Callum Twomey",
    "source_url": "https://aflratings.com.au/2022/09/30/contract-update-tom-papley/"
+  },
+  {
+   "name": "Hawthorn Update: Karl Amon",
+   "norm": "hawthornupdatekarlamon",
+   "date": "2022-09-30",
+   "kind": "signing",
+   "club": "HAW",
+   "length": 4,
+   "end_year": 2026,
+   "end_estimated": true,
+   "reporter": "Hawthorn",
+   "source_url": "https://aflratings.com.au/2022/09/30/hawthorn-update-karl-amon-2/"
   },
   {
    "name": "List Change Update: Sydney",
@@ -3342,6 +3498,20 @@
    "source_url": "https://aflratings.com.au/2022/10/12/afl-trade-news-oct-12-updates/"
   },
   {
+   "name": "Jack Gunston",
+   "norm": "jackgunston",
+   "date": "2022-10-12",
+   "kind": "signing",
+   "club": "BRI",
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": true,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1052188/veteran-brisbane-lions-forward-jack-gunston-wants-trade-back-to-hawthorn-hawks",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "List Change Update: Melbourne",
    "norm": "listchangeupdatemelbourne",
    "date": "2022-10-13",
@@ -3666,6 +3836,20 @@
    "source_url": "https://aflratings.com.au/2022/11/18/brisbane-update-conor-mckenna/"
   },
   {
+   "name": "Jack Gunston",
+   "norm": "jackgunston",
+   "date": "2023-10-13",
+   "kind": "signing",
+   "club": "HAW",
+   "length": 1,
+   "end_year": 2024,
+   "end_estimated": true,
+   "reporter": "Hawthorn FC",
+   "source_url": "https://www.hawthornfc.com.au/news/1453917/gunston-back-in-brown-and-gold",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Scott Pendlebury",
    "norm": "scottpendlebury",
    "date": "2025-06-19",
@@ -3688,6 +3872,20 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2025/06/22/afl-trade-news-marcus-bontempelli/"
+  },
+  {
+   "name": "Jack Gunston",
+   "norm": "jackgunston",
+   "date": "2025-08-20",
+   "kind": "extension",
+   "club": "HAW",
+   "length": 1,
+   "end_year": 2026,
+   "end_estimated": true,
+   "reporter": "Hawthorn FC",
+   "source_url": "https://www.hawthornfc.com.au/news/1870460/gunston-to-go-on",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Rowan Marshall",
@@ -4542,6 +4740,20 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2026/07/01/afl-trade-news-lachie-ash/"
+  },
+  {
+   "name": "Jack Gunston",
+   "norm": "jackgunston",
+   "date": "2026-07-10",
+   "kind": "extension",
+   "club": "HAW",
+   "length": 1,
+   "end_year": 2027,
+   "end_estimated": true,
+   "reporter": "Hawthorn FC",
+   "source_url": "https://www.hawthornfc.com.au/news/2077064/gunston-going-around-again-in-2027",
+   "manual": true,
+   "current": true
   },
   {
    "name": "Bailey Williams Contract News",

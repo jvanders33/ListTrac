@@ -178,8 +178,9 @@ def load_afl_signings() -> list[dict]:
 
 
 def _dedupe_key(e):
-    # same signing from two feeds (same player + end year) collapses to one
-    return (e["norm"], e["end_year"]) if e.get("end_year") else (e["norm"], e["date"])
+    # collapse the SAME event reported the same day; distinct-date signings all
+    # survive (a career can have several deals with the same end year)
+    return (e["norm"], e["date"])
 
 
 def main():
