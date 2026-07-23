@@ -943,7 +943,7 @@ def _splits_index() -> dict:
     if not _splits_cache and SPLITS_PATH.exists():
         data = json.loads(SPLITS_PATH.read_text(encoding="utf-8"))
         _splits_cache["_players"] = data.get("players", {})
-        _splits_cache["_meta"] = {k: data[k] for k in ("seasons", "min_games_vs", "attribution") if k in data}
+        _splits_cache["_meta"] = {k: data[k] for k in ("seasons", "min_games_vs", "min_games_venue", "attribution") if k in data}
     return _splits_cache
 
 

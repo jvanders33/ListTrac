@@ -31,6 +31,11 @@ OUT = Path(__file__).resolve().parent.parent / "data" / "splits_2026.json"
 
 SEASONS = [2022, 2023, 2024, 2025, 2026]   # window for the splits
 MIN_GAMES_VS = 2                            # opponents met fewer times are dropped
+MIN_GAMES_VENUE = 4                         # venues visited fewer times are dropped
+
+SQUIGGLE = "https://api.squiggle.com.au/"
+# Squiggle abbreviation -> our club abbreviation (most match; three differ)
+SQ_FIX = {"NOR": "NM", "POR": "PA", "WBD": "WB"}
 
 # Champion Data team abbreviation -> our club abbreviation
 CD_ABBR = {
@@ -60,12 +65,37 @@ def fetch_round(year: int, n: int, token: str):
     return r.json().get("players", []) if r.status_code == 200 else []
 
 
+def squiggle_teammap() -> dict:
+    """Squiggle team full-name -> our club abbreviation."""
+    r = requests.get(f"{SQUIGGLE}?q=teams", headers={"User-Agent": H["User-Agent"]}, timeout=20)
+    out = {}
+    for t in r.json().get("teams", []):
+        a = SQ_FIX.get(t.get("abbrev"), t.get("abbrev"))
+        if t.get("name") and a:
+            out[t["name"]] = a
+    return out
+
+
+def fetch_fixture(year: int, tmap: dict) -> dict:
+    """Squiggle fixture -> {(round, frozenset(home,away)): (venue, home_abbr)}.
+    Rounds align with the CD feed (both number Opening Round 0)."""
+    r = requests.get(f"{SQUIGGLE}?q=games;year={year}", headers={"User-Agent": H["User-Agent"]}, timeout=25)
+    fx = {}
+    for g in r.json().get("games", []):
+        h, a, venue = tmap.get(g.get("hteam")), tmap.get(g.get("ateam")), g.get("venue")
+        if h and a and venue:
+            fx[(g["round"], frozenset((h, a)))] = (venue, h)
+    return fx
+
+
 def build():
     token = mint()
-    # accumulator: name -> {"name", opp_abbr -> [ (disp, af, rating, goals) ]}
+    tmap = squiggle_teammap()
+    # accumulator: name -> {"name", opp->[lines], "ha":{home,away}->[lines], "venue":venue->[lines]}
     games: dict[str, dict] = {}
     seasons_seen = set()
     for year in SEASONS:
+        fx = fetch_fixture(year, tmap)
         empty_streak = 0
         for n in range(0, 31):
             players = fetch_round(year, n, token)
@@ -79,38 +109,48 @@ def build():
             seasons_seen.add(year)
             for p in played:
                 d, t = p["playerDetails"], p.get("totals", {})
-                opp = (p.get("opponent") or {}).get("teamAbbr")
-                opp = CD_ABBR.get(opp, opp)
+                team = CD_ABBR.get((p.get("team") or {}).get("teamAbbr"))
+                opp = CD_ABBR.get((p.get("opponent") or {}).get("teamAbbr"))
                 if not opp:
                     continue
-                nm = _norm(f"{d['givenName']} {d['surname']}")
-                rec = games.setdefault(nm, {"name": f"{d['givenName']} {d['surname']}", "opp": {}})
-                rec["opp"].setdefault(opp, []).append((
+                line = (
                     int(t.get("disposals") or 0),
                     int(t.get("dreamTeamPoints") or 0) or None,
                     round(t["ratingPoints"], 1) if t.get("ratingPoints") is not None else None,
                     int(t.get("goals") or 0),
-                ))
+                )
+                nm = _norm(f"{d['givenName']} {d['surname']}")
+                rec = games.setdefault(nm, {"name": f"{d['givenName']} {d['surname']}",
+                                            "opp": {}, "ha": {"home": [], "away": []}, "venue": {}})
+                rec["opp"].setdefault(opp, []).append(line)
+                # venue + home/away from the Squiggle fixture (round-aligned)
+                fxrec = fx.get((n, frozenset((team, opp)))) if team else None
+                if fxrec:
+                    venue, home = fxrec
+                    rec["ha"]["home" if home == team else "away"].append(line)
+                    rec["venue"].setdefault(venue, []).append(line)
             time.sleep(0.3)
-        print(f"  {year}: done ({len([1 for s in seasons_seen if s == year])})")
+        print(f"  {year}: {sum(1 for s in seasons_seen if s == year)} · fixture {len(fx)} games")
 
     def agg(lines):
-        n = len(lines)
         def m(i):
             v = [x[i] for x in lines if x[i] is not None]
             return round(sum(v) / len(v), 1) if v else None
-        return {"games": n, "disp": m(0), "af": m(1), "rating": m(2), "goals": m(3)}
+        return {"games": len(lines), "disp": m(0), "af": m(1), "rating": m(2), "goals": m(3)}
 
     out = {}
     for nm, rec in games.items():
         all_lines = [ln for lines in rec["opp"].values() for ln in lines]
-        vs = {opp: agg(lines) for opp, lines in rec["opp"].items()
-              if len(lines) >= MIN_GAMES_VS}
+        vs = {opp: agg(lines) for opp, lines in rec["opp"].items() if len(lines) >= MIN_GAMES_VS}
         if not vs:
             continue
-        out[nm] = {"name": rec["name"], "overall": agg(all_lines), "vs": vs}
+        ha = {k: agg(v) for k, v in rec["ha"].items() if v}
+        venues = {v: agg(lines) for v, lines in rec["venue"].items() if len(lines) >= MIN_GAMES_VENUE}
+        out[nm] = {"name": rec["name"], "overall": agg(all_lines), "vs": vs,
+                   "home_away": ha or None, "by_venue": venues or None}
     return {"seasons": sorted(seasons_seen), "min_games_vs": MIN_GAMES_VS,
-            "attribution": "Vs-opponent splits from AFL/Champion Data round-level data.",
+            "min_games_venue": MIN_GAMES_VENUE,
+            "attribution": "Vs-opponent, home/away and venue splits from AFL/Champion Data round-level data, with match venues from Squiggle.",
             "count": len(out), "players": out}
 
 

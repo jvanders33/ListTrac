@@ -437,6 +437,15 @@ footer.pagefoot {
 .brownlow .bl-top td { background: var(--card-2); }
 .brownlow .bl-top b { color: var(--accent); }
 
+/* home/away split */
+.ha-split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+.ha-col { padding: 12px; border-radius: 10px; background: var(--card-2); }
+.ha-lab { font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+.ha-stats { display: flex; gap: 14px; }
+.ha-stats span { display: inline-flex; flex-direction: column; }
+.ha-stats b { font-size: 18px; font-variant-numeric: tabular-nums; }
+.ha-stats small { font-size: 10px; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.03em; }
+
 /* vs-opponent splits */
 .splits .sp-base td { border-top: 2px solid var(--line); border-bottom: 2px solid var(--line); background: var(--card-2); }
 .splits .sp-hi { color: var(--ok); font-weight: 700; }

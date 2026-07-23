@@ -2437,6 +2437,39 @@ function splitsCard(s) {
     <p class="thin" style="font-size:11px;margin-top:8px">${esc(s.attribution || "")} Opponents met fewer than ${s.min_games_vs || 2} times in the window are omitted.</p>
   </div>`;
 }
+/* Home/away + venue splits — does a player travel well, and which grounds suit?
+   Home vs away side by side, then per-venue rows, all coloured vs his overall. */
+function venueSplitsCard(s) {
+  const ha = s.home_away, venues = s.by_venue || {};
+  const venueList = Object.entries(venues);
+  if (!ha && venueList.length < 2) return "";
+  const base = s.overall || {};
+  const col = (v, b) => v == null ? "—" : b == null ? v
+    : `<span class="${v >= b * 1.08 ? "sp-hi" : v <= b * 0.92 ? "sp-lo" : ""}">${v}</span>`;
+  const haBlock = ha ? `<div class="ha-split">
+    ${["home", "away"].filter(k => ha[k]).map(k => `<div class="ha-col">
+      <div class="ha-lab">${k === "home" ? "Home" : "Away"} <span class="thin">· ${ha[k].games}g</span></div>
+      <div class="ha-stats">
+        <span><b>${col(ha[k].disp, base.disp)}</b><small>disp</small></span>
+        <span><b>${col(ha[k].af, base.af)}</b><small>AF</small></span>
+        <span><b>${col(ha[k].rating, base.rating)}</b><small>rtg</small></span>
+      </div></div>`).join("")}
+  </div>` : "";
+  const rows = venueList.map(([v, d]) => ({ v, ...d })).sort((a, b) => b.games - a.games);
+  return `<div class="card">
+    <h3>Home, away &amp; venue <span class="thin" style="font-weight:400">· ${s.seasons ? s.seasons[0] + "–" + s.seasons[s.seasons.length - 1] : ""}</span></h3>
+    <p class="sub">Does he travel? Green beats his own average, red falls short.</p>
+    ${haBlock}
+    ${rows.length ? `<div class="tablewrap"><table class="splits" style="margin-top:12px">
+      <thead><tr><th>Venue</th><th class="num">G</th><th class="num">Disp</th><th class="num">AF</th><th class="num">Rtg</th></tr></thead>
+      <tbody>${rows.map(r => `<tr>
+        <td>${esc(r.v)}</td><td class="num thin">${r.games}</td>
+        <td class="num">${col(r.disp, base.disp)}</td><td class="num">${col(r.af, base.af)}</td>
+        <td class="num">${col(r.rating, base.rating)}</td></tr>`).join("")}</tbody>
+    </table></div>` : ""}
+    <p class="thin" style="font-size:11px;margin-top:8px">Venues visited fewer than ${s.min_games_venue || 4} times omitted. Venues via Squiggle.</p>
+  </div>`;
+}
 function formCard(form, sc) {
   const games = form.games || [];
   if (!games.length) return "";
@@ -2564,6 +2597,7 @@ async function playerView(id) {
         ${p.scouting ? scoutingCard(p.scouting, id) : ""}
         ${p.role ? roleCard(p.role) : ""}
         ${p.splits ? splitsCard(p.splits) : ""}
+        ${p.splits ? venueSplitsCard(p.splits) : ""}
         ${p.rating_history && p.rating_history.length ? `
         <div class="card">
           <h3>AFL Player Rating history</h3>
