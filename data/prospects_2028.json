@@ -5,80 +5,39 @@
  "sources": {
   "mvps": "https://central.rookieme.com/afl/2026/07/20/remember-the-names-2026-afl-under-16-mvps/",
   "afl": "https://www.afl.com.au/stats",
-  "rankings_note": "Pathway pool: AFL/Champion Data (Coates Talent League + U18 Championships) by DOB, plus curated All-Australian/award honours."
+  "rankings_note": "Pathway pool: AFL/Champion Data (Coates Talent League + U18 Championships) by DOB, plus curated All-Australian/award honours.",
+  "rankings_top10": "Code Sports / Herald Sun — 2026 U16 championships top-10"
  },
  "prospects": [
   {
    "name": "Troy Warner",
    "state_team": "Western Australia",
    "position": "Forward/Midfielder",
-   "rank": 1,
    "award": "Kevin Sheehan Medal (championship MVP)",
-   "source": "curated"
-  },
-  {
-   "name": "Darcy Pearson",
-   "state_team": "Brisbane Academy",
-   "position": "Defender",
-   "rank": 2,
-   "award": "Brisbane Academy MVP",
-   "tie": "Brisbane Academy",
-   "source": "curated"
-  },
-  {
-   "name": "Hunter Weatherley",
-   "state_team": "Gold Coast Academy",
-   "position": "Defender",
-   "rank": 3,
-   "award": "Gold Coast Academy MVP",
-   "tie": "Gold Coast Academy",
-   "source": "curated"
-  },
-  {
-   "name": "Alexander Maher",
-   "state_team": "GWS Academy",
-   "position": "Midfielder",
-   "junior_club": "GWS GIANTS Academy",
-   "games": 3,
-   "source": "afl",
-   "rank": 4,
-   "award": "Giants Academy MVP",
-   "tie": "GWS Academy"
-  },
-  {
-   "name": "Billy Brown",
-   "state_team": "Northern Territory",
-   "position": "Tall defender",
-   "junior_club": "Northern Territory Academy",
-   "games": 3,
-   "source": "afl",
-   "rank": 5,
-   "award": "Northern Territory MVP"
+   "source": "curated",
+   "rank": 1
   },
   {
    "name": "Logan Treverton",
    "state_team": "South Australia",
    "position": "Midfielder",
-   "rank": 6,
    "award": "South Australia MVP",
-   "source": "curated"
+   "source": "curated",
+   "rank": 2
   },
   {
-   "name": "Noah Keam",
-   "state_team": "Sydney Academy",
-   "position": "Midfielder",
-   "rank": 7,
-   "award": "Swans Academy MVP",
-   "tie": "Sydney Academy",
-   "source": "curated"
+   "name": "Jayke Taylor",
+   "source": "curated",
+   "state_team": null,
+   "position": null,
+   "rank": 3
   },
   {
-   "name": "Jordan Stevenson",
-   "state_team": "Tasmania",
-   "position": "Defender",
-   "rank": 8,
-   "award": "Tasmania MVP",
-   "source": "curated"
+   "name": "Chase Whelan",
+   "source": "curated",
+   "state_team": null,
+   "position": null,
+   "rank": 4
   },
   {
    "name": "Eamon Hyde",
@@ -87,16 +46,48 @@
    "junior_club": "Murray Bushrangers",
    "games": 5,
    "source": "afl",
-   "rank": 9,
+   "rank": 5,
    "award": "Vic Country MVP"
+  },
+  {
+   "name": "Zane Rooney",
+   "source": "curated",
+   "state_team": null,
+   "position": null,
+   "rank": 6
+  },
+  {
+   "name": "James Rice",
+   "state_team": "GWS Academy",
+   "position": null,
+   "junior_club": "GWS GIANTS Academy",
+   "games": 3,
+   "source": "afl",
+   "rank": 7
+  },
+  {
+   "name": "Daniel May",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
+   "games": 4,
+   "source": "afl",
+   "rank": 8
   },
   {
    "name": "Louis Grinter",
    "state_team": "Vic Metro",
    "position": "Midfielder",
-   "rank": 10,
    "award": "Vic Metro MVP",
-   "source": "curated"
+   "source": "curated",
+   "rank": 9
+  },
+  {
+   "name": "Jack Holland",
+   "source": "curated",
+   "state_team": null,
+   "position": null,
+   "rank": 10
   },
   {
    "name": "Dex Rizzoli",
@@ -123,20 +114,31 @@
    "source": "afl"
   },
   {
-   "name": "Daniel May",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Geelong Falcons",
-   "games": 4,
-   "source": "afl"
-  },
-  {
    "name": "Xavier Salvana",
    "state_team": "Brisbane Academy",
    "position": null,
    "junior_club": "Brisbane Lions Academy",
    "games": 4,
    "source": "afl"
+  },
+  {
+   "name": "Alexander Maher",
+   "state_team": "GWS Academy",
+   "position": "Midfielder",
+   "junior_club": "GWS GIANTS Academy",
+   "games": 3,
+   "source": "afl",
+   "award": "Giants Academy MVP",
+   "tie": "GWS Academy"
+  },
+  {
+   "name": "Billy Brown",
+   "state_team": "Northern Territory",
+   "position": "Tall defender",
+   "junior_club": "Northern Territory Academy",
+   "games": 3,
+   "source": "afl",
+   "award": "Northern Territory MVP"
   },
   {
    "name": "Harry Metcher",
@@ -148,14 +150,6 @@
   },
   {
    "name": "Hayden Gardiner",
-   "state_team": "GWS Academy",
-   "position": null,
-   "junior_club": "GWS GIANTS Academy",
-   "games": 3,
-   "source": "afl"
-  },
-  {
-   "name": "James Rice",
    "state_team": "GWS Academy",
    "position": null,
    "junior_club": "GWS GIANTS Academy",
@@ -401,6 +395,37 @@
    "junior_club": "Dandenong Stingrays",
    "games": 1,
    "source": "afl"
+  },
+  {
+   "name": "Darcy Pearson",
+   "state_team": "Brisbane Academy",
+   "position": "Defender",
+   "award": "Brisbane Academy MVP",
+   "tie": "Brisbane Academy",
+   "source": "curated"
+  },
+  {
+   "name": "Hunter Weatherley",
+   "state_team": "Gold Coast Academy",
+   "position": "Defender",
+   "award": "Gold Coast Academy MVP",
+   "tie": "Gold Coast Academy",
+   "source": "curated"
+  },
+  {
+   "name": "Jordan Stevenson",
+   "state_team": "Tasmania",
+   "position": "Defender",
+   "award": "Tasmania MVP",
+   "source": "curated"
+  },
+  {
+   "name": "Noah Keam",
+   "state_team": "Sydney Academy",
+   "position": "Midfielder",
+   "award": "Swans Academy MVP",
+   "tie": "Sydney Academy",
+   "source": "curated"
   }
  ]
 }
