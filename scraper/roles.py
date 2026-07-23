@@ -28,6 +28,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SCOUTING = ROOT / "data" / "scouting_2026.json"
+MANUAL = ROOT / "data" / "roles_manual.json"
 OUT = ROOT / "data" / "roles_2026.json"
 
 TOP_N = 8
@@ -152,6 +153,25 @@ def main():
             sec = others[0][1]
         assign[k] = {"role": rk1, "align": round(c1, 3), "conf": conf, "secondary": sec}
 
+    # hand-pinned overrides win over the classifier (football knowledge the raw
+    # output misses). Applied before comps so role comps follow the pinned role.
+    overrides = {}
+    if MANUAL.exists():
+        for o in json.loads(MANUAL.read_text(encoding="utf-8")).get("overrides", []):
+            k = _norm(o["name"])
+            if k not in assign:
+                print(f"  ! override for '{o['name']}' — not in this season's data, skipped")
+                continue
+            if o.get("role") in centroids:
+                assign[k]["role"] = o["role"]
+                assign[k]["conf"] = "high"
+            if "secondary_role" in o:
+                sr = o["secondary_role"]
+                assign[k]["secondary"] = sr if sr in centroids else None
+            assign[k]["manual"] = True
+            assign[k]["manual_note"] = o.get("note")
+            overrides[k] = o["name"]
+
     # role comps: nearest same-role players in z-space
     by_role: dict[str, list[str]] = {}
     for k, a in assign.items():
@@ -178,6 +198,7 @@ def main():
             "role_group": group, "confidence": a["conf"],
             "secondary_role": sec, "secondary_label": ROLES[sec][0] if sec else None,
             "official_position": players[k]["position_label"],
+            "manual": bool(a.get("manual")), "manual_note": a.get("manual_note"),
             "comps": comps,
         }
 

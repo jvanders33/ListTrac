@@ -137,6 +137,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Max Heath",
@@ -181,6 +183,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jayden Short",
@@ -225,6 +229,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Saad El-Hawli",
@@ -269,6 +275,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Alex Neal-Bullen",
@@ -313,6 +321,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachie Jaques",
@@ -357,6 +367,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Taylor Walker",
@@ -401,6 +413,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ben McKay",
@@ -445,6 +459,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mitch Lewis",
@@ -489,6 +505,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Clohesy",
@@ -533,6 +551,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "George Wardlaw",
@@ -577,6 +597,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sullivan Robey",
@@ -621,6 +643,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Kieren Briggs",
@@ -665,6 +689,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Weddle",
@@ -709,6 +735,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Aaron Naughton",
@@ -753,6 +781,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sean Darcy",
@@ -797,6 +827,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Toby Pink",
@@ -841,6 +873,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jayden Laverde",
@@ -885,6 +919,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Touk Miller",
@@ -929,6 +965,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ryan Maric",
@@ -973,6 +1011,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom Liberatore",
@@ -1017,6 +1057,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ben Long",
@@ -1061,6 +1103,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Coffield",
@@ -1105,6 +1149,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Henry",
@@ -1149,6 +1195,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brennan Cox",
@@ -1193,6 +1241,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom Sparrow",
@@ -1237,6 +1287,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jamie Elliott",
@@ -1281,6 +1333,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Steele",
@@ -1325,6 +1379,8 @@
    "secondary_role": "gun_mid",
    "secondary_label": "Elite two-way midfielder",
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Rachele",
@@ -1369,6 +1425,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dion Prestia",
@@ -1413,6 +1471,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mark O'Connor",
@@ -1457,6 +1517,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Durham",
@@ -1501,6 +1563,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Karl Amon",
@@ -1545,6 +1609,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jaxon Prior",
@@ -1589,6 +1655,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Walsh",
@@ -1633,6 +1701,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Pedlar",
@@ -1677,6 +1747,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Justin McInerney",
@@ -1721,6 +1793,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachie Jones",
@@ -1765,6 +1839,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jedd Busslinger",
@@ -1809,6 +1885,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Larkey",
@@ -1853,6 +1931,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Kai Lohmann",
@@ -1897,6 +1977,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jy Simpkin",
@@ -1941,6 +2023,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Matthew Jefferson",
@@ -1985,6 +2069,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bruce Reville",
@@ -2029,6 +2115,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Joel Amartey",
@@ -2073,6 +2161,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brody Mihocek",
@@ -2117,6 +2207,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jackson Mead",
@@ -2161,6 +2253,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Darcy Fort",
@@ -2205,6 +2299,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Kade Chandler",
@@ -2249,6 +2345,8 @@
    "secondary_role": "rebound_def",
    "secondary_label": "Rebounding half-back",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brayden Cook",
@@ -2293,6 +2391,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Heath Chapman",
@@ -2337,6 +2437,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Darcy Fort",
@@ -2381,6 +2483,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Lloyd",
@@ -2425,6 +2529,8 @@
    "secondary_role": "inside_mid",
    "secondary_label": "Contested inside midfielder",
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brodie Grundy",
@@ -2469,6 +2575,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Wade Derksen",
@@ -2513,6 +2621,8 @@
    "secondary_role": "intercept_def",
    "secondary_label": "Intercept key defender",
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Kyle Langford",
@@ -2557,6 +2667,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Changkuoth Jiath",
@@ -2601,6 +2713,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachie Whitfield",
@@ -2645,6 +2759,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Matt Roberts",
@@ -2689,6 +2805,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jayden Laverde",
@@ -2733,6 +2851,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jacob Wehr",
@@ -2777,6 +2897,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Joe Richards",
@@ -2821,6 +2943,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Darcy Fort",
@@ -2865,6 +2989,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Zach Reid",
@@ -2909,6 +3035,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Francis Evans",
@@ -2953,6 +3081,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Isaiah Dudley",
@@ -2997,6 +3127,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Thomas Edwards",
@@ -3041,6 +3173,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Liam Duggan",
@@ -3085,6 +3219,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Ross",
@@ -3129,6 +3265,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bailey Dale",
@@ -3173,6 +3311,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Miles Bergman",
@@ -3217,6 +3357,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Davies-Uniacke",
@@ -3261,6 +3403,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Hamish Davis",
@@ -3305,6 +3449,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Graham",
@@ -3349,6 +3495,8 @@
    "secondary_role": "inside_mid",
    "secondary_label": "Contested inside midfielder",
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jordon Sweet",
@@ -3393,6 +3541,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Davies-Uniacke",
@@ -3437,6 +3587,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Graham",
@@ -3481,6 +3633,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Francis Evans",
@@ -3525,6 +3679,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ed Richards",
@@ -3569,6 +3725,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "James Peatling",
@@ -3613,6 +3771,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Cooper Lord",
@@ -3657,6 +3817,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jye Amiss",
@@ -3701,6 +3863,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dayne Zorko",
@@ -3745,6 +3909,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Andrew McGrath",
@@ -3789,6 +3955,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ben Ainsworth",
@@ -3833,6 +4001,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dan Butler",
@@ -3877,6 +4047,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bailey Humphrey",
@@ -3921,6 +4093,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Blake Howes",
@@ -3965,6 +4139,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "James Peatling",
@@ -4009,6 +4185,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brayden Maynard",
@@ -4053,6 +4231,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom McCartin",
@@ -4097,6 +4277,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Logan Evans",
@@ -4141,6 +4323,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jed Walter",
@@ -4185,6 +4369,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mitch McGovern",
@@ -4229,6 +4415,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "James Jordon",
@@ -4273,6 +4461,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Francis Evans",
@@ -4317,6 +4507,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Connor Idun",
@@ -4361,6 +4553,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Trent Rivers",
@@ -4405,6 +4599,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom Brown",
@@ -4449,6 +4645,8 @@
    "secondary_role": "inside_mid",
    "secondary_label": "Contested inside midfielder",
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Alex Neal-Bullen",
@@ -4493,6 +4691,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Marcus Bontempelli",
@@ -4537,6 +4737,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Aidan Corr",
@@ -4581,6 +4783,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mabior Chol",
@@ -4625,6 +4829,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lloyd Meek",
@@ -4669,6 +4875,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Billy Wilson",
@@ -4713,6 +4921,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bayley Fritsch",
@@ -4757,6 +4967,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Riccardi",
@@ -4798,9 +5010,11 @@
    "role_label": "Elite two-way midfielder",
    "role_group": "MID",
    "confidence": "high",
-   "secondary_role": null,
-   "secondary_label": null,
+   "secondary_role": "small_fwd",
+   "secondary_label": "Pressure small forward",
    "official_position": "Midfielder",
+   "manual": true,
+   "manual_note": "Heavy midfield minutes drive his numbers, but he remains a genuine small-forward threat — the forward craft the mid-heavy output understates.",
    "comps": [
     {
      "name": "Shai Bolton",
@@ -4845,6 +5059,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Christian Moraes",
@@ -4889,6 +5105,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Davies-Uniacke",
@@ -4933,6 +5151,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Liam Reidy",
@@ -4977,6 +5197,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Talor Byrne",
@@ -5021,6 +5243,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jobe Shanahan",
@@ -5065,6 +5289,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Oscar Adams",
@@ -5109,6 +5335,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Rory Lobb",
@@ -5153,6 +5381,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Holman",
@@ -5197,6 +5427,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Alex Pearce",
@@ -5241,6 +5473,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Cameron Zurhaar",
@@ -5285,6 +5519,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Will Ashcroft",
@@ -5329,6 +5565,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Steele",
@@ -5373,6 +5611,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Nankervis",
@@ -5417,6 +5657,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Riccardi",
@@ -5461,6 +5703,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Sinclair",
@@ -5505,6 +5749,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Lalor",
@@ -5549,6 +5795,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Marcus Windhager",
@@ -5593,6 +5841,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dylan Stephens",
@@ -5637,6 +5887,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Riley Bice",
@@ -5681,6 +5933,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "James Peatling",
@@ -5725,6 +5979,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachlan Cowan",
@@ -5769,6 +6025,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Zane Duursma",
@@ -5813,6 +6071,8 @@
    "secondary_role": "inside_mid",
    "secondary_label": "Contested inside midfielder",
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brodie Grundy",
@@ -5857,6 +6117,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jai Newcombe",
@@ -5901,6 +6163,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachlan McNeil",
@@ -5945,6 +6209,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Kennedy",
@@ -5989,6 +6255,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Buku Khamis",
@@ -6033,6 +6301,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Waterman",
@@ -6077,6 +6347,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Archer Day-Wicks",
@@ -6121,6 +6393,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Malcolm Rosas",
@@ -6165,6 +6439,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Oscar McDonald",
@@ -6209,6 +6485,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Will Ashcroft",
@@ -6253,6 +6531,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Will Hayward",
@@ -6297,6 +6577,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brady Hough",
@@ -6341,6 +6623,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bailey Macdonald",
@@ -6385,6 +6669,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Leonardo Lombard",
@@ -6429,6 +6715,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Murphy Reid",
@@ -6473,6 +6761,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jacob Wehr",
@@ -6517,6 +6807,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mitchell Edwards",
@@ -6561,6 +6853,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom Stewart",
@@ -6605,6 +6899,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachie Weller",
@@ -6649,6 +6945,8 @@
    "secondary_role": "lockdown_def",
    "secondary_label": "Lockdown key defender",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "James Trezise",
@@ -6693,6 +6991,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Cooper Hynes",
@@ -6737,6 +7037,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Shai Bolton",
@@ -6781,6 +7083,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brayden Cook",
@@ -6825,6 +7129,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jordan Croft",
@@ -6869,6 +7175,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Weddle",
@@ -6913,6 +7221,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Steele",
@@ -6957,6 +7267,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Coffield",
@@ -7001,6 +7313,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Logan Morris",
@@ -7045,6 +7359,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom McCarthy",
@@ -7089,6 +7405,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brad Close",
@@ -7133,6 +7451,8 @@
    "secondary_role": "gun_mid",
    "secondary_label": "Elite two-way midfielder",
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ben Ainsworth",
@@ -7177,6 +7497,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ben Long",
@@ -7221,6 +7543,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Swadling",
@@ -7265,6 +7589,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Hugh Bond",
@@ -7309,6 +7635,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Max Holmes",
@@ -7353,6 +7681,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Andrew McGrath",
@@ -7397,6 +7727,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Bowes",
@@ -7441,6 +7773,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Changkuoth Jiath",
@@ -7485,6 +7819,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Oscar Allen",
@@ -7529,6 +7865,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Joel Jeffrey",
@@ -7573,6 +7911,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Harry Morrison",
@@ -7617,6 +7957,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Soligo",
@@ -7661,6 +8003,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Kolodjashnij",
@@ -7705,6 +8049,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Edward Allan",
@@ -7749,6 +8095,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jai Serong",
@@ -7793,6 +8141,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dan Houston",
@@ -7837,6 +8187,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Scrimshaw",
@@ -7881,6 +8233,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachy Dovaston",
@@ -7925,6 +8279,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Paul Curtis",
@@ -7969,6 +8325,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Thomas Edwards",
@@ -8013,6 +8371,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Zac Taylor",
@@ -8057,6 +8417,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Blake Howes",
@@ -8101,6 +8463,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Finn Callaghan",
@@ -8145,6 +8509,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Joel Hamling",
@@ -8189,6 +8555,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dion Prestia",
@@ -8233,6 +8601,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Taylor",
@@ -8277,6 +8647,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Blake Howes",
@@ -8321,6 +8693,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Ross",
@@ -8365,6 +8739,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Conor Stone",
@@ -8409,6 +8785,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Hamish Davis",
@@ -8453,6 +8831,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lincoln McCarthy",
@@ -8497,6 +8877,8 @@
    "secondary_role": "rebound_def",
    "secondary_label": "Rebounding half-back",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jai Murray",
@@ -8541,6 +8923,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sean Darcy",
@@ -8585,6 +8969,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Marcus Windhager",
@@ -8629,6 +9015,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachie Jones",
@@ -8673,6 +9061,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Buku Khamis",
@@ -8717,6 +9107,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mabior Chol",
@@ -8761,6 +9153,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Stephen Coniglio",
@@ -8805,6 +9199,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Shaun Mannagh",
@@ -8849,6 +9245,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Ison",
@@ -8893,6 +9291,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dan Houston",
@@ -8937,6 +9337,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Matthew Johnson",
@@ -8981,6 +9383,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jedd Busslinger",
@@ -9025,6 +9429,8 @@
    "secondary_role": "rebound_def",
    "secondary_label": "Rebounding half-back",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jarrod Berry",
@@ -9069,6 +9475,8 @@
    "secondary_role": "gun_mid",
    "secondary_label": "Elite two-way midfielder",
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Cam Rayner",
@@ -9113,6 +9521,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mattaes Phillipou",
@@ -9157,6 +9567,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Touk Miller",
@@ -9201,6 +9613,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom Blamires",
@@ -9245,6 +9659,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mark O'Connor",
@@ -9289,6 +9705,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Graham",
@@ -9333,6 +9751,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Darcy Fogarty",
@@ -9377,6 +9797,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Louis Emmett",
@@ -9421,6 +9843,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Rhylee West",
@@ -9465,6 +9889,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Battle",
@@ -9509,6 +9935,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Parker",
@@ -9553,6 +9981,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Scrimshaw",
@@ -9597,6 +10027,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "James Borlase",
@@ -9641,6 +10073,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Aaron Naughton",
@@ -9685,6 +10119,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Shannon Neale",
@@ -9729,6 +10165,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Buckley",
@@ -9773,6 +10211,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "George Hewett",
@@ -9817,6 +10257,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bayley Fritsch",
@@ -9861,6 +10303,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jacob Konstanty",
@@ -9905,6 +10349,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Eric Hipwood",
@@ -9949,6 +10395,8 @@
    "secondary_role": "rebound_def",
    "secondary_label": "Rebounding half-back",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dylan Stephens",
@@ -9993,6 +10441,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Latrelle Pickett",
@@ -10037,6 +10487,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom McDonald",
@@ -10081,6 +10533,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Toby McMullin",
@@ -10125,6 +10579,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Shannon Neale",
@@ -10169,6 +10625,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Will Setterfield",
@@ -10213,6 +10671,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jaxon Prior",
@@ -10257,6 +10717,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Soligo",
@@ -10301,6 +10763,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Isaac Cumming",
@@ -10345,6 +10809,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Cam Mackenzie",
@@ -10389,6 +10855,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Cooper Duff-Tytler",
@@ -10433,6 +10901,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bayley Fritsch",
@@ -10477,6 +10947,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Larkey",
@@ -10521,6 +10993,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Vlastuin",
@@ -10565,6 +11039,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Holman",
@@ -10609,6 +11085,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Stephen Coniglio",
@@ -10653,6 +11131,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Zac Bailey",
@@ -10697,6 +11177,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Joe Berry",
@@ -10741,6 +11223,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Cooper Hynes",
@@ -10785,6 +11269,8 @@
    "secondary_role": "ruck",
    "secondary_label": "Ruck",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Caleb Serong",
@@ -10829,6 +11315,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mason Cox",
@@ -10873,6 +11361,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Connor O'Sullivan",
@@ -10917,6 +11407,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke McDonald",
@@ -10961,6 +11453,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Darcy Fort",
@@ -11005,6 +11499,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Ryan",
@@ -11049,6 +11545,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bailey Macdonald",
@@ -11093,6 +11591,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ryan Byrnes",
@@ -11137,6 +11637,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ewan Mackinlay",
@@ -11181,6 +11683,8 @@
    "secondary_role": "inside_mid",
    "secondary_label": "Contested inside midfielder",
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Kieren Briggs",
@@ -11225,6 +11729,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jaxon Prior",
@@ -11269,6 +11775,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Melksham",
@@ -11313,6 +11821,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jacob Wehr",
@@ -11357,6 +11867,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Oscar Adams",
@@ -11401,6 +11913,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jordan Croft",
@@ -11445,6 +11959,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mason Cox",
@@ -11489,6 +12005,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "James Jordon",
@@ -11533,6 +12051,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom Brown",
@@ -11577,6 +12097,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brennan Cox",
@@ -11621,6 +12143,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Talor Byrne",
@@ -11665,6 +12189,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Harrison Jones",
@@ -11709,6 +12235,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bailey Smith",
@@ -11753,6 +12281,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Noah Anderson",
@@ -11797,6 +12327,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Flanders",
@@ -11841,6 +12373,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ben Long",
@@ -11885,6 +12419,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Wicks",
@@ -11929,6 +12465,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Leonardo Lombard",
@@ -11973,6 +12511,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Bryan",
@@ -12017,6 +12557,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Stringer",
@@ -12061,6 +12603,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Willem Drew",
@@ -12105,6 +12649,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Angus Sheldrick",
@@ -12149,6 +12695,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jasper Alger",
@@ -12193,6 +12741,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Christian Petracca",
@@ -12237,6 +12787,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Melksham",
@@ -12281,6 +12833,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jai Serong",
@@ -12325,6 +12879,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Harry Sharp",
@@ -12369,6 +12925,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Sinclair",
@@ -12413,6 +12971,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Noah Anderson",
@@ -12457,6 +13017,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Walsh",
@@ -12501,6 +13063,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Rogers",
@@ -12545,6 +13109,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "James Leake",
@@ -12589,6 +13155,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ryan Angwin",
@@ -12633,6 +13201,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachlan Bramble",
@@ -12677,6 +13247,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Andrew McGrath",
@@ -12721,6 +13293,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Billy Wilson",
@@ -12765,6 +13339,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brody Mihocek",
@@ -12809,6 +13385,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lloyd Meek",
@@ -12853,6 +13431,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Will Graham",
@@ -12897,6 +13477,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Campbell Gray",
@@ -12941,6 +13523,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jacob Hopper",
@@ -12985,6 +13569,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ryan Angwin",
@@ -13029,6 +13615,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Dalton",
@@ -13073,6 +13661,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Switkowski",
@@ -13117,6 +13707,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Lloyd",
@@ -13161,6 +13753,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Bryan",
@@ -13205,6 +13799,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Soligo",
@@ -13249,6 +13845,8 @@
    "secondary_role": "gen_fwd",
    "secondary_label": "General forward",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Levi Ashcroft",
@@ -13293,6 +13891,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Archer Day-Wicks",
@@ -13337,6 +13937,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Zane Duursma",
@@ -13381,6 +13983,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Stephen Coniglio",
@@ -13425,6 +14029,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Beau Addinsall",
@@ -13469,6 +14075,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Elijah Hollands",
@@ -13513,6 +14121,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Connor Budarick",
@@ -13557,6 +14167,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Xavier Bamert",
@@ -13601,6 +14213,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Buller",
@@ -13645,6 +14259,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Finn O'Sullivan",
@@ -13689,6 +14305,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tim Taranto",
@@ -13733,6 +14351,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Cumming",
@@ -13777,6 +14397,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Harry Cunningham",
@@ -13821,6 +14443,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jy Simpkin",
@@ -13865,6 +14489,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Daniel Turner",
@@ -13909,6 +14535,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Cooper Hynes",
@@ -13953,6 +14581,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Taylor Walker",
@@ -13997,6 +14627,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brody Mihocek",
@@ -14041,6 +14673,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Soligo",
@@ -14085,6 +14719,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Trent Rivers",
@@ -14129,6 +14765,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bruce Reville",
@@ -14173,6 +14811,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Malakai Champion",
@@ -14217,6 +14857,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jayden Nguyen",
@@ -14261,6 +14903,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Stringer",
@@ -14305,6 +14949,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Harry Kyle",
@@ -14349,6 +14995,8 @@
    "secondary_role": "lockdown_def",
    "secondary_label": "Lockdown key defender",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachie Weller",
@@ -14393,6 +15041,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Dolan",
@@ -14437,6 +15087,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Hayden Young",
@@ -14481,6 +15133,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Harry Perryman",
@@ -14525,6 +15179,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Joel Freijah",
@@ -14569,6 +15225,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Pedlar",
@@ -14613,6 +15271,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Justin McInerney",
@@ -14657,6 +15317,8 @@
    "secondary_role": "ruck",
    "secondary_label": "Ruck",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "George Hewett",
@@ -14701,6 +15363,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke McDonald",
@@ -14745,6 +15409,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Murray",
@@ -14789,6 +15455,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Ison",
@@ -14833,6 +15501,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Banks",
@@ -14877,6 +15547,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Matthew Jefferson",
@@ -14921,6 +15593,8 @@
    "secondary_role": "key_fwd",
    "secondary_label": "Marking key forward",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Elijah Hollands",
@@ -14965,6 +15639,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dante Visentini",
@@ -15009,6 +15685,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brad Close",
@@ -15053,6 +15731,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Oliver Dempsey",
@@ -15097,6 +15777,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Max Kondogiannis",
@@ -15141,6 +15823,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Harry Schoenberg",
@@ -15185,6 +15869,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Williams",
@@ -15229,6 +15915,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Maurice Rioli",
@@ -15273,6 +15961,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Pedlar",
@@ -15317,6 +16007,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Harvey Johnston",
@@ -15361,6 +16053,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Oisin Mullin",
@@ -15405,6 +16099,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Flynn Perez",
@@ -15449,6 +16145,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Cooper Hynes",
@@ -15493,6 +16191,8 @@
    "secondary_role": "rebound_def",
    "secondary_label": "Rebounding half-back",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom Blamires",
@@ -15537,6 +16237,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Francis Evans",
@@ -15581,6 +16283,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Zac Taylor",
@@ -15625,6 +16329,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom Blamires",
@@ -15669,6 +16375,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ryan Byrnes",
@@ -15713,6 +16421,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Archer Day-Wicks",
@@ -15757,6 +16467,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jade Gresham",
@@ -15801,6 +16513,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mitch Zadow",
@@ -15845,6 +16559,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Anthony Caminiti",
@@ -15889,6 +16605,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Pedlar",
@@ -15933,6 +16651,8 @@
    "secondary_role": "lockdown_def",
    "secondary_label": "Lockdown key defender",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ryan Byrnes",
@@ -15977,6 +16697,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Logan McDonald",
@@ -16021,6 +16743,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Martin",
@@ -16065,6 +16789,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ben Keays",
@@ -16109,6 +16835,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Matthew Jefferson",
@@ -16153,6 +16881,8 @@
    "secondary_role": "rebound_def",
    "secondary_label": "Rebounding half-back",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Zeke Uwland",
@@ -16197,6 +16927,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Pedlar",
@@ -16241,6 +16973,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mark Blicavs",
@@ -16285,6 +17019,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Corey Wagner",
@@ -16329,6 +17065,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Maurice Rioli",
@@ -16373,6 +17111,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Hugh Bond",
@@ -16417,6 +17157,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dyson Sharp",
@@ -16461,6 +17203,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "James Tunstill",
@@ -16505,6 +17249,8 @@
    "secondary_role": "lockdown_def",
    "secondary_label": "Lockdown key defender",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Conor Stone",
@@ -16549,6 +17295,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Blake Hardwick",
@@ -16593,6 +17341,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jordan Croft",
@@ -16637,6 +17387,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Aidan Corr",
@@ -16681,6 +17433,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Billy Cootee",
@@ -16725,6 +17479,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jamie Cripps",
@@ -16769,6 +17525,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Toby McMullin",
@@ -16813,6 +17571,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jordan Croft",
@@ -16857,6 +17617,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Zac Taylor",
@@ -16901,6 +17663,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dante Visentini",
@@ -16945,6 +17709,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mason Redman",
@@ -16989,6 +17755,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Kolodjashnij",
@@ -17033,6 +17801,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Adam Cerra",
@@ -17077,6 +17847,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Oscar McDonald",
@@ -17121,6 +17893,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jamie Cripps",
@@ -17165,6 +17939,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke McDonald",
@@ -17209,6 +17985,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachie Jones",
@@ -17253,6 +18031,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Hugh Bond",
@@ -17297,6 +18077,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jarrod Witts",
@@ -17341,6 +18123,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dan Butler",
@@ -17385,6 +18169,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Harrison Jones",
@@ -17429,6 +18215,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Arthur Jones",
@@ -17473,6 +18261,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ewan Mackinlay",
@@ -17517,6 +18307,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Bowey",
@@ -17561,6 +18353,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mykelti Lefau",
@@ -17605,6 +18399,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachlan Bramble",
@@ -17649,6 +18445,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Harry Kyle",
@@ -17693,6 +18491,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Archer Reid",
@@ -17737,6 +18537,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Elijah Hollands",
@@ -17781,6 +18583,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "James Leake",
@@ -17825,6 +18629,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Coffield",
@@ -17869,6 +18675,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Rogers",
@@ -17913,6 +18721,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Hugh McCluggage",
@@ -17957,6 +18767,8 @@
    "secondary_role": "ruck",
    "secondary_label": "Ruck",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Levi Ashcroft",
@@ -18001,6 +18813,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Sinclair",
@@ -18045,6 +18859,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mitch Owens",
@@ -18089,6 +18905,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mitch Lewis",
@@ -18133,6 +18951,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Zane Duursma",
@@ -18177,6 +18997,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ryan Byrnes",
@@ -18221,6 +19043,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "William Edwards",
@@ -18265,6 +19089,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Rowan Marshall",
@@ -18309,6 +19135,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Adam Cerra",
@@ -18353,6 +19181,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bodhi Uwland",
@@ -18397,6 +19227,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Matthew Kennedy",
@@ -18441,6 +19273,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Dolan",
@@ -18485,6 +19319,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Daniel McStay",
@@ -18529,6 +19365,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Battle",
@@ -18573,6 +19411,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Charlie Curnow",
@@ -18617,6 +19457,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tylar Young",
@@ -18661,6 +19503,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Joe Fonti",
@@ -18705,6 +19549,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Christian Moraes",
@@ -18749,6 +19595,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Worrell",
@@ -18793,6 +19641,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Max Gruzewski",
@@ -18837,6 +19687,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Harry Rowston",
@@ -18881,6 +19733,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ned Moyle",
@@ -18925,6 +19779,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Angus Hastie",
@@ -18969,6 +19825,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jye Caldwell",
@@ -19013,6 +19871,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Darcy Wilmot",
@@ -19057,6 +19917,8 @@
    "secondary_role": "ruck",
    "secondary_label": "Ruck",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Will Ashcroft",
@@ -19101,6 +19963,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom Cole",
@@ -19145,6 +20009,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Oliver Henry",
@@ -19189,6 +20055,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Eric Hipwood",
@@ -19233,6 +20101,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Waterman",
@@ -19277,6 +20147,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Will Setterfield",
@@ -19321,6 +20193,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Shannon Neale",
@@ -19365,6 +20239,8 @@
    "secondary_role": "inside_mid",
    "secondary_label": "Contested inside midfielder",
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tristan Xerri",
@@ -19409,6 +20285,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ollie Wines",
@@ -19453,6 +20331,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Sinclair",
@@ -19497,6 +20377,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Macrae",
@@ -19541,6 +20423,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Lever",
@@ -19585,6 +20469,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Kolodjashnij",
@@ -19629,6 +20515,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Larkey",
@@ -19673,6 +20561,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Stephen Coniglio",
@@ -19717,6 +20607,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Michael Sellwood",
@@ -19761,6 +20653,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Wicks",
@@ -19805,6 +20699,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jordan Clark",
@@ -19849,6 +20745,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Wade Derksen",
@@ -19893,6 +20791,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Griffin Logue",
@@ -19937,6 +20837,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Connor O'Sullivan",
@@ -19981,6 +20883,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Steele Sidebottom",
@@ -20025,6 +20929,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Rhylee West",
@@ -20069,6 +20975,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Shai Bolton",
@@ -20113,6 +21021,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Harris Andrews",
@@ -20157,6 +21067,8 @@
    "secondary_role": "ruck",
    "secondary_label": "Ruck",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ollie Wines",
@@ -20201,6 +21113,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Daicos",
@@ -20245,6 +21159,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Darcy Parish",
@@ -20289,6 +21205,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Cooper Trembath",
@@ -20333,6 +21251,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Berry",
@@ -20377,6 +21297,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jayden Short",
@@ -20421,6 +21343,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Charlie Comben",
@@ -20465,6 +21389,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Aidan Corr",
@@ -20509,6 +21435,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ed Langdon",
@@ -20553,6 +21481,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Oscar Allen",
@@ -20597,6 +21527,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Logan Evans",
@@ -20641,6 +21573,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Hugo Hall-Kahan",
@@ -20685,6 +21619,8 @@
    "secondary_role": "inside_mid",
    "secondary_label": "Contested inside midfielder",
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Joe Richards",
@@ -20729,6 +21665,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom McCartin",
@@ -20773,6 +21711,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nick Holman",
@@ -20817,6 +21757,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Riccardi",
@@ -20861,6 +21803,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Kane Farrell",
@@ -20905,6 +21849,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ed Richards",
@@ -20949,6 +21895,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Elijah Hewett",
@@ -20993,6 +21941,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Cooper Trembath",
@@ -21037,6 +21987,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Battle",
@@ -21081,6 +22033,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Karl Amon",
@@ -21125,6 +22079,8 @@
    "secondary_role": "inside_mid",
    "secondary_label": "Contested inside midfielder",
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Marc Pittonet",
@@ -21169,6 +22125,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Shai Bolton",
@@ -21213,6 +22171,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ned Moyle",
@@ -21257,6 +22217,8 @@
    "secondary_role": "rebound_def",
    "secondary_label": "Rebounding half-back",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bailey Williams",
@@ -21301,6 +22263,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Karl Worner",
@@ -21345,6 +22309,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Ward",
@@ -21389,6 +22355,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Taylor",
@@ -21433,6 +22401,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Connor O'Sullivan",
@@ -21477,6 +22447,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Joel Hamling",
@@ -21521,6 +22493,8 @@
    "secondary_role": "key_fwd",
    "secondary_label": "Marking key forward",
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom De Koning",
@@ -21565,6 +22539,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lloyd Meek",
@@ -21609,6 +22585,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom Barrass",
@@ -21653,6 +22631,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Pedlar",
@@ -21697,6 +22677,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Luke Pedlar",
@@ -21741,6 +22723,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bo Allan",
@@ -21785,6 +22769,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Marcus Bontempelli",
@@ -21829,6 +22815,8 @@
    "secondary_role": "intercept_def",
    "secondary_label": "Intercept key defender",
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lincoln McCarthy",
@@ -21873,6 +22861,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Alex Pearce",
@@ -21917,6 +22907,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Rowan Marshall",
@@ -21961,6 +22953,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Aaron Cadman",
@@ -22005,6 +22999,8 @@
    "secondary_role": "ruck",
    "secondary_label": "Ruck",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tim Taranto",
@@ -22049,6 +23045,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Brady Hough",
@@ -22093,6 +23091,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ned Long",
@@ -22137,6 +23137,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Callum Mills",
@@ -22181,6 +23183,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Charlie Comben",
@@ -22225,6 +23229,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jaspa Fletcher",
@@ -22269,6 +23275,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Wil Powell",
@@ -22313,6 +23321,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Walsh",
@@ -22357,6 +23367,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "John Noble",
@@ -22401,6 +23413,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Caiden Cleary",
@@ -22445,6 +23459,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Zach Merrett",
@@ -22489,6 +23505,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bailey J. Williams",
@@ -22533,6 +23551,8 @@
    "secondary_role": "rebound_def",
    "secondary_label": "Rebounding half-back",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ed Langdon",
@@ -22577,6 +23597,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Billy Cootee",
@@ -22621,6 +23643,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jordon Sweet",
@@ -22665,6 +23689,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lachie Jones",
@@ -22709,6 +23735,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Daniel Turner",
@@ -22753,6 +23781,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jordan Ridley",
@@ -22797,6 +23827,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Joe Fonti",
@@ -22841,6 +23873,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tim Kelly",
@@ -22885,6 +23919,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Calsher Dear",
@@ -22929,6 +23965,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Billy Frampton",
@@ -22973,6 +24011,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Willem Drew",
@@ -23017,6 +24057,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Rachele",
@@ -23061,6 +24103,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Liam Reidy",
@@ -23105,6 +24149,8 @@
    "secondary_role": "ruck",
    "secondary_label": "Ruck",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jagga Smith",
@@ -23149,6 +24195,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Wayne Milera",
@@ -23193,6 +24241,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bayley Fritsch",
@@ -23237,6 +24287,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Cooper Lord",
@@ -23281,6 +24333,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Phoenix Gothard",
@@ -23325,6 +24379,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Thomas Edwards",
@@ -23369,6 +24425,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Chad Warner",
@@ -23413,6 +24471,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Darcy Wilson",
@@ -23457,6 +24517,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Shannon Neale",
@@ -23501,6 +24563,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Justin McInerney",
@@ -23545,6 +24609,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Darcy Wilmot",
@@ -23589,6 +24655,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Willem Drew",
@@ -23633,6 +24701,8 @@
    "secondary_role": "outside_mid",
    "secondary_label": "Outside / run midfielder",
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Dayne Zorko",
@@ -23677,6 +24747,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Collins",
@@ -23721,6 +24793,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jeremy Cameron",
@@ -23765,6 +24839,8 @@
    "secondary_role": "ruck",
    "secondary_label": "Ruck",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jai Newcombe",
@@ -23809,6 +24885,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jake Bowey",
@@ -23853,6 +24931,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jacob van Rooyen",
@@ -23897,6 +24977,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Rhett Bazzo",
@@ -23941,6 +25023,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Shaun Mannagh",
@@ -23985,6 +25069,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Buku Khamis",
@@ -24029,6 +25115,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Josh Lindsay",
@@ -24073,6 +25161,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Ben Ainsworth",
@@ -24117,6 +25207,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom Barrass",
@@ -24161,6 +25253,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Oliver Wiltshire",
@@ -24205,6 +25299,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Tom Barrass",
@@ -24249,6 +25345,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Wicks",
@@ -24293,6 +25391,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Lawson Humphries",
@@ -24337,6 +25437,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Mark Keane",
@@ -24381,6 +25483,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Will Hayward",
@@ -24425,6 +25529,8 @@
    "secondary_role": "rebound_def",
    "secondary_label": "Rebounding half-back",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jai Serong",
@@ -24469,6 +25575,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Bodhi Uwland",
@@ -24513,6 +25621,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Max Heath",
@@ -24557,6 +25667,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Hugo Garcia",
@@ -24601,6 +25713,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Sam Wicks",
@@ -24645,6 +25759,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Touk Miller",
@@ -24689,6 +25805,8 @@
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Nathan O'Driscoll",
@@ -24733,6 +25851,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Heath Chapman",
@@ -24777,6 +25897,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Miles Bergman",
@@ -24821,6 +25943,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Ruck",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Oscar Steene",
@@ -24865,6 +25989,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Karl Worner",
@@ -24909,6 +26035,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key defender",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Wade Derksen",
@@ -24953,6 +26081,8 @@
    "secondary_role": "key_fwd",
    "secondary_label": "Marking key forward",
    "official_position": "Midfielder-Forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Roan Steele",
@@ -24997,6 +26127,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Isaac Kako",
@@ -25041,6 +26173,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Key forward",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Aaron Naughton",
@@ -25085,6 +26219,8 @@
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Midfielder",
+   "manual": false,
+   "manual_note": null,
    "comps": [
     {
      "name": "Jack Steele",

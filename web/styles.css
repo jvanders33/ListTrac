@@ -420,6 +420,11 @@ footer.pagefoot {
 
 .spark { display: block; margin: 4px 0 12px; overflow: visible; }
 
+/* vs-opponent splits */
+.splits .sp-base td { border-top: 2px solid var(--line); border-bottom: 2px solid var(--line); background: var(--card-2); }
+.splits .sp-hi { color: var(--ok); font-weight: 700; }
+.splits .sp-lo { color: var(--warn); font-weight: 700; }
+
 /* role archetype */
 .roleline { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 2px 0 6px; }
 .rolechip { display: inline-block; padding: 3px 10px; border-radius: 999px; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 0.01em; }

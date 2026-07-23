@@ -385,11 +385,19 @@ def player(player_id: int):
                 "club": idn["club"] if idn else None,
                 "rating": rr["rating"] if rr else None,
             })
+    # vs-opponent splits (multi-season): overall line + per-club performance
+    profile["splits"] = None
+    sx = _splits_index().get("_players", {}).get(key)
+    if sx and sx.get("vs"):
+        profile["splits"] = {**sx, **_splits_index().get("_meta", {})}
+
+    if rx:
         profile["role"] = {
             "role": rx["role"], "role_label": rx["role_label"],
             "role_group": rx["role_group"], "confidence": rx["confidence"],
             "secondary_label": rx.get("secondary_label"),
             "official_position": rx.get("official_position"),
+            "manual": rx.get("manual", False), "manual_note": rx.get("manual_note"),
             "comps": comps_out,
             "attribution": _roles_index().get("_attribution"),
         }
@@ -887,6 +895,20 @@ def _roles_index() -> dict:
         _roles_cache["_roles"] = data.get("roles", {})
         _roles_cache["_attribution"] = data.get("attribution")
     return _roles_cache
+
+
+SPLITS_PATH = Path(__file__).resolve().parent.parent / "data" / "splits_2026.json"
+_splits_cache: dict = {}
+
+
+def _splits_index() -> dict:
+    """Vs-opponent splits keyed by normalised name (+ window meta)."""
+    import json
+    if not _splits_cache and SPLITS_PATH.exists():
+        data = json.loads(SPLITS_PATH.read_text(encoding="utf-8"))
+        _splits_cache["_players"] = data.get("players", {})
+        _splits_cache["_meta"] = {k: data[k] for k in ("seasons", "min_games_vs", "attribution") if k in data}
+    return _splits_cache
 
 
 def _ident_by_name() -> dict:

@@ -1,0 +1,10 @@
+{
+ "note": "Hand-pinned role reads where football knowledge beats the season's raw output. Each override wins over the classifier in scraper/roles.py. Set 'role' to change the primary, 'secondary_role' to set/clear the secondary trait (use null to clear). Valid role keys: ruck, key_fwd, small_fwd, gen_fwd, inside_mid, outside_mid, gun_mid, intercept_def, lockdown_def, rebound_def. Add an entry whenever the eye test disagrees with the stats.",
+ "overrides": [
+  {
+   "name": "Kysaiah Pickett",
+   "secondary_role": "small_fwd",
+   "note": "Heavy midfield minutes drive his numbers, but he remains a genuine small-forward threat — the forward craft the mid-heavy output understates."
+  }
+ ]
+}

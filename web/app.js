@@ -2352,8 +2352,9 @@ function roleCard(role) {
     <p class="roleline">
       <span class="rolechip">${esc(label)}</span>
       ${role.secondary_label ? `<span class="rolechip alt">also: ${esc(role.secondary_label)}</span>` : ""}
-      <span class="thin">${CONF_WORD[role.confidence] || ""} fit · official: ${esc(role.official_position || "—")}</span>
+      <span class="thin">${role.manual ? "ListTrac hand-read" : `${CONF_WORD[role.confidence] || ""} fit`} · official: ${esc(role.official_position || "—")}</span>
     </p>
+    ${role.manual && role.manual_note ? `<p class="sub" style="margin:0 0 6px;font-style:italic">${esc(role.manual_note)}</p>` : ""}
     <p class="sub">Derived from this season's per-game output — how ${esc(label.toLowerCase())}s actually play. ${rows.length ? "Closest same-role profiles below (they can cross official position lines); the rating shows calibre." : ""}</p>
     ${rows.length ? `<div class="complist">
       ${rows.map(c => `<div class="comprow" style="--sim:${c.similarity}%">
@@ -2363,6 +2364,44 @@ function roleCard(role) {
       </div>`).join("")}
     </div>` : ""}
     <p class="thin" style="font-size:11px;margin-top:8px"><a href="#/players/roles">Browse players by role →</a> · Role is ListTrac's interpretation of Champion Data output, not an official field.</p>
+  </div>`;
+}
+/* Vs-opponent splits — how a player fares against each club over a multi-season
+   window. Cricinfo-style: overall baseline up top, each opponent coloured for
+   over/under-performance in disposals, AF and rating. Sorted by rating vs club. */
+function splitsCard(s) {
+  const opps = Object.entries(s.vs || {});
+  if (opps.length < 3) return "";
+  const base = s.overall || {};
+  const cell = (v, b) => {
+    if (v == null) return "—";
+    if (b == null) return v;
+    const cls = v >= b * 1.12 ? "sp-hi" : v <= b * 0.88 ? "sp-lo" : "";
+    return `<span class="${cls}">${v}</span>`;
+  };
+  const rows = opps
+    .map(([opp, d]) => ({ opp, ...d }))
+    .sort((a, b) => (b.rating ?? b.disp ?? 0) - (a.rating ?? a.disp ?? 0));
+  const seasons = s.seasons && s.seasons.length ? `${s.seasons[0]}–${s.seasons[s.seasons.length - 1]}` : "";
+  return `<div class="card">
+    <h3>Vs opponent <span class="thin" style="font-weight:400">· ${seasons}</span></h3>
+    <p class="sub">Per-game output against each club (${base.games || 0} games, ${seasons}). Green beats his own average, red falls short — who he feasts on, who keeps him quiet.</p>
+    <div class="tablewrap"><table class="splits">
+      <thead><tr><th>Opponent</th><th class="num">G</th><th class="num">Disp</th><th class="num">AF</th><th class="num">Rtg</th><th class="num">Gls</th></tr></thead>
+      <tbody>
+        <tr class="sp-base"><td><b>Overall</b></td><td class="num">${base.games ?? "—"}</td>
+          <td class="num">${base.disp ?? "—"}</td><td class="num">${base.af ?? "—"}</td>
+          <td class="num">${base.rating ?? "—"}</td><td class="num">${base.goals ?? "—"}</td></tr>
+        ${rows.map(r => `<tr>
+          <td>${clubTag(r.opp, r.opp)}</td>
+          <td class="num thin">${r.games}</td>
+          <td class="num">${cell(r.disp, base.disp)}</td>
+          <td class="num">${cell(r.af, base.af)}</td>
+          <td class="num">${cell(r.rating, base.rating)}</td>
+          <td class="num">${r.goals ?? "—"}</td></tr>`).join("")}
+      </tbody>
+    </table></div>
+    <p class="thin" style="font-size:11px;margin-top:8px">${esc(s.attribution || "")} Opponents met fewer than ${s.min_games_vs || 2} times in the window are omitted.</p>
   </div>`;
 }
 function formCard(form, sc) {
@@ -2490,6 +2529,7 @@ async function playerView(id) {
         ${p.form ? formCard(p.form, p.scouting) : ""}
         ${p.scouting ? scoutingCard(p.scouting, id) : ""}
         ${p.role ? roleCard(p.role) : ""}
+        ${p.splits ? splitsCard(p.splits) : ""}
         ${p.rating_history && p.rating_history.length ? `
         <div class="card">
           <h3>AFL Player Rating history</h3>

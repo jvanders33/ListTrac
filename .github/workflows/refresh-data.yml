@@ -66,6 +66,11 @@ jobs:
         run: python scraper/roles.py
         continue-on-error: true
 
+      - name: Build vs-opponent splits (multi-season round data)
+        # per-club performance splits from the round-level endpoint (5 seasons)
+        run: python scraper/splits.py
+        continue-on-error: true
+
       - name: Build empirical aging curves (delta method, by position)
         # joins 2015-26 ratings history to DOBs -> age->rating curves that
         # inform the Trade Value age factor and the player-page aging card
