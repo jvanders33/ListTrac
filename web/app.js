@@ -1255,7 +1255,7 @@ const playersChrome = act => `<div class="subtabs">
   <a href="#/players/trade-values" class="${act === "tradeval" ? "active" : ""}">Trade value</a>
   <a href="#/players/compare" class="${act === "compare" ? "active" : ""}">Compare</a>
   <a href="#/players/fantasy" class="${act === "fantasy" ? "active" : ""}">Fantasy</a>
-  <a href="#/players/top10" class="${act === "top10" ? "active" : ""}">Build a Top 10</a>
+  <a href="#/players/team" class="${act === "team" ? "active" : ""}">Build AA team</a>
 </div>`;
 
 /* Champion Data team code -> our club abbreviation, for colour + linking. */
@@ -1492,6 +1492,184 @@ async function shareCard(state, colorOf) {
   catch { if (msg) msg.textContent = link; }
 }
 
+/* ---------- Build your All-Australian team ---------- */
+const AA_KEY = "aateam_v1";
+// display order top(forwards) -> bottom(backs); followers in the middle
+const AA_FIELD = [
+  ["Forward pocket", "Full forward", "Forward pocket"],
+  ["Half-forward flank", "Centre half-forward", "Half-forward flank"],
+  ["Wing", "Centre", "Wing"],
+  ["Ruck", "Ruck-rover", "Rover"],
+  ["Half-back flank", "Centre half-back", "Half-back flank"],
+  ["Back pocket", "Full back", "Back pocket"],
+];
+const AA_BENCH = ["Interchange", "Interchange", "Interchange", "Interchange"];
+const AA_SLOTS = [...AA_FIELD.flat(), ...AA_BENCH];   // 22, indexed field-then-bench
+const lastName = n => String(n || "").split(" ").slice(-1)[0];
+const decodeTeam = () => {
+  const m = location.hash.match(/[?&]a=([^&]+)/);
+  if (m) { try { return JSON.parse(decodeURIComponent(escape(atob(m[1].replace(/-/g, "+").replace(/_/g, "/"))))); } catch { /* fall through */ } }
+  try { return JSON.parse(localStorage.getItem(AA_KEY)); } catch { return null; }
+};
+const encodeTeam = state => btoa(unescape(encodeURIComponent(JSON.stringify(state)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+
+async function aaTeamView() {
+  const ratings = await api("/api/ratings?limit=812");
+  const clubs = await api("/clubs");
+  const colorOf = ab => (clubs.find(c => c.abbreviation === ab) || {}).primary_color || "#555";
+  const pool = ratings.ratings.map(r => ({ name: r.name, abbr: CD_TEAM[r.team] || r.team, rating: r.rating, rank: r.rank, player_id: r.player_id }));
+  const byName = Object.fromEntries(pool.map(p => [p.name, p]));
+
+  let state = decodeTeam() || { title: "My All-Australian Team", picks: [] };
+  state.picks = (state.picks || []).slice(0, 22);
+  while (state.picks.length < 22) state.picks.push(null);
+  let filter = "", selected = null;
+  const save = () => localStorage.setItem(AA_KEY, JSON.stringify(state));
+  const firstEmpty = () => state.picks.findIndex(x => !x);
+
+  function render() {
+    const filled = state.picks.filter(Boolean).length;
+    const used = new Set(state.picks.filter(Boolean).map(p => p.name));
+    const available = pool.filter(p => !used.has(p.name));
+    let idx = -1;
+    const slot = label => {
+      const i = ++idx, p = state.picks[i];
+      return `<button class="aaslot ${p ? "filled" : "empty"} ${selected === i ? "sel" : ""}" data-i="${i}">
+        <span class="aapos">${esc(label)}</span>
+        ${p ? `<span class="aafill">${guernsey(p.abbr, 18)}<b>${esc(lastName(p.name))}</b><span class="aart">${p.rating}</span></span>
+               <span class="aarm" data-rm="${i}" role="button" aria-label="Remove">✕</span>`
+            : `<span class="aaplus">＋</span>`}</button>`;
+    };
+    view.innerHTML = `${playersChrome("team")}
+      <p class="sub" style="margin-top:14px">Pick your 22 in full All-Australian formation, then download the team graphic or share the link. Ratings are the current-season <strong>AFL Player Rating</strong>.</p>
+      <div class="aacols">
+        <div class="card aafield-card">
+          <input id="aa-title" class="t10-title" value="${esc(state.title)}" maxlength="42" aria-label="Team name">
+          <div class="aafield">
+            ${AA_FIELD.map(line => `<div class="aaline">${line.map(slot).join("")}</div>`).join("")}
+          </div>
+          <div class="aabench"><p class="eyebrow" style="margin:0 0 6px">Interchange</p><div class="aaline bench">${AA_BENCH.map(slot).join("")}</div></div>
+          <div class="feature-ctas" style="margin-top:16px">
+            <button class="cta" id="aa-save" ${filled ? "" : "disabled"}>Download team</button>
+            <button class="cta quiet" id="aa-share" ${filled ? "" : "disabled"}>Share</button>
+            <button class="cta quiet" id="aa-reset">Reset</button>
+          </div>
+          <p class="srcline" id="aa-msg"></p>
+        </div>
+        <div class="card">
+          <h3>Add players <span class="thin" style="font-weight:400">(${filled}/22)</span></h3>
+          <p class="sub" style="font-size:12px">${selected !== null ? `Filling <b>${esc(AA_SLOTS[selected])}</b> — tap a player.` : "Tap a position on the field, then a player — or just tap players to fill in order."}</p>
+          <input id="aa-search" class="poolsearch" type="search" placeholder="Filter by name or club…" value="${esc(filter)}">
+          <div class="poollist">
+            ${available.filter(p => !filter || `${p.name} ${p.abbr}`.toLowerCase().includes(filter.toLowerCase())).slice(0, 80).map(p => `
+              <button class="poolrow" data-add="${esc(p.name)}" ${filled >= 22 ? "disabled" : ""}>
+                <span class="rankchip">${p.rank ?? "–"}</span>
+                <span class="poolinfo"><b>${esc(p.name)}</b><span class="thin">${esc(p.abbr)} · rating ${p.rating}</span></span></button>`).join("")}
+          </div>
+        </div>
+      </div>`;
+
+    view.querySelectorAll(".aaslot").forEach(s => s.addEventListener("click", () => { selected = +s.dataset.i; render(); }));
+    view.querySelectorAll("[data-rm]").forEach(b => b.addEventListener("click", e => {
+      e.stopPropagation(); state.picks[+b.dataset.rm] = null; save(); render();
+    }));
+    view.querySelectorAll("[data-add]").forEach(b => b.addEventListener("click", () => {
+      const target = selected !== null && !state.picks[selected] ? selected : firstEmpty();
+      if (target < 0) return;
+      state.picks[target] = byName[b.dataset.add];
+      selected = firstEmpty();
+      save(); render();
+    }));
+    const title = document.getElementById("aa-title");
+    title.addEventListener("input", () => { state.title = title.value; save(); });
+    document.getElementById("aa-reset").addEventListener("click", () => {
+      state = { title: "My All-Australian Team", picks: Array(22).fill(null) }; selected = null;
+      save(); location.hash = "#/players/team"; render();
+    });
+    document.getElementById("aa-save").addEventListener("click", () => downloadTeam(state, colorOf));
+    document.getElementById("aa-share").addEventListener("click", () => shareTeam(state, colorOf));
+    const search = document.getElementById("aa-search");
+    search.addEventListener("input", () => {
+      filter = search.value; const pos = search.selectionStart; render();
+      const s2 = document.getElementById("aa-search"); s2.focus(); s2.setSelectionRange(pos, pos);
+    });
+  }
+  render();
+}
+
+/* Shareable team graphic — an AFL-style field with the 22 in formation. */
+function aaTeamSVG(state, colorOf) {
+  const W = 1080, H = 1350;
+  const node = (cx, cy, label, p) => {
+    const w = 250, h = 78, x = cx - w / 2, y = cy - h / 2;
+    if (!p) return `<g transform="translate(${x} ${y})"><rect width="${w}" height="${h}" rx="10" fill="#ffffff14" stroke="#ffffff22"/>
+      <text x="${w / 2}" y="34" font-size="18" fill="#dfe7e2" text-anchor="middle" font-family="system-ui,sans-serif">${esc(label)}</text>
+      <text x="${w / 2}" y="58" font-size="16" fill="#9fb3a8" text-anchor="middle" font-family="system-ui,sans-serif">—</text></g>`;
+    const c = colorOf(p.abbr);
+    return `<g transform="translate(${x} ${y})">
+      <rect width="${w}" height="${h}" rx="10" fill="#0c141a" stroke="#ffffff20"/>
+      <rect width="7" height="${h}" rx="3" fill="${c}"/>
+      <text x="20" y="26" font-size="14" fill="#8ea79b" font-family="system-ui,sans-serif" letter-spacing="0.5">${esc(label.toUpperCase())}</text>
+      <text x="20" y="56" font-size="27" font-weight="800" fill="#F2F4F3" font-family="system-ui,sans-serif">${esc(p.name)}</text>
+      <text x="${w - 16}" y="56" font-size="24" font-weight="800" fill="#BF4226" text-anchor="end" font-family="system-ui,sans-serif">${p.rating}</text>
+    </g>`;
+  };
+  const colX = [240, 540, 840];
+  const fieldTop = 250, lineGap = 132;
+  let field = "";
+  let i = -1;
+  AA_FIELD.forEach((line, li) => {
+    const cy = fieldTop + li * lineGap;
+    line.forEach((label, j) => { field += node(colX[j], cy, label, state.picks[++i]); });
+  });
+  let bench = "";
+  AA_BENCH.forEach((label, j) => { bench += node(150 + j * 260, 1200, label, state.picks[++i]); });
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+    <rect width="${W}" height="${H}" fill="#10171C"/>
+    <text x="60" y="76" font-size="44" font-weight="800" fill="#F2F4F3" font-family="system-ui,sans-serif">List<tspan fill="#BF4226">Trac</tspan></text>
+    <text x="60" y="118" font-size="23" font-weight="700" fill="#93A1A8" font-family="system-ui,sans-serif" letter-spacing="1">${esc((state.title || "My All-Australian Team").toUpperCase())}</text>
+    <rect x="40" y="150" width="1000" height="960" rx="24" fill="#15412c"/>
+    <rect x="40" y="150" width="1000" height="960" rx="24" fill="none" stroke="#ffffff2b" stroke-width="3"/>
+    <line x1="40" y1="630" x2="1040" y2="630" stroke="#ffffff22" stroke-width="2"/>
+    <rect x="430" y="560" width="220" height="140" rx="6" fill="none" stroke="#ffffff26" stroke-width="2"/>
+    ${field}
+    <rect x="40" y="1130" width="1000" height="150" rx="18" fill="#131c24"/>
+    <text x="60" y="1162" font-size="17" fill="#93A1A8" font-family="system-ui,sans-serif" letter-spacing="1.5">INTERCHANGE</text>
+    ${bench}
+    <text x="60" y="1325" font-size="20" fill="#55636D" font-family="system-ui,sans-serif">list-trac.vercel.app · ratings: Champion Data / AFL</text>
+  </svg>`;
+}
+
+async function downloadTeam(state, colorOf) {
+  const msg = document.getElementById("aa-msg");
+  try {
+    const png = await svgToPng(aaTeamSVG(state, colorOf));
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(png);
+    a.download = `listtrac-aa-team-${(state.title || "team").replace(/[^a-z0-9]+/gi, "-").toLowerCase()}.png`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    if (msg) msg.textContent = "Team downloaded. The link below reopens this exact team.";
+  } catch { if (msg) msg.textContent = "Couldn't render the team in this browser."; }
+}
+
+async function shareTeam(state, colorOf) {
+  const msg = document.getElementById("aa-msg");
+  const link = `${location.origin}/#/players/team?a=${encodeTeam(state)}`;
+  try {
+    const png = await svgToPng(aaTeamSVG(state, colorOf));
+    const file = new File([png], "listtrac-aa-team.png", { type: "image/png" });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({ title: state.title || "My All-Australian Team", text: "My AFL All-Australian team — built on ListTrac", files: [file] });
+      return;
+    }
+    if (navigator.share) { await navigator.share({ title: state.title, text: "My AFL All-Australian team — built on ListTrac", url: link }); return; }
+  } catch { /* clipboard fallback */ }
+  try { await navigator.clipboard.writeText(link); if (msg) msg.textContent = "Share link copied to clipboard."; }
+  catch { if (msg) msg.textContent = link; }
+}
+
 async function fantasyView() {
   view.innerHTML = `${playersChrome("fantasy")}
     <div class="card" id="fantasy-card"><h3>AFL Fantasy</h3><p class="sub">Loading fantasy averages…</p></div>`;
@@ -1539,7 +1717,7 @@ async function rankingsView() {
         <label class="eyebrow" style="margin:0" for="ratingsyear">Season</label>
         <select id="ratingsyear">${yrs.slice().reverse().map(y =>
           `<option ${y === data.year ? "selected" : ""}>${y}</option>`).join("")}</select>
-        <a class="cta" href="#/players/top10" style="margin:0">Build your own Top 10 →</a>
+        <a class="cta" href="#/players/team" style="margin:0">Build your All-Australian team →</a>
       </div>
       <p class="sub" style="margin-top:10px">${esc(data.attribution)} — top ${data.ratings.length} of ${data.count} rated players, ${data.year}.</p>
       <div class="tablewrap"><table>
@@ -1573,7 +1751,7 @@ async function playersView() {
       <p class="feature-ctas" style="margin-top:10px">
         <a class="cta" href="#/players/rankings">Player rankings</a>
         <a class="cta quiet" href="#/players/fantasy">AFL Fantasy</a>
-        <a class="cta quiet" href="#/players/top10">Build a Top 10</a>
+        <a class="cta quiet" href="#/players/team">Build AA team</a>
         <a class="cta quiet" href="#/free-agents">Free agents 2026</a>
         <a class="cta quiet" href="#/free-agents/out_of_contract">Out of contract</a>
       </p>
@@ -2465,6 +2643,7 @@ const routes = [
   [/^#\/players\/rankings$/,        () => rankingsView()],
   [/^#\/players\/compare(?:\?.*)?$/, () => compareView()],
   [/^#\/players\/fantasy$/,         () => fantasyView()],
+  [/^#\/players\/team(?:\?.*)?$/,   () => aaTeamView()],
   [/^#\/players\/top10(?:\?.*)?$/,  () => top10View()],
   [/^#\/draft$/,                    () => draftOrderView(draftChrome("order"))],
   [/^#\/draft\/mock(?:\?.*)?$/,     () => mockDraftView(draftChrome("mock"))],

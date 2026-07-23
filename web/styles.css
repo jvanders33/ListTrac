@@ -477,6 +477,26 @@ footer.pagefoot {
 .dchip.ufa { border-left-color: var(--ufa); background: var(--ufa-bg); }
 @media (max-width: 620px) { .depthline { grid-template-columns: 1fr; gap: 6px; } }
 
+/* Build your All-Australian team */
+.aacols { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; align-items: start; margin-top: 14px; }
+@media (max-width: 900px) { .aacols { grid-template-columns: 1fr; } }
+.aafield { background: linear-gradient(#1a5a3a, #123f28); border-radius: 14px; padding: 16px 10px; display: flex; flex-direction: column; gap: 12px; border: 2px solid #ffffff1f; margin-top: 10px; }
+.aaline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.aaline.bench { grid-template-columns: repeat(4, 1fr); }
+.aaslot { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 58px; min-width: 0; overflow: hidden; padding: 7px 4px; border-radius: 8px; background: #ffffff16; border: 1px solid #ffffff22; color: #fff; cursor: pointer; font: inherit; text-align: center; }
+.aaslot:hover { background: #ffffff24; }
+.aaslot.sel { outline: 2px solid var(--accent); outline-offset: 1px; }
+.aaslot.filled { background: #0c141ae6; }
+.aaslot .aapos { font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.02em; color: #bfd3c8; line-height: 1.15; }
+.aafill { display: flex; align-items: center; gap: 5px; min-width: 0; max-width: 100%; }
+.aafill b { font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+@media (max-width: 540px) { .aaline.bench { grid-template-columns: repeat(2, 1fr); } }
+.aart { font-size: 11px; color: #9fb3a8; font-variant-numeric: tabular-nums; }
+.aaplus { font-size: 20px; color: #ffffff66; line-height: 1; }
+.aarm { position: absolute; top: 1px; right: 5px; font-size: 12px; color: #ffffff99; }
+.aarm:hover { color: #fff; }
+.aabench { margin-top: 14px; }
+
 /* movement watch (rumour-mill) */
 .watchlist2 { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; }
 .watchitem { display: grid; grid-template-columns: auto 1fr auto; align-items: start; gap: 10px; padding: 9px 6px; border-top: 1px solid var(--line); color: var(--ink); }
