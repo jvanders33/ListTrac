@@ -56,6 +56,11 @@ jobs:
         run: python scraper/form.py
         continue-on-error: true
 
+      - name: Build similar-players comps (nearest percentile profiles)
+        # depends on scouting.py — nearest twelve-stat profiles per position pool
+        run: python scraper/comps.py
+        continue-on-error: true
+
       - name: Build empirical aging curves (delta method, by position)
         # joins 2015-26 ratings history to DOBs -> age->rating curves that
         # inform the Trade Value age factor and the player-page aging card

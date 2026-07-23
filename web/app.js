@@ -2338,6 +2338,25 @@ function tradeValueCard(tv) {
     <p class="sub" style="margin:8px 0 0">ListTrac's index of a player's worth as a trade asset — form weighed against age and contract control. <a href="#/players/trade-values">See the full board →</a></p>
   </div>`;
 }
+/* Similar players — nearest percentile profiles within the same position pool.
+   Style comps, with each comp's rating shown so calibre is legible too. */
+function compsCard(comps) {
+  const rows = (comps.players || []).filter(c => c.name);
+  if (!rows.length) return "";
+  const pl = (comps.position_label || "position").toLowerCase();
+  return `<div class="card">
+    <h3>Similar players <span class="thin" style="font-weight:400">· by ${esc(pl)} profile</span></h3>
+    <p class="sub">Closest twelve-stat profiles among ${esc(pl)}s this season — style, not calibre. The rating shows how they compare in class.</p>
+    <div class="complist">
+      ${rows.map(c => `<div class="comprow" style="--sim:${c.similarity}%">
+        <span class="comp-name">${c.id ? `<a href="#/player/${c.id}">${esc(c.name)}</a>` : esc(c.name)}${c.club ? ` <span class="thin">${esc(c.club)}</span>` : ""}</span>
+        <span class="comp-bar"><i></i></span>
+        <span class="comp-meta">${c.rating ? `<span class="thin">${Math.round(c.rating)}</span>` : ""}<b>${c.similarity}</b></span>
+      </div>`).join("")}
+    </div>
+    <p class="thin" style="font-size:11px;margin-top:8px">Similarity = 100 minus the average percentile gap across twelve per-game stats. Same position pool only.</p>
+  </div>`;
+}
 function formCard(form, sc) {
   const games = form.games || [];
   if (!games.length) return "";
@@ -2461,6 +2480,7 @@ async function playerView(id) {
         ${p.trade_value ? tradeValueCard(p.trade_value) : ""}
         ${p.form ? formCard(p.form, p.scouting) : ""}
         ${p.scouting ? scoutingCard(p.scouting, id) : ""}
+        ${p.comps ? compsCard(p.comps) : ""}
         ${p.rating_history && p.rating_history.length ? `
         <div class="card">
           <h3>AFL Player Rating history</h3>

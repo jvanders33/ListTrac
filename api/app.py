@@ -367,6 +367,25 @@ def player(player_id: int):
                 "curve": curve, "trail": trail,
                 "source": ac.get("source"), "attribution": ac.get("attribution"),
             }
+
+    # similar players: nearest percentile profiles in the same position pool,
+    # enriched with id/club/rating so each comp links out with context
+    profile["comps"] = None
+    cx = _comps_index().get("_players", {}).get(key)
+    if cx and cx.get("comps"):
+        ident, rb = _ident_by_name(), _ratings_by_name()
+        rows_out = []
+        for c in cx["comps"]:
+            cn = _norm(c["name"])
+            idn = ident.get(cn)
+            rr = rb.get(cn)
+            rows_out.append({
+                "name": c["name"], "similarity": c["similarity"],
+                "id": idn["id"] if idn else None,
+                "club": idn["club"] if idn else None,
+                "rating": rr["rating"] if rr else None,
+            })
+        profile["comps"] = {"position_label": cx.get("position_label"), "players": rows_out}
     return profile
 
 
@@ -833,6 +852,34 @@ def _aging_curves() -> dict:
     if not _aging_cache and AGING_PATH.exists():
         _aging_cache.update(json.loads(AGING_PATH.read_text(encoding="utf-8")))
     return _aging_cache
+
+
+COMPS_PATH = Path(__file__).resolve().parent.parent / "data" / "comps_2026.json"
+_comps_cache: dict = {}
+_ident_cache: dict = {}
+
+
+def _comps_index() -> dict:
+    """Similar-players (nearest percentile profiles) keyed by normalised name."""
+    import json
+    if not _comps_cache and COMPS_PATH.exists():
+        _comps_cache["_players"] = json.loads(COMPS_PATH.read_text(encoding="utf-8")).get("players", {})
+    return _comps_cache
+
+
+def _ident_by_name() -> dict:
+    """norm name -> {id, club} for linking comps to player pages. On a same-name
+    collision the listed (current) player wins."""
+    if not _ident_cache:
+        with db() as conn:
+            for r in conn.execute(
+                    """SELECT p.id, p.first_name, p.last_name, c.abbreviation club, p.status
+                       FROM player p LEFT JOIN club c ON c.id = p.current_club_id"""):
+                nm = _norm(f"{r['first_name']} {r['last_name']}")
+                prev = _ident_cache.get(nm)
+                if not prev or (r["status"] == "listed" and prev.get("status") != "listed"):
+                    _ident_cache[nm] = {"id": r["id"], "club": r["club"], "status": r["status"]}
+    return _ident_cache
 
 
 import datetime
