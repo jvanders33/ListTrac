@@ -851,18 +851,26 @@ def _age_2026(dob):
     return ref.year - d.year - ((ref.month, ref.day) < (d.month, d.day))
 
 
-def _age_factor(age):
+# Each position matures and declines on its own clock (empirical peak ages from
+# scraper/aging.py: DEF 25, FWD 25-27, RUCK 28, MID 29). We keep one base curve
+# but shift a player's effective age toward their position's peak, so a gun mid
+# isn't discounted like a 30yo defender. Methodology only — never surfaced.
+_AGE_SHIFT = {"MID": 3, "RUCK": 2, "FWD": 0, "DEF": -1}
+
+
+def _age_factor(age, pos_group=None):
     if age is None:
         return 1.0
-    if age <= 20:
+    a = age - _AGE_SHIFT.get(pos_group, 0)   # effective age relative to the base curve
+    if a <= 20:
         return 1.10
-    if age <= 23:
+    if a <= 23:
         return 1.15
-    if age <= 27:
+    if a <= 27:
         return 1.00
-    if age <= 29:
+    if a <= 29:
         return 0.82
-    if age <= 31:
+    if a <= 31:
         return 0.60
     return 0.40
 
@@ -908,7 +916,8 @@ def _trade_value_board() -> dict:
                 status, through = "contracted", o["end_year"]
             age = _age_2026(r["dob"])
             years_left = max(0, (through or CURRENT_YEAR) - CURRENT_YEAR)
-            af, cf = _age_factor(age), _contract_factor(status, years_left)
+            pos_group = _POS_GROUP.get((rr.get("position") or "").upper())
+            af, cf = _age_factor(age, pos_group), _contract_factor(status, years_left)
             out.append({
                 "id": r["id"], "name": f"{r['first_name']} {r['last_name']}",
                 "club": r["club"], "club_name": r["club_name"],

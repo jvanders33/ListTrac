@@ -2324,17 +2324,18 @@ function tradeValueCard(tv) {
   const ctr = tv.status === "contracted"
     ? `${tv.years_left} yr${tv.years_left === 1 ? "" : "s"} left`
     : (STATUS[tv.status] || {}).label || tv.status;
+  // Inputs shown as plain facts — the model's weightings stay in methodology.
   return `<div class="card tradeval">
     <h3>Trade value <span class="thin" style="font-weight:400">· #${tv.rank} in the AFL</span></h3>
     <div class="tv-headline">
       <div class="tv-num">${tv.value}</div>
-      <div class="tv-formula">
-        <span class="tvf"><b>${tv.rating}</b><small>rating</small></span><span class="tvx">×</span>
-        <span class="tvf"><b>${tv.age_factor.toFixed(2)}</b><small>age ${tv.age ?? "?"}</small></span><span class="tvx">×</span>
-        <span class="tvf"><b>${tv.contract_factor.toFixed(2)}</b><small>${esc(ctr)}</small></span>
+      <div class="tv-context">
+        <span class="tvc"><b>${tv.rating}</b><small>player rating</small></span>
+        <span class="tvc"><b>${tv.age ?? "?"}</b><small>years old</small></span>
+        <span class="tvc"><b>${esc(ctr)}</b><small>contract</small></span>
       </div>
     </div>
-    <p class="sub" style="margin:8px 0 0">ListTrac's index of a player's worth as a trade asset — current form adjusted for age and contract control. <a href="#/players/trade-values">See the full board →</a></p>
+    <p class="sub" style="margin:8px 0 0">ListTrac's index of a player's worth as a trade asset — form weighed against age and contract control. <a href="#/players/trade-values">See the full board →</a></p>
   </div>`;
 }
 function formCard(form, sc) {
@@ -2839,9 +2840,10 @@ async function tradeValueView() {
             <td class="num"><b>${x.value}</b></td></tr>`).join("")}
         </tbody>
       </table></div>
-      <p class="thin" style="font-size:11.5px;margin-top:10px">Value = AFL Player Rating × age factor × contract factor.
-        Age: 21–23 ×1.15, 24–27 ×1.00, 28–29 ×0.82, 30–31 ×0.60, 32+ ×0.40.
-        Contract: 3+yr ×1.20, 2yr ×1.08, 1yr ×0.98, out of contract ×0.85, restricted FA ×0.80, unrestricted FA ×0.62.</p>
+      <details class="methodology">
+        <summary>Methodology</summary>
+        <p>Trade value blends a player's current AFL Player Rating with their age and contract security. Age is judged against each position's typical peak — midfielders and rucks hold their value later than defenders and forwards (see the <a href="#/player/453">aging curves</a>) — and longer contracts count for more than looming free agency. No dollar figures: the AFL doesn't disclose contract terms.</p>
+      </details>
     </div>`;
 }
 
