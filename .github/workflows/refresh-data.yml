@@ -71,6 +71,11 @@ jobs:
         run: python scraper/splits.py
         continue-on-error: true
 
+      - name: Build Brownlow Medal projection (per-match 3-2-1 model)
+        # running vote projection from round-level form
+        run: python scraper/brownlow.py
+        continue-on-error: true
+
       - name: Build empirical aging curves (delta method, by position)
         # joins 2015-26 ratings history to DOBs -> age->rating curves that
         # inform the Trade Value age factor and the player-page aging card

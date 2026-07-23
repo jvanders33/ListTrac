@@ -101,10 +101,21 @@ def upsert_player(conn, name: str, draftguru_id: str | None = None, **fields) ->
 
 
 def load_current_lists(conn, club_ids: dict[str, int], year: int) -> None:
+    # current_club_id is set via COALESCE, so the first club to touch a player
+    # row wins — and clubs load alphabetically. If a draftguru_id ever shows up
+    # on two lists, the earlier club silently keeps him; flag it so a genuine
+    # mis-club (or an upstream duplicate) is loud instead of silent.
+    seen_on: dict[str, str] = {}  # draftguru_id -> club that claimed it first
     for club, v in CLUBS.items():
         roster = fetch_club_list(year, v["draftguru"])
         for p in roster:
-            upsert_player(conn, p["name"], p["draftguru_id"],
+            did = p["draftguru_id"]
+            if did in seen_on:
+                print(f"  ! {p['name']} ({did}) on both {seen_on[did]} and {club} "
+                      f"lists — kept at {seen_on[did]} (alphabetically first)")
+            else:
+                seen_on[did] = club
+            upsert_player(conn, p["name"], did,
                           current_club_id=club_ids[club], jumper_number=p["jumper"],
                           dob=p["dob"], height_cm=p["height_cm"], status="listed")
         print(f"  {club}: {len(roster)} listed")

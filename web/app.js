@@ -1342,6 +1342,7 @@ const playersChrome = act => `<div class="subtabs">
   <a href="#/players/rankings" class="${act === "rank" ? "active" : ""}">Rankings</a>
   <a href="#/players/trade-values" class="${act === "tradeval" ? "active" : ""}">Trade value</a>
   <a href="#/players/roles" class="${act === "roles" ? "active" : ""}">Roles</a>
+  <a href="#/players/brownlow" class="${act === "brownlow" ? "active" : ""}">Brownlow</a>
   <a href="#/players/compare" class="${act === "compare" ? "active" : ""}">Compare</a>
   <a href="#/players/fantasy" class="${act === "fantasy" ? "active" : ""}">Fantasy</a>
   <a href="#/players/team" class="${act === "team" ? "active" : ""}">Build AA team</a>
@@ -2493,7 +2494,8 @@ async function playerView(id) {
         <p class="statusline">${current ? chip(current.status) : ""}${p.rating ? `
           <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Player Rating #${p.rating.rank} · ${p.rating.rating}</span>` : ""}${p.fantasy ? `
           <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Fantasy avg ${p.fantasy.af_avg}</span>` : ""}${p.role ? `
-          <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff" title="ListTrac's read of playing role">${esc(p.role.role_label)}${p.role.secondary_label ? ` / ${esc(p.role.secondary_label)}` : ""}</span>` : ""}</p>
+          <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff" title="ListTrac's read of playing role">${esc(p.role.role_label)}${p.role.secondary_label ? ` / ${esc(p.role.secondary_label)}` : ""}</span>` : ""}${p.brownlow && p.brownlow.rank <= 40 ? `
+          <a href="#/players/brownlow" class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff;text-decoration:none" title="ListTrac Brownlow projection">🏅 Brownlow ${p.brownlow.rank <= 3 ? ["1st","2nd","3rd"][p.brownlow.rank-1] : "#" + p.brownlow.rank} · ${p.brownlow.votes}v</a>` : ""}</p>
         <dl class="hero-facts">
           ${p.dob ? `<div><dt>Age</dt><dd>${age(p.dob)} (${esc(p.dob)})</dd></div>` : ""}
           ${p.height_cm ? `<div><dt>Height</dt><dd>${p.height_cm} cm</dd></div>` : ""}
@@ -2925,6 +2927,34 @@ async function rolesView() {
     </details></div>`;
 }
 
+async function brownlowView() {
+  const data = await api("/api/brownlow?limit=60").catch(() => null);
+  if (!data) { view.innerHTML = `${playersChrome("brownlow")}<div class="card"><p class="error">Brownlow projection unavailable.</p></div>`; return; }
+  const rounds = data.rounds && data.rounds.length ? `after ${data.rounds.length} rounds` : "";
+  const medal = p => p.rank === 1 ? "🥇" : p.rank === 2 ? "🥈" : p.rank === 3 ? "🥉" : p.rank;
+  view.innerHTML = `${playersChrome("brownlow")}
+    <div class="card">
+      <h3>Brownlow Medal projection <span class="thin" style="font-weight:400">· ${esc(rounds)}</span></h3>
+      <p class="sub">ListTrac's running 3-2-1 model — who the umpires are on track to reward. A prediction from match-by-match form, not the real votes (those stay secret until count night).</p>
+      <div class="tablewrap"><table class="brownlow">
+        <thead><tr><th class="num">#</th><th>Player</th><th>Club</th><th class="num">Votes</th><th class="num" title="predicted best-on-grounds (3-vote games)">3V</th><th class="num" title="games predicted to poll">Polls</th><th class="num" title="projected full-season total at current rate">Proj</th></tr></thead>
+        <tbody>${data.players.map(p => `
+          <tr${p.rank <= 3 ? ' class="bl-top"' : ""}>
+            <td class="num">${medal(p)}</td>
+            <td>${p.id ? `<a href="#/player/${p.id}">${esc(p.name)}</a>` : esc(p.name)}</td>
+            <td>${p.club ? clubTag(p.club, p.club) : ""}</td>
+            <td class="num"><b>${p.votes}</b></td>
+            <td class="num thin">${p.threes}</td>
+            <td class="num thin">${p.polls}</td>
+            <td class="num thin">${p.projected}</td></tr>`).join("")}
+        </tbody>
+      </table></div>
+      <details class="methodology"><summary>Methodology</summary>
+        <p>${esc(data.attribution || "")} Each match's predicted 3-2-1 goes to the top-scored players, scored from Champion Data match rating with a disposal/midfield lean, a goals bonus and a winning-team bonus. "Proj" extrapolates the current rate to a ${data.season_games}-game season and will overstate hot starts.</p>
+      </details>
+    </div>`;
+}
+
 async function tradeValueView() {
   const data = await api("/api/trade-values?limit=150").catch(() => null);
   if (!data) { view.innerHTML = `${playersChrome("tradeval")}<div class="card"><p class="error">Trade values unavailable.</p></div>`; return; }
@@ -2956,6 +2986,7 @@ const routes = [
   [/^#\/clubs$/,                    () => clubsView()],
   [/^#\/players\/trade-values$/,    () => tradeValueView()],
   [/^#\/players\/roles$/,           () => rolesView()],
+  [/^#\/players\/brownlow$/,        () => brownlowView()],
   [/^#\/players$/,                  () => playersView()],
   [/^#\/players\/rankings$/,        () => rankingsView()],
   [/^#\/players\/compare(?:\?.*)?$/, () => compareView()],

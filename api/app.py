@@ -385,6 +385,15 @@ def player(player_id: int):
                 "club": idn["club"] if idn else None,
                 "rating": rr["rating"] if rr else None,
             })
+    # Brownlow projection standing, if this player is polling
+    profile["brownlow"] = None
+    bl = _brownlow_index().get("_by_name", {}).get(key)
+    if bl:
+        profile["brownlow"] = {"rank": bl["rank"], "votes": bl["votes"],
+                               "projected": bl.get("projected"), "threes": bl.get("threes"),
+                               "polls": bl.get("polls"),
+                               "rounds": (_brownlow_index().get("_meta") or {}).get("rounds")}
+
     # vs-opponent splits (multi-season): overall line + per-club performance
     profile["splits"] = None
     sx = _splits_index().get("_players", {}).get(key)
@@ -897,6 +906,21 @@ def _roles_index() -> dict:
     return _roles_cache
 
 
+BROWNLOW_PATH = Path(__file__).resolve().parent.parent / "data" / "brownlow_2026.json"
+_brownlow_cache: dict = {}
+
+
+def _brownlow_index() -> dict:
+    """Brownlow projection leaderboard + per-player rank, keyed by norm name."""
+    import json
+    if not _brownlow_cache and BROWNLOW_PATH.exists():
+        data = json.loads(BROWNLOW_PATH.read_text(encoding="utf-8"))
+        _brownlow_cache["_board"] = data.get("players", [])
+        _brownlow_cache["_by_name"] = {_norm(p["name"]): p for p in data.get("players", [])}
+        _brownlow_cache["_meta"] = {k: data[k] for k in ("year", "rounds", "season_games", "attribution") if k in data}
+    return _brownlow_cache
+
+
 SPLITS_PATH = Path(__file__).resolve().parent.parent / "data" / "splits_2026.json"
 _splits_cache: dict = {}
 
@@ -1044,6 +1068,23 @@ def aging_curves():
     if not ac:
         raise HTTPException(404, "aging curves not built")
     return ac
+
+
+@app.get("/api/brownlow")
+def brownlow(limit: int = 50):
+    """Brownlow Medal projection leaderboard — a per-match 3-2-1 model. Club/id
+    enriched from the DB (the scraper's club can lag mid-season trades)."""
+    bi = _brownlow_index()
+    if not bi.get("_board"):
+        raise HTTPException(404, "brownlow projection not built")
+    ident = _ident_by_name()
+    out = []
+    for p in bi["_board"][:limit]:
+        idn = ident.get(_norm(p["name"]))
+        out.append({**p,
+                    "id": idn["id"] if idn else None,
+                    "club": (idn["club"] if idn else None) or p.get("club")})
+    return {**bi.get("_meta", {}), "count": len(bi["_board"]), "players": out}
 
 
 @app.get("/api/roles")

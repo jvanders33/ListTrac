@@ -1,0 +1,2848 @@
+{
+ "year": 2026,
+ "rounds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20
+ ],
+ "season_games": 22,
+ "attribution": "ListTrac's Brownlow Medal projection — a per-match 3-2-1 model built on Champion Data ratings with goal and winning-team weightings. A prediction, not the actual (secret) umpire votes.",
+ "count": 194,
+ "players": [
+  {
+   "name": "Nick Daicos",
+   "club": "COL",
+   "votes": 33,
+   "polls": 13,
+   "threes": 8,
+   "by_round": {
+    "1": 2,
+    "3": 3,
+    "6": 3,
+    "8": 2,
+    "11": 3,
+    "12": 1,
+    "13": 2,
+    "15": 2,
+    "16": 3,
+    "17": 3,
+    "18": 3,
+    "19": 3,
+    "20": 3
+   },
+   "games": 17,
+   "projected": 43,
+   "rank": 1
+  },
+  {
+   "name": "Zak Butters",
+   "club": "PA",
+   "votes": 28,
+   "polls": 12,
+   "threes": 7,
+   "by_round": {
+    "2": 3,
+    "3": 3,
+    "4": 3,
+    "5": 2,
+    "6": 3,
+    "7": 1,
+    "8": 1,
+    "10": 2,
+    "13": 3,
+    "14": 3,
+    "15": 1,
+    "16": 3
+   },
+   "games": 16,
+   "projected": 38,
+   "rank": 2
+  },
+  {
+   "name": "Marcus Bontempelli",
+   "club": "WB",
+   "votes": 26,
+   "polls": 10,
+   "threes": 6,
+   "by_round": {
+    "0": 2,
+    "1": 3,
+    "2": 2,
+    "4": 2,
+    "9": 3,
+    "11": 2,
+    "12": 3,
+    "13": 3,
+    "18": 3,
+    "19": 3
+   },
+   "games": 18,
+   "projected": 32,
+   "rank": 3
+  },
+  {
+   "name": "Zac Bailey",
+   "club": "BRI",
+   "votes": 22,
+   "polls": 9,
+   "threes": 4,
+   "by_round": {
+    "3": 3,
+    "4": 2,
+    "5": 3,
+    "7": 2,
+    "8": 3,
+    "14": 3,
+    "16": 2,
+    "17": 2,
+    "18": 2
+   },
+   "games": 16,
+   "projected": 30,
+   "rank": 4
+  },
+  {
+   "name": "Kysaiah Pickett",
+   "club": "MEL",
+   "votes": 21,
+   "polls": 8,
+   "threes": 5,
+   "by_round": {
+    "3": 3,
+    "4": 2,
+    "6": 2,
+    "7": 3,
+    "8": 2,
+    "13": 3,
+    "14": 3,
+    "19": 3
+   },
+   "games": 16,
+   "projected": 29,
+   "rank": 5
+  },
+  {
+   "name": "Isaac Heeney",
+   "club": "SYD",
+   "votes": 19,
+   "polls": 8,
+   "threes": 5,
+   "by_round": {
+    "1": 1,
+    "4": 3,
+    "5": 3,
+    "9": 3,
+    "10": 1,
+    "12": 3,
+    "13": 3,
+    "17": 2
+   },
+   "games": 15,
+   "projected": 28,
+   "rank": 6
+  },
+  {
+   "name": "Jordan Dawson",
+   "club": "ADE",
+   "votes": 19,
+   "polls": 9,
+   "threes": 4,
+   "by_round": {
+    "2": 1,
+    "4": 1,
+    "7": 3,
+    "9": 2,
+    "10": 3,
+    "11": 1,
+    "13": 3,
+    "14": 3,
+    "17": 2
+   },
+   "games": 15,
+   "projected": 28,
+   "rank": 7
+  },
+  {
+   "name": "Bailey Smith",
+   "club": "GEE",
+   "votes": 19,
+   "polls": 9,
+   "threes": 3,
+   "by_round": {
+    "1": 1,
+    "3": 3,
+    "5": 3,
+    "6": 2,
+    "9": 3,
+    "10": 2,
+    "11": 2,
+    "14": 1,
+    "19": 2
+   },
+   "games": 16,
+   "projected": 26,
+   "rank": 8
+  },
+  {
+   "name": "Jai Newcombe",
+   "club": "HAW",
+   "votes": 18,
+   "polls": 7,
+   "threes": 5,
+   "by_round": {
+    "2": 3,
+    "5": 3,
+    "7": 3,
+    "12": 1,
+    "15": 3,
+    "16": 3,
+    "18": 2
+   },
+   "games": 16,
+   "projected": 25,
+   "rank": 9
+  },
+  {
+   "name": "Nasiah Wanganeen-Milera",
+   "club": "STK",
+   "votes": 18,
+   "polls": 7,
+   "threes": 5,
+   "by_round": {
+    "2": 1,
+    "5": 3,
+    "7": 3,
+    "14": 2,
+    "15": 3,
+    "17": 3,
+    "18": 3
+   },
+   "games": 12,
+   "projected": 33,
+   "rank": 10
+  },
+  {
+   "name": "Nick Watson",
+   "club": "HAW",
+   "votes": 16,
+   "polls": 6,
+   "threes": 4,
+   "by_round": {
+    "1": 3,
+    "4": 3,
+    "6": 2,
+    "7": 2,
+    "12": 3,
+    "19": 3
+   },
+   "games": 15,
+   "projected": 23,
+   "rank": 11
+  },
+  {
+   "name": "George Hewett",
+   "club": "CAR",
+   "votes": 15,
+   "polls": 6,
+   "threes": 4,
+   "by_round": {
+    "1": 3,
+    "11": 1,
+    "13": 2,
+    "15": 3,
+    "16": 3,
+    "17": 3
+   },
+   "games": 13,
+   "projected": 25,
+   "rank": 12
+  },
+  {
+   "name": "Christian Petracca",
+   "club": "GCS",
+   "votes": 15,
+   "polls": 7,
+   "threes": 3,
+   "by_round": {
+    "0": 3,
+    "1": 3,
+    "6": 2,
+    "8": 3,
+    "9": 2,
+    "11": 1,
+    "17": 1
+   },
+   "games": 16,
+   "projected": 21,
+   "rank": 13
+  },
+  {
+   "name": "Luke Davies-Uniacke",
+   "club": "NM",
+   "votes": 14,
+   "polls": 6,
+   "threes": 3,
+   "by_round": {
+    "4": 3,
+    "6": 3,
+    "11": 3,
+    "16": 2,
+    "17": 1,
+    "19": 2
+   },
+   "games": 15,
+   "projected": 21,
+   "rank": 14
+  },
+  {
+   "name": "Shai Bolton",
+   "club": "FRE",
+   "votes": 14,
+   "polls": 6,
+   "threes": 3,
+   "by_round": {
+    "2": 3,
+    "7": 3,
+    "8": 3,
+    "10": 1,
+    "11": 2,
+    "18": 2
+   },
+   "games": 16,
+   "projected": 19,
+   "rank": 15
+  },
+  {
+   "name": "Ed Richards",
+   "club": "WB",
+   "votes": 14,
+   "polls": 6,
+   "threes": 2,
+   "by_round": {
+    "0": 3,
+    "9": 2,
+    "11": 3,
+    "12": 2,
+    "13": 2,
+    "18": 2
+   },
+   "games": 17,
+   "projected": 18,
+   "rank": 16
+  },
+  {
+   "name": "Caleb Serong",
+   "club": "FRE",
+   "votes": 13,
+   "polls": 6,
+   "threes": 3,
+   "by_round": {
+    "1": 3,
+    "3": 3,
+    "6": 3,
+    "9": 1,
+    "10": 2,
+    "15": 1
+   },
+   "games": 15,
+   "projected": 19,
+   "rank": 17
+  },
+  {
+   "name": "Jason Horne-Francis",
+   "club": "PA",
+   "votes": 12,
+   "polls": 5,
+   "threes": 3,
+   "by_round": {
+    "2": 1,
+    "7": 3,
+    "11": 3,
+    "13": 2,
+    "17": 3
+   },
+   "games": 16,
+   "projected": 16,
+   "rank": 18
+  },
+  {
+   "name": "Andrew Brayshaw",
+   "club": "FRE",
+   "votes": 11,
+   "polls": 4,
+   "threes": 3,
+   "by_round": {
+    "4": 3,
+    "16": 3,
+    "18": 3,
+    "19": 2
+   },
+   "games": 15,
+   "projected": 16,
+   "rank": 19
+  },
+  {
+   "name": "Charlie Curnow",
+   "club": "SYD",
+   "votes": 11,
+   "polls": 5,
+   "threes": 2,
+   "by_round": {
+    "7": 3,
+    "12": 2,
+    "14": 2,
+    "17": 3,
+    "18": 1
+   },
+   "games": 11,
+   "projected": 22,
+   "rank": 20
+  },
+  {
+   "name": "Jacob van Rooyen",
+   "club": "MEL",
+   "votes": 11,
+   "polls": 5,
+   "threes": 2,
+   "by_round": {
+    "1": 2,
+    "9": 1,
+    "15": 2,
+    "17": 3,
+    "18": 3
+   },
+   "games": 18,
+   "projected": 13,
+   "rank": 21
+  },
+  {
+   "name": "Patrick Cripps",
+   "club": "CAR",
+   "votes": 11,
+   "polls": 5,
+   "threes": 2,
+   "by_round": {
+    "9": 3,
+    "10": 2,
+    "12": 3,
+    "15": 2,
+    "17": 1
+   },
+   "games": 10,
+   "projected": 24,
+   "rank": 22
+  },
+  {
+   "name": "Izak Rankine",
+   "club": "ADE",
+   "votes": 10,
+   "polls": 4,
+   "threes": 3,
+   "by_round": {
+    "5": 1,
+    "9": 3,
+    "18": 3,
+    "19": 3
+   },
+   "games": 13,
+   "projected": 17,
+   "rank": 23
+  },
+  {
+   "name": "Harry Sheezel",
+   "club": "NM",
+   "votes": 10,
+   "polls": 5,
+   "threes": 2,
+   "by_round": {
+    "6": 1,
+    "14": 3,
+    "15": 1,
+    "16": 3,
+    "17": 2
+   },
+   "games": 13,
+   "projected": 17,
+   "rank": 24
+  },
+  {
+   "name": "Jordan De Goey",
+   "club": "COL",
+   "votes": 10,
+   "polls": 4,
+   "threes": 2,
+   "by_round": {
+    "0": 3,
+    "7": 2,
+    "15": 3,
+    "16": 2
+   },
+   "games": 18,
+   "projected": 12,
+   "rank": 25
+  },
+  {
+   "name": "Shaun Mannagh",
+   "club": "GEE",
+   "votes": 10,
+   "polls": 4,
+   "threes": 2,
+   "by_round": {
+    "3": 2,
+    "8": 3,
+    "10": 3,
+    "18": 2
+   },
+   "games": 16,
+   "projected": 14,
+   "rank": 26
+  },
+  {
+   "name": "Chad Warner",
+   "club": "SYD",
+   "votes": 10,
+   "polls": 6,
+   "threes": 1,
+   "by_round": {
+    "2": 1,
+    "4": 2,
+    "12": 1,
+    "13": 1,
+    "16": 3,
+    "19": 2
+   },
+   "games": 16,
+   "projected": 14,
+   "rank": 27
+  },
+  {
+   "name": "Luke Jackson",
+   "club": "FRE",
+   "votes": 10,
+   "polls": 5,
+   "threes": 1,
+   "by_round": {
+    "7": 2,
+    "8": 1,
+    "13": 2,
+    "15": 3,
+    "16": 2
+   },
+   "games": 12,
+   "projected": 18,
+   "rank": 28
+  },
+  {
+   "name": "Toby Greene",
+   "club": "GWS",
+   "votes": 10,
+   "polls": 5,
+   "threes": 1,
+   "by_round": {
+    "7": 2,
+    "9": 2,
+    "11": 3,
+    "12": 1,
+    "17": 2
+   },
+   "games": 12,
+   "projected": 18,
+   "rank": 29
+  },
+  {
+   "name": "Justin McInerney",
+   "club": "SYD",
+   "votes": 9,
+   "polls": 4,
+   "threes": 2,
+   "by_round": {
+    "0": 3,
+    "1": 2,
+    "5": 1,
+    "6": 3
+   },
+   "games": 13,
+   "projected": 15,
+   "rank": 30
+  },
+  {
+   "name": "Nick Blakey",
+   "club": "SYD",
+   "votes": 9,
+   "polls": 4,
+   "threes": 2,
+   "by_round": {
+    "1": 3,
+    "6": 1,
+    "9": 2,
+    "10": 3
+   },
+   "games": 17,
+   "projected": 12,
+   "rank": 31
+  },
+  {
+   "name": "Hugo Garcia",
+   "club": "STK",
+   "votes": 9,
+   "polls": 5,
+   "threes": 1,
+   "by_round": {
+    "5": 1,
+    "10": 3,
+    "15": 2,
+    "17": 2,
+    "18": 1
+   },
+   "games": 14,
+   "projected": 14,
+   "rank": 32
+  },
+  {
+   "name": "Lachie Neale",
+   "club": "BRI",
+   "votes": 9,
+   "polls": 4,
+   "threes": 1,
+   "by_round": {
+    "5": 2,
+    "9": 2,
+    "13": 2,
+    "19": 3
+   },
+   "games": 14,
+   "projected": 14,
+   "rank": 33
+  },
+  {
+   "name": "Max Holmes",
+   "club": "GEE",
+   "votes": 9,
+   "polls": 5,
+   "threes": 1,
+   "by_round": {
+    "3": 1,
+    "5": 2,
+    "6": 1,
+    "8": 2,
+    "14": 3
+   },
+   "games": 16,
+   "projected": 12,
+   "rank": 34
+  },
+  {
+   "name": "Touk Miller",
+   "club": "GCS",
+   "votes": 9,
+   "polls": 5,
+   "threes": 1,
+   "by_round": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "8": 2,
+    "9": 3
+   },
+   "games": 18,
+   "projected": 11,
+   "rank": 35
+  },
+  {
+   "name": "Kade Chandler",
+   "club": "MEL",
+   "votes": 8,
+   "polls": 4,
+   "threes": 2,
+   "by_round": {
+    "6": 1,
+    "9": 3,
+    "10": 3,
+    "15": 1
+   },
+   "games": 13,
+   "projected": 14,
+   "rank": 36
+  },
+  {
+   "name": "Will Ashcroft",
+   "club": "BRI",
+   "votes": 8,
+   "polls": 4,
+   "threes": 2,
+   "by_round": {
+    "4": 3,
+    "12": 1,
+    "14": 1,
+    "18": 3
+   },
+   "games": 15,
+   "projected": 12,
+   "rank": 37
+  },
+  {
+   "name": "Brodie Grundy",
+   "club": "SYD",
+   "votes": 8,
+   "polls": 5,
+   "threes": 0,
+   "by_round": {
+    "2": 2,
+    "4": 1,
+    "7": 2,
+    "8": 1,
+    "10": 2
+   },
+   "games": 15,
+   "projected": 12,
+   "rank": 38
+  },
+  {
+   "name": "Jye Amiss",
+   "club": "FRE",
+   "votes": 7,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "4": 2,
+    "6": 2,
+    "19": 3
+   },
+   "games": 15,
+   "projected": 10,
+   "rank": 39
+  },
+  {
+   "name": "Oliver Dempsey",
+   "club": "GEE",
+   "votes": 7,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "0": 2,
+    "12": 2,
+    "18": 3
+   },
+   "games": 18,
+   "projected": 9,
+   "rank": 40
+  },
+  {
+   "name": "Jake Stringer",
+   "club": "GWS",
+   "votes": 6,
+   "polls": 2,
+   "threes": 2,
+   "by_round": {
+    "0": 3,
+    "17": 3
+   },
+   "games": 18,
+   "projected": 7,
+   "rank": 41
+  },
+  {
+   "name": "Patrick Voss",
+   "club": "FRE",
+   "votes": 6,
+   "polls": 2,
+   "threes": 2,
+   "by_round": {
+    "10": 3,
+    "13": 3
+   },
+   "games": 9,
+   "projected": 15,
+   "rank": 42
+  },
+  {
+   "name": "Rowan Marshall",
+   "club": "STK",
+   "votes": 6,
+   "polls": 2,
+   "threes": 2,
+   "by_round": {
+    "8": 3,
+    "19": 3
+   },
+   "games": 11,
+   "projected": 12,
+   "rank": 43
+  },
+  {
+   "name": "Brent Daniels",
+   "club": "GWS",
+   "votes": 6,
+   "polls": 4,
+   "threes": 1,
+   "by_round": {
+    "5": 1,
+    "7": 1,
+    "9": 3,
+    "11": 1
+   },
+   "games": 10,
+   "projected": 13,
+   "rank": 44
+  },
+  {
+   "name": "Darcy Fogarty",
+   "club": "ADE",
+   "votes": 6,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "16": 2,
+    "17": 3,
+    "19": 1
+   },
+   "games": 4,
+   "projected": 33,
+   "rank": 45
+  },
+  {
+   "name": "Josh Rachele",
+   "club": "ADE",
+   "votes": 6,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "5": 3,
+    "9": 1,
+    "14": 2
+   },
+   "games": 15,
+   "projected": 9,
+   "rank": 46
+  },
+  {
+   "name": "Jy Simpkin",
+   "club": "NM",
+   "votes": 6,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "1": 3,
+    "4": 1,
+    "11": 2
+   },
+   "games": 18,
+   "projected": 7,
+   "rank": 47
+  },
+  {
+   "name": "Matthew Kennedy",
+   "club": "WB",
+   "votes": 6,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "4": 3,
+    "15": 1,
+    "19": 2
+   },
+   "games": 15,
+   "projected": 9,
+   "rank": 48
+  },
+  {
+   "name": "Max Hall",
+   "club": "STK",
+   "votes": 6,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "1": 3,
+    "10": 2,
+    "11": 1
+   },
+   "games": 17,
+   "projected": 8,
+   "rank": 49
+  },
+  {
+   "name": "Noah Anderson",
+   "club": "GCS",
+   "votes": 6,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "1": 2,
+    "2": 1,
+    "10": 3
+   },
+   "games": 16,
+   "projected": 8,
+   "rank": 50
+  },
+  {
+   "name": "Sam Berry",
+   "club": "ADE",
+   "votes": 6,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "5": 2,
+    "8": 3,
+    "14": 1
+   },
+   "games": 15,
+   "projected": 9,
+   "rank": 51
+  },
+  {
+   "name": "Scott Pendlebury",
+   "club": "COL",
+   "votes": 6,
+   "polls": 4,
+   "threes": 1,
+   "by_round": {
+    "0": 1,
+    "7": 3,
+    "9": 1,
+    "20": 1
+   },
+   "games": 14,
+   "projected": 9,
+   "rank": 52
+  },
+  {
+   "name": "Zach Merrett",
+   "club": "ESS",
+   "votes": 6,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "1": 1,
+    "5": 2,
+    "19": 3
+   },
+   "games": 18,
+   "projected": 7,
+   "rank": 53
+  },
+  {
+   "name": "Jack Crisp",
+   "club": "COL",
+   "votes": 6,
+   "polls": 4,
+   "threes": 0,
+   "by_round": {
+    "3": 2,
+    "5": 2,
+    "16": 1,
+    "18": 1
+   },
+   "games": 17,
+   "projected": 8,
+   "rank": 54
+  },
+  {
+   "name": "Tom Sparrow",
+   "club": "MEL",
+   "votes": 6,
+   "polls": 4,
+   "threes": 0,
+   "by_round": {
+    "7": 1,
+    "9": 2,
+    "18": 2,
+    "19": 1
+   },
+   "games": 12,
+   "projected": 11,
+   "rank": 55
+  },
+  {
+   "name": "Connor Macdonald",
+   "club": "HAW",
+   "votes": 5,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "1": 2,
+    "8": 3
+   },
+   "games": 17,
+   "projected": 6,
+   "rank": 56
+  },
+  {
+   "name": "Finn Callaghan",
+   "club": "GWS",
+   "votes": 5,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "5": 2,
+    "12": 3
+   },
+   "games": 14,
+   "projected": 8,
+   "rank": 57
+  },
+  {
+   "name": "George Wardlaw",
+   "club": "NM",
+   "votes": 5,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "3": 2,
+    "15": 3
+   },
+   "games": 13,
+   "projected": 8,
+   "rank": 58
+  },
+  {
+   "name": "Harley Reid",
+   "club": "WCE",
+   "votes": 5,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "10": 3,
+    "16": 1,
+    "18": 1
+   },
+   "games": 9,
+   "projected": 12,
+   "rank": 59
+  },
+  {
+   "name": "Jack Steele",
+   "club": "MEL",
+   "votes": 5,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "1": 1,
+    "4": 3,
+    "18": 1
+   },
+   "games": 18,
+   "projected": 6,
+   "rank": 60
+  },
+  {
+   "name": "Josh Ward",
+   "club": "HAW",
+   "votes": 5,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "15": 2,
+    "18": 3
+   },
+   "games": 5,
+   "projected": 22,
+   "rank": 61
+  },
+  {
+   "name": "Liam Ryan",
+   "club": "STK",
+   "votes": 5,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "13": 2,
+    "14": 3
+   },
+   "games": 6,
+   "projected": 18,
+   "rank": 62
+  },
+  {
+   "name": "Murphy Reid",
+   "club": "FRE",
+   "votes": 5,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "2": 2,
+    "11": 3
+   },
+   "games": 17,
+   "projected": 6,
+   "rank": 63
+  },
+  {
+   "name": "Sam Durham",
+   "club": "ESS",
+   "votes": 5,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "13": 3,
+    "16": 1,
+    "19": 1
+   },
+   "games": 6,
+   "projected": 18,
+   "rank": 64
+  },
+  {
+   "name": "Taylor Walker",
+   "club": "ADE",
+   "votes": 5,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "6": 3,
+    "18": 2
+   },
+   "games": 9,
+   "projected": 12,
+   "rank": 65
+  },
+  {
+   "name": "Josh Treacy",
+   "club": "FRE",
+   "votes": 5,
+   "polls": 3,
+   "threes": 0,
+   "by_round": {
+    "3": 2,
+    "12": 2,
+    "19": 1
+   },
+   "games": 16,
+   "projected": 7,
+   "rank": 66
+  },
+  {
+   "name": "Marc Pittonet",
+   "club": "CAR",
+   "votes": 5,
+   "polls": 3,
+   "threes": 0,
+   "by_round": {
+    "0": 1,
+    "1": 2,
+    "4": 2
+   },
+   "games": 15,
+   "projected": 7,
+   "rank": 67
+  },
+  {
+   "name": "Mitch Lewis",
+   "club": "HAW",
+   "votes": 5,
+   "polls": 3,
+   "threes": 0,
+   "by_round": {
+    "5": 2,
+    "6": 1,
+    "19": 2
+   },
+   "games": 14,
+   "projected": 8,
+   "rank": 68
+  },
+  {
+   "name": "Seth Campbell",
+   "club": "RIC",
+   "votes": 5,
+   "polls": 3,
+   "threes": 0,
+   "by_round": {
+    "8": 2,
+    "11": 1,
+    "17": 2
+   },
+   "games": 11,
+   "projected": 10,
+   "rank": 69
+  },
+  {
+   "name": "Corey Wagner",
+   "club": "FRE",
+   "votes": 4,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "3": 1,
+    "5": 3
+   },
+   "games": 10,
+   "projected": 9,
+   "rank": 70
+  },
+  {
+   "name": "Finn O'Sullivan",
+   "club": "NM",
+   "votes": 4,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "3": 3,
+    "9": 1
+   },
+   "games": 12,
+   "projected": 7,
+   "rank": 71
+  },
+  {
+   "name": "Harvey Langford",
+   "club": "MEL",
+   "votes": 4,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "6": 3,
+    "10": 1
+   },
+   "games": 13,
+   "projected": 7,
+   "rank": 72
+  },
+  {
+   "name": "Jeremy Cameron",
+   "club": "GEE",
+   "votes": 4,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "6": 3,
+    "11": 1
+   },
+   "games": 12,
+   "projected": 7,
+   "rank": 73
+  },
+  {
+   "name": "Joel Freijah",
+   "club": "WB",
+   "votes": 4,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "2": 3,
+    "9": 1
+   },
+   "games": 16,
+   "projected": 6,
+   "rank": 74
+  },
+  {
+   "name": "Mason Wood",
+   "club": "STK",
+   "votes": 4,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "2": 3,
+    "8": 1
+   },
+   "games": 15,
+   "projected": 6,
+   "rank": 75
+  },
+  {
+   "name": "Matthew Johnson",
+   "club": "FRE",
+   "votes": 4,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "2": 1,
+    "12": 3
+   },
+   "games": 16,
+   "projected": 6,
+   "rank": 76
+  },
+  {
+   "name": "Michael Frederick",
+   "club": "FRE",
+   "votes": 4,
+   "polls": 2,
+   "threes": 1,
+   "by_round": {
+    "9": 3,
+    "16": 1
+   },
+   "games": 10,
+   "projected": 9,
+   "rank": 77
+  },
+  {
+   "name": "Callum Wilkie",
+   "club": "STK",
+   "votes": 4,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "2": 2,
+    "18": 2
+   },
+   "games": 16,
+   "projected": 6,
+   "rank": 78
+  },
+  {
+   "name": "Clayton Oliver",
+   "club": "GWS",
+   "votes": 4,
+   "polls": 3,
+   "threes": 0,
+   "by_round": {
+    "0": 2,
+    "9": 1,
+    "17": 1
+   },
+   "games": 18,
+   "projected": 5,
+   "rank": 79
+  },
+  {
+   "name": "Harvey Thomas",
+   "club": "GWS",
+   "votes": 4,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "10": 2,
+    "12": 2
+   },
+   "games": 8,
+   "projected": 11,
+   "rank": 80
+  },
+  {
+   "name": "Jack Ginnivan",
+   "club": "HAW",
+   "votes": 4,
+   "polls": 3,
+   "threes": 0,
+   "by_round": {
+    "4": 2,
+    "5": 1,
+    "18": 1
+   },
+   "games": 15,
+   "projected": 6,
+   "rank": 81
+  },
+  {
+   "name": "Jack Ross",
+   "club": "RIC",
+   "votes": 4,
+   "polls": 3,
+   "threes": 0,
+   "by_round": {
+    "6": 2,
+    "8": 1,
+    "10": 1
+   },
+   "games": 9,
+   "projected": 10,
+   "rank": 82
+  },
+  {
+   "name": "Mabior Chol",
+   "club": "HAW",
+   "votes": 4,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "12": 2,
+    "17": 2
+   },
+   "games": 7,
+   "projected": 13,
+   "rank": 83
+  },
+  {
+   "name": "Max Gawn",
+   "club": "MEL",
+   "votes": 4,
+   "polls": 3,
+   "threes": 0,
+   "by_round": {
+    "4": 1,
+    "14": 2,
+    "17": 1
+   },
+   "games": 15,
+   "projected": 6,
+   "rank": 84
+  },
+  {
+   "name": "Sam Walsh",
+   "club": "CAR",
+   "votes": 4,
+   "polls": 3,
+   "threes": 0,
+   "by_round": {
+    "7": 1,
+    "15": 1,
+    "16": 2
+   },
+   "games": 12,
+   "projected": 7,
+   "rank": 85
+  },
+  {
+   "name": "Shannon Neale",
+   "club": "GEE",
+   "votes": 4,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "1": 2,
+    "15": 2
+   },
+   "games": 17,
+   "projected": 5,
+   "rank": 86
+  },
+  {
+   "name": "Aaron Cadman",
+   "club": "GWS",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "5": 3
+   },
+   "games": 13,
+   "projected": 5,
+   "rank": 87
+  },
+  {
+   "name": "Ben King",
+   "club": "GCS",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "2": 3
+   },
+   "games": 16,
+   "projected": 4,
+   "rank": 88
+  },
+  {
+   "name": "Blake Hardwick",
+   "club": "HAW",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "11": 3
+   },
+   "games": 8,
+   "projected": 8,
+   "rank": 89
+  },
+  {
+   "name": "Lawson Humphries",
+   "club": "GEE",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "11": 3
+   },
+   "games": 7,
+   "projected": 9,
+   "rank": 90
+  },
+  {
+   "name": "Logan Morris",
+   "club": "BRI",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "13": 3
+   },
+   "games": 6,
+   "projected": 11,
+   "rank": 91
+  },
+  {
+   "name": "Malcolm Rosas",
+   "club": "SYD",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "8": 3
+   },
+   "games": 8,
+   "projected": 8,
+   "rank": 92
+  },
+  {
+   "name": "Mark Keane",
+   "club": "ADE",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "15": 3
+   },
+   "games": 5,
+   "projected": 13,
+   "rank": 93
+  },
+  {
+   "name": "Matt Rowell",
+   "club": "GCS",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "6": 3
+   },
+   "games": 11,
+   "projected": 6,
+   "rank": 94
+  },
+  {
+   "name": "Matthew Carroll",
+   "club": "CAR",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "10": 3
+   },
+   "games": 2,
+   "projected": 33,
+   "rank": 95
+  },
+  {
+   "name": "Milan Murdock",
+   "club": "WCE",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "12": 3
+   },
+   "games": 7,
+   "projected": 9,
+   "rank": 96
+  },
+  {
+   "name": "Noah Balta",
+   "club": "RIC",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "8": 3
+   },
+   "games": 11,
+   "projected": 6,
+   "rank": 97
+  },
+  {
+   "name": "Patrick Dangerfield",
+   "club": "GEE",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "17": 3
+   },
+   "games": 3,
+   "projected": 22,
+   "rank": 98
+  },
+  {
+   "name": "Patrick Retschko",
+   "club": "RIC",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "11": 3
+   },
+   "games": 8,
+   "projected": 8,
+   "rank": 99
+  },
+  {
+   "name": "Tristan Xerri",
+   "club": "NM",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "2": 3
+   },
+   "games": 13,
+   "projected": 5,
+   "rank": 100
+  },
+  {
+   "name": "Wayne Milera",
+   "club": "ADE",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "1": 3
+   },
+   "games": 17,
+   "projected": 4,
+   "rank": 101
+  },
+  {
+   "name": "Xavier Duursma",
+   "club": "ESS",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "5": 3
+   },
+   "games": 14,
+   "projected": 5,
+   "rank": 102
+  },
+  {
+   "name": "Xavier O'Halloran",
+   "club": "GWS",
+   "votes": 3,
+   "polls": 1,
+   "threes": 1,
+   "by_round": {
+    "7": 3
+   },
+   "games": 4,
+   "projected": 16,
+   "rank": 103
+  },
+  {
+   "name": "Aaron Naughton",
+   "club": "WB",
+   "votes": 3,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "1": 2,
+    "11": 1
+   },
+   "games": 17,
+   "projected": 4,
+   "rank": 104
+  },
+  {
+   "name": "Bailey J. Williams",
+   "club": "WCE",
+   "votes": 3,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "10": 1,
+    "11": 2
+   },
+   "games": 9,
+   "projected": 7,
+   "rank": 105
+  },
+  {
+   "name": "Ben Keays",
+   "club": "ADE",
+   "votes": 3,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "8": 2,
+    "17": 1
+   },
+   "games": 12,
+   "projected": 6,
+   "rank": 106
+  },
+  {
+   "name": "Brayden Cook",
+   "club": "ADE",
+   "votes": 3,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "1": 1,
+    "6": 2
+   },
+   "games": 18,
+   "projected": 4,
+   "rank": 107
+  },
+  {
+   "name": "Cooper Sharman",
+   "club": "STK",
+   "votes": 3,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "8": 2,
+    "14": 1
+   },
+   "games": 11,
+   "projected": 6,
+   "rank": 108
+  },
+  {
+   "name": "Darcy Parish",
+   "club": "ESS",
+   "votes": 3,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "5": 1,
+    "11": 2
+   },
+   "games": 10,
+   "projected": 7,
+   "rank": 109
+  },
+  {
+   "name": "Darcy Wilmot",
+   "club": "BRI",
+   "votes": 3,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "8": 2,
+    "13": 1
+   },
+   "games": 11,
+   "projected": 6,
+   "rank": 110
+  },
+  {
+   "name": "James Peatling",
+   "club": "ADE",
+   "votes": 3,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "10": 2,
+    "18": 1
+   },
+   "games": 10,
+   "projected": 7,
+   "rank": 111
+  },
+  {
+   "name": "Jordon Sweet",
+   "club": "PA",
+   "votes": 3,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "7": 2,
+    "13": 1
+   },
+   "games": 12,
+   "projected": 6,
+   "rank": 112
+  },
+  {
+   "name": "Nick Larkey",
+   "club": "NM",
+   "votes": 3,
+   "polls": 3,
+   "threes": 0,
+   "by_round": {
+    "1": 1,
+    "2": 1,
+    "14": 1
+   },
+   "games": 18,
+   "projected": 4,
+   "rank": 113
+  },
+  {
+   "name": "Tom Atkins",
+   "club": "GEE",
+   "votes": 3,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "5": 1,
+    "14": 2
+   },
+   "games": 14,
+   "projected": 5,
+   "rank": 114
+  },
+  {
+   "name": "Willem Drew",
+   "club": "PA",
+   "votes": 3,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "2": 2,
+    "16": 1
+   },
+   "games": 17,
+   "projected": 4,
+   "rank": 115
+  },
+  {
+   "name": "Bayley Fritsch",
+   "club": "MEL",
+   "votes": 2,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "3": 1,
+    "13": 1
+   },
+   "games": 14,
+   "projected": 3,
+   "rank": 116
+  },
+  {
+   "name": "Beau McCreery",
+   "club": "COL",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "6": 2
+   },
+   "games": 13,
+   "projected": 3,
+   "rank": 117
+  },
+  {
+   "name": "Caleb Windsor",
+   "club": "MEL",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "7": 2
+   },
+   "games": 10,
+   "projected": 4,
+   "rank": 118
+  },
+  {
+   "name": "Cam Mackenzie",
+   "club": "HAW",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "16": 2
+   },
+   "games": 4,
+   "projected": 11,
+   "rank": 119
+  },
+  {
+   "name": "Charlie Cameron",
+   "club": "BRI",
+   "votes": 2,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "7": 1,
+    "10": 1
+   },
+   "games": 12,
+   "projected": 4,
+   "rank": 120
+  },
+  {
+   "name": "Cooper Trembath",
+   "club": "NM",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "15": 2
+   },
+   "games": 5,
+   "projected": 9,
+   "rank": 121
+  },
+  {
+   "name": "Daniel Curtin",
+   "club": "ADE",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "13": 2
+   },
+   "games": 8,
+   "projected": 6,
+   "rank": 122
+  },
+  {
+   "name": "Daniel McStay",
+   "club": "COL",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "17": 2
+   },
+   "games": 4,
+   "projected": 11,
+   "rank": 123
+  },
+  {
+   "name": "Darcy Cameron",
+   "club": "COL",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "18": 2
+   },
+   "games": 3,
+   "projected": 15,
+   "rank": 124
+  },
+  {
+   "name": "Darcy Wilson",
+   "club": "STK",
+   "votes": 2,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "6": 1,
+    "17": 1
+   },
+   "games": 12,
+   "projected": 4,
+   "rank": 125
+  },
+  {
+   "name": "Dayne Zorko",
+   "club": "BRI",
+   "votes": 2,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "3": 1,
+    "4": 1
+   },
+   "games": 7,
+   "projected": 6,
+   "rank": 126
+  },
+  {
+   "name": "Dyson Sharp",
+   "club": "ESS",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "19": 2
+   },
+   "games": 1,
+   "projected": 44,
+   "rank": 127
+  },
+  {
+   "name": "Edward Allan",
+   "club": "COL",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "20": 2
+   },
+   "games": 1,
+   "projected": 44,
+   "rank": 128
+  },
+  {
+   "name": "Elijah Hollands",
+   "club": "CAR",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "3": 2
+   },
+   "games": 4,
+   "projected": 11,
+   "rank": 129
+  },
+  {
+   "name": "Elliot Yeo",
+   "club": "WCE",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "2": 2
+   },
+   "games": 15,
+   "projected": 3,
+   "rank": 130
+  },
+  {
+   "name": "Harrison Petty",
+   "club": "MEL",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "10": 2
+   },
+   "games": 6,
+   "projected": 7,
+   "rank": 131
+  },
+  {
+   "name": "Hayden Young",
+   "club": "FRE",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "8": 2
+   },
+   "games": 7,
+   "projected": 6,
+   "rank": 132
+  },
+  {
+   "name": "Jack Bowes",
+   "club": "GEE",
+   "votes": 2,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "4": 1,
+    "13": 1
+   },
+   "games": 9,
+   "projected": 5,
+   "rank": 133
+  },
+  {
+   "name": "Jack Darling",
+   "club": "NM",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "14": 2
+   },
+   "games": 6,
+   "projected": 7,
+   "rank": 134
+  },
+  {
+   "name": "Jack Gunston",
+   "club": "HAW",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "9": 2
+   },
+   "games": 5,
+   "projected": 9,
+   "rank": 135
+  },
+  {
+   "name": "Jack Higgins",
+   "club": "STK",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "7": 2
+   },
+   "games": 6,
+   "projected": 7,
+   "rank": 136
+  },
+  {
+   "name": "Jack Lukosius",
+   "club": "PA",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "4": 2
+   },
+   "games": 6,
+   "projected": 7,
+   "rank": 137
+  },
+  {
+   "name": "Jack Sinclair",
+   "club": "STK",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "0": 2
+   },
+   "games": 15,
+   "projected": 3,
+   "rank": 138
+  },
+  {
+   "name": "James Jordon",
+   "club": "SYD",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "6": 2
+   },
+   "games": 13,
+   "projected": 3,
+   "rank": 139
+  },
+  {
+   "name": "Jarrod Berry",
+   "club": "BRI",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "3": 2
+   },
+   "games": 11,
+   "projected": 4,
+   "rank": 140
+  },
+  {
+   "name": "Josh Dunkley",
+   "club": "BRI",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "19": 2
+   },
+   "games": 1,
+   "projected": 44,
+   "rank": 141
+  },
+  {
+   "name": "Josh Weddle",
+   "club": "HAW",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "11": 2
+   },
+   "games": 5,
+   "projected": 9,
+   "rank": 142
+  },
+  {
+   "name": "Kai Lohmann",
+   "club": "BRI",
+   "votes": 2,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "8": 1,
+    "17": 1
+   },
+   "games": 11,
+   "projected": 4,
+   "rank": 143
+  },
+  {
+   "name": "Levi Ashcroft",
+   "club": "BRI",
+   "votes": 2,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "16": 1,
+    "18": 1
+   },
+   "games": 4,
+   "projected": 11,
+   "rank": 144
+  },
+  {
+   "name": "Luke Parker",
+   "club": "NM",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "1": 2
+   },
+   "games": 18,
+   "projected": 2,
+   "rank": 145
+  },
+  {
+   "name": "Matt Roberts",
+   "club": "SYD",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "0": 2
+   },
+   "games": 14,
+   "projected": 3,
+   "rank": 146
+  },
+  {
+   "name": "Ned Long",
+   "club": "COL",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "19": 2
+   },
+   "games": 2,
+   "projected": 22,
+   "rank": 147
+  },
+  {
+   "name": "Oisin Mullin",
+   "club": "GEE",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "9": 2
+   },
+   "games": 10,
+   "projected": 4,
+   "rank": 148
+  },
+  {
+   "name": "Patrick Lipinski",
+   "club": "COL",
+   "votes": 2,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "6": 1,
+    "19": 1
+   },
+   "games": 13,
+   "projected": 3,
+   "rank": 149
+  },
+  {
+   "name": "Phoenix Gothard",
+   "club": "GWS",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "11": 2
+   },
+   "games": 6,
+   "projected": 7,
+   "rank": 150
+  },
+  {
+   "name": "Ryley Sanders",
+   "club": "WB",
+   "votes": 2,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "4": 1,
+    "13": 1
+   },
+   "games": 14,
+   "projected": 3,
+   "rank": 151
+  },
+  {
+   "name": "Tim Kelly",
+   "club": "WCE",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "3": 2
+   },
+   "games": 15,
+   "projected": 3,
+   "rank": 152
+  },
+  {
+   "name": "Tim Taranto",
+   "club": "RIC",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "14": 2
+   },
+   "games": 6,
+   "projected": 7,
+   "rank": 153
+  },
+  {
+   "name": "Tom McCarthy",
+   "club": "WCE",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "12": 2
+   },
+   "games": 6,
+   "projected": 7,
+   "rank": 154
+  },
+  {
+   "name": "Tom Papley",
+   "club": "SYD",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "5": 2
+   },
+   "games": 9,
+   "projected": 5,
+   "rank": 155
+  },
+  {
+   "name": "Will Day",
+   "club": "HAW",
+   "votes": 2,
+   "polls": 2,
+   "threes": 0,
+   "by_round": {
+    "15": 1,
+    "16": 1
+   },
+   "games": 4,
+   "projected": 11,
+   "rank": 156
+  },
+  {
+   "name": "Will Hayward",
+   "club": "CAR",
+   "votes": 2,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "11": 2
+   },
+   "games": 8,
+   "projected": 6,
+   "rank": 157
+  },
+  {
+   "name": "Alex Pearce",
+   "club": "FRE",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "5": 1
+   },
+   "games": 12,
+   "projected": 2,
+   "rank": 158
+  },
+  {
+   "name": "Aliir Aliir",
+   "club": "PA",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "4": 1
+   },
+   "games": 15,
+   "projected": 1,
+   "rank": 159
+  },
+  {
+   "name": "Bailey Dale",
+   "club": "WB",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "17": 1
+   },
+   "games": 2,
+   "projected": 11,
+   "rank": 160
+  },
+  {
+   "name": "Bailey Williams",
+   "club": "WB",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "19": 1
+   },
+   "games": 1,
+   "projected": 22,
+   "rank": 161
+  },
+  {
+   "name": "Bo Allan",
+   "club": "WCE",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "3": 1
+   },
+   "games": 13,
+   "projected": 2,
+   "rank": 162
+  },
+  {
+   "name": "Bodhi Uwland",
+   "club": "GCS",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "9": 1
+   },
+   "games": 10,
+   "projected": 2,
+   "rank": 163
+  },
+  {
+   "name": "Caiden Cleary",
+   "club": "SYD",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "14": 1
+   },
+   "games": 4,
+   "projected": 6,
+   "rank": 164
+  },
+  {
+   "name": "Colby McKercher",
+   "club": "NM",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "3": 1
+   },
+   "games": 16,
+   "projected": 1,
+   "rank": 165
+  },
+  {
+   "name": "Finn Maginness",
+   "club": "HAW",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "7": 1
+   },
+   "games": 4,
+   "projected": 6,
+   "rank": 166
+  },
+  {
+   "name": "Gryan Miers",
+   "club": "GEE",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "19": 1
+   },
+   "games": 1,
+   "projected": 22,
+   "rank": 167
+  },
+  {
+   "name": "Harris Andrews",
+   "club": "BRI",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "19": 1
+   },
+   "games": 1,
+   "projected": 22,
+   "rank": 168
+  },
+  {
+   "name": "Harry McKay",
+   "club": "CAR",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "13": 1
+   },
+   "games": 6,
+   "projected": 4,
+   "rank": 169
+  },
+  {
+   "name": "Hugh McCluggage",
+   "club": "BRI",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "9": 1
+   },
+   "games": 6,
+   "projected": 4,
+   "rank": 170
+  },
+  {
+   "name": "Jagga Smith",
+   "club": "CAR",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "12": 1
+   },
+   "games": 7,
+   "projected": 3,
+   "rank": 171
+  },
+  {
+   "name": "Jai Serong",
+   "club": "SYD",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "7": 1
+   },
+   "games": 11,
+   "projected": 2,
+   "rank": 172
+  },
+  {
+   "name": "James Worpel",
+   "club": "GEE",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "8": 1
+   },
+   "games": 3,
+   "projected": 7,
+   "rank": 173
+  },
+  {
+   "name": "Jamie Elliott",
+   "club": "COL",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "11": 1
+   },
+   "games": 1,
+   "projected": 22,
+   "rank": 174
+  },
+  {
+   "name": "Jarman Impey",
+   "club": "HAW",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "19": 1
+   },
+   "games": 1,
+   "projected": 22,
+   "rank": 175
+  },
+  {
+   "name": "John Noble",
+   "club": "GCS",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "10": 1
+   },
+   "games": 9,
+   "projected": 2,
+   "rank": 176
+  },
+  {
+   "name": "Jordan Clark",
+   "club": "FRE",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "6": 1
+   },
+   "games": 13,
+   "projected": 2,
+   "rank": 177
+  },
+  {
+   "name": "Kieren Briggs",
+   "club": "GWS",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "18": 1
+   },
+   "games": 1,
+   "projected": 22,
+   "rank": 178
+  },
+  {
+   "name": "Lachie Schultz",
+   "club": "COL",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "3": 1
+   },
+   "games": 15,
+   "projected": 1,
+   "rank": 179
+  },
+  {
+   "name": "Lachie Weller",
+   "club": "GCS",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "6": 1
+   },
+   "games": 6,
+   "projected": 4,
+   "rank": 180
+  },
+  {
+   "name": "Liam Baker",
+   "club": "WCE",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "12": 1
+   },
+   "games": 7,
+   "projected": 3,
+   "rank": 181
+  },
+  {
+   "name": "Massimo D'Ambrosio",
+   "club": "HAW",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "8": 1
+   },
+   "games": 11,
+   "projected": 2,
+   "rank": 182
+  },
+  {
+   "name": "Mattaes Phillipou",
+   "club": "STK",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "7": 1
+   },
+   "games": 10,
+   "projected": 2,
+   "rank": 183
+  },
+  {
+   "name": "Mitch McGovern",
+   "club": "CAR",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "1": 1
+   },
+   "games": 17,
+   "projected": 1,
+   "rank": 184
+  },
+  {
+   "name": "Oliver Florent",
+   "club": "CAR",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "10": 1
+   },
+   "games": 9,
+   "projected": 2,
+   "rank": 185
+  },
+  {
+   "name": "Roan Steele",
+   "club": "COL",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "7": 1
+   },
+   "games": 9,
+   "projected": 2,
+   "rank": 186
+  },
+  {
+   "name": "Sam Draper",
+   "club": "BRI",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "5": 1
+   },
+   "games": 14,
+   "projected": 2,
+   "rank": 187
+  },
+  {
+   "name": "Sam Switkowski",
+   "club": "FRE",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "13": 1
+   },
+   "games": 6,
+   "projected": 4,
+   "rank": 188
+  },
+  {
+   "name": "Stephen Coniglio",
+   "club": "GWS",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "0": 1
+   },
+   "games": 16,
+   "projected": 1,
+   "rank": 189
+  },
+  {
+   "name": "Tim English",
+   "club": "WB",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "0": 1
+   },
+   "games": 12,
+   "projected": 2,
+   "rank": 190
+  },
+  {
+   "name": "Toby Murray",
+   "club": "ADE",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "10": 1
+   },
+   "games": 8,
+   "projected": 3,
+   "rank": 191
+  },
+  {
+   "name": "Tom Liberatore",
+   "club": "WB",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "1": 1
+   },
+   "games": 6,
+   "projected": 4,
+   "rank": 192
+  },
+  {
+   "name": "Wil Powell",
+   "club": "GCS",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "8": 1
+   },
+   "games": 9,
+   "projected": 2,
+   "rank": 193
+  },
+  {
+   "name": "Will Setterfield",
+   "club": "ESS",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "14": 1
+   },
+   "games": 3,
+   "projected": 7,
+   "rank": 194
+  }
+ ]
+}

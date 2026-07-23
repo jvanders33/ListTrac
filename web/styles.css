@@ -420,6 +420,10 @@ footer.pagefoot {
 
 .spark { display: block; margin: 4px 0 12px; overflow: visible; }
 
+/* brownlow projection */
+.brownlow .bl-top td { background: var(--card-2); }
+.brownlow .bl-top b { color: var(--accent); }
+
 /* vs-opponent splits */
 .splits .sp-base td { border-top: 2px solid var(--line); border-bottom: 2px solid var(--line); background: var(--card-2); }
 .splits .sp-hi { color: var(--ok); font-weight: 700; }
