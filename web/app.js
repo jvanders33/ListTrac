@@ -2167,7 +2167,41 @@ function scoutingCard(sc, pid) {
       </div>
       <div class="scoutbars">${scoutingBars(sc)}</div>
     </div>
+    <p class="feature-ctas" style="margin-top:12px">
+      <button class="cta quiet" id="sc-dl">Download card</button>
+      <button class="cta quiet" id="sc-sh">Share</button>
+    </p>
   </div>`;
+}
+/* Shareable scouting "pizza": radar + percentile bars, hardcoded colours so it
+   rasterises cleanly to PNG (CSS vars don't survive SVG->canvas). */
+function scoutingCardSVG(p) {
+  const sc = p.scouting, GC = { ball: "#33607F", attack: "#BF4226", defence: "#1E6B4F" };
+  const items = sc.order.filter(k => sc.stats[k]);
+  const n = items.length, cx = 540, cy = 470, R = 265;
+  const pt = (i, r) => { const a = (-90 + i * 360 / n) * Math.PI / 180; return [cx + r * Math.cos(a), cy + r * Math.sin(a)]; };
+  const poly = pts => pts.map(q => q.map(v => v.toFixed(1)).join(",")).join(" ");
+  const rings = [25, 50, 75, 100].map(pc => `<polygon points="${poly(items.map((_, i) => pt(i, R * pc / 100)))}" fill="none" stroke="#2C3942" stroke-width="1.5"/>`).join("");
+  const axes = items.map((_, i) => { const [x, y] = pt(i, R); return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#2C3942" stroke-width="1"/>`; }).join("");
+  const shape = poly(items.map((k, i) => pt(i, R * sc.stats[k].pct / 100)));
+  const dots = items.map((k, i) => { const [x, y] = pt(i, R * sc.stats[k].pct / 100); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="6" fill="${GC[sc.stats[k].group]}"/>`; }).join("");
+  const labels = items.map((k, i) => { const [x, y] = pt(i, R + 26), c = Math.cos((-90 + i * 360 / n) * Math.PI / 180); const a = c > 0.3 ? "start" : c < -0.3 ? "end" : "middle"; return `<text x="${x.toFixed(1)}" y="${(y + 6).toFixed(1)}" text-anchor="${a}" font-size="20" fill="#93A1A8" font-family="system-ui,sans-serif">${esc(sc.stats[k].label)}</text>`; }).join("");
+  const barTop = 840, barH = 40;
+  const bars = items.map((k, i) => { const s = sc.stats[k], y = barTop + i * barH; return `
+    <text x="60" y="${y + 18}" font-size="19" fill="#93A1A8" font-family="system-ui,sans-serif">${esc(s.label)}</text>
+    <rect x="320" y="${y + 4}" width="620" height="18" rx="9" fill="#182129"/>
+    <rect x="320" y="${y + 4}" width="${(s.pct / 100 * 620).toFixed(0)}" height="18" rx="9" fill="${GC[s.group]}"/>
+    <text x="1020" y="${y + 20}" font-size="19" font-weight="800" fill="#E6EBE9" text-anchor="end" font-family="system-ui,sans-serif">${s.pct}</text>`; }).join("");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <rect width="1080" height="1350" fill="#10171C"/>
+    <text x="60" y="72" font-size="42" font-weight="800" fill="#F2F4F3" font-family="system-ui,sans-serif">List<tspan fill="#BF4226">Trac</tspan></text>
+    <text x="60" y="128" font-size="42" font-weight="800" fill="#F5F2EC" font-family="system-ui,sans-serif">${esc(p.first_name)} ${esc(p.last_name)}</text>
+    <text x="60" y="164" font-size="21" font-weight="700" fill="#BF4226" font-family="system-ui,sans-serif" letter-spacing="1">SCOUTING · ${esc(sc.position_label.toUpperCase())} · PERCENTILE VS POSITION</text>
+    ${rings}${axes}
+    <polygon points="${shape}" fill="#BF422633" stroke="#BF4226" stroke-width="3" stroke-linejoin="round"/>
+    ${dots}${labels}${bars}
+    <text x="60" y="1322" font-size="20" fill="#55636D" font-family="system-ui,sans-serif">list-trac.vercel.app · stats: Champion Data / AFL</text>
+  </svg>`;
 }
 function tradeValueCard(tv) {
   const ctr = tv.status === "contracted"
@@ -2375,6 +2409,33 @@ async function playerView(id) {
     } catch { /* clipboard fallback */ }
     try { await navigator.clipboard.writeText(link); } catch { /* noop */ }
   });
+
+  if (p.scouting) {
+    const scPng = () => svgToPng(scoutingCardSVG(p));
+    const scDl = document.getElementById("sc-dl");
+    if (scDl) scDl.addEventListener("click", async () => {
+      try {
+        const png = await scPng();
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(png);
+        a.download = `listtrac-scouting-${fullName.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}.png`;
+        a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      } catch { /* unsupported */ }
+    });
+    const scSh = document.getElementById("sc-sh");
+    if (scSh) scSh.addEventListener("click", async () => {
+      try {
+        const png = await scPng();
+        const file = new File([png], "listtrac-scouting.png", { type: "image/png" });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          await navigator.share({ title: `${fullName} — scouting report`, text: `${fullName}'s scouting report — ListTrac`, files: [file] });
+          return;
+        }
+        if (navigator.share) { await navigator.share({ title: fullName, url: `${location.origin}/#/player/${id}` }); return; }
+      } catch { /* fallback */ }
+      try { await navigator.clipboard.writeText(`${location.origin}/#/player/${id}`); } catch { /* noop */ }
+    });
+  }
 }
 
 async function draftView(year, draftType = "national", chrome = "") {
