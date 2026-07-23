@@ -148,6 +148,92 @@ def club_info(abbrev: str):
     return info
 
 
+# (talent tier, age tier) -> (phase label, chip class, one-line verdict)
+_LIST_PHASE = {
+    (2, 1): ("Premiership window", "ok", "Prime-aged and stacked with elite talent — built to win now."),
+    (2, 2): ("Contending, window closing", "warn", "Elite talent but ageing at the top — the clock is ticking."),
+    (2, 0): ("Window opening", "ufa", "Young and already loaded with stars — the frightening kind."),
+    (1, 0): ("On the rise", "ufa", "A young core with a few genuine stars — trending up."),
+    (1, 1): ("In the hunt", "ok", "A balanced list with real quality — around the mark."),
+    (1, 2): ("Retooling", "warn", "Some quality but ageing — big calls loom."),
+    (0, 0): ("Rebuilding", "rfa", "Young and light on stars — playing the long game."),
+    (0, 1): ("Treading water", "warn", "Middling on talent and age — in need of a direction."),
+    (0, 2): ("Rebuild looming", "rfa", "Light on elite talent and ageing — a reset may be near."),
+}
+
+
+def _list_phase(elite, top100, avg_age, youth_pct, vet_pct):
+    tier = 2 if (elite >= 3 or top100 >= 10) else 1 if (elite >= 1 or top100 >= 5) else 0
+    a = avg_age or 25
+    age = 2 if (a >= 26.2 or vet_pct >= 22) else 0 if (a <= 24.3 or youth_pct >= 42) else 1
+    return _LIST_PHASE[(tier, age)]
+
+
+@app.get("/api/club-profile")
+def club_profile(abbrev: str):
+    """"State of the list" — talent (elite/rated players), age profile, contract
+    security and list trade value, distilled into a cycle phase (contending /
+    building / rebuilding …)."""
+    key = abbrev.upper()
+    rb, tv, ov = _ratings_by_name(), _trade_value_board(), _contract_overrides()
+    scout = _scouting_index().get("_players", {})
+    players = rows(f"""SELECT p.id, p.first_name, p.last_name, p.dob,
+                              cs.status, cs.contracted_through_year
+                       FROM player p JOIN club c ON c.id = p.current_club_id
+                       LEFT JOIN contract_status cs ON cs.player_id = p.id AND cs.is_current = 1
+                       WHERE c.abbreviation = ? COLLATE NOCASE AND p.status = 'listed'""", (abbrev,))
+    if not players:
+        raise HTTPException(404, f"no listed players for club '{abbrev}'")
+
+    ages, ratings = [], []
+    elite = top100 = contracted = list_value = goalkickers = 0
+    top_scorer = None
+    for r in players:
+        nm = _norm(f"{r['first_name']} {r['last_name']}")
+        a = _age_2026(r["dob"])
+        if a:
+            ages.append(a)
+        rr = rb.get(nm)
+        if rr and rr.get("rating"):
+            ratings.append(rr["rating"])
+            rk = rr.get("rank")
+            if rk and rk <= 40:
+                elite += 1
+            if rk and rk <= 100:
+                top100 += 1
+        status, through = r["status"], r["contracted_through_year"]
+        o = ov.get((nm, key))
+        if o:
+            status, through = "contracted", o["end_year"]
+        if status == "contracted" and (through or 0) > CURRENT_YEAR:
+            contracted += 1
+        t = tv["by_id"].get(r["id"])
+        if t:
+            list_value += t["value"]
+        g = (scout.get(nm) or {}).get("stats", {}).get("goals")
+        if g and g.get("avg"):
+            if g["avg"] >= 1.5:
+                goalkickers += 1
+            if not top_scorer or g["avg"] > top_scorer["avg"]:
+                top_scorer = {"name": f"{r['first_name']} {r['last_name']}", "id": r["id"], "avg": g["avg"]}
+
+    n = len(players)
+    avg_age = round(sum(ages) / len(ages), 1) if ages else None
+    youth_pct = round(sum(1 for a in ages if a < 23) / n * 100)
+    vet_pct = round(sum(1 for a in ages if a >= 30) / n * 100)
+    avg_rating = round(sum(ratings) / len(ratings), 1) if ratings else None
+    phase, cls, verdict = _list_phase(elite, top100, avg_age, youth_pct, vet_pct)
+    return {
+        "phase": phase, "phase_class": cls, "verdict": verdict,
+        "metrics": {
+            "list_size": n, "avg_age": avg_age, "youth_pct": youth_pct, "vet_pct": vet_pct,
+            "aa_calibre": elite, "top100": top100, "avg_rating": avg_rating,
+            "contracted_pct": round(contracted / n * 100), "list_value": list_value,
+            "goalkickers": goalkickers, "top_scorer": top_scorer,
+        },
+    }
+
+
 @app.get("/clubs/{abbrev}/list")
 def club_list(abbrev: str):
     result = rows(f"""SELECT {PLAYER_COLS}, cs.status contract_status, cs.contracted_through_year,

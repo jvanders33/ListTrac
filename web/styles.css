@@ -477,6 +477,16 @@ footer.pagefoot {
 .dchip.ufa { border-left-color: var(--ufa); background: var(--ufa-bg); }
 @media (max-width: 620px) { .depthline { grid-template-columns: 1fr; gap: 6px; } }
 
+/* state of the list */
+.card.sol { margin-top: 16px; }
+.sol-head { display: flex; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+.sol-phase { font-size: 15px; font-weight: 800; padding: 6px 16px; margin-top: 4px; display: inline-block; }
+.sol-verdict { margin: 4px 0 0; color: var(--ink-2); font-size: 13.5px; flex: 1 1 240px; line-height: 1.5; }
+.sol-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(94px, 1fr)); gap: 10px; margin-top: 16px; }
+.sol-tile { background: var(--card-2); border-radius: 8px; padding: 10px 8px; text-align: center; }
+.sol-tile b { display: block; font-size: 19px; font-variant-numeric: tabular-nums; }
+.sol-tile span { font-size: 10px; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.02em; }
+
 /* landing: most-valuable / form-movers duo */
 .landing-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 @media (max-width: 640px) { .landing-duo { grid-template-columns: 1fr; } }
@@ -494,7 +504,8 @@ footer.pagefoot {
 @media (max-width: 900px) { .aacols { grid-template-columns: 1fr; } }
 .aafield { background: linear-gradient(#1a5a3a, #123f28); border-radius: 14px; padding: 16px 10px; display: flex; flex-direction: column; gap: 12px; border: 2px solid #ffffff1f; margin-top: 10px; }
 .aaline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.aaline.bench { grid-template-columns: repeat(4, 1fr); }
+.aaline.bench { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 540px) { .aaline.bench { grid-template-columns: repeat(2, 1fr); } }
 .aaslot { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 58px; min-width: 0; overflow: hidden; padding: 7px 4px; border-radius: 8px; background: #ffffff16; border: 1px solid #ffffff22; color: #fff; cursor: pointer; font: inherit; text-align: center; }
 .aaslot:hover { background: #ffffff24; }
 .aaslot.sel { outline: 2px solid var(--accent); outline-offset: 1px; }

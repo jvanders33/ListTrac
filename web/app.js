@@ -1532,8 +1532,8 @@ const AA_FIELD = [
   ["Half-back flank", "Centre half-back", "Half-back flank"],
   ["Back pocket", "Full back", "Back pocket"],
 ];
-const AA_BENCH = ["Interchange", "Interchange", "Interchange", "Interchange"];
-const AA_SLOTS = [...AA_FIELD.flat(), ...AA_BENCH];   // 22, indexed field-then-bench
+const AA_BENCH = ["Interchange", "Interchange", "Interchange", "Interchange", "Interchange", "Coach"];
+const AA_SLOTS = [...AA_FIELD.flat(), ...AA_BENCH];   // 24, indexed field-then-bench
 const lastName = n => String(n || "").split(" ").slice(-1)[0];
 // which Champion Data positions can fill each slot (null = any, for bench)
 const AA_ELIG = {
@@ -1543,10 +1543,10 @@ const AA_ELIG = {
   "Ruck": ["RUCK"], "Ruck-rover": ["MIDFIELDER"], "Rover": ["MIDFIELDER", "MIDFIELDER_FORWARD"],
   "Full back": ["KEY_DEFENDER"], "Centre half-back": ["KEY_DEFENDER"],
   "Back pocket": ["MEDIUM_DEFENDER", "KEY_DEFENDER"], "Half-back flank": ["MEDIUM_DEFENDER"],
-  "Interchange": null,
+  "Interchange": null, "Coach": null,
 };
 // fill specialists (ruck, keys, centre) first, flanks/pockets next, bench last
-const AA_FILL_ORDER = [9, 1, 4, 16, 13, 7, 6, 8, 10, 11, 3, 5, 12, 14, 0, 2, 15, 17, 18, 19, 20, 21];
+const AA_FILL_ORDER = [9, 1, 4, 16, 13, 7, 6, 8, 10, 11, 3, 5, 12, 14, 0, 2, 15, 17, 18, 19, 20, 21, 22, 23];
 function autoPickTeam(pool) {
   const byPos = {};                       // pool is already rating-sorted (CD order)
   pool.forEach(p => { if (p.position) (byPos[p.position] = byPos[p.position] || []).push(p); });
@@ -1575,8 +1575,8 @@ async function aaTeamView() {
   const byName = Object.fromEntries(pool.map(p => [p.name, p]));
 
   let state = decodeTeam() || { title: "My All-Australian Team", picks: [] };
-  state.picks = (state.picks || []).slice(0, 22);
-  while (state.picks.length < 22) state.picks.push(null);
+  state.picks = (state.picks || []).slice(0, 24);
+  while (state.picks.length < 24) state.picks.push(null);
   let filter = "", selected = null;
   const save = () => localStorage.setItem(AA_KEY, JSON.stringify(state));
   const firstEmpty = () => state.picks.findIndex(x => !x);
@@ -1602,7 +1602,7 @@ async function aaTeamView() {
           <div class="aafield">
             ${AA_FIELD.map(line => `<div class="aaline">${line.map(slot).join("")}</div>`).join("")}
           </div>
-          <div class="aabench"><p class="eyebrow" style="margin:0 0 6px">Interchange</p><div class="aaline bench">${AA_BENCH.map(slot).join("")}</div></div>
+          <div class="aabench"><p class="eyebrow" style="margin:0 0 6px">Interchange &amp; coach</p><div class="aaline bench">${AA_BENCH.map(slot).join("")}</div></div>
           <div class="feature-ctas" style="margin-top:16px">
             <button class="cta quiet" id="aa-auto" title="Fill with the highest-rated player in each position">✨ Auto-pick top-rated</button>
             <button class="cta" id="aa-save" ${filled ? "" : "disabled"}>Download team</button>
@@ -1612,12 +1612,12 @@ async function aaTeamView() {
           <p class="srcline" id="aa-msg"></p>
         </div>
         <div class="card">
-          <h3>Add players <span class="thin" style="font-weight:400">(${filled}/22)</span></h3>
+          <h3>Add players <span class="thin" style="font-weight:400">(${filled}/24)</span></h3>
           <p class="sub" style="font-size:12px">${selected !== null ? `Filling <b>${esc(AA_SLOTS[selected])}</b> — tap a player.` : "Tap a position on the field, then a player — or just tap players to fill in order."}</p>
           <input id="aa-search" class="poolsearch" type="search" placeholder="Filter by name or club…" value="${esc(filter)}">
           <div class="poollist">
             ${available.filter(p => !filter || `${p.name} ${p.abbr}`.toLowerCase().includes(filter.toLowerCase())).slice(0, 80).map(p => `
-              <button class="poolrow" data-add="${esc(p.name)}" ${filled >= 22 ? "disabled" : ""}>
+              <button class="poolrow" data-add="${esc(p.name)}" ${filled >= 24 ? "disabled" : ""}>
                 <span class="rankchip">${p.rank ?? "–"}</span>
                 <span class="poolinfo"><b>${esc(p.name)}</b><span class="thin">${esc(p.abbr)} · rating ${p.rating}</span></span></button>`).join("")}
           </div>
@@ -1638,7 +1638,7 @@ async function aaTeamView() {
     const title = document.getElementById("aa-title");
     title.addEventListener("input", () => { state.title = title.value; save(); });
     document.getElementById("aa-reset").addEventListener("click", () => {
-      state = { title: "My All-Australian Team", picks: Array(22).fill(null) }; selected = null;
+      state = { title: "My All-Australian Team", picks: Array(24).fill(null) }; selected = null;
       save(); location.hash = "#/players/team"; render();
     });
     document.getElementById("aa-auto").addEventListener("click", () => {
@@ -1675,7 +1675,7 @@ function aaTeamSVG(state, colorOf) {
     </g>`;
   };
   const colX = [240, 540, 840];
-  const fieldTop = 250, lineGap = 132;
+  const fieldTop = 245, lineGap = 122;
   let field = "";
   let i = -1;
   AA_FIELD.forEach((line, li) => {
@@ -1683,21 +1683,22 @@ function aaTeamSVG(state, colorOf) {
     line.forEach((label, j) => { field += node(colX[j], cy, label, state.picks[++i]); });
   });
   let bench = "";
-  AA_BENCH.forEach((label, j) => { bench += node(150 + j * 260, 1200, label, state.picks[++i]); });
+  AA_BENCH.forEach((label, j) => {
+    bench += node(colX[j % 3], 1085 + Math.floor(j / 3) * 95, label, state.picks[++i]);
+  });
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
     <rect width="${W}" height="${H}" fill="#10171C"/>
     <text x="60" y="76" font-size="44" font-weight="800" fill="#F2F4F3" font-family="system-ui,sans-serif">List<tspan fill="#BF4226">Trac</tspan></text>
     <text x="60" y="118" font-size="23" font-weight="700" fill="#93A1A8" font-family="system-ui,sans-serif" letter-spacing="1">${esc((state.title || "My All-Australian Team").toUpperCase())}</text>
-    <rect x="40" y="150" width="1000" height="960" rx="24" fill="#15412c"/>
-    <rect x="40" y="150" width="1000" height="960" rx="24" fill="none" stroke="#ffffff2b" stroke-width="3"/>
-    <line x1="40" y1="630" x2="1040" y2="630" stroke="#ffffff22" stroke-width="2"/>
-    <rect x="430" y="560" width="220" height="140" rx="6" fill="none" stroke="#ffffff26" stroke-width="2"/>
+    <rect x="40" y="150" width="1000" height="855" rx="24" fill="#15412c"/>
+    <rect x="40" y="150" width="1000" height="855" rx="24" fill="none" stroke="#ffffff2b" stroke-width="3"/>
+    <line x1="40" y1="578" x2="1040" y2="578" stroke="#ffffff22" stroke-width="2"/>
+    <rect x="430" y="518" width="220" height="120" rx="6" fill="none" stroke="#ffffff26" stroke-width="2"/>
     ${field}
-    <rect x="40" y="1130" width="1000" height="150" rx="18" fill="#131c24"/>
-    <text x="60" y="1162" font-size="17" fill="#93A1A8" font-family="system-ui,sans-serif" letter-spacing="1.5">INTERCHANGE</text>
+    <rect x="40" y="1022" width="1000" height="292" rx="18" fill="#131c24"/>
     ${bench}
-    <text x="60" y="1325" font-size="20" fill="#55636D" font-family="system-ui,sans-serif">list-trac.vercel.app · ratings: Champion Data / AFL</text>
+    <text x="60" y="1340" font-size="20" fill="#55636D" font-family="system-ui,sans-serif">list-trac.vercel.app · ratings: Champion Data / AFL</text>
   </svg>`;
 }
 
@@ -1931,6 +1932,32 @@ function ratingLeadersCard(info) {
   </div>`;
 }
 
+/* "State of the list" — the club's cycle phase read from talent + age, with
+   the underlying metrics. A read on where a club sits, not a power ranking. */
+function stateOfListCard(profile) {
+  if (!profile || !profile.metrics) return "";
+  const m = profile.metrics;
+  const tile = (v, label) => `<div class="sol-tile"><b>${v ?? "—"}</b><span>${esc(label)}</span></div>`;
+  return `<div class="card sol">
+    <div class="sol-head">
+      <div><p class="eyebrow">State of the list</p>
+        <span class="chip ${esc(profile.phase_class)} sol-phase">${esc(profile.phase)}</span></div>
+      <p class="sol-verdict">${esc(profile.verdict)}</p>
+    </div>
+    <div class="sol-metrics">
+      ${tile(m.avg_age, "avg age")}
+      ${tile(m.youth_pct + "%", "under 23")}
+      ${tile(m.vet_pct + "%", "30 & over")}
+      ${tile(m.aa_calibre, "AA-calibre*")}
+      ${tile(m.top100, "top-100 rated")}
+      ${tile(m.avg_rating, "avg rating")}
+      ${tile(m.contracted_pct + "%", "locked past '26")}
+      ${tile(m.list_value.toLocaleString(), "list value")}
+    </div>
+    <p class="thin" style="font-size:11px;margin-top:10px">*AA-calibre = players inside the AFL top 40 by Player Rating.${m.top_scorer ? ` Leading scorer: <a href="#/player/${m.top_scorer.id}">${esc(m.top_scorer.name)}</a> (${m.top_scorer.avg}/gm).` : ""}</p>
+  </div>`;
+}
+
 /* Year-by-year contract grid: each player sits in the column of the year
    their deal expires; free agents & out-of-contract players cluster in 2026.
    Colour = current contract status. Reads as a "contract cliff" per season. */
@@ -2024,10 +2051,11 @@ function depthChartHTML(list) {
 }
 
 async function clubView(abbrev) {
-  const [list, socials, info] = await Promise.all([
+  const [list, socials, info, profile] = await Promise.all([
     api(`/clubs/${encodeURIComponent(abbrev)}/list`),
     api(`/api/club-socials?abbrev=${encodeURIComponent(abbrev)}`).catch(() => ({})),
     api(`/api/club-info?abbrev=${encodeURIComponent(abbrev)}`).catch(() => ({})),
+    api(`/api/club-profile?abbrev=${encodeURIComponent(abbrev)}`).catch(() => null),
   ]);
   const first = list[0];
   const n = k => list.filter(p => p.contract_status === k).length;
@@ -2052,6 +2080,7 @@ async function clubView(abbrev) {
       <div class="tile w"><p class="eyebrow">Off contract '26</p><b>${list.length - n("contracted")}</b><span>incl. free agents</span></div>
       <div class="tile r"><p class="eyebrow">Free agents</p><b>${n("restricted_fa") + n("unrestricted_fa")}</b><span>${n("restricted_fa")} restricted · ${n("unrestricted_fa")} unrestricted</span></div>
     </div>
+    ${stateOfListCard(profile)}
     ${ratingLeadersCard(info)}
     ${honourRollCard(info)}
     <div class="viewtoggle" role="tablist" aria-label="Club view">
