@@ -61,6 +61,11 @@ jobs:
         run: python scraper/comps.py
         continue-on-error: true
 
+      - name: Classify player role archetypes (derived)
+        # depends on scouting.py — ListTrac's read of playing role + role comps
+        run: python scraper/roles.py
+        continue-on-error: true
+
       - name: Build empirical aging curves (delta method, by position)
         # joins 2015-26 ratings history to DOBs -> age->rating curves that
         # inform the Trade Value age factor and the player-page aging card

@@ -368,24 +368,31 @@ def player(player_id: int):
                 "source": ac.get("source"), "attribution": ac.get("attribution"),
             }
 
-    # similar players: nearest percentile profiles in the same position pool,
-    # enriched with id/club/rating so each comp links out with context
-    profile["comps"] = None
-    cx = _comps_index().get("_players", {}).get(key)
-    if cx and cx.get("comps"):
+    # derived role archetype + role-based similar players (nearest same-role
+    # profiles, which can cross official position pools), enriched for linking
+    profile["role"] = None
+    rx = _roles_index().get("_players", {}).get(key)
+    if rx:
         ident, rb = _ident_by_name(), _ratings_by_name()
-        rows_out = []
-        for c in cx["comps"]:
+        comps_out = []
+        for c in rx.get("comps", []):
             cn = _norm(c["name"])
             idn = ident.get(cn)
             rr = rb.get(cn)
-            rows_out.append({
+            comps_out.append({
                 "name": c["name"], "similarity": c["similarity"],
                 "id": idn["id"] if idn else None,
                 "club": idn["club"] if idn else None,
                 "rating": rr["rating"] if rr else None,
             })
-        profile["comps"] = {"position_label": cx.get("position_label"), "players": rows_out}
+        profile["role"] = {
+            "role": rx["role"], "role_label": rx["role_label"],
+            "role_group": rx["role_group"], "confidence": rx["confidence"],
+            "secondary_label": rx.get("secondary_label"),
+            "official_position": rx.get("official_position"),
+            "comps": comps_out,
+            "attribution": _roles_index().get("_attribution"),
+        }
     return profile
 
 
@@ -867,6 +874,21 @@ def _comps_index() -> dict:
     return _comps_cache
 
 
+ROLES_PATH = Path(__file__).resolve().parent.parent / "data" / "roles_2026.json"
+_roles_cache: dict = {}
+
+
+def _roles_index() -> dict:
+    """Derived player role archetypes + role-based comps, keyed by norm name."""
+    import json
+    if not _roles_cache and ROLES_PATH.exists():
+        data = json.loads(ROLES_PATH.read_text(encoding="utf-8"))
+        _roles_cache["_players"] = data.get("players", {})
+        _roles_cache["_roles"] = data.get("roles", {})
+        _roles_cache["_attribution"] = data.get("attribution")
+    return _roles_cache
+
+
 def _ident_by_name() -> dict:
     """norm name -> {id, club} for linking comps to player pages. On a same-name
     collision the listed (current) player wins."""
@@ -1000,6 +1022,33 @@ def aging_curves():
     if not ac:
         raise HTTPException(404, "aging curves not built")
     return ac
+
+
+@app.get("/api/roles")
+def roles():
+    """Browse-by-role: the derived archetype catalogue + every player's role,
+    enriched with id/club/rating for linking. ListTrac's own read on top of
+    Champion Data output — an interpretation, not an official position field."""
+    ri = _roles_index()
+    if not ri.get("_players"):
+        raise HTTPException(404, "roles not built")
+    ident, rb = _ident_by_name(), _ratings_by_name()
+    players = []
+    for key, v in ri["_players"].items():
+        idn = ident.get(key)
+        rr = rb.get(key)
+        players.append({
+            "name": v["name"], "role": v["role"], "role_label": v["role_label"],
+            "role_group": v["role_group"], "confidence": v["confidence"],
+            "secondary_label": v.get("secondary_label"),
+            "official_position": v.get("official_position"),
+            "id": idn["id"] if idn else None,
+            "club": idn["club"] if idn else None,
+            "rating": rr["rating"] if rr else None,
+        })
+    players.sort(key=lambda p: (-(p["rating"] or 0), p["name"]))
+    return {"roles": ri.get("_roles", {}), "attribution": ri.get("_attribution"),
+            "count": len(players), "players": players}
 
 
 @app.get("/api/form-movers")

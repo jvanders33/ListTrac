@@ -1341,6 +1341,7 @@ const playersChrome = act => `<div class="subtabs">
   <a href="#/players" class="${act === "dir" ? "active" : ""}">Directory</a>
   <a href="#/players/rankings" class="${act === "rank" ? "active" : ""}">Rankings</a>
   <a href="#/players/trade-values" class="${act === "tradeval" ? "active" : ""}">Trade value</a>
+  <a href="#/players/roles" class="${act === "roles" ? "active" : ""}">Roles</a>
   <a href="#/players/compare" class="${act === "compare" ? "active" : ""}">Compare</a>
   <a href="#/players/fantasy" class="${act === "fantasy" ? "active" : ""}">Fantasy</a>
   <a href="#/players/team" class="${act === "team" ? "active" : ""}">Build AA team</a>
@@ -2338,23 +2339,30 @@ function tradeValueCard(tv) {
     <p class="sub" style="margin:8px 0 0">ListTrac's index of a player's worth as a trade asset — form weighed against age and contract control. <a href="#/players/trade-values">See the full board →</a></p>
   </div>`;
 }
-/* Similar players — nearest percentile profiles within the same position pool.
-   Style comps, with each comp's rating shown so calibre is legible too. */
-function compsCard(comps) {
-  const rows = (comps.players || []).filter(c => c.name);
-  if (!rows.length) return "";
-  const pl = (comps.position_label || "position").toLowerCase();
+/* Role archetype + similar players. The role is ListTrac's read of how a player
+   actually plays (a small forward, an inside mid…), derived from their output —
+   sharper than the official position, and honestly labelled as our own. Comps
+   are the nearest same-role profiles, which can cross official position pools. */
+const CONF_WORD = { high: "clear", medium: "fair", low: "loose" };
+function roleCard(role) {
+  const rows = (role.comps || []).filter(c => c.name);
+  const label = role.role_label || "Role";
   return `<div class="card">
-    <h3>Similar players <span class="thin" style="font-weight:400">· by ${esc(pl)} profile</span></h3>
-    <p class="sub">Closest twelve-stat profiles among ${esc(pl)}s this season — style, not calibre. The rating shows how they compare in class.</p>
-    <div class="complist">
+    <h3>Role &amp; similar players <span class="thin" style="font-weight:400">· ListTrac read</span></h3>
+    <p class="roleline">
+      <span class="rolechip">${esc(label)}</span>
+      ${role.secondary_label ? `<span class="rolechip alt">also: ${esc(role.secondary_label)}</span>` : ""}
+      <span class="thin">${CONF_WORD[role.confidence] || ""} fit · official: ${esc(role.official_position || "—")}</span>
+    </p>
+    <p class="sub">Derived from this season's per-game output — how ${esc(label.toLowerCase())}s actually play. ${rows.length ? "Closest same-role profiles below (they can cross official position lines); the rating shows calibre." : ""}</p>
+    ${rows.length ? `<div class="complist">
       ${rows.map(c => `<div class="comprow" style="--sim:${c.similarity}%">
         <span class="comp-name">${c.id ? `<a href="#/player/${c.id}">${esc(c.name)}</a>` : esc(c.name)}${c.club ? ` <span class="thin">${esc(c.club)}</span>` : ""}</span>
         <span class="comp-bar"><i></i></span>
         <span class="comp-meta">${c.rating ? `<span class="thin">${Math.round(c.rating)}</span>` : ""}<b>${c.similarity}</b></span>
       </div>`).join("")}
-    </div>
-    <p class="thin" style="font-size:11px;margin-top:8px">Similarity = 100 minus the average percentile gap across twelve per-game stats. Same position pool only.</p>
+    </div>` : ""}
+    <p class="thin" style="font-size:11px;margin-top:8px"><a href="#/players/roles">Browse players by role →</a> · Role is ListTrac's interpretation of Champion Data output, not an official field.</p>
   </div>`;
 }
 function formCard(form, sc) {
@@ -2445,7 +2453,8 @@ async function playerView(id) {
         <h2>${esc(p.first_name)} ${esc(p.last_name)}</h2>
         <p class="statusline">${current ? chip(current.status) : ""}${p.rating ? `
           <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Player Rating #${p.rating.rank} · ${p.rating.rating}</span>` : ""}${p.fantasy ? `
-          <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Fantasy avg ${p.fantasy.af_avg}</span>` : ""}</p>
+          <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Fantasy avg ${p.fantasy.af_avg}</span>` : ""}${p.role ? `
+          <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff" title="ListTrac's read of playing role">${esc(p.role.role_label)}${p.role.secondary_label ? ` / ${esc(p.role.secondary_label)}` : ""}</span>` : ""}</p>
         <dl class="hero-facts">
           ${p.dob ? `<div><dt>Age</dt><dd>${age(p.dob)} (${esc(p.dob)})</dd></div>` : ""}
           ${p.height_cm ? `<div><dt>Height</dt><dd>${p.height_cm} cm</dd></div>` : ""}
@@ -2480,7 +2489,7 @@ async function playerView(id) {
         ${p.trade_value ? tradeValueCard(p.trade_value) : ""}
         ${p.form ? formCard(p.form, p.scouting) : ""}
         ${p.scouting ? scoutingCard(p.scouting, id) : ""}
-        ${p.comps ? compsCard(p.comps) : ""}
+        ${p.role ? roleCard(p.role) : ""}
         ${p.rating_history && p.rating_history.length ? `
         <div class="card">
           <h3>AFL Player Rating history</h3>
@@ -2841,6 +2850,41 @@ async function compareView() {
   });
 }
 
+const ROLE_GROUP_LABEL = { MID: "Midfielders", FWD: "Forwards", DEF: "Defenders", RUCK: "Rucks" };
+async function rolesView() {
+  const data = await api("/api/roles").catch(() => null);
+  if (!data) { view.innerHTML = `${playersChrome("roles")}<div class="card"><p class="error">Roles unavailable.</p></div>`; return; }
+  // group players by role, preserving the role catalogue order
+  const byRole = {};
+  for (const p of data.players) (byRole[p.role] ||= []).push(p);
+  const roleKeys = Object.keys(data.roles);
+  const groups = ["MID", "FWD", "DEF", "RUCK"];
+  const sections = groups.map(g => {
+    const rks = roleKeys.filter(rk => data.roles[rk].group === g);
+    if (!rks.length) return "";
+    return `<h3 class="rolegrouphead">${ROLE_GROUP_LABEL[g] || g}</h3>` + rks.map(rk => {
+      const def = data.roles[rk], players = (byRole[rk] || []);
+      return `<div class="card rolesec">
+        <h4>${esc(def.label)} <span class="thin" style="font-weight:400">· ${players.length}</span></h4>
+        <div class="rolegrid">${players.map(p => `
+          <a class="rolepill" href="${p.id ? `#/player/${p.id}` : "#"}">
+            <span class="rp-name">${esc(p.name)}</span>
+            <span class="rp-meta">${p.club ? clubTag(p.club, p.club) : ""}${p.rating ? ` <span class="thin">${Math.round(p.rating)}</span>` : ""}${p.secondary_label ? ` <span class="rp-sec" title="secondary trait">+</span>` : ""}</span>
+          </a>`).join("")}</div>
+      </div>`;
+    }).join("");
+  }).join("");
+  view.innerHTML = `${playersChrome("roles")}
+    <div class="card">
+      <h3>Player roles <span class="thin" style="font-weight:400">· ${data.count} players</span></h3>
+      <p class="sub">Every player's role archetype, read from this season's per-game output — the small forwards, inside mids, intercept defenders the official position labels don't name. A <span class="rp-sec">+</span> marks a secondary trait (a genuine hybrid).</p>
+    </div>
+    ${sections}
+    <div class="card"><details class="methodology"><summary>Methodology</summary>
+      <p>${esc(data.attribution || "")} Primary role is the best-fitting sub-role within a player's official line (forward/midfield/defence/ruck); a secondary trait is surfaced when the player also strongly resembles a role on the other side of the ground.</p>
+    </details></div>`;
+}
+
 async function tradeValueView() {
   const data = await api("/api/trade-values?limit=150").catch(() => null);
   if (!data) { view.innerHTML = `${playersChrome("tradeval")}<div class="card"><p class="error">Trade values unavailable.</p></div>`; return; }
@@ -2871,6 +2915,7 @@ const routes = [
   [/^#?\/?$/,                       () => landingView()],
   [/^#\/clubs$/,                    () => clubsView()],
   [/^#\/players\/trade-values$/,    () => tradeValueView()],
+  [/^#\/players\/roles$/,           () => rolesView()],
   [/^#\/players$/,                  () => playersView()],
   [/^#\/players\/rankings$/,        () => rankingsView()],
   [/^#\/players\/compare(?:\?.*)?$/, () => compareView()],
