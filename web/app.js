@@ -462,6 +462,65 @@ function sparkline(seasons) {
   </svg>`;
 }
 
+/* Aging-curve card: the player's own career shape overlaid on the empirical
+   curve for their position. Both series are normalised to their own 0..1 range
+   over the shared age window, so you can read peak timing and up/downslope at a
+   glance — not absolute level. Delta-method curve (survivorship-controlled). */
+function agingCard(a, playerAge, firstName, lastName) {
+  const curve = (a.curve || []).filter(r => r.value_index != null);
+  if (curve.length < 4 || !a.trail || a.trail.length < 2) return "";
+  const w = 340, h = 168, padL = 30, padR = 12, padT = 14, padB = 24;
+  const ages = curve.map(r => r.age);
+  const aLo = Math.min(...ages), aHi = Math.max(...ages), aSpan = (aHi - aLo) || 1;
+  const X = age => padL + (age - aLo) / aSpan * (w - padL - padR);
+  const Y = v => padT + (1 - v) * (h - padT - padB);           // v in 0..1
+  // position curve (value_index already 0..1, 1.0 = peak age). Drawn per
+  // segment: any segment touching a thin (low-confidence) age bucket is dashed,
+  // so the chart shows its own uncertainty at both the ramp and the veteran tail.
+  const cx = curve.map(r => X(r.age)), cy = curve.map(r => Y(r.value_index));
+  const anyLowConf = curve.some(r => r.low_conf);
+  const curveSvg = curve.slice(1).map((r, i) => {
+    const dash = (r.low_conf || curve[i].low_conf) ? ` stroke-dasharray="3 3" opacity="0.7"` : "";
+    return `<line x1="${cx[i].toFixed(1)}" y1="${cy[i].toFixed(1)}" x2="${cx[i + 1].toFixed(1)}" y2="${cy[i + 1].toFixed(1)}" stroke="var(--muted)" stroke-width="2"${dash}/>`;
+  }).join("");
+  // player trail normalised to their own min..max, clipped to the curve's ages
+  const tr = a.trail.filter(t => t.age >= aLo && t.age <= aHi);
+  const rv = tr.map(t => t.rating), rLo = Math.min(...rv), rHi = Math.max(...rv), rSpan = (rHi - rLo) || 1;
+  const tPts = tr.map(t => `${X(t.age).toFixed(1)},${Y((t.rating - rLo) / rSpan).toFixed(1)}`);
+  const peak = a.peak_age;
+  const xticks = [...new Set([aLo, peak, aHi].filter(v => v != null))];
+  // one-line read on where the player sits vs the positional peak
+  let insight = "";
+  if (peak && playerAge != null) {
+    const d = playerAge - peak;
+    const pos = (a.group_label || "players").toLowerCase();
+    insight = d <= -2 ? `${pos} typically peak at ${peak} — still climbing toward his prime.`
+      : Math.abs(d) <= 1 ? `${pos} typically peak at ${peak} — right in his prime window.`
+      : d <= 3 ? `${pos} typically peak at ${peak} — just past peak, on the plateau.`
+      : `${pos} typically peak at ${peak} — into the veteran decline phase.`;
+  }
+  return `
+  <div class="card">
+    <h3>Aging curve <span class="thin">· ${esc(a.group_label || "")}</span></h3>
+    <p class="sub">His career shape (●) against the typical ${esc((a.group_label || "position").toLowerCase())} curve (—), from twelve seasons of ratings. Both normalised — read the <em>timing</em> of the peak, not the level.</p>
+    <svg class="agingsvg" viewBox="0 0 ${w} ${h}" width="100%" height="${h}" role="img" aria-label="Aging curve">
+      ${peak != null ? `<line x1="${X(peak).toFixed(1)}" y1="${padT}" x2="${X(peak).toFixed(1)}" y2="${h - padB}" stroke="var(--line)" stroke-dasharray="3 3"/>
+      <text x="${X(peak).toFixed(1)}" y="${padT - 3}" text-anchor="middle" font-size="9" fill="var(--muted)">peak ${peak}</text>` : ""}
+      ${playerAge != null && playerAge >= aLo && playerAge <= aHi ? `<line x1="${X(playerAge).toFixed(1)}" y1="${padT}" x2="${X(playerAge).toFixed(1)}" y2="${h - padB}" stroke="var(--accent)" stroke-width="1" opacity="0.35"/>` : ""}
+      ${curveSvg}
+      <polyline fill="none" stroke="var(--accent)" stroke-width="2" points="${tPts.join(" ")}"/>
+      ${tr.map((t, i) => `<circle cx="${tPts[i].split(",")[0]}" cy="${tPts[i].split(",")[1]}" r="2.6" fill="var(--accent)"/>`).join("")}
+      ${xticks.map(age => `<text x="${X(age).toFixed(1)}" y="${h - 8}" text-anchor="middle" font-size="9" fill="var(--muted)">${age}</text>`).join("")}
+      <text x="${padL - 6}" y="${Y(1).toFixed(1)}" text-anchor="end" font-size="9" fill="var(--muted)">peak</text>
+      <text x="${padL - 6}" y="${Y(0).toFixed(1) - 0}" text-anchor="end" font-size="9" fill="var(--muted)">low</text>
+    </svg>
+    <p class="agelegend"><span class="k accent">● ${esc(lastName || "player")}</span> <span class="k muted">— typical ${esc((a.group_label || "").toLowerCase())}</span></p>
+    ${insight ? `<p class="sub" style="margin-top:6px">${esc(insight)}</p>` : ""}
+    ${anyLowConf ? `<p class="thin" style="margin-top:4px;font-size:11px">Dashed = thinner sample, read with caution. Outlier seasons are trimmed so no single great skews the curve.</p>` : ""}
+    <p class="thin" style="margin-top:8px;font-size:11px">${esc(a.attribution || "")}</p>
+  </div>`;
+}
+
 const intelTip = (intel, n) => {
   const s = intel && intel.picks[n];
   if (!s) return "";
@@ -2414,6 +2473,7 @@ async function playerView(id) {
             </tbody>
           </table></div>
         </div>` : ""}
+        ${p.aging ? agingCard(p.aging, age(p.dob), p.first_name, p.last_name) : ""}
         ${p.contract_status.length > 1 ? `
         <div class="card">
           <h3>Contract status history</h3>

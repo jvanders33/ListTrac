@@ -56,6 +56,12 @@ jobs:
         run: python scraper/form.py
         continue-on-error: true
 
+      - name: Build empirical aging curves (delta method, by position)
+        # joins 2015-26 ratings history to DOBs -> age->rating curves that
+        # inform the Trade Value age factor and the player-page aging card
+        run: python scraper/aging.py
+        continue-on-error: true
+
       - name: Enrich prospect stats from the AFL (Champion Data)
         # official Coates Talent League / U18 champs / VFL / SANFL stats —
         # current-season + senior games RMC misses. Runs AFTER RMC to merge on.

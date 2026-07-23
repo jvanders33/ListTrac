@@ -1,0 +1,1308 @@
+{
+ "source": "Official AFL Player Ratings (Champion Data), 2015-2026",
+ "source_url": "https://www.afl.com.au/afl-player-ratings",
+ "attribution": "Aging curves derived from twelve seasons of Official AFL Player Ratings joined to player dates of birth. Age is taken at 30 June of each season. The aging curve uses the delta / matched-pairs method (each player compared only to themselves across consecutive seasons) so survivorship bias cancels out; the population view is descriptive only and is survivorship-biased.",
+ "method": {
+  "min_bucket": 10,
+  "age_range": [
+   17,
+   37
+  ],
+  "players_matched": 775,
+  "aging": "delta/matched-pairs: mean one-season rating change by age, chained into a trajectory and normalised 0..1 (1.0 = peak age)",
+  "population": "mean & quartile rating of players active at each age (survivorship-biased, descriptive)"
+ },
+ "labels": {
+  "ALL": "All positions",
+  "MID": "Midfielders",
+  "FWD": "Forwards",
+  "DEF": "Defenders",
+  "RUCK": "Rucks"
+ },
+ "peak_age": {
+  "ALL": 25,
+  "MID": 29,
+  "FWD": 25,
+  "DEF": 25,
+  "RUCK": 28
+ },
+ "empirical_age_factors": {
+  "21-23": 0.748,
+  "24-27": 0.99,
+  "28-29": 0.966,
+  "30-31": 0.867,
+  "32+": 0.692
+ },
+ "aging": {
+  "ALL": [
+   {
+    "age": 18,
+    "trajectory": 0.0,
+    "value_index": 0.0,
+    "mean_delta": 45.3,
+    "n": 229,
+    "low_conf": false
+   },
+   {
+    "age": 19,
+    "trajectory": 45.3,
+    "value_index": 0.191,
+    "mean_delta": 52.8,
+    "n": 472,
+    "low_conf": false
+   },
+   {
+    "age": 20,
+    "trajectory": 98.1,
+    "value_index": 0.414,
+    "mean_delta": 44.7,
+    "n": 446,
+    "low_conf": false
+   },
+   {
+    "age": 21,
+    "trajectory": 142.8,
+    "value_index": 0.602,
+    "mean_delta": 38.0,
+    "n": 429,
+    "low_conf": false
+   },
+   {
+    "age": 22,
+    "trajectory": 180.8,
+    "value_index": 0.763,
+    "mean_delta": 27.7,
+    "n": 400,
+    "low_conf": false
+   },
+   {
+    "age": 23,
+    "trajectory": 208.5,
+    "value_index": 0.879,
+    "mean_delta": 22.0,
+    "n": 364,
+    "low_conf": false
+   },
+   {
+    "age": 24,
+    "trajectory": 230.5,
+    "value_index": 0.972,
+    "mean_delta": 6.6,
+    "n": 322,
+    "low_conf": false
+   },
+   {
+    "age": 25,
+    "trajectory": 237.1,
+    "value_index": 1.0,
+    "mean_delta": -1.4,
+    "n": 277,
+    "low_conf": false
+   },
+   {
+    "age": 26,
+    "trajectory": 235.7,
+    "value_index": 0.994,
+    "mean_delta": 0.3,
+    "n": 231,
+    "low_conf": false
+   },
+   {
+    "age": 27,
+    "trajectory": 236.0,
+    "value_index": 0.995,
+    "mean_delta": -5.8,
+    "n": 189,
+    "low_conf": false
+   },
+   {
+    "age": 28,
+    "trajectory": 230.2,
+    "value_index": 0.971,
+    "mean_delta": -2.1,
+    "n": 146,
+    "low_conf": false
+   },
+   {
+    "age": 29,
+    "trajectory": 228.0,
+    "value_index": 0.962,
+    "mean_delta": -13.6,
+    "n": 113,
+    "low_conf": false
+   },
+   {
+    "age": 30,
+    "trajectory": 214.5,
+    "value_index": 0.905,
+    "mean_delta": -17.9,
+    "n": 76,
+    "low_conf": false
+   },
+   {
+    "age": 31,
+    "trajectory": 196.6,
+    "value_index": 0.829,
+    "mean_delta": -11.4,
+    "n": 55,
+    "low_conf": false
+   },
+   {
+    "age": 32,
+    "trajectory": 185.1,
+    "value_index": 0.781,
+    "mean_delta": -14.5,
+    "n": 35,
+    "low_conf": false
+   },
+   {
+    "age": 33,
+    "trajectory": 170.7,
+    "value_index": 0.72,
+    "mean_delta": -10.8,
+    "n": 19,
+    "low_conf": true
+   },
+   {
+    "age": 34,
+    "trajectory": 159.9,
+    "value_index": 0.674,
+    "mean_delta": -19.5,
+    "n": 10,
+    "low_conf": true
+   },
+   {
+    "age": 35,
+    "trajectory": 140.4,
+    "value_index": 0.592,
+    "mean_delta": null,
+    "n": 10,
+    "low_conf": true
+   }
+  ],
+  "MID": [
+   {
+    "age": 18,
+    "trajectory": 0.0,
+    "value_index": 0.0,
+    "mean_delta": 63.5,
+    "n": 69,
+    "low_conf": false
+   },
+   {
+    "age": 19,
+    "trajectory": 63.5,
+    "value_index": 0.215,
+    "mean_delta": 80.7,
+    "n": 155,
+    "low_conf": false
+   },
+   {
+    "age": 20,
+    "trajectory": 144.2,
+    "value_index": 0.488,
+    "mean_delta": 47.1,
+    "n": 142,
+    "low_conf": false
+   },
+   {
+    "age": 21,
+    "trajectory": 191.3,
+    "value_index": 0.648,
+    "mean_delta": 43.3,
+    "n": 136,
+    "low_conf": false
+   },
+   {
+    "age": 22,
+    "trajectory": 234.6,
+    "value_index": 0.794,
+    "mean_delta": 33.4,
+    "n": 127,
+    "low_conf": false
+   },
+   {
+    "age": 23,
+    "trajectory": 268.0,
+    "value_index": 0.908,
+    "mean_delta": 15.6,
+    "n": 115,
+    "low_conf": false
+   },
+   {
+    "age": 24,
+    "trajectory": 283.6,
+    "value_index": 0.96,
+    "mean_delta": -9.8,
+    "n": 98,
+    "low_conf": false
+   },
+   {
+    "age": 25,
+    "trajectory": 273.8,
+    "value_index": 0.927,
+    "mean_delta": 3.0,
+    "n": 72,
+    "low_conf": false
+   },
+   {
+    "age": 26,
+    "trajectory": 276.8,
+    "value_index": 0.937,
+    "mean_delta": 3.7,
+    "n": 59,
+    "low_conf": false
+   },
+   {
+    "age": 27,
+    "trajectory": 280.5,
+    "value_index": 0.95,
+    "mean_delta": 7.5,
+    "n": 50,
+    "low_conf": false
+   },
+   {
+    "age": 28,
+    "trajectory": 288.0,
+    "value_index": 0.975,
+    "mean_delta": 7.3,
+    "n": 38,
+    "low_conf": false
+   },
+   {
+    "age": 29,
+    "trajectory": 295.3,
+    "value_index": 1.0,
+    "mean_delta": -13.8,
+    "n": 33,
+    "low_conf": false
+   },
+   {
+    "age": 30,
+    "trajectory": 281.5,
+    "value_index": 0.953,
+    "mean_delta": -28.0,
+    "n": 20,
+    "low_conf": false
+   },
+   {
+    "age": 31,
+    "trajectory": 253.5,
+    "value_index": 0.858,
+    "mean_delta": -55.8,
+    "n": 14,
+    "low_conf": true
+   },
+   {
+    "age": 32,
+    "trajectory": 197.7,
+    "value_index": 0.669,
+    "mean_delta": null,
+    "n": 14,
+    "low_conf": true
+   }
+  ],
+  "FWD": [
+   {
+    "age": 18,
+    "trajectory": 0.0,
+    "value_index": 0.0,
+    "mean_delta": 39.9,
+    "n": 66,
+    "low_conf": false
+   },
+   {
+    "age": 19,
+    "trajectory": 39.9,
+    "value_index": 0.187,
+    "mean_delta": 40.7,
+    "n": 130,
+    "low_conf": false
+   },
+   {
+    "age": 20,
+    "trajectory": 80.5,
+    "value_index": 0.377,
+    "mean_delta": 49.9,
+    "n": 116,
+    "low_conf": false
+   },
+   {
+    "age": 21,
+    "trajectory": 130.4,
+    "value_index": 0.611,
+    "mean_delta": 38.3,
+    "n": 108,
+    "low_conf": false
+   },
+   {
+    "age": 22,
+    "trajectory": 168.7,
+    "value_index": 0.79,
+    "mean_delta": 21.8,
+    "n": 99,
+    "low_conf": false
+   },
+   {
+    "age": 23,
+    "trajectory": 190.5,
+    "value_index": 0.892,
+    "mean_delta": 9.8,
+    "n": 90,
+    "low_conf": false
+   },
+   {
+    "age": 24,
+    "trajectory": 200.3,
+    "value_index": 0.938,
+    "mean_delta": 13.3,
+    "n": 74,
+    "low_conf": false
+   },
+   {
+    "age": 25,
+    "trajectory": 213.5,
+    "value_index": 1.0,
+    "mean_delta": -2.0,
+    "n": 67,
+    "low_conf": false
+   },
+   {
+    "age": 26,
+    "trajectory": 211.5,
+    "value_index": 0.991,
+    "mean_delta": -2.8,
+    "n": 57,
+    "low_conf": false
+   },
+   {
+    "age": 27,
+    "trajectory": 208.7,
+    "value_index": 0.978,
+    "mean_delta": -18.6,
+    "n": 48,
+    "low_conf": false
+   },
+   {
+    "age": 28,
+    "trajectory": 190.2,
+    "value_index": 0.891,
+    "mean_delta": -20.2,
+    "n": 34,
+    "low_conf": false
+   },
+   {
+    "age": 29,
+    "trajectory": 170.0,
+    "value_index": 0.796,
+    "mean_delta": -16.0,
+    "n": 24,
+    "low_conf": false
+   },
+   {
+    "age": 30,
+    "trajectory": 154.0,
+    "value_index": 0.721,
+    "mean_delta": 2.3,
+    "n": 21,
+    "low_conf": false
+   },
+   {
+    "age": 31,
+    "trajectory": 156.3,
+    "value_index": 0.732,
+    "mean_delta": 5.4,
+    "n": 15,
+    "low_conf": true
+   },
+   {
+    "age": 32,
+    "trajectory": 161.7,
+    "value_index": 0.757,
+    "mean_delta": -0.3,
+    "n": 11,
+    "low_conf": true
+   },
+   {
+    "age": 33,
+    "trajectory": 161.4,
+    "value_index": 0.756,
+    "mean_delta": null,
+    "n": 11,
+    "low_conf": true
+   }
+  ],
+  "DEF": [
+   {
+    "age": 18,
+    "trajectory": 0.0,
+    "value_index": 0.0,
+    "mean_delta": 39.5,
+    "n": 81,
+    "low_conf": false
+   },
+   {
+    "age": 19,
+    "trajectory": 39.5,
+    "value_index": 0.172,
+    "mean_delta": 48.2,
+    "n": 158,
+    "low_conf": false
+   },
+   {
+    "age": 20,
+    "trajectory": 87.7,
+    "value_index": 0.383,
+    "mean_delta": 44.6,
+    "n": 157,
+    "low_conf": false
+   },
+   {
+    "age": 21,
+    "trajectory": 132.3,
+    "value_index": 0.577,
+    "mean_delta": 32.6,
+    "n": 152,
+    "low_conf": false
+   },
+   {
+    "age": 22,
+    "trajectory": 164.9,
+    "value_index": 0.72,
+    "mean_delta": 21.5,
+    "n": 142,
+    "low_conf": false
+   },
+   {
+    "age": 23,
+    "trajectory": 186.4,
+    "value_index": 0.814,
+    "mean_delta": 28.0,
+    "n": 129,
+    "low_conf": false
+   },
+   {
+    "age": 24,
+    "trajectory": 214.3,
+    "value_index": 0.935,
+    "mean_delta": 14.8,
+    "n": 121,
+    "low_conf": false
+   },
+   {
+    "age": 25,
+    "trajectory": 229.1,
+    "value_index": 1.0,
+    "mean_delta": -5.2,
+    "n": 108,
+    "low_conf": false
+   },
+   {
+    "age": 26,
+    "trajectory": 223.9,
+    "value_index": 0.977,
+    "mean_delta": -2.2,
+    "n": 90,
+    "low_conf": false
+   },
+   {
+    "age": 27,
+    "trajectory": 221.7,
+    "value_index": 0.968,
+    "mean_delta": -8.2,
+    "n": 71,
+    "low_conf": false
+   },
+   {
+    "age": 28,
+    "trajectory": 213.5,
+    "value_index": 0.932,
+    "mean_delta": 5.9,
+    "n": 59,
+    "low_conf": false
+   },
+   {
+    "age": 29,
+    "trajectory": 219.5,
+    "value_index": 0.958,
+    "mean_delta": -7.1,
+    "n": 43,
+    "low_conf": false
+   },
+   {
+    "age": 30,
+    "trajectory": 212.4,
+    "value_index": 0.927,
+    "mean_delta": -33.2,
+    "n": 27,
+    "low_conf": false
+   },
+   {
+    "age": 31,
+    "trajectory": 179.2,
+    "value_index": 0.782,
+    "mean_delta": -18.7,
+    "n": 19,
+    "low_conf": true
+   },
+   {
+    "age": 32,
+    "trajectory": 160.5,
+    "value_index": 0.701,
+    "mean_delta": -4.8,
+    "n": 13,
+    "low_conf": true
+   },
+   {
+    "age": 33,
+    "trajectory": 155.8,
+    "value_index": 0.68,
+    "mean_delta": null,
+    "n": 13,
+    "low_conf": true
+   }
+  ],
+  "RUCK": [
+   {
+    "age": 18,
+    "trajectory": 0.0,
+    "value_index": 0.0,
+    "mean_delta": 21.0,
+    "n": 13,
+    "low_conf": true
+   },
+   {
+    "age": 19,
+    "trajectory": 21.0,
+    "value_index": 0.082,
+    "mean_delta": 9.8,
+    "n": 29,
+    "low_conf": false
+   },
+   {
+    "age": 20,
+    "trajectory": 30.8,
+    "value_index": 0.12,
+    "mean_delta": 18.5,
+    "n": 31,
+    "low_conf": false
+   },
+   {
+    "age": 21,
+    "trajectory": 49.3,
+    "value_index": 0.191,
+    "mean_delta": 40.7,
+    "n": 33,
+    "low_conf": false
+   },
+   {
+    "age": 22,
+    "trajectory": 90.1,
+    "value_index": 0.35,
+    "mean_delta": 53.2,
+    "n": 31,
+    "low_conf": false
+   },
+   {
+    "age": 23,
+    "trajectory": 143.2,
+    "value_index": 0.556,
+    "mean_delta": 62.1,
+    "n": 29,
+    "low_conf": false
+   },
+   {
+    "age": 24,
+    "trajectory": 205.4,
+    "value_index": 0.798,
+    "mean_delta": 19.7,
+    "n": 28,
+    "low_conf": false
+   },
+   {
+    "age": 25,
+    "trajectory": 225.0,
+    "value_index": 0.874,
+    "mean_delta": 11.5,
+    "n": 29,
+    "low_conf": false
+   },
+   {
+    "age": 26,
+    "trajectory": 236.5,
+    "value_index": 0.918,
+    "mean_delta": 10.8,
+    "n": 24,
+    "low_conf": false
+   },
+   {
+    "age": 27,
+    "trajectory": 247.3,
+    "value_index": 0.96,
+    "mean_delta": 10.2,
+    "n": 19,
+    "low_conf": true
+   },
+   {
+    "age": 28,
+    "trajectory": 257.5,
+    "value_index": 1.0,
+    "mean_delta": -15.3,
+    "n": 14,
+    "low_conf": true
+   },
+   {
+    "age": 29,
+    "trajectory": 242.2,
+    "value_index": 0.941,
+    "mean_delta": -27.6,
+    "n": 13,
+    "low_conf": true
+   },
+   {
+    "age": 30,
+    "trajectory": 214.6,
+    "value_index": 0.833,
+    "mean_delta": null,
+    "n": 13,
+    "low_conf": true
+   }
+  ]
+ },
+ "population": {
+  "ALL": [
+   {
+    "age": 18,
+    "n": 255,
+    "mean": 37.4,
+    "p25": 0.0,
+    "p50": 9.8,
+    "p75": 60.4
+   },
+   {
+    "age": 19,
+    "n": 553,
+    "mean": 62.0,
+    "p25": 0.0,
+    "p50": 21.1,
+    "p75": 92.6
+   },
+   {
+    "age": 20,
+    "n": 526,
+    "mean": 121.6,
+    "p25": 17.3,
+    "p50": 92.2,
+    "p75": 198.1
+   },
+   {
+    "age": 21,
+    "n": 494,
+    "mean": 174.0,
+    "p25": 51.7,
+    "p50": 167.2,
+    "p75": 274.3
+   },
+   {
+    "age": 22,
+    "n": 464,
+    "mean": 217.3,
+    "p25": 96.1,
+    "p50": 221.5,
+    "p75": 322.1
+   },
+   {
+    "age": 23,
+    "n": 432,
+    "mean": 247.5,
+    "p25": 137.2,
+    "p50": 248.4,
+    "p75": 343.3
+   },
+   {
+    "age": 24,
+    "n": 375,
+    "mean": 276.2,
+    "p25": 191.3,
+    "p50": 284.0,
+    "p75": 370.8
+   },
+   {
+    "age": 25,
+    "n": 334,
+    "mean": 292.3,
+    "p25": 204.2,
+    "p50": 301.4,
+    "p75": 378.1
+   },
+   {
+    "age": 26,
+    "n": 284,
+    "mean": 294.7,
+    "p25": 208.5,
+    "p50": 305.5,
+    "p75": 378.1
+   },
+   {
+    "age": 27,
+    "n": 235,
+    "mean": 309.0,
+    "p25": 223.1,
+    "p50": 317.0,
+    "p75": 393.1
+   },
+   {
+    "age": 28,
+    "n": 190,
+    "mean": 316.1,
+    "p25": 233.2,
+    "p50": 315.8,
+    "p75": 396.4
+   },
+   {
+    "age": 29,
+    "n": 146,
+    "mean": 329.3,
+    "p25": 261.6,
+    "p50": 334.5,
+    "p75": 410.1
+   },
+   {
+    "age": 30,
+    "n": 113,
+    "mean": 327.2,
+    "p25": 257.0,
+    "p50": 329.9,
+    "p75": 424.1
+   },
+   {
+    "age": 31,
+    "n": 76,
+    "mean": 315.7,
+    "p25": 255.4,
+    "p50": 321.2,
+    "p75": 385.1
+   },
+   {
+    "age": 32,
+    "n": 55,
+    "mean": 309.9,
+    "p25": 231.3,
+    "p50": 316.3,
+    "p75": 384.2
+   },
+   {
+    "age": 33,
+    "n": 35,
+    "mean": 316.7,
+    "p25": 239.2,
+    "p50": 322.9,
+    "p75": 409.9
+   },
+   {
+    "age": 34,
+    "n": 19,
+    "mean": 323.1,
+    "p25": 241.2,
+    "p50": 327.6,
+    "p75": 433.6
+   },
+   {
+    "age": 35,
+    "n": 10,
+    "mean": 318.6,
+    "p25": 248.7,
+    "p50": 327.3,
+    "p75": 378.2
+   }
+  ],
+  "MID": [
+   {
+    "age": 18,
+    "n": 76,
+    "mean": 59.5,
+    "p25": 0.0,
+    "p50": 24.5,
+    "p75": 106.0
+   },
+   {
+    "age": 19,
+    "n": 179,
+    "mean": 87.7,
+    "p25": 6.0,
+    "p50": 49.0,
+    "p75": 121.5
+   },
+   {
+    "age": 20,
+    "n": 164,
+    "mean": 174.9,
+    "p25": 62.4,
+    "p50": 152.1,
+    "p75": 268.2
+   },
+   {
+    "age": 21,
+    "n": 156,
+    "mean": 230.7,
+    "p25": 102.5,
+    "p50": 239.1,
+    "p75": 343.5
+   },
+   {
+    "age": 22,
+    "n": 143,
+    "mean": 282.2,
+    "p25": 165.9,
+    "p50": 298.7,
+    "p75": 399.8
+   },
+   {
+    "age": 23,
+    "n": 140,
+    "mean": 305.8,
+    "p25": 175.5,
+    "p50": 324.3,
+    "p75": 435.0
+   },
+   {
+    "age": 24,
+    "n": 117,
+    "mean": 339.6,
+    "p25": 233.5,
+    "p50": 345.2,
+    "p75": 457.6
+   },
+   {
+    "age": 25,
+    "n": 101,
+    "mean": 341.8,
+    "p25": 251.7,
+    "p50": 344.9,
+    "p75": 458.7
+   },
+   {
+    "age": 26,
+    "n": 73,
+    "mean": 351.2,
+    "p25": 280.5,
+    "p50": 362.0,
+    "p75": 454.3
+   },
+   {
+    "age": 27,
+    "n": 60,
+    "mean": 366.8,
+    "p25": 297.9,
+    "p50": 374.9,
+    "p75": 465.5
+   },
+   {
+    "age": 28,
+    "n": 50,
+    "mean": 382.1,
+    "p25": 308.6,
+    "p50": 389.0,
+    "p75": 468.0
+   },
+   {
+    "age": 29,
+    "n": 38,
+    "mean": 413.4,
+    "p25": 342.9,
+    "p50": 411.4,
+    "p75": 504.4
+   },
+   {
+    "age": 30,
+    "n": 33,
+    "mean": 406.1,
+    "p25": 320.3,
+    "p50": 413.3,
+    "p75": 493.8
+   },
+   {
+    "age": 31,
+    "n": 20,
+    "mean": 373.8,
+    "p25": 316.8,
+    "p50": 373.0,
+    "p75": 423.0
+   },
+   {
+    "age": 32,
+    "n": 14,
+    "mean": 336.6,
+    "p25": 209.5,
+    "p50": 294.3,
+    "p75": 451.7
+   }
+  ],
+  "FWD": [
+   {
+    "age": 18,
+    "n": 76,
+    "mean": 34.4,
+    "p25": 0.0,
+    "p50": 9.8,
+    "p75": 62.8
+   },
+   {
+    "age": 19,
+    "n": 163,
+    "mean": 51.3,
+    "p25": 0.0,
+    "p50": 15.2,
+    "p75": 73.4
+   },
+   {
+    "age": 20,
+    "n": 145,
+    "mean": 103.7,
+    "p25": 13.3,
+    "p50": 87.5,
+    "p75": 184.2
+   },
+   {
+    "age": 21,
+    "n": 129,
+    "mean": 161.2,
+    "p25": 57.1,
+    "p50": 148.9,
+    "p75": 248.0
+   },
+   {
+    "age": 22,
+    "n": 117,
+    "mean": 206.1,
+    "p25": 114.0,
+    "p50": 218.6,
+    "p75": 295.8
+   },
+   {
+    "age": 23,
+    "n": 108,
+    "mean": 232.0,
+    "p25": 151.8,
+    "p50": 243.4,
+    "p75": 322.8
+   },
+   {
+    "age": 24,
+    "n": 91,
+    "mean": 233.7,
+    "p25": 160.1,
+    "p50": 247.2,
+    "p75": 307.8
+   },
+   {
+    "age": 25,
+    "n": 77,
+    "mean": 271.3,
+    "p25": 197.0,
+    "p50": 288.2,
+    "p75": 340.5
+   },
+   {
+    "age": 26,
+    "n": 70,
+    "mean": 275.0,
+    "p25": 190.3,
+    "p50": 288.6,
+    "p75": 340.7
+   },
+   {
+    "age": 27,
+    "n": 60,
+    "mean": 277.7,
+    "p25": 192.8,
+    "p50": 293.3,
+    "p75": 367.8
+   },
+   {
+    "age": 28,
+    "n": 48,
+    "mean": 279.7,
+    "p25": 233.2,
+    "p50": 272.6,
+    "p75": 348.5
+   },
+   {
+    "age": 29,
+    "n": 34,
+    "mean": 284.6,
+    "p25": 237.3,
+    "p50": 308.2,
+    "p75": 340.0
+   },
+   {
+    "age": 30,
+    "n": 24,
+    "mean": 267.3,
+    "p25": 167.7,
+    "p50": 283.9,
+    "p75": 329.9
+   },
+   {
+    "age": 31,
+    "n": 21,
+    "mean": 272.2,
+    "p25": 240.2,
+    "p50": 294.1,
+    "p75": 322.5
+   },
+   {
+    "age": 32,
+    "n": 15,
+    "mean": 289.8,
+    "p25": 225.5,
+    "p50": 293.1,
+    "p75": 353.6
+   },
+   {
+    "age": 33,
+    "n": 11,
+    "mean": 297.9,
+    "p25": 216.0,
+    "p50": 288.7,
+    "p75": 414.4
+   }
+  ],
+  "DEF": [
+   {
+    "age": 18,
+    "n": 90,
+    "mean": 26.1,
+    "p25": 0.0,
+    "p50": 2.6,
+    "p75": 42.4
+   },
+   {
+    "age": 19,
+    "n": 179,
+    "mean": 53.8,
+    "p25": 0.0,
+    "p50": 13.2,
+    "p75": 90.1
+   },
+   {
+    "age": 20,
+    "n": 179,
+    "mean": 106.9,
+    "p25": 9.3,
+    "p50": 78.3,
+    "p75": 182.5
+   },
+   {
+    "age": 21,
+    "n": 171,
+    "mean": 158.4,
+    "p25": 48.3,
+    "p50": 171.0,
+    "p75": 248.6
+   },
+   {
+    "age": 22,
+    "n": 167,
+    "mean": 192.3,
+    "p25": 86.6,
+    "p50": 194.0,
+    "p75": 291.8
+   },
+   {
+    "age": 23,
+    "n": 149,
+    "mean": 219.5,
+    "p25": 124.9,
+    "p50": 233.7,
+    "p75": 319.0
+   },
+   {
+    "age": 24,
+    "n": 134,
+    "mean": 255.8,
+    "p25": 173.9,
+    "p50": 268.6,
+    "p75": 337.8
+   },
+   {
+    "age": 25,
+    "n": 125,
+    "mean": 274.2,
+    "p25": 205.7,
+    "p50": 301.8,
+    "p75": 353.7
+   },
+   {
+    "age": 26,
+    "n": 110,
+    "mean": 276.9,
+    "p25": 203.0,
+    "p50": 291.6,
+    "p75": 364.9
+   },
+   {
+    "age": 27,
+    "n": 90,
+    "mean": 289.0,
+    "p25": 213.6,
+    "p50": 283.5,
+    "p75": 369.3
+   },
+   {
+    "age": 28,
+    "n": 72,
+    "mean": 292.8,
+    "p25": 239.1,
+    "p50": 305.8,
+    "p75": 366.6
+   },
+   {
+    "age": 29,
+    "n": 59,
+    "mean": 305.3,
+    "p25": 254.5,
+    "p50": 318.5,
+    "p75": 382.9
+   },
+   {
+    "age": 30,
+    "n": 43,
+    "mean": 307.1,
+    "p25": 248.8,
+    "p50": 320.7,
+    "p75": 381.1
+   },
+   {
+    "age": 31,
+    "n": 27,
+    "mean": 306.6,
+    "p25": 255.4,
+    "p50": 317.7,
+    "p75": 373.0
+   },
+   {
+    "age": 32,
+    "n": 19,
+    "mean": 284.0,
+    "p25": 236.1,
+    "p50": 311.4,
+    "p75": 353.3
+   },
+   {
+    "age": 33,
+    "n": 13,
+    "mean": 298.4,
+    "p25": 255.1,
+    "p50": 327.6,
+    "p75": 350.4
+   }
+  ],
+  "RUCK": [
+   {
+    "age": 18,
+    "n": 13,
+    "mean": 4.5,
+    "p25": 0.0,
+    "p50": 0.0,
+    "p75": 6.5
+   },
+   {
+    "age": 19,
+    "n": 32,
+    "mean": 18.3,
+    "p25": 0.0,
+    "p50": 0.0,
+    "p75": 4.3
+   },
+   {
+    "age": 20,
+    "n": 38,
+    "mean": 29.9,
+    "p25": 0.0,
+    "p50": 0.0,
+    "p75": 17.7
+   },
+   {
+    "age": 21,
+    "n": 38,
+    "mean": 54.9,
+    "p25": 0.0,
+    "p50": 12.3,
+    "p75": 55.9
+   },
+   {
+    "age": 22,
+    "n": 36,
+    "mean": 108.7,
+    "p25": 8.4,
+    "p50": 61.0,
+    "p75": 137.5
+   },
+   {
+    "age": 23,
+    "n": 34,
+    "mean": 173.5,
+    "p25": 60.6,
+    "p50": 123.4,
+    "p75": 244.3
+   },
+   {
+    "age": 24,
+    "n": 32,
+    "mean": 245.6,
+    "p25": 125.4,
+    "p50": 249.9,
+    "p75": 394.5
+   },
+   {
+    "age": 25,
+    "n": 30,
+    "mean": 251.3,
+    "p25": 57.6,
+    "p50": 236.3,
+    "p75": 425.9
+   },
+   {
+    "age": 26,
+    "n": 30,
+    "mean": 265.2,
+    "p25": 80.8,
+    "p50": 251.7,
+    "p75": 421.6
+   },
+   {
+    "age": 27,
+    "n": 24,
+    "mean": 317.9,
+    "p25": 203.4,
+    "p50": 330.9,
+    "p75": 419.9
+   },
+   {
+    "age": 28,
+    "n": 19,
+    "mean": 327.7,
+    "p25": 205.0,
+    "p50": 364.4,
+    "p75": 444.3
+   },
+   {
+    "age": 29,
+    "n": 14,
+    "mean": 326.3,
+    "p25": 256.4,
+    "p50": 313.8,
+    "p75": 447.9
+   },
+   {
+    "age": 30,
+    "n": 13,
+    "mean": 304.1,
+    "p25": 132.3,
+    "p50": 348.3,
+    "p75": 436.2
+   }
+  ]
+ }
+}

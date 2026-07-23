@@ -420,6 +420,13 @@ footer.pagefoot {
 
 .spark { display: block; margin: 4px 0 12px; overflow: visible; }
 
+/* aging curve card */
+.agingsvg { display: block; margin: 8px 0 6px; overflow: visible; }
+.agelegend { margin: 2px 0 0; font-size: 12px; display: flex; gap: 14px; flex-wrap: wrap; }
+.agelegend .k { color: var(--muted); }
+.agelegend .k.accent { color: var(--accent); font-weight: 600; }
+.agelegend .k.muted { color: var(--muted); }
+
 /* star / popularity button */
 .starbtn {
   display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 13px;

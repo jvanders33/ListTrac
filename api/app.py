@@ -339,6 +339,34 @@ def player(player_id: int):
             tl = next((t for t in hist["timelines"].values() if _norm(t["name"]) == target), None)
         if tl:
             profile["rating_history"] = tl["seasons"]
+
+    # aging context: the player's own age->rating trail overlaid on their
+    # position's empirical aging curve ("where are you on the curve")
+    profile["aging"] = None
+    ac = _aging_curves()
+    if ac and profile.get("dob"):
+        pos_raw = ((rating or {}).get("position")
+                   or (profile.get("fantasy") or {}).get("position") or "")
+        grp = _POS_GROUP.get(pos_raw.upper(), "ALL")
+        curve = ac.get("aging", {}).get(grp) or ac.get("aging", {}).get("ALL")
+        try:
+            by = int(str(profile["dob"])[:4])
+            bmd = tuple(int(x) for x in str(profile["dob"])[5:10].split("-"))
+        except (ValueError, IndexError):
+            by, bmd = None, (1, 1)
+        trail = []
+        if by:
+            for s in profile["rating_history"]:
+                a = s["year"] - by - (1 if bmd > (6, 30) else 0)
+                if s.get("rating") is not None and 17 <= a <= 40:
+                    trail.append({"age": a, "rating": s["rating"], "year": s["year"]})
+        if curve and trail:
+            profile["aging"] = {
+                "group": grp, "group_label": ac.get("labels", {}).get(grp, grp),
+                "peak_age": (ac.get("peak_age") or {}).get(grp),
+                "curve": curve, "trail": trail,
+                "source": ac.get("source"), "attribution": ac.get("attribution"),
+            }
     return profile
 
 
@@ -788,6 +816,25 @@ def _form_index() -> dict:
     return _form_cache
 
 
+AGING_PATH = Path(__file__).resolve().parent.parent / "data" / "aging_curves.json"
+_aging_cache: dict = {}
+# Champion Data position -> aging-curve group
+_POS_GROUP = {
+    "MIDFIELDER": "MID", "MIDFIELDER_FORWARD": "MID",
+    "KEY_FORWARD": "FWD", "MEDIUM_FORWARD": "FWD", "GENERAL_FORWARD": "FWD",
+    "KEY_DEFENDER": "DEF", "MEDIUM_DEFENDER": "DEF", "GENERAL_DEFENDER": "DEF",
+    "RUCK": "RUCK",
+}
+
+
+def _aging_curves() -> dict:
+    """Empirical age->rating curves (delta method) + descriptive population view."""
+    import json
+    if not _aging_cache and AGING_PATH.exists():
+        _aging_cache.update(json.loads(AGING_PATH.read_text(encoding="utf-8")))
+    return _aging_cache
+
+
 import datetime
 
 _trade_value_cache: dict = {}
@@ -887,6 +934,16 @@ def trade_values(limit: int = 100, club: str | None = None):
     return {"count": len(board), "year": CURRENT_YEAR,
             "note": "Trade Value = AFL Player Rating x age factor x contract factor.",
             "players": board[:limit]}
+
+
+@app.get("/api/aging-curves")
+def aging_curves():
+    """Empirical AFL aging curves from 2015-26 ratings: delta-method trajectory
+    (survivorship-controlled) + descriptive population, overall and by position."""
+    ac = _aging_curves()
+    if not ac:
+        raise HTTPException(404, "aging curves not built")
+    return ac
 
 
 @app.get("/api/form-movers")
