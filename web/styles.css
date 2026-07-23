@@ -477,6 +477,18 @@ footer.pagefoot {
 .dchip.ufa { border-left-color: var(--ufa); background: var(--ufa-bg); }
 @media (max-width: 620px) { .depthline { grid-template-columns: 1fr; gap: 6px; } }
 
+/* landing: most-valuable / form-movers duo */
+.landing-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 640px) { .landing-duo { grid-template-columns: 1fr; } }
+.mini-list { display: flex; flex-direction: column; gap: 1px; margin-top: 8px; }
+.mini-row { display: grid; grid-template-columns: auto auto 1fr auto; align-items: center; gap: 8px; padding: 7px 4px; border-top: 1px solid var(--line); color: var(--ink); }
+.mini-row:first-child { border-top: 0; }
+.mini-row:hover { background: var(--card-2); text-decoration: none; }
+.mini-rank { font-weight: 800; color: var(--accent); font-size: 12px; min-width: 16px; text-align: center; font-variant-numeric: tabular-nums; }
+.mini-name { font-weight: 600; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mini-val { text-align: right; font-variant-numeric: tabular-nums; font-size: 12.5px; white-space: nowrap; }
+.mini-up { color: var(--ok); font-weight: 700; font-size: 11px; }
+
 /* Build your All-Australian team */
 .aacols { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; align-items: start; margin-top: 14px; }
 @media (max-width: 900px) { .aacols { grid-template-columns: 1fr; } }

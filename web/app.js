@@ -237,7 +237,7 @@ const monthYear = d => {
 };
 
 async function landingView() {
-  const [summary, order, newsItems, trend, clubList, adminUpdates, trendingPlayers] = await Promise.all([
+  const [summary, order, newsItems, trend, clubList, adminUpdates, trendingPlayers, tvBoard, movers] = await Promise.all([
     api("/api/summary"),
     api("/api/draft-order").catch(() => null),
     api("/api/news").catch(() => []),
@@ -245,6 +245,8 @@ async function landingView() {
     api("/clubs").catch(() => []),
     api("/api/updates").catch(() => []),
     api("/api/trending-players").catch(() => []),
+    api("/api/trade-values?limit=6").catch(() => ({ players: [] })),
+    api("/api/form-movers?limit=6").catch(() => ({ players: [] })),
   ]);
   const s = summary.contract_statuses;
   const rfas = trend.filter(t => t.kind === "rfa");
@@ -313,6 +315,33 @@ async function landingView() {
               </a>`).join("")}
           </div>
         </div>` : ""}
+
+        <div class="landing-duo">
+          ${tvBoard.players.length ? `
+          <div class="card">
+            <h3>Most valuable <span class="thin" style="font-weight:400">· trade value</span></h3>
+            <div class="mini-list">
+              ${tvBoard.players.map((x, i) => `
+                <a class="mini-row" href="${x.id ? `#/player/${x.id}` : "#/players/trade-values"}">
+                  <span class="mini-rank">${i + 1}</span>${guernsey(x.club, 20)}
+                  <span class="mini-name">${esc(x.name)}</span>
+                  <span class="mini-val"><b>${x.value}</b></span></a>`).join("")}
+            </div>
+            <p class="feature-ctas" style="margin-top:10px"><a class="cta quiet" href="#/players/trade-values">Full board →</a></p>
+          </div>` : ""}
+          ${movers.players.length ? `
+          <div class="card">
+            <h3>Form movers <span class="thin" style="font-weight:400">· last 5 vs season (Fantasy)</span></h3>
+            <div class="mini-list">
+              ${movers.players.map(x => `
+                <a class="mini-row" href="${x.player_id ? `#/player/${x.player_id}` : "#/players"}">
+                  ${guernsey(x.club, 20)}
+                  <span class="mini-name">${esc(x.name)}</span>
+                  <span class="mini-val"><b>${x.l5_af}</b> <span class="mini-up">▲${x.delta}</span></span></a>`).join("")}
+            </div>
+            <p class="thin" style="font-size:11px;margin-top:8px">Biggest AFL Fantasy risers over their last five games.</p>
+          </div>` : ""}
+        </div>
 
         <div class="card">
           <h3>Free agency class of 2026</h3>

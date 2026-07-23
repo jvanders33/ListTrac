@@ -802,6 +802,29 @@ def trade_values(limit: int = 100, club: str | None = None):
             "players": board[:limit]}
 
 
+@app.get("/api/form-movers")
+def form_movers(limit: int = 6):
+    """Biggest recent risers: last-5 AFL Fantasy vs season average."""
+    fi = _form_index().get("_players", {})
+    fant = _fantasy_index()
+    with db() as conn:
+        ident = {_norm(f"{r['first_name']} {r['last_name']}"): (r["id"], r["club"])
+                 for r in conn.execute("""SELECT p.id, p.first_name, p.last_name, c.abbreviation club
+                                          FROM player p LEFT JOIN club c ON c.id = p.current_club_id
+                                          WHERE p.status = 'listed'""")}
+    out = []
+    for nm, f in fi.items():
+        season = (fant.get(nm) or {}).get("af_avg")
+        if (f.get("played") or 0) < 3 or f.get("l5_af") is None or not season:
+            continue
+        who = ident.get(nm)
+        out.append({"name": f["name"], "player_id": who[0] if who else None, "club": who[1] if who else None,
+                    "l5_af": f["l5_af"], "season_af": season, "delta": round(f["l5_af"] - season, 1),
+                    "l5_disp": f.get("l5_disp")})
+    out.sort(key=lambda x: -x["delta"])
+    return {"players": out[:limit]}
+
+
 def _contracts_by_name() -> dict:
     """Contract/movement events (AFLRATINGS) grouped by normalised player name."""
     import json
