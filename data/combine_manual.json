@@ -1,0 +1,4 @@
+{
+ "note": "Hand-curated AFL Draft Combine testing results. The AFL's full per-participant feed is access-locked (403); enter results here from the public top-10 leaderboards on afl.com.au (or a future feed) with a source_url each. Test keys: sprint20m (s), agility (s), standing_vert (cm), running_vert (cm), time_trial_2km (min:s). The 2026 National Combine is held in October — until then this stays empty and the prospect pages show a 'testing in October' placeholder.",
+ "events": []
+}

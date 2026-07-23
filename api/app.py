@@ -921,6 +921,18 @@ def _brownlow_index() -> dict:
     return _brownlow_cache
 
 
+COMBINE_PATH = Path(__file__).resolve().parent.parent / "data" / "combine_2026.json"
+_combine_cache: dict = {}
+
+
+def _combine_index() -> dict:
+    """Draft Combine athletic testing (scaffold until the Oct combine lands)."""
+    import json
+    if not _combine_cache and COMBINE_PATH.exists():
+        _combine_cache.update(json.loads(COMBINE_PATH.read_text(encoding="utf-8")))
+    return _combine_cache
+
+
 SPLITS_PATH = Path(__file__).resolve().parent.parent / "data" / "splits_2026.json"
 _splits_cache: dict = {}
 
@@ -1276,7 +1288,14 @@ def prospect(name: str):
     # a headline line: the most recent season with the most games
     hist = rec["history"]
     headline = max(hist, key=lambda r: (r["season"], r.get("gamesplayed") or 0)) if hist else None
-    return {**meta, "history": hist, "headline": headline,
+    ci = _combine_index()
+    combine = {
+        "held": ci.get("held"), "available": ci.get("available", False),
+        "tests": ci.get("tests", []),
+        "results": (ci.get("players") or {}).get(_norm(meta["name"])),
+        "attribution": ci.get("attribution"),
+    } if ci else None
+    return {**meta, "history": hist, "headline": headline, "combine": combine,
             "stats_source": stats.get("source"), "stats_source_url": stats.get("source_url")}
 
 

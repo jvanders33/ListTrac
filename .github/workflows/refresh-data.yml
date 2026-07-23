@@ -76,6 +76,11 @@ jobs:
         run: python scraper/brownlow.py
         continue-on-error: true
 
+      - name: Build Draft Combine results (scaffold + manual layer)
+        # placeholder until the Oct combine; merges data/combine_manual.json
+        run: python scraper/combine.py
+        continue-on-error: true
+
       - name: Build empirical aging curves (delta method, by position)
         # joins 2015-26 ratings history to DOBs -> age->rating curves that
         # inform the Trade Value age factor and the player-page aging card

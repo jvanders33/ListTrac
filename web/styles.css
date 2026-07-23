@@ -420,6 +420,19 @@ footer.pagefoot {
 
 .spark { display: block; margin: 4px 0 12px; overflow: visible; }
 
+/* draft combine */
+.combine-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin-top: 8px; }
+.ctile { display: flex; flex-direction: column; gap: 3px; padding: 12px; border-radius: 10px; background: var(--card-2); }
+.ctile.empty { opacity: 0.5; }
+.ct-val { font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent); }
+.ct-val small { font-size: 12px; font-weight: 600; color: var(--ink-2); }
+.ct-lab { font-size: 11px; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.03em; }
+.combine-holding { margin-top: 8px; padding: 14px; border: 1px dashed var(--line); border-radius: 10px; background: var(--card-2); }
+.combine-holding p { margin: 0 0 10px; color: var(--ink-2); font-size: 13px; }
+.combine-preview { display: flex; flex-wrap: wrap; gap: 6px; }
+.ctprev { font-size: 11px; padding: 4px 9px; border-radius: 999px; background: var(--bg); color: var(--ink-2); }
+.ctprev small { color: var(--accent); }
+
 /* brownlow projection */
 .brownlow .bl-top td { background: var(--card-2); }
 .brownlow .bl-top b { color: var(--accent); }

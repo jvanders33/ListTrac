@@ -887,6 +887,37 @@ async function prospectsView(year = 2027) {
   }
 }
 
+/* Draft Combine card. The National Combine is held in October, so until the
+   2026 class is tested this shows a holding slot; once results land (via the
+   combine pipeline) it renders each test value. */
+function combineCard(c, name) {
+  const tests = c.tests || [];
+  const res = c.results;
+  const first = (name || "").split(" ")[0];
+  if (c.available && res && res.tests) {
+    return `<div class="card">
+      <h3>Draft Combine <span class="thin" style="font-weight:400">· ${esc(res.combine || "National")} ${res.year || ""}</span></h3>
+      <p class="sub">Athletic testing results${res.source_url ? ` · <a href="${esc(res.source_url)}" target="_blank" rel="noopener">source ↗</a>` : ""}.</p>
+      <div class="combine-grid">
+        ${tests.map(t => {
+          const v = res.tests[t.key];
+          return `<div class="ctile${v == null ? " empty" : ""}">
+            <span class="ct-val">${v == null ? "—" : esc(String(v))}${v == null ? "" : ` <small>${esc(t.unit)}</small>`}</span>
+            <span class="ct-lab">${esc(t.label)}</span></div>`;
+        }).join("")}
+      </div>
+    </div>`;
+  }
+  return `<div class="card">
+    <h3>Draft Combine</h3>
+    <p class="sub">Athletic testing — 20m sprint, agility, standing &amp; running vertical jumps and the 2km time trial.</p>
+    <div class="combine-holding">
+      <p>The National Draft Combine is held in <b>October</b>. ${esc(first)}'s results will appear here once the ${esc(c.held || "2026")} combine is run.</p>
+      <div class="combine-preview">${tests.map(t => `<span class="ctprev">${esc(t.label)} <small>${esc(t.unit)}</small></span>`).join("")}</div>
+    </div>
+  </div>`;
+}
+
 async function prospectProfileView(name) {
   const p = await api(`/api/prospect?name=${encodeURIComponent(name)}`).catch(() => null);
   if (!p) { view.innerHTML = `<p class="error">Prospect not found.</p>`; return; }
@@ -936,7 +967,8 @@ async function prospectProfileView(name) {
         </tbody>
       </table></div>`
       : `<p class="thin">No recorded games yet — this profile fills in as ${esc(p.name.split(" ")[0])} plays underage and state-league football.</p>`}
-    </div>`;
+    </div>
+    ${p.combine ? combineCard(p.combine, p.name) : ""}`;
 }
 
 /* Award text -> honour chip class. Top honours (championship medals, AA

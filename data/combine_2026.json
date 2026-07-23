@@ -1,0 +1,40 @@
+{
+ "year": 2026,
+ "held": "October 2026",
+ "available": false,
+ "tests": [
+  {
+   "key": "sprint20m",
+   "label": "20m sprint",
+   "unit": "s",
+   "lower_better": true
+  },
+  {
+   "key": "agility",
+   "label": "Agility test",
+   "unit": "s",
+   "lower_better": true
+  },
+  {
+   "key": "standing_vert",
+   "label": "Standing vertical",
+   "unit": "cm",
+   "lower_better": false
+  },
+  {
+   "key": "running_vert",
+   "label": "Running vertical",
+   "unit": "cm",
+   "lower_better": false
+  },
+  {
+   "key": "time_trial_2km",
+   "label": "2km time trial",
+   "unit": "min:s",
+   "lower_better": true
+  }
+ ],
+ "attribution": "AFL National Draft Combine athletic testing. The AFL's full per-participant feed is access-locked; results here are hand-verified from the public top-10 leaderboards (afl.com.au) until/if the feed opens. Empty means not yet tested — the 2026 combine is held in October.",
+ "count": 0,
+ "players": {}
+}
