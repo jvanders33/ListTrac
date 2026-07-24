@@ -269,6 +269,7 @@ def club_list(abbrev: str):
         r["trade_points"] = tv.get("draft_points") if tv else None
         r["value_100"] = tv.get("value_100") if tv else None
         r["equiv_pick"] = tv.get("equiv_pick") if tv else None
+        r["equiv_pick_str"] = tv.get("equiv_pick_str") if tv else None
     return result
 
 
@@ -1204,6 +1205,18 @@ def _points_to_pick(points: float) -> int:
     return best
 
 
+def _equiv_pick_str(points: float) -> str:
+    """Express a points figure as real draft picks. Elite players are worth more
+    than any single pick, so above pick-1 value we say 'pick 1 + pick N'."""
+    p1 = AFL_DVI[0]
+    if points <= p1 + 80:
+        return f"pick {_points_to_pick(points)}"
+    extra = points - p1
+    if extra > p1:                       # worth more than two number-one picks
+        return "pick 1 + pick 1 +"
+    return f"pick 1 + pick {_points_to_pick(extra)}"
+
+
 CONTRACTS_PATH = Path(__file__).resolve().parent.parent / "data" / "contracts.json"
 CONTRACTS_MANUAL_PATH = Path(__file__).resolve().parent.parent / "data" / "contracts_manual.json"
 _contracts_cache: dict = {}
@@ -1460,15 +1473,19 @@ def _trade_value_board() -> dict:
                 "value": round(rr["rating"] * af * cf),
             })
     out.sort(key=lambda x: -x["value"])
-    # price trade value in the AFL Draft Value Index: the #1 asset ~ pick 1
-    # (3000 pts), everyone scaled proportionally, then expressed as an equivalent
-    # pick and a /100 index. Model output unchanged — just made legible.
+    # price trade value in the AFL Draft Value Index. A star is worth more than
+    # any single pick, so the best player anchors ABOVE pick 1 (pick 1 + a first-
+    # rounder), and a convex curve keeps that premium at the very top rather than
+    # inflating the whole board. Model output unchanged — just made legible.
+    TOP_ANCHOR, GAMMA = 4500, 1.3
     top = out[0]["value"] if out else 1
     for i, x in enumerate(out):
         x["rank"] = i + 1
-        x["draft_points"] = round(x["value"] / top * 3000)
+        frac = max(0.0, (x["value"] / top)) if top else 0.0
+        x["draft_points"] = round((frac ** GAMMA) * TOP_ANCHOR)
         x["equiv_pick"] = _points_to_pick(x["draft_points"])
-        x["value_100"] = round(x["value"] / top * 100)
+        x["equiv_pick_str"] = _equiv_pick_str(x["draft_points"])
+        x["value_100"] = round(x["draft_points"] / TOP_ANCHOR * 100)
     _trade_value_cache["list"] = out
     _trade_value_cache["by_id"] = {x["id"]: x for x in out}
     _trade_value_cache["count"] = len(out)

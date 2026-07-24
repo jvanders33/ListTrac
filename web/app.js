@@ -680,6 +680,14 @@ const pickForPoints = pts => {
   for (let i = 0; i < DVI.length; i++) { const d = Math.abs(DVI[i] - pts); if (d < bd) { bd = d; best = i + 1; } }
   return best;
 };
+// express a points bundle as real picks — above pick-1 value, "pick 1 + pick N"
+const picksForPointsStr = pts => {
+  if (!pts || pts <= 0) return "—";
+  const p1 = DVI[0];
+  if (pts <= p1 + 80) return `pick ${pickForPoints(pts)}`;
+  const extra = pts - p1;
+  return extra > p1 ? "pick 1 + pick 1 +" : `pick 1 + pick ${pickForPoints(extra)}`;
+};
 
 /* Map a prospect's tie string to the matching club. A dual tie
    ("Sydney Academy & North Melbourne F/S") resolves to the first listed —
@@ -1338,8 +1346,8 @@ async function tradeMachineView(chrome = "") {
             <tr class="tm-total"><td class="thin">Total draft points</td>
               <td class="num"><b>${B.total.toLocaleString()}</b></td><td class="num"><b>${A.total.toLocaleString()}</b></td></tr>
             <tr><td class="thin">≈ Equivalent pick</td>
-              <td class="num thin">${pickForPoints(B.total) ? "pick " + pickForPoints(B.total) : "—"}</td>
-              <td class="num thin">${pickForPoints(A.total) ? "pick " + pickForPoints(A.total) : "—"}</td></tr>
+              <td class="num thin">${B.total ? picksForPointsStr(B.total) : "—"}</td>
+              <td class="num thin">${A.total ? picksForPointsStr(A.total) : "—"}</td></tr>
             <tr><td class="thin">Net list spots</td>
               <td class="num">${B.chosen.length - A.chosen.length > 0 ? "+" : ""}${B.chosen.length - A.chosen.length}</td>
               <td class="num">${A.chosen.length - B.chosen.length > 0 ? "+" : ""}${A.chosen.length - B.chosen.length}</td></tr>
@@ -2503,7 +2511,7 @@ function tradeValueCard(tv) {
     <div class="tv-headline">
       <div class="tv-num">${tv.value_100 ?? tv.value}${tv.value_100 != null ? `<span class="tv-den">/100</span>` : ""}</div>
       <div class="tv-context">
-        ${tv.equiv_pick != null ? `<span class="tvc"><b>≈ pick ${tv.equiv_pick}</b><small>draft-pick worth</small></span>` : ""}
+        ${tv.equiv_pick_str || tv.equiv_pick != null ? `<span class="tvc"><b>≈ ${esc(tv.equiv_pick_str || ("pick " + tv.equiv_pick))}</b><small>draft-pick worth</small></span>` : ""}
         ${tv.draft_points != null ? `<span class="tvc"><b>${tv.draft_points.toLocaleString()}</b><small>AFL draft points</small></span>` : ""}
         <span class="tvc"><b>${esc(ctr)}</b><small>contract</small></span>
       </div>
