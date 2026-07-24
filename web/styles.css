@@ -470,6 +470,16 @@ footer.pagefoot {
 .rh-rank.rh-easy { background: rgba(30, 107, 79, 0.16); color: var(--ok); }
 .rh-rank.rh-mid { color: var(--ink-2); }
 
+/* state-of-list rank suffix + ranking movers */
+.sol-rk { font-size: 12px; font-weight: 600; color: var(--ink-2); }
+.mv-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 6px; }
+.mv-row { display: grid; grid-template-columns: 1fr auto auto; align-items: baseline; gap: 8px; padding: 4px 0; }
+.mv-row + .mv-row { border-top: 1px solid var(--line); }
+.mv-was { font-size: 11px; }
+.mv-row b { font-variant-numeric: tabular-nums; font-size: 13px; }
+.mv-up { color: var(--ok); }
+.mv-down { color: var(--warn); }
+
 /* depth chart sub-tabs + age x grade matrix */
 .depthtabs { display: flex; gap: 6px; margin: 4px 0 12px; flex-wrap: wrap; }
 .depthtabs button { font: inherit; font-size: 12px; padding: 5px 12px; border-radius: 999px;

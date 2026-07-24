@@ -2102,6 +2102,8 @@ function stateOfListCard(profile) {
   if (!profile || !profile.metrics) return "";
   const m = profile.metrics;
   const tile = (v, label) => `<div class="sol-tile"><b>${v ?? "—"}</b><span>${esc(label)}</span></div>`;
+  const ord = n => !n ? "" : n % 10 === 1 && n % 100 !== 11 ? n + "st" : n % 10 === 2 && n % 100 !== 12 ? n + "nd" : n % 10 === 3 && n % 100 !== 13 ? n + "rd" : n + "th";
+  const rtile = (v, rank, label) => `<div class="sol-tile"><b>${v ?? "—"}${rank ? ` <span class="sol-rk">${ord(rank)}</span>` : ""}</b><span>${esc(label)}</span></div>`;
   return `<div class="card sol">
     <div class="sol-head">
       <div><p class="eyebrow">State of the list</p>
@@ -2109,16 +2111,38 @@ function stateOfListCard(profile) {
       <p class="sol-verdict">${esc(profile.verdict)}</p>
     </div>
     <div class="sol-metrics">
-      ${tile(m.avg_age, "avg age")}
-      ${tile(m.youth_pct + "%", "under 23")}
-      ${tile(m.vet_pct + "%", "30 & over")}
+      ${rtile(m.avg_age, m.avg_age_rank, "avg age")}
+      ${rtile(m.avg_games, m.avg_games_rank, "avg games")}
+      ${tile(m.games_100, "100+ gamers")}
       ${tile(m.aa_calibre, "AA-calibre*")}
       ${tile(m.top100, "top-100 rated")}
-      ${tile(m.avg_rating, "avg rating")}
+      ${tile(m.youth_pct + "%", "under 23")}
       ${tile(m.contracted_pct + "%", "locked past '26")}
       ${tile(m.list_value.toLocaleString(), "list value")}
     </div>
     <p class="thin" style="font-size:11px;margin-top:10px">*AA-calibre = players inside the AFL top 40 by Player Rating.${m.top_scorer ? ` Leading scorer: <a href="#/player/${m.top_scorer.id}">${esc(m.top_scorer.name)}</a> (${m.top_scorer.avg}/gm).` : ""}</p>
+  </div>`;
+}
+
+/* Ranking movers — biggest year-on-year climbs and falls in AFL Player Rating
+   rank, the list-manager's "who's trending" read. Positive = climbed. */
+function rankMoversCard(list) {
+  const moved = list.filter(p => p.rank_delta != null && Math.abs(p.rank_delta) >= 10);
+  if (moved.length < 3) return "";
+  const up = [...moved].sort((a, b) => b.rank_delta - a.rank_delta).slice(0, 5);
+  const down = [...moved].sort((a, b) => a.rank_delta - b.rank_delta).slice(0, 5);
+  const row = (p, cls) => `<div class="mv-row">
+    <a href="#/player/${p.id}">${esc(p.last_name)}</a>
+    <span class="thin">${p.rating_rank ? "#" + p.rating_rank : ""}${p.rank_prev ? ` <span class="mv-was">was #${p.rank_prev}</span>` : ""}</span>
+    <b class="${cls}">${p.rank_delta > 0 ? "▲ " + p.rank_delta : "▼ " + Math.abs(p.rank_delta)}</b>
+  </div>`;
+  return `<div class="card">
+    <h3>Ranking movers <span class="thin" style="font-weight:400">· ${SEASON_YEAR - 1} → ${SEASON_YEAR}</span></h3>
+    <p class="sub">Biggest year-on-year shifts in AFL Player Rating rank — who's on the rise, and who's slipped (injury or form).</p>
+    <div class="mv-cols">
+      <div><p class="eyebrow">Risers</p>${up.map(p => row(p, "mv-up")).join("")}</div>
+      <div><p class="eyebrow">Fallers</p>${down.map(p => row(p, "mv-down")).join("")}</div>
+    </div>
   </div>`;
 }
 
@@ -2260,16 +2284,18 @@ function gradeMatrixHTML(list) {
         return `<td class="gm-cell">${ps.map(depthChip).join("") || `<span class="gm-empty">—</span>`}</td>`;
       }).join("")}
     </tr>`).join("");
-  const earlySorted = [...early].sort(byRatingDesc);
+  const cohort = yr => early.filter(p => p.draft_year === yr).sort(byRatingDesc);
+  const firstYr = cohort(SEASON_YEAR - 1), secondYr = cohort(SEASON_YEAR - 2);
+  const cohortRow = (ps, label, note) => ps.length ? `<tr class="gm-early">
+    <th class="gm-grade"><b>${label}</b><span>${note}</span></th>
+    <td class="gm-cell" colspan="${AGE_BANDS.length}">${ps.map(depthChip).join("")}</td></tr>` : "";
   return `<p class="sub">The planning grid: performance grade down, age across. Grade is the player's AFL Player Rating band across the league — A grade is elite (top 45), then above average, average and replacement level. First- and second-year players sit apart, since they haven't had a fair run at a rating yet.</p>
     <div class="tablewrap"><table class="gradematrix">
       <thead><tr><th></th>${AGE_BANDS.map(([b]) => `<th class="num">${b}</th>`).join("")}</tr></thead>
       <tbody>
         ${rows}
-        ${earlySorted.length ? `<tr class="gm-early">
-          <th class="gm-grade"><b>1st &amp; 2nd year</b><span>Yet to be graded</span></th>
-          <td class="gm-cell" colspan="${AGE_BANDS.length}">${earlySorted.map(depthChip).join("")}</td>
-        </tr>` : ""}
+        ${cohortRow(secondYr, "2nd year", "Developing")}
+        ${cohortRow(firstYr, "1st year", "Yet to be graded")}
       </tbody>
     </table></div>`;
 }
@@ -2360,6 +2386,7 @@ async function clubView(abbrev) {
       <div class="tile r"><p class="eyebrow">Free agents</p><b>${n("restricted_fa") + n("unrestricted_fa")}</b><span>${n("restricted_fa")} restricted · ${n("unrestricted_fa")} unrestricted</span></div>
     </div>
     ${stateOfListCard(profile)}
+    ${rankMoversCard(list)}
     ${ratingLeadersCard(info)}
     ${honourRollCard(info)}
     <div class="viewtoggle" role="tablist" aria-label="Club view">

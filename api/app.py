@@ -169,6 +169,53 @@ def _list_phase(elite, top100, avg_age, youth_pct, vet_pct):
     return _LIST_PHASE[(tier, age)]
 
 
+_prev_ranks_cache: dict = {}
+_league_stats_cache: dict = {}
+
+
+def _prev_ranks() -> dict:
+    """norm name -> AFL Player Rating rank in the previous season, for year-on-
+    year movers."""
+    if not _prev_ranks_cache:
+        hist = _load_history()
+        for r in hist.get("by_season", {}).get(str(CURRENT_YEAR - 1), []):
+            _prev_ranks_cache[_norm(r["name"])] = r.get("rank")
+    return _prev_ranks_cache
+
+
+def _league_stats() -> dict:
+    """Per-club average age and games, with league ranks (1 = oldest / most
+    experienced), so a club header can read '24.7 (7th)'. Cached."""
+    if not _league_stats_cache:
+        cv = _career_value()
+        clubs: dict[str, dict] = {}
+        with db() as conn:
+            for r in conn.execute(
+                    """SELECT c.abbreviation club, p.first_name, p.last_name, p.dob
+                       FROM player p JOIN club c ON c.id = p.current_club_id
+                       WHERE p.status = 'listed'"""):
+                d = clubs.setdefault(r["club"], {"ages": [], "games": []})
+                a = _age_2026(r["dob"])
+                if a:
+                    d["ages"].append(a)
+                g = (cv.get(_norm(f"{r['first_name']} {r['last_name']}")) or {}).get("games")
+                if g:
+                    d["games"].append(g)
+        per = {}
+        for club, d in clubs.items():
+            per[club] = {
+                "avg_age": round(sum(d["ages"]) / len(d["ages"]), 1) if d["ages"] else None,
+                "avg_games": round(sum(d["games"]) / len(d["games"])) if d["games"] else None,
+            }
+        for metric in ("avg_age", "avg_games"):
+            order = sorted((c for c in per if per[c][metric] is not None),
+                           key=lambda c: -per[c][metric])
+            for i, c in enumerate(order):
+                per[c][f"{metric}_rank"] = i + 1
+        _league_stats_cache.update(per)
+    return _league_stats_cache
+
+
 @app.get("/api/club-profile")
 def club_profile(abbrev: str):
     """"State of the list" — talent (elite/rated players), age profile, contract
@@ -185,14 +232,20 @@ def club_profile(abbrev: str):
     if not players:
         raise HTTPException(404, f"no listed players for club '{abbrev}'")
 
-    ages, ratings = [], []
-    elite = top100 = contracted = list_value = goalkickers = 0
+    cv = _career_value()
+    ages, ratings, gameslist = [], [], []
+    elite = top100 = contracted = list_value = goalkickers = games_100 = 0
     top_scorer = None
     for r in players:
         nm = _norm(f"{r['first_name']} {r['last_name']}")
         a = _age_2026(r["dob"])
         if a:
             ages.append(a)
+        g = (cv.get(nm) or {}).get("games")
+        if g:
+            gameslist.append(g)
+            if g >= 100:
+                games_100 += 1
         rr = rb.get(nm)
         if rr and rr.get("rating"):
             ratings.append(rr["rating"])
@@ -222,11 +275,15 @@ def club_profile(abbrev: str):
     youth_pct = round(sum(1 for a in ages if a < 23) / n * 100)
     vet_pct = round(sum(1 for a in ages if a >= 30) / n * 100)
     avg_rating = round(sum(ratings) / len(ratings), 1) if ratings else None
+    avg_games = round(sum(gameslist) / len(gameslist)) if gameslist else None
+    ls = _league_stats().get(key, {})
     phase, cls, verdict = _list_phase(elite, top100, avg_age, youth_pct, vet_pct)
     return {
         "phase": phase, "phase_class": cls, "verdict": verdict,
         "metrics": {
-            "list_size": n, "avg_age": avg_age, "youth_pct": youth_pct, "vet_pct": vet_pct,
+            "list_size": n, "avg_age": avg_age, "avg_age_rank": ls.get("avg_age_rank"),
+            "youth_pct": youth_pct, "vet_pct": vet_pct,
+            "avg_games": avg_games, "avg_games_rank": ls.get("avg_games_rank"), "games_100": games_100,
             "aa_calibre": elite, "top100": top100, "avg_rating": avg_rating,
             "contracted_pct": round(contracted / n * 100), "list_value": list_value,
             "goalkickers": goalkickers, "top_scorer": top_scorer,
@@ -259,6 +316,10 @@ def club_list(abbrev: str):
         r["position"] = rr.get("position") if rr else None
         r["rating"] = rr.get("rating") if rr else None
         r["rating_rank"] = rr.get("rank") if rr else None
+        prev = _prev_ranks().get(nm)
+        r["rank_prev"] = prev
+        # positive = climbed the ratings (rank number fell) since last season
+        r["rank_delta"] = (prev - rr["rank"]) if (rr and rr.get("rank") and prev) else None
         q = _quality_rank().get(nm)
         r["rating_per_game"] = q["per_game"] if q else None
         r["quality_rank"] = q["rank"] if q else None
