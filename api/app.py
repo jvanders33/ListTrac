@@ -660,6 +660,76 @@ def draft_order():
         raise HTTPException(503, "Squiggle ladder unavailable")
 
 
+@app.get("/api/run-home")
+def run_home():
+    """Every club's run home: the games left, who they meet, where, and how hard
+    that shapes up against the rest of the league. Live Squiggle fixture +
+    ladder; difficulty is the average ladder position of remaining opponents
+    (adjusted for home-ground advantage), then ranked 1 = hardest. Cached."""
+    def build():
+        ua = {"User-Agent": "ListTrac (github.com/jvanders33/ListTrac)"}
+        games = requests.get(SQUIGGLE, params={"q": "games", "year": CURRENT_YEAR},
+                             headers=ua, timeout=15).json()["games"]
+        standings = requests.get(SQUIGGLE, params={"q": "standings", "year": CURRENT_YEAR},
+                                 headers=ua, timeout=15).json()["standings"]
+        with db() as conn:
+            to_abbr = {r["name"]: r["abbreviation"] for r in conn.execute(
+                "SELECT name, abbreviation FROM club")}
+
+        def abbr(sq_name):
+            return to_abbr.get(SQUIGGLE_ALIASES.get(sq_name, sq_name), sq_name)
+
+        table = {}
+        for t in standings:
+            table[abbr(t["name"])] = {
+                "rank": t["rank"], "wins": t["wins"], "losses": t["losses"],
+                "percentage": round(t.get("percentage") or 0, 1)}
+
+        clubs = {a: {**table.get(a, {}), "fixture": []} for a in table}
+        remaining = [g for g in games if (g.get("complete") or 0) < 100]
+        for g in remaining:
+            h, a = abbr(g.get("hteam")), abbr(g.get("ateam"))
+            for team, opp, home in ((h, a, True), (a, h, False)):
+                if team not in clubs:
+                    continue
+                clubs[team]["fixture"].append({
+                    "round": g.get("round"), "roundname": g.get("roundname"),
+                    "opponent": opp, "home": home, "venue": g.get("venue"),
+                    "date": g.get("date"),
+                    "opp_rank": (table.get(opp) or {}).get("rank"),
+                    "opp_percentage": (table.get(opp) or {}).get("percentage"),
+                })
+
+        for a, c in clubs.items():
+            fx = sorted(c["fixture"], key=lambda x: (x["round"] or 0))
+            c["fixture"] = fx
+            ranks = [x["opp_rank"] for x in fx if x["opp_rank"]]
+            c["games_left"] = len(fx)
+            c["home"] = sum(1 for x in fx if x["home"])
+            c["away"] = len(fx) - c["home"]
+            c["vs_top8"] = sum(1 for x in fx if (x["opp_rank"] or 99) <= 8)
+            c["avg_opp_rank"] = round(sum(ranks) / len(ranks), 1) if ranks else None
+            # difficulty: mean opponent ladder position, nudged by venue. Lower =
+            # harder, so a home game counts as facing a side ~1.5 places weaker
+            # and an away game ~1.5 places stronger.
+            adj = [(x["opp_rank"] or 10) + (1.5 if x["home"] else -1.5) for x in fx if x["opp_rank"]]
+            c["difficulty_score"] = round(sum(adj) / len(adj), 2) if adj else None
+        ranked = sorted([c for c in clubs.values() if c.get("difficulty_score") is not None],
+                        key=lambda c: c["difficulty_score"])
+        for i, c in enumerate(ranked):
+            c["difficulty_rank"] = i + 1          # 1 = hardest run home
+        return {"year": CURRENT_YEAR, "games_remaining": len(remaining),
+                "round_from": min((g.get("round") or 0) for g in remaining) if remaining else None,
+                "clubs_ranked": len(ranked),
+                "source": "api.squiggle.com.au",
+                "method": "Remaining fixture and ladder from Squiggle. Difficulty = mean ladder position of remaining opponents, adjusted 1.5 places for home/away; ranked 1 = hardest.",
+                "clubs": clubs}
+    try:
+        return cached("run_home", 1800, build)
+    except requests.RequestException:
+        raise HTTPException(503, "Squiggle fixture unavailable")
+
+
 @app.get("/api/player-news")
 def player_news(name: str):
     """Movement news for one player: Google News RSS scoped to their name +

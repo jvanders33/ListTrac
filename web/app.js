@@ -2203,6 +2203,44 @@ function gradeMatrixHTML(list) {
     </table></div>`;
 }
 
+/* Run home — the games a club has left, who they meet, where, and how that
+   shapes up against the rest of the league. Ladder position of each opponent
+   colours the row, so a brutal finish or a soft draw reads at a glance. */
+function runHomeHTML(rh, abbrev) {
+  if (!rh || !rh.clubs || !rh.clubs[abbrev]) {
+    return `<div class="card"><h3>Run home</h3><p class="thin">No games remaining — the home-and-away season is done.</p></div>`;
+  }
+  const c = rh.clubs[abbrev];
+  if (!c.fixture || !c.fixture.length) {
+    return `<div class="card"><h3>Run home</h3><p class="thin">No games left for ${esc(abbrev)}.</p></div>`;
+  }
+  const ord = n => n === 1 ? "1st" : n === 2 ? "2nd" : n === 3 ? "3rd" : `${n}th`;
+  const oppCls = r => !r ? "" : r <= 8 ? "rh-hard" : r >= 13 ? "rh-easy" : "rh-mid";
+  return `<div class="card">
+    <h3>Run home <span class="thin" style="font-weight:400">· ${c.games_left} game${c.games_left === 1 ? "" : "s"} left</span></h3>
+    <p class="sub">Who's left, where, and how it compares. Opponents inside the eight are flagged red, bottom-six sides green — difficulty weighs ladder position and home-ground advantage.</p>
+    <div class="rh-summary">
+      <div class="rh-stat"><b>${c.difficulty_rank ? ord(c.difficulty_rank) : "—"}</b><small>hardest run home</small></div>
+      <div class="rh-stat"><b>${c.avg_opp_rank ?? "—"}</b><small>avg opponent ladder</small></div>
+      <div class="rh-stat"><b>${c.vs_top8}</b><small>games vs top 8</small></div>
+      <div class="rh-stat"><b>${c.home}<span class="thin">H</span> ${c.away}<span class="thin">A</span></b><small>home / away</small></div>
+    </div>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Rd</th><th>Opponent</th><th></th><th class="num">Ladder</th><th>Venue</th></tr></thead>
+      <tbody>${c.fixture.map(g => `
+        <tr>
+          <td class="num thin">${g.round ?? ""}</td>
+          <td>${clubTag(g.opponent, g.opponent)}</td>
+          <td class="thin">${g.home ? "vs" : "at"}</td>
+          <td class="num"><span class="rh-rank ${oppCls(g.opp_rank)}">${g.opp_rank ? "#" + g.opp_rank : "—"}</span></td>
+          <td class="thin">${esc(g.venue || "")}</td>
+        </tr>`).join("")}
+      </tbody>
+    </table></div>
+    <p class="thin" style="font-size:11px;margin-top:8px">Ladder position at ${esc(String(rh.year))} round ${rh.round_from ?? ""}. Fixture &amp; ladder via Squiggle.</p>
+  </div>`;
+}
+
 function depthChartHTML(list) {
   const tab = (m, label) => `<button data-depth="${m}" class="${depthMode === m ? "on" : ""}" role="tab" aria-selected="${depthMode === m}">${label}</button>`;
   const body = depthMode === "age" ? ageDepthHTML(list)
@@ -2219,11 +2257,12 @@ function depthChartHTML(list) {
 }
 
 async function clubView(abbrev) {
-  const [list, socials, info, profile] = await Promise.all([
+  const [list, socials, info, profile, runHome] = await Promise.all([
     api(`/clubs/${encodeURIComponent(abbrev)}/list`),
     api(`/api/club-socials?abbrev=${encodeURIComponent(abbrev)}`).catch(() => ({})),
     api(`/api/club-info?abbrev=${encodeURIComponent(abbrev)}`).catch(() => ({})),
     api(`/api/club-profile?abbrev=${encodeURIComponent(abbrev)}`).catch(() => null),
+    api("/api/run-home").catch(() => null),
   ]);
   const first = list[0];
   const n = k => list.filter(p => p.contract_status === k).length;
@@ -2232,6 +2271,7 @@ async function clubView(abbrev) {
     (a.jumper_number ?? 99) - (b.jumper_number ?? 99));
   const renderBody = () => clubViewMode === "grid" ? contractGridHTML(list)
     : clubViewMode === "depth" ? depthChartHTML(list)
+    : clubViewMode === "runhome" ? runHomeHTML(runHome, (abbrev || "").toUpperCase())
     : clubListHTML(sorted, first);
   view.innerHTML = `
     <div class="clubhead">
@@ -2254,6 +2294,7 @@ async function clubView(abbrev) {
     <div class="viewtoggle" role="tablist" aria-label="Club view">
       <button data-mode="list" role="tab">List</button>
       <button data-mode="depth" role="tab">Depth chart</button>
+      <button data-mode="runhome" role="tab">Run home</button>
       <button data-mode="grid" role="tab">Contract grid</button>
     </div>
     <div id="clubbody">${renderBody()}</div>`;
