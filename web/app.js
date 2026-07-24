@@ -672,6 +672,14 @@ const DVI = [3000, 2481, 2178, 1962, 1795, 1659, 1543, 1443, 1355, 1276, 1205, 1
   479, 454, 429, 405, 382, 360, 338, 317, 297, 277, 257, 238, 220, 202, 184, 167,
   150, 134, 118, 102, 86, 71, 57, 42, 28, 14];
 const dvi = n => (n >= 1 && n <= DVI.length) ? DVI[n - 1] : 0;
+// inverse: the draft pick whose DVI value is closest to a points figure — lets
+// the trade machine express any bundle of value as "≈ pick N"
+const pickForPoints = pts => {
+  if (!pts || pts <= 0) return null;
+  let best = 1, bd = Infinity;
+  for (let i = 0; i < DVI.length; i++) { const d = Math.abs(DVI[i] - pts); if (d < bd) { bd = d; best = i + 1; } }
+  return best;
+};
 
 /* Map a prospect's tie string to the matching club. A dual tie
    ("Sydney Academy & North Melbourne F/S") resolves to the first listed —
@@ -1256,7 +1264,8 @@ async function tradeMachineView(chrome = "") {
       const chosen = s.list.filter(p => st.players.includes(p.id));
       const picks = tmPicks(st.club, order).filter(p => st.picks.includes(p.id));
       const points = picks.reduce((t, p) => t + (p.dvi || 0), 0);
-      const playerVal = chosen.reduce((t, p) => t + (p.trade_value || 0), 0);
+      // players valued in AFL draft points too, so players + picks share one currency
+      const playerVal = chosen.reduce((t, p) => t + (p.trade_points || 0), 0);
       const warnings = chosen.map(statusWarn).filter(Boolean);
       return { ...s, st, info, chosen, picks, points, playerVal, total: points + playerVal, warnings };
     });
@@ -1264,10 +1273,11 @@ async function tradeMachineView(chrome = "") {
     const [A, B] = sideData;
     const diff = A.total - B.total;
     const anyAssets = A.chosen.length + A.picks.length + B.chosen.length + B.picks.length > 0;
-    const tol = Math.max(350, Math.max(A.total, B.total) * 0.1);
+    const tol = Math.max(250, Math.max(A.total, B.total) * 0.08);
+    const gapPick = pickForPoints(Math.abs(diff));
     const verdict = !anyAssets ? "" :
-      Math.abs(diff) <= tol ? "Roughly even value both ways — a fair deal on paper."
-      : `${(diff > 0 ? A : B).info.name} gives up ${Math.abs(diff)} more in combined value (players + picks) — they'd want more coming back.`;
+      Math.abs(diff) <= tol ? "Roughly even both ways — a fair deal on paper."
+      : `${(diff > 0 ? A : B).info.name} gives up about ${Math.abs(diff).toLocaleString()} draft points more${gapPick ? ` — roughly a pick ${gapPick} — ` : " "}than they get back. They'd want the balance made up.`;
 
     const sideHTML = s => `
       <div class="card tm-side">
@@ -1284,7 +1294,7 @@ async function tradeMachineView(chrome = "") {
               <input type="checkbox" data-side="${s.key}" data-kind="players" data-id="${p.id}"
                 ${s.st.players.includes(p.id) ? "checked" : ""}>
               <span><b>${esc(p.first_name)} ${esc(p.last_name)}</b>
-                <span class="thin">${age(p.dob)}yo${p.trade_value ? ` · ${p.trade_value} TV` : ""}${p.contract_status && p.contract_status !== "contracted" ? " · " : ""}</span>
+                <span class="thin">${age(p.dob)}yo${p.value_100 != null ? ` · ${p.value_100} TV${p.equiv_pick != null ? ` ≈ pk${p.equiv_pick}` : ""}` : ""}${p.contract_status && p.contract_status !== "contracted" ? " · " : ""}</span>
                 ${p.contract_status && p.contract_status !== "contracted" ? chip(p.contract_status) : ""}</span>
             </label>`).join("")}
         </div>
@@ -1321,18 +1331,21 @@ async function tradeMachineView(chrome = "") {
             <tr><td class="thin">Picks</td>
               <td>${B.picks.map(p => esc(p.label)).join(", ") || "—"}</td>
               <td>${A.picks.map(p => esc(p.label)).join(", ") || "—"}</td></tr>
-            <tr><td class="thin">Player value</td>
-              <td class="num">${B.playerVal || "—"}</td><td class="num">${A.playerVal || "—"}</td></tr>
+            <tr><td class="thin">Player points</td>
+              <td class="num">${B.playerVal ? B.playerVal.toLocaleString() : "—"}</td><td class="num">${A.playerVal ? A.playerVal.toLocaleString() : "—"}</td></tr>
             <tr><td class="thin">Pick points</td>
-              <td class="num">${B.points || "—"}</td><td class="num">${A.points || "—"}</td></tr>
-            <tr class="tm-total"><td class="thin">Total value</td>
-              <td class="num"><b>${B.total}</b></td><td class="num"><b>${A.total}</b></td></tr>
+              <td class="num">${B.points ? B.points.toLocaleString() : "—"}</td><td class="num">${A.points ? A.points.toLocaleString() : "—"}</td></tr>
+            <tr class="tm-total"><td class="thin">Total draft points</td>
+              <td class="num"><b>${B.total.toLocaleString()}</b></td><td class="num"><b>${A.total.toLocaleString()}</b></td></tr>
+            <tr><td class="thin">≈ Equivalent pick</td>
+              <td class="num thin">${pickForPoints(B.total) ? "pick " + pickForPoints(B.total) : "—"}</td>
+              <td class="num thin">${pickForPoints(A.total) ? "pick " + pickForPoints(A.total) : "—"}</td></tr>
             <tr><td class="thin">Net list spots</td>
               <td class="num">${B.chosen.length - A.chosen.length > 0 ? "+" : ""}${B.chosen.length - A.chosen.length}</td>
               <td class="num">${A.chosen.length - B.chosen.length > 0 ? "+" : ""}${A.chosen.length - B.chosen.length}</td></tr>
           </tbody>
         </table></div>
-        <p class="thin" style="font-size:11.5px;margin-top:6px">Player value = ListTrac Trade Value Index (rating × age × contract); pick points = AFL Draft Value Index. Same currency, so they add up.</p>
+        <p class="thin" style="font-size:11.5px;margin-top:6px">Both sides are priced in the <b>AFL Draft Value Index</b> — the league's own points-per-pick curve. Players are converted to the same points scale from their ListTrac Trade Value (rating × age × contract), so players and picks add up in one currency, the way NFL and NBA trade calculators work.</p>
         <p class="sub" style="margin-top:12px">${esc(verdict)}</p>
         ${[...A.warnings, ...B.warnings].map(w => `<p class="tm-warn">⚠ ${esc(w)}</p>`).join("")}
         ` : `<p class="thin">Select players and picks on each side to build a trade.</p>`}

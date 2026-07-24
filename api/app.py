@@ -264,6 +264,11 @@ def club_list(abbrev: str):
         r["quality_rank"] = q["rank"] if q else None
         tv = _trade_value_board().get("by_id", {}).get(r["id"])
         r["trade_value"] = tv.get("value") if tv else None
+        # trade value expressed in the AFL Draft Value Index (points), so the
+        # trade machine can weigh players and picks in one currency
+        r["trade_points"] = tv.get("draft_points") if tv else None
+        r["value_100"] = tv.get("value_100") if tv else None
+        r["equiv_pick"] = tv.get("equiv_pick") if tv else None
     return result
 
 
