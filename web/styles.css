@@ -654,6 +654,8 @@ footer.pagefoot {
 /* trade value card */
 .tv-headline { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
 .tv-num { font-size: 46px; font-weight: 800; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.tv-den { font-size: 20px; font-weight: 700; color: var(--ink-2); }
+.ltr { color: var(--accent); font-variant-numeric: tabular-nums; }
 .tv-context { display: flex; align-items: stretch; gap: 8px; flex-wrap: wrap; }
 .tvc { display: inline-flex; flex-direction: column; align-items: center; background: var(--card-2); border-radius: 8px; padding: 6px 12px; }
 .tvc b { font-size: 17px; font-variant-numeric: tabular-nums; }

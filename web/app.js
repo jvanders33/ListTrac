@@ -1875,14 +1875,16 @@ async function rankingsView() {
       </div>
       <p class="sub" style="margin-top:10px">${esc(data.attribution)} — top ${data.ratings.length} of ${data.count} rated players, ${data.year}.</p>
       <div class="tablewrap"><table>
-        <thead><tr><th class="num">Rank</th><th>Player</th><th>Club</th><th class="num">Games</th><th class="num">Rating</th></tr></thead>
+        <thead><tr><th class="num">Rank</th><th>Player</th><th>Club</th><th class="num">Games</th><th class="num" title="ListTrac Rating: the AFL Player Rating on a 0-100 scale">LTR</th><th class="num" title="Official AFL Player Rating (Champion Data)">Rating</th></tr></thead>
         <tbody>${data.ratings.map(r => `
           <tr><td class="num"><b>${r.rank ?? "—"}</b></td>
             <td>${r.player_id ? `<a href="#/player/${r.player_id}">${esc(r.name)}</a>` : esc(r.name)}</td>
             <td>${teamTag(r.team)}</td><td class="num">${r.games ?? ""}</td>
-            <td class="num"><b>${r.rating}</b></td></tr>`).join("")}
+            <td class="num">${r.ltr != null ? `<b class="ltr">${r.ltr}</b>` : "—"}</td>
+            <td class="num thin">${r.rating}</td></tr>`).join("")}
         </tbody>
       </table></div>
+      <p class="thin" style="font-size:11px;margin-top:6px"><b>LTR</b> — ListTrac Rating: the official AFL Player Rating rescaled to a 0–100 index (competition best ≈ 99). The raw rating is kept alongside.</p>
       `;
     document.getElementById("ratingsyear").addEventListener("change", e => loadRatings(+e.target.value));
   }).catch(() => {
@@ -2486,14 +2488,14 @@ function tradeValueCard(tv) {
   return `<div class="card tradeval">
     <h3>Trade value <span class="thin" style="font-weight:400">· #${tv.rank} in the AFL</span></h3>
     <div class="tv-headline">
-      <div class="tv-num">${tv.value}</div>
+      <div class="tv-num">${tv.value_100 ?? tv.value}${tv.value_100 != null ? `<span class="tv-den">/100</span>` : ""}</div>
       <div class="tv-context">
-        <span class="tvc"><b>${tv.rating}</b><small>player rating</small></span>
-        <span class="tvc"><b>${tv.age ?? "?"}</b><small>years old</small></span>
+        ${tv.equiv_pick != null ? `<span class="tvc"><b>≈ pick ${tv.equiv_pick}</b><small>draft-pick worth</small></span>` : ""}
+        ${tv.draft_points != null ? `<span class="tvc"><b>${tv.draft_points.toLocaleString()}</b><small>AFL draft points</small></span>` : ""}
         <span class="tvc"><b>${esc(ctr)}</b><small>contract</small></span>
       </div>
     </div>
-    <p class="sub" style="margin:8px 0 0">ListTrac's index of a player's worth as a trade asset — form weighed against age and contract control. <a href="#/players/trade-values">See the full board →</a></p>
+    <p class="sub" style="margin:8px 0 0">A player's worth as a trade asset, priced in the AFL's own draft-pick currency — form weighed against age and contract control. <a href="#/players/trade-values">See the full board →</a></p>
   </div>`;
 }
 /* Role archetype + similar players. The role is ListTrac's read of how a player
@@ -2681,7 +2683,7 @@ async function playerView(id) {
         <p class="club-line">${p.club ? `${guernsey(p.club_abbrev, 20)}<a href="#/club/${esc(p.club_abbrev)}">${esc(p.club)}</a>` : "Unattached"}</p>
         <h2>${esc(p.first_name)} ${esc(p.last_name)}</h2>
         <p class="statusline">${current ? chip(current.status) : ""}${p.rating ? `
-          <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Player Rating #${p.rating.rank} · ${p.rating.rating}</span>` : ""}${p.fantasy ? `
+          <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff" title="ListTrac Rating (AFL Player Rating #${p.rating.rank} · ${p.rating.rating} on a 0–100 scale)">${p.rating.ltr != null ? `${p.rating.ltr}<span style="opacity:.7">/100</span> · ` : ""}Rating #${p.rating.rank}</span>` : ""}${p.fantasy ? `
           <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Fantasy avg ${p.fantasy.af_avg}</span>` : ""}${p.role ? `
           <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff" title="ListTrac's read of playing role">${esc(p.role.role_label)}${p.role.secondary_label ? ` / ${esc(p.role.secondary_label)}` : ""}</span>` : ""}${p.brownlow && p.brownlow.rank <= 40 ? `
           <a href="#/players/brownlow" class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff;text-decoration:none" title="ListTrac Brownlow projection">🏅 Brownlow ${p.brownlow.rank <= 3 ? ["1st","2nd","3rd"][p.brownlow.rank-1] : "#" + p.brownlow.rank} · ${p.brownlow.votes}v</a>` : ""}</p>
@@ -3249,15 +3251,15 @@ async function tradeValueView() {
       <h3>Trade Value Index <span class="thin" style="font-weight:400">· ${data.count} rated players</span></h3>
       <p class="sub">Our estimate of each player as a trade asset — current AFL Player Rating adjusted for age and contract control. No dollars (the AFL doesn't disclose them); this is about who's worth most to prise loose.</p>
       <div class="tablewrap"><table>
-        <thead><tr><th class="num">#</th><th>Player</th><th>Club</th><th class="num">Age</th><th>Contract</th><th class="num">Rating</th><th class="num">Value</th></tr></thead>
+        <thead><tr><th class="num">#</th><th>Player</th><th>Club</th><th class="num">Age</th><th>Contract</th><th class="num" title="Equivalent draft pick by AFL Draft Value Index">≈ Pick</th><th class="num" title="Trade value on a 0-100 scale">Value</th></tr></thead>
         <tbody>${data.players.map(x => `
           <tr><td class="num thin">${x.rank}</td>
             <td><a href="#/player/${x.id}">${esc(x.name)}</a></td>
             <td>${clubTag(x.club, x.club)}</td>
             <td class="num">${x.age ?? ""}</td>
             <td>${chip(x.status)}${x.status === "contracted" ? ` <span class="thin">${x.years_left}yr</span>` : ""}</td>
-            <td class="num">${x.rating}</td>
-            <td class="num"><b>${x.value}</b></td></tr>`).join("")}
+            <td class="num thin">${x.equiv_pick != null ? "≈" + x.equiv_pick : "—"}</td>
+            <td class="num"><b class="ltr">${x.value_100 ?? x.value}</b></td></tr>`).join("")}
         </tbody>
       </table></div>
       <details class="methodology">

@@ -322,7 +322,11 @@ def player(player_id: int):
         rep = o.get("reporter")
         cur["source_note"] = f"Re-signed — {rep} (supersedes earlier status)" if rep else "Re-signed (supersedes earlier status)"
     rating = _ratings_by_name().get(key)
-    profile["rating"] = {"rank": rating["rank"], "rating": rating["rating"]} if rating else None
+    q = _quality_rank().get(key)
+    lo, hi = _current_rating_bounds()
+    profile["rating"] = {"rank": rating["rank"], "rating": rating["rating"],
+                         "ltr": _ltr(rating["rating"], lo, hi),
+                         "per_game": (q or {}).get("per_game")} if rating else None
     fant = _fantasy_index().get(key)
     profile["fantasy"] = {"af_avg": fant["af_avg"], "position": fant.get("position")} if fant else None
     scout = _scouting_index()
@@ -1135,6 +1139,66 @@ def _quality_rank() -> dict:
     return _quality_cache
 
 
+def _ltr(rating, lo, hi):
+    """ListTrac Rating /100: the official AFL Player Rating rescaled into a
+    familiar 60-99 "video-game" band — the competition's best ≈ 99. Scaled by
+    rating value (not rank) so the elite keep real separation, and monotonic with
+    the rating, so it never contradicts the order. A display lens, not a model.
+    lo/hi bound the field; lo is a robust floor so one low outlier can't skew it."""
+    if rating is None or hi is None or hi <= lo:
+        return None
+    v = max(0.0, min(1.0, (rating - lo) / (hi - lo)))
+    return round(60 + v * 39)
+
+
+def _rating_bounds(values):
+    """(lo, hi) for the LTR scale: hi = the best rating, lo = the 5th-percentile
+    rating (robust to a single fringe player dragging the floor down)."""
+    xs = sorted(v for v in values if v is not None)
+    if not xs:
+        return (0.0, 1.0)
+    lo = xs[max(0, int(len(xs) * 0.05))]
+    return (lo, xs[-1])
+
+
+_cur_bounds_cache: list = []
+
+
+def _current_rating_bounds():
+    if not _cur_bounds_cache:
+        _cur_bounds_cache.append(_rating_bounds([r["rating"] for r in _ratings_by_name().values()]))
+    return _cur_bounds_cache[0]
+
+
+# AFL Draft Value Index — the league's official points-per-pick curve (the same
+# currency clubs match in academy/father-son bids). Used to price trade value in
+# draft picks, the way the NFL (Jimmy Johnson chart) and NBA value trades.
+AFL_DVI = [
+    3000, 2517, 2234, 2034, 1878, 1751, 1644, 1551, 1469, 1395,
+    1329, 1268, 1213, 1162, 1114, 1070, 1029, 990, 954, 920,
+    887, 857, 827, 800, 773, 748, 723, 700, 678, 656,
+    635, 616, 596, 578, 560, 543, 526, 510, 495, 480,
+    465, 451, 437, 424, 411, 398, 386, 374, 362, 351,
+    340, 329, 319, 309, 299, 289, 280, 271, 262, 253,
+    245, 236, 228, 221, 213, 206, 198, 191, 185, 178,
+    171, 165, 159, 153,
+]
+
+
+def _pick_points(pick: int) -> float:
+    return AFL_DVI[pick - 1] if 1 <= pick <= len(AFL_DVI) else (140.0 if pick > 0 else 0.0)
+
+
+def _points_to_pick(points: float) -> int:
+    """The draft pick whose DVI value is closest to `points` (a 'worth ~pick N')."""
+    best, bestd = 1, 1e18
+    for i, v in enumerate(AFL_DVI):
+        d = abs(v - points)
+        if d < bestd:
+            bestd, best = d, i + 1
+    return best
+
+
 CONTRACTS_PATH = Path(__file__).resolve().parent.parent / "data" / "contracts.json"
 CONTRACTS_MANUAL_PATH = Path(__file__).resolve().parent.parent / "data" / "contracts_manual.json"
 _contracts_cache: dict = {}
@@ -1391,8 +1455,15 @@ def _trade_value_board() -> dict:
                 "value": round(rr["rating"] * af * cf),
             })
     out.sort(key=lambda x: -x["value"])
+    # price trade value in the AFL Draft Value Index: the #1 asset ~ pick 1
+    # (3000 pts), everyone scaled proportionally, then expressed as an equivalent
+    # pick and a /100 index. Model output unchanged — just made legible.
+    top = out[0]["value"] if out else 1
     for i, x in enumerate(out):
         x["rank"] = i + 1
+        x["draft_points"] = round(x["value"] / top * 3000)
+        x["equiv_pick"] = _points_to_pick(x["draft_points"])
+        x["value_100"] = round(x["value"] / top * 100)
     _trade_value_cache["list"] = out
     _trade_value_cache["by_id"] = {x["id"]: x for x in out}
     _trade_value_cache["count"] = len(out)
@@ -1525,7 +1596,9 @@ def ratings(limit: int = 100, club: str | None = None, year: int | None = None):
 
     if club:
         rows = [r for r in rows if r["team"].upper() == club.upper()]
-    rows = [{**r, "player_id": pid.get(_norm(r["name"]))} for r in rows[:limit]]
+    lo, hi = _rating_bounds([r.get("rating") for r in rows])
+    rows = [{**r, "player_id": pid.get(_norm(r["name"])), "ltr": _ltr(r.get("rating"), lo, hi)}
+            for r in rows[:limit]]
     return {"year": year, "attribution": attribution, "source_url": source_url,
             "years": _load_history().get("years", [CURRENT_YEAR]) or [CURRENT_YEAR],
             "count": total, "ratings": rows}
