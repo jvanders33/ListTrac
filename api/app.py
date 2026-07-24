@@ -858,6 +858,122 @@ def redraft(from_year: int = 2017, to_year: int = 2021):
     return cached(key, 3600, build)
 
 
+_first_x_cache: dict = {}
+
+
+def _value_first_x(x: int) -> dict:
+    """(norm name, draft_year) -> cumulative AFL Player Rating over the player's
+    first x seasons after being drafted. The DPI's 'value over first x seasons'."""
+    ck = f"fx:{x}"
+    if ck not in _first_x_cache:
+        hist = _load_history()
+        # per-name, year -> rating
+        by_name_year = {}
+        for t in hist.get("timelines", {}).values():
+            nm = _norm(t["name"])
+            for s in t["seasons"]:
+                by_name_year[(nm, s["year"])] = s.get("rating") or 0
+        out = {}
+        with db() as conn:
+            for r in conn.execute(
+                    """SELECT dp.year, p.first_name, p.last_name FROM draft_pick dp
+                       JOIN player p ON p.id = dp.player_selected_id
+                       WHERE dp.draft_type = 'national' AND dp.year >= 2010"""):
+                nm = _norm(f"{r['first_name']} {r['last_name']}")
+                v = sum(by_name_year.get((nm, r["year"] + k), 0) for k in range(1, x + 1))
+                out[(nm, r["year"])] = v
+        _first_x_cache[ck] = out
+    return _first_x_cache[ck]
+
+
+@app.get("/api/dpi")
+def dpi(x: int = 4, y: int = 5, z: int = 4):
+    """Draft Performance Index (Borland & Kodituwakku 2017): an opportunity-cost
+    measure of drafting. For pick i in year t, DPI = (A/B)/C where A is the value
+    of the player taken at i over their first x seasons, B the average value of
+    the next y picks, and C that same A/B ratio averaged over the prior z seasons
+    (so each pick is judged against its own historical norm). DPI > 1 means the
+    club beat what was still on the board. Value = cumulative AFL Player Rating;
+    windowed to where the ratings history gives clean coverage."""
+    key = f"dpi:{x}:{y}:{z}"
+
+    def build():
+        vx = _value_first_x(x)
+        with db() as conn:
+            allpicks = [dict(r) for r in conn.execute(
+                """SELECT dp.year, dp.pick_number, orig.abbreviation club, orig.name club_name,
+                          p.id pid, p.first_name, p.last_name FROM draft_pick dp
+                   JOIN club orig ON orig.id = dp.original_club_id
+                   JOIN player p ON p.id = dp.player_selected_id
+                   WHERE dp.draft_type = 'national' AND dp.year >= 2010""")]
+        for r in allpicks:
+            r["nm"] = _norm(f"{r['first_name']} {r['last_name']}")
+            r["value"] = vx.get((r["nm"], r["year"]), 0.0)
+        by_year = {}
+        for r in allpicks:
+            by_year.setdefault(r["year"], {})[r["pick_number"]] = r
+
+        # clean window: first x seasons must be within the ratings era (2015+),
+        # and z prior classes must also be scorable
+        start = max(2015 - 1, 2014) + z            # earliest target year with full C
+        end = 2026 - x                             # latest with x complete seasons
+        target_years = [t for t in range(start, end + 1)]
+
+        # rating value can be ~0 for a bust, so a near-empty comparison set blows
+        # the ratio up. Floor the denominator to a meaningful career (a regular
+        # player clears this easily) and cap the ratio so one pick can't dominate.
+        B_FLOOR, RATIO_CAP = 150.0, 5.0
+
+        def ratio(t, i):
+            cls = by_year.get(t, {})
+            a = cls.get(i)
+            if not a:
+                return None
+            nexts = [cls[i + k]["value"] for k in range(1, y + 1) if i + k in cls]
+            if not nexts:
+                return None
+            b = max(sum(nexts) / len(nexts), B_FLOOR)
+            return min(a["value"] / b, RATIO_CAP)
+
+        picks_out = []
+        for t in target_years:
+            for i, r in by_year.get(t, {}).items():
+                ab = ratio(t, i)
+                if ab is None:
+                    continue
+                priors = [ratio(t - k, i) for k in range(1, z + 1)]
+                priors = [p for p in priors if p is not None]
+                if len(priors) < max(2, z - 1):    # need enough history to normalise
+                    continue
+                c = sum(priors) / len(priors)
+                if c <= 0:
+                    continue
+                picks_out.append({
+                    "name": f"{r['first_name']} {r['last_name']}", "id": r["pid"],
+                    "club": r["club"], "year": t, "pick": i,
+                    "dpi": round(min(ab / c, 5.0), 2), "ab": round(ab, 2)})
+
+        clubs = {}
+        for p in picks_out:
+            clubs.setdefault(p["club"], []).append(p["dpi"])
+        club_board = sorted(
+            [{"club": k, "picks": len(v), "median_dpi": _median([round(x, 2) for x in v]),
+              "mean_dpi": round(sum(v) / len(v), 2)} for k, v in clubs.items()],
+            key=lambda c: -(c["median_dpi"] or 0))
+        for i, c in enumerate(club_board):
+            c["rank"] = i + 1
+        best = sorted(picks_out, key=lambda p: -p["dpi"])[:12]
+        worst = sorted(picks_out, key=lambda p: p["dpi"])[:12]
+        return {
+            "params": {"x": x, "y": y, "z": z}, "window": [target_years[0], target_years[-1]] if target_years else None,
+            "picks_scored": len(picks_out),
+            "method": "DPI = (A/B)/C. A = value of the player at pick i over their first x seasons; B = average value of the next y picks; C = that A/B ratio averaged over the prior z drafts. DPI > 1 = the pick beat what was still on the board, relative to that pick's historical norm. Value = cumulative AFL Player Rating (Champion Data).",
+            "citation": "After Borland & Kodituwakku, 'A measure of draft performance', Melbourne University, 2017.",
+            "club_board": club_board, "best": best, "worst": worst,
+        }
+    return cached(key, 3600, build)
+
+
 @app.get("/api/player-news")
 def player_news(name: str):
     """Movement news for one player: Google News RSS scoped to their name +

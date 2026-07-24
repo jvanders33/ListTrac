@@ -445,6 +445,11 @@ footer.pagefoot {
 .rd-mat { font-size: 9px; font-weight: 800; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 3px; vertical-align: middle; }
 #rd-years { margin: 4px 0 12px; }
 #rd-years a { cursor: pointer; }
+.rd-dpi { display: flex; flex-direction: column; gap: 5px; margin-top: 8px; }
+.dpi-row { display: grid; grid-template-columns: 130px 1fr 46px; align-items: center; gap: 10px; }
+.dpi-bar { height: 8px; border-radius: 4px; background: var(--card-2); overflow: hidden; }
+.dpi-bar i { display: block; height: 100%; width: var(--fill); background: var(--accent); border-radius: 4px; }
+.dpi-val { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
 
 /* run home */
 .rh-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin: 10px 0 14px; }

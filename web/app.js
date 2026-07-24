@@ -2992,7 +2992,10 @@ async function searchView(q) {
 
 let redraftYear = null;   // selected class year for the per-class board
 async function redraftView(chrome = "") {
-  const d = await api("/api/redraft").catch(() => null);
+  const [d, dpi] = await Promise.all([
+    api("/api/redraft").catch(() => null),
+    api("/api/dpi").catch(() => null),
+  ]);
   if (!d) { view.innerHTML = `${chrome}<div class="card"><p class="error">Redraft unavailable.</p></div>`; return; }
   const years = Object.keys(d.classes).map(Number).sort();
   if (redraftYear == null || !d.classes[redraftYear]) redraftYear = years[years.length - 1];
@@ -3054,6 +3057,17 @@ async function redraftView(chrome = "") {
         </div>
       </div>
     </div>
+    ${dpi && dpi.club_board ? `<div class="card">
+      <h3>Draft Performance Index <span class="thin" style="font-weight:400">· ${dpi.window ? dpi.window[0] + "–" + dpi.window[1] : ""}</span></h3>
+      <p class="sub">A second, more rigorous lens on the same question — an opportunity-cost measure: did a club's picks beat the players still on the board, judged against how that pick slot normally performs? Around 1.0 is par; above 1.0 beats the board. <span class="thin">(x=${dpi.params.x}, y=${dpi.params.y}, z=${dpi.params.z}; median per club.)</span></p>
+      <div class="rd-dpi">${dpi.club_board.map(c => `
+        <div class="dpi-row" style="--fill:${Math.max(4, Math.min(100, (c.median_dpi || 0) * 55))}%">
+          <span class="dpi-club">${clubTag(c.club, c.club)}</span>
+          <span class="dpi-bar"><i></i></span>
+          <span class="dpi-val ${(c.median_dpi || 0) >= 1 ? "rd-good" : (c.median_dpi || 0) < 0.6 ? "rd-bad" : ""}">${c.median_dpi}</span>
+        </div>`).join("")}</div>
+      <details class="methodology"><summary>Methodology</summary><p>${esc(dpi.method)} <em>${esc(dpi.citation)}</em></p></details>
+    </div>` : ""}
     <div class="card">
       <h3>Redraft board</h3>
       <div class="subtabs" id="rd-years">${years.map(y => `<a class="${y === redraftYear ? "active" : ""}" data-year="${y}">${y}</a>`).join("")}</div>
