@@ -437,6 +437,14 @@ footer.pagefoot {
 .brownlow .bl-top td { background: var(--card-2); }
 .brownlow .bl-top b { color: var(--accent); }
 
+/* model scorecard */
+.sc-headline { margin: 10px 0 4px; padding: 12px 14px; border-radius: 10px; background: var(--card-2); font-size: 13px; line-height: 1.5; }
+.sc-meter { display: inline-block; width: 60px; height: 7px; border-radius: 4px; background: var(--card-2); overflow: hidden; vertical-align: middle; margin-right: 8px; }
+.sc-meter i { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+.sc-win td { background: var(--card-2); }
+.sc-win b { color: var(--accent); }
+.sc-ours { font-size: 9px; font-weight: 800; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 4px; vertical-align: middle; }
+
 /* redraft */
 .rd-good { color: var(--ok); }
 .rd-bad { color: var(--warn); }

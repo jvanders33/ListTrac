@@ -76,6 +76,11 @@ jobs:
         run: python scraper/brownlow.py
         continue-on-error: true
 
+      - name: Build model scorecard (accuracy vs real Brownlow votes)
+        # scores our models against AFL Tables Brownlow counts, 2023-25
+        run: python scraper/scorecard.py
+        continue-on-error: true
+
       - name: Build Draft Combine results (scaffold + manual layer)
         # placeholder until the Oct combine; merges data/combine_manual.json
         run: python scraper/combine.py

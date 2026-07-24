@@ -1396,6 +1396,7 @@ const playersChrome = act => `<div class="subtabs">
   <a href="#/players/trade-values" class="${act === "tradeval" ? "active" : ""}">Trade value</a>
   <a href="#/players/roles" class="${act === "roles" ? "active" : ""}">Roles</a>
   <a href="#/players/brownlow" class="${act === "brownlow" ? "active" : ""}">Brownlow</a>
+  <a href="#/players/scorecard" class="${act === "scorecard" ? "active" : ""}">Model check</a>
   <a href="#/players/compare" class="${act === "compare" ? "active" : ""}">Compare</a>
   <a href="#/players/fantasy" class="${act === "fantasy" ? "active" : ""}">Fantasy</a>
   <a href="#/players/team" class="${act === "team" ? "active" : ""}">Build AA team</a>
@@ -1878,6 +1879,53 @@ async function fantasyView() {
   });
   load("");
 }
+
+async function scorecardView() {
+  const d = await api("/api/scorecard").catch(() => null);
+  if (!d) { view.innerHTML = `${playersChrome("scorecard")}<div class="card"><p class="error">Scorecard not built yet.</p></div>`; return; }
+  const seasons = d.seasons || [];
+  const best = d.ranked && d.ranked[0];
+  const bar = rho => `<span class="sc-meter"><i style="width:${Math.max(0, Math.min(100, (rho || 0) * 100)).toFixed(0)}%"></i></span>`;
+  const sysRow = a => `<tr${a.rank === 1 ? ' class="sc-win"' : ""}>
+    <td class="num thin">${a.rank}</td>
+    <td>${esc(a.label)}${a.label.includes("ListTrac") ? ` <span class="sc-ours">ours</span>` : ""}</td>
+    <td class="num">${bar(a.spearman)}<b>${a.spearman ?? "—"}</b></td>
+    <td class="num thin">${a.top10}/10</td>
+    <td class="num thin">${a.top25}/25</td></tr>`;
+  const psRow = s => `<tr>
+    <td>${esc(LABELS_SC[s] || s)}</td>
+    ${seasons.map(y => {
+      const v = d.per_season[y] && d.per_season[y].systems[s];
+      return `<td class="num">${v ? v.spearman ?? "—" : "—"}</td>`;
+    }).join("")}</tr>`;
+  const firstYear = seasons[0];
+  const keys = firstYear ? Object.keys(d.per_season[firstYear].systems) : [];
+
+  view.innerHTML = `${playersChrome("scorecard")}
+    <div class="card">
+      <h3>Model check <span class="thin" style="font-weight:400">· do our numbers predict the real world?</span></h3>
+      <p class="sub">Every rating claims to know who's best — but how often is it right? We score each system against the <b>${esc(d.ground_truth)}</b> across ${seasons[0]}–${seasons[seasons.length - 1]}: the umpires' verdict is the ground truth, and the model that best predicts their votes wins. Same idea as Hawthorn's own valuation work — published, not hidden.</p>
+      ${best ? `<div class="sc-headline">
+        <b>${esc(best.label)}</b> predicts the Brownlow best — rank correlation <b>${best.spearman}</b>, catching <b>${best.top10}/10</b> of the top pollers. ${d.ranked[0].label.includes("ListTrac") ? "Our own model leads." : "Our Brownlow model is measured right beside it."}
+      </div>` : ""}
+      <div class="tablewrap"><table>
+        <thead><tr><th class="num">#</th><th>System</th><th class="num">Rank correlation</th><th class="num" title="top-10 pollers caught">Top 10</th><th class="num" title="top-25 pollers caught">Top 25</th></tr></thead>
+        <tbody>${(d.ranked || []).map(sysRow).join("")}</tbody>
+      </table></div>
+      <p class="thin" style="font-size:11px;margin-top:8px">Rank correlation (Spearman) with the Brownlow vote tally — 1.0 is perfect, 0 is random. Averaged across seasons, players with ≥ ${d.min_games} games.</p>
+    </div>
+    <div class="card">
+      <h3>Season by season</h3>
+      <p class="sub">Rank correlation with each year's Brownlow count. Winner: ${seasons.map(y => `${y} ${esc(d.per_season[y].winner ? titleCaseName(d.per_season[y].winner) : "—")}`).join(" · ")}.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th>System</th>${seasons.map(y => `<th class="num">${y}</th>`).join("")}</tr></thead>
+        <tbody>${keys.map(psRow).join("")}</tbody>
+      </table></div>
+      <details class="methodology"><summary>Methodology</summary><p>${esc(d.attribution)} ${esc(d.metric_note)}</p></details>
+    </div>`;
+}
+const LABELS_SC = { rating: "AFL Player Rating", rating_pg: "Rating per game", fantasy: "AFL Fantasy", predictor: "ListTrac Brownlow model" };
+const titleCaseName = nm => (nm || "").split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 
 async function rankingsView() {
   view.innerHTML = `${playersChrome("rank")}
@@ -3296,6 +3344,7 @@ const routes = [
   [/^#\/players\/trade-values$/,    () => tradeValueView()],
   [/^#\/players\/roles$/,           () => rolesView()],
   [/^#\/players\/brownlow$/,        () => brownlowView()],
+  [/^#\/players\/scorecard$/,       () => scorecardView()],
   [/^#\/players$/,                  () => playersView()],
   [/^#\/players\/rankings$/,        () => rankingsView()],
   [/^#\/players\/compare(?:\?.*)?$/, () => compareView()],

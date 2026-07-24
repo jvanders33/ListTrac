@@ -1,0 +1,154 @@
+{
+ "seasons": [
+  2023,
+  2024,
+  2025
+ ],
+ "min_games": 8,
+ "ground_truth": "Brownlow Medal votes (AFL Tables)",
+ "metric_note": "Spearman rank correlation with the Brownlow vote tally, plus top-10 / top-25 hit rate, over players with >= 8 games, averaged across seasons.",
+ "attribution": "Ground truth: Brownlow Medal votes from AFL Tables. Systems scored: Champion Data AFL Player Rating, AFL Fantasy, and ListTrac's own Brownlow model. Method after Hawthorn's player-valuation work (mean error vs a ground truth).",
+ "systems": {
+  "rating": {
+   "label": "AFL Player Rating",
+   "spearman": 0.611,
+   "top10": 4.3,
+   "top25": 15.7,
+   "rank": 3
+  },
+  "rating_pg": {
+   "label": "Rating per game",
+   "spearman": 0.423,
+   "top10": 0.7,
+   "top25": 2.7,
+   "rank": 4
+  },
+  "fantasy": {
+   "label": "AFL Fantasy",
+   "spearman": 0.62,
+   "top10": 3.3,
+   "top25": 13.3,
+   "rank": 2
+  },
+  "predictor": {
+   "label": "ListTrac Brownlow model",
+   "spearman": 0.678,
+   "top10": 6.0,
+   "top25": 17.7,
+   "rank": 1
+  }
+ },
+ "ranked": [
+  {
+   "label": "ListTrac Brownlow model",
+   "spearman": 0.678,
+   "top10": 6.0,
+   "top25": 17.7,
+   "rank": 1
+  },
+  {
+   "label": "AFL Fantasy",
+   "spearman": 0.62,
+   "top10": 3.3,
+   "top25": 13.3,
+   "rank": 2
+  },
+  {
+   "label": "AFL Player Rating",
+   "spearman": 0.611,
+   "top10": 4.3,
+   "top25": 15.7,
+   "rank": 3
+  },
+  {
+   "label": "Rating per game",
+   "spearman": 0.423,
+   "top10": 0.7,
+   "top25": 2.7,
+   "rank": 4
+  }
+ ],
+ "per_season": {
+  "2023": {
+   "voters": 200,
+   "pool": 510,
+   "winner": "lachie neale",
+   "systems": {
+    "rating": {
+     "spearman": 0.592,
+     "top10": 4,
+     "top25": 14
+    },
+    "rating_pg": {
+     "spearman": 0.415,
+     "top10": 1,
+     "top25": 4
+    },
+    "fantasy": {
+     "spearman": 0.596,
+     "top10": 3,
+     "top25": 16
+    },
+    "predictor": {
+     "spearman": 0.686,
+     "top10": 6,
+     "top25": 18
+    }
+   }
+  },
+  "2024": {
+   "voters": 196,
+   "pool": 499,
+   "winner": "patrick cripps",
+   "systems": {
+    "rating": {
+     "spearman": 0.591,
+     "top10": 4,
+     "top25": 16
+    },
+    "rating_pg": {
+     "spearman": 0.402,
+     "top10": 0,
+     "top25": 2
+    },
+    "fantasy": {
+     "spearman": 0.62,
+     "top10": 2,
+     "top25": 14
+    },
+    "predictor": {
+     "spearman": 0.677,
+     "top10": 6,
+     "top25": 17
+    }
+   }
+  },
+  "2025": {
+   "voters": 188,
+   "pool": 502,
+   "winner": "matt rowell",
+   "systems": {
+    "rating": {
+     "spearman": 0.65,
+     "top10": 5,
+     "top25": 17
+    },
+    "rating_pg": {
+     "spearman": 0.451,
+     "top10": 1,
+     "top25": 2
+    },
+    "fantasy": {
+     "spearman": 0.645,
+     "top10": 5,
+     "top25": 10
+    },
+    "predictor": {
+     "spearman": 0.671,
+     "top10": 6,
+     "top25": 18
+    }
+   }
+  }
+ }
+}

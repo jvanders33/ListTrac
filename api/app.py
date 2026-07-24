@@ -1341,6 +1341,17 @@ def _brownlow_index() -> dict:
     return _brownlow_cache
 
 
+SCORECARD_PATH = Path(__file__).resolve().parent.parent / "data" / "scorecard.json"
+_scorecard_cache: dict = {}
+
+
+def _scorecard() -> dict:
+    import json
+    if not _scorecard_cache and SCORECARD_PATH.exists():
+        _scorecard_cache.update(json.loads(SCORECARD_PATH.read_text(encoding="utf-8")))
+    return _scorecard_cache
+
+
 COMBINE_PATH = Path(__file__).resolve().parent.parent / "data" / "combine_2026.json"
 _combine_cache: dict = {}
 
@@ -1528,6 +1539,16 @@ def brownlow(limit: int = 50):
                     "id": idn["id"] if idn else None,
                     "club": (idn["club"] if idn else None) or p.get("club")})
     return {**bi.get("_meta", {}), "count": len(bi["_board"]), "players": out}
+
+
+@app.get("/api/scorecard")
+def scorecard():
+    """Model accuracy scorecard: how well each rating system predicts the real
+    Brownlow vote order, scored against AFL Tables. ListTrac's own error rates."""
+    sc = _scorecard()
+    if not sc:
+        raise HTTPException(404, "scorecard not built")
+    return sc
 
 
 @app.get("/api/roles")
