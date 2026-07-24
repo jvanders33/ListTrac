@@ -2990,11 +2990,93 @@ async function searchView(q) {
 
 /* ---------- router ---------- */
 
+let redraftYear = null;   // selected class year for the per-class board
+async function redraftView(chrome = "") {
+  const d = await api("/api/redraft").catch(() => null);
+  if (!d) { view.innerHTML = `${chrome}<div class="card"><p class="error">Redraft unavailable.</p></div>`; return; }
+  const years = Object.keys(d.classes).map(Number).sort();
+  if (redraftYear == null || !d.classes[redraftYear]) redraftYear = years[years.length - 1];
+  const sgn = n => n == null ? "—" : (n > 0 ? "+" + n : "" + n);
+  const diffCls = n => n == null ? "" : n > 0 ? "rd-good" : n < 0 ? "rd-bad" : "";
+  const plink = p => p.id ? `<a href="#/player/${p.id}">${esc(p.name)}</a>` : esc(p.name);
+  const m = d.mature_finding;
+
+  const clubRow = c => `<tr>
+    <td class="num thin">${c.rank}</td><td>${clubTag(c.club, c.club)}</td>
+    <td class="num"><b class="${diffCls(c.median_diff)}">${sgn(c.median_diff)}</b></td>
+    <td class="num thin">${sgn(c.mean_diff)}</td><td class="num thin">${c.picks}</td></tr>`;
+  const stealRow = p => `<tr>
+    <td>${plink(p)}${p.mature ? ` <span class="rd-mat" title="mature-age pick">MA</span>` : ""}</td>
+    <td>${clubTag(p.club, p.club)}</td><td class="num thin">${p.year}</td>
+    <td class="num thin">${p.pick}</td><td class="num">${p.redraft_pick}</td>
+    <td class="num"><b class="${diffCls(p.diff)}">${sgn(p.diff)}</b></td></tr>`;
+  const classRow = p => `<tr>
+    <td class="num thin">${p.redraft_pick}</td><td>${plink(p)}</td>
+    <td>${clubTag(p.club, p.club)}</td><td class="num thin">${p.pick}</td>
+    <td class="num"><b class="${diffCls(p.diff)}">${sgn(p.diff)}</b></td>
+    <td class="num thin">${p.games}</td></tr>`;
+
+  view.innerHTML = `${chrome}
+    <div class="card">
+      <h3>Redraft <span class="thin" style="font-weight:400">· ${d.from_year}–${d.to_year} national drafts</span></h3>
+      <p class="sub">Re-run each draft with hindsight: players re-ordered by career value and slotted back into the class's real picks. The gap between where a player <em>went</em> and where they'd go <em>now</em> is the story — for players and for the clubs who picked them.</p>
+      <div class="rd-finding">
+        <b>Mature-age edge.</b> Players drafted at 20+ redraft a median <b class="rd-good">${sgn(m.mature_median)}</b> slots higher than their pick (n=${m.mature_n}), versus <b>${sgn(m.young_median)}</b> for 18–19 year-olds (n=${m.young_n}) — the same signal Hawthorn's own analysis found: mature-agers are the safer bet.
+      </div>
+    </div>
+    <div class="cols">
+      <div>
+        <div class="card">
+          <h3>Who drafts best <span class="thin" style="font-weight:400">· median steal</span></h3>
+          <p class="sub">Median of Draft Pick − Redraft Pick across each club's selections. Positive = they tend to get value later than they pick.</p>
+          <div class="tablewrap"><table>
+            <thead><tr><th class="num">#</th><th>Club</th><th class="num">Median</th><th class="num">Mean</th><th class="num">Picks</th></tr></thead>
+            <tbody>${d.club_board.map(clubRow).join("")}</tbody>
+          </table></div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Biggest steals</h3>
+          <p class="sub">Now top-30 talents, taken well outside it.</p>
+          <div class="tablewrap"><table>
+            <thead><tr><th>Player</th><th>Club</th><th class="num">Yr</th><th class="num">Pick</th><th class="num">Redraft</th><th class="num">+/−</th></tr></thead>
+            <tbody>${d.steals.slice(0, 10).map(stealRow).join("")}</tbody>
+          </table></div>
+        </div>
+        <div class="card">
+          <h3>Biggest busts</h3>
+          <p class="sub">Top-30 picks who'd now go far later.</p>
+          <div class="tablewrap"><table>
+            <thead><tr><th>Player</th><th>Club</th><th class="num">Yr</th><th class="num">Pick</th><th class="num">Redraft</th><th class="num">+/−</th></tr></thead>
+            <tbody>${d.busts.slice(0, 10).map(stealRow).join("")}</tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Redraft board</h3>
+      <div class="subtabs" id="rd-years">${years.map(y => `<a class="${y === redraftYear ? "active" : ""}" data-year="${y}">${y}</a>`).join("")}</div>
+      <div class="tablewrap"><table>
+        <thead><tr><th class="num">Redraft</th><th>Player</th><th>Club</th><th class="num">Actual</th><th class="num">+/−</th><th class="num">Games</th></tr></thead>
+        <tbody>${d.classes[redraftYear].map(classRow).join("")}</tbody>
+      </table></div>
+      <details class="methodology"><summary>Methodology</summary><p>${esc(d.method)}</p></details>
+    </div>`;
+  view.querySelector("#rd-years").addEventListener("click", e => {
+    const a = e.target.closest("[data-year]");
+    if (!a) return;
+    redraftYear = +a.dataset.year;
+    redraftView(chrome);
+  });
+}
+
 const draftChrome = act => `<div class="subtabs">
   <a href="#/draft" class="${act === "order" ? "active" : ""}">Projected order</a>
   <a href="#/draft/mock" class="${act === "mock" ? "active" : ""}">Mock draft</a>
   <a href="#/draft/prospects" class="${act === "prospects" ? "active" : ""}">Prospects</a>
   <a href="#/draft/history/2025" class="${act === "history" ? "active" : ""}">Draft history</a>
+  <a href="#/draft/redraft" class="${act === "redraft" ? "active" : ""}">Redraft</a>
 </div>`;
 const tradesChrome = act => `<div class="subtabs">
   <a href="#/trades" class="${act === "machine" ? "active" : ""}">Trade machine</a>
@@ -3185,6 +3267,7 @@ const routes = [
   [/^#\/players\/top10(?:\?.*)?$/,  () => top10View()],
   [/^#\/draft$/,                    () => draftOrderView(draftChrome("order"))],
   [/^#\/draft\/mock(?:\?.*)?$/,     () => mockDraftView(draftChrome("mock"))],
+  [/^#\/draft\/redraft$/,           () => redraftView(draftChrome("redraft"))],
   [/^#\/draft\/prospects(?:\/(\d{4}))?$/, m => prospectsView(+(m[1] || 2027))],
   [/^#\/prospect\/(.+)$/,           m => prospectProfileView(decodeURIComponent(m[1]))],
   [/^#\/draft\/history\/(\d{4})(?:\/(\w+))?$/, m => draftView(m[1], m[2] || "national", draftChrome("history"))],

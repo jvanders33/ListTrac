@@ -730,6 +730,134 @@ def run_home():
         raise HTTPException(503, "Squiggle fixture unavailable")
 
 
+_career_value_cache: dict = {}
+
+
+def _career_value() -> dict:
+    """norm name -> {value, games}: cumulative career AFL Player Rating (value)
+    and total games, from the ratings history. Cumulative rating rewards both
+    quality and longevity, so it doubles as a 'what did this player produce'
+    yardstick for a redraft. Cached."""
+    if not _career_value_cache:
+        hist = _load_history()
+        cum, games = {}, {}
+        for t in hist.get("timelines", {}).values():
+            nm = _norm(t["name"])
+            cum[nm] = sum(s.get("rating") or 0 for s in t["seasons"])
+        for arr in hist.get("by_season", {}).values():
+            for r in arr:
+                nm = _norm(r["name"])
+                games[nm] = games.get(nm, 0) + (r.get("games") or 0)
+        for nm, v in cum.items():
+            _career_value_cache[nm] = {"value": round(v, 1), "games": round(games.get(nm, 0))}
+    return _career_value_cache
+
+
+def _draft_age(dob: str, year: int):
+    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", dob or "")
+    if not m:
+        return None
+    by, bm, bd = int(m[1]), int(m[2]), int(m[3])
+    return year - by - (1 if (bm, bd) > (11, 25) else 0)   # age at ~draft night
+
+
+def _median(xs):
+    s = sorted(xs)
+    n = len(s)
+    if not n:
+        return None
+    return s[n // 2] if n % 2 else round((s[n // 2 - 1] + s[n // 2]) / 2, 1)
+
+
+@app.get("/api/redraft")
+def redraft(from_year: int = 2017, to_year: int = 2021):
+    """Redraft analysis (Hawthorn list-management method). Within each national
+    draft class we re-order the players by career value, reassign them to the
+    class's actual pick slots, and measure Draft Pick - Redraft Pick: positive
+    means the player was worth an earlier slot than they went at (a steal).
+    Aggregated to a per-club median (who drafts best), plus the mature-age and
+    biggest-steal/bust findings. Value = cumulative career AFL Player Rating."""
+    key = f"redraft:{from_year}:{to_year}"
+
+    def build():
+        cv = _career_value()
+        with db() as conn:
+            picks = [dict(r) for r in conn.execute(
+                """SELECT dp.year, dp.pick_number, orig.abbreviation club, orig.name club_name,
+                          p.id pid, p.first_name, p.last_name, p.dob
+                   FROM draft_pick dp
+                   JOIN club orig ON orig.id = dp.original_club_id
+                   JOIN player p ON p.id = dp.player_selected_id
+                   WHERE dp.draft_type = 'national' AND dp.year BETWEEN ? AND ?""",
+                (from_year, to_year))]
+        for r in picks:
+            nm = _norm(f"{r['first_name']} {r['last_name']}")
+            r["name"] = f"{r['first_name']} {r['last_name']}"
+            r["value"] = (cv.get(nm) or {}).get("value", 0.0)
+            r["games"] = (cv.get(nm) or {}).get("games", 0)
+            r["draft_age"] = _draft_age(r["dob"], r["year"])
+            r["mature"] = r["draft_age"] is not None and r["draft_age"] >= 20
+
+        # redraft within each class: value order -> the class's actual slots
+        for year in range(from_year, to_year + 1):
+            cls = [r for r in picks if r["year"] == year]
+            slots = sorted(r["pick_number"] for r in cls)
+            for i, r in enumerate(sorted(cls, key=lambda r: (-r["value"], -r["games"]))):
+                r["redraft_pick"] = slots[i]
+                r["redraft_rank"] = i + 1
+                r["diff"] = r["pick_number"] - r["redraft_pick"]
+
+        # per-club median diff (who drafts best)
+        clubs = {}
+        for r in picks:
+            clubs.setdefault(r["club"], {"club": r["club"], "club_name": r["club_name"], "diffs": []})
+            clubs[r["club"]]["diffs"].append(r["diff"])
+        club_board = []
+        for c in clubs.values():
+            club_board.append({"club": c["club"], "club_name": c["club_name"],
+                               "picks": len(c["diffs"]), "median_diff": _median(c["diffs"]),
+                               "mean_diff": round(sum(c["diffs"]) / len(c["diffs"]), 1)})
+        club_board.sort(key=lambda c: -(c["median_diff"] or -99))
+        for i, c in enumerate(club_board):
+            c["rank"] = i + 1
+
+        # mature-age finding
+        mat = [r["diff"] for r in picks if r["mature"]]
+        young = [r["diff"] for r in picks if r["draft_age"] is not None and not r["mature"]]
+
+        def slim(r):
+            return {"name": r["name"], "id": r["pid"], "club": r["club"], "year": r["year"],
+                    "pick": r["pick_number"], "redraft_pick": r["redraft_pick"],
+                    "diff": r["diff"], "value": r["value"], "games": r["games"],
+                    "draft_age": r["draft_age"], "mature": r["mature"]}
+
+        # steals: players who'd now redraft inside the top 30 but were taken
+        # later — genuinely good players found late (not tail-of-draft noise).
+        # busts: early picks (top 30) who'd now redraft well below their slot.
+        steals = [slim(r) for r in sorted(
+            [r for r in picks if r["redraft_rank"] <= 30 and r["diff"] > 0],
+            key=lambda r: -r["diff"])[:15]]
+        busts = [slim(r) for r in sorted(
+            [r for r in picks if r["pick_number"] <= 30 and r["diff"] < 0],
+            key=lambda r: r["diff"])[:15]]
+        classes = {}
+        for year in range(from_year, to_year + 1):
+            cls = sorted([r for r in picks if r["year"] == year], key=lambda r: r["redraft_rank"])
+            classes[year] = [slim(r) for r in cls]
+
+        return {
+            "from_year": from_year, "to_year": to_year, "picks": len(picks),
+            "method": "Within each national draft class, players are re-ordered by cumulative career AFL Player Rating and reassigned to the class's actual pick slots. Diff = actual pick minus redraft pick; positive = a steal. Per-club figure is the median across their selections.",
+            "club_board": club_board,
+            "mature_finding": {
+                "mature_n": len(mat), "mature_median": _median(mat),
+                "young_n": len(young), "young_median": _median(young),
+            },
+            "steals": steals, "busts": busts, "classes": classes,
+        }
+    return cached(key, 3600, build)
+
+
 @app.get("/api/player-news")
 def player_news(name: str):
     """Movement news for one player: Google News RSS scoped to their name +

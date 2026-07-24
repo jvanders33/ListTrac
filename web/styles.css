@@ -437,6 +437,15 @@ footer.pagefoot {
 .brownlow .bl-top td { background: var(--card-2); }
 .brownlow .bl-top b { color: var(--accent); }
 
+/* redraft */
+.rd-good { color: var(--ok); }
+.rd-bad { color: var(--warn); }
+.rd-finding { margin-top: 10px; padding: 12px 14px; border-radius: 10px; background: var(--card-2); font-size: 13px; line-height: 1.5; }
+.rd-finding .rd-good { font-weight: 700; }
+.rd-mat { font-size: 9px; font-weight: 800; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 3px; vertical-align: middle; }
+#rd-years { margin: 4px 0 12px; }
+#rd-years a { cursor: pointer; }
+
 /* run home */
 .rh-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin: 10px 0 14px; }
 .rh-stat { padding: 12px; border-radius: 10px; background: var(--card-2); display: flex; flex-direction: column; gap: 3px; }
