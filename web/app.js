@@ -2115,31 +2115,106 @@ const DEPTH_LINES = [
   ["MIDFIELDER", "Midfielders"], ["MIDFIELDER_FORWARD", "Mid-forwards"], ["RUCK", "Rucks"],
   ["KEY_FORWARD", "Key forwards"], ["MEDIUM_FORWARD", "Small / medium forwards"],
 ];
-function depthChartHTML(list) {
-  const CLS = { contracted: "ok", restricted_fa: "rfa", unrestricted_fa: "ufa", out_of_contract: "warn" };
+/* Depth charts, three ways: by position, by age, and the age x performance
+   matrix list managers actually plan from — grade bands down, age bands across,
+   with first- and second-year players held out in their own row. Grade is the
+   player's AFL Player Rating band; colour is contract status, so an ageing
+   band or a tier full of expiring deals is visible at a glance. */
+const SEASON_YEAR = 2026;
+let depthMode = "position";          // position | age | grade
+const AGE_BANDS = [["18-21", 0, 21], ["22-25", 22, 25], ["26-29", 26, 29], ["30+", 30, 99]];
+const GRADE_ROWS = [
+  ["A", "A grade", "Elite"], ["B", "B grade", "Above average"],
+  ["C", "C grade", "Average"], ["D", "D grade", "Replacement level"],
+];
+const DEPTH_CLS = { contracted: "ok", restricted_fa: "rfa", unrestricted_fa: "ufa", out_of_contract: "warn" };
+// Graded on rating PER GAME, so availability doesn't masquerade as quality —
+// a star who missed half the year still grades on how he played.
+const gradeOf = p => {
+  const r = p.quality_rank;
+  return !r ? "D" : r <= 45 ? "A" : r <= 170 ? "B" : r <= 320 ? "C" : "D";
+};
+const ageBandOf = a => a == null ? null : (AGE_BANDS.find(([, lo, hi]) => a >= lo && a <= hi) || [])[0];
+const isEarlyCareer = p => p.draft_year != null && p.draft_year >= SEASON_YEAR - 2;
+const byRatingDesc = (a, b) => (b.rating || 0) - (a.rating || 0);
+const depthChip = p => `<a class="dchip ${DEPTH_CLS[p.contract_status] || "plain"}" href="#/player/${p.id}"
+    title="${esc((STATUS[p.contract_status] || {}).label || "")}${p.rating ? " · AFL Player Rating " + p.rating : ""}${age(p.dob) != null ? " · " + age(p.dob) + "yo" : ""}">
+    <b>${esc(p.last_name)}</b>${p.rating ? `<span>${p.rating}</span>` : ""}</a>`;
+const depthLegend = `<div class="legend" style="margin-top:14px">
+  <span><i style="background:var(--ok)"></i>Contracted</span>
+  <span><i style="background:var(--warn)"></i>Out of contract</span>
+  <span><i style="background:var(--rfa)"></i>Restricted FA</span>
+  <span><i style="background:var(--ufa)"></i>Unrestricted FA</span>
+</div>`;
+
+function positionDepthHTML(list) {
   const byPos = {};
   list.forEach(p => (byPos[p.position || "OTHER"] = byPos[p.position || "OTHER"] || []).push(p));
-  const chip = p => `<a class="dchip ${CLS[p.contract_status] || "plain"}" href="#/player/${p.id}"
-      title="${esc((STATUS[p.contract_status] || {}).label || "")}${p.rating ? " · AFL Player Rating " + p.rating : ""}">
-      <b>${esc(p.last_name)}</b>${p.rating ? `<span>${p.rating}</span>` : ""}</a>`;
   const line = ([key, label]) => {
-    const ps = (byPos[key] || []).sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    const ps = (byPos[key] || []).sort(byRatingDesc);
     return ps.length ? `<div class="depthline">
       <div class="depth-pos">${label}<span>${ps.length}</span></div>
-      <div class="depth-players">${ps.map(chip).join("")}</div></div>` : "";
+      <div class="depth-players">${ps.map(depthChip).join("")}</div></div>` : "";
   };
   const other = (byPos["OTHER"] || []).sort((a, b) => String(a.last_name).localeCompare(b.last_name));
-  return `<div class="card">
-    <h3>Positional depth</h3>
-    <p class="sub">Every listed player by Champion Data position, sorted by AFL Player Rating; colour = contract status — so a thin line, or a position full of expiring deals, jumps out.</p>
+  return `<p class="sub">Every listed player by Champion Data position, sorted by AFL Player Rating — so a thin line, or a position full of expiring deals, jumps out.</p>
     ${DEPTH_LINES.map(line).join("")}
-    ${other.length ? `<div class="depthline"><div class="depth-pos">Rookies / unrated<span>${other.length}</span></div><div class="depth-players">${other.map(chip).join("")}</div></div>` : ""}
-    <div class="legend" style="margin-top:14px">
-      <span><i style="background:var(--ok)"></i>Contracted</span>
-      <span><i style="background:var(--warn)"></i>Out of contract</span>
-      <span><i style="background:var(--rfa)"></i>Restricted FA</span>
-      <span><i style="background:var(--ufa)"></i>Unrestricted FA</span>
+    ${other.length ? `<div class="depthline"><div class="depth-pos">Rookies / unrated<span>${other.length}</span></div><div class="depth-players">${other.map(depthChip).join("")}</div></div>` : ""}`;
+}
+
+function ageDepthHTML(list) {
+  const lines = AGE_BANDS.map(([label, lo, hi]) => {
+    const ps = list.filter(p => { const a = age(p.dob); return a != null && a >= lo && a <= hi; }).sort(byRatingDesc);
+    return ps.length ? `<div class="depthline">
+      <div class="depth-pos">${label}<span>${ps.length}</span></div>
+      <div class="depth-players">${ps.map(depthChip).join("")}</div></div>` : "";
+  }).join("");
+  const unknown = list.filter(p => age(p.dob) == null);
+  return `<p class="sub">The list by age bracket, each sorted by AFL Player Rating. Read the shape: a bottom-heavy list is rebuilding, a bulge at 26–29 is a contention window, a thin 22–25 band is a gap coming.</p>
+    ${lines}
+    ${unknown.length ? `<div class="depthline"><div class="depth-pos">Age unknown<span>${unknown.length}</span></div><div class="depth-players">${unknown.map(depthChip).join("")}</div></div>` : ""}`;
+}
+
+function gradeMatrixHTML(list) {
+  const early = list.filter(isEarlyCareer);
+  const rest = list.filter(p => !isEarlyCareer(p));
+  const cellFor = (g, band) => rest
+    .filter(p => gradeOf(p) === g && ageBandOf(age(p.dob)) === band)
+    .sort(byRatingDesc);
+  const rows = GRADE_ROWS.map(([g, label, desc]) => `
+    <tr>
+      <th class="gm-grade"><b>${label}</b><span>${desc}</span></th>
+      ${AGE_BANDS.map(([band]) => {
+        const ps = cellFor(g, band);
+        return `<td class="gm-cell">${ps.map(depthChip).join("") || `<span class="gm-empty">—</span>`}</td>`;
+      }).join("")}
+    </tr>`).join("");
+  const earlySorted = [...early].sort(byRatingDesc);
+  return `<p class="sub">The planning grid: performance grade down, age across. Grade is the player's AFL Player Rating band across the league — A grade is elite (top 45), then above average, average and replacement level. First- and second-year players sit apart, since they haven't had a fair run at a rating yet.</p>
+    <div class="tablewrap"><table class="gradematrix">
+      <thead><tr><th></th>${AGE_BANDS.map(([b]) => `<th class="num">${b}</th>`).join("")}</tr></thead>
+      <tbody>
+        ${rows}
+        ${earlySorted.length ? `<tr class="gm-early">
+          <th class="gm-grade"><b>1st &amp; 2nd year</b><span>Yet to be graded</span></th>
+          <td class="gm-cell" colspan="${AGE_BANDS.length}">${earlySorted.map(depthChip).join("")}</td>
+        </tr>` : ""}
+      </tbody>
+    </table></div>`;
+}
+
+function depthChartHTML(list) {
+  const tab = (m, label) => `<button data-depth="${m}" class="${depthMode === m ? "on" : ""}" role="tab" aria-selected="${depthMode === m}">${label}</button>`;
+  const body = depthMode === "age" ? ageDepthHTML(list)
+    : depthMode === "grade" ? gradeMatrixHTML(list)
+    : positionDepthHTML(list);
+  return `<div class="card">
+    <h3>Depth chart</h3>
+    <div class="depthtabs" role="tablist">
+      ${tab("position", "By position")}${tab("age", "By age")}${tab("grade", "Age × grade")}
     </div>
+    ${body}
+    ${depthLegend}
   </div>`;
 }
 
@@ -2195,6 +2270,14 @@ async function clubView(abbrev) {
       });
       body.innerHTML = renderBody();
     });
+  });
+  // depth-chart sub-tabs (position / age / age x grade) — delegated, since the
+  // body is re-rendered wholesale on every switch
+  body.addEventListener("click", e => {
+    const b = e.target.closest("[data-depth]");
+    if (!b || depthMode === b.dataset.depth) return;
+    depthMode = b.dataset.depth;
+    body.innerHTML = renderBody();
   });
   mountStars();
 }

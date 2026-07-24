@@ -259,6 +259,9 @@ def club_list(abbrev: str):
         r["position"] = rr.get("position") if rr else None
         r["rating"] = rr.get("rating") if rr else None
         r["rating_rank"] = rr.get("rank") if rr else None
+        q = _quality_rank().get(nm)
+        r["rating_per_game"] = q["per_game"] if q else None
+        r["quality_rank"] = q["rank"] if q else None
         tv = _trade_value_board().get("by_id", {}).get(r["id"])
         r["trade_value"] = tv.get("value") if tv else None
     return result
@@ -795,6 +798,27 @@ def _ratings_by_name() -> dict:
         return {}
     data = json.loads(RATINGS_PATH.read_text(encoding="utf-8"))
     return {_norm(r["name"]): r for r in data["ratings"]}
+
+
+_quality_cache: dict = {}
+
+
+def _quality_rank() -> dict:
+    """Rank players by AFL Player Rating *per game* rather than season total.
+    The season rank rewards availability as much as quality, so a star who
+    missed half a year lands near the bottom — useless for grading a list.
+    Min 5 games keeps small samples out."""
+    if not _quality_cache:
+        import json
+        if not RATINGS_PATH.exists():
+            return _quality_cache
+        data = json.loads(RATINGS_PATH.read_text(encoding="utf-8"))["ratings"]
+        rows = [(r["rating"] / r["games"], _norm(r["name"]))
+                for r in data if (r.get("games") or 0) >= 5 and r.get("rating")]
+        rows.sort(reverse=True)
+        for i, (pg, nm) in enumerate(rows):
+            _quality_cache[nm] = {"per_game": round(pg, 1), "rank": i + 1}
+    return _quality_cache
 
 
 CONTRACTS_PATH = Path(__file__).resolve().parent.parent / "data" / "contracts.json"

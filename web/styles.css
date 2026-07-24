@@ -437,6 +437,24 @@ footer.pagefoot {
 .brownlow .bl-top td { background: var(--card-2); }
 .brownlow .bl-top b { color: var(--accent); }
 
+/* depth chart sub-tabs + age x grade matrix */
+.depthtabs { display: flex; gap: 6px; margin: 4px 0 12px; flex-wrap: wrap; }
+.depthtabs button { font: inherit; font-size: 12px; padding: 5px 12px; border-radius: 999px;
+  border: 1px solid var(--line); background: transparent; color: var(--ink-2); cursor: pointer; }
+.depthtabs button:hover { color: var(--ink); }
+.depthtabs button.on { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+.gradematrix { width: 100%; border-collapse: collapse; }
+.gradematrix thead th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--ink-2); text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+.gradematrix tbody tr + tr { border-top: 1px solid var(--line); }
+.gm-grade { text-align: left; padding: 10px 10px 10px 0; vertical-align: top; white-space: nowrap; width: 1%; }
+.gm-grade b { display: block; font-size: 13px; }
+.gm-grade span { display: block; font-size: 10px; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.03em; }
+.gm-cell { padding: 8px; vertical-align: top; }
+.gm-cell .dchip { margin: 0 4px 4px 0; }
+.gm-empty { color: var(--ink-2); opacity: 0.5; }
+.gm-early { background: var(--card-2); }
+
 /* home/away split */
 .ha-split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
 .ha-col { padding: 12px; border-radius: 10px; background: var(--card-2); }
