@@ -1914,6 +1914,19 @@ async function scorecardView() {
       </table></div>
       <p class="thin" style="font-size:11px;margin-top:8px">Rank correlation (Spearman) with the Brownlow vote tally — 1.0 is perfect, 0 is random. Averaged across seasons, players with ≥ ${d.min_games} games.</p>
     </div>
+    ${d.aa_ranked ? `<div class="card">
+      <h3>Second test: the All-Australian team</h3>
+      <p class="sub">${esc(d.aa_note || "")} A different question from the Brownlow — season-long best-22, not weekly votes — so the best system can differ.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th class="num">#</th><th>System</th><th class="num">AA hit rate</th><th class="num" title="All-Australians identified / total">Caught</th></tr></thead>
+        <tbody>${d.aa_ranked.map(a => `<tr${a.aa_rank === 1 ? ' class="sc-win"' : ""}>
+          <td class="num thin">${a.aa_rank}</td>
+          <td>${esc(a.label)}${a.label.includes("ListTrac") ? ` <span class="sc-ours">ours</span>` : ""}</td>
+          <td class="num"><span class="sc-meter"><i style="width:${Math.round((a.aa_hit_rate||0)*100)}%"></i></span><b>${a.aa_hit_rate != null ? Math.round(a.aa_hit_rate*100)+"%" : "—"}</b></td>
+          <td class="num thin">${a.aa_hits}/${a.aa_n}</td></tr>`).join("")}</tbody>
+      </table></div>
+      <p class="thin" style="font-size:11px;margin-top:8px">Share of the real All-Australian team each system ranks inside its own top-22, across ${seasons[0]}–${seasons[seasons.length-1]}.</p>
+    </div>` : ""}
     <div class="card">
       <h3>Season by season</h3>
       <p class="sub">Rank correlation with each year's Brownlow count. Winner: ${seasons.map(y => `${y} ${esc(d.per_season[y].winner ? titleCaseName(d.per_season[y].winner) : "—")}`).join(" · ")}.</p>

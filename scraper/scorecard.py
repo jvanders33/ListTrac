@@ -173,18 +173,32 @@ def _spearman(pairs):
     return round(num / (dx * dy), 3) if dx and dy else None
 
 
-def score_system(sysval: dict, votes: dict, pool: set):
+def score_system(sysval: dict, votes: dict, pool: set, aa_team: set):
     pairs = [(sysval.get(nm, 0), votes.get(nm, 0)) for nm in pool]
     rho = _spearman(pairs)
     truth_top = [nm for nm, _ in sorted(votes.items(), key=lambda kv: -kv[1]) if nm in pool]
     sys_rank = sorted(pool, key=lambda nm: -sysval.get(nm, 0))
     hits = lambda k: len(set(truth_top[:k]) & set(sys_rank[:k]))
-    return {"spearman": rho, "top10": hits(10), "top25": hits(25)}
+    # All-Australian: of the players named in the team, how many does the system
+    # rank in its top-|team|? (a second, selection-based ground truth)
+    aa_hits = len(set(sys_rank[:len(aa_team)]) & aa_team) if aa_team else 0
+    return {"spearman": rho, "top10": hits(10), "top25": hits(25),
+            "aa_hits": aa_hits, "aa_n": len(aa_team)}
 
 
 SYSTEMS = ["rating", "rating_pg", "fantasy", "predictor"]
 LABELS = {"rating": "AFL Player Rating", "rating_pg": "Rating per game",
           "fantasy": "AFL Fantasy", "predictor": "ListTrac Brownlow model"}
+
+
+def all_australian(year: int) -> set:
+    """Norm names of the year's real All-Australian team, from data/all_australian.json."""
+    p = ROOT / "data" / "all_australian.json"
+    if not p.exists():
+        return set()
+    data = json.loads(p.read_text(encoding="utf-8"))
+    team = (data.get("by_year", {}).get(str(year), {}) or {}).get("team", [])
+    return {_norm(n) for n in team}
 
 
 def build():
@@ -196,15 +210,16 @@ def build():
         fant = season_fantasy(year, token)
         pred = predictor_votes(year, token)
         pool = {nm for nm, v in sr.items() if v["games"] >= MIN_GAMES}
+        aa_team = {nm for nm in all_australian(year) if nm in pool}
         sysvals = {
             "rating": {nm: sr[nm]["rating"] for nm in sr},
             "rating_pg": {nm: sr[nm]["rating_pg"] for nm in sr},
             "fantasy": fant, "predictor": pred,
         }
         per_season[year] = {"voters": len([v for v in votes.values() if v > 0]),
-                            "pool": len(pool),
+                            "pool": len(pool), "aa_team": len(aa_team),
                             "winner": max(votes.items(), key=lambda kv: kv[1])[0] if votes else None,
-                            "systems": {s: score_system(sysvals[s], votes, pool) for s in SYSTEMS}}
+                            "systems": {s: score_system(sysvals[s], votes, pool, aa_team) for s in SYSTEMS}}
         print(f"  {year}: pool {len(pool)}, voters {per_season[year]['voters']}")
         for s in SYSTEMS:
             print(f"    {LABELS[s]:26} rho {per_season[year]['systems'][s]['spearman']} "
@@ -216,17 +231,25 @@ def build():
         rhos = [per_season[y]["systems"][s]["spearman"] for y in SEASONS if per_season[y]["systems"][s]["spearman"] is not None]
         t10 = [per_season[y]["systems"][s]["top10"] for y in SEASONS]
         t25 = [per_season[y]["systems"][s]["top25"] for y in SEASONS]
+        aa_hits = sum(per_season[y]["systems"][s]["aa_hits"] for y in SEASONS)
+        aa_n = sum(per_season[y]["systems"][s]["aa_n"] for y in SEASONS)
         agg[s] = {"label": LABELS[s],
                   "spearman": round(sum(rhos) / len(rhos), 3) if rhos else None,
-                  "top10": round(sum(t10) / len(t10), 1), "top25": round(sum(t25) / len(t25), 1)}
+                  "top10": round(sum(t10) / len(t10), 1), "top25": round(sum(t25) / len(t25), 1),
+                  "aa_hit_rate": round(aa_hits / aa_n, 3) if aa_n else None,
+                  "aa_hits": aa_hits, "aa_n": aa_n}
     ranked = sorted(agg.values(), key=lambda a: -(a["spearman"] or 0))
     for i, a in enumerate(ranked):
         a["rank"] = i + 1
+    aa_ranked = sorted(agg.values(), key=lambda a: -(a["aa_hit_rate"] or 0))
+    for i, a in enumerate(aa_ranked):
+        a["aa_rank"] = i + 1
     return {"seasons": SEASONS, "min_games": MIN_GAMES,
             "ground_truth": "Brownlow Medal votes (AFL Tables)",
             "metric_note": "Spearman rank correlation with the Brownlow vote tally, plus top-10 / top-25 hit rate, over players with >= %d games, averaged across seasons." % MIN_GAMES,
-            "attribution": "Ground truth: Brownlow Medal votes from AFL Tables. Systems scored: Champion Data AFL Player Rating, AFL Fantasy, and ListTrac's own Brownlow model. Method after Hawthorn's player-valuation work (mean error vs a ground truth).",
-            "systems": agg, "ranked": ranked, "per_season": per_season}
+            "aa_note": "A second ground truth — the real All-Australian team. For each season, how many of the ~22 named All-Australians does each system rank in its own top-22? (share of the team correctly identified, over the same seasons).",
+            "attribution": "Ground truths: Brownlow Medal votes (AFL Tables) and All-Australian teams (Wikipedia). Systems scored: Champion Data AFL Player Rating, AFL Fantasy, and ListTrac's own Brownlow model. Method after Hawthorn's player-valuation work (measuring each system's error against a ground truth).",
+            "systems": agg, "ranked": ranked, "aa_ranked": aa_ranked, "per_season": per_season}
 
 
 def main():

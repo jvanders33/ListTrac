@@ -7,146 +7,252 @@
  "min_games": 8,
  "ground_truth": "Brownlow Medal votes (AFL Tables)",
  "metric_note": "Spearman rank correlation with the Brownlow vote tally, plus top-10 / top-25 hit rate, over players with >= 8 games, averaged across seasons.",
- "attribution": "Ground truth: Brownlow Medal votes from AFL Tables. Systems scored: Champion Data AFL Player Rating, AFL Fantasy, and ListTrac's own Brownlow model. Method after Hawthorn's player-valuation work (mean error vs a ground truth).",
+ "aa_note": "A second ground truth — the real All-Australian team. For each season, how many of the ~22 named All-Australians does each system rank in its own top-22? (share of the team correctly identified, over the same seasons).",
+ "attribution": "Ground truths: Brownlow Medal votes (AFL Tables) and All-Australian teams (Wikipedia). Systems scored: Champion Data AFL Player Rating, AFL Fantasy, and ListTrac's own Brownlow model. Method after Hawthorn's player-valuation work (measuring each system's error against a ground truth).",
  "systems": {
   "rating": {
    "label": "AFL Player Rating",
    "spearman": 0.611,
    "top10": 4.3,
    "top25": 15.7,
-   "rank": 3
+   "aa_hit_rate": 0.47,
+   "aa_hits": 31,
+   "aa_n": 66,
+   "rank": 3,
+   "aa_rank": 2
   },
   "rating_pg": {
    "label": "Rating per game",
    "spearman": 0.423,
    "top10": 0.7,
    "top25": 2.7,
-   "rank": 4
+   "aa_hit_rate": 0.106,
+   "aa_hits": 7,
+   "aa_n": 66,
+   "rank": 4,
+   "aa_rank": 4
   },
   "fantasy": {
    "label": "AFL Fantasy",
    "spearman": 0.62,
    "top10": 3.3,
    "top25": 13.3,
-   "rank": 2
+   "aa_hit_rate": 0.439,
+   "aa_hits": 29,
+   "aa_n": 66,
+   "rank": 2,
+   "aa_rank": 3
   },
   "predictor": {
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
-   "top10": 7.0,
-   "top25": 17.3,
-   "rank": 1
+   "top10": 6.7,
+   "top25": 17.7,
+   "aa_hit_rate": 0.561,
+   "aa_hits": 37,
+   "aa_n": 66,
+   "rank": 1,
+   "aa_rank": 1
   }
  },
  "ranked": [
   {
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
-   "top10": 7.0,
-   "top25": 17.3,
-   "rank": 1
+   "top10": 6.7,
+   "top25": 17.7,
+   "aa_hit_rate": 0.561,
+   "aa_hits": 37,
+   "aa_n": 66,
+   "rank": 1,
+   "aa_rank": 1
   },
   {
    "label": "AFL Fantasy",
    "spearman": 0.62,
    "top10": 3.3,
    "top25": 13.3,
-   "rank": 2
+   "aa_hit_rate": 0.439,
+   "aa_hits": 29,
+   "aa_n": 66,
+   "rank": 2,
+   "aa_rank": 3
   },
   {
    "label": "AFL Player Rating",
    "spearman": 0.611,
    "top10": 4.3,
    "top25": 15.7,
-   "rank": 3
+   "aa_hit_rate": 0.47,
+   "aa_hits": 31,
+   "aa_n": 66,
+   "rank": 3,
+   "aa_rank": 2
   },
   {
    "label": "Rating per game",
    "spearman": 0.423,
    "top10": 0.7,
    "top25": 2.7,
-   "rank": 4
+   "aa_hit_rate": 0.106,
+   "aa_hits": 7,
+   "aa_n": 66,
+   "rank": 4,
+   "aa_rank": 4
+  }
+ ],
+ "aa_ranked": [
+  {
+   "label": "ListTrac Brownlow model",
+   "spearman": 0.664,
+   "top10": 6.7,
+   "top25": 17.7,
+   "aa_hit_rate": 0.561,
+   "aa_hits": 37,
+   "aa_n": 66,
+   "rank": 1,
+   "aa_rank": 1
+  },
+  {
+   "label": "AFL Player Rating",
+   "spearman": 0.611,
+   "top10": 4.3,
+   "top25": 15.7,
+   "aa_hit_rate": 0.47,
+   "aa_hits": 31,
+   "aa_n": 66,
+   "rank": 3,
+   "aa_rank": 2
+  },
+  {
+   "label": "AFL Fantasy",
+   "spearman": 0.62,
+   "top10": 3.3,
+   "top25": 13.3,
+   "aa_hit_rate": 0.439,
+   "aa_hits": 29,
+   "aa_n": 66,
+   "rank": 2,
+   "aa_rank": 3
+  },
+  {
+   "label": "Rating per game",
+   "spearman": 0.423,
+   "top10": 0.7,
+   "top25": 2.7,
+   "aa_hit_rate": 0.106,
+   "aa_hits": 7,
+   "aa_n": 66,
+   "rank": 4,
+   "aa_rank": 4
   }
  ],
  "per_season": {
   "2023": {
    "voters": 200,
    "pool": 510,
+   "aa_team": 22,
    "winner": "lachie neale",
    "systems": {
     "rating": {
      "spearman": 0.592,
      "top10": 4,
-     "top25": 14
+     "top25": 14,
+     "aa_hits": 10,
+     "aa_n": 22
     },
     "rating_pg": {
      "spearman": 0.415,
      "top10": 1,
-     "top25": 4
+     "top25": 4,
+     "aa_hits": 3,
+     "aa_n": 22
     },
     "fantasy": {
      "spearman": 0.596,
      "top10": 3,
-     "top25": 16
+     "top25": 16,
+     "aa_hits": 11,
+     "aa_n": 22
     },
     "predictor": {
      "spearman": 0.662,
      "top10": 7,
-     "top25": 19
+     "top25": 19,
+     "aa_hits": 11,
+     "aa_n": 22
     }
    }
   },
   "2024": {
    "voters": 196,
    "pool": 499,
+   "aa_team": 22,
    "winner": "patrick cripps",
    "systems": {
     "rating": {
      "spearman": 0.591,
      "top10": 4,
-     "top25": 16
+     "top25": 16,
+     "aa_hits": 12,
+     "aa_n": 22
     },
     "rating_pg": {
      "spearman": 0.402,
      "top10": 0,
-     "top25": 2
+     "top25": 2,
+     "aa_hits": 2,
+     "aa_n": 22
     },
     "fantasy": {
      "spearman": 0.62,
      "top10": 2,
-     "top25": 14
+     "top25": 14,
+     "aa_hits": 10,
+     "aa_n": 22
     },
     "predictor": {
      "spearman": 0.676,
      "top10": 6,
-     "top25": 16
+     "top25": 17,
+     "aa_hits": 13,
+     "aa_n": 22
     }
    }
   },
   "2025": {
    "voters": 188,
    "pool": 502,
+   "aa_team": 22,
    "winner": "matt rowell",
    "systems": {
     "rating": {
      "spearman": 0.65,
      "top10": 5,
-     "top25": 17
+     "top25": 17,
+     "aa_hits": 9,
+     "aa_n": 22
     },
     "rating_pg": {
      "spearman": 0.451,
      "top10": 1,
-     "top25": 2
+     "top25": 2,
+     "aa_hits": 2,
+     "aa_n": 22
     },
     "fantasy": {
      "spearman": 0.645,
      "top10": 5,
-     "top25": 10
+     "top25": 10,
+     "aa_hits": 8,
+     "aa_n": 22
     },
     "predictor": {
      "spearman": 0.653,
-     "top10": 8,
-     "top25": 17
+     "top10": 7,
+     "top25": 17,
+     "aa_hits": 13,
+     "aa_n": 22
     }
    }
   }
