@@ -1396,6 +1396,7 @@ const playersChrome = act => `<div class="subtabs">
   <a href="#/players/trade-values" class="${act === "tradeval" ? "active" : ""}">Trade value</a>
   <a href="#/players/roles" class="${act === "roles" ? "active" : ""}">Roles</a>
   <a href="#/players/brownlow" class="${act === "brownlow" ? "active" : ""}">Brownlow</a>
+  <a href="#/players/rising-star" class="${act === "risingstar" ? "active" : ""}">Rising Star</a>
   <a href="#/players/scorecard" class="${act === "scorecard" ? "active" : ""}">Model check</a>
   <a href="#/players/compare" class="${act === "compare" ? "active" : ""}">Compare</a>
   <a href="#/players/fantasy" class="${act === "fantasy" ? "active" : ""}">Fantasy</a>
@@ -3365,6 +3366,31 @@ async function rolesView() {
     </details></div>`;
 }
 
+async function risingStarView() {
+  const data = await api("/api/rising-star?limit=40").catch(() => null);
+  if (!data) { view.innerHTML = `${playersChrome("risingstar")}<div class="card"><p class="error">Rising Star race unavailable.</p></div>`; return; }
+  const medal = p => p.rank === 1 ? "🥇" : p.rank === 2 ? "🥈" : p.rank === 3 ? "🥉" : p.rank;
+  view.innerHTML = `${playersChrome("risingstar")}
+    <div class="card">
+      <h3>Rising Star race <span class="thin" style="font-weight:400">· ${data.count} eligible</span></h3>
+      <p class="sub">The standout young players, ranked by AFL Player Rating. ${esc(data.note)}</p>
+      <div class="tablewrap"><table class="brownlow">
+        <thead><tr><th class="num">#</th><th>Player</th><th>Club</th><th class="num">Yr</th><th class="num">Games</th><th class="num" title="ListTrac Rating /100">LTR</th><th class="num">Rating</th></tr></thead>
+        <tbody>${data.players.map(p => `
+          <tr${p.rank <= 3 ? ' class="bl-top"' : ""}>
+            <td class="num">${medal(p)}</td>
+            <td>${p.id ? `<a href="#/player/${p.id}">${esc(p.name)}</a>` : esc(p.name)}${p.draft_position ? ` <span class="thin">pk${p.draft_position}</span>` : ""}</td>
+            <td>${clubTag(p.club, p.club)}</td>
+            <td class="num thin">${p.first_year ? "1st" : "2nd"}</td>
+            <td class="num thin">${p.games}</td>
+            <td class="num"><b class="ltr">${p.ltr}</b></td>
+            <td class="num thin">${Math.round(p.rating)}</td></tr>`).join("")}
+        </tbody>
+      </table></div>
+      <p class="thin" style="font-size:11px;margin-top:8px">Eligibility: ${esc(data.eligibility)} A prediction, not the panel's 5-4-3-2-1 vote.</p>
+    </div>`;
+}
+
 async function brownlowView() {
   const data = await api("/api/brownlow?limit=60").catch(() => null);
   if (!data) { view.innerHTML = `${playersChrome("brownlow")}<div class="card"><p class="error">Brownlow projection unavailable.</p></div>`; return; }
@@ -3425,6 +3451,7 @@ const routes = [
   [/^#\/players\/trade-values$/,    () => tradeValueView()],
   [/^#\/players\/roles$/,           () => rolesView()],
   [/^#\/players\/brownlow$/,        () => brownlowView()],
+  [/^#\/players\/rising-star$/,     () => risingStarView()],
   [/^#\/players\/scorecard$/,       () => scorecardView()],
   [/^#\/players$/,                  () => playersView()],
   [/^#\/players\/rankings$/,        () => rankingsView()],

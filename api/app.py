@@ -1754,6 +1754,67 @@ def roles():
             "count": len(players), "players": players}
 
 
+@app.get("/api/rising-star")
+def rising_star(limit: int = 30):
+    """AFL Rising Star race — the standout eligible young players. Eligibility
+    follows the award: under 21 on 1 January (born 2005 or later), and either a
+    first-year player or a second-year who played 10 or fewer games last season.
+    Ranked by this season's AFL Player Rating (the best young-season measure)."""
+    def build():
+        import json
+        if not RATINGS_PATH.exists():
+            raise HTTPException(404, "ratings not built")
+        ratings = json.loads(RATINGS_PATH.read_text(encoding="utf-8"))["ratings"]
+        hist = _load_history()
+        games_2025 = {}
+        for r in hist.get("by_season", {}).get(str(CURRENT_YEAR - 1), []):
+            games_2025[_norm(r["name"])] = r.get("games") or 0
+        # birth year + id/club per player
+        birth, ident = {}, {}
+        with db() as conn:
+            for r in conn.execute(
+                    """SELECT p.id, p.first_name, p.last_name, p.dob, c.abbreviation club
+                       FROM player p LEFT JOIN club c ON c.id = p.current_club_id
+                       WHERE p.status = 'listed'"""):
+                nm = _norm(f"{r['first_name']} {r['last_name']}")
+                m = re.match(r"(\d{4})", r["dob"] or "")
+                if m:
+                    birth[nm] = int(m.group(1))
+                ident[nm] = {"id": r["id"], "club": r["club"]}
+        lo, hi = _current_rating_bounds()
+        board = []
+        for r in ratings:
+            dy = int(r.get("draft_year") or 0)
+            if dy not in (CURRENT_YEAR - 1, CURRENT_YEAR - 2):   # 1st or 2nd year
+                continue
+            nm = _norm(r["name"])
+            by = birth.get(nm)
+            if by is not None and by < CURRENT_YEAR - 21:        # under 21 on 1 Jan
+                continue
+            first_year = dy == CURRENT_YEAR - 1
+            if not first_year and games_2025.get(nm, 0) > 10:    # 2nd-year games cap
+                continue
+            if not r.get("rating") or not (r.get("games") or 0):
+                continue
+            idn = ident.get(nm, {})
+            board.append({
+                "name": r["name"], "id": idn.get("id"), "club": idn.get("club") or r.get("team"),
+                "rating": r["rating"], "ltr": _ltr(r["rating"], lo, hi),
+                "games": round(r["games"]), "first_year": first_year,
+                "draft_position": r.get("draft_position"), "position": r.get("position"),
+                "af_avg": r.get("af_avg"),
+            })
+        board.sort(key=lambda x: -x["rating"])
+        for i, x in enumerate(board):
+            x["rank"] = i + 1
+        return {"year": CURRENT_YEAR, "count": len(board),
+                "note": "Standout eligible young players, ranked by AFL Player Rating. A prediction of the Rising Star race, not the panel's 5-4-3-2-1 vote.",
+                "eligibility": "Under 21 on 1 January; first-year, or a second-year with 10 or fewer games last season.",
+                "players": board}
+    data = cached("rising_star", 3600, build)
+    return {**data, "players": data["players"][:limit]}
+
+
 @app.get("/api/form-movers")
 def form_movers(limit: int = 6):
     """Biggest recent risers: last-5 AFL Fantasy vs season average."""
