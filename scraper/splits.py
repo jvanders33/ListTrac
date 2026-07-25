@@ -130,7 +130,7 @@ def build():
                     rec["ha"]["home" if home == team else "away"].append(line)
                     rec["venue"].setdefault(venue, []).append(line)
             time.sleep(0.3)
-        print(f"  {year}: {sum(1 for s in seasons_seen if s == year)} · fixture {len(fx)} games")
+        print(f"  {year}: done · fixture {len(fx)} games")
 
     def agg(lines):
         def m(i):

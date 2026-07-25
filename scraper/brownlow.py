@@ -79,6 +79,7 @@ def vote_score(p) -> float:
 def build():
     token = mint()
     players: dict[str, dict] = {}
+    games_played: dict[str, int] = {}     # every game, not just polling ones
     rounds_done = []
     empty = 0
     for n in range(0, 31):
@@ -113,18 +114,19 @@ def build():
                 rec["polls"] += 1
                 rec["threes"] += 1 if votes == 3 else 0
                 rec["by_round"][str(n)] = votes
-        # keep each player's games-played tally for the projection
+        # every player's games-played tally for the projection — counted for all
+        # who played, not just those who have polled (else the rate is inflated)
         for p in played:
             d = p["playerDetails"]
             nm = _norm(f"{d['givenName']} {d['surname']}")
-            gp = players.get(nm)
-            if gp is not None:
-                gp["games"] = gp.get("games", 0) + 1
+            games_played[nm] = games_played.get(nm, 0) + 1
         time.sleep(0.35)
 
     board = [r for r in players.values() if r["votes"] > 0]
     for r in board:
-        g = max(r.get("games", 0), r["polls"])
+        nm = _norm(r["name"])
+        g = max(games_played.get(nm, 0), r["polls"])
+        r["games"] = g
         r["projected"] = round(r["votes"] / g * SEASON_GAMES) if g else r["votes"]
     board.sort(key=lambda r: (-r["votes"], -r["threes"], r["name"]))
     for i, r in enumerate(board):

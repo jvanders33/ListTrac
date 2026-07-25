@@ -77,7 +77,7 @@ POS_TO_GROUP = {
 
 
 def _norm(s: str) -> str:
-    return re.sub(r"[^a-z]", " ", (s or "").lower()).strip()
+    return re.sub(r"[^a-z]+", " ", (s or "").lower()).strip()
 
 
 def main():

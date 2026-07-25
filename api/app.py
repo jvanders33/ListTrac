@@ -709,11 +709,6 @@ def draft_order():
 
         abbrev_info = {v["abbreviation"]: v for v in club_info.values()}
         slot_order = [SQUIGGLE_ALIASES.get(t["name"], t["name"]) for t in reversed(ladder)]
-        DVI_LOCAL = [3000, 2481, 2178, 1962, 1795, 1659, 1543, 1443, 1355, 1276, 1205, 1140,
-                     1080, 1024, 973, 924, 879, 836, 796, 757, 721, 686, 653, 621, 590, 561,
-                     533, 505, 479, 454, 429, 405, 382, 360, 338, 317, 297, 277, 257, 238,
-                     220, 202, 184, 167, 150, 134, 118, 102, 86, 71, 57, 42, 28, 14]
-
         rounds, pick_no = [], 0
         for rnd in (1, 2, 3, 4):
             rp = []
@@ -730,7 +725,7 @@ def draft_order():
                     "via": origin if owner != origin else None,
                     "ladder_rank": team["rank"], "wins": team["wins"],
                     "losses": team["losses"], "percentage": round(team["percentage"], 1),
-                    "dvi": DVI_LOCAL[pick_no - 1] if pick_no <= len(DVI_LOCAL) else 0,
+                    "dvi": AFL_DVI[pick_no - 1] if pick_no <= len(AFL_DVI) else 0,
                 })
             rounds.append({"round": rnd, "picks": rp})
 
@@ -1252,23 +1247,16 @@ def _current_rating_bounds():
     return _cur_bounds_cache[0]
 
 
-# AFL Draft Value Index — the league's official points-per-pick curve (the same
-# currency clubs match in academy/father-son bids). Used to price trade value in
-# draft picks, the way the NFL (Jimmy Johnson chart) and NBA value trades.
-AFL_DVI = [
-    3000, 2517, 2234, 2034, 1878, 1751, 1644, 1551, 1469, 1395,
-    1329, 1268, 1213, 1162, 1114, 1070, 1029, 990, 954, 920,
-    887, 857, 827, 800, 773, 748, 723, 700, 678, 656,
-    635, 616, 596, 578, 560, 543, 526, 510, 495, 480,
-    465, 451, 437, 424, 411, 398, 386, 374, 362, 351,
-    340, 329, 319, 309, 299, 289, 280, 271, 262, 253,
-    245, 236, 228, 221, 213, 206, 198, 191, 185, 178,
-    171, 165, 159, 153,
-]
-
-
-def _pick_points(pick: int) -> float:
-    return AFL_DVI[pick - 1] if 1 <= pick <= len(AFL_DVI) else (140.0 if pick > 0 else 0.0)
+# AFL Draft Value Index — the league's points-per-pick curve (the currency clubs
+# match in academy/father-son bids), used to price trade value in draft picks the
+# way the NFL (Jimmy Johnson chart) and NBA value trades. ONE canonical curve:
+# the draft-order picks (draft_order), the player equivalents here, and the JS
+# trade machine all use these same 54 values, so pick and player value are
+# genuinely the same currency.
+AFL_DVI = [3000, 2481, 2178, 1962, 1795, 1659, 1543, 1443, 1355, 1276, 1205, 1140,
+           1080, 1024, 973, 924, 879, 836, 796, 757, 721, 686, 653, 621, 590, 561,
+           533, 505, 479, 454, 429, 405, 382, 360, 338, 317, 297, 277, 257, 238,
+           220, 202, 184, 167, 150, 134, 118, 102, 86, 71, 57, 42, 28, 14]
 
 
 def _points_to_pick(points: float) -> int:

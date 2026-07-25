@@ -1353,7 +1353,7 @@ async function tradeMachineView(chrome = "") {
               <td class="num">${A.chosen.length - B.chosen.length > 0 ? "+" : ""}${A.chosen.length - B.chosen.length}</td></tr>
           </tbody>
         </table></div>
-        <p class="thin" style="font-size:11.5px;margin-top:6px">Both sides are priced in the <b>AFL Draft Value Index</b> — the league's own points-per-pick curve. Players are converted to the same points scale from their ListTrac Trade Value (rating × age × contract), so players and picks add up in one currency, the way NFL and NBA trade calculators work.</p>
+        <p class="thin" style="font-size:11.5px;margin-top:6px">Picks are valued on the <b>AFL Draft Value Index</b> — the league's own points-per-pick curve. Each player's ListTrac Trade Value (rating × age × contract) is then converted onto that same points scale, so players and picks can be weighed in one currency, the way NFL and NBA trade calculators work.</p>
         <p class="sub" style="margin-top:12px">${esc(verdict)}</p>
         ${[...A.warnings, ...B.warnings].map(w => `<p class="tm-warn">⚠ ${esc(w)}</p>`).join("")}
         ` : `<p class="thin">Select players and picks on each side to build a trade.</p>`}
@@ -2129,8 +2129,9 @@ function stateOfListCard(profile) {
 function rankMoversCard(list) {
   const moved = list.filter(p => p.rank_delta != null && Math.abs(p.rank_delta) >= 10);
   if (moved.length < 3) return "";
-  const up = [...moved].sort((a, b) => b.rank_delta - a.rank_delta).slice(0, 5);
-  const down = [...moved].sort((a, b) => a.rank_delta - b.rank_delta).slice(0, 5);
+  const up = moved.filter(p => p.rank_delta > 0).sort((a, b) => b.rank_delta - a.rank_delta).slice(0, 5);
+  const down = moved.filter(p => p.rank_delta < 0).sort((a, b) => a.rank_delta - b.rank_delta).slice(0, 5);
+  if (!up.length && !down.length) return "";
   const row = (p, cls) => `<div class="mv-row">
     <a href="#/player/${p.id}">${esc(p.last_name)}</a>
     <span class="thin">${p.rating_rank ? "#" + p.rating_rank : ""}${p.rank_prev ? ` <span class="mv-was">was #${p.rank_prev}</span>` : ""}</span>

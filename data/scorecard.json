@@ -32,18 +32,18 @@
   },
   "predictor": {
    "label": "ListTrac Brownlow model",
-   "spearman": 0.678,
-   "top10": 6.0,
-   "top25": 17.7,
+   "spearman": 0.664,
+   "top10": 7.0,
+   "top25": 17.3,
    "rank": 1
   }
  },
  "ranked": [
   {
    "label": "ListTrac Brownlow model",
-   "spearman": 0.678,
-   "top10": 6.0,
-   "top25": 17.7,
+   "spearman": 0.664,
+   "top10": 7.0,
+   "top25": 17.3,
    "rank": 1
   },
   {
@@ -90,9 +90,9 @@
      "top25": 16
     },
     "predictor": {
-     "spearman": 0.686,
-     "top10": 6,
-     "top25": 18
+     "spearman": 0.662,
+     "top10": 7,
+     "top25": 19
     }
    }
   },
@@ -117,9 +117,9 @@
      "top25": 14
     },
     "predictor": {
-     "spearman": 0.677,
+     "spearman": 0.676,
      "top10": 6,
-     "top25": 17
+     "top25": 16
     }
    }
   },
@@ -144,9 +144,9 @@
      "top25": 10
     },
     "predictor": {
-     "spearman": 0.671,
-     "top10": 6,
-     "top25": 18
+     "spearman": 0.653,
+     "top10": 8,
+     "top25": 17
     }
    }
   }

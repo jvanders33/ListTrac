@@ -110,11 +110,13 @@ def season_fantasy(year: int, token: str) -> dict[str, float]:
 def predictor_votes(year: int, token: str) -> dict[str, float]:
     """Run ListTrac's per-match 3-2-1 Brownlow model on the season's rounds."""
     def vscore(p):
+        # must match scraper/brownlow.py::vote_score exactly, so the scorecard
+        # grades the model users actually see (rating + disposal/mid lean + goals + win)
         t = p.get("totals", {})
         mid = (p["playerDetails"].get("position") or "") in MID
         return ((t.get("ratingPoints") or 0) + 0.09 * (t.get("disposals") or 0)
                 + 1.2 * (t.get("goals") or 0) + (4.0 if (p.get("result") or "").startswith("W") else 0)
-                + (2.0 if mid else 0))
+                + (3.0 if mid else 0))
     tally, empty = {}, 0
     for n in range(0, 31):
         rid = f"CD_R{year}014{n:02d}"
