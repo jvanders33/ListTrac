@@ -2513,6 +2513,7 @@ function playerCardSVG(p, heroA, heroTrim) {
   if (p.drafted) facts.push(["Drafted", `${p.drafted.year}${p.drafted.pick_number ? " · Pick " + p.drafted.pick_number : ""}`]);
   if (current && current.contracted_through_year) facts.push(["Contracted to", current.contracted_through_year]);
   const metrics = [];
+  if (p.rating && p.rating.ltr != null) metrics.push(["ListTrac Rating", `${p.rating.ltr} / 100`]);
   if (p.rating) metrics.push(["AFL Player Rating", `#${p.rating.rank} · ${p.rating.rating}`]);
   if (p.fantasy) metrics.push(["AFL Fantasy avg", p.fantasy.af_avg]);
   if (current) metrics.push(["Contract status", (STATUS[current.status] || {}).label || current.status]);
@@ -2531,9 +2532,18 @@ function playerCardSVG(p, heroA, heroTrim) {
     <rect width="${W}" height="440" fill="${heroA}"/>
     <rect y="440" width="${W}" height="6" fill="${heroTrim}"/>
     <text x="60" y="90" font-size="30" font-weight="800" fill="#F2F4F3" font-family="system-ui,sans-serif" opacity="0.85">List<tspan fill="#BF4226">Trac</tspan></text>
-    <text x="60" y="300" font-size="72" font-weight="800" fill="#F5F2EC" font-family="system-ui,sans-serif">${esc(p.first_name)}</text>
-    <text x="60" y="380" font-size="72" font-weight="800" fill="#F5F2EC" font-family="system-ui,sans-serif">${esc(p.last_name)}</text>
-    <text x="60" y="425" font-size="26" font-weight="700" fill="${heroTrim}" font-family="system-ui,sans-serif" letter-spacing="1">${esc((p.club || "Unattached").toUpperCase())}${p.fantasy && p.fantasy.position ? " · " + esc(p.fantasy.position.replace(/_/g, " ")) : ""}</text>
+    ${p.rating && p.rating.ltr != null ? `
+    <text x="915" y="120" font-size="20" font-weight="700" fill="${heroTrim}" text-anchor="middle" font-family="system-ui,sans-serif" letter-spacing="2">RATING</text>
+    <circle cx="915" cy="205" r="92" fill="#10171C" fill-opacity="0.32" stroke="${heroTrim}" stroke-width="4"/>
+    <text x="915" y="228" font-size="90" font-weight="800" fill="#F5F2EC" text-anchor="middle" font-family="system-ui,sans-serif">${p.rating.ltr}</text>
+    <text x="915" y="272" font-size="22" fill="#F5F2EC" text-anchor="middle" opacity="0.75" font-family="system-ui,sans-serif">/ 100</text>` : ""}
+    <text x="60" y="272" font-size="72" font-weight="800" fill="#F5F2EC" font-family="system-ui,sans-serif">${esc(p.first_name)}</text>
+    <text x="60" y="344" font-size="72" font-weight="800" fill="#F5F2EC" font-family="system-ui,sans-serif">${esc(p.last_name)}</text>
+    <text x="60" y="388" font-size="26" font-weight="700" fill="${heroTrim}" font-family="system-ui,sans-serif" letter-spacing="1">${esc((p.club || "Unattached").toUpperCase())}${p.fantasy && p.fantasy.position ? " · " + esc(p.fantasy.position.replace(/_/g, " ")) : ""}</text>
+    ${p.role ? `<text x="60" y="422" font-size="23" fill="#C9D3D0" font-family="system-ui,sans-serif">${esc(p.role.role_label)}${p.role.secondary_label ? " / " + esc(p.role.secondary_label) : ""}</text>` : ""}
+    ${p.all_australian ? `
+    <rect x="700" y="330" width="320" height="40" rx="20" fill="#F5E3A8"/>
+    <text x="860" y="357" font-size="21" font-weight="800" fill="#6B4E00" text-anchor="middle" font-family="system-ui,sans-serif">★ ${p.all_australian.team_count}× All-Australian</text>` : ""}
     ${factRows}
     ${metricRows}
     <text x="60" y="${H - 40}" font-size="20" fill="#55636D" font-family="system-ui,sans-serif">list-trac.vercel.app · ratings: Champion Data / AFL</text>
