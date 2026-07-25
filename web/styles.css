@@ -437,6 +437,25 @@ footer.pagefoot {
 .brownlow .bl-top td { background: var(--card-2); }
 .brownlow .bl-top b { color: var(--accent); }
 
+/* season snapshot (landing races) */
+.race-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; margin-top: 6px; }
+.race-card { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; background: var(--card-2); border: 1px solid transparent; }
+.race-card:hover { border-color: var(--line); }
+.race-icon { font-size: 20px; }
+.race-body { display: flex; flex-direction: column; min-width: 0; }
+.race-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-2); }
+.race-name { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.race-val { font-size: 11px; color: var(--accent); }
+.race-flag { margin-top: 10px; padding: 12px; border-radius: 10px; background: var(--card-2); }
+.race-flag-head { display: flex; align-items: center; gap: 8px; font-size: 13px; margin-bottom: 8px; }
+.race-flag-teams { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.race-team { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-variant-numeric: tabular-nums; }
+
+/* flag race */
+.flagrace .fr-top4 td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
+.flagrace .fr-in8 { background: var(--card-2); }
+.flagrace .fr-cut td { border-bottom: 2px dashed var(--line); }
+
 /* trade finder */
 .tf-need h3 .thin { color: var(--warn); }
 .tf-get { font-size: 11px; font-weight: 700; color: var(--ok); background: rgba(30,107,79,0.14); padding: 2px 7px; border-radius: 999px; }

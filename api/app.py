@@ -839,6 +839,60 @@ def trade_finder(club: str):
             "method": "For each derived role, a club's best ListTrac Rating is compared to the league median of clubs' best options. The widest gaps are the needs; targets are the best players elsewhere in that role — free agents and out-of-contract players (gettable) first, then trade targets."}
 
 
+@app.get("/api/flag-race")
+def flag_race():
+    """Projected final ladder & flag race. Takes the current ladder and adds each
+    team's expected wins from every remaining game — using Squiggle's model win
+    probability per game — to project where the season finishes. Cached."""
+    def build():
+        ua = {"User-Agent": "ListTrac (github.com/jvanders33/ListTrac)"}
+        games = requests.get(SQUIGGLE, params={"q": "games", "year": CURRENT_YEAR}, headers=ua, timeout=15).json()["games"]
+        standings = requests.get(SQUIGGLE, params={"q": "standings", "year": CURRENT_YEAR}, headers=ua, timeout=15).json()["standings"]
+        tips = requests.get(SQUIGGLE, params={"q": "tips", "year": CURRENT_YEAR}, headers=ua, timeout=20).json()["tips"]
+        with db() as conn:
+            to_abbr = {r["name"]: r["abbreviation"] for r in conn.execute("SELECT name, abbreviation FROM club")}
+
+        def abbr(n):
+            return to_abbr.get(SQUIGGLE_ALIASES.get(n, n), n)
+
+        # Squiggle model (sourceid 1) home win probability per game id
+        phome = {t["gameid"]: (float(t.get("hconfidence") or 50) / 100.0)
+                 for t in tips if str(t.get("sourceid")) == "1"}
+
+        proj = {}
+        for t in standings:
+            a = abbr(t["name"])
+            proj[a] = {"team": a, "rank": t["rank"], "wins": t["wins"], "losses": t["losses"],
+                       "draws": t.get("draws", 0), "percentage": round(t.get("percentage") or 0, 1),
+                       "proj_wins": float(t["wins"]), "games_left": 0}
+        remaining = [g for g in games if (g.get("complete") or 0) < 100]
+        for g in remaining:
+            h, a = abbr(g.get("hteam")), abbr(g.get("ateam"))
+            p = phome.get(g.get("id"), 0.5)
+            if h in proj:
+                proj[h]["proj_wins"] += p
+                proj[h]["games_left"] += 1
+            if a in proj:
+                proj[a]["proj_wins"] += (1 - p)
+                proj[a]["games_left"] += 1
+
+        board = sorted(proj.values(), key=lambda c: (-c["proj_wins"], -c["percentage"]))
+        for i, c in enumerate(board):
+            c["proj_wins"] = round(c["proj_wins"], 1)
+            c["proj_rank"] = i + 1
+            c["movement"] = c["rank"] - c["proj_rank"]     # + = projected to climb
+            c["in8"] = c["proj_rank"] <= 8
+            c["top4"] = c["proj_rank"] <= 4
+        return {"year": CURRENT_YEAR, "games_remaining": len(remaining),
+                "source": "api.squiggle.com.au",
+                "method": "Projected wins = current wins + the sum of each remaining game's Squiggle model win probability. Ladder ordered by projected wins, then percentage. Not a full Monte-Carlo of finals — a straight expected-wins projection.",
+                "ladder": board}
+    try:
+        return cached("flag_race", 1800, build)
+    except requests.RequestException:
+        raise HTTPException(503, "Squiggle unavailable")
+
+
 @app.get("/api/run-home")
 def run_home():
     """Every club's run home: the games left, who they meet, where, and how hard
@@ -1503,6 +1557,17 @@ def _brownlow_index() -> dict:
     return _brownlow_cache
 
 
+MILESTONES_PATH = Path(__file__).resolve().parent.parent / "data" / "milestones_2026.json"
+_milestones_cache: dict = {}
+
+
+def _milestones() -> dict:
+    import json
+    if not _milestones_cache and MILESTONES_PATH.exists():
+        _milestones_cache.update(json.loads(MILESTONES_PATH.read_text(encoding="utf-8")))
+    return _milestones_cache
+
+
 AA_PATH = Path(__file__).resolve().parent.parent / "data" / "all_australian.json"
 _aa_cache: dict = {}
 
@@ -1752,6 +1817,19 @@ def roles():
     players.sort(key=lambda p: (-(p["rating"] or 0), p["name"]))
     return {"roles": ri.get("_roles", {}), "attribution": ri.get("_attribution"),
             "count": len(players), "players": players}
+
+
+@app.get("/api/milestones")
+def milestones():
+    """Coleman Medal (goalkicking) race + players nearing a games milestone."""
+    m = _milestones()
+    if not m:
+        raise HTTPException(404, "milestones not built")
+    ident = _ident_by_name()
+    def link(rows):
+        return [{**r, "id": (ident.get(_norm(r["name"])) or {}).get("id")} for r in rows]
+    return {"year": m.get("year"), "attribution": m.get("attribution"),
+            "coleman": link(m.get("coleman", [])), "approaching": link(m.get("approaching", []))}
 
 
 @app.get("/api/rising-star")

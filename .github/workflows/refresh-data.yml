@@ -86,6 +86,11 @@ jobs:
         run: python scraper/all_australian.py
         continue-on-error: true
 
+      - name: Build milestone watch (Coleman race + games milestones)
+        # season goalkicking + players nearing a games milestone
+        run: python scraper/milestones.py
+        continue-on-error: true
+
       - name: Build Draft Combine results (scaffold + manual layer)
         # placeholder until the Oct combine; merges data/combine_manual.json
         run: python scraper/combine.py

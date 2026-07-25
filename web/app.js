@@ -237,7 +237,8 @@ const monthYear = d => {
 };
 
 async function landingView() {
-  const [summary, order, newsItems, trend, clubList, adminUpdates, trendingPlayers, tvBoard, movers] = await Promise.all([
+  const [summary, order, newsItems, trend, clubList, adminUpdates, trendingPlayers, tvBoard, movers,
+         brownlow, rising, miles, flag] = await Promise.all([
     api("/api/summary"),
     api("/api/draft-order").catch(() => null),
     api("/api/news").catch(() => []),
@@ -247,6 +248,10 @@ async function landingView() {
     api("/api/trending-players").catch(() => []),
     api("/api/trade-values?limit=6").catch(() => ({ players: [] })),
     api("/api/form-movers?limit=6").catch(() => ({ players: [] })),
+    api("/api/brownlow?limit=1").catch(() => null),
+    api("/api/rising-star?limit=1").catch(() => null),
+    api("/api/milestones").catch(() => null),
+    api("/api/flag-race").catch(() => null),
   ]);
   const s = summary.contract_statuses;
   const rfas = trend.filter(t => t.kind === "rfa");
@@ -342,6 +347,31 @@ async function landingView() {
             <p class="thin" style="font-size:11px;margin-top:8px">Biggest AFL Fantasy risers over their last five games.</p>
           </div>` : ""}
         </div>
+
+        ${(() => {
+          const bl = brownlow && brownlow.players && brownlow.players[0];
+          const rs = rising && rising.players && rising.players[0];
+          const cm = miles && miles.coleman && miles.coleman[0];
+          const race = (icon, label, href, name, val) => name ? `
+            <a class="race-card" href="${href}">
+              <span class="race-icon">${icon}</span>
+              <span class="race-body"><span class="race-label">${esc(label)}</span>
+                <b class="race-name">${esc(name)}</b><span class="race-val">${esc(val)}</span></span></a>` : "";
+          const flagTop = flag && flag.ladder ? flag.ladder.slice(0, 4) : [];
+          if (!bl && !rs && !cm && !flagTop.length) return "";
+          return `<div class="card">
+            <h3>Season snapshot <span class="thin" style="font-weight:400">· the races</span></h3>
+            <div class="race-row">
+              ${race("🏅", "Brownlow leader", "#/players/brownlow", bl && bl.name, bl && `${bl.votes} votes`)}
+              ${race("⭐", "Rising Star", "#/players/rising-star", rs && rs.name, rs && `rating ${Math.round(rs.rating)}`)}
+              ${race("⚽", "Coleman (goals)", "#/milestones", cm && cm.name, cm && `${cm.goals} goals`)}
+            </div>
+            ${flagTop.length ? `<div class="race-flag">
+              <div class="race-flag-head"><b>Flag race</b> <span class="thin">projected top 4</span> <a class="thin" href="#/flag-race" style="margin-left:auto">full ladder →</a></div>
+              <div class="race-flag-teams">${flagTop.map(c => `<span class="race-team">${guernsey(c.team, 18)} ${esc(c.team)} <b>${c.proj_wins}</b></span>`).join("")}</div>
+            </div>` : ""}
+          </div>`;
+        })()}
 
         <div class="card">
           <h3>Free agency class of 2026</h3>
@@ -3391,6 +3421,73 @@ async function risingStarView() {
     </div>`;
 }
 
+async function milestonesView() {
+  const d = await api("/api/milestones").catch(() => null);
+  if (!d) { view.innerHTML = `<div class="card"><p class="error">Milestones unavailable.</p></div>`; return; }
+  const medal = r => r === 1 ? "🥇" : r === 2 ? "🥈" : r === 3 ? "🥉" : r;
+  const near = [...(d.approaching || [])].filter(a => a.away <= 8).sort((a, b) => a.away - b.away).slice(0, 16);
+  view.innerHTML = `
+    <div class="cols">
+      <div>
+        <div class="card">
+          <h3>Coleman Medal race <span class="thin" style="font-weight:400">· ${d.year} goalkicking</span></h3>
+          <p class="sub">The season's leading goalkickers — the Coleman Medal is awarded to the home-and-away top scorer.</p>
+          <div class="tablewrap"><table class="brownlow">
+            <thead><tr><th class="num">#</th><th>Player</th><th>Club</th><th class="num">Goals</th><th class="num">Games</th><th class="num">/gm</th></tr></thead>
+            <tbody>${d.coleman.slice(0, 20).map(c => `
+              <tr${c.rank <= 3 ? ' class="bl-top"' : ""}>
+                <td class="num">${medal(c.rank)}</td>
+                <td>${c.id ? `<a href="#/player/${c.id}">${esc(c.name)}</a>` : esc(c.name)}</td>
+                <td>${clubTag(c.club, c.club)}</td>
+                <td class="num"><b>${c.goals}</b></td>
+                <td class="num thin">${c.games}</td>
+                <td class="num thin">${c.per_game}</td></tr>`).join("")}
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Approaching a milestone</h3>
+          <p class="sub">Players within a few games of 50 / 100 / 150 / 200 this season.</p>
+          <div class="complist">
+            ${near.map(a => `<div class="comprow" style="--sim:${100 - a.away * 10}%">
+              <span class="comp-name">${a.id ? `<a href="#/player/${a.id}">${esc(a.name)}</a>` : esc(a.name)} <span class="thin">${esc(a.club || "")}</span></span>
+              <span class="comp-bar"><i></i></span>
+              <span class="comp-meta"><b>${a.away}</b><span class="thin"> to ${a.milestone}</span></span>
+            </div>`).join("") || `<p class="thin">Nobody within 8 games right now.</p>`}
+          </div>
+          <p class="thin" style="font-size:11px;margin-top:8px">${esc(d.attribution || "")}</p>
+        </div>
+      </div>
+    </div>`;
+}
+
+async function flagRaceView() {
+  const d = await api("/api/flag-race").catch(() => null);
+  if (!d) { view.innerHTML = `<div class="card"><p class="error">Flag race unavailable.</p></div>`; return; }
+  const mv = c => c.movement > 0 ? `<span class="mv-up">▲${c.movement}</span>` : c.movement < 0 ? `<span class="mv-down">▼${Math.abs(c.movement)}</span>` : `<span class="thin">–</span>`;
+  view.innerHTML = `
+    <div class="card">
+      <h3>Flag race <span class="thin" style="font-weight:400">· projected final ladder</span></h3>
+      <p class="sub">Where the season finishes if the models are right — each club's current wins plus its expected wins from every remaining game (Squiggle's per-game probability). ${d.games_remaining} games left. The dashed line is the top-eight cut.</p>
+      <div class="tablewrap"><table class="flagrace">
+        <thead><tr><th class="num">Proj</th><th>Club</th><th class="num">Now</th><th class="num"></th><th class="num">Wins</th><th class="num">Proj wins</th><th class="num">Left</th></tr></thead>
+        <tbody>${d.ladder.map((c, i) => `
+          <tr class="${c.top4 ? "fr-top4" : c.in8 ? "fr-in8" : ""}${i === 7 ? " fr-cut" : ""}">
+            <td class="num"><b>${c.proj_rank}</b></td>
+            <td>${clubTag(c.team, c.team)}</td>
+            <td class="num thin">#${c.rank}</td>
+            <td class="num">${mv(c)}</td>
+            <td class="num thin">${c.wins}</td>
+            <td class="num"><b>${c.proj_wins}</b></td>
+            <td class="num thin">${c.games_left}</td></tr>`).join("")}
+        </tbody>
+      </table></div>
+      <details class="methodology"><summary>Methodology</summary><p>${esc(d.method)} Fixture & model from Squiggle.</p></details>
+    </div>`;
+}
+
 async function brownlowView() {
   const data = await api("/api/brownlow?limit=60").catch(() => null);
   if (!data) { view.innerHTML = `${playersChrome("brownlow")}<div class="card"><p class="error">Brownlow projection unavailable.</p></div>`; return; }
@@ -3452,6 +3549,8 @@ const routes = [
   [/^#\/players\/roles$/,           () => rolesView()],
   [/^#\/players\/brownlow$/,        () => brownlowView()],
   [/^#\/players\/rising-star$/,     () => risingStarView()],
+  [/^#\/flag-race$/,                () => flagRaceView()],
+  [/^#\/milestones$/,               () => milestonesView()],
   [/^#\/players\/scorecard$/,       () => scorecardView()],
   [/^#\/players$/,                  () => playersView()],
   [/^#\/players\/rankings$/,        () => rankingsView()],
