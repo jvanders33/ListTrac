@@ -192,7 +192,18 @@ def main():
         by_key[_dedupe_key(e)] = e
     for e in load_manual():          # hand-verified corrections win outright
         by_key[_dedupe_key(e)] = e
-    events = sorted(by_key.values(), key=lambda e: e["date"])
+    events = list(by_key.values())
+
+    # When a hand-verified signing/extension exists for a player in a given year,
+    # drop the auto-scraped version of that same deal — the aggregator often has
+    # it with a stale end year (or no club), which would double up the timeline.
+    DEAL = {"signing", "extension"}
+    manual_deals = {(e["norm"], e["date"][:4]) for e in events
+                    if e.get("manual") and e["kind"] in DEAL}
+    events = [e for e in events
+              if not (not e.get("manual") and e["kind"] in DEAL
+                      and (e["norm"], e["date"][:4]) in manual_deals)]
+    events.sort(key=lambda e: e["date"])
     payload = {
         "source": "AFL.com.au + AFLRATINGS",
         "source_url": "https://www.afl.com.au/news",

@@ -3,8 +3,120 @@
  "source_url": "https://www.afl.com.au/news",
  "attribution": "Contract & movement events from the AFL's own content API and AFLRATINGS' reporting, with hand-verified corrections; each event links to its source. The AFL does not disclose contract terms — no dollar figures are tracked.",
  "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
- "count": 397,
+ "count": 408,
  "events": [
+  {
+   "name": "Marcus Bontempelli",
+   "norm": "marcusbontempelli",
+   "date": "2015-09-27",
+   "kind": "extension",
+   "club": "WB",
+   "length": 4,
+   "end_year": 2019,
+   "end_estimated": false,
+   "reporter": "Western Bulldogs",
+   "source_url": "https://westernbulldogs.com.au/news/2015-09-27/bont-pens-new-deal",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Isaac Heeney",
+   "norm": "isaacheeney",
+   "date": "2016-12-15",
+   "kind": "extension",
+   "club": "SYD",
+   "length": 5,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/80689/swans-young-gun-locked-in-for-five-more",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Marcus Bontempelli",
+   "norm": "marcusbontempelli",
+   "date": "2018-11-20",
+   "kind": "extension",
+   "club": "WB",
+   "length": 2,
+   "end_year": 2021,
+   "end_estimated": false,
+   "reporter": "Western Bulldogs",
+   "source_url": "https://www.westernbulldogs.com.au/news/265107/bontempelli-commits",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Jordan Dawson",
+   "norm": "jordandawson",
+   "date": "2019-06-15",
+   "kind": "extension",
+   "club": "SYD",
+   "length": 2,
+   "end_year": 2021,
+   "end_estimated": false,
+   "reporter": "Sydney Swans",
+   "source_url": "https://www.sydneyswans.com.au/news/104168/two-more-for-dawson-",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Bailey Smith",
+   "norm": "baileysmith",
+   "date": "2019-12-17",
+   "kind": "extension",
+   "club": "WB",
+   "length": 2,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "Western Bulldogs",
+   "source_url": "https://www.westernbulldogs.com.au/news/549928/smith-signs",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Luke Jackson",
+   "norm": "lukejackson",
+   "date": "2020-11-15",
+   "kind": "extension",
+   "club": "MEL",
+   "length": 2,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "Melbourne FC",
+   "source_url": "https://www.melbournefc.com.au/news/836725/dogga-the-demon-jackson-extends-contract-with-melbourne",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Marcus Bontempelli",
+   "norm": "marcusbontempelli",
+   "date": "2021-05-25",
+   "kind": "extension",
+   "club": "WB",
+   "length": 4,
+   "end_year": 2025,
+   "end_estimated": false,
+   "reporter": "ESPN",
+   "source_url": "https://www.espn.com/afl/story/_/id/31506817/afl-marcus-bontempelli-inks-four-year-extension-western-bulldogs",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Jordan Dawson",
+   "norm": "jordandawson",
+   "date": "2021-10-13",
+   "kind": "trade",
+   "club": "ADE",
+   "length": null,
+   "end_year": null,
+   "end_estimated": true,
+   "reporter": "Wikipedia",
+   "source_url": "https://en.wikipedia.org/wiki/Jordan_Dawson",
+   "manual": true,
+   "current": false
+  },
   {
    "name": "2021 AFL Draft: All the Picks",
    "norm": "afldraftallthepicks",
@@ -148,18 +260,6 @@
    "end_estimated": true,
    "reporter": "Riley Beveridge",
    "source_url": "https://aflratings.com.au/2022/01/31/sydney-update-paddy-mccartin/"
-  },
-  {
-   "name": "Isaac Heeney",
-   "norm": "isaacheeney",
-   "date": "2022-02-03",
-   "kind": "signing",
-   "club": "SYD",
-   "length": null,
-   "end_year": null,
-   "end_estimated": false,
-   "reporter": "SEN",
-   "source_url": "https://aflratings.com.au/2022/02/03/contract-update-isaac-heeney/"
   },
   {
    "name": "Harry Edwards",
@@ -330,18 +430,6 @@
    "source_url": "https://aflratings.com.au/2022/02/14/contract-update-elijah-hollands/"
   },
   {
-   "name": "Isaac Heeney",
-   "norm": "isaacheeney",
-   "date": "2022-02-17",
-   "kind": "extension",
-   "club": "SYD",
-   "length": null,
-   "end_year": null,
-   "end_estimated": false,
-   "reporter": "SEN",
-   "source_url": "https://aflratings.com.au/2022/02/17/contract-update-isaac-heeney-2/"
-  },
-  {
    "name": "Jake Soligo",
    "norm": "jakesoligo",
    "date": "2022-02-22",
@@ -409,9 +497,11 @@
    "club": "SYD",
    "length": 6,
    "end_year": 2028,
-   "end_estimated": true,
-   "reporter": "Sydney Mitch",
-   "source_url": "https://aflratings.com.au/2022/03/02/contract-update-isaac-heeney-3/"
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/712443/off-the-table-swans-star-inks-monster-contract-extension",
+   "manual": true,
+   "current": true
   },
   {
    "name": "Jack Hayes",
@@ -1110,18 +1200,6 @@
    "source_url": "https://aflratings.com.au/2022/06/28/melbourne-update-majak-daw/"
   },
   {
-   "name": "Luke Jackson",
-   "norm": "lukejackson",
-   "date": "2022-06-29",
-   "kind": "signing",
-   "club": "MEL",
-   "length": null,
-   "end_year": null,
-   "end_estimated": false,
-   "reporter": "SEN",
-   "source_url": "https://aflratings.com.au/2022/06/29/contract-update-luke-jackson/"
-  },
-  {
    "name": "St Kilda Update: Rowan Marshall",
    "norm": "stkildaupdaterowanmarshall",
    "date": "2022-06-29",
@@ -1622,8 +1700,10 @@
    "length": 2,
    "end_year": 2024,
    "end_estimated": false,
-   "reporter": "Western",
-   "source_url": "https://aflratings.com.au/2022/08/08/contract-update-bailey-smith/"
+   "reporter": "ESPN",
+   "source_url": "https://www.espn.com/afl/story/_/id/34367920/afl-bailey-smith-re-signs-western-bulldogs",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Heath Chapman",
@@ -3282,6 +3362,20 @@
    "source_url": "https://aflratings.com.au/2022/10/10/afl-trade-news-oct-10-updates/"
   },
   {
+   "name": "Luke Jackson",
+   "norm": "lukejackson",
+   "date": "2022-10-10",
+   "kind": "trade",
+   "club": "FRE",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/856550/action-jackson-melbourne-demons-ruck-luke-jackson-gets-trade-wish-to-head-west",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Sydney Update: Harry Cunningham",
    "norm": "sydneyupdateharrycunningham",
    "date": "2022-10-11",
@@ -3352,6 +3446,20 @@
    "end_estimated": true,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2022/10/11/afl-trade-news-oct-11-updates/"
+  },
+  {
+   "name": "Luke Jackson",
+   "norm": "lukejackson",
+   "date": "2022-10-11",
+   "kind": "signing",
+   "club": "FRE",
+   "length": 7,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": "Fremantle FC",
+   "source_url": "https://en.wikipedia.org/wiki/Luke_Jackson_(footballer)",
+   "manual": true,
+   "current": true
   },
   {
    "name": "Western Bulldogs Update: Rory Lobb",
@@ -3836,6 +3944,20 @@
    "source_url": "https://aflratings.com.au/2022/11/18/brisbane-update-conor-mckenna/"
   },
   {
+   "name": "Nick Daicos",
+   "norm": "nickdaicos",
+   "date": "2023-08-02",
+   "kind": "extension",
+   "club": "COL",
+   "length": 4,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/992625/brother-what-a-deal-nick-and-josh-daicos-ink-mega-contracts-with-collingwood-magpies",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Jack Gunston",
    "norm": "jackgunston",
    "date": "2023-10-13",
@@ -3850,6 +3972,34 @@
    "current": false
   },
   {
+   "name": "Bailey Smith",
+   "norm": "baileysmith",
+   "date": "2024-10-16",
+   "kind": "trade",
+   "club": "GEE",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1237624/four-club-three-player-trade-lands-on-the-buzzer-bailey-smith-jack-macrae-and-matt-kennedy-get-their-trade-wishes",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Bailey Smith",
+   "norm": "baileysmith",
+   "date": "2024-10-17",
+   "kind": "signing",
+   "club": "GEE",
+   "length": 6,
+   "end_year": 2030,
+   "end_estimated": true,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1487998/star-midfielder-bailey-smith-set-for-pay-rise-after-blockbuster-start-to-geelong-cats-career",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Scott Pendlebury",
    "norm": "scottpendlebury",
    "date": "2025-06-19",
@@ -3862,16 +4012,32 @@
    "source_url": "https://aflratings.com.au/2025/06/19/afl-trade-news-update-scott-pendlebury/"
   },
   {
+   "name": "Jordan Dawson",
+   "norm": "jordandawson",
+   "date": "2025-07-16",
+   "kind": "extension",
+   "club": "ADE",
+   "length": null,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": "Adelaide FC",
+   "source_url": "https://www.afc.com.au/news/1833015/crows-skipper-extends",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Marcus Bontempelli",
    "norm": "marcusbontempelli",
-   "date": "2025-06-22",
+   "date": "2025-07-21",
    "kind": "extension",
-   "club": null,
+   "club": "WB",
    "length": 4,
-   "end_year": 2027,
+   "end_year": 2029,
    "end_estimated": false,
-   "reporter": null,
-   "source_url": "https://aflratings.com.au/2025/06/22/afl-trade-news-marcus-bontempelli/"
+   "reporter": "ESPN",
+   "source_url": "https://www.espn.com/afl/story/_/id/45790851/afl-marcus-bontempelli-signs-four-year-extension-stay-western-bulldogs",
+   "manual": true,
+   "current": true
   },
   {
    "name": "Jack Gunston",
