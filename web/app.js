@@ -3194,8 +3194,47 @@ const draftChrome = act => `<div class="subtabs">
 </div>`;
 const tradesChrome = act => `<div class="subtabs">
   <a href="#/trades" class="${act === "machine" ? "active" : ""}">Trade machine</a>
+  <a href="#/trades/finder" class="${act === "finder" ? "active" : ""}">Trade finder</a>
   <a href="#/trades/history/2025" class="${act === "history" ? "active" : ""}">Trade history</a>
 </div>`;
+
+let tfClub = null;
+async function tradeFinderView(chrome = "") {
+  const clubs = await api("/clubs").then(cs => cs.filter(c => c.listed_players > 0)).catch(() => []);
+  if (!tfClub && clubs.length) tfClub = clubs[0].abbreviation;
+  const d = await api(`/api/trade-finder?club=${encodeURIComponent(tfClub)}`).catch(() => null);
+  const availTag = c => c.available
+    ? `<span class="tf-get">${esc((STATUS[c.status] || {}).label || "gettable")}</span>`
+    : `<span class="tf-trade">contracted</span>`;
+  const needCard = n => `<div class="card tf-need">
+    <h3>${esc(n.role_label)} <span class="thin" style="font-weight:400">· gap ${n.gap}</span></h3>
+    <p class="sub">Your best is ${n.best_player ? `<a href="#/player/${n.best_player.id}">${esc(n.best_player.name)}</a> (${n.best_player.ltr}, ${n.best_player.age}yo)` : "<b>nobody rated here</b>"} — the league's clubs average ${n.league_median} at this role. You carry ${n.count}.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Target</th><th>Club</th><th class="num">Age</th><th class="num">LTR</th><th>Status</th><th class="num">≈ Pick</th></tr></thead>
+      <tbody>${n.candidates.map(c => `<tr>
+        <td><a href="#/player/${c.id}">${esc(c.name)}</a></td>
+        <td>${clubTag(c.club, c.club)}</td>
+        <td class="num thin">${c.age ?? ""}</td>
+        <td class="num"><b class="ltr">${c.ltr ?? "—"}</b></td>
+        <td>${availTag(c)}</td>
+        <td class="num thin">${c.equiv_pick_str ? esc(c.equiv_pick_str.replace("pick ", "")) : "—"}</td></tr>`).join("")}
+      </tbody>
+    </table></div>
+  </div>`;
+  view.innerHTML = `${chrome}
+    <div class="card">
+      <h3>Trade finder</h3>
+      <div class="controls" style="margin-top:6px">
+        <label class="eyebrow" style="margin:0" for="tf-club">Club</label>
+        <select id="tf-club">${clubs.map(c => `<option value="${esc(c.abbreviation)}" ${c.abbreviation === tfClub ? "selected" : ""}>${esc(c.name)}</option>`).join("")}</select>
+      </div>
+      <p class="sub" style="margin-top:10px">${d ? `Where ${esc(d.club)} is thin, and who could fill it — the widest gaps between their best option at a role and the league, with the best players elsewhere. <span class="tf-get">Gettable</span> (free agents / out of contract) come first, then contracted trade targets.` : "Loading…"}</p>
+    </div>
+    ${d && d.needs.length ? d.needs.map(needCard).join("") : (d ? `<div class="card"><p class="thin">No clear gaps — this list is at or above the league median at every role.</p></div>` : "")}
+    ${d ? `<div class="card"><details class="methodology"><summary>Methodology</summary><p>${esc(d.method)}</p></details></div>` : ""}`;
+  const sel = view.querySelector("#tf-club");
+  if (sel) sel.addEventListener("change", e => { tfClub = e.target.value; tradeFinderView(chrome); });
+}
 const go = hash => { location.replace(hash); return Promise.resolve(); };
 
 /* Player comparison — overlay two scouting radars + a head-to-head table.
@@ -3387,6 +3426,7 @@ const routes = [
   [/^#\/prospect\/(.+)$/,           m => prospectProfileView(decodeURIComponent(m[1]))],
   [/^#\/draft\/history\/(\d{4})(?:\/(\w+))?$/, m => draftView(m[1], m[2] || "national", draftChrome("history"))],
   [/^#\/trades$/,                   () => tradeMachineView(tradesChrome("machine"))],
+  [/^#\/trades\/finder$/,           () => tradeFinderView(tradesChrome("finder"))],
   [/^#\/trades\/history\/(\d{4})$/, m => tradesView(m[1], tradesChrome("history"))],
   // legacy hashes redirect into the hubs
   [/^#\/draft-order$/,              () => go("#/draft")],

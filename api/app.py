@@ -741,6 +741,104 @@ def draft_order():
         raise HTTPException(503, "Squiggle ladder unavailable")
 
 
+_league_roster_cache: list = []
+
+
+def _league_roster() -> list:
+    """Every listed player with role, ListTrac Rating, age, club, contract status
+    and trade value — the substrate for the trade finder. Cached."""
+    if not _league_roster_cache:
+        roles = _all_roles = _roles_index().get("_players", {})
+        rb = _ratings_by_name()
+        lo, hi = _current_rating_bounds()
+        tvb = _trade_value_board().get("by_id", {})
+        ov = _contract_overrides()
+        with db() as conn:
+            for r in conn.execute(
+                    """SELECT p.id, p.first_name, p.last_name, p.dob, c.abbreviation club,
+                              cs.status, cs.contracted_through_year
+                       FROM player p JOIN club c ON c.id = p.current_club_id
+                       LEFT JOIN contract_status cs ON cs.player_id = p.id AND cs.is_current = 1
+                       WHERE p.status = 'listed'"""):
+                nm = _norm(f"{r['first_name']} {r['last_name']}")
+                role = roles.get(nm)
+                rr = rb.get(nm)
+                if not role or not rr or not rr.get("rating"):
+                    continue
+                status = r["status"]
+                if ov.get((nm, (r["club"] or "").upper())):
+                    status = "contracted"
+                tv = tvb.get(r["id"])
+                _league_roster_cache.append({
+                    "id": r["id"], "name": f"{r['first_name']} {r['last_name']}", "club": r["club"],
+                    "role": role["role"], "role_label": role["role_label"], "role_group": role["role_group"],
+                    "ltr": _ltr(rr["rating"], lo, hi), "age": _age_2026(r["dob"]),
+                    "status": status or "unknown",
+                    "available": status in ("restricted_fa", "unrestricted_fa", "out_of_contract"),
+                    "value_100": tv.get("value_100") if tv else None,
+                    "equiv_pick_str": tv.get("equiv_pick_str") if tv else None,
+                })
+    return _league_roster_cache
+
+
+@app.get("/api/trade-finder")
+def trade_finder(club: str):
+    """Where a club is thin, and who could fill it. For each derived role we
+    measure the club's best option against the league, rank the gaps, then list
+    the best players elsewhere in that role — gettable ones (free agents /
+    out of contract) first, then trade targets. Uses roles, ratings, contract
+    status and trade value together."""
+    key = club.upper()
+    roster = _league_roster()
+    if not any(p["club"].upper() == key for p in roster):
+        raise HTTPException(404, f"no roster for club '{club}'")
+    role_defs = _roles_index().get("_roles", {})
+
+    # best LTR per (role, club) -> league median of best options at each role
+    from collections import defaultdict
+    best = defaultdict(dict)
+    for p in roster:
+        c = p["club"].upper()
+        best[p["role"]][c] = max(best[p["role"]].get(c, 0), p["ltr"] or 0)
+
+    def median(xs):
+        s = sorted(xs)
+        return s[len(s) // 2] if s else 0
+
+    mine = [p for p in roster if p["club"].upper() == key]
+    others = [p for p in roster if p["club"].upper() != key]
+    mine_by_role = defaultdict(list)
+    for p in mine:
+        mine_by_role[p["role"]].append(p)
+
+    rows = []
+    for role, meta in role_defs.items():
+        my = sorted(mine_by_role.get(role, []), key=lambda p: -(p["ltr"] or 0))
+        my_best = my[0]["ltr"] if my else 0
+        league_med = median([v for v in best.get(role, {}).values()])
+        rows.append({
+            "role": role, "role_label": meta.get("label"), "role_group": meta.get("group"),
+            "count": len(my), "my_best": my_best or None,
+            "best_player": ({"name": my[0]["name"], "id": my[0]["id"], "ltr": my[0]["ltr"], "age": my[0]["age"]} if my else None),
+            "league_median": league_med, "gap": round(league_med - my_best, 1),
+        })
+
+    needs = sorted([r for r in rows if r["gap"] > 0], key=lambda r: -r["gap"])[:4]
+    for n in needs:
+        cands = [p for p in others if p["role"] == n["role"]]
+        # gettable (FA / out of contract) first, then by quality
+        cands.sort(key=lambda p: (0 if p["available"] else 1, -(p["ltr"] or 0)))
+        n["candidates"] = [{
+            "name": p["name"], "id": p["id"], "club": p["club"], "ltr": p["ltr"], "age": p["age"],
+            "status": p["status"], "available": p["available"],
+            "value_100": p["value_100"], "equiv_pick_str": p["equiv_pick_str"],
+        } for p in cands[:8]]
+
+    return {"club": key, "needs": needs,
+            "role_strength": sorted(rows, key=lambda r: r["gap"]),
+            "method": "For each derived role, a club's best ListTrac Rating is compared to the league median of clubs' best options. The widest gaps are the needs; targets are the best players elsewhere in that role — free agents and out-of-contract players (gettable) first, then trade targets."}
+
+
 @app.get("/api/run-home")
 def run_home():
     """Every club's run home: the games left, who they meet, where, and how hard
