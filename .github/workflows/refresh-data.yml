@@ -81,6 +81,11 @@ jobs:
         run: python scraper/scorecard.py
         continue-on-error: true
 
+      - name: Fetch All-Australian teams (Wikipedia)
+        # real team-of-the-year honour roll, 2015-25
+        run: python scraper/all_australian.py
+        continue-on-error: true
+
       - name: Build Draft Combine results (scaffold + manual layer)
         # placeholder until the Oct combine; merges data/combine_manual.json
         run: python scraper/combine.py

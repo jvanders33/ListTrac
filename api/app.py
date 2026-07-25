@@ -233,11 +233,17 @@ def club_profile(abbrev: str):
         raise HTTPException(404, f"no listed players for club '{abbrev}'")
 
     cv = _career_value()
+    aa = _all_australian().get("_players", {})
     ages, ratings, gameslist = [], [], []
     elite = top100 = contracted = list_value = goalkickers = games_100 = 0
+    all_australians = aa_selections = 0
     top_scorer = None
     for r in players:
         nm = _norm(f"{r['first_name']} {r['last_name']}")
+        aar = aa.get(nm)
+        if aar and aar.get("team_count"):
+            all_australians += 1
+            aa_selections += aar["team_count"]
         a = _age_2026(r["dob"])
         if a:
             ages.append(a)
@@ -284,6 +290,7 @@ def club_profile(abbrev: str):
             "list_size": n, "avg_age": avg_age, "avg_age_rank": ls.get("avg_age_rank"),
             "youth_pct": youth_pct, "vet_pct": vet_pct,
             "avg_games": avg_games, "avg_games_rank": ls.get("avg_games_rank"), "games_100": games_100,
+            "all_australians": all_australians, "aa_selections": aa_selections,
             "aa_calibre": elite, "top100": top100, "avg_rating": avg_rating,
             "contracted_pct": round(contracted / n * 100), "list_value": list_value,
             "goalkickers": goalkickers, "top_scorer": top_scorer,
@@ -396,6 +403,10 @@ def player(player_id: int):
                          "per_game": (q or {}).get("per_game")} if rating else None
     fant = _fantasy_index().get(key)
     profile["fantasy"] = {"af_avg": fant["af_avg"], "position": fant.get("position")} if fant else None
+    aar = _all_australian().get("_players", {}).get(key)
+    profile["all_australian"] = ({"team_years": aar["team_years"], "team_count": aar["team_count"],
+                                  "squad_years": aar.get("squad_years", [])}
+                                 if aar and aar.get("team_count") else None)
     scout = _scouting_index()
     sc = scout.get("_players", {}).get(key)
     profile["scouting"] = {**sc, **scout.get("_meta", {})} if sc else None
@@ -1400,6 +1411,20 @@ def _brownlow_index() -> dict:
         _brownlow_cache["_by_name"] = {_norm(p["name"]): p for p in data.get("players", [])}
         _brownlow_cache["_meta"] = {k: data[k] for k in ("year", "rounds", "season_games", "attribution") if k in data}
     return _brownlow_cache
+
+
+AA_PATH = Path(__file__).resolve().parent.parent / "data" / "all_australian.json"
+_aa_cache: dict = {}
+
+
+def _all_australian() -> dict:
+    """All-Australian honour roll keyed by normalised name."""
+    import json
+    if not _aa_cache and AA_PATH.exists():
+        data = json.loads(AA_PATH.read_text(encoding="utf-8"))
+        _aa_cache["_players"] = data.get("players", {})
+        _aa_cache["_meta"] = {k: data[k] for k in ("attribution", "source_url", "years") if k in data}
+    return _aa_cache
 
 
 SCORECARD_PATH = Path(__file__).resolve().parent.parent / "data" / "scorecard.json"

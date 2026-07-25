@@ -2114,13 +2114,13 @@ function stateOfListCard(profile) {
       ${rtile(m.avg_age, m.avg_age_rank, "avg age")}
       ${rtile(m.avg_games, m.avg_games_rank, "avg games")}
       ${tile(m.games_100, "100+ gamers")}
-      ${tile(m.aa_calibre, "AA-calibre*")}
+      ${tile(m.all_australians ?? "—", "All-Australians")}
       ${tile(m.top100, "top-100 rated")}
       ${tile(m.youth_pct + "%", "under 23")}
       ${tile(m.contracted_pct + "%", "locked past '26")}
       ${tile(m.list_value.toLocaleString(), "list value")}
     </div>
-    <p class="thin" style="font-size:11px;margin-top:10px">*AA-calibre = players inside the AFL top 40 by Player Rating.${m.top_scorer ? ` Leading scorer: <a href="#/player/${m.top_scorer.id}">${esc(m.top_scorer.name)}</a> (${m.top_scorer.avg}/gm).` : ""}</p>
+    <p class="thin" style="font-size:11px;margin-top:10px">All-Australians = current players named in a real All-Australian team${m.aa_selections ? ` (${m.aa_selections} selections between them)` : ""}.${m.top_scorer ? ` Leading scorer: <a href="#/player/${m.top_scorer.id}">${esc(m.top_scorer.name)}</a> (${m.top_scorer.avg}/gm).` : ""}</p>
   </div>`;
 }
 
@@ -2782,7 +2782,8 @@ async function playerView(id) {
           <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff" title="ListTrac Rating (AFL Player Rating #${p.rating.rank} · ${p.rating.rating} on a 0–100 scale)">${p.rating.ltr != null ? `${p.rating.ltr}<span style="opacity:.7">/100</span> · ` : ""}Rating #${p.rating.rank}</span>` : ""}${p.fantasy ? `
           <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff">AFL Fantasy avg ${p.fantasy.af_avg}</span>` : ""}${p.role ? `
           <span class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff" title="ListTrac's read of playing role">${esc(p.role.role_label)}${p.role.secondary_label ? ` / ${esc(p.role.secondary_label)}` : ""}</span>` : ""}${p.brownlow && p.brownlow.rank <= 40 ? `
-          <a href="#/players/brownlow" class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff;text-decoration:none" title="ListTrac Brownlow projection">🏅 Brownlow ${p.brownlow.rank <= 3 ? ["1st","2nd","3rd"][p.brownlow.rank-1] : "#" + p.brownlow.rank} · ${p.brownlow.votes}v</a>` : ""}</p>
+          <a href="#/players/brownlow" class="chip" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.45);color:#fff;text-decoration:none" title="ListTrac Brownlow projection">🏅 Brownlow ${p.brownlow.rank <= 3 ? ["1st","2nd","3rd"][p.brownlow.rank-1] : "#" + p.brownlow.rank} · ${p.brownlow.votes}v</a>` : ""}${p.all_australian ? `
+          <span class="chip" style="background:rgba(245,227,168,0.9);color:#6b4e00;border:1px solid rgba(255,255,255,0.45)" title="All-Australian: ${p.all_australian.team_years.join(', ')}">⭐ ${p.all_australian.team_count}× All-Australian</span>` : ""}</p>
         <dl class="hero-facts">
           ${p.dob ? `<div><dt>Age</dt><dd>${age(p.dob)} (${esc(p.dob)})</dd></div>` : ""}
           ${p.height_cm ? `<div><dt>Height</dt><dd>${p.height_cm} cm</dd></div>` : ""}
