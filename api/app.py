@@ -398,9 +398,12 @@ def player(player_id: int):
     rating = _ratings_by_name().get(key)
     q = _quality_rank().get(key)
     lo, hi = _current_rating_bounds()
-    profile["rating"] = {"rank": rating["rank"], "rating": rating["rating"],
-                         "ltr": _ltr(rating["rating"], lo, hi),
-                         "per_game": (q or {}).get("per_game")} if rating else None
+    # only a genuinely ranked player counts — a 0.0/rank-None entry is a fringe
+    # player who hasn't rated this season, and would render "Rating #null"
+    profile["rating"] = ({"rank": rating["rank"], "rating": rating["rating"],
+                          "ltr": _ltr(rating["rating"], lo, hi),
+                          "per_game": (q or {}).get("per_game")}
+                         if (rating and rating.get("rank") and rating.get("rating")) else None)
     fant = _fantasy_index().get(key)
     profile["fantasy"] = {"af_avg": fant["af_avg"], "position": fant.get("position")} if fant else None
     aar = _all_australian().get("_players", {}).get(key)
