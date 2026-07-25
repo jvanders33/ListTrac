@@ -517,7 +517,7 @@ function agingCard(a, playerAge, firstName, lastName) {
     <p class="agelegend"><span class="k accent">● ${esc(lastName || "player")}</span> <span class="k muted">— typical ${esc((a.group_label || "").toLowerCase())}</span></p>
     ${insight ? `<p class="sub" style="margin-top:6px">${esc(insight)}</p>` : ""}
     ${anyLowConf ? `<p class="thin" style="margin-top:4px;font-size:11px">Dashed = thinner sample, read with caution. Outlier seasons are trimmed so no single great skews the curve.</p>` : ""}
-    <p class="thin" style="margin-top:8px;font-size:11px">${esc(a.attribution || "")}</p>
+    <p class="thin" style="margin-top:8px;font-size:11px">${esc(a.attribution || "")}${a.citation ? ` ${esc(a.citation)}` : ""}</p>
   </div>`;
 }
 

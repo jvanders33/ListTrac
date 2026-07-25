@@ -1,7 +1,8 @@
 {
  "source": "Official AFL Player Ratings (Champion Data), 2015-2026",
  "source_url": "https://www.afl.com.au/afl-player-ratings",
- "attribution": "Aging curves derived from twelve seasons of Official AFL Player Ratings joined to player dates of birth. Age is taken at 30 June of each season. The aging curve uses the delta / matched-pairs method (each player compared only to themselves across consecutive seasons) so survivorship bias cancels out; the population view is descriptive only and is survivorship-biased.",
+ "attribution": "Aging curves derived from twelve seasons of Official AFL Player Ratings joined to player dates of birth. Age is taken at 30 June of each season. The aging curve uses the delta / matched-pairs method (each player compared only to themselves across consecutive seasons) so survivorship bias cancels out, and is recency-weighted so it reflects the current game. The population view is descriptive only and is survivorship-biased.",
+ "citation": "Recency weighting follows the finding of Journal of Science & Medicine in Sport (2026) that AFL peak-performance age has come forward 2-3 years and converged across positions since 2012.",
  "method": {
   "min_bucket": 10,
   "age_range": [
@@ -9,8 +10,9 @@
    37
   ],
   "players_matched": 775,
-  "aging": "delta/matched-pairs: mean one-season rating change by age, chained into a trajectory and normalised 0..1 (1.0 = peak age)",
-  "population": "mean & quartile rating of players active at each age (survivorship-biased, descriptive)"
+  "aging": "delta/matched-pairs: recency-weighted mean one-season rating change by age, chained into a trajectory and normalised 0..1 (1.0 = peak age)",
+  "population": "mean & quartile rating of players active at each age (survivorship-biased, descriptive)",
+  "recency_weight": "season weight 0.35 (2015) -> 1.0 (2026), linear"
  },
  "labels": {
   "ALL": "All positions",
@@ -26,12 +28,39 @@
   "DEF": 25,
   "RUCK": 28
  },
+ "peak_shift": {
+  "ALL": {
+   "all_time": 25,
+   "current": 25,
+   "shift": 0
+  },
+  "MID": {
+   "all_time": 29,
+   "current": 29,
+   "shift": 0
+  },
+  "FWD": {
+   "all_time": 25,
+   "current": 25,
+   "shift": 0
+  },
+  "DEF": {
+   "all_time": 25,
+   "current": 25,
+   "shift": 0
+  },
+  "RUCK": {
+   "all_time": 28,
+   "current": 28,
+   "shift": 0
+  }
+ },
  "empirical_age_factors": {
-  "21-23": 0.748,
-  "24-27": 0.99,
-  "28-29": 0.966,
-  "30-31": 0.867,
-  "32+": 0.692
+  "21-23": 0.733,
+  "24-27": 0.988,
+  "28-29": 0.968,
+  "30-31": 0.863,
+  "32+": 0.673
  },
  "aging": {
   "ALL": [
@@ -39,142 +68,142 @@
     "age": 18,
     "trajectory": 0.0,
     "value_index": 0.0,
-    "mean_delta": 45.3,
+    "mean_delta": 39.5,
     "n": 229,
     "low_conf": false
    },
    {
     "age": 19,
-    "trajectory": 45.3,
-    "value_index": 0.191,
-    "mean_delta": 52.8,
+    "trajectory": 39.5,
+    "value_index": 0.176,
+    "mean_delta": 48.8,
     "n": 472,
     "low_conf": false
    },
    {
     "age": 20,
-    "trajectory": 98.1,
-    "value_index": 0.414,
-    "mean_delta": 44.7,
+    "trajectory": 88.3,
+    "value_index": 0.394,
+    "mean_delta": 42.4,
     "n": 446,
     "low_conf": false
    },
    {
     "age": 21,
-    "trajectory": 142.8,
-    "value_index": 0.602,
-    "mean_delta": 38.0,
+    "trajectory": 130.7,
+    "value_index": 0.583,
+    "mean_delta": 36.8,
     "n": 429,
     "low_conf": false
    },
    {
     "age": 22,
-    "trajectory": 180.8,
-    "value_index": 0.763,
-    "mean_delta": 27.7,
+    "trajectory": 167.5,
+    "value_index": 0.747,
+    "mean_delta": 27.6,
     "n": 400,
     "low_conf": false
    },
    {
     "age": 23,
-    "trajectory": 208.5,
-    "value_index": 0.879,
-    "mean_delta": 22.0,
+    "trajectory": 195.1,
+    "value_index": 0.87,
+    "mean_delta": 21.9,
     "n": 364,
     "low_conf": false
    },
    {
     "age": 24,
-    "trajectory": 230.5,
-    "value_index": 0.972,
-    "mean_delta": 6.6,
+    "trajectory": 217.0,
+    "value_index": 0.968,
+    "mean_delta": 7.2,
     "n": 322,
     "low_conf": false
    },
    {
     "age": 25,
-    "trajectory": 237.1,
+    "trajectory": 224.2,
     "value_index": 1.0,
-    "mean_delta": -1.4,
+    "mean_delta": -2.0,
     "n": 277,
     "low_conf": false
    },
    {
     "age": 26,
-    "trajectory": 235.7,
-    "value_index": 0.994,
-    "mean_delta": 0.3,
+    "trajectory": 222.2,
+    "value_index": 0.991,
+    "mean_delta": 0.6,
     "n": 231,
     "low_conf": false
    },
    {
     "age": 27,
-    "trajectory": 236.0,
-    "value_index": 0.995,
-    "mean_delta": -5.8,
+    "trajectory": 222.8,
+    "value_index": 0.994,
+    "mean_delta": -4.9,
     "n": 189,
     "low_conf": false
    },
    {
     "age": 28,
-    "trajectory": 230.2,
-    "value_index": 0.971,
-    "mean_delta": -2.1,
+    "trajectory": 217.9,
+    "value_index": 0.972,
+    "mean_delta": -1.7,
     "n": 146,
     "low_conf": false
    },
    {
     "age": 29,
-    "trajectory": 228.0,
-    "value_index": 0.962,
-    "mean_delta": -13.6,
+    "trajectory": 216.1,
+    "value_index": 0.964,
+    "mean_delta": -13.2,
     "n": 113,
     "low_conf": false
    },
    {
     "age": 30,
-    "trajectory": 214.5,
+    "trajectory": 203.0,
     "value_index": 0.905,
-    "mean_delta": -17.9,
+    "mean_delta": -18.5,
     "n": 76,
     "low_conf": false
    },
    {
     "age": 31,
-    "trajectory": 196.6,
-    "value_index": 0.829,
-    "mean_delta": -11.4,
+    "trajectory": 184.4,
+    "value_index": 0.822,
+    "mean_delta": -12.6,
     "n": 55,
     "low_conf": false
    },
    {
     "age": 32,
-    "trajectory": 185.1,
-    "value_index": 0.781,
-    "mean_delta": -14.5,
+    "trajectory": 171.9,
+    "value_index": 0.767,
+    "mean_delta": -14.1,
     "n": 35,
     "low_conf": false
    },
    {
     "age": 33,
-    "trajectory": 170.7,
-    "value_index": 0.72,
-    "mean_delta": -10.8,
+    "trajectory": 157.7,
+    "value_index": 0.703,
+    "mean_delta": -10.5,
     "n": 19,
     "low_conf": true
    },
    {
     "age": 34,
-    "trajectory": 159.9,
-    "value_index": 0.674,
-    "mean_delta": -19.5,
+    "trajectory": 147.3,
+    "value_index": 0.657,
+    "mean_delta": -20.2,
     "n": 10,
     "low_conf": true
    },
    {
     "age": 35,
-    "trajectory": 140.4,
-    "value_index": 0.592,
+    "trajectory": 127.1,
+    "value_index": 0.567,
     "mean_delta": null,
     "n": 10,
     "low_conf": true
@@ -185,118 +214,118 @@
     "age": 18,
     "trajectory": 0.0,
     "value_index": 0.0,
-    "mean_delta": 63.5,
+    "mean_delta": 57.8,
     "n": 69,
     "low_conf": false
    },
    {
     "age": 19,
-    "trajectory": 63.5,
-    "value_index": 0.215,
-    "mean_delta": 80.7,
+    "trajectory": 57.8,
+    "value_index": 0.202,
+    "mean_delta": 76.8,
     "n": 155,
     "low_conf": false
    },
    {
     "age": 20,
-    "trajectory": 144.2,
-    "value_index": 0.488,
-    "mean_delta": 47.1,
+    "trajectory": 134.6,
+    "value_index": 0.471,
+    "mean_delta": 45.1,
     "n": 142,
     "low_conf": false
    },
    {
     "age": 21,
-    "trajectory": 191.3,
-    "value_index": 0.648,
-    "mean_delta": 43.3,
+    "trajectory": 179.7,
+    "value_index": 0.629,
+    "mean_delta": 42.3,
     "n": 136,
     "low_conf": false
    },
    {
     "age": 22,
-    "trajectory": 234.6,
-    "value_index": 0.794,
-    "mean_delta": 33.4,
+    "trajectory": 222.0,
+    "value_index": 0.777,
+    "mean_delta": 33.5,
     "n": 127,
     "low_conf": false
    },
    {
     "age": 23,
-    "trajectory": 268.0,
-    "value_index": 0.908,
+    "trajectory": 255.4,
+    "value_index": 0.894,
     "mean_delta": 15.6,
     "n": 115,
     "low_conf": false
    },
    {
     "age": 24,
-    "trajectory": 283.6,
-    "value_index": 0.96,
-    "mean_delta": -9.8,
+    "trajectory": 271.1,
+    "value_index": 0.949,
+    "mean_delta": -9.3,
     "n": 98,
     "low_conf": false
    },
    {
     "age": 25,
-    "trajectory": 273.8,
-    "value_index": 0.927,
-    "mean_delta": 3.0,
+    "trajectory": 261.7,
+    "value_index": 0.916,
+    "mean_delta": 2.9,
     "n": 72,
     "low_conf": false
    },
    {
     "age": 26,
-    "trajectory": 276.8,
-    "value_index": 0.937,
-    "mean_delta": 3.7,
+    "trajectory": 264.7,
+    "value_index": 0.926,
+    "mean_delta": 5.2,
     "n": 59,
     "low_conf": false
    },
    {
     "age": 27,
-    "trajectory": 280.5,
-    "value_index": 0.95,
-    "mean_delta": 7.5,
+    "trajectory": 269.8,
+    "value_index": 0.944,
+    "mean_delta": 8.8,
     "n": 50,
     "low_conf": false
    },
    {
     "age": 28,
-    "trajectory": 288.0,
+    "trajectory": 278.6,
     "value_index": 0.975,
-    "mean_delta": 7.3,
+    "mean_delta": 7.1,
     "n": 38,
     "low_conf": false
    },
    {
     "age": 29,
-    "trajectory": 295.3,
+    "trajectory": 285.7,
     "value_index": 1.0,
-    "mean_delta": -13.8,
+    "mean_delta": -14.3,
     "n": 33,
     "low_conf": false
    },
    {
     "age": 30,
-    "trajectory": 281.5,
-    "value_index": 0.953,
-    "mean_delta": -28.0,
+    "trajectory": 271.5,
+    "value_index": 0.95,
+    "mean_delta": -31.7,
     "n": 20,
     "low_conf": false
    },
    {
     "age": 31,
-    "trajectory": 253.5,
-    "value_index": 0.858,
-    "mean_delta": -55.8,
+    "trajectory": 239.8,
+    "value_index": 0.839,
+    "mean_delta": -59.0,
     "n": 14,
     "low_conf": true
    },
    {
     "age": 32,
-    "trajectory": 197.7,
-    "value_index": 0.669,
+    "trajectory": 180.8,
+    "value_index": 0.633,
     "mean_delta": null,
     "n": 14,
     "low_conf": true
@@ -307,126 +336,126 @@
     "age": 18,
     "trajectory": 0.0,
     "value_index": 0.0,
-    "mean_delta": 39.9,
+    "mean_delta": 34.7,
     "n": 66,
     "low_conf": false
    },
    {
     "age": 19,
-    "trajectory": 39.9,
-    "value_index": 0.187,
-    "mean_delta": 40.7,
+    "trajectory": 34.7,
+    "value_index": 0.169,
+    "mean_delta": 38.1,
     "n": 130,
     "low_conf": false
    },
    {
     "age": 20,
-    "trajectory": 80.5,
-    "value_index": 0.377,
-    "mean_delta": 49.9,
+    "trajectory": 72.8,
+    "value_index": 0.354,
+    "mean_delta": 46.4,
     "n": 116,
     "low_conf": false
    },
    {
     "age": 21,
-    "trajectory": 130.4,
-    "value_index": 0.611,
-    "mean_delta": 38.3,
+    "trajectory": 119.2,
+    "value_index": 0.579,
+    "mean_delta": 36.8,
     "n": 108,
     "low_conf": false
    },
    {
     "age": 22,
-    "trajectory": 168.7,
-    "value_index": 0.79,
-    "mean_delta": 21.8,
+    "trajectory": 156.0,
+    "value_index": 0.758,
+    "mean_delta": 23.6,
     "n": 99,
     "low_conf": false
    },
    {
     "age": 23,
-    "trajectory": 190.5,
-    "value_index": 0.892,
-    "mean_delta": 9.8,
+    "trajectory": 179.6,
+    "value_index": 0.872,
+    "mean_delta": 11.3,
     "n": 90,
     "low_conf": false
    },
    {
     "age": 24,
-    "trajectory": 200.3,
-    "value_index": 0.938,
-    "mean_delta": 13.3,
+    "trajectory": 190.9,
+    "value_index": 0.927,
+    "mean_delta": 15.0,
     "n": 74,
     "low_conf": false
    },
    {
     "age": 25,
-    "trajectory": 213.5,
+    "trajectory": 205.9,
     "value_index": 1.0,
-    "mean_delta": -2.0,
+    "mean_delta": -3.7,
     "n": 67,
     "low_conf": false
    },
    {
     "age": 26,
-    "trajectory": 211.5,
-    "value_index": 0.991,
-    "mean_delta": -2.8,
+    "trajectory": 202.2,
+    "value_index": 0.982,
+    "mean_delta": -3.5,
     "n": 57,
     "low_conf": false
    },
    {
     "age": 27,
-    "trajectory": 208.7,
-    "value_index": 0.978,
-    "mean_delta": -18.6,
+    "trajectory": 198.7,
+    "value_index": 0.965,
+    "mean_delta": -16.4,
     "n": 48,
     "low_conf": false
    },
    {
     "age": 28,
-    "trajectory": 190.2,
-    "value_index": 0.891,
-    "mean_delta": -20.2,
+    "trajectory": 182.3,
+    "value_index": 0.885,
+    "mean_delta": -19.7,
     "n": 34,
     "low_conf": false
    },
    {
     "age": 29,
-    "trajectory": 170.0,
-    "value_index": 0.796,
-    "mean_delta": -16.0,
+    "trajectory": 162.7,
+    "value_index": 0.79,
+    "mean_delta": -15.2,
     "n": 24,
     "low_conf": false
    },
    {
     "age": 30,
-    "trajectory": 154.0,
-    "value_index": 0.721,
-    "mean_delta": 2.3,
+    "trajectory": 147.5,
+    "value_index": 0.716,
+    "mean_delta": 3.8,
     "n": 21,
     "low_conf": false
    },
    {
     "age": 31,
-    "trajectory": 156.3,
-    "value_index": 0.732,
-    "mean_delta": 5.4,
+    "trajectory": 151.2,
+    "value_index": 0.734,
+    "mean_delta": 6.0,
     "n": 15,
     "low_conf": true
    },
    {
     "age": 32,
-    "trajectory": 161.7,
-    "value_index": 0.757,
-    "mean_delta": -0.3,
+    "trajectory": 157.3,
+    "value_index": 0.764,
+    "mean_delta": -0.8,
     "n": 11,
     "low_conf": true
    },
    {
     "age": 33,
-    "trajectory": 161.4,
-    "value_index": 0.756,
+    "trajectory": 156.5,
+    "value_index": 0.76,
     "mean_delta": null,
     "n": 11,
     "low_conf": true
@@ -437,126 +466,126 @@
     "age": 18,
     "trajectory": 0.0,
     "value_index": 0.0,
-    "mean_delta": 39.5,
+    "mean_delta": 33.1,
     "n": 81,
     "low_conf": false
    },
    {
     "age": 19,
-    "trajectory": 39.5,
-    "value_index": 0.172,
-    "mean_delta": 48.2,
+    "trajectory": 33.1,
+    "value_index": 0.153,
+    "mean_delta": 43.3,
     "n": 158,
     "low_conf": false
    },
    {
     "age": 20,
-    "trajectory": 87.7,
-    "value_index": 0.383,
-    "mean_delta": 44.6,
+    "trajectory": 76.4,
+    "value_index": 0.354,
+    "mean_delta": 42.5,
     "n": 157,
     "low_conf": false
    },
    {
     "age": 21,
-    "trajectory": 132.3,
-    "value_index": 0.577,
-    "mean_delta": 32.6,
+    "trajectory": 118.9,
+    "value_index": 0.551,
+    "mean_delta": 32.4,
     "n": 152,
     "low_conf": false
    },
    {
     "age": 22,
-    "trajectory": 164.9,
-    "value_index": 0.72,
-    "mean_delta": 21.5,
+    "trajectory": 151.3,
+    "value_index": 0.701,
+    "mean_delta": 21.6,
     "n": 142,
     "low_conf": false
    },
    {
     "age": 23,
-    "trajectory": 186.4,
-    "value_index": 0.814,
-    "mean_delta": 28.0,
+    "trajectory": 173.0,
+    "value_index": 0.801,
+    "mean_delta": 26.8,
     "n": 129,
     "low_conf": false
    },
    {
     "age": 24,
-    "trajectory": 214.3,
-    "value_index": 0.935,
-    "mean_delta": 14.8,
+    "trajectory": 199.8,
+    "value_index": 0.925,
+    "mean_delta": 16.1,
     "n": 121,
     "low_conf": false
    },
    {
     "age": 25,
-    "trajectory": 229.1,
+    "trajectory": 215.9,
     "value_index": 1.0,
-    "mean_delta": -5.2,
+    "mean_delta": -5.3,
     "n": 108,
     "low_conf": false
    },
    {
     "age": 26,
-    "trajectory": 223.9,
-    "value_index": 0.977,
-    "mean_delta": -2.2,
+    "trajectory": 210.6,
+    "value_index": 0.975,
+    "mean_delta": -2.7,
     "n": 90,
     "low_conf": false
    },
    {
     "age": 27,
-    "trajectory": 221.7,
-    "value_index": 0.968,
-    "mean_delta": -8.2,
+    "trajectory": 207.9,
+    "value_index": 0.963,
+    "mean_delta": -8.8,
     "n": 71,
     "low_conf": false
    },
    {
     "age": 28,
-    "trajectory": 213.5,
-    "value_index": 0.932,
-    "mean_delta": 5.9,
+    "trajectory": 199.1,
+    "value_index": 0.922,
+    "mean_delta": 5.6,
     "n": 59,
     "low_conf": false
    },
    {
     "age": 29,
-    "trajectory": 219.5,
-    "value_index": 0.958,
-    "mean_delta": -7.1,
+    "trajectory": 204.7,
+    "value_index": 0.948,
+    "mean_delta": -6.3,
     "n": 43,
     "low_conf": false
    },
    {
     "age": 30,
-    "trajectory": 212.4,
-    "value_index": 0.927,
-    "mean_delta": -33.2,
+    "trajectory": 198.5,
+    "value_index": 0.919,
+    "mean_delta": -32.9,
     "n": 27,
     "low_conf": false
    },
    {
     "age": 31,
-    "trajectory": 179.2,
-    "value_index": 0.782,
-    "mean_delta": -18.7,
+    "trajectory": 165.6,
+    "value_index": 0.767,
+    "mean_delta": -20.5,
     "n": 19,
     "low_conf": true
    },
    {
     "age": 32,
-    "trajectory": 160.5,
-    "value_index": 0.701,
-    "mean_delta": -4.8,
+    "trajectory": 145.1,
+    "value_index": 0.672,
+    "mean_delta": -5.0,
     "n": 13,
     "low_conf": true
    },
    {
     "age": 33,
-    "trajectory": 155.8,
-    "value_index": 0.68,
+    "trajectory": 140.2,
+    "value_index": 0.649,
     "mean_delta": null,
     "n": 13,
     "low_conf": true
@@ -567,102 +596,102 @@
     "age": 18,
     "trajectory": 0.0,
     "value_index": 0.0,
-    "mean_delta": 21.0,
+    "mean_delta": 12.6,
     "n": 13,
     "low_conf": true
    },
    {
     "age": 19,
-    "trajectory": 21.0,
-    "value_index": 0.082,
-    "mean_delta": 9.8,
+    "trajectory": 12.6,
+    "value_index": 0.056,
+    "mean_delta": 7.9,
     "n": 29,
     "low_conf": false
    },
    {
     "age": 20,
-    "trajectory": 30.8,
-    "value_index": 0.12,
-    "mean_delta": 18.5,
+    "trajectory": 20.5,
+    "value_index": 0.091,
+    "mean_delta": 16.0,
     "n": 31,
     "low_conf": false
    },
    {
     "age": 21,
-    "trajectory": 49.3,
-    "value_index": 0.191,
-    "mean_delta": 40.7,
+    "trajectory": 36.5,
+    "value_index": 0.162,
+    "mean_delta": 38.0,
     "n": 33,
     "low_conf": false
    },
    {
     "age": 22,
-    "trajectory": 90.1,
-    "value_index": 0.35,
-    "mean_delta": 53.2,
+    "trajectory": 74.5,
+    "value_index": 0.331,
+    "mean_delta": 50.7,
     "n": 31,
     "low_conf": false
    },
    {
     "age": 23,
-    "trajectory": 143.2,
-    "value_index": 0.556,
-    "mean_delta": 62.1,
+    "trajectory": 125.1,
+    "value_index": 0.555,
+    "mean_delta": 56.4,
     "n": 29,
     "low_conf": false
    },
    {
     "age": 24,
-    "trajectory": 205.4,
-    "value_index": 0.798,
-    "mean_delta": 19.7,
+    "trajectory": 181.5,
+    "value_index": 0.806,
+    "mean_delta": 13.7,
     "n": 28,
     "low_conf": false
    },
    {
     "age": 25,
-    "trajectory": 225.0,
-    "value_index": 0.874,
-    "mean_delta": 11.5,
+    "trajectory": 195.2,
+    "value_index": 0.866,
+    "mean_delta": 10.5,
     "n": 29,
     "low_conf": false
    },
    {
     "age": 26,
-    "trajectory": 236.5,
-    "value_index": 0.918,
-    "mean_delta": 10.8,
+    "trajectory": 205.6,
+    "value_index": 0.913,
+    "mean_delta": 10.1,
     "n": 24,
     "low_conf": false
    },
    {
     "age": 27,
-    "trajectory": 247.3,
-    "value_index": 0.96,
-    "mean_delta": 10.2,
+    "trajectory": 215.8,
+    "value_index": 0.958,
+    "mean_delta": 9.5,
     "n": 19,
     "low_conf": true
    },
    {
     "age": 28,
-    "trajectory": 257.5,
+    "trajectory": 225.3,
     "value_index": 1.0,
-    "mean_delta": -15.3,
+    "mean_delta": -13.6,
     "n": 14,
     "low_conf": true
    },
    {
     "age": 29,
-    "trajectory": 242.2,
-    "value_index": 0.941,
-    "mean_delta": -27.6,
+    "trajectory": 211.7,
+    "value_index": 0.94,
+    "mean_delta": -27.8,
     "n": 13,
     "low_conf": true
    },
    {
     "age": 30,
-    "trajectory": 214.6,
-    "value_index": 0.833,
+    "trajectory": 183.9,
+    "value_index": 0.816,
     "mean_delta": null,
     "n": 13,
     "low_conf": true

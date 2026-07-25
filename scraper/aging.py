@@ -112,25 +112,40 @@ def _population(points: dict[int, list[float]]) -> list[dict]:
     return rows
 
 
-def _trimmed_mean(vals: list[float], trim: float = TRIM) -> float:
-    """Mean after dropping the top and bottom `trim` fraction — robust to the
-    outlier seasons of all-time greats (a Gawn or a Bontempelli) so one career
-    can't bend the population curve."""
-    v = sorted(vals)
+FIRST_Y, LAST_Y = 2015, 2026
+
+
+def _recency_w(year: int) -> float:
+    """Recent seasons weigh more, so the curve reflects today's game rather than
+    a decade ago. Peer-reviewed work (Journal of Science & Medicine in Sport,
+    2026) shows AFL peak age has come forward 2-3 years since 2012, so an equally
+    weighted twelve-year pool anchors the peak too old."""
+    return 0.35 + 0.65 * (year - FIRST_Y) / (LAST_Y - FIRST_Y)
+
+
+def _wtrimmed_mean(pairs: list[tuple], weighted: bool = True, trim: float = TRIM) -> float:
+    """Weighted mean after dropping the top and bottom `trim` fraction by delta —
+    robust to outlier seasons (a Gawn or a Bontempelli), and recency-weighted so
+    the current game dominates. pairs = [(delta, year), ...]."""
+    v = sorted(pairs, key=lambda p: p[0])
     k = int(len(v) * trim)
     core = v[k:len(v) - k] if len(v) - 2 * k >= 3 else v
-    return sum(core) / len(core)
+    if weighted:
+        num = sum(d * _recency_w(y) for d, y in core)
+        den = sum(_recency_w(y) for _, y in core) or 1.0
+        return num / den
+    return sum(d for d, _ in core) / len(core)
 
 
-def _aging(deltas: dict[int, list[float]]) -> list[dict]:
-    """The delta / matched-pairs aging curve. deltas[a] = list of one-season
-    rating changes for players making the age a -> a+1 transition. Trim outliers,
-    average by age, chain into a trajectory, normalise so peak = 1.0."""
+def _aging(deltas: dict[int, list[tuple]], weighted: bool = True) -> list[dict]:
+    """The delta / matched-pairs aging curve. deltas[a] = list of (one-season
+    rating change, season) for players making the age a -> a+1 transition. Trim
+    outliers, recency-weighted-average by age, chain, normalise so peak = 1.0."""
     ages = [a for a in range(AGE_LO, AGE_HI) if len(deltas.get(a, [])) >= MIN_BUCKET]
     if not ages:
         return []
     lo, hi = min(ages), max(ages) + 1
-    mean_delta = {a: (_trimmed_mean(deltas[a]) if len(deltas.get(a, [])) >= MIN_BUCKET else 0.0)
+    mean_delta = {a: (_wtrimmed_mean(deltas[a], weighted) if len(deltas.get(a, [])) >= MIN_BUCKET else 0.0)
                   for a in range(lo, hi)}
     # chain: trajectory[lo] = 0, each step adds that age's mean delta
     traj, cum = {}, 0.0
@@ -182,23 +197,33 @@ def main():
             all_pts.setdefault(age, []).append(rating)
             if g:
                 grp_pts[g].setdefault(age, []).append(rating)
-        # matched consecutive-season pairs -> deltas keyed by the starting age
+        # matched consecutive-season pairs -> (delta, season) keyed by starting age
         for yr, (age, rating) in by_year.items():
             nxt = by_year.get(yr + 1)
             if nxt:
                 dlt = nxt[1] - rating
-                all_delta.setdefault(age, []).append(dlt)
+                all_delta.setdefault(age, []).append((dlt, yr))
                 if g:
-                    grp_delta[g].setdefault(age, []).append(dlt)
+                    grp_delta[g].setdefault(age, []).append((dlt, yr))
 
     population = {"ALL": _population(all_pts)}
-    aging = {"ALL": _aging(all_delta)}
+    aging = {"ALL": _aging(all_delta, weighted=True)}
     for g in ("MID", "FWD", "DEF", "RUCK"):
         population[g] = _population(grp_pts[g])
-        aging[g] = _aging(grp_delta[g])
+        aging[g] = _aging(grp_delta[g], weighted=True)
 
     def peak_age(curve):
         return max(curve, key=lambda r: r["value_index"])["age"] if curve else None
+
+    # peak-age shift: the all-time (equally weighted) peak vs the recency-weighted
+    # peak, so we can show the article's "peak age is coming forward" with our data
+    grp_delta_all = {"ALL": all_delta, **grp_delta}
+    peak_shift = {}
+    for g in ("ALL", "MID", "FWD", "DEF", "RUCK"):
+        alltime = peak_age(_aging(grp_delta_all[g], weighted=False))
+        current = peak_age(aging[g])
+        peak_shift[g] = {"all_time": alltime, "current": current,
+                         "shift": (alltime - current) if (alltime and current) else None}
 
     # empirical value multipliers off the delta-method ALL curve (Trade Value tie-in)
     def bracket(lo, hi):
@@ -214,15 +239,18 @@ def main():
     payload = {
         "source": "Official AFL Player Ratings (Champion Data), 2015-2026",
         "source_url": "https://www.afl.com.au/afl-player-ratings",
-        "attribution": "Aging curves derived from twelve seasons of Official AFL Player Ratings joined to player dates of birth. Age is taken at 30 June of each season. The aging curve uses the delta / matched-pairs method (each player compared only to themselves across consecutive seasons) so survivorship bias cancels out; the population view is descriptive only and is survivorship-biased.",
+        "attribution": "Aging curves derived from twelve seasons of Official AFL Player Ratings joined to player dates of birth. Age is taken at 30 June of each season. The aging curve uses the delta / matched-pairs method (each player compared only to themselves across consecutive seasons) so survivorship bias cancels out, and is recency-weighted so it reflects the current game. The population view is descriptive only and is survivorship-biased.",
+        "citation": "Recency weighting follows the finding of Journal of Science & Medicine in Sport (2026) that AFL peak-performance age has come forward 2-3 years and converged across positions since 2012.",
         "method": {
             "min_bucket": MIN_BUCKET, "age_range": [AGE_LO, AGE_HI],
             "players_matched": matched_players,
-            "aging": "delta/matched-pairs: mean one-season rating change by age, chained into a trajectory and normalised 0..1 (1.0 = peak age)",
+            "aging": "delta/matched-pairs: recency-weighted mean one-season rating change by age, chained into a trajectory and normalised 0..1 (1.0 = peak age)",
             "population": "mean & quartile rating of players active at each age (survivorship-biased, descriptive)",
+            "recency_weight": "season weight 0.35 (2015) -> 1.0 (2026), linear",
         },
         "labels": GROUP_LABEL,
         "peak_age": peaks,
+        "peak_shift": peak_shift,
         "empirical_age_factors": empirical_factors,
         "aging": aging,
         "population": population,

@@ -451,6 +451,7 @@ def player(player_id: int):
                 "peak_age": (ac.get("peak_age") or {}).get(grp),
                 "curve": curve, "trail": trail,
                 "source": ac.get("source"), "attribution": ac.get("attribution"),
+                "citation": ac.get("citation"),
             }
 
     # derived role archetype + role-based similar players (nearest same-role
