@@ -1962,6 +1962,57 @@ def ratings(limit: int = 100, club: str | None = None, year: int | None = None):
             "count": total, "ratings": rows}
 
 
+@app.get("/api/contract-expiry")
+def contract_expiry():
+    """League-wide contract-expiry board: every listed player bucketed by the
+    year their current deal ends — the Spotrac "expiring contracts" view for the
+    AFL. End years come from ListTrac's verified contract layer (official
+    signings + hand-verified reporting) where we have it, else the tracked
+    contract status. `verified` flags the researched, source-cited deals. The
+    AFL discloses no contract terms — no dollar figures anywhere."""
+    rb, ov = _ratings_by_name(), _contract_overrides()
+    lo, hi = _current_rating_bounds()
+    players = rows("""SELECT p.id, p.first_name, p.last_name, p.dob, p.position,
+                             c.abbreviation club, cs.status, cs.contracted_through_year
+                      FROM player p JOIN club c ON c.id = p.current_club_id
+                      LEFT JOIN contract_status cs ON cs.player_id = p.id AND cs.is_current = 1
+                      WHERE p.status = 'listed'""")
+    buckets: dict = {}
+    club_counts: dict = {}
+    for r in players:
+        nm = _norm(f"{r['first_name']} {r['last_name']}")
+        club = r["club"]
+        o = ov.get((nm, (club or "").upper()))
+        end = o["end_year"] if o else r["contracted_through_year"]
+        if not end or end < CURRENT_YEAR:
+            continue
+        rr = rb.get(nm) or {}
+        rating = rr.get("rating")
+        buckets.setdefault(end, []).append({
+            "player_id": r["id"], "name": f"{r['first_name']} {r['last_name']}",
+            "club": club, "position": r["position"] or rr.get("position"), "dob": r["dob"],
+            "rating": rating, "ltr": _ltr(rating, lo, hi), "rank": rr.get("rank"),
+            "end_year": end, "verified": bool(o),
+            "reporter": o.get("reporter") if o else None,
+            "source_url": o.get("source_url") if o else None,
+        })
+        cc = club_counts.setdefault(club, {})
+        cc[end] = cc.get(end, 0) + 1
+    for yr in buckets:
+        buckets[yr].sort(key=lambda x: (x["rating"] is None, -(x["rating"] or 0), x["name"]))
+    years = sorted(buckets)
+    return {
+        "current_year": CURRENT_YEAR, "years": years,
+        "counts": {y: len(buckets[y]) for y in years},
+        "verified_total": sum(1 for y in buckets for p in buckets[y] if p["verified"]),
+        "total": sum(len(buckets[y]) for y in years),
+        "buckets": buckets, "club_counts": club_counts,
+        "note": ("Current-deal end years from ListTrac's verified contract layer "
+                 "(official + hand-verified reporting) where available, else tracked "
+                 "contract status. The AFL discloses no contract terms."),
+    }
+
+
 PROSPECTS_DIR = Path(__file__).resolve().parent.parent / "data"
 
 

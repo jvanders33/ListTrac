@@ -475,6 +475,12 @@ footer.pagefoot {
 .rd-finding { margin-top: 10px; padding: 12px 14px; border-radius: 10px; background: var(--card-2); font-size: 13px; line-height: 1.5; }
 .rd-finding .rd-good { font-weight: 700; }
 .rd-mat { font-size: 9px; font-weight: 800; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 3px; vertical-align: middle; }
+
+/* contract expiry board */
+.ce-final { border-left: 3px solid var(--accent); }
+.ce-tick { color: var(--ok); font-weight: 800; text-decoration: none; }
+.ce-tick:hover { text-decoration: underline; }
+#ce-club { background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; }
 #rd-years { margin: 4px 0 12px; }
 #rd-years a { cursor: pointer; }
 .rd-dpi { display: flex; flex-direction: column; gap: 5px; margin-top: 8px; }

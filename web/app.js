@@ -3095,7 +3095,7 @@ async function faView(filter = "all") {
     </div>
     <div class="card">
       <h3>${esc(buttons.find(b => b[0] === filter)[1])} — end of 2026</h3>
-      <p class="sub">${players.length} players, ranked by AFL Player Rating — the best talent available on the open market. Players with no 2026 rating sit at the bottom.</p>
+      <p class="sub">${players.length} players, ranked by AFL Player Rating — the best talent available on the open market. Players with no 2026 rating sit at the bottom. See the full <a href="#/contracts">contract expiry board</a> for who's up in 2027 and beyond.</p>
       <div class="tablewrap"><table>
         <thead><tr><th class="num">#</th><th>Player</th><th>Club</th><th>Pos</th><th class="num">Age</th><th class="num">Rating</th><th>Status</th></tr></thead>
         <tbody>${players.map((x, i) => `
@@ -3110,6 +3110,69 @@ async function faView(filter = "all") {
     </div>`;
   view.querySelectorAll(".filterbtn").forEach(b =>
     b.addEventListener("click", () => location.hash = `#/free-agents/${b.dataset.f}`));
+}
+
+async function contractExpiryView() {
+  const d = await api("/api/contract-expiry");
+  const CY = d.current_year;
+  const clubs = [...new Set(d.years.flatMap(y => d.buckets[y].map(p => p.club)))].sort();
+  const plink = p => p.player_id
+    ? `<a href="#/player/${p.player_id}">${esc(p.name)}</a>` : esc(p.name);
+  const yearLabel = y => y === CY ? `${y} — final contracted year`
+    : y === CY + 1 ? `${y}` : `${y}`;
+
+  let club = "", verifiedOnly = false;
+
+  view.innerHTML = `
+    <div class="card">
+      <h3>Contract expiry board</h3>
+      <p class="sub">Every listed player by the year their current deal ends — who's up, and when. ${d.total} players tracked; <b>${d.verified_total}</b> on ListTrac-verified deals (✓, source-cited). Players in their <b>${CY}</b> column are unsigned beyond this season. No dollar figures — the AFL doesn't disclose terms.</p>
+      <div class="controls" style="margin-top:12px">
+        <select id="ce-club" class="filterbtn" style="padding:6px 10px">
+          <option value="">All clubs</option>
+          ${clubs.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join("")}
+        </select>
+        <label class="filterbtn" style="display:inline-flex;align-items:center;gap:6px;cursor:pointer">
+          <input type="checkbox" id="ce-verified"> Verified deals only
+        </label>
+      </div>
+    </div>
+    <div id="ce-years"></div>`;
+
+  const yearsEl = view.querySelector("#ce-years");
+  function render() {
+    yearsEl.innerHTML = d.years.map(y => {
+      let list = d.buckets[y];
+      if (club) list = list.filter(p => p.club === club);
+      if (verifiedOnly) list = list.filter(p => p.verified);
+      if (!list.length) return "";
+      const yrsLeft = y - CY;
+      return `
+      <div class="card ${y === CY ? "ce-final" : ""}">
+        <h3>${esc(yearLabel(y))}
+          <span class="thin" style="font-weight:400">· ${list.length} player${list.length === 1 ? "" : "s"}${yrsLeft > 0 ? ` · ${yrsLeft} season${yrsLeft === 1 ? "" : "s"} left` : ""}</span></h3>
+        <div class="tablewrap"><table>
+          <thead><tr><th class="num">#</th><th>Player</th><th>Club</th><th>Pos</th><th class="num">Age</th><th class="num">LTR</th><th></th></tr></thead>
+          <tbody>${list.map((p, i) => `
+            <tr>
+              <td class="num thin">${p.rating ? i + 1 : ""}</td>
+              <td>${plink(p)}</td>
+              <td class="thin">${clubTag(p.club, p.club)}</td>
+              <td class="thin">${esc(POS_SHORT[p.position] || "")}</td>
+              <td class="num">${age(p.dob) ?? "—"}</td>
+              <td class="num">${p.ltr ? `<b>${p.ltr}</b>` : "—"}</td>
+              <td class="thin">${p.verified
+                ? `<a class="ce-tick" href="${esc(p.source_url || "#")}" target="_blank" rel="noopener" title="Verified${p.reporter ? " · " + esc(p.reporter) : ""}${p.source_url ? " (source)" : ""}">✓</a>`
+                : ""}</td>
+            </tr>`).join("")}
+          </tbody>
+        </table></div>
+      </div>`;
+    }).join("") || `<div class="card"><p class="sub">No players match this filter.</p></div>`;
+  }
+  render();
+  view.querySelector("#ce-club").addEventListener("change", e => { club = e.target.value; render(); });
+  view.querySelector("#ce-verified").addEventListener("change", e => { verifiedOnly = e.target.checked; render(); });
 }
 
 async function searchView(q) {
@@ -3586,6 +3649,7 @@ const routes = [
   [/^#\/club\/([A-Za-z]+)$/,        m => clubView(m[1])],
   [/^#\/player\/(\d+)$/,            m => playerView(m[1])],
   [/^#\/free-agents(?:\/(\w+))?$/,  m => faView(m[1] || "all")],
+  [/^#\/contracts$/,                () => contractExpiryView()],
   [/^#\/search\/(.+)$/,             m => searchView(decodeURIComponent(m[1]))],
 ];
 
