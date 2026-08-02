@@ -238,7 +238,7 @@ const monthYear = d => {
 
 async function landingView() {
   const [summary, order, newsItems, trend, clubList, adminUpdates, trendingPlayers, tvBoard, movers,
-         brownlow, rising, miles, flag] = await Promise.all([
+         brownlow, rising, miles, flag, expiry] = await Promise.all([
     api("/api/summary"),
     api("/api/draft-order").catch(() => null),
     api("/api/news").catch(() => []),
@@ -252,6 +252,7 @@ async function landingView() {
     api("/api/rising-star?limit=1").catch(() => null),
     api("/api/milestones").catch(() => null),
     api("/api/flag-race").catch(() => null),
+    api("/api/contract-expiry").catch(() => null),
   ]);
   const s = summary.contract_statuses;
   const rfas = trend.filter(t => t.kind === "rfa");
@@ -370,6 +371,26 @@ async function landingView() {
               <div class="race-flag-head"><b>Flag race</b> <span class="thin">projected top 4</span> <a class="thin" href="#/flag-race" style="margin-left:auto">full ladder →</a></div>
               <div class="race-flag-teams">${flagTop.map(c => `<span class="race-team">${guernsey(c.team, 18)} ${esc(c.team)} <b>${c.proj_wins}</b></span>`).join("")}</div>
             </div>` : ""}
+          </div>`;
+        })()}
+
+        ${(() => {
+          const cy = expiry && expiry.current_year;
+          const finalYear = expiry && expiry.buckets && expiry.buckets[cy];
+          if (!finalYear || !finalYear.length) return "";
+          const top = finalYear.filter(p => p.rating).slice(0, 8);
+          if (!top.length) return "";
+          return `<div class="card">
+            <h3>Free agency watch <span class="thin" style="font-weight:400">· biggest names in a contract year</span></h3>
+            <p class="sub">Highest-rated players in the final season of their current deal — ${expiry.counts[cy]} are unsigned beyond ${cy}. Ends verified from ListTrac's contract layer.</p>
+            <div class="mini-list">
+              ${top.map((p, i) => `
+                <a class="mini-row" href="${p.player_id ? `#/player/${p.player_id}` : "#/contracts"}">
+                  <span class="mini-rank">${i + 1}</span>${guernsey(p.club, 20)}
+                  <span class="mini-name">${esc(p.name)}${p.verified ? ` <span class="ce-tick">✓</span>` : ""}</span>
+                  <span class="mini-val"><b>${p.ltr || "—"}</b></span></a>`).join("")}
+            </div>
+            <p class="feature-ctas" style="margin-top:10px"><a class="cta quiet" href="#/contracts">Full contract expiry board →</a></p>
           </div>`;
         })()}
 
