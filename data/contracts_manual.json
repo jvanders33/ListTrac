@@ -14620,6 +14620,48 @@
    "reporter": "West Coast Eagles Media",
    "source_url": "https://www.westcoasteagles.com.au/news/1635379/harry-and-houghy-locked-in",
    "note": "West Coast Eagles official article \"Harry and Houghy locked in\" reports Edwards and Brady Hough \"signing three-year contract extensions.\" Corroborated by FootyWire's live player profile (footywire.com/afl/footy/pp-west-coast-eagles--harry-edwards), which lists his contract status as \"RFA at the end of 2027.\" Exact signing date could not be confirmed - the article page itself returned repeated network errors (ECONNRESET) during fetch attempts; date estimated as mid-2024 based on the 3-year term implying a 2025-2027 deal. This is his current active contract."
+  },
+  {
+   "name": "Elijah Hewett",
+   "date": "2026-07-10",
+   "kind": "extension",
+   "club": "WCE",
+   "length": 4,
+   "end_year": 2030,
+   "end_estimated": false,
+   "date_estimated": false,
+   "current": true,
+   "reporter": "AFL.com.au / West Coast Eagles Media",
+   "source_url": "https://www.westcoasteagles.com.au/news/2065023/hewett-commits-until-2030",
+   "note": "Signed a four-year contract extension with West Coast, keeping him at the club until the end of 2030. His original deal (from being drafted at Pick 14 in the 2022 National Draft) was due to expire at the end of 2026; he turned down interest from several Melbourne-based clubs to re-sign. Announced/reported around 10 July 2026 (per Yahoo News Australia syndication of AAP report)."
+  },
+  {
+   "name": "Eric Hipwood",
+   "date": "2019-09-02",
+   "kind": "extension",
+   "club": "BRI",
+   "length": 3,
+   "end_year": 2023,
+   "end_estimated": false,
+   "date_estimated": false,
+   "current": false,
+   "reporter": "SEN",
+   "source_url": "https://archive.sen.com.au/news/2019/09/02/exciting-lion-signs-long-term-deal/index.html",
+   "note": "Signed a 3-year contract extension with Brisbane, committing him to the club until at least the end of 2023."
+  },
+  {
+   "name": "Eric Hipwood",
+   "date": "2022-12-08",
+   "kind": "extension",
+   "club": "BRI",
+   "length": 6,
+   "end_year": 2029,
+   "end_estimated": false,
+   "date_estimated": false,
+   "current": true,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/871065/life-long-lion-eric-hipwood-inks-monster-contract-extension",
+   "note": "Signed a monster 6-year contract extension with Brisbane (had one year remaining on prior deal), locking him in until the end of 2029 - Brisbane's longest contract since Alastair Lynch in 1994. This is his current active contract."
   }
  ]
 }

@@ -3,7 +3,7 @@
  "source_url": "https://www.afl.com.au/news",
  "attribution": "Contract & movement events from the AFL's own content API and AFLRATINGS' reporting, with hand-verified corrections; each event links to its source. The AFL does not disclose contract terms — no dollar figures are tracked.",
  "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
- "count": 1354,
+ "count": 1357,
  "events": [
   {
    "name": "Scott Pendlebury",
@@ -2776,6 +2776,20 @@
    "source_url": "https://www.afl.com.au/news/98894/star-giant-rejects-big-money-offers-to-sign-massive-seven-year-deal",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Eric Hipwood",
+   "norm": "erichipwood",
+   "date": "2019-09-02",
+   "kind": "extension",
+   "club": "BRI",
+   "length": 3,
+   "end_year": 2023,
+   "end_estimated": false,
+   "reporter": "SEN",
+   "source_url": "https://archive.sen.com.au/news/2019/09/02/exciting-lion-signs-long-term-deal/index.html",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Karl Amon",
@@ -10026,6 +10040,20 @@
    "source_url": "https://www.zerohanger.com/geelong-young-gun-sam-de-koning-lands-new-deal-130837/",
    "manual": true,
    "current": false
+  },
+  {
+   "name": "Eric Hipwood",
+   "norm": "erichipwood",
+   "date": "2022-12-08",
+   "kind": "extension",
+   "club": "BRI",
+   "length": 6,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/871065/life-long-lion-eric-hipwood-inks-monster-contract-extension",
+   "manual": true,
+   "current": true
   },
   {
    "name": "Luke Ryan",
@@ -18018,6 +18046,20 @@
    "end_estimated": false,
    "reporter": "AFL Media",
    "source_url": "https://www.afl.com.au/news/1557465/essendon-bombers-boon-as-young-gun-nate-caddy-extends-contract-until-2031",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Elijah Hewett",
+   "norm": "elijahhewett",
+   "date": "2026-07-10",
+   "kind": "extension",
+   "club": "WCE",
+   "length": 4,
+   "end_year": 2030,
+   "end_estimated": false,
+   "reporter": "AFL.com.au / West Coast Eagles Media",
+   "source_url": "https://www.westcoasteagles.com.au/news/2065023/hewett-commits-until-2030",
    "manual": true,
    "current": true
   },
