@@ -3,7 +3,7 @@
  "source_url": "https://www.afl.com.au/news",
  "attribution": "Contract & movement events from the AFL's own content API and AFLRATINGS' reporting, with hand-verified corrections; each event links to its source. The AFL does not disclose contract terms — no dollar figures are tracked.",
  "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
- "count": 1240,
+ "count": 1250,
  "events": [
   {
    "name": "Scott Pendlebury",
@@ -3226,6 +3226,20 @@
    "current": false
   },
   {
+   "name": "Kyle Langford",
+   "norm": "kylelangford",
+   "date": "2020-10-12",
+   "kind": "extension",
+   "club": "ESS",
+   "length": 2,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "Essendon FC",
+   "source_url": "https://www.essendonfc.com.au/news/825504/langford-inks-new-deal",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Trent Rivers",
    "norm": "trentrivers",
    "date": "2020-10-15",
@@ -5800,8 +5814,10 @@
    "length": 4,
    "end_year": 2026,
    "end_estimated": false,
-   "reporter": "Essendon",
-   "source_url": "https://aflratings.com.au/2022/05/24/contract-update-kyle-langford/"
+   "reporter": "Essendon FC",
+   "source_url": "https://www.essendonfc.com.au/news/1134791/langford-lands-new-deal",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Jack Hayes",
@@ -11220,6 +11236,20 @@
    "current": false
   },
   {
+   "name": "Kyle Langford",
+   "norm": "kylelangford",
+   "date": "2024-02-20",
+   "kind": "extension",
+   "club": "ESS",
+   "length": 1,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Essendon FC",
+   "source_url": "https://www.essendonfc.com.au/news/1492518/langford-extends-until-2027",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Ben King",
    "norm": "benking",
    "date": "2024-02-23",
@@ -12410,6 +12440,20 @@
    "current": true
   },
   {
+   "name": "Ryan Angwin",
+   "norm": "ryanangwin",
+   "date": "2024-09-02",
+   "kind": "extension",
+   "club": "GWS",
+   "length": 2,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/gws-announce-new-deal-for-former-first-round-pick-154680/",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Cooper Sharman",
    "norm": "coopersharman",
    "date": "2024-09-04",
@@ -13222,6 +13266,20 @@
    "current": true
   },
   {
+   "name": "Cooper Lord",
+   "norm": "cooperlord",
+   "date": "2025-02-14",
+   "kind": "extension",
+   "club": "CAR",
+   "length": 1,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/emerging-carlton-midfielder-pens-extension-158528/",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Francis Evans",
    "norm": "francisevans",
    "date": "2025-02-15",
@@ -13248,6 +13306,20 @@
    "source_url": "https://www.gwsgiants.com.au/news/1276346/callaghan-extends",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Lachlan McAndrew",
+   "norm": "lachlanmcandrew",
+   "date": "2025-02-24",
+   "kind": "signing",
+   "club": "ADE",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1270120/adelaide-crows-sign-former-sydney-swans-ruckman-lachlan-mcandrew-in-pre-season-supplemental-selection-period-ssp",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Connor Idun",
@@ -13736,6 +13808,20 @@
    "end_estimated": false,
    "reporter": "Richmond FC / Zero Hanger",
    "source_url": "https://www.richmondfc.com.au/news/1808272/banks-locked-in-for-two-more",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Lachlan McAndrew",
+   "norm": "lachlanmcandrew",
+   "date": "2025-06-19",
+   "kind": "extension",
+   "club": "ADE",
+   "length": 2,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Adelaide FC (afc.com.au) / Zero Hanger",
+   "source_url": "https://www.afc.com.au/news/1808482/mcandrew-signs-two-year-extension",
    "manual": true,
    "current": true
   },
@@ -14376,6 +14462,20 @@
    "end_estimated": false,
    "reporter": "lions.com.au",
    "source_url": "https://www.lions.com.au/news/1890992/lester-locked-in-for-2026-after-signing-new-deal",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Ryan Angwin",
+   "norm": "ryanangwin",
+   "date": "2025-09-11",
+   "kind": "extension",
+   "club": "GWS",
+   "length": 2,
+   "end_year": 2028,
+   "end_estimated": false,
+   "reporter": "Zero Hanger / GWS Giants official site",
+   "source_url": "https://www.gwsgiants.com.au/news/1890715/angwins-all-in",
    "manual": true,
    "current": true
   },
@@ -15814,6 +15914,20 @@
    "current": true
   },
   {
+   "name": "Cooper Lord",
+   "norm": "cooperlord",
+   "date": "2026-03-12",
+   "kind": "extension",
+   "club": "CAR",
+   "length": 3,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": "Carlton FC",
+   "source_url": "https://www.carltonfc.com.au/news/1968083/cooper-a-blue-for-three-more",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Shaun Mannagh",
    "norm": "shaunmannagh",
    "date": "2026-03-23",
@@ -16686,6 +16800,18 @@
    "source_url": "https://aflratings.com.au/2026/07/30/charlie-comben-contract-news/"
   },
   {
+   "name": "Toby Greene",
+   "norm": "tobygreene",
+   "date": "2026-07-31",
+   "kind": "signing",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/07/31/afl-trade-news-toby-greene/"
+  },
+  {
    "name": "Tyson Stengle",
    "norm": "tysonstengle",
    "date": "2026-07-31",
@@ -16712,6 +16838,18 @@
    "source_url": "https://www.afl.com.au/news/1498032/inside-trading-cats-eye-neale-deal-saint-starts-talks-dogs-increase-offer-to-defender",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Tom Sparrow",
+   "norm": "tomsparrow",
+   "date": "2026-08-04",
+   "kind": "extension",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/08/04/afl-trade-news-tom-sparrow/"
   }
  ]
 }
