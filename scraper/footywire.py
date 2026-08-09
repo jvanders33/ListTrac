@@ -27,9 +27,27 @@ _SLUG_TO_CLUB = {v["footywire"]: canonical for canonical, v in CLUBS.items()}
 
 def fetch_out_of_contract(year: int) -> dict[str, list[dict]]:
     """{canonical_club: [{name, footywire_id, years_service, fa_at_expiry}]}
-    for players whose deals expire at the end of `year`."""
-    resp = requests.get(BASE, params={"year": year}, headers=HEADERS, timeout=15)
-    resp.raise_for_status()
+    for players whose deals expire at the end of `year`.
+
+    Best-effort by design: Footywire only *supplements* contract through-years
+    (the primary status comes from Zerohanger/AFL.com.au), and it periodically
+    503s automated clients. So a network/HTTP failure is retried a couple of
+    times and then degrades to an empty result — it must never abort the whole
+    database rebuild the way an uncaught raise_for_status would."""
+    text = None
+    for attempt in range(3):
+        try:
+            resp = requests.get(BASE, params={"year": year}, headers=HEADERS, timeout=20)
+            resp.raise_for_status()
+            text = resp.text
+            break
+        except requests.RequestException as e:
+            print(f"  [footywire] {year}: attempt {attempt + 1}/3 failed ({e})")
+            if attempt < 2:
+                time.sleep(2 * (attempt + 1))
+    if text is None:
+        print(f"  [footywire] {year}: unavailable — skipping (supplementary source)")
+        return {}
     time.sleep(1)  # politeness delay
 
     clubs: dict[str, list[dict]] = {}
@@ -37,7 +55,7 @@ def fetch_out_of_contract(year: int) -> dict[str, list[dict]]:
         r'<a href="(pp-([a-z\-]+)--[a-z\-]+)">([^<]+)</a></td>\s*'
         r'<td align="center">(\d*)</td>\s*'
         r'<td align="center" id="status_\d+">([^<]*)</td>', re.S)
-    for m in pattern.finditer(resp.text):
+    for m in pattern.finditer(text):
         fw_id, club_slug, name, service, status = m.groups()
         club = _SLUG_TO_CLUB.get(club_slug)
         if club is None:
