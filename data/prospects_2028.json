@@ -44,7 +44,7 @@
    "state_team": "Vic Country",
    "position": "Tall defender",
    "junior_club": "Murray Bushrangers",
-   "games": 5,
+   "games": 6,
    "source": "afl",
    "rank": 5,
    "award": "Vic Country MVP"
@@ -70,7 +70,7 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Geelong Falcons",
-   "games": 4,
+   "games": 6,
    "source": "afl",
    "rank": 8
   },
@@ -94,7 +94,23 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "GWV Rebels",
+   "games": 8,
+   "source": "afl"
+  },
+  {
+   "name": "Alex Ingham",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
    "games": 6,
+   "source": "afl"
+  },
+  {
+   "name": "Harry Metcher",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "GWV Rebels",
+   "games": 5,
    "source": "afl"
   },
   {
@@ -106,10 +122,26 @@
    "source": "afl"
   },
   {
-   "name": "Alex Ingham",
+   "name": "Lenny Sims",
    "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Gippsland Power",
+   "junior_club": "Murray Bushrangers",
+   "games": 4,
+   "source": "afl"
+  },
+  {
+   "name": "Nate Wade",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Bendigo Pioneers",
+   "games": 4,
+   "source": "afl"
+  },
+  {
+   "name": "Samuel Brown",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Bendigo Pioneers",
    "games": 4,
    "source": "afl"
   },
@@ -141,14 +173,6 @@
    "award": "Northern Territory MVP"
   },
   {
-   "name": "Harry Metcher",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "GWV Rebels",
-   "games": 3,
-   "source": "afl"
-  },
-  {
    "name": "Hayden Gardiner",
    "state_team": "GWS Academy",
    "position": null,
@@ -157,15 +181,15 @@
    "source": "afl"
   },
   {
-   "name": "Lenny Sims",
+   "name": "Jackson Butterworth",
    "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Murray Bushrangers",
+   "junior_club": "Bendigo Pioneers",
    "games": 3,
    "source": "afl"
   },
   {
-   "name": "Nate Wade",
+   "name": "Paddy Connelly",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Bendigo Pioneers",
@@ -177,14 +201,6 @@
    "state_team": "Brisbane Academy",
    "position": null,
    "junior_club": "Brisbane Lions Academy",
-   "games": 3,
-   "source": "afl"
-  },
-  {
-   "name": "Samuel Brown",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Bendigo Pioneers",
    "games": 3,
    "source": "afl"
   },
@@ -229,18 +245,10 @@
    "source": "afl"
   },
   {
-   "name": "Jackson Butterworth",
-   "state_team": "Vic Country",
+   "name": "Josh Auber",
+   "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Bendigo Pioneers",
-   "games": 2,
-   "source": "afl"
-  },
-  {
-   "name": "Paddy Connelly",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Bendigo Pioneers",
+   "junior_club": "Western Jets",
    "games": 2,
    "source": "afl"
   },
@@ -273,6 +281,14 @@
    "state_team": "Tasmania",
    "position": null,
    "junior_club": "Tasmania Devils",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Angus Jones",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
    "games": 1,
    "source": "afl"
   },
@@ -341,6 +357,14 @@
    "source": "afl"
   },
   {
+   "name": "Hamish Watson",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
+   "games": 1,
+   "source": "afl"
+  },
+  {
    "name": "Harry Lindsay",
    "state_team": "Vic Country",
    "position": null,
@@ -373,6 +397,14 @@
    "source": "afl"
   },
   {
+   "name": "Noah White",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Murray Bushrangers",
+   "games": 1,
+   "source": "afl"
+  },
+  {
    "name": "Oscar Roydhouse",
    "state_team": "Vic Country",
    "position": null,
@@ -385,6 +417,14 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Gippsland Power",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "William Blake",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
    "games": 1,
    "source": "afl"
   },

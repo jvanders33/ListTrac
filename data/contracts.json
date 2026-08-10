@@ -3,7 +3,7 @@
  "source_url": "https://www.afl.com.au/news",
  "attribution": "Contract & movement events from the AFL's own content API and AFLRATINGS' reporting, with hand-verified corrections; each event links to its source. The AFL does not disclose contract terms — no dollar figures are tracked.",
  "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
- "count": 1357,
+ "count": 1356,
  "events": [
   {
    "name": "Scott Pendlebury",
@@ -18186,20 +18186,6 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2026/07/21/bailey-williams-contract-news/"
-  },
-  {
-   "name": "Bailey Williams",
-   "norm": "bailey williams",
-   "date": "2026-07-21",
-   "kind": "signing",
-   "club": "WCE",
-   "length": 6,
-   "end_year": 2032,
-   "end_estimated": false,
-   "current": true,
-   "reporter": "Martin Smith",
-   "source_url": "https://www.afl.com.au/news/1566322/in-demand-eagle-rejects-free-agency-to-sign-long-term-deal",
-   "afl_official": true
   },
   {
    "name": "Mitch Lewis",
