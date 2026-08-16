@@ -78,9 +78,11 @@
    "name": "Louis Grinter",
    "state_team": "Vic Metro",
    "position": "Midfielder",
-   "award": "Vic Metro MVP",
-   "source": "curated",
-   "rank": 9
+   "junior_club": "Oakleigh Chargers",
+   "games": 1,
+   "source": "afl",
+   "rank": 9,
+   "award": "Vic Metro MVP"
   },
   {
    "name": "Jack Holland",
@@ -102,7 +104,7 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Gippsland Power",
-   "games": 6,
+   "games": 7,
    "source": "afl"
   },
   {
@@ -245,6 +247,14 @@
    "source": "afl"
   },
   {
+   "name": "Charlie Sutton",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Bendigo Pioneers",
+   "games": 2,
+   "source": "afl"
+  },
+  {
    "name": "Josh Auber",
    "state_team": "Vic Metro",
    "position": null,
@@ -293,6 +303,14 @@
    "source": "afl"
   },
   {
+   "name": "Archie Alderuccio",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Bendigo Pioneers",
+   "games": 1,
+   "source": "afl"
+  },
+  {
    "name": "Archie Symons",
    "state_team": "Vic Country",
    "position": null,
@@ -317,10 +335,10 @@
    "source": "afl"
   },
   {
-   "name": "Charlie Sutton",
-   "state_team": "Vic Country",
+   "name": "Campbell Barwick",
+   "state_team": "Tasmania",
    "position": null,
-   "junior_club": "Bendigo Pioneers",
+   "junior_club": "Tasmania Devils",
    "games": 1,
    "source": "afl"
   },
@@ -337,6 +355,14 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Dandenong Stingrays",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Dexter Wright",
+   "state_team": "Tasmania",
+   "position": null,
+   "junior_club": "Tasmania Devils",
    "games": 1,
    "source": "afl"
   },
@@ -385,6 +411,14 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "GWV Rebels",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Isaac Brown",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
    "games": 1,
    "source": "afl"
   },

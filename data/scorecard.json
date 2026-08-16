@@ -46,10 +46,10 @@
   "predictor": {
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
-   "top10": 6.7,
+   "top10": 6.3,
    "top25": 17.0,
-   "aa_hit_rate": 0.591,
-   "aa_hits": 39,
+   "aa_hit_rate": 0.576,
+   "aa_hits": 38,
    "aa_n": 66,
    "rank": 1,
    "aa_rank": 1
@@ -59,10 +59,10 @@
   {
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
-   "top10": 6.7,
+   "top10": 6.3,
    "top25": 17.0,
-   "aa_hit_rate": 0.591,
-   "aa_hits": 39,
+   "aa_hit_rate": 0.576,
+   "aa_hits": 38,
    "aa_n": 66,
    "rank": 1,
    "aa_rank": 1
@@ -105,10 +105,10 @@
   {
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
-   "top10": 6.7,
+   "top10": 6.3,
    "top25": 17.0,
-   "aa_hit_rate": 0.591,
-   "aa_hits": 39,
+   "aa_hit_rate": 0.576,
+   "aa_hits": 38,
    "aa_n": 66,
    "rank": 1,
    "aa_rank": 1
@@ -179,7 +179,7 @@
      "spearman": 0.662,
      "top10": 7,
      "top25": 18,
-     "aa_hits": 12,
+     "aa_hits": 11,
      "aa_n": 22
     }
    }
@@ -249,7 +249,7 @@
     },
     "predictor": {
      "spearman": 0.653,
-     "top10": 7,
+     "top10": 6,
      "top25": 17,
      "aa_hits": 14,
      "aa_n": 22
