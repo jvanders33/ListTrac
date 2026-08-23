@@ -70,7 +70,7 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Geelong Falcons",
-   "games": 6,
+   "games": 7,
    "source": "afl",
    "rank": 8
   },
@@ -92,19 +92,19 @@
    "rank": 10
   },
   {
+   "name": "Alex Ingham",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
+   "games": 8,
+   "source": "afl"
+  },
+  {
    "name": "Dex Rizzoli",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "GWV Rebels",
    "games": 8,
-   "source": "afl"
-  },
-  {
-   "name": "Alex Ingham",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Gippsland Power",
-   "games": 7,
    "source": "afl"
   },
   {
@@ -247,6 +247,14 @@
    "source": "afl"
   },
   {
+   "name": "Campbell Barwick",
+   "state_team": "Tasmania",
+   "position": null,
+   "junior_club": "Tasmania Devils",
+   "games": 2,
+   "source": "afl"
+  },
+  {
    "name": "Charlie Sutton",
    "state_team": "Vic Country",
    "position": null,
@@ -255,10 +263,26 @@
    "source": "afl"
   },
   {
+   "name": "Harry Lindsay",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
+   "games": 2,
+   "source": "afl"
+  },
+  {
    "name": "Josh Auber",
    "state_team": "Vic Metro",
    "position": null,
    "junior_club": "Western Jets",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Oscar Roydhouse",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
    "games": 2,
    "source": "afl"
   },
@@ -335,14 +359,6 @@
    "source": "afl"
   },
   {
-   "name": "Campbell Barwick",
-   "state_team": "Tasmania",
-   "position": null,
-   "junior_club": "Tasmania Devils",
-   "games": 1,
-   "source": "afl"
-  },
-  {
    "name": "Clancy Cunningham",
    "state_team": "Vic Country",
    "position": null,
@@ -391,14 +407,6 @@
    "source": "afl"
   },
   {
-   "name": "Harry Lindsay",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Geelong Falcons",
-   "games": 1,
-   "source": "afl"
-  },
-  {
    "name": "Hudson Brown",
    "state_team": "Vic Country",
    "position": null,
@@ -423,6 +431,22 @@
    "source": "afl"
   },
   {
+   "name": "Ky Bannister",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Lennox Hazell",
+   "state_team": "Tasmania",
+   "position": null,
+   "junior_club": "Tasmania Devils",
+   "games": 1,
+   "source": "afl"
+  },
+  {
    "name": "Nikita Trikilis",
    "state_team": "Northern Territory",
    "position": null,
@@ -439,10 +463,10 @@
    "source": "afl"
   },
   {
-   "name": "Oscar Roydhouse",
+   "name": "Ryder Murray",
    "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Geelong Falcons",
+   "junior_club": "Murray Bushrangers",
    "games": 1,
    "source": "afl"
   },

@@ -3,7 +3,7 @@
  "source_url": "https://www.afl.com.au/news",
  "attribution": "Contract & movement events from the AFL's own content API and AFLRATINGS' reporting, with hand-verified corrections; each event links to its source. The AFL does not disclose contract terms — no dollar figures are tracked.",
  "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
- "count": 1538,
+ "count": 1544,
  "events": [
   {
    "name": "Scott Pendlebury",
@@ -20898,6 +20898,78 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2026/08/04/afl-trade-news-tom-sparrow/"
+  },
+  {
+   "name": "James Borlase Contract News",
+   "norm": "jamesborlasecontractnews",
+   "date": "2026-08-17",
+   "kind": "extension",
+   "club": null,
+   "length": 3,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/08/17/james-borlase-contract-news/"
+  },
+  {
+   "name": "Bailey Humphrey Contract News",
+   "norm": "baileyhumphreycontractnews",
+   "date": "2026-08-17",
+   "kind": "extension",
+   "club": null,
+   "length": 2,
+   "end_year": 2030,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/08/17/bailey-humphrey-contract-news/"
+  },
+  {
+   "name": "Tom Sparrow Contract News",
+   "norm": "tomsparrowcontractnews",
+   "date": "2026-08-17",
+   "kind": "extension",
+   "club": null,
+   "length": 5,
+   "end_year": 2031,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/08/17/tom-sparrow-contract-news/"
+  },
+  {
+   "name": "Jonty Faull Contract News",
+   "norm": "jontyfaullcontractnews",
+   "date": "2026-08-18",
+   "kind": "extension",
+   "club": null,
+   "length": 2,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/08/18/jonty-faull-contract-news/"
+  },
+  {
+   "name": "Taj Hotton Contract News",
+   "norm": "tajhottoncontractnews",
+   "date": "2026-08-18",
+   "kind": "extension",
+   "club": null,
+   "length": 2,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/08/18/taj-hotton-contract-news/"
+  },
+  {
+   "name": "Mitch Georgiades Contract News",
+   "norm": "mitchgeorgiadescontractnews",
+   "date": "2026-08-19",
+   "kind": "extension",
+   "club": null,
+   "length": 2,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/08/19/mitch-georgiades-contract-news/"
   }
  ]
 }

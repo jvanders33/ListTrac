@@ -56,11 +56,11 @@
   }
  },
  "empirical_age_factors": {
-  "21-23": 0.732,
-  "24-27": 0.987,
-  "28-29": 0.962,
-  "30-31": 0.849,
-  "32+": 0.639
+  "21-23": 0.735,
+  "24-27": 0.988,
+  "28-29": 0.965,
+  "30-31": 0.853,
+  "32+": 0.629
  },
  "aging": {
   "ALL": [
@@ -68,142 +68,142 @@
     "age": 18,
     "trajectory": 0.0,
     "value_index": 0.0,
-    "mean_delta": 41.5,
+    "mean_delta": 42.5,
     "n": 229,
     "low_conf": false
    },
    {
     "age": 19,
-    "trajectory": 41.5,
-    "value_index": 0.181,
-    "mean_delta": 49.3,
+    "trajectory": 42.5,
+    "value_index": 0.183,
+    "mean_delta": 49.9,
     "n": 472,
     "low_conf": false
    },
    {
     "age": 20,
-    "trajectory": 90.8,
-    "value_index": 0.395,
-    "mean_delta": 43.1,
+    "trajectory": 92.4,
+    "value_index": 0.398,
+    "mean_delta": 43.4,
     "n": 446,
     "low_conf": false
    },
    {
     "age": 21,
-    "trajectory": 133.9,
-    "value_index": 0.583,
-    "mean_delta": 37.3,
+    "trajectory": 135.8,
+    "value_index": 0.586,
+    "mean_delta": 37.4,
     "n": 429,
     "low_conf": false
    },
    {
     "age": 22,
-    "trajectory": 171.2,
-    "value_index": 0.745,
-    "mean_delta": 28.6,
+    "trajectory": 173.2,
+    "value_index": 0.747,
+    "mean_delta": 28.8,
     "n": 400,
     "low_conf": false
    },
    {
     "age": 23,
-    "trajectory": 199.8,
-    "value_index": 0.869,
-    "mean_delta": 22.3,
+    "trajectory": 202.0,
+    "value_index": 0.871,
+    "mean_delta": 22.2,
     "n": 364,
     "low_conf": false
    },
    {
     "age": 24,
-    "trajectory": 222.2,
+    "trajectory": 224.2,
     "value_index": 0.967,
-    "mean_delta": 7.6,
+    "mean_delta": 7.8,
     "n": 322,
     "low_conf": false
    },
    {
     "age": 25,
-    "trajectory": 229.8,
+    "trajectory": 231.9,
     "value_index": 1.0,
-    "mean_delta": -2.4,
+    "mean_delta": -2.0,
     "n": 277,
     "low_conf": false
    },
    {
     "age": 26,
-    "trajectory": 227.4,
-    "value_index": 0.99,
-    "mean_delta": 0.0,
+    "trajectory": 230.0,
+    "value_index": 0.992,
+    "mean_delta": -0.1,
     "n": 231,
     "low_conf": false
    },
    {
     "age": 27,
-    "trajectory": 227.5,
-    "value_index": 0.99,
-    "mean_delta": -5.4,
+    "trajectory": 229.8,
+    "value_index": 0.991,
+    "mean_delta": -5.2,
     "n": 189,
     "low_conf": false
    },
    {
     "age": 28,
-    "trajectory": 222.1,
-    "value_index": 0.966,
-    "mean_delta": -1.8,
+    "trajectory": 224.7,
+    "value_index": 0.969,
+    "mean_delta": -1.9,
     "n": 146,
     "low_conf": false
    },
    {
     "age": 29,
-    "trajectory": 220.3,
-    "value_index": 0.959,
-    "mean_delta": -15.0,
+    "trajectory": 222.8,
+    "value_index": 0.961,
+    "mean_delta": -14.8,
     "n": 113,
     "low_conf": false
    },
    {
     "age": 30,
-    "trajectory": 205.3,
-    "value_index": 0.893,
-    "mean_delta": -20.2,
+    "trajectory": 208.0,
+    "value_index": 0.897,
+    "mean_delta": -20.6,
     "n": 76,
     "low_conf": false
    },
    {
     "age": 31,
-    "trajectory": 185.1,
-    "value_index": 0.805,
-    "mean_delta": -12.2,
+    "trajectory": 187.4,
+    "value_index": 0.808,
+    "mean_delta": -13.2,
     "n": 55,
     "low_conf": false
    },
    {
     "age": 32,
-    "trajectory": 172.8,
-    "value_index": 0.752,
-    "mean_delta": -16.1,
+    "trajectory": 174.2,
+    "value_index": 0.751,
+    "mean_delta": -17.1,
     "n": 35,
     "low_conf": false
    },
    {
     "age": 33,
-    "trajectory": 156.7,
-    "value_index": 0.682,
-    "mean_delta": -13.6,
+    "trajectory": 157.0,
+    "value_index": 0.677,
+    "mean_delta": -15.6,
     "n": 19,
     "low_conf": true
    },
    {
     "age": 34,
-    "trajectory": 143.1,
-    "value_index": 0.623,
-    "mean_delta": -28.1,
+    "trajectory": 141.5,
+    "value_index": 0.61,
+    "mean_delta": -31.1,
     "n": 10,
     "low_conf": true
    },
    {
     "age": 35,
-    "trajectory": 115.0,
-    "value_index": 0.5,
+    "trajectory": 110.4,
+    "value_index": 0.476,
     "mean_delta": null,
     "n": 10,
     "low_conf": true
@@ -214,37 +214,37 @@
     "age": 18,
     "trajectory": 0.0,
     "value_index": 0.0,
-    "mean_delta": 59.1,
+    "mean_delta": 60.2,
     "n": 67,
     "low_conf": false
    },
    {
     "age": 19,
-    "trajectory": 59.1,
-    "value_index": 0.207,
-    "mean_delta": 77.4,
-    "n": 152,
+    "trajectory": 60.2,
+    "value_index": 0.208,
+    "mean_delta": 78.9,
+    "n": 151,
     "low_conf": false
    },
    {
     "age": 20,
-    "trajectory": 136.5,
-    "value_index": 0.478,
-    "mean_delta": 47.2,
+    "trajectory": 139.1,
+    "value_index": 0.481,
+    "mean_delta": 47.3,
     "n": 139,
     "low_conf": false
    },
    {
     "age": 21,
-    "trajectory": 183.7,
-    "value_index": 0.643,
-    "mean_delta": 41.6,
+    "trajectory": 186.4,
+    "value_index": 0.645,
+    "mean_delta": 41.7,
     "n": 135,
     "low_conf": false
    },
    {
     "age": 22,
-    "trajectory": 225.3,
+    "trajectory": 228.1,
     "value_index": 0.789,
     "mean_delta": 33.0,
     "n": 125,
@@ -252,80 +252,80 @@
    },
    {
     "age": 23,
-    "trajectory": 258.4,
-    "value_index": 0.905,
-    "mean_delta": 15.0,
+    "trajectory": 261.1,
+    "value_index": 0.903,
+    "mean_delta": 15.1,
     "n": 113,
     "low_conf": false
    },
    {
     "age": 24,
-    "trajectory": 273.4,
-    "value_index": 0.957,
-    "mean_delta": -9.6,
+    "trajectory": 276.2,
+    "value_index": 0.955,
+    "mean_delta": -10.0,
     "n": 97,
     "low_conf": false
    },
    {
     "age": 25,
-    "trajectory": 263.8,
-    "value_index": 0.924,
-    "mean_delta": 3.0,
+    "trajectory": 266.2,
+    "value_index": 0.92,
+    "mean_delta": 3.7,
     "n": 71,
     "low_conf": false
    },
    {
     "age": 26,
-    "trajectory": 266.8,
-    "value_index": 0.934,
-    "mean_delta": 5.5,
+    "trajectory": 269.9,
+    "value_index": 0.933,
+    "mean_delta": 5.8,
     "n": 59,
     "low_conf": false
    },
    {
     "age": 27,
-    "trajectory": 272.3,
+    "trajectory": 275.7,
     "value_index": 0.953,
-    "mean_delta": 8.3,
+    "mean_delta": 8.9,
     "n": 50,
     "low_conf": false
    },
    {
     "age": 28,
-    "trajectory": 280.7,
-    "value_index": 0.983,
-    "mean_delta": 4.9,
+    "trajectory": 284.6,
+    "value_index": 0.984,
+    "mean_delta": 4.7,
     "n": 38,
     "low_conf": false
    },
    {
     "age": 29,
-    "trajectory": 285.6,
+    "trajectory": 289.2,
     "value_index": 1.0,
-    "mean_delta": -16.3,
+    "mean_delta": -15.4,
     "n": 33,
     "low_conf": false
    },
    {
     "age": 30,
-    "trajectory": 269.3,
-    "value_index": 0.943,
-    "mean_delta": -33.7,
+    "trajectory": 273.8,
+    "value_index": 0.947,
+    "mean_delta": -32.4,
     "n": 20,
     "low_conf": false
    },
    {
     "age": 31,
-    "trajectory": 235.6,
-    "value_index": 0.825,
-    "mean_delta": -63.4,
+    "trajectory": 241.4,
+    "value_index": 0.835,
+    "mean_delta": -67.5,
     "n": 14,
     "low_conf": true
    },
    {
     "age": 32,
-    "trajectory": 172.2,
-    "value_index": 0.603,
+    "trajectory": 173.9,
+    "value_index": 0.601,
     "mean_delta": null,
     "n": 14,
     "low_conf": true
@@ -336,126 +336,126 @@
     "age": 18,
     "trajectory": 0.0,
     "value_index": 0.0,
-    "mean_delta": 39.9,
-    "n": 69,
+    "mean_delta": 41.6,
+    "n": 67,
     "low_conf": false
    },
    {
     "age": 19,
-    "trajectory": 39.9,
-    "value_index": 0.186,
-    "mean_delta": 38.8,
-    "n": 133,
+    "trajectory": 41.6,
+    "value_index": 0.189,
+    "mean_delta": 38.3,
+    "n": 132,
     "low_conf": false
    },
    {
     "age": 20,
-    "trajectory": 78.6,
-    "value_index": 0.366,
-    "mean_delta": 46.5,
-    "n": 119,
+    "trajectory": 79.9,
+    "value_index": 0.362,
+    "mean_delta": 47.8,
+    "n": 117,
     "low_conf": false
    },
    {
     "age": 21,
-    "trajectory": 125.1,
-    "value_index": 0.582,
-    "mean_delta": 38.2,
-    "n": 111,
+    "trajectory": 127.7,
+    "value_index": 0.579,
+    "mean_delta": 38.4,
+    "n": 110,
     "low_conf": false
    },
    {
     "age": 22,
-    "trajectory": 163.4,
-    "value_index": 0.761,
-    "mean_delta": 26.0,
-    "n": 101,
+    "trajectory": 166.1,
+    "value_index": 0.753,
+    "mean_delta": 26.7,
+    "n": 100,
     "low_conf": false
    },
    {
     "age": 23,
-    "trajectory": 189.4,
-    "value_index": 0.882,
-    "mean_delta": 11.0,
-    "n": 92,
+    "trajectory": 192.8,
+    "value_index": 0.874,
+    "mean_delta": 11.2,
+    "n": 91,
     "low_conf": false
    },
    {
     "age": 24,
-    "trajectory": 200.3,
-    "value_index": 0.932,
-    "mean_delta": 14.5,
-    "n": 76,
+    "trajectory": 204.0,
+    "value_index": 0.925,
+    "mean_delta": 16.5,
+    "n": 75,
     "low_conf": false
    },
    {
     "age": 25,
-    "trajectory": 214.8,
+    "trajectory": 220.5,
     "value_index": 1.0,
-    "mean_delta": -3.3,
-    "n": 69,
+    "mean_delta": -4.4,
+    "n": 68,
     "low_conf": false
    },
    {
     "age": 26,
-    "trajectory": 211.5,
-    "value_index": 0.985,
-    "mean_delta": -3.7,
-    "n": 57,
+    "trajectory": 216.1,
+    "value_index": 0.98,
+    "mean_delta": -5.6,
+    "n": 56,
     "low_conf": false
    },
    {
     "age": 27,
-    "trajectory": 207.8,
-    "value_index": 0.967,
-    "mean_delta": -16.9,
-    "n": 48,
+    "trajectory": 210.4,
+    "value_index": 0.954,
+    "mean_delta": -14.7,
+    "n": 47,
     "low_conf": false
    },
    {
     "age": 28,
-    "trajectory": 190.9,
-    "value_index": 0.889,
-    "mean_delta": -17.9,
-    "n": 34,
+    "trajectory": 195.7,
+    "value_index": 0.888,
+    "mean_delta": -13.8,
+    "n": 33,
     "low_conf": false
    },
    {
     "age": 29,
-    "trajectory": 173.0,
-    "value_index": 0.805,
-    "mean_delta": -15.1,
+    "trajectory": 181.9,
+    "value_index": 0.825,
+    "mean_delta": -14.9,
     "n": 24,
     "low_conf": false
    },
    {
     "age": 30,
-    "trajectory": 157.8,
-    "value_index": 0.735,
-    "mean_delta": -0.3,
+    "trajectory": 166.9,
+    "value_index": 0.757,
+    "mean_delta": -1.3,
     "n": 21,
     "low_conf": false
    },
    {
     "age": 31,
-    "trajectory": 157.5,
-    "value_index": 0.733,
-    "mean_delta": 8.9,
+    "trajectory": 165.6,
+    "value_index": 0.751,
+    "mean_delta": 10.6,
     "n": 15,
     "low_conf": true
    },
    {
     "age": 32,
-    "trajectory": 166.5,
-    "value_index": 0.775,
-    "mean_delta": 0.0,
+    "trajectory": 176.3,
+    "value_index": 0.8,
+    "mean_delta": 1.0,
     "n": 11,
     "low_conf": true
    },
    {
     "age": 33,
-    "trajectory": 166.5,
-    "value_index": 0.775,
+    "trajectory": 177.3,
+    "value_index": 0.804,
     "mean_delta": null,
     "n": 11,
     "low_conf": true
@@ -466,126 +466,126 @@
     "age": 18,
     "trajectory": 0.0,
     "value_index": 0.0,
-    "mean_delta": 33.8,
-    "n": 80,
+    "mean_delta": 34.6,
+    "n": 82,
     "low_conf": false
    },
    {
     "age": 19,
-    "trajectory": 33.8,
-    "value_index": 0.153,
-    "mean_delta": 44.2,
-    "n": 158,
+    "trajectory": 34.6,
+    "value_index": 0.158,
+    "mean_delta": 44.7,
+    "n": 160,
     "low_conf": false
    },
    {
     "age": 20,
-    "trajectory": 78.0,
-    "value_index": 0.354,
-    "mean_delta": 42.5,
-    "n": 157,
+    "trajectory": 79.3,
+    "value_index": 0.363,
+    "mean_delta": 42.4,
+    "n": 159,
     "low_conf": false
    },
    {
     "age": 21,
-    "trajectory": 120.4,
-    "value_index": 0.546,
-    "mean_delta": 32.7,
-    "n": 150,
+    "trajectory": 121.7,
+    "value_index": 0.557,
+    "mean_delta": 32.3,
+    "n": 151,
     "low_conf": false
    },
    {
     "age": 22,
-    "trajectory": 153.1,
-    "value_index": 0.695,
-    "mean_delta": 23.5,
-    "n": 142,
+    "trajectory": 154.0,
+    "value_index": 0.705,
+    "mean_delta": 23.0,
+    "n": 143,
     "low_conf": false
    },
    {
     "age": 23,
-    "trajectory": 176.6,
-    "value_index": 0.801,
-    "mean_delta": 27.6,
-    "n": 129,
+    "trajectory": 177.0,
+    "value_index": 0.81,
+    "mean_delta": 26.3,
+    "n": 130,
     "low_conf": false
    },
    {
     "age": 24,
-    "trajectory": 204.3,
-    "value_index": 0.927,
-    "mean_delta": 16.2,
-    "n": 120,
+    "trajectory": 203.4,
+    "value_index": 0.931,
+    "mean_delta": 15.2,
+    "n": 121,
     "low_conf": false
    },
    {
     "age": 25,
-    "trajectory": 220.4,
+    "trajectory": 218.5,
     "value_index": 1.0,
-    "mean_delta": -5.5,
-    "n": 107,
+    "mean_delta": -4.4,
+    "n": 108,
     "low_conf": false
    },
    {
     "age": 26,
-    "trajectory": 214.9,
-    "value_index": 0.975,
-    "mean_delta": -3.2,
-    "n": 90,
+    "trajectory": 214.1,
+    "value_index": 0.98,
+    "mean_delta": -2.7,
+    "n": 91,
     "low_conf": false
    },
    {
     "age": 27,
-    "trajectory": 211.7,
-    "value_index": 0.961,
-    "mean_delta": -11.1,
-    "n": 71,
+    "trajectory": 211.4,
+    "value_index": 0.968,
+    "mean_delta": -12.5,
+    "n": 72,
     "low_conf": false
    },
    {
     "age": 28,
-    "trajectory": 200.5,
+    "trajectory": 198.9,
     "value_index": 0.91,
-    "mean_delta": 5.3,
-    "n": 59,
+    "mean_delta": 3.8,
+    "n": 60,
     "low_conf": false
    },
    {
     "age": 29,
-    "trajectory": 205.9,
-    "value_index": 0.934,
-    "mean_delta": -8.5,
+    "trajectory": 202.7,
+    "value_index": 0.928,
+    "mean_delta": -9.8,
     "n": 43,
     "low_conf": false
    },
    {
     "age": 30,
-    "trajectory": 197.4,
-    "value_index": 0.896,
-    "mean_delta": -35.4,
+    "trajectory": 192.9,
+    "value_index": 0.883,
+    "mean_delta": -35.1,
     "n": 27,
     "low_conf": false
    },
    {
     "age": 31,
-    "trajectory": 162.0,
-    "value_index": 0.735,
-    "mean_delta": -24.2,
+    "trajectory": 157.8,
+    "value_index": 0.722,
+    "mean_delta": -26.2,
     "n": 19,
     "low_conf": true
    },
    {
     "age": 32,
-    "trajectory": 137.8,
-    "value_index": 0.625,
-    "mean_delta": -8.9,
+    "trajectory": 131.6,
+    "value_index": 0.602,
+    "mean_delta": -11.7,
     "n": 13,
     "low_conf": true
    },
    {
     "age": 33,
-    "trajectory": 128.9,
-    "value_index": 0.585,
+    "trajectory": 119.9,
+    "value_index": 0.549,
     "mean_delta": null,
     "n": 13,
     "low_conf": true
@@ -603,14 +603,14 @@
    {
     "age": 19,
     "trajectory": 12.6,
-    "value_index": 0.056,
-    "mean_delta": 9.5,
+    "value_index": 0.055,
+    "mean_delta": 9.8,
     "n": 29,
     "low_conf": false
    },
    {
     "age": 20,
-    "trajectory": 22.0,
+    "trajectory": 22.4,
     "value_index": 0.098,
     "mean_delta": 16.0,
     "n": 31,
@@ -618,80 +618,80 @@
    },
    {
     "age": 21,
-    "trajectory": 38.0,
-    "value_index": 0.169,
-    "mean_delta": 38.5,
+    "trajectory": 38.4,
+    "value_index": 0.168,
+    "mean_delta": 38.6,
     "n": 33,
     "low_conf": false
    },
    {
     "age": 22,
-    "trajectory": 76.5,
-    "value_index": 0.339,
-    "mean_delta": 51.3,
+    "trajectory": 76.9,
+    "value_index": 0.337,
+    "mean_delta": 51.6,
     "n": 31,
     "low_conf": false
    },
    {
     "age": 23,
-    "trajectory": 127.7,
-    "value_index": 0.566,
-    "mean_delta": 57.6,
+    "trajectory": 128.6,
+    "value_index": 0.564,
+    "mean_delta": 57.7,
     "n": 29,
     "low_conf": false
    },
    {
     "age": 24,
-    "trajectory": 185.3,
-    "value_index": 0.822,
-    "mean_delta": 13.6,
+    "trajectory": 186.2,
+    "value_index": 0.817,
+    "mean_delta": 13.9,
     "n": 28,
     "low_conf": false
    },
    {
     "age": 25,
-    "trajectory": 198.9,
-    "value_index": 0.882,
-    "mean_delta": 10.5,
+    "trajectory": 200.1,
+    "value_index": 0.878,
+    "mean_delta": 9.7,
     "n": 29,
     "low_conf": false
    },
    {
     "age": 26,
-    "trajectory": 209.4,
-    "value_index": 0.929,
-    "mean_delta": 7.8,
+    "trajectory": 209.8,
+    "value_index": 0.92,
+    "mean_delta": 8.2,
     "n": 24,
     "low_conf": false
    },
    {
     "age": 27,
-    "trajectory": 217.2,
-    "value_index": 0.963,
-    "mean_delta": 8.4,
+    "trajectory": 218.1,
+    "value_index": 0.957,
+    "mean_delta": 9.9,
     "n": 19,
     "low_conf": true
    },
    {
     "age": 28,
-    "trajectory": 225.5,
+    "trajectory": 228.0,
     "value_index": 1.0,
-    "mean_delta": -11.6,
+    "mean_delta": -11.2,
     "n": 14,
     "low_conf": true
    },
    {
     "age": 29,
-    "trajectory": 213.9,
-    "value_index": 0.949,
-    "mean_delta": -29.4,
+    "trajectory": 216.8,
+    "value_index": 0.951,
+    "mean_delta": -29.5,
     "n": 13,
     "low_conf": true
    },
    {
     "age": 30,
-    "trajectory": 184.6,
-    "value_index": 0.819,
+    "trajectory": 187.3,
+    "value_index": 0.821,
     "mean_delta": null,
     "n": 13,
     "low_conf": true
@@ -703,7 +703,7 @@
    {
     "age": 18,
     "n": 255,
-    "mean": 38.1,
+    "mean": 38.3,
     "p25": 0.0,
     "p50": 9.8,
     "p75": 62.4
@@ -711,50 +711,50 @@
    {
     "age": 19,
     "n": 553,
-    "mean": 62.9,
+    "mean": 63.4,
     "p25": 0.0,
-    "p50": 23.6,
-    "p75": 95.8
+    "p50": 25.1,
+    "p75": 96.8
    },
    {
     "age": 20,
     "n": 526,
-    "mean": 122.1,
+    "mean": 122.4,
     "p25": 18.1,
     "p50": 92.7,
-    "p75": 198.1
+    "p75": 198.6
    },
    {
     "age": 21,
     "n": 494,
-    "mean": 174.7,
-    "p25": 53.5,
+    "mean": 174.9,
+    "p25": 54.1,
     "p50": 169.1,
-    "p75": 274.3
+    "p75": 274.9
    },
    {
     "age": 22,
     "n": 464,
-    "mean": 217.6,
+    "mean": 217.7,
     "p25": 98.4,
     "p50": 221.5,
-    "p75": 319.5
+    "p75": 321.3
    },
    {
     "age": 23,
     "n": 432,
-    "mean": 248.8,
-    "p25": 137.2,
-    "p50": 252.7,
-    "p75": 346.1
+    "mean": 248.9,
+    "p25": 138.5,
+    "p50": 253.3,
+    "p75": 345.5
    },
    {
     "age": 24,
     "n": 375,
     "mean": 276.5,
     "p25": 191.5,
-    "p50": 283.6,
-    "p75": 371.1
+    "p50": 284.0,
+    "p75": 370.8
    },
    {
     "age": 25,
@@ -767,47 +767,47 @@
    {
     "age": 26,
     "n": 284,
-    "mean": 294.5,
+    "mean": 294.6,
     "p25": 209.1,
-    "p50": 305.5,
-    "p75": 378.3
+    "p50": 305.3,
+    "p75": 380.5
    },
    {
     "age": 27,
     "n": 235,
-    "mean": 307.8,
-    "p25": 216.6,
-    "p50": 316.4,
+    "mean": 307.5,
+    "p25": 218.5,
+    "p50": 314.3,
     "p75": 393.1
    },
    {
     "age": 28,
     "n": 190,
-    "mean": 315.3,
+    "mean": 315.6,
     "p25": 233.2,
-    "p50": 314.6,
-    "p75": 396.4
+    "p50": 314.5,
+    "p75": 397.0
    },
    {
     "age": 29,
     "n": 146,
-    "mean": 329.3,
-    "p25": 262.9,
+    "mean": 329.2,
+    "p25": 259.7,
     "p50": 333.0,
     "p75": 406.2
    },
    {
     "age": 30,
     "n": 113,
-    "mean": 325.6,
-    "p25": 257.0,
-    "p50": 328.5,
+    "mean": 325.3,
+    "p25": 253.9,
+    "p50": 328.9,
     "p75": 424.1
    },
    {
     "age": 31,
     "n": 76,
-    "mean": 314.2,
+    "mean": 313.7,
     "p25": 251.0,
     "p50": 321.2,
     "p75": 385.1
@@ -815,15 +815,15 @@
    {
     "age": 32,
     "n": 55,
-    "mean": 308.3,
+    "mean": 307.2,
     "p25": 236.1,
     "p50": 316.3,
-    "p75": 382.5
+    "p75": 384.0
    },
    {
     "age": 33,
     "n": 35,
-    "mean": 313.6,
+    "mean": 312.3,
     "p25": 239.2,
     "p50": 322.9,
     "p75": 409.9
@@ -831,15 +831,15 @@
    {
     "age": 34,
     "n": 19,
-    "mean": 319.0,
-    "p25": 219.9,
+    "mean": 317.5,
+    "p25": 214.1,
     "p50": 327.6,
     "p75": 433.6
    },
    {
     "age": 35,
     "n": 10,
-    "mean": 312.6,
+    "mean": 310.3,
     "p25": 248.7,
     "p50": 319.0,
     "p75": 378.2
@@ -849,55 +849,55 @@
    {
     "age": 18,
     "n": 74,
-    "mean": 59.2,
+    "mean": 59.3,
     "p25": 0.6,
     "p50": 24.5,
     "p75": 106.0
    },
    {
     "age": 19,
-    "n": 174,
-    "mean": 89.1,
+    "n": 173,
+    "mean": 90.1,
     "p25": 9.5,
-    "p50": 50.8,
-    "p75": 121.5
+    "p50": 56.9,
+    "p75": 121.7
    },
    {
     "age": 20,
-    "n": 160,
-    "mean": 178.6,
-    "p25": 67.7,
+    "n": 159,
+    "mean": 179.8,
+    "p25": 69.5,
     "p50": 158.0,
     "p75": 271.2
    },
    {
     "age": 21,
     "n": 152,
-    "mean": 236.4,
-    "p25": 104.2,
+    "mean": 236.6,
+    "p25": 107.6,
     "p50": 246.1,
     "p75": 347.3
    },
    {
     "age": 22,
-    "n": 142,
-    "mean": 283.3,
-    "p25": 165.7,
-    "p50": 306.1,
+    "n": 141,
+    "mean": 285.3,
+    "p25": 165.9,
+    "p50": 307.3,
     "p75": 403.3
    },
    {
     "age": 23,
-    "n": 138,
-    "mean": 308.6,
-    "p25": 178.1,
-    "p50": 327.0,
+    "n": 137,
+    "mean": 310.0,
+    "p25": 181.5,
+    "p50": 325.0,
     "p75": 437.1
    },
    {
     "age": 24,
     "n": 115,
-    "mean": 341.2,
+    "mean": 341.3,
     "p25": 231.0,
     "p50": 345.3,
     "p75": 458.5
@@ -905,7 +905,7 @@
    {
     "age": 25,
     "n": 100,
-    "mean": 340.7,
+    "mean": 340.5,
     "p25": 251.7,
     "p50": 345.9,
     "p75": 453.9
@@ -914,7 +914,7 @@
     "age": 26,
     "n": 72,
     "mean": 352.2,
-    "p25": 287.1,
+    "p25": 284.5,
     "p50": 363.4,
     "p75": 454.3
    },
@@ -922,30 +922,30 @@
     "age": 27,
     "n": 60,
     "mean": 365.9,
-    "p25": 299.0,
+    "p25": 297.7,
     "p50": 374.9,
     "p75": 465.5
    },
    {
     "age": 28,
     "n": 50,
-    "mean": 381.7,
-    "p25": 308.6,
+    "mean": 382.1,
+    "p25": 308.4,
     "p50": 389.0,
-    "p75": 468.0
+    "p75": 471.7
    },
    {
     "age": 29,
     "n": 38,
-    "mean": 411.8,
+    "mean": 411.6,
     "p25": 342.9,
-    "p50": 412.5,
+    "p50": 413.3,
     "p75": 504.4
    },
    {
     "age": 30,
     "n": 33,
-    "mean": 403.8,
+    "mean": 404.9,
     "p25": 320.3,
     "p50": 413.3,
     "p75": 493.8
@@ -953,16 +953,16 @@
    {
     "age": 31,
     "n": 20,
-    "mean": 371.2,
+    "mean": 371.1,
     "p25": 316.8,
-    "p50": 373.0,
+    "p50": 373.8,
     "p75": 423.0
    },
    {
     "age": 32,
     "n": 14,
-    "mean": 331.4,
-    "p25": 191.5,
+    "mean": 327.6,
+    "p25": 184.3,
     "p50": 298.2,
     "p75": 451.7
    }
@@ -970,104 +970,104 @@
   "FWD": [
    {
     "age": 18,
-    "n": 79,
-    "mean": 36.6,
+    "n": 77,
+    "mean": 37.2,
     "p25": 0.0,
     "p50": 9.7,
-    "p75": 62.8
+    "p75": 65.2
    },
    {
     "age": 19,
-    "n": 169,
-    "mean": 53.4,
+    "n": 168,
+    "mean": 53.5,
     "p25": 0.0,
-    "p50": 17.2,
-    "p75": 73.4
+    "p50": 19.4,
+    "p75": 72.1
    },
    {
     "age": 20,
-    "n": 149,
-    "mean": 102.7,
+    "n": 148,
+    "mean": 102.0,
     "p25": 14.7,
-    "p50": 87.1,
+    "p50": 78.2,
     "p75": 184.2
    },
    {
     "age": 21,
-    "n": 133,
-    "mean": 158.2,
-    "p25": 57.1,
+    "n": 131,
+    "mean": 158.7,
+    "p25": 55.3,
     "p50": 143.0,
-    "p75": 243.7
+    "p75": 248.0
    },
    {
     "age": 22,
     "n": 120,
-    "mean": 204.8,
-    "p25": 115.4,
-    "p50": 218.6,
+    "mean": 202.2,
+    "p25": 114.0,
+    "p50": 217.8,
     "p75": 291.6
    },
    {
     "age": 23,
     "n": 110,
-    "mean": 235.1,
-    "p25": 151.8,
-    "p50": 252.7,
-    "p75": 322.8
+    "mean": 233.5,
+    "p25": 149.4,
+    "p50": 247.2,
+    "p75": 320.9
    },
    {
     "age": 24,
-    "n": 93,
-    "mean": 234.8,
+    "n": 92,
+    "mean": 234.2,
     "p25": 175.7,
-    "p50": 247.2,
-    "p75": 304.3
+    "p50": 250.1,
+    "p75": 303.2
    },
    {
     "age": 25,
-    "n": 79,
-    "mean": 270.4,
-    "p25": 204.5,
-    "p50": 287.6,
-    "p75": 340.3
+    "n": 78,
+    "mean": 271.1,
+    "p25": 197.0,
+    "p50": 288.2,
+    "p75": 340.5
    },
    {
     "age": 26,
-    "n": 72,
-    "mean": 273.9,
-    "p25": 194.0,
-    "p50": 288.6,
+    "n": 71,
+    "mean": 273.8,
+    "p25": 190.3,
+    "p50": 285.7,
     "p75": 339.7
    },
    {
     "age": 27,
-    "n": 60,
-    "mean": 275.9,
-    "p25": 192.8,
-    "p50": 292.8,
+    "n": 59,
+    "mean": 273.7,
+    "p25": 181.3,
+    "p50": 284.4,
     "p75": 367.8
    },
    {
     "age": 28,
-    "n": 48,
-    "mean": 279.7,
+    "n": 47,
+    "mean": 279.8,
     "p25": 233.2,
     "p50": 272.6,
     "p75": 348.5
    },
    {
     "age": 29,
-    "n": 34,
-    "mean": 286.1,
-    "p25": 226.9,
-    "p50": 308.2,
-    "p75": 359.2
+    "n": 33,
+    "mean": 288.5,
+    "p25": 243.5,
+    "p50": 312.8,
+    "p75": 363.6
    },
    {
     "age": 30,
     "n": 24,
-    "mean": 267.7,
+    "mean": 268.6,
     "p25": 191.5,
     "p50": 283.9,
     "p75": 329.9
@@ -1075,156 +1075,156 @@
    {
     "age": 31,
     "n": 21,
-    "mean": 271.4,
-    "p25": 232.6,
+    "mean": 270.6,
+    "p25": 227.1,
     "p50": 297.1,
     "p75": 322.5
    },
    {
     "age": 32,
     "n": 15,
-    "mean": 292.2,
-    "p25": 221.9,
-    "p50": 314.3,
-    "p75": 371.2
+    "mean": 293.5,
+    "p25": 217.8,
+    "p50": 316.3,
+    "p75": 386.6
    },
    {
     "age": 33,
     "n": 11,
-    "mean": 292.2,
+    "mean": 292.4,
     "p25": 216.0,
     "p50": 288.7,
-    "p75": 414.4
+    "p75": 412.3
    }
   ],
   "DEF": [
    {
     "age": 18,
-    "n": 89,
-    "mean": 26.8,
+    "n": 91,
+    "mean": 27.0,
     "p25": 0.0,
     "p50": 2.6,
     "p75": 46.6
    },
    {
     "age": 19,
-    "n": 179,
-    "mean": 54.1,
+    "n": 181,
+    "mean": 54.6,
     "p25": 0.0,
     "p50": 14.5,
-    "p75": 87.8
+    "p75": 88.7
    },
    {
     "age": 20,
-    "n": 179,
-    "mean": 107.4,
-    "p25": 9.3,
-    "p50": 78.3,
+    "n": 181,
+    "mean": 107.9,
+    "p25": 12.0,
+    "p50": 78.8,
     "p75": 182.5
    },
    {
     "age": 21,
-    "n": 171,
+    "n": 173,
     "mean": 159.2,
-    "p25": 49.3,
+    "p25": 50.4,
     "p50": 171.0,
-    "p75": 248.6
+    "p75": 246.6
    },
    {
     "age": 22,
-    "n": 165,
-    "mean": 193.4,
-    "p25": 90.6,
+    "n": 166,
+    "mean": 194.4,
+    "p25": 86.6,
     "p50": 194.0,
-    "p75": 292.0
+    "p75": 302.1
    },
    {
     "age": 23,
-    "n": 149,
-    "mean": 219.2,
+    "n": 150,
+    "mean": 219.8,
     "p25": 124.9,
-    "p50": 233.2,
-    "p75": 319.0
+    "p50": 233.1,
+    "p75": 321.7
    },
    {
     "age": 24,
-    "n": 134,
-    "mean": 256.0,
+    "n": 135,
+    "mean": 256.1,
     "p25": 175.3,
-    "p50": 268.6,
-    "p75": 337.8
+    "p50": 273.6,
+    "p75": 336.9
    },
    {
     "age": 25,
-    "n": 124,
-    "mean": 274.8,
+    "n": 125,
+    "mean": 274.6,
     "p25": 205.7,
-    "p50": 304.4,
+    "p50": 304.2,
     "p75": 354.8
    },
    {
     "age": 26,
-    "n": 109,
-    "mean": 277.3,
-    "p25": 203.5,
+    "n": 110,
+    "mean": 277.5,
+    "p25": 203.0,
     "p50": 295.5,
     "p75": 364.9
    },
    {
     "age": 27,
-    "n": 90,
-    "mean": 287.9,
-    "p25": 215.4,
-    "p50": 283.5,
-    "p75": 369.3
+    "n": 91,
+    "mean": 288.4,
+    "p25": 207.3,
+    "p50": 289.3,
+    "p75": 370.8
    },
    {
     "age": 28,
-    "n": 72,
+    "n": 73,
     "mean": 291.2,
     "p25": 239.1,
-    "p50": 305.8,
-    "p75": 362.5
+    "p50": 300.8,
+    "p75": 363.8
    },
    {
     "age": 29,
-    "n": 59,
-    "mean": 305.1,
+    "n": 60,
+    "mean": 303.4,
     "p25": 255.8,
     "p50": 318.5,
-    "p75": 382.9
+    "p75": 380.2
    },
    {
     "age": 30,
     "n": 43,
-    "mean": 304.8,
-    "p25": 251.0,
+    "mean": 302.7,
+    "p25": 248.8,
     "p50": 312.1,
-    "p75": 382.1
+    "p75": 381.1
    },
    {
     "age": 31,
     "n": 27,
-    "mean": 304.6,
-    "p25": 255.4,
-    "p50": 313.4,
+    "mean": 303.2,
+    "p25": 251.0,
+    "p50": 305.2,
     "p75": 373.0
    },
    {
     "age": 32,
     "n": 19,
-    "mean": 280.9,
+    "mean": 279.3,
     "p25": 236.1,
-    "p50": 311.4,
+    "p50": 307.1,
     "p75": 353.3
    },
    {
     "age": 33,
     "n": 13,
-    "mean": 297.8,
+    "mean": 295.2,
     "p25": 255.1,
-    "p50": 324.7,
-    "p75": 357.0
+    "p50": 324.2,
+    "p75": 353.5
    }
   ],
   "RUCK": [
@@ -1247,7 +1247,7 @@
    {
     "age": 20,
     "n": 38,
-    "mean": 30.6,
+    "mean": 30.8,
     "p25": 0.0,
     "p50": 0.0,
     "p75": 18.7
@@ -1255,7 +1255,7 @@
    {
     "age": 21,
     "n": 38,
-    "mean": 55.2,
+    "mean": 55.5,
     "p25": 0.0,
     "p50": 13.6,
     "p75": 55.9
@@ -1271,7 +1271,7 @@
    {
     "age": 23,
     "n": 34,
-    "mean": 173.8,
+    "mean": 174.1,
     "p25": 60.6,
     "p50": 125.4,
     "p75": 244.3
@@ -1287,7 +1287,7 @@
    {
     "age": 25,
     "n": 30,
-    "mean": 251.2,
+    "mean": 251.4,
     "p25": 57.6,
     "p50": 236.3,
     "p75": 425.9
@@ -1297,13 +1297,13 @@
     "n": 30,
     "mean": 265.4,
     "p25": 80.8,
-    "p50": 251.7,
+    "p50": 263.8,
     "p75": 421.6
    },
    {
     "age": 27,
     "n": 24,
-    "mean": 316.7,
+    "mean": 317.0,
     "p25": 203.4,
     "p50": 330.9,
     "p75": 419.9
@@ -1311,26 +1311,26 @@
    {
     "age": 28,
     "n": 19,
-    "mean": 326.8,
+    "mean": 328.0,
     "p25": 190.5,
-    "p50": 364.2,
+    "p50": 372.6,
     "p75": 444.3
    },
    {
     "age": 29,
     "n": 14,
-    "mean": 327.7,
+    "mean": 328.0,
     "p25": 256.4,
-    "p50": 318.2,
+    "p50": 322.5,
     "p75": 447.9
    },
    {
     "age": 30,
     "n": 13,
-    "mean": 302.9,
+    "mean": 302.8,
     "p25": 132.3,
-    "p50": 350.5,
-    "p75": 438.5
+    "p50": 350.8,
+    "p75": 454.7
    }
   ]
  }

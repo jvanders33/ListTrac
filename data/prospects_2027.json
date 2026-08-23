@@ -13,7 +13,7 @@
    "state_team": "Vic Metro",
    "position": "Ruck-rover",
    "junior_club": "Eastern Ranges",
-   "games": 9,
+   "games": 10,
    "source": "afl",
    "rank": 1,
    "award": "Kevin Sheehan Medal (Pool A B&F) + MVP"
@@ -23,7 +23,7 @@
    "state_team": "Tasmania",
    "position": "Midfielder",
    "junior_club": "Tasmania Devils",
-   "games": 12,
+   "games": 13,
    "source": "afl",
    "rank": 2,
    "award": "All-Australian captain"
@@ -84,7 +84,7 @@
    "state_team": "Vic Metro",
    "position": "Back pocket",
    "junior_club": "Calder Cannons",
-   "games": 13,
+   "games": 14,
    "source": "afl",
    "rank": 8
   },
@@ -170,7 +170,7 @@
    "state_team": "Vic Metro",
    "position": "Full-forward",
    "junior_club": "Western Jets",
-   "games": 4,
+   "games": 5,
    "source": "afl",
    "rank": 18
   },
@@ -188,7 +188,7 @@
    "state_team": "Vic Metro",
    "position": "Rover",
    "junior_club": "Calder Cannons",
-   "games": 8,
+   "games": 9,
    "source": "afl",
    "rank": 20
   },
@@ -220,6 +220,54 @@
    "state_team": "Vic Metro",
    "position": null,
    "junior_club": "Calder Cannons",
+   "games": 16,
+   "source": "afl"
+  },
+  {
+   "name": "Bryce McMillan",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Eastern Ranges",
+   "games": 15,
+   "source": "afl"
+  },
+  {
+   "name": "Charlie Fischer",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
+   "games": 15,
+   "source": "afl"
+  },
+  {
+   "name": "George Holderhead",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Calder Cannons",
+   "games": 15,
+   "source": "afl"
+  },
+  {
+   "name": "Griffin Barker",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Western Jets",
+   "games": 15,
+   "source": "afl"
+  },
+  {
+   "name": "Hugo Hanrahan",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Western Jets",
+   "games": 15,
+   "source": "afl"
+  },
+  {
+   "name": "Lachie Petrie",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "GWV Rebels",
    "games": 15,
    "source": "afl"
   },
@@ -232,23 +280,7 @@
    "source": "afl"
   },
   {
-   "name": "Bryce McMillan",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Eastern Ranges",
-   "games": 14,
-   "source": "afl"
-  },
-  {
-   "name": "Charlie Fischer",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Gippsland Power",
-   "games": 14,
-   "source": "afl"
-  },
-  {
-   "name": "George Holderhead",
+   "name": "Campbell White",
    "state_team": "Vic Metro",
    "position": null,
    "junior_club": "Calder Cannons",
@@ -256,18 +288,42 @@
    "source": "afl"
   },
   {
-   "name": "Griffin Barker",
+   "name": "Charlie Tudor",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Western Jets",
+   "junior_club": "Calder Cannons",
    "games": 14,
    "source": "afl"
   },
   {
-   "name": "Hugo Hanrahan",
+   "name": "Cohen Dent",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
+   "games": 14,
+   "source": "afl"
+  },
+  {
+   "name": "Cooper Webster",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Murray Bushrangers",
+   "games": 14,
+   "source": "afl"
+  },
+  {
+   "name": "Isa Merhi",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Western Jets",
+   "junior_club": "Calder Cannons",
+   "games": 14,
+   "source": "afl"
+  },
+  {
+   "name": "Jimmy Little",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
    "games": 14,
    "source": "afl"
   },
@@ -280,7 +336,15 @@
    "source": "afl"
   },
   {
-   "name": "Lachie Petrie",
+   "name": "Nate Mensch",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
+   "games": 14,
+   "source": "afl"
+  },
+  {
+   "name": "Patrick McKenna",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "GWV Rebels",
@@ -288,34 +352,18 @@
    "source": "afl"
   },
   {
-   "name": "Campbell White",
+   "name": "Samuel Husband",
+   "state_team": "Tasmania",
+   "position": null,
+   "junior_club": "Tasmania Devils",
+   "games": 14,
+   "source": "afl"
+  },
+  {
+   "name": "Benjamin Nicholls",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Calder Cannons",
-   "games": 13,
-   "source": "afl"
-  },
-  {
-   "name": "Charlie Tudor",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Calder Cannons",
-   "games": 13,
-   "source": "afl"
-  },
-  {
-   "name": "Cohen Dent",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Gippsland Power",
-   "games": 13,
-   "source": "afl"
-  },
-  {
-   "name": "Cooper Webster",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Murray Bushrangers",
+   "junior_club": "Eastern Ranges",
    "games": 13,
    "source": "afl"
   },
@@ -328,23 +376,23 @@
    "source": "afl"
   },
   {
-   "name": "Isa Merhi",
+   "name": "Lucas Heazlewood",
+   "state_team": "Tasmania",
+   "position": null,
+   "junior_club": "Tasmania Devils",
+   "games": 13,
+   "source": "afl"
+  },
+  {
+   "name": "Mac Dullard",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Calder Cannons",
+   "junior_club": "Western Jets",
    "games": 13,
    "source": "afl"
   },
   {
-   "name": "Jimmy Little",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Gippsland Power",
-   "games": 13,
-   "source": "afl"
-  },
-  {
-   "name": "Lucas Heazlewood",
+   "name": "Max Dawkins",
    "state_team": "Tasmania",
    "position": null,
    "junior_club": "Tasmania Devils",
@@ -360,15 +408,7 @@
    "source": "afl"
   },
   {
-   "name": "Nate Mensch",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Geelong Falcons",
-   "games": 13,
-   "source": "afl"
-  },
-  {
-   "name": "Patrick McKenna",
+   "name": "Oscar Henderson",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "GWV Rebels",
@@ -376,10 +416,10 @@
    "source": "afl"
   },
   {
-   "name": "Samuel Husband",
-   "state_team": "Tasmania",
+   "name": "Toby Jeffs",
+   "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Tasmania Devils",
+   "junior_club": "Northern Knights",
    "games": 13,
    "source": "afl"
   },
@@ -392,14 +432,6 @@
    "source": "afl"
   },
   {
-   "name": "Benjamin Nicholls",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Eastern Ranges",
-   "games": 12,
-   "source": "afl"
-  },
-  {
    "name": "Dylan Romeril",
    "state_team": "Vic Metro",
    "position": null,
@@ -408,26 +440,18 @@
    "source": "afl"
   },
   {
-   "name": "Mac Dullard",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Western Jets",
-   "games": 12,
-   "source": "afl"
-  },
-  {
-   "name": "Max Dawkins",
-   "state_team": "Tasmania",
+   "name": "Jake Beams",
+   "state_team": "Allies",
    "position": null,
    "junior_club": "Tasmania Devils",
    "games": 12,
    "source": "afl"
   },
   {
-   "name": "Oscar Henderson",
-   "state_team": "Vic Country",
+   "name": "Oliver Noto",
+   "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "GWV Rebels",
+   "junior_club": "Calder Cannons",
    "games": 12,
    "source": "afl"
   },
@@ -440,10 +464,26 @@
    "source": "afl"
   },
   {
-   "name": "Toby Jeffs",
+   "name": "Sam Juricskay",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Northern Knights",
+   "junior_club": "Western Jets",
+   "games": 12,
+   "source": "afl"
+  },
+  {
+   "name": "Slayde Law",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Calder Cannons",
+   "games": 12,
+   "source": "afl"
+  },
+  {
+   "name": "Thomas Krawczyk",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Eastern Ranges",
    "games": 12,
    "source": "afl"
   },
@@ -456,6 +496,30 @@
    "source": "afl"
   },
   {
+   "name": "Ahmad Abdallah",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Calder Cannons",
+   "games": 11,
+   "source": "afl"
+  },
+  {
+   "name": "Campbell Rooks",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Northern Knights",
+   "games": 11,
+   "source": "afl"
+  },
+  {
+   "name": "Harvey Egan",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
+   "games": 11,
+   "source": "afl"
+  },
+  {
    "name": "Henry Allsop",
    "state_team": "Vic Country",
    "position": null,
@@ -464,10 +528,26 @@
    "source": "afl"
   },
   {
-   "name": "Jake Beams",
-   "state_team": "Allies",
+   "name": "Hugo Wozniak",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Western Jets",
+   "games": 11,
+   "source": "afl"
+  },
+  {
+   "name": "Jack Morrison",
+   "state_team": "Tasmania",
    "position": null,
    "junior_club": "Tasmania Devils",
+   "games": 11,
+   "source": "afl"
+  },
+  {
+   "name": "Jessie Lewis",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Eastern Ranges",
    "games": 11,
    "source": "afl"
   },
@@ -480,15 +560,7 @@
    "source": "afl"
   },
   {
-   "name": "Oliver Noto",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Calder Cannons",
-   "games": 11,
-   "source": "afl"
-  },
-  {
-   "name": "Sam Juricskay",
+   "name": "Koda Hawli",
    "state_team": "Vic Metro",
    "position": null,
    "junior_club": "Western Jets",
@@ -496,34 +568,58 @@
    "source": "afl"
   },
   {
-   "name": "Slayde Law",
-   "state_team": "Vic Metro",
+   "name": "Lincoln Brand",
+   "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Calder Cannons",
+   "junior_club": "Murray Bushrangers",
    "games": 11,
    "source": "afl"
   },
   {
-   "name": "Thomas Krawczyk",
-   "state_team": "Vic Metro",
+   "name": "Riley McLure",
+   "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Eastern Ranges",
+   "junior_club": "Geelong Falcons",
    "games": 11,
    "source": "afl"
   },
   {
-   "name": "Ahmad Abdallah",
+   "name": "Thomas Bearman",
+   "state_team": "Tasmania",
+   "position": null,
+   "junior_club": "Tasmania Devils",
+   "games": 11,
+   "source": "afl"
+  },
+  {
+   "name": "Zane Adams",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Calder Cannons",
+   "junior_club": "Oakleigh Chargers",
+   "games": 11,
+   "source": "afl"
+  },
+  {
+   "name": "Benji Russell",
+   "state_team": "Allies",
+   "position": null,
+   "junior_club": "Tasmania Devils",
    "games": 10,
    "source": "afl"
   },
   {
-   "name": "Campbell Rooks",
-   "state_team": "Vic Metro",
+   "name": "Ethan Clemons",
+   "state_team": "Tasmania",
    "position": null,
-   "junior_club": "Northern Knights",
+   "junior_club": "Tasmania Devils",
+   "games": 10,
+   "source": "afl"
+  },
+  {
+   "name": "Hamish Andrews",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
    "games": 10,
    "source": "afl"
   },
@@ -536,58 +632,10 @@
    "source": "afl"
   },
   {
-   "name": "Harvey Egan",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Dandenong Stingrays",
-   "games": 10,
-   "source": "afl"
-  },
-  {
-   "name": "Hugo Wozniak",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Western Jets",
-   "games": 10,
-   "source": "afl"
-  },
-  {
-   "name": "Jack Morrison",
-   "state_team": "Tasmania",
-   "position": null,
-   "junior_club": "Tasmania Devils",
-   "games": 10,
-   "source": "afl"
-  },
-  {
-   "name": "Jessie Lewis",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Eastern Ranges",
-   "games": 10,
-   "source": "afl"
-  },
-  {
-   "name": "Koda Hawli",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Western Jets",
-   "games": 10,
-   "source": "afl"
-  },
-  {
    "name": "Lachlan Pring",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "GWV Rebels",
-   "games": 10,
-   "source": "afl"
-  },
-  {
-   "name": "Lincoln Brand",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Murray Bushrangers",
    "games": 10,
    "source": "afl"
   },
@@ -600,14 +648,6 @@
    "source": "afl"
   },
   {
-   "name": "Riley McLure",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Geelong Falcons",
-   "games": 10,
-   "source": "afl"
-  },
-  {
    "name": "Sioeli Fangaloka",
    "state_team": "Vic Country",
    "position": null,
@@ -616,26 +656,10 @@
    "source": "afl"
   },
   {
-   "name": "Thomas Bearman",
-   "state_team": "Tasmania",
-   "position": null,
-   "junior_club": "Tasmania Devils",
-   "games": 10,
-   "source": "afl"
-  },
-  {
-   "name": "Zane Adams",
+   "name": "Aiden Hutchinson",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Oakleigh Chargers",
-   "games": 10,
-   "source": "afl"
-  },
-  {
-   "name": "Benji Russell",
-   "state_team": "Allies",
-   "position": null,
-   "junior_club": "Tasmania Devils",
+   "junior_club": "Calder Cannons",
    "games": 9,
    "source": "afl"
   },
@@ -664,15 +688,7 @@
    "source": "afl"
   },
   {
-   "name": "Ethan Clemons",
-   "state_team": "Tasmania",
-   "position": null,
-   "junior_club": "Tasmania Devils",
-   "games": 9,
-   "source": "afl"
-  },
-  {
-   "name": "Hamish Andrews",
+   "name": "Kyan Walters",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Geelong Falcons",
@@ -680,10 +696,42 @@
    "source": "afl"
   },
   {
-   "name": "Aiden Hutchinson",
+   "name": "Michael Loutakis",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Calder Cannons",
+   "junior_club": "Western Jets",
+   "games": 9,
+   "source": "afl"
+  },
+  {
+   "name": "Alex Whitlock",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Murray Bushrangers",
+   "games": 8,
+   "source": "afl"
+  },
+  {
+   "name": "Archer McCarthy",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
+   "games": 8,
+   "source": "afl"
+  },
+  {
+   "name": "Ashton Sellers",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Oakleigh Chargers",
+   "games": 8,
+   "source": "afl"
+  },
+  {
+   "name": "Banjo Savage",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
    "games": 8,
    "source": "afl"
   },
@@ -697,6 +745,30 @@
   },
   {
    "name": "Cain Davis",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Western Jets",
+   "games": 8,
+   "source": "afl"
+  },
+  {
+   "name": "Chaice Oliver",
+   "state_team": "Tasmania",
+   "position": null,
+   "junior_club": "Tasmania Devils",
+   "games": 8,
+   "source": "afl"
+  },
+  {
+   "name": "Corey Ah-Mu",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
+   "games": 8,
+   "source": "afl"
+  },
+  {
+   "name": "Curtis Lamont",
    "state_team": "Vic Metro",
    "position": null,
    "junior_club": "Western Jets",
@@ -720,18 +792,42 @@
    "source": "afl"
   },
   {
-   "name": "Kyan Walters",
+   "name": "Leo Stephenson",
    "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Geelong Falcons",
+   "junior_club": "Gippsland Power",
    "games": 8,
    "source": "afl"
   },
   {
-   "name": "Michael Loutakis",
+   "name": "Macauley Pendergast",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
+   "games": 8,
+   "source": "afl"
+  },
+  {
+   "name": "Oakley Farr",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "GWV Rebels",
+   "games": 8,
+   "source": "afl"
+  },
+  {
+   "name": "Rhys Muir D'Orazio",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Western Jets",
+   "junior_club": "Northern Knights",
+   "games": 8,
+   "source": "afl"
+  },
+  {
+   "name": "Ryder Ham",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Eastern Ranges",
    "games": 8,
    "source": "afl"
   },
@@ -741,46 +837,6 @@
    "position": null,
    "junior_club": "GWV Rebels",
    "games": 8,
-   "source": "afl"
-  },
-  {
-   "name": "Alex Whitlock",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Murray Bushrangers",
-   "games": 7,
-   "source": "afl"
-  },
-  {
-   "name": "Archer McCarthy",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Dandenong Stingrays",
-   "games": 7,
-   "source": "afl"
-  },
-  {
-   "name": "Ashton Sellers",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Oakleigh Chargers",
-   "games": 7,
-   "source": "afl"
-  },
-  {
-   "name": "Banjo Savage",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Geelong Falcons",
-   "games": 7,
-   "source": "afl"
-  },
-  {
-   "name": "Chaice Oliver",
-   "state_team": "Tasmania",
-   "position": null,
-   "junior_club": "Tasmania Devils",
-   "games": 7,
    "source": "afl"
   },
   {
@@ -800,7 +856,7 @@
    "source": "afl"
   },
   {
-   "name": "Corey Ah-Mu",
+   "name": "Finn Marsh",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Dandenong Stingrays",
@@ -808,10 +864,10 @@
    "source": "afl"
   },
   {
-   "name": "Curtis Lamont",
+   "name": "Gary Lawford",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Western Jets",
+   "junior_club": "Oakleigh Chargers",
    "games": 7,
    "source": "afl"
   },
@@ -832,18 +888,18 @@
    "source": "afl"
   },
   {
-   "name": "Leo Stephenson",
+   "name": "Jordan Penrice",
    "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Gippsland Power",
+   "junior_club": "Geelong Falcons",
    "games": 7,
    "source": "afl"
   },
   {
-   "name": "Macauley Pendergast",
+   "name": "Lucas O'Hora",
    "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Gippsland Power",
+   "junior_club": "Murray Bushrangers",
    "games": 7,
    "source": "afl"
   },
@@ -864,7 +920,7 @@
    "source": "afl"
   },
   {
-   "name": "Oakley Farr",
+   "name": "Mitch Ward",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "GWV Rebels",
@@ -872,18 +928,18 @@
    "source": "afl"
   },
   {
-   "name": "Rhys Muir D'Orazio",
-   "state_team": "Vic Metro",
+   "name": "Patrick McCarthy",
+   "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Northern Knights",
+   "junior_club": "Murray Bushrangers",
    "games": 7,
    "source": "afl"
   },
   {
-   "name": "Ryder Ham",
-   "state_team": "Vic Metro",
+   "name": "Riley Downer",
+   "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Eastern Ranges",
+   "junior_club": "GWV Rebels",
    "games": 7,
    "source": "afl"
   },
@@ -892,6 +948,14 @@
    "state_team": "Allies",
    "position": null,
    "junior_club": "Gold Coast SUNS Academy",
+   "games": 7,
+   "source": "afl"
+  },
+  {
+   "name": "Tom Munting",
+   "state_team": "Tasmania",
+   "position": null,
+   "junior_club": "Tasmania Devils",
    "games": 7,
    "source": "afl"
   },
@@ -936,26 +1000,18 @@
    "source": "afl"
   },
   {
+   "name": "Connor Ormond",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Murray Bushrangers",
+   "games": 6,
+   "source": "afl"
+  },
+  {
    "name": "Dashiel Delaney-Fielding",
    "state_team": "Sydney Academy",
    "position": null,
    "junior_club": "Sydney Swans Academy",
-   "games": 6,
-   "source": "afl"
-  },
-  {
-   "name": "Finn Marsh",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Dandenong Stingrays",
-   "games": 6,
-   "source": "afl"
-  },
-  {
-   "name": "Gary Lawford",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Oakleigh Chargers",
    "games": 6,
    "source": "afl"
   },
@@ -984,10 +1040,10 @@
    "source": "afl"
   },
   {
-   "name": "Jordan Penrice",
-   "state_team": "Vic Country",
+   "name": "Joshua Destefanis",
+   "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Geelong Falcons",
+   "junior_club": "Oakleigh Chargers",
    "games": 6,
    "source": "afl"
   },
@@ -1024,10 +1080,10 @@
    "source": "afl"
   },
   {
-   "name": "Lucas O'Hora",
-   "state_team": "Vic Country",
+   "name": "Max Fuglsang",
+   "state_team": "Tasmania",
    "position": null,
-   "junior_club": "Murray Bushrangers",
+   "junior_club": "Tasmania Devils",
    "games": 6,
    "source": "afl"
   },
@@ -1040,14 +1096,6 @@
    "source": "afl"
   },
   {
-   "name": "Mitch Ward",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "GWV Rebels",
-   "games": 6,
-   "source": "afl"
-  },
-  {
    "name": "Mitchell Upton",
    "state_team": "Vic Metro",
    "position": null,
@@ -1056,26 +1104,18 @@
    "source": "afl"
   },
   {
-   "name": "Patrick McCarthy",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Murray Bushrangers",
-   "games": 6,
-   "source": "afl"
-  },
-  {
-   "name": "Riley Downer",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "GWV Rebels",
-   "games": 6,
-   "source": "afl"
-  },
-  {
    "name": "Riley Masters",
    "state_team": "GWS Academy",
    "position": null,
    "junior_club": "GWS GIANTS Academy",
+   "games": 6,
+   "source": "afl"
+  },
+  {
+   "name": "Riley Stratford",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Sandringham Dragons",
    "games": 6,
    "source": "afl"
   },
@@ -1096,7 +1136,15 @@
    "source": "afl"
   },
   {
-   "name": "Tom Munting",
+   "name": "Townes O'Mahony",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
+   "games": 6,
+   "source": "afl"
+  },
+  {
+   "name": "Van Johnson",
    "state_team": "Tasmania",
    "position": null,
    "junior_club": "Tasmania Devils",
@@ -1104,10 +1152,18 @@
    "source": "afl"
   },
   {
-   "name": "Townes O'Mahony",
+   "name": "Will Harrington",
    "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Geelong Falcons",
+   "junior_club": "Murray Bushrangers",
+   "games": 6,
+   "source": "afl"
+  },
+  {
+   "name": "Xavier Cummins",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "GWV Rebels",
    "games": 6,
    "source": "afl"
   },
@@ -1117,6 +1173,22 @@
    "position": null,
    "junior_club": "Dandenong Stingrays",
    "games": 6,
+   "source": "afl"
+  },
+  {
+   "name": "Angus Aujard",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Sandringham Dragons",
+   "games": 5,
+   "source": "afl"
+  },
+  {
+   "name": "Archie Bakoulas",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Sandringham Dragons",
+   "games": 5,
    "source": "afl"
   },
   {
@@ -1137,14 +1209,6 @@
   },
   {
    "name": "Chase French",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Murray Bushrangers",
-   "games": 5,
-   "source": "afl"
-  },
-  {
-   "name": "Connor Ormond",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Murray Bushrangers",
@@ -1184,14 +1248,6 @@
    "source": "afl"
   },
   {
-   "name": "Joshua Destefanis",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Oakleigh Chargers",
-   "games": 5,
-   "source": "afl"
-  },
-  {
    "name": "Kodi Wallace",
    "state_team": "Gold Coast Academy",
    "position": null,
@@ -1208,18 +1264,18 @@
    "source": "afl"
   },
   {
-   "name": "Max Fuglsang",
-   "state_team": "Tasmania",
-   "position": null,
-   "junior_club": "Tasmania Devils",
-   "games": 5,
-   "source": "afl"
-  },
-  {
    "name": "Maxwell Boothey",
    "state_team": "Brisbane Academy",
    "position": null,
    "junior_club": "Brisbane Lions Academy",
+   "games": 5,
+   "source": "afl"
+  },
+  {
+   "name": "Noah Hanegraaf",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Oakleigh Chargers",
    "games": 5,
    "source": "afl"
   },
@@ -1236,14 +1292,6 @@
    "state_team": "GWS Academy",
    "position": null,
    "junior_club": "GWS GIANTS Academy",
-   "games": 5,
-   "source": "afl"
-  },
-  {
-   "name": "Riley Stratford",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Sandringham Dragons",
    "games": 5,
    "source": "afl"
   },
@@ -1280,6 +1328,14 @@
    "source": "afl"
   },
   {
+   "name": "Sacha Demetriou",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Sandringham Dragons",
+   "games": 5,
+   "source": "afl"
+  },
+  {
    "name": "Ted Buchanan",
    "state_team": "Vic Country",
    "position": null,
@@ -1288,42 +1344,26 @@
    "source": "afl"
   },
   {
-   "name": "Van Johnson",
-   "state_team": "Tasmania",
-   "position": null,
-   "junior_club": "Tasmania Devils",
-   "games": 5,
-   "source": "afl"
-  },
-  {
-   "name": "Will Harrington",
+   "name": "Zye Bergles-Brown",
    "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Murray Bushrangers",
+   "junior_club": "Dandenong Stingrays",
    "games": 5,
    "source": "afl"
   },
   {
-   "name": "Xavier Cummins",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "GWV Rebels",
-   "games": 5,
-   "source": "afl"
-  },
-  {
-   "name": "Angus Aujard",
+   "name": "Archer Cook",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Sandringham Dragons",
+   "junior_club": "Calder Cannons",
    "games": 4,
    "source": "afl"
   },
   {
-   "name": "Archie Bakoulas",
-   "state_team": "Vic Metro",
+   "name": "Archie Blood",
+   "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Sandringham Dragons",
+   "junior_club": "Geelong Falcons",
    "games": 4,
    "source": "afl"
   },
@@ -1424,10 +1464,18 @@
    "source": "afl"
   },
   {
-   "name": "Noah Hanegraaf",
+   "name": "Lachlan Martin",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Oakleigh Chargers",
+   "junior_club": "Eastern Ranges",
+   "games": 4,
+   "source": "afl"
+  },
+  {
+   "name": "Noah Prevett",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "GWV Rebels",
    "games": 4,
    "source": "afl"
   },
@@ -1452,14 +1500,6 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "GWV Rebels",
-   "games": 4,
-   "source": "afl"
-  },
-  {
-   "name": "Sacha Demetriou",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Sandringham Dragons",
    "games": 4,
    "source": "afl"
   },
@@ -1496,6 +1536,14 @@
    "source": "afl"
   },
   {
+   "name": "Toby Hellessey",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "GWV Rebels",
+   "games": 4,
+   "source": "afl"
+  },
+  {
    "name": "Tyler Kelly",
    "state_team": "Northern Territory",
    "position": null,
@@ -1508,14 +1556,6 @@
    "state_team": "Brisbane Academy",
    "position": null,
    "junior_club": "Brisbane Lions Academy",
-   "games": 4,
-   "source": "afl"
-  },
-  {
-   "name": "Zye Bergles-Brown",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Dandenong Stingrays",
    "games": 4,
    "source": "afl"
   },
@@ -1536,18 +1576,10 @@
    "source": "afl"
   },
   {
-   "name": "Archer Cook",
+   "name": "Archie Deane-Johns",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Calder Cannons",
-   "games": 3,
-   "source": "afl"
-  },
-  {
-   "name": "Archie Blood",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Geelong Falcons",
+   "junior_club": "Oakleigh Chargers",
    "games": 3,
    "source": "afl"
   },
@@ -1688,10 +1720,10 @@
    "source": "afl"
   },
   {
-   "name": "Lachlan Martin",
+   "name": "Lachie Collard",
    "state_team": "Vic Metro",
    "position": null,
-   "junior_club": "Eastern Ranges",
+   "junior_club": "Oakleigh Chargers",
    "games": 3,
    "source": "afl"
   },
@@ -1720,6 +1752,14 @@
    "source": "afl"
   },
   {
+   "name": "Ned Smith",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Eastern Ranges",
+   "games": 3,
+   "source": "afl"
+  },
+  {
    "name": "Nicholas Spooner",
    "state_team": "Vic Metro",
    "position": null,
@@ -1732,14 +1772,6 @@
    "state_team": "Vic Metro",
    "position": null,
    "junior_club": "Northern Knights",
-   "games": 3,
-   "source": "afl"
-  },
-  {
-   "name": "Noah Prevett",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "GWV Rebels",
    "games": 3,
    "source": "afl"
   },
@@ -1761,6 +1793,22 @@
   },
   {
    "name": "Oliver Turner",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "GWV Rebels",
+   "games": 3,
+   "source": "afl"
+  },
+  {
+   "name": "Ollie Flanagan",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Northern Knights",
+   "games": 3,
+   "source": "afl"
+  },
+  {
+   "name": "Sam Wareham",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "GWV Rebels",
@@ -1800,7 +1848,7 @@
    "source": "afl"
   },
   {
-   "name": "Toby Hellessey",
+   "name": "Tom Ough",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "GWV Rebels",
@@ -1844,14 +1892,6 @@
    "state_team": "Vic Metro",
    "position": null,
    "junior_club": "Bachar Houli Academy",
-   "games": 2,
-   "source": "afl"
-  },
-  {
-   "name": "Archie Deane-Johns",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Oakleigh Chargers",
    "games": 2,
    "source": "afl"
   },
@@ -1992,18 +2032,26 @@
    "source": "afl"
   },
   {
-   "name": "Lachie Collard",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Oakleigh Chargers",
-   "games": 2,
-   "source": "afl"
-  },
-  {
    "name": "Lachlan Ainsworth",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Gippsland Power",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Liam Smith",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Murray Bushrangers",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Lucas Byrne",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "GWV Rebels",
    "games": 2,
    "source": "afl"
   },
@@ -2032,14 +2080,6 @@
    "source": "afl"
   },
   {
-   "name": "Ned Smith",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Eastern Ranges",
-   "games": 2,
-   "source": "afl"
-  },
-  {
    "name": "Oliver Morgan",
    "state_team": "Brisbane Academy",
    "position": null,
@@ -2052,14 +2092,6 @@
    "state_team": "Gold Coast Academy",
    "position": null,
    "junior_club": "Gold Coast SUNS Academy",
-   "games": 2,
-   "source": "afl"
-  },
-  {
-   "name": "Ollie Flanagan",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Northern Knights",
    "games": 2,
    "source": "afl"
   },
@@ -2120,14 +2152,6 @@
    "source": "afl"
   },
   {
-   "name": "Sam Wareham",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "GWV Rebels",
-   "games": 2,
-   "source": "afl"
-  },
-  {
    "name": "Sullivan O'Dwyer",
    "state_team": "GWS Academy",
    "position": null,
@@ -2140,14 +2164,6 @@
    "state_team": "Vic Metro",
    "position": null,
    "junior_club": "Oakleigh Chargers",
-   "games": 2,
-   "source": "afl"
-  },
-  {
-   "name": "Tom Ough",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "GWV Rebels",
    "games": 2,
    "source": "afl"
   },
@@ -2360,6 +2376,14 @@
    "source": "afl"
   },
   {
+   "name": "Kaiden Wohlers",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Murray Bushrangers",
+   "games": 1,
+   "source": "afl"
+  },
+  {
    "name": "Koby McDonald",
    "state_team": "Vic Metro",
    "position": null,
@@ -2384,22 +2408,6 @@
    "source": "afl"
   },
   {
-   "name": "Liam Smith",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Murray Bushrangers",
-   "games": 1,
-   "source": "afl"
-  },
-  {
-   "name": "Lucas Byrne",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "GWV Rebels",
-   "games": 1,
-   "source": "afl"
-  },
-  {
    "name": "Lukah Case",
    "state_team": "Northern Territory",
    "position": null,
@@ -2412,6 +2420,14 @@
    "state_team": "GWS Academy",
    "position": null,
    "junior_club": "GWS GIANTS Academy",
+   "games": 1,
+   "source": "afl"
+  },
+  {
+   "name": "Miller Dennert",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Calder Cannons",
    "games": 1,
    "source": "afl"
   },
