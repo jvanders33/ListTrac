@@ -3,7 +3,7 @@
  "source_url": "https://www.afl.com.au/news",
  "attribution": "Contract & movement events from the AFL's own content API and AFLRATINGS' reporting, with hand-verified corrections; each event links to its source. The AFL does not disclose contract terms — no dollar figures are tracked.",
  "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
- "count": 1544,
+ "count": 1548,
  "events": [
   {
    "name": "Scott Pendlebury",
@@ -20970,6 +20970,54 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2026/08/19/mitch-georgiades-contract-news/"
+  },
+  {
+   "name": "Ben King Free Agency News",
+   "norm": "benkingfreeagencynews",
+   "date": "2026-08-24",
+   "kind": "signing",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/08/24/ben-king-free-agency-news/"
+  },
+  {
+   "name": "Jake Stringer Free Agency News",
+   "norm": "jakestringerfreeagencynews",
+   "date": "2026-08-24",
+   "kind": "signing",
+   "club": null,
+   "length": 2,
+   "end_year": 2028,
+   "end_estimated": true,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/08/24/jake-stringer-free-agency-news/"
+  },
+  {
+   "name": "Zak Butters Free Agency News",
+   "norm": "zakbuttersfreeagencynews",
+   "date": "2026-08-24",
+   "kind": "signing",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/08/24/zak-butters-free-agency-news/"
+  },
+  {
+   "name": "Scott Pendlebury Free Agency News",
+   "norm": "scottpendleburyfreeagencynews",
+   "date": "2026-08-29",
+   "kind": "signing",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/08/29/scott-pendlebury-free-agency-news/"
   }
  ]
 }

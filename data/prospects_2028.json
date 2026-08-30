@@ -70,7 +70,7 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Geelong Falcons",
-   "games": 7,
+   "games": 8,
    "source": "afl",
    "rank": 8
   },
@@ -96,7 +96,7 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Gippsland Power",
-   "games": 8,
+   "games": 9,
    "source": "afl"
   },
   {
@@ -124,6 +124,14 @@
    "source": "afl"
   },
   {
+   "name": "Samuel Brown",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Bendigo Pioneers",
+   "games": 5,
+   "source": "afl"
+  },
+  {
    "name": "Lenny Sims",
    "state_team": "Vic Country",
    "position": null,
@@ -133,14 +141,6 @@
   },
   {
    "name": "Nate Wade",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Bendigo Pioneers",
-   "games": 4,
-   "source": "afl"
-  },
-  {
-   "name": "Samuel Brown",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Bendigo Pioneers",
@@ -175,6 +175,22 @@
    "award": "Northern Territory MVP"
   },
   {
+   "name": "Charlie Sutton",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Bendigo Pioneers",
+   "games": 3,
+   "source": "afl"
+  },
+  {
+   "name": "Harry Lindsay",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Geelong Falcons",
+   "games": 3,
+   "source": "afl"
+  },
+  {
    "name": "Hayden Gardiner",
    "state_team": "GWS Academy",
    "position": null,
@@ -187,6 +203,14 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Bendigo Pioneers",
+   "games": 3,
+   "source": "afl"
+  },
+  {
+   "name": "Josh Auber",
+   "state_team": "Vic Metro",
+   "position": null,
+   "junior_club": "Western Jets",
    "games": 3,
    "source": "afl"
   },
@@ -255,26 +279,18 @@
    "source": "afl"
   },
   {
-   "name": "Charlie Sutton",
-   "state_team": "Vic Country",
+   "name": "Dexter Wright",
+   "state_team": "Tasmania",
    "position": null,
-   "junior_club": "Bendigo Pioneers",
+   "junior_club": "Tasmania Devils",
    "games": 2,
    "source": "afl"
   },
   {
-   "name": "Harry Lindsay",
+   "name": "Noah White",
    "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Geelong Falcons",
-   "games": 2,
-   "source": "afl"
-  },
-  {
-   "name": "Josh Auber",
-   "state_team": "Vic Metro",
-   "position": null,
-   "junior_club": "Western Jets",
+   "junior_club": "Murray Bushrangers",
    "games": 2,
    "source": "afl"
   },
@@ -291,6 +307,14 @@
    "state_team": "GWS Academy",
    "position": null,
    "junior_club": "GWS GIANTS Academy",
+   "games": 2,
+   "source": "afl"
+  },
+  {
+   "name": "Ryder Murray",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Murray Bushrangers",
    "games": 2,
    "source": "afl"
   },
@@ -375,14 +399,6 @@
    "source": "afl"
   },
   {
-   "name": "Dexter Wright",
-   "state_team": "Tasmania",
-   "position": null,
-   "junior_club": "Tasmania Devils",
-   "games": 1,
-   "source": "afl"
-  },
-  {
    "name": "Dwaine Ah Sam",
    "state_team": "Northern Territory",
    "position": null,
@@ -451,22 +467,6 @@
    "state_team": "Northern Territory",
    "position": null,
    "junior_club": "Northern Territory Academy",
-   "games": 1,
-   "source": "afl"
-  },
-  {
-   "name": "Noah White",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Murray Bushrangers",
-   "games": 1,
-   "source": "afl"
-  },
-  {
-   "name": "Ryder Murray",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Murray Bushrangers",
    "games": 1,
    "source": "afl"
   },
