@@ -96,7 +96,7 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Gippsland Power",
-   "games": 9,
+   "games": 10,
    "source": "afl"
   },
   {
@@ -179,6 +179,14 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Bendigo Pioneers",
+   "games": 3,
+   "source": "afl"
+  },
+  {
+   "name": "Dexter Wright",
+   "state_team": "Tasmania",
+   "position": null,
+   "junior_club": "Tasmania Devils",
    "games": 3,
    "source": "afl"
   },
@@ -272,14 +280,6 @@
   },
   {
    "name": "Campbell Barwick",
-   "state_team": "Tasmania",
-   "position": null,
-   "junior_club": "Tasmania Devils",
-   "games": 2,
-   "source": "afl"
-  },
-  {
-   "name": "Dexter Wright",
    "state_team": "Tasmania",
    "position": null,
    "junior_club": "Tasmania Devils",

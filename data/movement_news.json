@@ -2,6 +2,23 @@
  "source": "AFL.com.au",
  "source_url": "https://www.afl.com.au/news",
  "note": "Contract / free-agency / trade movement coverage from the AFL — headline & link only.",
- "count": 0,
- "items": []
+ "count": 2,
+ "items": [
+  {
+   "title": "Trade Talk: Blues eye free agents, Swans dismiss trade talk, Dogs confident pair will re-sign",
+   "summary": "Get all the latest contract news and trade rumours ahead of the player movement period",
+   "date": "2026-09-06",
+   "author": "staff writers",
+   "tag": "Trade",
+   "url": "https://www.afl.com.au/news/1600027/trade-talk-all-the-latest-contract-news-free-agency-and-trade-rumours-ahead-of-october"
+  },
+  {
+   "title": "Swans dismiss trade 'speculation' amid uncertainty",
+   "summary": "The Swans have dismissed talk Nick Blakey wants to be traded",
+   "date": "2026-09-05",
+   "author": "AAP",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1603064/sydney-swans-dismiss-trade-speculation-amid-uncertainty"
+  }
+ ]
 }
