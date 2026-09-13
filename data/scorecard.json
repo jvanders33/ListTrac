@@ -12,18 +12,18 @@
  "systems": {
   "rating": {
    "label": "AFL Player Rating",
-   "spearman": 0.597,
+   "spearman": 0.607,
    "top10": 4.3,
    "top25": 15.7,
-   "aa_hit_rate": 0.439,
-   "aa_hits": 29,
+   "aa_hit_rate": 0.455,
+   "aa_hits": 30,
    "aa_n": 66,
    "rank": 3,
    "aa_rank": 2
   },
   "rating_pg": {
    "label": "Rating per game",
-   "spearman": 0.41,
+   "spearman": 0.421,
    "top10": 0.7,
    "top25": 2.7,
    "aa_hit_rate": 0.091,
@@ -46,7 +46,7 @@
   "predictor": {
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
-   "top10": 7.0,
+   "top10": 6.7,
    "top25": 17.3,
    "aa_hit_rate": 0.561,
    "aa_hits": 37,
@@ -59,7 +59,7 @@
   {
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
-   "top10": 7.0,
+   "top10": 6.7,
    "top25": 17.3,
    "aa_hit_rate": 0.561,
    "aa_hits": 37,
@@ -80,18 +80,18 @@
   },
   {
    "label": "AFL Player Rating",
-   "spearman": 0.597,
+   "spearman": 0.607,
    "top10": 4.3,
    "top25": 15.7,
-   "aa_hit_rate": 0.439,
-   "aa_hits": 29,
+   "aa_hit_rate": 0.455,
+   "aa_hits": 30,
    "aa_n": 66,
    "rank": 3,
    "aa_rank": 2
   },
   {
    "label": "Rating per game",
-   "spearman": 0.41,
+   "spearman": 0.421,
    "top10": 0.7,
    "top25": 2.7,
    "aa_hit_rate": 0.091,
@@ -105,7 +105,7 @@
   {
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
-   "top10": 7.0,
+   "top10": 6.7,
    "top25": 17.3,
    "aa_hit_rate": 0.561,
    "aa_hits": 37,
@@ -115,11 +115,11 @@
   },
   {
    "label": "AFL Player Rating",
-   "spearman": 0.597,
+   "spearman": 0.607,
    "top10": 4.3,
    "top25": 15.7,
-   "aa_hit_rate": 0.439,
-   "aa_hits": 29,
+   "aa_hit_rate": 0.455,
+   "aa_hits": 30,
    "aa_n": 66,
    "rank": 3,
    "aa_rank": 2
@@ -137,7 +137,7 @@
   },
   {
    "label": "Rating per game",
-   "spearman": 0.41,
+   "spearman": 0.421,
    "top10": 0.7,
    "top25": 2.7,
    "aa_hit_rate": 0.091,
@@ -227,14 +227,14 @@
    "winner": "matt rowell",
    "systems": {
     "rating": {
-     "spearman": 0.607,
+     "spearman": 0.637,
      "top10": 5,
      "top25": 17,
-     "aa_hits": 7,
+     "aa_hits": 8,
      "aa_n": 22
     },
     "rating_pg": {
-     "spearman": 0.414,
+     "spearman": 0.445,
      "top10": 1,
      "top25": 2,
      "aa_hits": 1,
@@ -249,7 +249,7 @@
     },
     "predictor": {
      "spearman": 0.653,
-     "top10": 8,
+     "top10": 7,
      "top25": 17,
      "aa_hits": 13,
      "aa_n": 22

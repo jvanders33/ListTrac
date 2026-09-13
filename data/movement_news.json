@@ -2,23 +2,39 @@
  "source": "AFL.com.au",
  "source_url": "https://www.afl.com.au/news",
  "note": "Contract / free-agency / trade movement coverage from the AFL — headline & link only.",
- "count": 2,
+ "count": 4,
  "items": [
   {
-   "title": "Trade Talk: Blues eye free agents, Swans dismiss trade talk, Dogs confident pair will re-sign",
-   "summary": "Get all the latest contract news and trade rumours ahead of the player movement period",
-   "date": "2026-09-06",
-   "author": "staff writers",
-   "tag": "Trade",
-   "url": "https://www.afl.com.au/news/1600027/trade-talk-all-the-latest-contract-news-free-agency-and-trade-rumours-ahead-of-october"
+   "title": "How will the Dogs get Butters to the Kennel? The wheels are in motion",
+   "summary": "Zak Butters has nominated his destination club, but now the Western Bulldogs need to find a way to get the deal done",
+   "date": "2026-09-12",
+   "author": "Callum Twomey",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1608459/how-will-the-western-bulldogs-dogs-get-zak-butters-to-the-kennel-the-wheels-are-in-motion"
   },
   {
-   "title": "Swans dismiss trade 'speculation' amid uncertainty",
-   "summary": "The Swans have dismissed talk Nick Blakey wants to be traded",
-   "date": "2026-09-05",
-   "author": "AAP",
+   "title": "Why Butters chose the Dogs, and what it means for Marshall, Merrett and more",
+   "summary": "In the wake of the biggest trade story of the year, AFL.com.au unpacks the Zak Butters decision",
+   "date": "2026-09-12",
+   "author": "Martin Smith",
    "tag": "Contract",
-   "url": "https://www.afl.com.au/news/1603064/sydney-swans-dismiss-trade-speculation-amid-uncertainty"
+   "url": "https://www.afl.com.au/news/1608124/the-western-bulldogs-had-lost-hope-of-signing-port-adelaide-superstar-zak-butters-ahead-of-geelong-cats-this-is-what-changed"
+  },
+  {
+   "title": "Trade Talk: Bulldogs release Butters statement, Saints trio sign on, twist as Hogan picks Pies",
+   "summary": "Get all the latest contract news and trade rumours ahead of the player movement period",
+   "date": "2026-09-12",
+   "author": "staff writers",
+   "tag": "Trade",
+   "url": "https://www.afl.com.au/news/1606757/trade-talk-all-the-latest-contract-news-free-agency-and-trade-rumours-ahead-of-october"
+  },
+  {
+   "title": "Bulldogs release statement after Butters picks new home",
+   "summary": "Footy's most in-demand free agent has chosen where he'll play in 2027 and beyond",
+   "date": "2026-09-11",
+   "author": "Callum Twomey",
+   "tag": "Free agency",
+   "url": "https://www.afl.com.au/news/1608030/port-adelaide-power-free-agent-zak-butters-makes-his-choice-of-new-club"
   }
  ]
 }

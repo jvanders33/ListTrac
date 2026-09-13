@@ -27,11 +27,12 @@
   23,
   24,
   25,
-  26
+  26,
+  27
  ],
  "season_games": 22,
  "attribution": "ListTrac's Brownlow Medal projection — a per-match 3-2-1 model built on Champion Data ratings with goal and winning-team weightings. A prediction, not the actual (secret) umpire votes.",
- "count": 225,
+ "count": 226,
  "players": [
   {
    "name": "Nick Daicos",
@@ -112,6 +113,29 @@
    "rank": 3
   },
   {
+   "name": "Zac Bailey",
+   "club": "BRI",
+   "votes": 27,
+   "polls": 11,
+   "threes": 5,
+   "by_round": {
+    "3": 3,
+    "4": 2,
+    "5": 3,
+    "7": 2,
+    "8": 3,
+    "14": 3,
+    "16": 2,
+    "17": 2,
+    "18": 2,
+    "20": 2,
+    "27": 3
+   },
+   "games": 24,
+   "projected": 25,
+   "rank": 4
+  },
+  {
    "name": "Isaac Heeney",
    "club": "SYD",
    "votes": 25,
@@ -131,7 +155,7 @@
    },
    "games": 20,
    "projected": 28,
-   "rank": 4
+   "rank": 5
   },
   {
    "name": "Ed Richards",
@@ -153,29 +177,29 @@
    },
    "games": 24,
    "projected": 22,
-   "rank": 5
+   "rank": 6
   },
   {
-   "name": "Zac Bailey",
-   "club": "BRI",
-   "votes": 24,
+   "name": "Caleb Serong",
+   "club": "FRE",
+   "votes": 23,
    "polls": 10,
-   "threes": 4,
+   "threes": 6,
    "by_round": {
+    "1": 3,
     "3": 3,
-    "4": 2,
-    "5": 3,
-    "7": 2,
-    "8": 3,
-    "14": 3,
-    "16": 2,
-    "17": 2,
-    "18": 2,
-    "20": 2
+    "6": 3,
+    "9": 1,
+    "10": 2,
+    "15": 1,
+    "20": 3,
+    "21": 3,
+    "23": 3,
+    "27": 1
    },
-   "games": 23,
+   "games": 22,
    "projected": 23,
-   "rank": 6
+   "rank": 7
   },
   {
    "name": "Bailey Smith",
@@ -196,9 +220,9 @@
     "22": 2,
     "24": 2
    },
-   "games": 23,
-   "projected": 22,
-   "rank": 7
+   "games": 24,
+   "projected": 21,
+   "rank": 8
   },
   {
    "name": "Izak Rankine",
@@ -216,29 +240,8 @@
     "24": 3,
     "26": 3
    },
-   "games": 21,
-   "projected": 23,
-   "rank": 8
-  },
-  {
-   "name": "Caleb Serong",
-   "club": "FRE",
-   "votes": 22,
-   "polls": 9,
-   "threes": 6,
-   "by_round": {
-    "1": 3,
-    "3": 3,
-    "6": 3,
-    "9": 1,
-    "10": 2,
-    "15": 1,
-    "20": 3,
-    "21": 3,
-    "23": 3
-   },
-   "games": 21,
-   "projected": 23,
+   "games": 22,
+   "projected": 22,
    "rank": 9
   },
   {
@@ -339,8 +342,8 @@
     "14": 3,
     "17": 2
    },
-   "games": 21,
-   "projected": 20,
+   "games": 22,
+   "projected": 19,
    "rank": 14
   },
   {
@@ -397,7 +400,7 @@
     "18": 2,
     "23": 2
    },
-   "games": 23,
+   "games": 24,
    "projected": 16,
    "rank": 17
   },
@@ -416,8 +419,8 @@
     "24": 3,
     "26": 2
    },
-   "games": 24,
-   "projected": 15,
+   "games": 25,
+   "projected": 14,
    "rank": 18
   },
   {
@@ -453,8 +456,8 @@
     "22": 3,
     "23": 2
    },
-   "games": 24,
-   "projected": 14,
+   "games": 25,
+   "projected": 13,
    "rank": 20
   },
   {
@@ -478,6 +481,26 @@
    "rank": 21
   },
   {
+   "name": "Luke Jackson",
+   "club": "FRE",
+   "votes": 15,
+   "polls": 8,
+   "threes": 1,
+   "by_round": {
+    "7": 2,
+    "8": 1,
+    "13": 2,
+    "15": 3,
+    "16": 2,
+    "22": 1,
+    "26": 2,
+    "27": 2
+   },
+   "games": 25,
+   "projected": 13,
+   "rank": 22
+  },
+  {
    "name": "Patrick Cripps",
    "club": "CAR",
    "votes": 14,
@@ -494,7 +517,7 @@
    },
    "games": 25,
    "projected": 12,
-   "rank": 22
+   "rank": 23
   },
   {
    "name": "Touk Miller",
@@ -513,7 +536,27 @@
    },
    "games": 23,
    "projected": 13,
-   "rank": 23
+   "rank": 24
+  },
+  {
+   "name": "Will Ashcroft",
+   "club": "BRI",
+   "votes": 14,
+   "polls": 8,
+   "threes": 2,
+   "by_round": {
+    "4": 3,
+    "12": 1,
+    "14": 1,
+    "18": 3,
+    "21": 1,
+    "22": 1,
+    "23": 2,
+    "27": 2
+   },
+   "games": 25,
+   "projected": 12,
+   "rank": 25
   },
   {
    "name": "Jason Horne-Francis",
@@ -531,7 +574,7 @@
    },
    "games": 21,
    "projected": 14,
-   "rank": 24
+   "rank": 26
   },
   {
    "name": "Jacob van Rooyen",
@@ -549,7 +592,7 @@
    },
    "games": 22,
    "projected": 13,
-   "rank": 25
+   "rank": 27
   },
   {
    "name": "Lachie Neale",
@@ -565,28 +608,9 @@
     "22": 2,
     "24": 2
    },
-   "games": 24,
-   "projected": 12,
-   "rank": 26
-  },
-  {
-   "name": "Luke Jackson",
-   "club": "FRE",
-   "votes": 13,
-   "polls": 7,
-   "threes": 1,
-   "by_round": {
-    "7": 2,
-    "8": 1,
-    "13": 2,
-    "15": 3,
-    "16": 2,
-    "22": 1,
-    "26": 2
-   },
-   "games": 24,
-   "projected": 12,
-   "rank": 27
+   "games": 25,
+   "projected": 11,
+   "rank": 28
   },
   {
    "name": "Andrew Brayshaw",
@@ -601,26 +625,7 @@
     "19": 2,
     "23": 1
    },
-   "games": 24,
-   "projected": 11,
-   "rank": 28
-  },
-  {
-   "name": "Will Ashcroft",
-   "club": "BRI",
-   "votes": 12,
-   "polls": 7,
-   "threes": 2,
-   "by_round": {
-    "4": 3,
-    "12": 1,
-    "14": 1,
-    "18": 3,
-    "21": 1,
-    "22": 1,
-    "23": 2
-   },
-   "games": 24,
+   "games": 25,
    "projected": 11,
    "rank": 29
   },
@@ -819,8 +824,8 @@
     "19": 3,
     "20": 2
    },
-   "games": 23,
-   "projected": 9,
+   "games": 24,
+   "projected": 8,
    "rank": 41
   },
   {
@@ -852,7 +857,7 @@
     "8": 2,
     "14": 3
    },
-   "games": 19,
+   "games": 20,
    "projected": 10,
    "rank": 43
   },
@@ -1029,7 +1034,7 @@
     "18": 2,
     "24": 2
    },
-   "games": 17,
+   "games": 18,
    "projected": 9,
    "rank": 54
   },
@@ -1045,7 +1050,7 @@
     "19": 1,
     "21": 2
    },
-   "games": 24,
+   "games": 25,
    "projected": 6,
    "rank": 55
   },
@@ -1059,7 +1064,7 @@
     "13": 3,
     "24": 3
    },
-   "games": 23,
+   "games": 24,
    "projected": 6,
    "rank": 56
   },
@@ -1087,7 +1092,7 @@
     "17": 3,
     "26": 3
    },
-   "games": 18,
+   "games": 19,
    "projected": 7,
    "rank": 58
   },
@@ -1101,7 +1106,7 @@
     "10": 3,
     "13": 3
    },
-   "games": 23,
+   "games": 24,
    "projected": 6,
    "rank": 59
   },
@@ -1146,8 +1151,8 @@
     "17": 3,
     "19": 1
    },
-   "games": 15,
-   "projected": 9,
+   "games": 16,
+   "projected": 8,
    "rank": 62
   },
   {
@@ -1176,8 +1181,8 @@
     "9": 1,
     "14": 2
    },
-   "games": 24,
-   "projected": 6,
+   "games": 25,
+   "projected": 5,
    "rank": 64
   },
   {
@@ -1196,6 +1201,21 @@
    "rank": 65
   },
   {
+   "name": "Oliver Henry",
+   "club": "GEE",
+   "votes": 6,
+   "polls": 3,
+   "threes": 1,
+   "by_round": {
+    "20": 2,
+    "21": 1,
+    "27": 3
+   },
+   "games": 24,
+   "projected": 6,
+   "rank": 66
+  },
+  {
    "name": "Sam Berry",
    "club": "ADE",
    "votes": 6,
@@ -1206,9 +1226,9 @@
     "8": 3,
     "14": 1
    },
-   "games": 23,
+   "games": 24,
    "projected": 6,
-   "rank": 66
+   "rank": 67
   },
   {
    "name": "Scott Pendlebury",
@@ -1224,7 +1244,7 @@
    },
    "games": 17,
    "projected": 8,
-   "rank": 67
+   "rank": 68
   },
   {
    "name": "Tim Taranto",
@@ -1239,7 +1259,7 @@
    },
    "games": 21,
    "projected": 6,
-   "rank": 68
+   "rank": 69
   },
   {
    "name": "Tom Atkins",
@@ -1252,9 +1272,9 @@
     "14": 2,
     "20": 3
    },
-   "games": 24,
-   "projected": 6,
-   "rank": 69
+   "games": 25,
+   "projected": 5,
+   "rank": 70
   },
   {
    "name": "Zach Merrett",
@@ -1269,7 +1289,7 @@
    },
    "games": 23,
    "projected": 6,
-   "rank": 70
+   "rank": 71
   },
   {
    "name": "Daniel McStay",
@@ -1284,7 +1304,7 @@
    },
    "games": 24,
    "projected": 6,
-   "rank": 71
+   "rank": 72
   },
   {
    "name": "Jack Crisp",
@@ -1300,7 +1320,7 @@
    },
    "games": 24,
    "projected": 6,
-   "rank": 72
+   "rank": 73
   },
   {
    "name": "Connor Macdonald",
@@ -1314,7 +1334,7 @@
    },
    "games": 24,
    "projected": 5,
-   "rank": 73
+   "rank": 74
   },
   {
    "name": "Finn Callaghan",
@@ -1328,7 +1348,7 @@
    },
    "games": 19,
    "projected": 6,
-   "rank": 74
+   "rank": 75
   },
   {
    "name": "Harley Reid",
@@ -1343,7 +1363,7 @@
    },
    "games": 23,
    "projected": 5,
-   "rank": 75
+   "rank": 76
   },
   {
    "name": "Jack Gunston",
@@ -1357,7 +1377,7 @@
    },
    "games": 18,
    "projected": 6,
-   "rank": 76
+   "rank": 77
   },
   {
    "name": "Jack Steele",
@@ -1372,7 +1392,7 @@
    },
    "games": 24,
    "projected": 5,
-   "rank": 77
+   "rank": 78
   },
   {
    "name": "Kai Lohmann",
@@ -1385,9 +1405,9 @@
     "17": 1,
     "22": 3
    },
-   "games": 24,
-   "projected": 5,
-   "rank": 78
+   "games": 25,
+   "projected": 4,
+   "rank": 79
   },
   {
    "name": "Liam Ryan",
@@ -1401,7 +1421,7 @@
    },
    "games": 17,
    "projected": 6,
-   "rank": 79
+   "rank": 80
   },
   {
    "name": "Matthew Johnson",
@@ -1414,9 +1434,9 @@
     "12": 3,
     "20": 1
    },
-   "games": 23,
+   "games": 24,
    "projected": 5,
-   "rank": 80
+   "rank": 81
   },
   {
    "name": "Sam Durham",
@@ -1431,7 +1451,7 @@
    },
    "games": 20,
    "projected": 6,
-   "rank": 81
+   "rank": 82
   },
   {
    "name": "Stephen Coniglio",
@@ -1446,7 +1466,7 @@
    },
    "games": 21,
    "projected": 5,
-   "rank": 82
+   "rank": 83
   },
   {
    "name": "Aaron Naughton",
@@ -1461,7 +1481,7 @@
    },
    "games": 24,
    "projected": 5,
-   "rank": 83
+   "rank": 84
   },
   {
    "name": "Jack Ross",
@@ -1477,7 +1497,7 @@
    },
    "games": 19,
    "projected": 6,
-   "rank": 84
+   "rank": 85
   },
   {
    "name": "Mitch Lewis",
@@ -1492,7 +1512,7 @@
    },
    "games": 23,
    "projected": 5,
-   "rank": 85
+   "rank": 86
   },
   {
    "name": "Seth Campbell",
@@ -1507,7 +1527,7 @@
    },
    "games": 23,
    "projected": 5,
-   "rank": 86
+   "rank": 87
   },
   {
    "name": "Corey Wagner",
@@ -1519,9 +1539,9 @@
     "3": 1,
     "5": 3
    },
-   "games": 13,
-   "projected": 7,
-   "rank": 87
+   "games": 14,
+   "projected": 6,
+   "rank": 88
   },
   {
    "name": "Dylan Moore",
@@ -1535,7 +1555,7 @@
    },
    "games": 23,
    "projected": 4,
-   "rank": 88
+   "rank": 89
   },
   {
    "name": "Finn O'Sullivan",
@@ -1549,7 +1569,7 @@
    },
    "games": 19,
    "projected": 5,
-   "rank": 89
+   "rank": 90
   },
   {
    "name": "Harvey Langford",
@@ -1563,7 +1583,7 @@
    },
    "games": 24,
    "projected": 4,
-   "rank": 90
+   "rank": 91
   },
   {
    "name": "Hugh McCluggage",
@@ -1575,9 +1595,9 @@
     "9": 1,
     "20": 3
    },
-   "games": 14,
+   "games": 15,
    "projected": 6,
-   "rank": 91
+   "rank": 92
   },
   {
    "name": "Jeremy Cameron",
@@ -1589,9 +1609,9 @@
     "6": 3,
     "11": 1
    },
-   "games": 18,
+   "games": 19,
    "projected": 5,
-   "rank": 92
+   "rank": 93
   },
   {
    "name": "Joel Freijah",
@@ -1605,7 +1625,7 @@
    },
    "games": 25,
    "projected": 4,
-   "rank": 93
+   "rank": 94
   },
   {
    "name": "Mason Wood",
@@ -1619,7 +1639,7 @@
    },
    "games": 20,
    "projected": 4,
-   "rank": 94
+   "rank": 95
   },
   {
    "name": "Michael Frederick",
@@ -1631,9 +1651,9 @@
     "9": 3,
     "16": 1
    },
-   "games": 19,
-   "projected": 5,
-   "rank": 95
+   "games": 20,
+   "projected": 4,
+   "rank": 96
   },
   {
    "name": "Bayley Fritsch",
@@ -1648,7 +1668,7 @@
    },
    "games": 22,
    "projected": 4,
-   "rank": 96
+   "rank": 97
   },
   {
    "name": "Beau McCreery",
@@ -1662,7 +1682,7 @@
    },
    "games": 23,
    "projected": 4,
-   "rank": 97
+   "rank": 98
   },
   {
    "name": "Callum Wilkie",
@@ -1676,7 +1696,7 @@
    },
    "games": 23,
    "projected": 4,
-   "rank": 98
+   "rank": 99
   },
   {
    "name": "Darcy Wilson",
@@ -1691,7 +1711,7 @@
    },
    "games": 22,
    "projected": 4,
-   "rank": 99
+   "rank": 100
   },
   {
    "name": "Francis Evans",
@@ -1705,7 +1725,7 @@
    },
    "games": 23,
    "projected": 4,
-   "rank": 100
+   "rank": 101
   },
   {
    "name": "Harvey Thomas",
@@ -1719,7 +1739,7 @@
    },
    "games": 22,
    "projected": 4,
-   "rank": 101
+   "rank": 102
   },
   {
    "name": "Jack Ginnivan",
@@ -1734,7 +1754,7 @@
    },
    "games": 23,
    "projected": 4,
-   "rank": 102
+   "rank": 103
   },
   {
    "name": "Jarman Impey",
@@ -1749,7 +1769,7 @@
    },
    "games": 22,
    "projected": 4,
-   "rank": 103
+   "rank": 104
   },
   {
    "name": "Mabior Chol",
@@ -1763,7 +1783,7 @@
    },
    "games": 19,
    "projected": 5,
-   "rank": 104
+   "rank": 105
   },
   {
    "name": "Max Gawn",
@@ -1778,7 +1798,7 @@
    },
    "games": 24,
    "projected": 4,
-   "rank": 105
+   "rank": 106
   },
   {
    "name": "Nick Larkey",
@@ -1794,7 +1814,7 @@
    },
    "games": 23,
    "projected": 4,
-   "rank": 106
+   "rank": 107
   },
   {
    "name": "Shannon Neale",
@@ -1806,9 +1826,9 @@
     "1": 2,
     "15": 2
    },
-   "games": 24,
+   "games": 25,
    "projected": 4,
-   "rank": 107
+   "rank": 108
   },
   {
    "name": "Tom Papley",
@@ -1822,7 +1842,7 @@
    },
    "games": 19,
    "projected": 5,
-   "rank": 108
+   "rank": 109
   },
   {
    "name": "Will Day",
@@ -1837,7 +1857,7 @@
    },
    "games": 12,
    "projected": 7,
-   "rank": 109
+   "rank": 110
   },
   {
    "name": "Aaron Cadman",
@@ -1850,7 +1870,7 @@
    },
    "games": 18,
    "projected": 4,
-   "rank": 110
+   "rank": 111
   },
   {
    "name": "Ben King",
@@ -1863,7 +1883,7 @@
    },
    "games": 23,
    "projected": 3,
-   "rank": 111
+   "rank": 112
   },
   {
    "name": "Blake Hardwick",
@@ -1876,7 +1896,7 @@
    },
    "games": 24,
    "projected": 3,
-   "rank": 112
+   "rank": 113
   },
   {
    "name": "Edward Allan",
@@ -1889,7 +1909,7 @@
    },
    "games": 19,
    "projected": 3,
-   "rank": 113
+   "rank": 114
   },
   {
    "name": "Harry Sharp",
@@ -1902,7 +1922,7 @@
    },
    "games": 24,
    "projected": 3,
-   "rank": 114
+   "rank": 115
   },
   {
    "name": "Jack Macrae",
@@ -1915,7 +1935,7 @@
    },
    "games": 12,
    "projected": 6,
-   "rank": 115
+   "rank": 116
   },
   {
    "name": "James Rowbottom",
@@ -1928,7 +1948,7 @@
    },
    "games": 22,
    "projected": 3,
-   "rank": 116
+   "rank": 117
   },
   {
    "name": "Jase Burgoyne",
@@ -1941,7 +1961,7 @@
    },
    "games": 23,
    "projected": 3,
-   "rank": 117
+   "rank": 118
   },
   {
    "name": "Joel Fitzgerald",
@@ -1954,7 +1974,7 @@
    },
    "games": 11,
    "projected": 6,
-   "rank": 118
+   "rank": 119
   },
   {
    "name": "Lawson Humphries",
@@ -1965,9 +1985,9 @@
    "by_round": {
     "11": 3
    },
-   "games": 23,
+   "games": 24,
    "projected": 3,
-   "rank": 119
+   "rank": 120
   },
   {
    "name": "Logan McDonald",
@@ -1980,7 +2000,7 @@
    },
    "games": 22,
    "projected": 3,
-   "rank": 120
+   "rank": 121
   },
   {
    "name": "Malcolm Rosas",
@@ -1993,7 +2013,7 @@
    },
    "games": 16,
    "projected": 4,
-   "rank": 121
+   "rank": 122
   },
   {
    "name": "Mark Blicavs",
@@ -2004,9 +2024,9 @@
    "by_round": {
     "23": 3
    },
-   "games": 19,
+   "games": 20,
    "projected": 3,
-   "rank": 122
+   "rank": 123
   },
   {
    "name": "Mark Keane",
@@ -2017,9 +2037,9 @@
    "by_round": {
     "15": 3
    },
-   "games": 10,
-   "projected": 7,
-   "rank": 123
+   "games": 11,
+   "projected": 6,
+   "rank": 124
   },
   {
    "name": "Matthew Carroll",
@@ -2032,7 +2052,7 @@
    },
    "games": 10,
    "projected": 7,
-   "rank": 124
+   "rank": 125
   },
   {
    "name": "Noah Balta",
@@ -2045,7 +2065,7 @@
    },
    "games": 17,
    "projected": 4,
-   "rank": 125
+   "rank": 126
   },
   {
    "name": "Patrick Retschko",
@@ -2058,7 +2078,7 @@
    },
    "games": 18,
    "projected": 4,
-   "rank": 126
+   "rank": 127
   },
   {
    "name": "Tristan Xerri",
@@ -2071,7 +2091,7 @@
    },
    "games": 19,
    "projected": 3,
-   "rank": 127
+   "rank": 128
   },
   {
    "name": "Wayne Milera",
@@ -2082,9 +2102,9 @@
    "by_round": {
     "1": 3
    },
-   "games": 19,
+   "games": 20,
    "projected": 3,
-   "rank": 128
+   "rank": 129
   },
   {
    "name": "Xavier Duursma",
@@ -2097,7 +2117,7 @@
    },
    "games": 18,
    "projected": 4,
-   "rank": 129
+   "rank": 130
   },
   {
    "name": "Xavier O'Halloran",
@@ -2110,7 +2130,7 @@
    },
    "games": 14,
    "projected": 5,
-   "rank": 130
+   "rank": 131
   },
   {
    "name": "Bailey J. Williams",
@@ -2124,7 +2144,7 @@
    },
    "games": 19,
    "projected": 3,
-   "rank": 131
+   "rank": 132
   },
   {
    "name": "Ben Ainsworth",
@@ -2138,7 +2158,7 @@
    },
    "games": 25,
    "projected": 3,
-   "rank": 132
+   "rank": 133
   },
   {
    "name": "Ben Keays",
@@ -2150,9 +2170,9 @@
     "8": 2,
     "17": 1
    },
-   "games": 24,
+   "games": 25,
    "projected": 3,
-   "rank": 133
+   "rank": 134
   },
   {
    "name": "Brayden Cook",
@@ -2164,9 +2184,9 @@
     "1": 1,
     "6": 2
    },
-   "games": 23,
+   "games": 24,
    "projected": 3,
-   "rank": 134
+   "rank": 135
   },
   {
    "name": "Cam Mackenzie",
@@ -2180,7 +2200,7 @@
    },
    "games": 22,
    "projected": 3,
-   "rank": 135
+   "rank": 136
   },
   {
    "name": "Cooper Sharman",
@@ -2194,7 +2214,7 @@
    },
    "games": 21,
    "projected": 3,
-   "rank": 136
+   "rank": 137
   },
   {
    "name": "Darcy Parish",
@@ -2208,7 +2228,7 @@
    },
    "games": 14,
    "projected": 5,
-   "rank": 137
+   "rank": 138
   },
   {
    "name": "Darcy Wilmot",
@@ -2220,9 +2240,9 @@
     "8": 2,
     "13": 1
    },
-   "games": 24,
+   "games": 25,
    "projected": 3,
-   "rank": 138
+   "rank": 139
   },
   {
    "name": "Elliot Yeo",
@@ -2236,7 +2256,7 @@
    },
    "games": 21,
    "projected": 3,
-   "rank": 139
+   "rank": 140
   },
   {
    "name": "Harrison Petty",
@@ -2250,7 +2270,7 @@
    },
    "games": 20,
    "projected": 3,
-   "rank": 140
+   "rank": 141
   },
   {
    "name": "James Peatling",
@@ -2264,7 +2284,7 @@
    },
    "games": 21,
    "projected": 3,
-   "rank": 141
+   "rank": 142
   },
   {
    "name": "Josh Dunkley",
@@ -2276,9 +2296,9 @@
     "19": 2,
     "23": 1
    },
-   "games": 24,
+   "games": 25,
    "projected": 3,
-   "rank": 142
+   "rank": 143
   },
   {
    "name": "Murphy Reid",
@@ -2289,20 +2309,6 @@
    "by_round": {
     "2": 2,
     "11": 1
-   },
-   "games": 22,
-   "projected": 3,
-   "rank": 143
-  },
-  {
-   "name": "Oliver Henry",
-   "club": "GEE",
-   "votes": 3,
-   "polls": 2,
-   "threes": 0,
-   "by_round": {
-    "20": 2,
-    "21": 1
    },
    "games": 23,
    "projected": 3,
@@ -2384,7 +2390,7 @@
     "7": 1,
     "10": 1
    },
-   "games": 24,
+   "games": 25,
    "projected": 2,
    "rank": 150
   },
@@ -2410,8 +2416,8 @@
    "by_round": {
     "13": 2
    },
-   "games": 17,
-   "projected": 3,
+   "games": 18,
+   "projected": 2,
    "rank": 152
   },
   {
@@ -2437,7 +2443,7 @@
     "3": 1,
     "4": 1
    },
-   "games": 14,
+   "games": 15,
    "projected": 3,
    "rank": 154
   },
@@ -2477,7 +2483,7 @@
     "19": 1,
     "26": 1
    },
-   "games": 16,
+   "games": 17,
    "projected": 3,
    "rank": 157
   },
@@ -2490,7 +2496,7 @@
    "by_round": {
     "8": 2
    },
-   "games": 15,
+   "games": 16,
    "projected": 3,
    "rank": 158
   },
@@ -2608,7 +2614,7 @@
    "by_round": {
     "3": 2
    },
-   "games": 19,
+   "games": 20,
    "projected": 2,
    "rank": 167
   },
@@ -2634,7 +2640,7 @@
    "by_round": {
     "26": 2
    },
-   "games": 23,
+   "games": 24,
    "projected": 2,
    "rank": 169
   },
@@ -2648,7 +2654,7 @@
     "16": 1,
     "18": 1
    },
-   "games": 24,
+   "games": 25,
    "projected": 2,
    "rank": 170
   },
@@ -2713,7 +2719,7 @@
    "by_round": {
     "9": 2
    },
-   "games": 24,
+   "games": 25,
    "projected": 2,
    "rank": 175
   },
@@ -2780,7 +2786,7 @@
    "by_round": {
     "21": 2
    },
-   "games": 21,
+   "games": 22,
    "projected": 2,
    "rank": 180
   },
@@ -2887,7 +2893,7 @@
    "by_round": {
     "5": 1
    },
-   "games": 21,
+   "games": 22,
    "projected": 1,
    "rank": 188
   },
@@ -2970,6 +2976,19 @@
    "rank": 194
   },
   {
+   "name": "Cam Rayner",
+   "club": "BRI",
+   "votes": 1,
+   "polls": 1,
+   "threes": 0,
+   "by_round": {
+    "27": 1
+   },
+   "games": 25,
+   "projected": 1,
+   "rank": 195
+  },
+  {
    "name": "Colby McKercher",
    "club": "NM",
    "votes": 1,
@@ -2980,7 +2999,7 @@
    },
    "games": 23,
    "projected": 1,
-   "rank": 195
+   "rank": 196
   },
   {
    "name": "Conor McKenna",
@@ -2991,9 +3010,9 @@
    "by_round": {
     "24": 1
    },
-   "games": 18,
+   "games": 19,
    "projected": 1,
-   "rank": 196
+   "rank": 197
   },
   {
    "name": "Finn Maginness",
@@ -3006,7 +3025,7 @@
    },
    "games": 6,
    "projected": 4,
-   "rank": 197
+   "rank": 198
   },
   {
    "name": "Harris Andrews",
@@ -3017,9 +3036,9 @@
    "by_round": {
     "19": 1
    },
-   "games": 21,
+   "games": 22,
    "projected": 1,
-   "rank": 198
+   "rank": 199
   },
   {
    "name": "Harry McKay",
@@ -3032,7 +3051,7 @@
    },
    "games": 23,
    "projected": 1,
-   "rank": 199
+   "rank": 200
   },
   {
    "name": "Hugo Ralphsmith",
@@ -3045,7 +3064,7 @@
    },
    "games": 13,
    "projected": 2,
-   "rank": 200
+   "rank": 201
   },
   {
    "name": "Jai Serong",
@@ -3058,7 +3077,7 @@
    },
    "games": 23,
    "projected": 1,
-   "rank": 201
+   "rank": 202
   },
   {
    "name": "James Worpel",
@@ -3071,7 +3090,7 @@
    },
    "games": 11,
    "projected": 2,
-   "rank": 202
+   "rank": 203
   },
   {
    "name": "Jamie Elliott",
@@ -3084,7 +3103,7 @@
    },
    "games": 11,
    "projected": 2,
-   "rank": 203
+   "rank": 204
   },
   {
    "name": "John Noble",
@@ -3097,7 +3116,7 @@
    },
    "games": 23,
    "projected": 1,
-   "rank": 204
+   "rank": 205
   },
   {
    "name": "Jordan Clark",
@@ -3108,9 +3127,9 @@
    "by_round": {
     "6": 1
    },
-   "games": 24,
+   "games": 25,
    "projected": 1,
-   "rank": 205
+   "rank": 206
   },
   {
    "name": "Josaia Delana",
@@ -3123,7 +3142,7 @@
    },
    "games": 9,
    "projected": 2,
-   "rank": 206
+   "rank": 207
   },
   {
    "name": "Karl Worner",
@@ -3134,9 +3153,9 @@
    "by_round": {
     "21": 1
    },
-   "games": 24,
+   "games": 25,
    "projected": 1,
-   "rank": 207
+   "rank": 208
   },
   {
    "name": "Kieren Briggs",
@@ -3149,7 +3168,7 @@
    },
    "games": 18,
    "projected": 1,
-   "rank": 208
+   "rank": 209
   },
   {
    "name": "Lachie Ash",
@@ -3162,7 +3181,7 @@
    },
    "games": 23,
    "projected": 1,
-   "rank": 209
+   "rank": 210
   },
   {
    "name": "Lachie Schultz",
@@ -3175,7 +3194,7 @@
    },
    "games": 22,
    "projected": 1,
-   "rank": 210
+   "rank": 211
   },
   {
    "name": "Lachie Weller",
@@ -3188,7 +3207,7 @@
    },
    "games": 11,
    "projected": 2,
-   "rank": 211
+   "rank": 212
   },
   {
    "name": "Lachie Whitfield",
@@ -3201,7 +3220,7 @@
    },
    "games": 21,
    "projected": 1,
-   "rank": 212
+   "rank": 213
   },
   {
    "name": "Leonardo Lombard",
@@ -3214,7 +3233,7 @@
    },
    "games": 23,
    "projected": 1,
-   "rank": 213
+   "rank": 214
   },
   {
    "name": "Liam Baker",
@@ -3227,7 +3246,7 @@
    },
    "games": 20,
    "projected": 1,
-   "rank": 214
+   "rank": 215
   },
   {
    "name": "Massimo D'Ambrosio",
@@ -3240,7 +3259,7 @@
    },
    "games": 24,
    "projected": 1,
-   "rank": 215
+   "rank": 216
   },
   {
    "name": "Mattaes Phillipou",
@@ -3253,7 +3272,7 @@
    },
    "games": 21,
    "projected": 1,
-   "rank": 216
+   "rank": 217
   },
   {
    "name": "Mitch McGovern",
@@ -3266,7 +3285,7 @@
    },
    "games": 25,
    "projected": 1,
-   "rank": 217
+   "rank": 218
   },
   {
    "name": "Mitch Owens",
@@ -3279,7 +3298,7 @@
    },
    "games": 20,
    "projected": 1,
-   "rank": 218
+   "rank": 219
   },
   {
    "name": "Peter Wright",
@@ -3292,7 +3311,7 @@
    },
    "games": 18,
    "projected": 1,
-   "rank": 219
+   "rank": 220
   },
   {
    "name": "Roan Steele",
@@ -3305,7 +3324,7 @@
    },
    "games": 19,
    "projected": 1,
-   "rank": 220
+   "rank": 221
   },
   {
    "name": "Sam Draper",
@@ -3316,9 +3335,9 @@
    "by_round": {
     "5": 1
    },
-   "games": 23,
+   "games": 24,
    "projected": 1,
-   "rank": 221
+   "rank": 222
   },
   {
    "name": "Sam Switkowski",
@@ -3329,9 +3348,9 @@
    "by_round": {
     "13": 1
    },
-   "games": 23,
+   "games": 24,
    "projected": 1,
-   "rank": 222
+   "rank": 223
   },
   {
    "name": "Tim English",
@@ -3344,7 +3363,7 @@
    },
    "games": 17,
    "projected": 1,
-   "rank": 223
+   "rank": 224
   },
   {
    "name": "Toby Murray",
@@ -3357,7 +3376,7 @@
    },
    "games": 13,
    "projected": 2,
-   "rank": 224
+   "rank": 225
   },
   {
    "name": "Wil Powell",
@@ -3370,7 +3389,7 @@
    },
    "games": 20,
    "projected": 1,
-   "rank": 225
+   "rank": 226
   }
  ]
 }

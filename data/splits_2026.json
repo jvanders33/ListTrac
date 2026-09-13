@@ -992,9 +992,9 @@
   "jack henry": {
    "name": "Jack Henry",
    "overall": {
-    "games": 94,
+    "games": 95,
     "disp": 11.0,
-    "af": 51.1,
+    "af": 50.9,
     "rating": 8.2,
     "goals": 0.1
    },
@@ -1098,11 +1098,11 @@
      "goals": 0.3
     },
     "FRE": {
-     "games": 6,
-     "disp": 13.5,
-     "af": 70.8,
-     "rating": 8.8,
-     "goals": 0.7
+     "games": 7,
+     "disp": 13.0,
+     "af": 65.3,
+     "rating": 9.5,
+     "goals": 0.6
     },
     "GWS": {
      "games": 4,
@@ -1128,10 +1128,10 @@
      "goals": 0.2
     },
     "away": {
-     "games": 44,
+     "games": 45,
      "disp": 10.8,
-     "af": 50.1,
-     "rating": 8.7,
+     "af": 49.7,
+     "rating": 8.8,
      "goals": 0.1
     }
    },
@@ -1165,11 +1165,11 @@
      "goals": 0.1
     },
     "Perth Stadium": {
-     "games": 4,
-     "disp": 10.5,
-     "af": 58.2,
-     "rating": 9.1,
-     "goals": 0.8
+     "games": 5,
+     "disp": 10.4,
+     "af": 53.0,
+     "rating": 9.9,
+     "goals": 0.6
     },
     "Docklands": {
      "games": 5,
@@ -1763,9 +1763,9 @@
   "hugh mccluggage": {
    "name": "Hugh McCluggage",
    "overall": {
-    "games": 117,
-    "disp": 23.9,
-    "af": 94.6,
+    "games": 118,
+    "disp": 23.8,
+    "af": 94.4,
     "rating": 12.6,
     "goals": 0.7
    },
@@ -1827,11 +1827,11 @@
      "goals": 1.2
     },
     "ADE": {
-     "games": 7,
-     "disp": 22.1,
-     "af": 86.7,
-     "rating": 10.6,
-     "goals": 1.0
+     "games": 8,
+     "disp": 21.4,
+     "af": 85.5,
+     "rating": 11.5,
+     "goals": 1.1
     },
     "HAW": {
      "games": 5,
@@ -1892,9 +1892,9 @@
    },
    "home_away": {
     "home": {
-     "games": 56,
-     "disp": 24.7,
-     "af": 95.9,
+     "games": 57,
+     "disp": 24.6,
+     "af": 95.6,
      "rating": 13.6,
      "goals": 0.7
     },
@@ -1908,10 +1908,10 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 54,
-     "disp": 24.6,
-     "af": 95.7,
-     "rating": 13.5,
+     "games": 55,
+     "disp": 24.4,
+     "af": 95.4,
+     "rating": 13.6,
      "goals": 0.7
     },
     "Docklands": {
@@ -3065,11 +3065,11 @@
   "izak rankine": {
    "name": "Izak Rankine",
    "overall": {
-    "games": 96,
+    "games": 97,
     "disp": 18.7,
-    "af": 80.8,
-    "rating": 13.6,
-    "goals": 1.6
+    "af": 80.9,
+    "rating": 13.5,
+    "goals": 1.5
    },
    "vs": {
     "WCE": {
@@ -3094,11 +3094,11 @@
      "goals": 1.5
     },
     "BRI": {
-     "games": 7,
-     "disp": 17.9,
-     "af": 71.9,
-     "rating": 14.9,
-     "goals": 1.4
+     "games": 8,
+     "disp": 18.5,
+     "af": 74.6,
+     "rating": 14.4,
+     "goals": 1.2
     },
     "COL": {
      "games": 8,
@@ -3201,9 +3201,9 @@
      "goals": 1.7
     },
     "away": {
-     "games": 45,
-     "disp": 17.9,
-     "af": 77.0,
+     "games": 46,
+     "disp": 18.0,
+     "af": 77.3,
      "rating": 12.4,
      "goals": 1.4
     }
@@ -3243,6 +3243,13 @@
      "af": 85.9,
      "rating": 15.0,
      "goals": 1.7
+    },
+    "Gabba": {
+     "games": 4,
+     "disp": 17.0,
+     "af": 74.0,
+     "rating": 11.9,
+     "goals": 1.2
     },
     "York Park": {
      "games": 4,
@@ -4821,9 +4828,9 @@
   "andrew brayshaw": {
    "name": "Andrew Brayshaw",
    "overall": {
-    "games": 118,
-    "disp": 27.9,
-    "af": 104.9,
+    "games": 119,
+    "disp": 27.8,
+    "af": 104.7,
     "rating": 13.2,
     "goals": 0.4
    },
@@ -4871,10 +4878,10 @@
      "goals": 0.1
     },
     "GEE": {
-     "games": 7,
-     "disp": 26.3,
-     "af": 100.1,
-     "rating": 11.5,
+     "games": 8,
+     "disp": 26.0,
+     "af": 97.5,
+     "rating": 11.7,
      "goals": 0.4
     },
     "NM": {
@@ -4950,11 +4957,11 @@
    },
    "home_away": {
     "home": {
-     "games": 60,
+     "games": 61,
      "disp": 29.0,
-     "af": 110.7,
+     "af": 110.2,
      "rating": 13.5,
-     "goals": 0.5
+     "goals": 0.4
     },
     "away": {
      "games": 58,
@@ -4973,10 +4980,10 @@
      "goals": 0.2
     },
     "Perth Stadium": {
-     "games": 64,
-     "disp": 28.9,
-     "af": 109.7,
-     "rating": 13.4,
+     "games": 65,
+     "disp": 28.8,
+     "af": 109.2,
+     "rating": 13.3,
      "goals": 0.4
     },
     "Docklands": {
@@ -5005,10 +5012,10 @@
   "cam rayner": {
    "name": "Cam Rayner",
    "overall": {
-    "games": 128,
+    "games": 129,
     "disp": 15.1,
-    "af": 65.8,
-    "rating": 10.1,
+    "af": 66.1,
+    "rating": 10.2,
     "goals": 1.1
    },
    "vs": {
@@ -5069,11 +5076,11 @@
      "goals": 1.2
     },
     "ADE": {
-     "games": 7,
-     "disp": 12.6,
-     "af": 55.3,
-     "rating": 9.0,
-     "goals": 1.3
+     "games": 8,
+     "disp": 13.8,
+     "af": 62.6,
+     "rating": 10.7,
+     "goals": 1.4
     },
     "HAW": {
      "games": 6,
@@ -5134,10 +5141,10 @@
    },
    "home_away": {
     "home": {
-     "games": 61,
-     "disp": 14.9,
-     "af": 64.0,
-     "rating": 10.1,
+     "games": 62,
+     "disp": 15.0,
+     "af": 64.8,
+     "rating": 10.3,
      "goals": 1.0
     },
     "away": {
@@ -5150,11 +5157,11 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 59,
-     "disp": 14.9,
-     "af": 64.1,
-     "rating": 10.1,
-     "goals": 0.9
+     "games": 60,
+     "disp": 15.0,
+     "af": 64.9,
+     "rating": 10.3,
+     "goals": 1.0
     },
     "Docklands": {
      "games": 14,
@@ -6223,10 +6230,10 @@
   "zac bailey": {
    "name": "Zac Bailey",
    "overall": {
-    "games": 119,
+    "games": 120,
     "disp": 18.4,
-    "af": 78.2,
-    "rating": 11.6,
+    "af": 78.5,
+    "rating": 11.7,
     "goals": 1.4
    },
    "vs": {
@@ -6287,11 +6294,11 @@
      "goals": 1.0
     },
     "ADE": {
-     "games": 6,
-     "disp": 21.5,
-     "af": 83.5,
-     "rating": 13.4,
-     "goals": 1.5
+     "games": 7,
+     "disp": 21.7,
+     "af": 87.4,
+     "rating": 14.7,
+     "goals": 1.7
     },
     "HAW": {
      "games": 6,
@@ -6352,10 +6359,10 @@
    },
    "home_away": {
     "home": {
-     "games": 57,
-     "disp": 18.5,
-     "af": 78.8,
-     "rating": 11.9,
+     "games": 58,
+     "disp": 18.6,
+     "af": 79.3,
+     "rating": 12.0,
      "goals": 1.2
     },
     "away": {
@@ -6368,10 +6375,10 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 55,
-     "disp": 18.4,
-     "af": 78.8,
-     "rating": 11.9,
+     "games": 56,
+     "disp": 18.5,
+     "af": 79.3,
+     "rating": 12.1,
      "goals": 1.2
     },
     "Docklands": {
@@ -8321,10 +8328,10 @@
   "zach guthrie": {
    "name": "Zach Guthrie",
    "overall": {
-    "games": 119,
+    "games": 120,
     "disp": 16.7,
     "af": 71.4,
-    "rating": 8.4,
+    "rating": 8.5,
     "goals": 0.1
    },
    "vs": {
@@ -8441,10 +8448,10 @@
      "goals": 0.0
     },
     "FRE": {
-     "games": 6,
-     "disp": 17.8,
-     "af": 76.8,
-     "rating": 6.6,
+     "games": 7,
+     "disp": 17.9,
+     "af": 76.0,
+     "rating": 7.7,
      "goals": 0.0
     }
    },
@@ -8457,10 +8464,10 @@
      "goals": 0.1
     },
     "away": {
-     "games": 55,
+     "games": 56,
      "disp": 16.6,
      "af": 70.2,
-     "rating": 8.4,
+     "rating": 8.5,
      "goals": 0.1
     }
    },
@@ -8494,10 +8501,10 @@
      "goals": 0.1
     },
     "Perth Stadium": {
-     "games": 5,
-     "disp": 15.2,
-     "af": 65.8,
-     "rating": 5.8,
+     "games": 6,
+     "disp": 15.7,
+     "af": 66.7,
+     "rating": 7.2,
      "goals": 0.0
     },
     "Adelaide Oval": {
@@ -10673,10 +10680,10 @@
   "sam draper": {
    "name": "Sam Draper",
    "overall": {
-    "games": 80,
-    "disp": 10.6,
-    "af": 64.4,
-    "rating": 11.6,
+    "games": 81,
+    "disp": 10.5,
+    "af": 64.2,
+    "rating": 11.5,
     "goals": 0.7
    },
    "vs": {
@@ -10702,11 +10709,11 @@
      "goals": 0.8
     },
     "ADE": {
-     "games": 5,
-     "disp": 10.2,
-     "af": 62.0,
-     "rating": 9.4,
-     "goals": 1.2
+     "games": 6,
+     "disp": 10.0,
+     "af": 59.0,
+     "rating": 8.9,
+     "goals": 1.0
     },
     "FRE": {
      "games": 3,
@@ -10809,10 +10816,10 @@
    },
    "home_away": {
     "home": {
-     "games": 36,
+     "games": 37,
      "disp": 10.6,
-     "af": 69.1,
-     "rating": 12.6,
+     "af": 68.4,
+     "rating": 12.4,
      "goals": 0.9
     },
     "away": {
@@ -10860,10 +10867,10 @@
      "goals": 0.5
     },
     "Gabba": {
-     "games": 13,
-     "disp": 10.3,
-     "af": 62.8,
-     "rating": 12.4,
+     "games": 14,
+     "disp": 10.2,
+     "af": 61.4,
+     "rating": 11.9,
      "goals": 0.8
     }
    }
@@ -12594,11 +12601,11 @@
   "bailey smith": {
    "name": "Bailey Smith",
    "overall": {
-    "games": 82,
-    "disp": 29.4,
-    "af": 106.2,
+    "games": 83,
+    "disp": 29.3,
+    "af": 106.3,
     "rating": 12.8,
-    "goals": 0.4
+    "goals": 0.3
    },
    "vs": {
     "MEL": {
@@ -12679,11 +12686,11 @@
      "goals": 0.2
     },
     "FRE": {
-     "games": 5,
-     "disp": 26.0,
-     "af": 100.4,
-     "rating": 13.9,
-     "goals": 0.6
+     "games": 6,
+     "disp": 26.5,
+     "af": 103.2,
+     "rating": 13.3,
+     "goals": 0.5
     },
     "GWS": {
      "games": 6,
@@ -12737,9 +12744,9 @@
      "goals": 0.4
     },
     "away": {
-     "games": 37,
+     "games": 38,
      "disp": 30.2,
-     "af": 108.2,
+     "af": 108.5,
      "rating": 12.4,
      "goals": 0.3
     }
@@ -13826,10 +13833,10 @@
   "jordan clark": {
    "name": "Jordan Clark",
    "overall": {
-    "games": 118,
+    "games": 119,
     "disp": 22.4,
     "af": 85.0,
-    "rating": 10.1,
+    "rating": 10.2,
     "goals": 0.1
    },
    "vs": {
@@ -13876,10 +13883,10 @@
      "goals": 0.0
     },
     "GEE": {
-     "games": 7,
-     "disp": 21.0,
-     "af": 80.4,
-     "rating": 10.2,
+     "games": 8,
+     "disp": 21.5,
+     "af": 80.2,
+     "rating": 10.8,
      "goals": 0.1
     },
     "NM": {
@@ -13955,9 +13962,9 @@
    },
    "home_away": {
     "home": {
-     "games": 60,
+     "games": 61,
      "disp": 22.5,
-     "af": 84.3,
+     "af": 84.2,
      "rating": 10.3,
      "goals": 0.1
     },
@@ -13978,10 +13985,10 @@
      "goals": 0.1
     },
     "Perth Stadium": {
-     "games": 64,
+     "games": 65,
      "disp": 22.6,
-     "af": 86.0,
-     "rating": 10.4,
+     "af": 85.9,
+     "rating": 10.5,
      "goals": 0.1
     },
     "Docklands": {
@@ -16914,9 +16921,9 @@
   "riley thilthorpe": {
    "name": "Riley Thilthorpe",
    "overall": {
-    "games": 85,
-    "disp": 12.1,
-    "af": 68.2,
+    "games": 86,
+    "disp": 12.2,
+    "af": 68.3,
     "rating": 10.6,
     "goals": 1.6
    },
@@ -17013,11 +17020,11 @@
      "goals": 0.7
     },
     "BRI": {
-     "games": 4,
-     "disp": 9.2,
-     "af": 53.2,
-     "rating": 8.1,
-     "goals": 1.2
+     "games": 5,
+     "disp": 10.6,
+     "af": 57.0,
+     "rating": 7.7,
+     "goals": 1.4
     },
     "ESS": {
      "games": 4,
@@ -17050,11 +17057,11 @@
      "goals": 1.4
     },
     "away": {
-     "games": 39,
-     "disp": 12.3,
+     "games": 40,
+     "disp": 12.4,
      "af": 70.0,
-     "rating": 11.2,
-     "goals": 1.8
+     "rating": 11.1,
+     "goals": 1.9
     }
    },
    "by_venue": {
@@ -18730,10 +18737,10 @@
   "hayden young": {
    "name": "Hayden Young",
    "overall": {
-    "games": 91,
+    "games": 92,
     "disp": 21.6,
-    "af": 85.1,
-    "rating": 12.2,
+    "af": 85.2,
+    "rating": 12.3,
     "goals": 0.3
    },
    "vs": {
@@ -18850,19 +18857,19 @@
      "goals": 0.4
     },
     "GEE": {
-     "games": 5,
-     "disp": 18.8,
-     "af": 75.0,
-     "rating": 12.6,
-     "goals": 0.4
+     "games": 6,
+     "disp": 19.5,
+     "af": 78.5,
+     "rating": 13.4,
+     "goals": 0.5
     }
    },
    "home_away": {
     "home": {
-     "games": 46,
-     "disp": 21.5,
-     "af": 84.7,
-     "rating": 12.7,
+     "games": 47,
+     "disp": 21.6,
+     "af": 84.9,
+     "rating": 12.8,
      "goals": 0.3
     },
     "away": {
@@ -18882,10 +18889,10 @@
      "goals": 0.2
     },
     "Perth Stadium": {
-     "games": 48,
-     "disp": 21.5,
-     "af": 84.3,
-     "rating": 12.7,
+     "games": 49,
+     "disp": 21.6,
+     "af": 84.5,
+     "rating": 12.8,
      "goals": 0.3
     },
     "Docklands": {
@@ -19261,10 +19268,10 @@
   "luke jackson": {
    "name": "Luke Jackson",
    "overall": {
-    "games": 113,
-    "disp": 16.3,
-    "af": 86.5,
-    "rating": 13.7,
+    "games": 114,
+    "disp": 16.4,
+    "af": 86.8,
+    "rating": 13.8,
     "goals": 0.9
    },
    "vs": {
@@ -19360,11 +19367,11 @@
      "goals": 1.0
     },
     "GEE": {
-     "games": 7,
-     "disp": 17.9,
-     "af": 93.9,
-     "rating": 12.7,
-     "goals": 0.7
+     "games": 8,
+     "disp": 18.8,
+     "af": 97.6,
+     "rating": 13.7,
+     "goals": 0.9
     },
     "CAR": {
      "games": 6,
@@ -19397,11 +19404,11 @@
    },
    "home_away": {
     "home": {
-     "games": 59,
-     "disp": 16.3,
-     "af": 87.7,
-     "rating": 13.6,
-     "goals": 0.8
+     "games": 60,
+     "disp": 16.5,
+     "af": 88.3,
+     "rating": 13.8,
+     "goals": 0.9
     },
     "away": {
      "games": 54,
@@ -19427,10 +19434,10 @@
      "goals": 0.4
     },
     "Perth Stadium": {
-     "games": 52,
-     "disp": 17.0,
-     "af": 91.1,
-     "rating": 14.7,
+     "games": 53,
+     "disp": 17.1,
+     "af": 91.8,
+     "rating": 14.8,
      "goals": 1.0
     },
     "Docklands": {
@@ -19452,10 +19459,10 @@
   "caleb serong": {
    "name": "Caleb Serong",
    "overall": {
-    "games": 112,
+    "games": 113,
     "disp": 27.7,
-    "af": 97.7,
-    "rating": 15.0,
+    "af": 97.6,
+    "rating": 15.1,
     "goals": 0.3
    },
    "vs": {
@@ -19488,10 +19495,10 @@
      "goals": 0.0
     },
     "GEE": {
-     "games": 7,
-     "disp": 26.1,
-     "af": 95.7,
-     "rating": 18.1,
+     "games": 8,
+     "disp": 25.8,
+     "af": 94.6,
+     "rating": 18.2,
      "goals": 0.9
     },
     "NM": {
@@ -19581,9 +19588,9 @@
    },
    "home_away": {
     "home": {
-     "games": 58,
+     "games": 59,
      "disp": 27.7,
-     "af": 98.6,
+     "af": 98.4,
      "rating": 15.7,
      "goals": 0.4
     },
@@ -19604,10 +19611,10 @@
      "goals": 0.1
     },
     "Perth Stadium": {
-     "games": 61,
+     "games": 62,
      "disp": 27.8,
-     "af": 99.0,
-     "rating": 15.4,
+     "af": 98.8,
+     "rating": 15.5,
      "goals": 0.4
     },
     "Docklands": {
@@ -21774,10 +21781,10 @@
   "tanner bruhn": {
    "name": "Tanner Bruhn",
    "overall": {
-    "games": 75,
+    "games": 76,
     "disp": 17.1,
     "af": 69.8,
-    "rating": 8.0,
+    "rating": 7.9,
     "goals": 0.3
    },
    "vs": {
@@ -21803,11 +21810,11 @@
      "goals": 0.2
     },
     "FRE": {
-     "games": 6,
-     "disp": 17.8,
-     "af": 68.0,
+     "games": 7,
+     "disp": 17.9,
+     "af": 68.6,
      "rating": 6.9,
-     "goals": 0.2
+     "goals": 0.1
     },
     "MEL": {
      "games": 4,
@@ -21910,10 +21917,10 @@
      "goals": 0.3
     },
     "away": {
-     "games": 40,
+     "games": 41,
      "disp": 17.2,
-     "af": 68.0,
-     "rating": 7.8,
+     "af": 68.1,
+     "rating": 7.7,
      "goals": 0.2
     }
    },
@@ -21933,9 +21940,9 @@
      "goals": 0.7
     },
     "Perth Stadium": {
-     "games": 4,
-     "disp": 15.0,
-     "af": 61.2,
+     "games": 5,
+     "disp": 15.6,
+     "af": 63.4,
      "rating": 6.5,
      "goals": 0.2
     },
@@ -21972,9 +21979,9 @@
   "josh treacy": {
    "name": "Josh Treacy",
    "overall": {
-    "games": 89,
+    "games": 90,
     "disp": 11.3,
-    "af": 66.5,
+    "af": 66.7,
     "rating": 9.7,
     "goals": 1.8
    },
@@ -21987,10 +21994,10 @@
      "goals": 1.4
     },
     "GEE": {
-     "games": 6,
-     "disp": 7.3,
-     "af": 44.2,
-     "rating": 4.7,
+     "games": 7,
+     "disp": 8.1,
+     "af": 49.6,
+     "rating": 6.2,
      "goals": 1.0
     },
     "NM": {
@@ -22101,11 +22108,11 @@
    },
    "home_away": {
     "home": {
-     "games": 43,
+     "games": 44,
      "disp": 11.8,
-     "af": 69.0,
-     "rating": 9.3,
-     "goals": 1.9
+     "af": 69.3,
+     "rating": 9.5,
+     "goals": 1.8
     },
     "away": {
      "games": 46,
@@ -22131,10 +22138,10 @@
      "goals": 0.8
     },
     "Perth Stadium": {
-     "games": 47,
+     "games": 48,
      "disp": 11.8,
-     "af": 68.7,
-     "rating": 9.6,
+     "af": 69.0,
+     "rating": 9.7,
      "goals": 1.8
     },
     "Docklands": {
@@ -22631,10 +22638,10 @@
   "oliver henry": {
    "name": "Oliver Henry",
    "overall": {
-    "games": 98,
-    "disp": 9.4,
-    "af": 51.2,
-    "rating": 6.8,
+    "games": 99,
+    "disp": 9.5,
+    "af": 51.7,
+    "rating": 6.9,
     "goals": 1.6
    },
    "vs": {
@@ -22674,11 +22681,11 @@
      "goals": 1.3
     },
     "FRE": {
-     "games": 5,
-     "disp": 9.0,
-     "af": 59.0,
-     "rating": 6.8,
-     "goals": 2.4
+     "games": 6,
+     "disp": 10.8,
+     "af": 66.8,
+     "rating": 9.5,
+     "goals": 2.8
     },
     "CAR": {
      "games": 8,
@@ -22767,11 +22774,11 @@
      "goals": 1.6
     },
     "away": {
-     "games": 48,
-     "disp": 9.3,
-     "af": 51.2,
-     "rating": 7.1,
-     "goals": 1.6
+     "games": 49,
+     "disp": 9.5,
+     "af": 52.3,
+     "rating": 7.4,
+     "goals": 1.7
     }
    },
    "by_venue": {
@@ -22790,11 +22797,11 @@
      "goals": 2.0
     },
     "Perth Stadium": {
-     "games": 4,
-     "disp": 9.0,
-     "af": 57.8,
-     "rating": 6.5,
-     "goals": 2.2
+     "games": 5,
+     "disp": 11.2,
+     "af": 67.4,
+     "rating": 9.9,
+     "goals": 2.8
     },
     "Adelaide Oval": {
      "games": 10,
@@ -23297,10 +23304,10 @@
   "heath chapman": {
    "name": "Heath Chapman",
    "overall": {
-    "games": 82,
+    "games": 83,
     "disp": 15.5,
-    "af": 62.3,
-    "rating": 7.5,
+    "af": 62.2,
+    "rating": 7.4,
     "goals": 0.0
    },
    "vs": {
@@ -23396,10 +23403,10 @@
      "goals": 0.0
     },
     "GEE": {
-     "games": 4,
-     "disp": 15.0,
-     "af": 52.2,
-     "rating": 5.7,
+     "games": 5,
+     "disp": 15.2,
+     "af": 53.2,
+     "rating": 4.7,
      "goals": 0.0
     },
     "PA": {
@@ -23426,10 +23433,10 @@
    },
    "home_away": {
     "home": {
-     "games": 43,
+     "games": 44,
      "disp": 15.3,
-     "af": 62.4,
-     "rating": 7.8,
+     "af": 62.2,
+     "rating": 7.6,
      "goals": 0.0
     },
     "away": {
@@ -23449,10 +23456,10 @@
      "goals": 0.0
     },
     "Perth Stadium": {
-     "games": 47,
+     "games": 48,
      "disp": 15.5,
-     "af": 63.0,
-     "rating": 7.9,
+     "af": 62.8,
+     "rating": 7.8,
      "goals": 0.0
     },
     "Docklands": {
@@ -24692,9 +24699,9 @@
   "max holmes": {
    "name": "Max Holmes",
    "overall": {
-    "games": 109,
-    "disp": 23.2,
-    "af": 88.6,
+    "games": 110,
+    "disp": 23.1,
+    "af": 88.2,
     "rating": 13.5,
     "goals": 0.5
    },
@@ -24742,10 +24749,10 @@
      "goals": 0.7
     },
     "FRE": {
-     "games": 7,
-     "disp": 19.1,
-     "af": 78.3,
-     "rating": 11.4,
+     "games": 8,
+     "disp": 19.0,
+     "af": 73.9,
+     "rating": 11.3,
      "goals": 0.4
     },
     "RIC": {
@@ -24828,9 +24835,9 @@
      "goals": 0.5
     },
     "away": {
-     "games": 50,
-     "disp": 22.4,
-     "af": 86.2,
+     "games": 51,
+     "disp": 22.3,
+     "af": 85.4,
      "rating": 12.5,
      "goals": 0.4
     }
@@ -24865,10 +24872,10 @@
      "goals": 0.4
     },
     "Perth Stadium": {
-     "games": 4,
-     "disp": 21.8,
-     "af": 80.8,
-     "rating": 11.6,
+     "games": 5,
+     "disp": 21.0,
+     "af": 73.2,
+     "rating": 11.5,
      "goals": 0.0
     },
     "Gabba": {
@@ -24890,10 +24897,10 @@
   "josh rachele": {
    "name": "Josh Rachele",
    "overall": {
-    "games": 94,
-    "disp": 14.1,
-    "af": 65.3,
-    "rating": 9.4,
+    "games": 95,
+    "disp": 14.0,
+    "af": 65.0,
+    "rating": 9.3,
     "goals": 1.5
    },
    "vs": {
@@ -24954,10 +24961,10 @@
      "goals": 2.0
     },
     "BRI": {
-     "games": 7,
-     "disp": 11.7,
-     "af": 51.9,
-     "rating": 8.6,
+     "games": 8,
+     "disp": 11.1,
+     "af": 50.4,
+     "rating": 7.7,
      "goals": 1.0
     },
     "STK": {
@@ -25026,10 +25033,10 @@
      "goals": 1.6
     },
     "away": {
-     "games": 44,
-     "disp": 14.1,
-     "af": 64.4,
-     "rating": 9.2,
+     "games": 45,
+     "disp": 14.0,
+     "af": 63.8,
+     "rating": 9.0,
      "goals": 1.4
     }
    },
@@ -25054,6 +25061,13 @@
      "af": 69.9,
      "rating": 10.5,
      "goals": 2.1
+    },
+    "Gabba": {
+     "games": 4,
+     "disp": 10.2,
+     "af": 46.2,
+     "rating": 5.3,
+     "goals": 0.5
     },
     "Perth Stadium": {
      "games": 5,
@@ -25330,9 +25344,9 @@
   "jake soligo": {
    "name": "Jake Soligo",
    "overall": {
-    "games": 106,
-    "disp": 18.5,
-    "af": 71.4,
+    "games": 107,
+    "disp": 18.4,
+    "af": 71.1,
     "rating": 9.6,
     "goals": 0.4
    },
@@ -25352,10 +25366,10 @@
      "goals": 0.4
     },
     "BRI": {
-     "games": 6,
-     "disp": 18.8,
-     "af": 75.3,
-     "rating": 8.8,
+     "games": 7,
+     "disp": 17.4,
+     "af": 71.6,
+     "rating": 8.3,
      "goals": 0.3
     },
     "STK": {
@@ -25466,10 +25480,10 @@
      "goals": 0.4
     },
     "away": {
-     "games": 50,
-     "disp": 17.8,
-     "af": 69.4,
-     "rating": 10.0,
+     "games": 51,
+     "disp": 17.7,
+     "af": 69.0,
+     "rating": 9.9,
      "goals": 0.4
     }
    },
@@ -27957,10 +27971,10 @@
   "dayne zorko": {
    "name": "Dayne Zorko",
    "overall": {
-    "games": 110,
+    "games": 111,
     "disp": 23.5,
-    "af": 96.7,
-    "rating": 11.0,
+    "af": 96.9,
+    "rating": 11.1,
     "goals": 0.3
    },
    "vs": {
@@ -28021,11 +28035,11 @@
      "goals": 0.0
     },
     "ADE": {
-     "games": 6,
-     "disp": 22.7,
-     "af": 95.5,
-     "rating": 10.0,
-     "goals": 0.5
+     "games": 7,
+     "disp": 23.3,
+     "af": 98.0,
+     "rating": 10.7,
+     "goals": 0.6
     },
     "HAW": {
      "games": 5,
@@ -28086,9 +28100,9 @@
    },
    "home_away": {
     "home": {
-     "games": 55,
+     "games": 56,
      "disp": 23.6,
-     "af": 97.9,
+     "af": 98.1,
      "rating": 11.7,
      "goals": 0.3
     },
@@ -28102,9 +28116,9 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 53,
-     "disp": 23.5,
-     "af": 97.4,
+     "games": 54,
+     "disp": 23.6,
+     "af": 97.7,
      "rating": 11.6,
      "goals": 0.3
     },
@@ -28597,10 +28611,10 @@
   "patrick dangerfield": {
    "name": "Patrick Dangerfield",
    "overall": {
-    "games": 94,
+    "games": 95,
     "disp": 18.2,
-    "af": 73.1,
-    "rating": 11.8,
+    "af": 73.2,
+    "rating": 11.9,
     "goals": 0.9
    },
    "vs": {
@@ -28710,11 +28724,11 @@
      "goals": 1.0
     },
     "FRE": {
-     "games": 5,
-     "disp": 14.4,
-     "af": 54.2,
-     "rating": 11.0,
-     "goals": 0.8
+     "games": 6,
+     "disp": 14.3,
+     "af": 59.0,
+     "rating": 11.4,
+     "goals": 1.0
     },
     "RIC": {
      "games": 3,
@@ -28733,10 +28747,10 @@
      "goals": 1.1
     },
     "away": {
-     "games": 43,
-     "disp": 17.4,
-     "af": 67.3,
-     "rating": 10.7,
+     "games": 44,
+     "disp": 17.3,
+     "af": 67.7,
+     "rating": 10.8,
      "goals": 0.7
     }
    },
@@ -34853,9 +34867,9 @@
   "tom stewart": {
    "name": "Tom Stewart",
    "overall": {
-    "games": 107,
-    "disp": 21.5,
-    "af": 86.4,
+    "games": 108,
+    "disp": 21.4,
+    "af": 86.1,
     "rating": 11.2,
     "goals": 0.0
    },
@@ -34896,11 +34910,11 @@
      "goals": 0.0
     },
     "FRE": {
-     "games": 6,
-     "disp": 25.2,
-     "af": 103.2,
-     "rating": 11.8,
-     "goals": 0.0
+     "games": 7,
+     "disp": 23.6,
+     "af": 96.1,
+     "rating": 11.6,
+     "goals": 0.1
     },
     "GWS": {
      "games": 5,
@@ -34989,10 +35003,10 @@
      "goals": 0.1
     },
     "away": {
-     "games": 49,
-     "disp": 21.6,
-     "af": 87.2,
-     "rating": 11.4,
+     "games": 50,
+     "disp": 21.5,
+     "af": 86.5,
+     "rating": 11.3,
      "goals": 0.0
     }
    },
@@ -35026,11 +35040,11 @@
      "goals": 0.1
     },
     "Perth Stadium": {
-     "games": 4,
-     "disp": 17.5,
-     "af": 74.0,
+     "games": 5,
+     "disp": 16.8,
+     "af": 70.0,
      "rating": 10.4,
-     "goals": 0.0
+     "goals": 0.2
     },
     "Adelaide Oval": {
      "games": 6,
@@ -36760,10 +36774,10 @@
   "lachie neale": {
    "name": "Lachie Neale",
    "overall": {
-    "games": 123,
-    "disp": 28.5,
-    "af": 99.2,
-    "rating": 15.3,
+    "games": 124,
+    "disp": 28.4,
+    "af": 99.0,
+    "rating": 15.2,
     "goals": 0.3
    },
    "vs": {
@@ -36824,11 +36838,11 @@
      "goals": 0.8
     },
     "ADE": {
-     "games": 7,
-     "disp": 30.0,
-     "af": 106.9,
-     "rating": 14.0,
-     "goals": 0.6
+     "games": 8,
+     "disp": 28.9,
+     "af": 102.9,
+     "rating": 13.2,
+     "goals": 0.5
     },
     "HAW": {
      "games": 5,
@@ -36889,10 +36903,10 @@
    },
    "home_away": {
     "home": {
-     "games": 59,
-     "disp": 29.5,
-     "af": 102.2,
-     "rating": 15.1,
+     "games": 60,
+     "disp": 29.4,
+     "af": 101.7,
+     "rating": 15.0,
      "goals": 0.3
     },
     "away": {
@@ -36905,10 +36919,10 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 57,
-     "disp": 29.4,
-     "af": 102.4,
-     "rating": 15.0,
+     "games": 58,
+     "disp": 29.3,
+     "af": 101.9,
+     "rating": 14.9,
      "goals": 0.3
     },
     "Docklands": {
@@ -37882,9 +37896,9 @@
   "jeremy cameron": {
    "name": "Jeremy Cameron",
    "overall": {
-    "games": 112,
+    "games": 113,
     "disp": 15.3,
-    "af": 81.9,
+    "af": 81.7,
     "rating": 11.8,
     "goals": 2.8
    },
@@ -37932,10 +37946,10 @@
      "goals": 5.5
     },
     "FRE": {
-     "games": 7,
+     "games": 8,
      "disp": 13.6,
-     "af": 75.9,
-     "rating": 7.7,
+     "af": 73.2,
+     "rating": 7.8,
      "goals": 1.6
     },
     "GWS": {
@@ -38018,10 +38032,10 @@
      "goals": 2.7
     },
     "away": {
-     "games": 52,
+     "games": 53,
      "disp": 15.3,
-     "af": 82.0,
-     "rating": 11.7,
+     "af": 81.5,
+     "rating": 11.6,
      "goals": 2.8
     }
    },
@@ -38048,10 +38062,10 @@
      "goals": 3.4
     },
     "Perth Stadium": {
-     "games": 5,
-     "disp": 12.6,
-     "af": 70.0,
-     "rating": 11.3,
+     "games": 6,
+     "disp": 12.8,
+     "af": 67.5,
+     "rating": 10.8,
      "goals": 1.8
     },
     "Adelaide Oval": {
@@ -43457,9 +43471,9 @@
   "darcy gardiner": {
    "name": "Darcy Gardiner",
    "overall": {
-    "games": 63,
+    "games": 64,
     "disp": 10.6,
-    "af": 45.6,
+    "af": 45.5,
     "rating": 6.5,
     "goals": 0.1
    },
@@ -43514,10 +43528,10 @@
      "goals": 0.0
     },
     "ADE": {
-     "games": 2,
-     "disp": 8.5,
-     "af": 37.5,
-     "rating": 5.8,
+     "games": 3,
+     "disp": 9.0,
+     "af": 38.3,
+     "rating": 6.3,
      "goals": 0.0
     },
     "HAW": {
@@ -43579,8 +43593,8 @@
    },
    "home_away": {
     "home": {
-     "games": 28,
-     "disp": 10.4,
+     "games": 29,
+     "disp": 10.3,
      "af": 42.6,
      "rating": 6.5,
      "goals": 0.3
@@ -43595,7 +43609,7 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 27,
+     "games": 28,
      "disp": 10.3,
      "af": 42.4,
      "rating": 6.5,
@@ -44547,7 +44561,7 @@
   "alex neal bullen": {
    "name": "Alex Neal-Bullen",
    "overall": {
-    "games": 118,
+    "games": 119,
     "disp": 16.6,
     "af": 72.5,
     "rating": 9.8,
@@ -44639,10 +44653,10 @@
      "goals": 0.4
     },
     "BRI": {
-     "games": 8,
-     "disp": 15.5,
-     "af": 73.6,
-     "rating": 9.9,
+     "games": 9,
+     "disp": 15.6,
+     "af": 73.3,
+     "rating": 10.1,
      "goals": 0.9
     },
     "ADE": {
@@ -44690,7 +44704,7 @@
      "goals": 0.6
     },
     "away": {
-     "games": 56,
+     "games": 57,
      "disp": 16.6,
      "af": 72.8,
      "rating": 9.4,
@@ -44732,6 +44746,13 @@
      "af": 55.9,
      "rating": 8.6,
      "goals": 0.4
+    },
+    "Gabba": {
+     "games": 4,
+     "disp": 15.2,
+     "af": 72.8,
+     "rating": 9.7,
+     "goals": 0.8
     },
     "S.C.G.": {
      "games": 4,
@@ -44929,9 +44950,9 @@
   "mark blicavs": {
    "name": "Mark Blicavs",
    "overall": {
-    "games": 111,
+    "games": 112,
     "disp": 15.1,
-    "af": 75.5,
+    "af": 75.1,
     "rating": 10.8,
     "goals": 0.4
    },
@@ -44979,10 +45000,10 @@
      "goals": 0.7
     },
     "FRE": {
-     "games": 7,
-     "disp": 14.3,
-     "af": 74.1,
-     "rating": 11.2,
+     "games": 8,
+     "disp": 13.5,
+     "af": 69.2,
+     "rating": 10.8,
      "goals": 0.4
     },
     "GWS": {
@@ -45065,10 +45086,10 @@
      "goals": 0.4
     },
     "away": {
-     "games": 56,
-     "disp": 14.0,
-     "af": 71.6,
-     "rating": 9.8,
+     "games": 57,
+     "disp": 13.9,
+     "af": 70.9,
+     "rating": 9.7,
      "goals": 0.3
     }
    },
@@ -45102,10 +45123,10 @@
      "goals": 0.7
     },
     "Perth Stadium": {
-     "games": 5,
-     "disp": 14.2,
-     "af": 67.6,
-     "rating": 10.9,
+     "games": 6,
+     "disp": 13.2,
+     "af": 62.2,
+     "rating": 10.3,
      "goals": 0.2
     },
     "Adelaide Oval": {
@@ -47861,10 +47882,10 @@
   "darcy fort": {
    "name": "Darcy Fort",
    "overall": {
-    "games": 72,
+    "games": 73,
     "disp": 10.2,
-    "af": 62.0,
-    "rating": 9.6,
+    "af": 61.9,
+    "rating": 9.5,
     "goals": 0.3
    },
    "vs": {
@@ -47925,11 +47946,11 @@
      "goals": 0.0
     },
     "ADE": {
-     "games": 3,
-     "disp": 13.0,
-     "af": 67.7,
-     "rating": 15.2,
-     "goals": 0.3
+     "games": 4,
+     "disp": 12.5,
+     "af": 65.0,
+     "rating": 13.2,
+     "goals": 0.2
     },
     "HAW": {
      "games": 4,
@@ -47990,10 +48011,10 @@
    },
    "home_away": {
     "home": {
-     "games": 33,
-     "disp": 9.6,
+     "games": 34,
+     "disp": 9.7,
      "af": 57.5,
-     "rating": 9.0,
+     "rating": 8.9,
      "goals": 0.4
     },
     "away": {
@@ -48006,8 +48027,8 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 32,
-     "disp": 9.5,
+     "games": 33,
+     "disp": 9.6,
      "af": 57.0,
      "rating": 8.8,
      "goals": 0.3
@@ -49563,9 +49584,9 @@
   "alex pearce": {
    "name": "Alex Pearce",
    "overall": {
-    "games": 98,
+    "games": 99,
     "disp": 10.2,
-    "af": 43.7,
+    "af": 43.6,
     "rating": 8.5,
     "goals": 0.1
    },
@@ -49613,9 +49634,9 @@
      "goals": 0.0
     },
     "GEE": {
-     "games": 6,
+     "games": 7,
      "disp": 13.0,
-     "af": 58.0,
+     "af": 54.9,
      "rating": 9.0,
      "goals": 0.0
     },
@@ -49692,9 +49713,9 @@
    },
    "home_away": {
     "home": {
-     "games": 49,
+     "games": 50,
      "disp": 10.0,
-     "af": 42.5,
+     "af": 42.4,
      "rating": 8.5,
      "goals": 0.1
     },
@@ -49715,9 +49736,9 @@
      "goals": 0.1
     },
     "Perth Stadium": {
-     "games": 52,
-     "disp": 10.1,
-     "af": 43.3,
+     "games": 53,
+     "disp": 10.2,
+     "af": 43.1,
      "rating": 8.5,
      "goals": 0.1
     },
@@ -50080,10 +50101,10 @@
   "callum ah chee": {
    "name": "Callum Ah Chee",
    "overall": {
-    "games": 93,
+    "games": 94,
     "disp": 12.4,
     "af": 56.2,
-    "rating": 7.0,
+    "rating": 6.9,
     "goals": 0.8
    },
    "vs": {
@@ -50216,19 +50237,19 @@
      "goals": 0.7
     },
     "away": {
-     "games": 48,
-     "disp": 12.4,
-     "af": 56.6,
-     "rating": 7.3,
+     "games": 49,
+     "disp": 12.5,
+     "af": 56.7,
+     "rating": 7.2,
      "goals": 0.9
     }
    },
    "by_venue": {
     "Gabba": {
-     "games": 40,
+     "games": 41,
      "disp": 12.6,
      "af": 57.6,
-     "rating": 6.7,
+     "rating": 6.6,
      "goals": 0.7
     },
     "Docklands": {
@@ -51007,10 +51028,10 @@
   "charlie cameron": {
    "name": "Charlie Cameron",
    "overall": {
-    "games": 127,
+    "games": 128,
     "disp": 10.6,
-    "af": 61.6,
-    "rating": 9.2,
+    "af": 61.8,
+    "rating": 9.3,
     "goals": 1.9
    },
    "vs": {
@@ -51071,11 +51092,11 @@
      "goals": 2.0
     },
     "ADE": {
-     "games": 7,
-     "disp": 11.1,
-     "af": 73.3,
+     "games": 8,
+     "disp": 11.5,
+     "af": 74.9,
      "rating": 11.2,
-     "goals": 2.9
+     "goals": 3.1
     },
     "HAW": {
      "games": 6,
@@ -51136,11 +51157,11 @@
    },
    "home_away": {
     "home": {
-     "games": 61,
-     "disp": 10.9,
-     "af": 61.8,
+     "games": 62,
+     "disp": 11.0,
+     "af": 62.2,
      "rating": 8.9,
-     "goals": 1.8
+     "goals": 1.9
     },
     "away": {
      "games": 66,
@@ -51152,9 +51173,9 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 59,
-     "disp": 10.9,
-     "af": 61.5,
+     "games": 60,
+     "disp": 11.0,
+     "af": 61.9,
      "rating": 8.8,
      "goals": 1.8
     },
@@ -51778,11 +51799,11 @@
   "wayne milera": {
    "name": "Wayne Milera",
    "overall": {
-    "games": 80,
+    "games": 81,
     "disp": 19.3,
-    "af": 73.5,
-    "rating": 9.0,
-    "goals": 0.1
+    "af": 73.4,
+    "rating": 8.9,
+    "goals": 0.2
    },
    "vs": {
     "FRE": {
@@ -51884,11 +51905,11 @@
      "goals": 0.2
     },
     "BRI": {
-     "games": 4,
-     "disp": 21.5,
-     "af": 83.0,
-     "rating": 7.1,
-     "goals": 0.0
+     "games": 5,
+     "disp": 21.0,
+     "af": 80.0,
+     "rating": 7.3,
+     "goals": 0.2
     },
     "ESS": {
      "games": 2,
@@ -51914,7 +51935,7 @@
      "goals": 0.1
     },
     "away": {
-     "games": 38,
+     "games": 39,
      "disp": 18.1,
      "af": 68.8,
      "rating": 8.7,
@@ -52544,8 +52565,8 @@
   "jayden short": {
    "name": "Jayden Short",
    "overall": {
-    "games": 98,
-    "disp": 22.3,
+    "games": 97,
+    "disp": 22.5,
     "af": 89.0,
     "rating": 9.6,
     "goals": 0.2
@@ -52594,11 +52615,11 @@
      "goals": 0.0
     },
     "WCE": {
-     "games": 8,
-     "disp": 15.9,
+     "games": 7,
+     "disp": 18.1,
      "af": 74.1,
      "rating": 9.1,
-     "goals": 0.2
+     "goals": 0.3
     },
     "COL": {
      "games": 4,
@@ -52673,8 +52694,8 @@
    },
    "home_away": {
     "home": {
-     "games": 48,
-     "disp": 22.8,
+     "games": 47,
+     "disp": 23.3,
      "af": 93.0,
      "rating": 9.1,
      "goals": 0.2
@@ -52689,8 +52710,8 @@
    },
    "by_venue": {
     "M.C.G.": {
-     "games": 54,
-     "disp": 23.0,
+     "games": 53,
+     "disp": 23.4,
      "af": 92.5,
      "rating": 9.9,
      "goals": 0.2
@@ -52721,11 +52742,11 @@
   "sam switkowski": {
    "name": "Sam Switkowski",
    "overall": {
-    "games": 96,
-    "disp": 13.6,
-    "af": 59.9,
+    "games": 97,
+    "disp": 13.5,
+    "af": 59.8,
     "rating": 10.3,
-    "goals": 0.7
+    "goals": 0.6
    },
    "vs": {
     "ADE": {
@@ -52771,9 +52792,9 @@
      "goals": 1.0
     },
     "GEE": {
-     "games": 7,
-     "disp": 14.4,
-     "af": 60.3,
+     "games": 8,
+     "disp": 14.0,
+     "af": 58.1,
      "rating": 8.7,
      "goals": 0.4
     },
@@ -52850,10 +52871,10 @@
    },
    "home_away": {
     "home": {
-     "games": 49,
-     "disp": 13.7,
-     "af": 61.4,
-     "rating": 10.3,
+     "games": 50,
+     "disp": 13.6,
+     "af": 61.1,
+     "rating": 10.2,
      "goals": 0.7
     },
     "away": {
@@ -52873,9 +52894,9 @@
      "goals": 0.4
     },
     "Perth Stadium": {
-     "games": 51,
-     "disp": 14.2,
-     "af": 62.5,
+     "games": 52,
+     "disp": 14.1,
+     "af": 62.2,
      "rating": 10.8,
      "goals": 0.7
     },
@@ -53075,10 +53096,10 @@
   "jordan dawson": {
    "name": "Jordan Dawson",
    "overall": {
-    "games": 113,
-    "disp": 25.1,
-    "af": 108.2,
-    "rating": 14.2,
+    "games": 114,
+    "disp": 25.2,
+    "af": 108.3,
+    "rating": 14.1,
     "goals": 0.6
    },
    "vs": {
@@ -53139,10 +53160,10 @@
      "goals": 1.0
     },
     "BRI": {
-     "games": 7,
-     "disp": 24.1,
-     "af": 103.9,
-     "rating": 17.0,
+     "games": 8,
+     "disp": 24.9,
+     "af": 105.4,
+     "rating": 15.7,
      "goals": 0.4
     },
     "STK": {
@@ -53211,10 +53232,10 @@
      "goals": 0.7
     },
     "away": {
-     "games": 54,
-     "disp": 24.9,
-     "af": 105.8,
-     "rating": 14.1,
+     "games": 55,
+     "disp": 25.0,
+     "af": 106.0,
+     "rating": 13.9,
      "goals": 0.4
     }
    },
@@ -53253,6 +53274,13 @@
      "af": 112.3,
      "rating": 10.6,
      "goals": 0.3
+    },
+    "Gabba": {
+     "games": 4,
+     "disp": 24.5,
+     "af": 95.0,
+     "rating": 14.7,
+     "goals": 0.5
     }
    }
   },
@@ -53818,9 +53846,9 @@
   "oscar mcdonald": {
    "name": "Oscar McDonald",
    "overall": {
-    "games": 21,
+    "games": 22,
     "disp": 11.6,
-    "af": 53.8,
+    "af": 53.0,
     "rating": 5.8,
     "goals": 0.2
    },
@@ -53873,13 +53901,20 @@
      "af": 61.5,
      "rating": 6.5,
      "goals": 1.0
+    },
+    "GEE": {
+     "games": 2,
+     "disp": 8.5,
+     "af": 32.5,
+     "rating": 5.8,
+     "goals": 0.0
     }
    },
    "home_away": {
     "home": {
-     "games": 13,
-     "disp": 12.7,
-     "af": 57.9,
+     "games": 14,
+     "disp": 12.6,
+     "af": 56.4,
      "rating": 6.7,
      "goals": 0.2
     },
@@ -53900,10 +53935,10 @@
      "goals": 0.2
     },
     "Perth Stadium": {
-     "games": 12,
+     "games": 13,
      "disp": 12.5,
-     "af": 57.6,
-     "rating": 6.6,
+     "af": 55.9,
+     "rating": 6.5,
      "goals": 0.2
     }
    }
@@ -55498,10 +55533,10 @@
   "josh dunkley": {
    "name": "Josh Dunkley",
    "overall": {
-    "games": 125,
+    "games": 126,
     "disp": 24.2,
-    "af": 104.3,
-    "rating": 12.5,
+    "af": 104.1,
+    "rating": 12.4,
     "goals": 0.3
    },
    "vs": {
@@ -55541,10 +55576,10 @@
      "goals": 0.0
     },
     "ADE": {
-     "games": 7,
-     "disp": 24.6,
-     "af": 107.0,
-     "rating": 13.5,
+     "games": 8,
+     "disp": 24.2,
+     "af": 104.6,
+     "rating": 13.2,
      "goals": 0.4
     },
     "ESS": {
@@ -55621,16 +55656,16 @@
      "games": 5,
      "disp": 23.4,
      "af": 99.8,
-     "rating": 13.7,
+     "rating": 13.5,
      "goals": 0.2
     }
    },
    "home_away": {
     "home": {
-     "games": 60,
-     "disp": 24.1,
-     "af": 101.4,
-     "rating": 12.5,
+     "games": 61,
+     "disp": 24.0,
+     "af": 101.1,
+     "rating": 12.4,
      "goals": 0.2
     },
     "away": {
@@ -55671,10 +55706,10 @@
      "goals": 0.6
     },
     "Gabba": {
-     "games": 48,
+     "games": 49,
      "disp": 23.6,
-     "af": 99.5,
-     "rating": 12.5,
+     "af": 99.3,
+     "rating": 12.4,
      "goals": 0.1
     },
     "S.C.G.": {
@@ -55814,7 +55849,7 @@
      "games": 4,
      "disp": 10.8,
      "af": 67.0,
-     "rating": 9.7,
+     "rating": 9.9,
      "goals": 0.5
     },
     "HAW": {
@@ -55923,7 +55958,7 @@
      "games": 17,
      "disp": 12.4,
      "af": 73.2,
-     "rating": 9.4,
+     "rating": 9.5,
      "goals": 0.3
     }
    }
@@ -56292,11 +56327,11 @@
   "ben keays": {
    "name": "Ben Keays",
    "overall": {
-    "games": 117,
+    "games": 118,
     "disp": 18.5,
-    "af": 78.3,
+    "af": 78.2,
     "rating": 10.9,
-    "goals": 1.1
+    "goals": 1.2
    },
    "vs": {
     "FRE": {
@@ -56356,10 +56391,10 @@
      "goals": 2.3
     },
     "BRI": {
-     "games": 7,
-     "disp": 19.9,
-     "af": 82.7,
-     "rating": 13.8,
+     "games": 8,
+     "disp": 18.8,
+     "af": 79.5,
+     "rating": 13.9,
      "goals": 1.6
     },
     "STK": {
@@ -56428,9 +56463,9 @@
      "goals": 1.2
     },
     "away": {
-     "games": 55,
-     "disp": 18.5,
-     "af": 78.1,
+     "games": 56,
+     "disp": 18.3,
+     "af": 77.8,
      "rating": 10.8,
      "goals": 1.1
     }
@@ -56477,6 +56512,13 @@
      "af": 61.6,
      "rating": 8.4,
      "goals": 0.9
+    },
+    "Gabba": {
+     "games": 4,
+     "disp": 15.0,
+     "af": 62.0,
+     "rating": 16.2,
+     "goals": 2.2
     }
    }
   },
@@ -56653,9 +56695,9 @@
   "shai bolton": {
    "name": "Shai Bolton",
    "overall": {
-    "games": 114,
-    "disp": 19.3,
-    "af": 76.7,
+    "games": 115,
+    "disp": 19.4,
+    "af": 77.1,
     "rating": 13.0,
     "goals": 1.4
    },
@@ -56745,11 +56787,11 @@
      "goals": 1.6
     },
     "GEE": {
-     "games": 4,
-     "disp": 17.0,
-     "af": 66.2,
-     "rating": 13.0,
-     "goals": 1.5
+     "games": 5,
+     "disp": 18.8,
+     "af": 77.0,
+     "rating": 13.6,
+     "goals": 1.6
     },
     "GCS": {
      "games": 7,
@@ -56789,9 +56831,9 @@
    },
    "home_away": {
     "home": {
-     "games": 59,
-     "disp": 19.8,
-     "af": 77.6,
+     "games": 60,
+     "disp": 19.9,
+     "af": 78.3,
      "rating": 12.8,
      "goals": 1.3
     },
@@ -56826,10 +56868,10 @@
      "goals": 1.2
     },
     "Perth Stadium": {
-     "games": 32,
-     "disp": 21.5,
-     "af": 80.1,
-     "rating": 13.1,
+     "games": 33,
+     "disp": 21.6,
+     "af": 81.3,
+     "rating": 13.2,
      "goals": 1.2
     },
     "Gabba": {
@@ -57778,9 +57820,9 @@
   "tom atkins": {
    "name": "Tom Atkins",
    "overall": {
-    "games": 120,
-    "disp": 18.6,
-    "af": 77.8,
+    "games": 121,
+    "disp": 18.5,
+    "af": 77.4,
     "rating": 11.6,
     "goals": 0.1
    },
@@ -57828,9 +57870,9 @@
      "goals": 0.0
     },
     "FRE": {
-     "games": 7,
-     "disp": 16.4,
-     "af": 72.6,
+     "games": 8,
+     "disp": 15.5,
+     "af": 68.5,
      "rating": 11.5,
      "goals": 0.1
     },
@@ -57914,9 +57956,9 @@
      "goals": 0.2
     },
     "away": {
-     "games": 56,
-     "disp": 18.9,
-     "af": 76.6,
+     "games": 57,
+     "disp": 18.7,
+     "af": 76.0,
      "rating": 12.0,
      "goals": 0.1
     }
@@ -57951,10 +57993,10 @@
      "goals": 0.2
     },
     "Perth Stadium": {
-     "games": 5,
-     "disp": 18.0,
-     "af": 76.4,
-     "rating": 10.3,
+     "games": 6,
+     "disp": 16.5,
+     "af": 70.3,
+     "rating": 10.6,
      "goals": 0.0
     },
     "Adelaide Oval": {
@@ -58388,7 +58430,7 @@
   "harris andrews": {
    "name": "Harris Andrews",
    "overall": {
-    "games": 124,
+    "games": 125,
     "disp": 13.7,
     "af": 62.9,
     "rating": 11.7,
@@ -58452,10 +58494,10 @@
      "goals": 0.0
     },
     "ADE": {
-     "games": 7,
-     "disp": 13.3,
-     "af": 57.6,
-     "rating": 10.5,
+     "games": 8,
+     "disp": 13.1,
+     "af": 58.1,
+     "rating": 9.8,
      "goals": 0.1
     },
     "HAW": {
@@ -58517,10 +58559,10 @@
    },
    "home_away": {
     "home": {
-     "games": 60,
+     "games": 61,
      "disp": 13.9,
-     "af": 64.2,
-     "rating": 12.2,
+     "af": 64.1,
+     "rating": 12.1,
      "goals": 0.0
     },
     "away": {
@@ -58533,10 +58575,10 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 58,
+     "games": 59,
      "disp": 14.0,
      "af": 64.6,
-     "rating": 12.1,
+     "rating": 12.0,
      "goals": 0.0
     },
     "Docklands": {
@@ -61738,7 +61780,7 @@
   "jarrod berry": {
    "name": "Jarrod Berry",
    "overall": {
-    "games": 118,
+    "games": 119,
     "disp": 18.8,
     "af": 78.7,
     "rating": 8.6,
@@ -61802,10 +61844,10 @@
      "goals": 0.2
     },
     "ADE": {
-     "games": 6,
-     "disp": 18.5,
-     "af": 75.0,
-     "rating": 8.6,
+     "games": 7,
+     "disp": 18.6,
+     "af": 74.3,
+     "rating": 8.3,
      "goals": 0.3
     },
     "HAW": {
@@ -61867,9 +61909,9 @@
    },
    "home_away": {
     "home": {
-     "games": 55,
+     "games": 56,
      "disp": 19.5,
-     "af": 81.6,
+     "af": 81.4,
      "rating": 9.1,
      "goals": 0.4
     },
@@ -61883,9 +61925,9 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 53,
+     "games": 54,
      "disp": 19.5,
-     "af": 81.9,
+     "af": 81.6,
      "rating": 9.0,
      "goals": 0.4
     },
@@ -61982,7 +62024,7 @@
      "games": 8,
      "disp": 18.8,
      "af": 71.5,
-     "rating": 7.7,
+     "rating": 7.5,
      "goals": 0.0
     },
     "PA": {
@@ -63394,9 +63436,9 @@
   "mason cox": {
    "name": "Mason Cox",
    "overall": {
-    "games": 80,
+    "games": 81,
     "disp": 7.7,
-    "af": 52.6,
+    "af": 52.4,
     "rating": 6.1,
     "goals": 0.5
    },
@@ -63493,10 +63535,10 @@
      "goals": 0.5
     },
     "GEE": {
-     "games": 4,
-     "disp": 6.5,
-     "af": 46.2,
-     "rating": 8.7,
+     "games": 5,
+     "disp": 6.2,
+     "af": 45.6,
+     "rating": 8.2,
      "goals": 0.8
     },
     "WCE": {
@@ -63516,9 +63558,9 @@
    },
    "home_away": {
     "home": {
-     "games": 39,
-     "disp": 8.4,
-     "af": 56.3,
+     "games": 40,
+     "disp": 8.3,
+     "af": 56.0,
      "rating": 7.1,
      "goals": 0.7
     },
@@ -63546,9 +63588,9 @@
      "goals": 0.0
     },
     "Perth Stadium": {
-     "games": 14,
-     "disp": 7.3,
-     "af": 48.5,
+     "games": 15,
+     "disp": 7.1,
+     "af": 48.1,
      "rating": 5.5,
      "goals": 0.6
     },
@@ -63571,9 +63613,9 @@
   "luke ryan": {
    "name": "Luke Ryan",
    "overall": {
-    "games": 117,
+    "games": 118,
     "disp": 22.1,
-    "af": 90.2,
+    "af": 90.1,
     "rating": 9.6,
     "goals": 0.0
    },
@@ -63621,10 +63663,10 @@
      "goals": 0.0
     },
     "GEE": {
-     "games": 6,
-     "disp": 24.0,
-     "af": 93.0,
-     "rating": 7.6,
+     "games": 7,
+     "disp": 23.4,
+     "af": 90.6,
+     "rating": 6.8,
      "goals": 0.0
     },
     "NM": {
@@ -63700,10 +63742,10 @@
    },
    "home_away": {
     "home": {
-     "games": 60,
-     "disp": 22.9,
-     "af": 92.5,
-     "rating": 10.2,
+     "games": 61,
+     "disp": 22.8,
+     "af": 92.2,
+     "rating": 10.1,
      "goals": 0.0
     },
     "away": {
@@ -63723,10 +63765,10 @@
      "goals": 0.0
     },
     "Perth Stadium": {
-     "games": 64,
+     "games": 65,
      "disp": 22.6,
-     "af": 91.5,
-     "rating": 10.0,
+     "af": 91.2,
+     "rating": 9.9,
      "goals": 0.0
     },
     "Docklands": {
@@ -63955,11 +63997,11 @@
   "michael frederick": {
    "name": "Michael Frederick",
    "overall": {
-    "games": 104,
+    "games": 105,
     "disp": 11.1,
     "af": 55.8,
-    "rating": 7.7,
-    "goals": 1.2
+    "rating": 7.8,
+    "goals": 1.3
    },
    "vs": {
     "ADE": {
@@ -64005,11 +64047,11 @@
      "goals": 0.6
     },
     "GEE": {
-     "games": 6,
-     "disp": 11.2,
-     "af": 60.7,
-     "rating": 9.0,
-     "goals": 1.5
+     "games": 7,
+     "disp": 10.4,
+     "af": 59.3,
+     "rating": 9.1,
+     "goals": 1.6
     },
     "GCS": {
      "games": 6,
@@ -64084,9 +64126,9 @@
    },
    "home_away": {
     "home": {
-     "games": 55,
-     "disp": 11.3,
-     "af": 57.4,
+     "games": 56,
+     "disp": 11.2,
+     "af": 57.3,
      "rating": 7.3,
      "goals": 1.3
     },
@@ -64107,9 +64149,9 @@
      "goals": 1.5
     },
     "Perth Stadium": {
-     "games": 58,
-     "disp": 11.2,
-     "af": 57.3,
+     "games": 59,
+     "disp": 11.1,
+     "af": 57.2,
      "rating": 7.4,
      "goals": 1.3
     },
@@ -64132,9 +64174,9 @@
   "brad close": {
    "name": "Brad Close",
    "overall": {
-    "games": 114,
+    "games": 115,
     "disp": 13.1,
-    "af": 57.6,
+    "af": 57.4,
     "rating": 8.8,
     "goals": 0.9
    },
@@ -64182,10 +64224,10 @@
      "goals": 1.5
     },
     "FRE": {
-     "games": 6,
-     "disp": 12.2,
-     "af": 46.2,
-     "rating": 6.0,
+     "games": 7,
+     "disp": 11.9,
+     "af": 43.9,
+     "rating": 6.3,
      "goals": 0.3
     },
     "GWS": {
@@ -64268,9 +64310,9 @@
      "goals": 1.1
     },
     "away": {
-     "games": 54,
+     "games": 55,
      "disp": 12.2,
-     "af": 51.9,
+     "af": 51.5,
      "rating": 8.1,
      "goals": 0.7
     }
@@ -64305,11 +64347,11 @@
      "goals": 0.5
     },
     "Perth Stadium": {
-     "games": 4,
+     "games": 5,
      "disp": 10.2,
-     "af": 37.8,
-     "rating": 6.4,
-     "goals": 0.5
+     "af": 36.2,
+     "rating": 6.7,
+     "goals": 0.4
     },
     "Adelaide Oval": {
      "games": 9,
@@ -64330,10 +64372,10 @@
   "darcy fogarty": {
    "name": "Darcy Fogarty",
    "overall": {
-    "games": 100,
+    "games": 101,
     "disp": 11.0,
-    "af": 59.8,
-    "rating": 8.8,
+    "af": 59.7,
+    "rating": 8.7,
     "goals": 1.8
    },
    "vs": {
@@ -64359,11 +64401,11 @@
      "goals": 2.2
     },
     "BRI": {
-     "games": 6,
-     "disp": 10.7,
-     "af": 56.7,
-     "rating": 7.9,
-     "goals": 1.2
+     "games": 7,
+     "disp": 10.3,
+     "af": 55.3,
+     "rating": 7.7,
+     "goals": 1.3
     },
     "STK": {
      "games": 4,
@@ -64466,9 +64508,9 @@
      "goals": 1.8
     },
     "away": {
-     "games": 47,
-     "disp": 10.8,
-     "af": 57.5,
+     "games": 48,
+     "disp": 10.7,
+     "af": 57.3,
      "rating": 8.8,
      "goals": 1.8
     }
@@ -64616,7 +64658,7 @@
      "games": 9,
      "disp": 16.0,
      "af": 61.4,
-     "rating": 7.6,
+     "rating": 7.5,
      "goals": 0.2
     },
     "ADE": {
@@ -64669,7 +64711,7 @@
      "games": 63,
      "disp": 16.7,
      "af": 70.7,
-     "rating": 9.2,
+     "rating": 9.1,
      "goals": 0.4
     },
     "Carrara": {
@@ -67650,10 +67692,10 @@
   "brayden cook": {
    "name": "Brayden Cook",
    "overall": {
-    "games": 50,
-    "disp": 12.8,
-    "af": 53.6,
-    "rating": 7.4,
+    "games": 51,
+    "disp": 12.9,
+    "af": 53.8,
+    "rating": 7.5,
     "goals": 0.5
    },
    "vs": {
@@ -67728,11 +67770,11 @@
      "goals": 2.0
     },
     "BRI": {
-     "games": 3,
-     "disp": 14.7,
-     "af": 48.7,
-     "rating": 4.8,
-     "goals": 0.3
+     "games": 4,
+     "disp": 14.8,
+     "af": 52.5,
+     "rating": 6.5,
+     "goals": 0.2
     },
     "WCE": {
      "games": 2,
@@ -67779,10 +67821,10 @@
      "goals": 0.5
     },
     "away": {
-     "games": 24,
-     "disp": 13.2,
-     "af": 54.0,
-     "rating": 7.8,
+     "games": 25,
+     "disp": 13.3,
+     "af": 54.4,
+     "rating": 7.9,
      "goals": 0.6
     }
    },
@@ -73062,7 +73104,7 @@
      "games": 4,
      "disp": 22.2,
      "af": 76.0,
-     "rating": 14.4,
+     "rating": 14.9,
      "goals": 0.5
     },
     "ESS": {
@@ -73185,7 +73227,7 @@
      "games": 13,
      "disp": 21.8,
      "af": 81.5,
-     "rating": 11.1,
+     "rating": 11.3,
      "goals": 0.3
     },
     "Docklands": {
@@ -73598,10 +73640,10 @@
   "neil erasmus": {
    "name": "Neil Erasmus",
    "overall": {
-    "games": 63,
+    "games": 64,
     "disp": 14.9,
     "af": 59.6,
-    "rating": 6.1,
+    "rating": 6.2,
     "goals": 0.2
    },
    "vs": {
@@ -73683,11 +73725,11 @@
      "goals": 0.0
     },
     "GEE": {
-     "games": 3,
-     "disp": 20.7,
-     "af": 70.0,
-     "rating": 4.5,
-     "goals": 0.3
+     "games": 4,
+     "disp": 19.8,
+     "af": 67.2,
+     "rating": 6.6,
+     "goals": 0.2
     },
     "PA": {
      "games": 5,
@@ -73720,10 +73762,10 @@
    },
    "home_away": {
     "home": {
-     "games": 31,
-     "disp": 15.0,
+     "games": 32,
+     "disp": 15.1,
      "af": 59.9,
-     "rating": 5.3,
+     "rating": 5.5,
      "goals": 0.1
     },
     "away": {
@@ -73736,10 +73778,10 @@
    },
    "by_venue": {
     "Perth Stadium": {
-     "games": 37,
+     "games": 38,
      "disp": 14.8,
      "af": 59.0,
-     "rating": 5.2,
+     "rating": 5.4,
      "goals": 0.1
     },
     "Docklands": {
@@ -73868,9 +73910,9 @@
   "rory laird": {
    "name": "Rory Laird",
    "overall": {
-    "games": 106,
+    "games": 107,
     "disp": 27.4,
-    "af": 102.1,
+    "af": 101.9,
     "rating": 11.4,
     "goals": 0.1
    },
@@ -73918,10 +73960,10 @@
      "goals": 0.2
     },
     "BRI": {
-     "games": 7,
-     "disp": 29.0,
-     "af": 111.7,
-     "rating": 9.9,
+     "games": 8,
+     "disp": 28.0,
+     "af": 108.1,
+     "rating": 9.8,
      "goals": 0.0
     },
     "STK": {
@@ -74004,10 +74046,10 @@
      "goals": 0.1
     },
     "away": {
-     "games": 49,
-     "disp": 28.1,
-     "af": 102.4,
-     "rating": 11.7,
+     "games": 50,
+     "disp": 28.0,
+     "af": 102.1,
+     "rating": 11.6,
      "goals": 0.2
     }
    },
@@ -74038,6 +74080,13 @@
      "disp": 26.4,
      "af": 95.9,
      "rating": 10.1,
+     "goals": 0.0
+    },
+    "Gabba": {
+     "games": 4,
+     "disp": 27.8,
+     "af": 101.5,
+     "rating": 7.5,
      "goals": 0.0
     }
    }
@@ -75437,11 +75486,11 @@
   "gryan miers": {
    "name": "Gryan Miers",
    "overall": {
-    "games": 110,
-    "disp": 19.4,
-    "af": 79.2,
-    "rating": 10.6,
-    "goals": 0.6
+    "games": 111,
+    "disp": 19.3,
+    "af": 79.0,
+    "rating": 10.5,
+    "goals": 0.5
    },
    "vs": {
     "BRI": {
@@ -75466,10 +75515,10 @@
      "goals": 0.1
     },
     "FRE": {
-     "games": 6,
-     "disp": 15.7,
-     "af": 71.2,
-     "rating": 6.0,
+     "games": 7,
+     "disp": 15.1,
+     "af": 69.9,
+     "rating": 6.3,
      "goals": 0.3
     },
     "GWS": {
@@ -75573,10 +75622,10 @@
      "goals": 0.5
     },
     "away": {
-     "games": 51,
-     "disp": 19.6,
-     "af": 80.3,
-     "rating": 10.7,
+     "games": 52,
+     "disp": 19.5,
+     "af": 79.9,
+     "rating": 10.6,
      "goals": 0.6
     }
    },
@@ -75603,11 +75652,11 @@
      "goals": 0.4
     },
     "Perth Stadium": {
-     "games": 4,
-     "disp": 16.5,
-     "af": 75.2,
+     "games": 5,
+     "disp": 15.6,
+     "af": 72.6,
      "rating": 8.2,
-     "goals": 0.8
+     "goals": 0.6
     },
     "Adelaide Oval": {
      "games": 9,
@@ -75798,7 +75847,7 @@
   "mark o connor": {
    "name": "Mark O'Connor",
    "overall": {
-    "games": 103,
+    "games": 104,
     "disp": 13.5,
     "af": 58.6,
     "rating": 7.1,
@@ -75827,10 +75876,10 @@
      "goals": 0.1
     },
     "FRE": {
-     "games": 6,
-     "disp": 11.0,
-     "af": 42.8,
-     "rating": 7.1,
+     "games": 7,
+     "disp": 11.3,
+     "af": 45.6,
+     "rating": 7.2,
      "goals": 0.0
     },
     "GWS": {
@@ -75934,8 +75983,8 @@
      "goals": 0.1
     },
     "away": {
-     "games": 46,
-     "disp": 13.8,
+     "games": 47,
+     "disp": 13.7,
      "af": 61.3,
      "rating": 7.7,
      "goals": 0.1
@@ -75964,10 +76013,10 @@
      "goals": 0.0
     },
     "Perth Stadium": {
-     "games": 4,
-     "disp": 14.5,
-     "af": 58.0,
-     "rating": 8.2,
+     "games": 5,
+     "disp": 14.2,
+     "af": 58.8,
+     "rating": 8.1,
      "goals": 0.0
     },
     "Adelaide Oval": {
@@ -76819,9 +76868,9 @@
   "taylor walker": {
    "name": "Taylor Walker",
    "overall": {
-    "games": 98,
+    "games": 99,
     "disp": 12.2,
-    "af": 69.0,
+    "af": 68.9,
     "rating": 10.9,
     "goals": 2.3
    },
@@ -76862,11 +76911,11 @@
      "goals": 2.3
     },
     "BRI": {
-     "games": 7,
-     "disp": 10.0,
-     "af": 57.1,
-     "rating": 7.5,
-     "goals": 1.7
+     "games": 8,
+     "disp": 9.9,
+     "af": 57.0,
+     "rating": 7.6,
+     "goals": 1.8
     },
     "STK": {
      "games": 5,
@@ -76955,9 +77004,9 @@
      "goals": 2.5
     },
     "away": {
-     "games": 42,
-     "disp": 11.9,
-     "af": 66.1,
+     "games": 43,
+     "disp": 11.8,
+     "af": 65.9,
      "rating": 9.5,
      "goals": 2.0
     }
@@ -76989,6 +77038,13 @@
      "disp": 11.9,
      "af": 64.6,
      "rating": 10.7,
+     "goals": 1.8
+    },
+    "Gabba": {
+     "games": 4,
+     "disp": 10.8,
+     "af": 59.8,
+     "rating": 7.0,
      "goals": 1.8
     }
    }
@@ -78611,9 +78667,9 @@
   "sam berry": {
    "name": "Sam Berry",
    "overall": {
-    "games": 82,
-    "disp": 17.0,
-    "af": 72.9,
+    "games": 83,
+    "disp": 17.2,
+    "af": 73.2,
     "rating": 9.4,
     "goals": 0.2
    },
@@ -78647,10 +78703,10 @@
      "goals": 0.2
     },
     "BRI": {
-     "games": 4,
-     "disp": 17.0,
-     "af": 72.0,
-     "rating": 8.6,
+     "games": 5,
+     "disp": 19.8,
+     "af": 76.4,
+     "rating": 9.5,
      "goals": 0.0
     },
     "STK": {
@@ -78747,10 +78803,10 @@
      "goals": 0.1
     },
     "away": {
-     "games": 38,
-     "disp": 17.1,
-     "af": 71.0,
-     "rating": 9.3,
+     "games": 39,
+     "disp": 17.4,
+     "af": 71.6,
+     "rating": 9.4,
      "goals": 0.2
     }
    },
@@ -78795,10 +78851,10 @@
   "kai lohmann": {
    "name": "Kai Lohmann",
    "overall": {
-    "games": 77,
+    "games": 78,
     "disp": 11.1,
-    "af": 57.1,
-    "rating": 7.6,
+    "af": 57.2,
+    "rating": 7.7,
     "goals": 1.3
    },
    "vs": {
@@ -78880,11 +78936,11 @@
      "goals": 1.2
     },
     "ADE": {
-     "games": 4,
-     "disp": 9.0,
-     "af": 43.8,
-     "rating": 4.4,
-     "goals": 1.0
+     "games": 5,
+     "disp": 10.8,
+     "af": 49.4,
+     "rating": 6.3,
+     "goals": 1.2
     },
     "RIC": {
      "games": 2,
@@ -78924,10 +78980,10 @@
    },
    "home_away": {
     "home": {
-     "games": 37,
-     "disp": 10.8,
-     "af": 55.6,
-     "rating": 8.1,
+     "games": 38,
+     "disp": 11.0,
+     "af": 56.0,
+     "rating": 8.2,
      "goals": 1.4
     },
     "away": {
@@ -78940,10 +78996,10 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 36,
-     "disp": 10.6,
-     "af": 55.0,
-     "rating": 8.0,
+     "games": 37,
+     "disp": 10.8,
+     "af": 55.4,
+     "rating": 8.1,
      "goals": 1.4
     },
     "Carrara": {
@@ -81384,10 +81440,10 @@
   "oliver dempsey": {
    "name": "Oliver Dempsey",
    "overall": {
-    "games": 82,
+    "games": 83,
     "disp": 17.2,
-    "af": 72.0,
-    "rating": 10.4,
+    "af": 71.9,
+    "rating": 10.3,
     "goals": 1.1
    },
    "vs": {
@@ -81399,11 +81455,11 @@
      "goals": 1.0
     },
     "FRE": {
-     "games": 6,
-     "disp": 12.3,
-     "af": 45.3,
-     "rating": 5.5,
-     "goals": 0.5
+     "games": 7,
+     "disp": 13.0,
+     "af": 48.3,
+     "rating": 5.4,
+     "goals": 0.4
     },
     "ADE": {
      "games": 6,
@@ -81520,11 +81576,11 @@
      "goals": 1.1
     },
     "away": {
-     "games": 39,
-     "disp": 17.2,
-     "af": 71.4,
-     "rating": 11.5,
-     "goals": 1.1
+     "games": 40,
+     "disp": 17.1,
+     "af": 71.3,
+     "rating": 11.3,
+     "goals": 1.0
     }
    },
    "by_venue": {
@@ -81543,11 +81599,11 @@
      "goals": 1.3
     },
     "Perth Stadium": {
-     "games": 4,
-     "disp": 13.5,
-     "af": 47.5,
-     "rating": 6.3,
-     "goals": 0.5
+     "games": 5,
+     "disp": 14.2,
+     "af": 51.2,
+     "rating": 6.0,
+     "goals": 0.4
     },
     "Adelaide Oval": {
      "games": 7,
@@ -83865,9 +83921,9 @@
   "jye amiss": {
    "name": "Jye Amiss",
    "overall": {
-    "games": 94,
+    "games": 95,
     "disp": 8.1,
-    "af": 50.0,
+    "af": 49.8,
     "rating": 6.4,
     "goals": 1.8
    },
@@ -83936,11 +83992,11 @@
      "goals": 1.4
     },
     "GEE": {
-     "games": 6,
-     "disp": 8.3,
-     "af": 48.5,
-     "rating": 5.3,
-     "goals": 1.5
+     "games": 7,
+     "disp": 7.7,
+     "af": 46.0,
+     "rating": 4.8,
+     "goals": 1.6
     },
     "MEL": {
      "games": 6,
@@ -83994,9 +84050,9 @@
    },
    "home_away": {
     "home": {
-     "games": 49,
-     "disp": 7.7,
-     "af": 46.8,
+     "games": 50,
+     "disp": 7.6,
+     "af": 46.4,
      "rating": 5.9,
      "goals": 1.7
     },
@@ -84010,10 +84066,10 @@
    },
    "by_venue": {
     "Perth Stadium": {
-     "games": 52,
-     "disp": 7.8,
-     "af": 48.0,
-     "rating": 6.0,
+     "games": 53,
+     "disp": 7.7,
+     "af": 47.7,
+     "rating": 5.9,
      "goals": 1.8
     },
     "M.C.G.": {
@@ -84142,9 +84198,9 @@
   "ryan lester": {
    "name": "Ryan Lester",
    "overall": {
-    "games": 95,
-    "disp": 13.9,
-    "af": 64.2,
+    "games": 96,
+    "disp": 14.0,
+    "af": 64.3,
     "rating": 9.2,
     "goals": 0.0
    },
@@ -84192,9 +84248,9 @@
      "goals": 0.0
     },
     "ADE": {
-     "games": 6,
-     "disp": 12.7,
-     "af": 60.8,
+     "games": 7,
+     "disp": 13.4,
+     "af": 62.7,
      "rating": 8.4,
      "goals": 0.0
     },
@@ -84271,10 +84327,10 @@
    },
    "home_away": {
     "home": {
-     "games": 47,
-     "disp": 14.2,
-     "af": 65.3,
-     "rating": 10.0,
+     "games": 48,
+     "disp": 14.3,
+     "af": 65.5,
+     "rating": 9.9,
      "goals": 0.0
     },
     "away": {
@@ -84287,10 +84343,10 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 46,
-     "disp": 14.2,
-     "af": 65.7,
-     "rating": 10.0,
+     "games": 47,
+     "disp": 14.3,
+     "af": 65.8,
+     "rating": 9.9,
      "goals": 0.0
     },
     "Docklands": {
@@ -86254,19 +86310,19 @@
   "eric hipwood": {
    "name": "Eric Hipwood",
    "overall": {
-    "games": 100,
+    "games": 101,
     "disp": 10.4,
-    "af": 57.0,
+    "af": 57.2,
     "rating": 5.9,
     "goals": 1.4
    },
    "vs": {
     "ADE": {
-     "games": 6,
-     "disp": 9.2,
-     "af": 47.0,
-     "rating": 6.8,
-     "goals": 0.5
+     "games": 7,
+     "disp": 9.6,
+     "af": 51.9,
+     "rating": 7.3,
+     "goals": 0.7
     },
     "HAW": {
      "games": 4,
@@ -86383,11 +86439,11 @@
    },
    "home_away": {
     "home": {
-     "games": 49,
-     "disp": 10.8,
-     "af": 58.2,
-     "rating": 4.6,
-     "goals": 1.1
+     "games": 50,
+     "disp": 10.9,
+     "af": 58.7,
+     "rating": 4.8,
+     "goals": 1.2
     },
     "away": {
      "games": 51,
@@ -86406,11 +86462,11 @@
      "goals": 1.2
     },
     "Gabba": {
-     "games": 47,
+     "games": 48,
      "disp": 10.7,
-     "af": 57.0,
-     "rating": 4.2,
-     "goals": 1.0
+     "af": 57.5,
+     "rating": 4.4,
+     "goals": 1.1
     },
     "Perth Stadium": {
      "games": 6,
@@ -87283,10 +87339,10 @@
   "shannon neale": {
    "name": "Shannon Neale",
    "overall": {
-    "games": 69,
-    "disp": 9.2,
-    "af": 58.8,
-    "rating": 8.5,
+    "games": 70,
+    "disp": 9.1,
+    "af": 58.7,
+    "rating": 8.4,
     "goals": 1.7
    },
    "vs": {
@@ -87375,11 +87431,11 @@
      "goals": 1.8
     },
     "FRE": {
-     "games": 4,
-     "disp": 9.0,
-     "af": 61.2,
-     "rating": 14.6,
-     "goals": 2.5
+     "games": 5,
+     "disp": 8.8,
+     "af": 60.0,
+     "rating": 12.9,
+     "goals": 2.6
     },
     "WCE": {
      "games": 3,
@@ -87419,11 +87475,11 @@
      "goals": 1.7
     },
     "away": {
-     "games": 32,
+     "games": 33,
      "disp": 8.8,
      "af": 57.3,
-     "rating": 7.6,
-     "goals": 1.7
+     "rating": 7.5,
+     "goals": 1.8
     }
    },
    "by_venue": {
@@ -87454,6 +87510,13 @@
      "af": 63.6,
      "rating": 8.1,
      "goals": 1.8
+    },
+    "Perth Stadium": {
+     "games": 4,
+     "disp": 8.5,
+     "af": 58.0,
+     "rating": 9.7,
+     "goals": 2.0
     }
    }
   },
@@ -91400,10 +91463,10 @@
   "josh worrell": {
    "name": "Josh Worrell",
    "overall": {
-    "games": 77,
-    "disp": 19.4,
-    "af": 72.4,
-    "rating": 9.3,
+    "games": 78,
+    "disp": 19.3,
+    "af": 72.3,
+    "rating": 9.4,
     "goals": 0.0
    },
    "vs": {
@@ -91436,10 +91499,10 @@
      "goals": 0.0
     },
     "BRI": {
-     "games": 5,
-     "disp": 15.8,
-     "af": 61.0,
-     "rating": 9.0,
+     "games": 6,
+     "disp": 16.2,
+     "af": 62.2,
+     "rating": 9.2,
      "goals": 0.0
     },
     "COL": {
@@ -91536,7 +91599,7 @@
      "goals": 0.0
     },
     "away": {
-     "games": 36,
+     "games": 37,
      "disp": 18.2,
      "af": 69.4,
      "rating": 8.6,
@@ -92823,10 +92886,10 @@
   "darcy wilmot": {
    "name": "Darcy Wilmot",
    "overall": {
-    "games": 107,
-    "disp": 19.1,
-    "af": 74.1,
-    "rating": 10.2,
+    "games": 108,
+    "disp": 19.0,
+    "af": 73.9,
+    "rating": 10.3,
     "goals": 0.1
    },
    "vs": {
@@ -92915,11 +92978,11 @@
      "goals": 0.0
     },
     "ADE": {
-     "games": 6,
+     "games": 7,
      "disp": 15.3,
-     "af": 52.3,
-     "rating": 9.4,
-     "goals": 0.2
+     "af": 53.3,
+     "rating": 10.3,
+     "goals": 0.1
     },
     "HAW": {
      "games": 5,
@@ -92952,10 +93015,10 @@
    },
    "home_away": {
     "home": {
-     "games": 51,
-     "disp": 19.4,
-     "af": 74.9,
-     "rating": 11.0,
+     "games": 52,
+     "disp": 19.3,
+     "af": 74.6,
+     "rating": 11.1,
      "goals": 0.2
     },
     "away": {
@@ -92968,9 +93031,9 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 49,
-     "disp": 19.6,
-     "af": 75.4,
+     "games": 50,
+     "disp": 19.5,
+     "af": 75.1,
      "rating": 11.0,
      "goals": 0.2
     },
@@ -93236,9 +93299,9 @@
    "name": "Oscar Allen",
    "overall": {
     "games": 59,
-    "disp": 9.2,
-    "af": 56.6,
-    "rating": 7.7,
+    "disp": 9.3,
+    "af": 56.3,
+    "rating": 7.6,
     "goals": 1.8
    },
    "vs": {
@@ -93292,11 +93355,11 @@
      "goals": 0.7
     },
     "RIC": {
-     "games": 3,
-     "disp": 6.3,
+     "games": 2,
+     "disp": 9.5,
      "af": 64.5,
      "rating": 9.1,
-     "goals": 2.3
+     "goals": 3.5
     },
     "GCS": {
      "games": 4,
@@ -93327,11 +93390,11 @@
      "goals": 3.3
     },
     "ADE": {
-     "games": 4,
-     "disp": 10.8,
-     "af": 61.0,
-     "rating": 10.5,
-     "goals": 2.0
+     "games": 5,
+     "disp": 10.0,
+     "af": 57.2,
+     "rating": 8.9,
+     "goals": 1.6
     },
     "SYD": {
      "games": 3,
@@ -93364,18 +93427,18 @@
    },
    "home_away": {
     "home": {
-     "games": 26,
-     "disp": 9.1,
-     "af": 54.4,
-     "rating": 8.1,
+     "games": 27,
+     "disp": 9.0,
+     "af": 53.9,
+     "rating": 7.8,
      "goals": 1.8
     },
     "away": {
-     "games": 33,
-     "disp": 9.3,
+     "games": 32,
+     "disp": 9.6,
      "af": 58.3,
      "rating": 7.4,
-     "goals": 1.8
+     "goals": 1.9
     }
    },
    "by_venue": {
@@ -93401,18 +93464,18 @@
      "goals": 1.7
     },
     "M.C.G.": {
-     "games": 5,
-     "disp": 8.2,
+     "games": 4,
+     "disp": 10.2,
      "af": 66.8,
      "rating": 9.6,
-     "goals": 2.6
+     "goals": 3.2
     },
     "Gabba": {
-     "games": 7,
+     "games": 8,
      "disp": 7.4,
-     "af": 44.3,
-     "rating": 4.4,
-     "goals": 1.3
+     "af": 44.0,
+     "rating": 4.1,
+     "goals": 1.1
     }
    }
   },
@@ -94200,7 +94263,7 @@
   "max michalanney": {
    "name": "Max Michalanney",
    "overall": {
-    "games": 90,
+    "games": 91,
     "disp": 13.3,
     "af": 58.3,
     "rating": 5.3,
@@ -94278,10 +94341,10 @@
      "goals": 0.0
     },
     "BRI": {
-     "games": 6,
-     "disp": 12.5,
-     "af": 58.5,
-     "rating": 5.1,
+     "games": 7,
+     "disp": 12.6,
+     "af": 57.9,
+     "rating": 5.5,
      "goals": 0.0
     },
     "GCS": {
@@ -94336,10 +94399,10 @@
      "goals": 0.0
     },
     "away": {
-     "games": 41,
+     "games": 42,
      "disp": 12.6,
-     "af": 58.1,
-     "rating": 5.4,
+     "af": 58.0,
+     "rating": 5.5,
      "goals": 0.1
     }
    },
@@ -94363,6 +94426,13 @@
      "disp": 12.8,
      "af": 52.8,
      "rating": 5.4,
+     "goals": 0.0
+    },
+    "Gabba": {
+     "games": 4,
+     "disp": 15.2,
+     "af": 70.8,
+     "rating": 6.6,
      "goals": 0.0
     },
     "Perth Stadium": {
@@ -94682,10 +94752,10 @@
   "judd mcvee": {
    "name": "Judd McVee",
    "overall": {
-    "games": 86,
-    "disp": 14.8,
-    "af": 53.4,
-    "rating": 8.0,
+    "games": 87,
+    "disp": 14.7,
+    "af": 53.2,
+    "rating": 7.9,
     "goals": 0.0
    },
    "vs": {
@@ -94781,10 +94851,10 @@
      "goals": 0.0
     },
     "GEE": {
-     "games": 4,
-     "disp": 16.2,
-     "af": 55.8,
-     "rating": 8.8,
+     "games": 5,
+     "disp": 15.4,
+     "af": 51.8,
+     "rating": 7.5,
      "goals": 0.0
     },
     "GWS": {
@@ -94818,10 +94888,10 @@
    },
    "home_away": {
     "home": {
-     "games": 41,
-     "disp": 15.7,
-     "af": 57.3,
-     "rating": 8.0,
+     "games": 42,
+     "disp": 15.6,
+     "af": 56.8,
+     "rating": 7.9,
      "goals": 0.0
     },
     "away": {
@@ -94848,10 +94918,10 @@
      "goals": 0.0
     },
     "Perth Stadium": {
-     "games": 15,
-     "disp": 15.6,
-     "af": 57.7,
-     "rating": 8.1,
+     "games": 16,
+     "disp": 15.4,
+     "af": 56.4,
+     "rating": 7.7,
      "goals": 0.1
     },
     "Adelaide Oval": {
@@ -95979,10 +96049,10 @@
   "will ashcroft": {
    "name": "Will Ashcroft",
    "overall": {
-    "games": 82,
-    "disp": 25.7,
-    "af": 95.4,
-    "rating": 11.8,
+    "games": 83,
+    "disp": 25.8,
+    "af": 95.6,
+    "rating": 11.9,
     "goals": 0.5
    },
    "vs": {
@@ -96057,11 +96127,11 @@
      "goals": 0.6
     },
     "ADE": {
-     "games": 4,
-     "disp": 26.2,
-     "af": 95.0,
-     "rating": 7.0,
-     "goals": 0.5
+     "games": 5,
+     "disp": 27.0,
+     "af": 98.2,
+     "rating": 9.9,
+     "goals": 0.4
     },
     "HAW": {
      "games": 4,
@@ -96108,10 +96178,10 @@
    },
    "home_away": {
     "home": {
-     "games": 39,
-     "disp": 27.0,
-     "af": 100.3,
-     "rating": 13.1,
+     "games": 40,
+     "disp": 27.1,
+     "af": 100.5,
+     "rating": 13.3,
      "goals": 0.6
     },
     "away": {
@@ -96124,10 +96194,10 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 38,
-     "disp": 27.1,
-     "af": 100.4,
-     "rating": 13.4,
+     "games": 39,
+     "disp": 27.2,
+     "af": 100.7,
+     "rating": 13.6,
      "goals": 0.6
     },
     "Docklands": {
@@ -97015,9 +97085,9 @@
   "conor mckenna": {
    "name": "Conor McKenna",
    "overall": {
-    "games": 67,
+    "games": 68,
     "disp": 13.6,
-    "af": 55.0,
+    "af": 55.1,
     "rating": 7.7,
     "goals": 0.5
    },
@@ -97086,11 +97156,11 @@
      "goals": 0.2
     },
     "ADE": {
-     "games": 5,
-     "disp": 14.6,
-     "af": 56.8,
-     "rating": 9.2,
-     "goals": 0.4
+     "games": 6,
+     "disp": 14.3,
+     "af": 57.2,
+     "rating": 8.9,
+     "goals": 0.5
     },
     "HAW": {
      "games": 3,
@@ -97137,7 +97207,7 @@
    },
    "home_away": {
     "home": {
-     "games": 33,
+     "games": 34,
      "disp": 13.8,
      "af": 58.2,
      "rating": 8.4,
@@ -97160,11 +97230,11 @@
      "goals": 0.2
     },
     "Gabba": {
-     "games": 32,
+     "games": 33,
      "disp": 13.8,
      "af": 58.2,
      "rating": 8.3,
-     "goals": 0.4
+     "goals": 0.5
     },
     "Docklands": {
      "games": 8,
@@ -97916,10 +97986,10 @@
   "matthew johnson": {
    "name": "Matthew Johnson",
    "overall": {
-    "games": 78,
-    "disp": 16.7,
-    "af": 63.4,
-    "rating": 7.9,
+    "games": 79,
+    "disp": 16.6,
+    "af": 63.3,
+    "rating": 8.0,
     "goals": 0.2
    },
    "vs": {
@@ -97959,10 +98029,10 @@
      "goals": 0.2
     },
     "GEE": {
-     "games": 5,
-     "disp": 17.2,
-     "af": 66.4,
-     "rating": 6.9,
+     "games": 6,
+     "disp": 16.8,
+     "af": 64.3,
+     "rating": 8.2,
      "goals": 0.0
     },
     "MEL": {
@@ -98045,10 +98115,10 @@
    },
    "home_away": {
     "home": {
-     "games": 40,
+     "games": 41,
      "disp": 16.1,
-     "af": 61.5,
-     "rating": 7.4,
+     "af": 61.3,
+     "rating": 7.6,
      "goals": 0.1
     },
     "away": {
@@ -98061,10 +98131,10 @@
    },
    "by_venue": {
     "Perth Stadium": {
-     "games": 43,
+     "games": 44,
      "disp": 16.4,
-     "af": 63.6,
-     "rating": 7.8,
+     "af": 63.4,
+     "rating": 8.0,
      "goals": 0.2
     },
     "Adelaide Oval": {
@@ -99350,10 +99420,10 @@
   "corey wagner": {
    "name": "Corey Wagner",
    "overall": {
-    "games": 51,
+    "games": 52,
     "disp": 16.2,
-    "af": 65.4,
-    "rating": 7.8,
+    "af": 65.5,
+    "rating": 7.7,
     "goals": 0.1
    },
    "vs": {
@@ -99386,10 +99456,10 @@
      "goals": 0.2
     },
     "GEE": {
-     "games": 4,
-     "disp": 20.8,
-     "af": 75.0,
-     "rating": 6.7,
+     "games": 5,
+     "disp": 19.2,
+     "af": 74.4,
+     "rating": 6.0,
      "goals": 0.0
     },
     "BRI": {
@@ -99472,10 +99542,10 @@
    },
    "home_away": {
     "home": {
-     "games": 27,
-     "disp": 16.3,
-     "af": 64.8,
-     "rating": 7.5,
+     "games": 28,
+     "disp": 16.2,
+     "af": 65.0,
+     "rating": 7.3,
      "goals": 0.0
     },
     "away": {
@@ -99488,10 +99558,10 @@
    },
    "by_venue": {
     "Perth Stadium": {
-     "games": 29,
-     "disp": 16.7,
-     "af": 66.4,
-     "rating": 8.1,
+     "games": 30,
+     "disp": 16.5,
+     "af": 66.6,
+     "rating": 7.9,
      "goals": 0.0
     },
     "M.C.G.": {
@@ -100366,9 +100436,9 @@
   "lachlan mcandrew": {
    "name": "Lachlan McAndrew",
    "overall": {
-    "games": 25,
+    "games": 26,
     "disp": 11.2,
-    "af": 81.1,
+    "af": 80.8,
     "rating": 11.2,
     "goals": 0.3
    },
@@ -100415,6 +100485,13 @@
      "rating": 16.9,
      "goals": 0.0
     },
+    "BRI": {
+     "games": 2,
+     "disp": 11.0,
+     "af": 79.0,
+     "rating": 6.5,
+     "goals": 0.0
+    },
     "PA": {
      "games": 2,
      "disp": 12.5,
@@ -100432,9 +100509,9 @@
      "goals": 0.3
     },
     "away": {
-     "games": 12,
+     "games": 13,
      "disp": 12.2,
-     "af": 82.8,
+     "af": 82.2,
      "rating": 10.9,
      "goals": 0.2
     }
@@ -100622,10 +100699,10 @@
   "oisin mullin": {
    "name": "Oisin Mullin",
    "overall": {
-    "games": 67,
-    "disp": 11.0,
-    "af": 47.2,
-    "rating": 6.3,
+    "games": 68,
+    "disp": 11.1,
+    "af": 47.5,
+    "rating": 6.4,
     "goals": 0.1
    },
    "vs": {
@@ -100714,10 +100791,10 @@
      "goals": 0.0
     },
     "FRE": {
-     "games": 4,
-     "disp": 8.0,
-     "af": 37.8,
-     "rating": 3.5,
+     "games": 5,
+     "disp": 9.8,
+     "af": 44.0,
+     "rating": 5.4,
      "goals": 0.2
     },
     "STK": {
@@ -100758,10 +100835,10 @@
      "goals": 0.1
     },
     "away": {
-     "games": 33,
-     "disp": 10.8,
-     "af": 46.5,
-     "rating": 6.0,
+     "games": 34,
+     "disp": 11.0,
+     "af": 47.2,
+     "rating": 6.2,
      "goals": 0.1
     }
    },
@@ -100793,6 +100870,13 @@
      "af": 43.6,
      "rating": 6.8,
      "goals": 0.1
+    },
+    "Perth Stadium": {
+     "games": 4,
+     "disp": 10.2,
+     "af": 46.5,
+     "rating": 5.9,
+     "goals": 0.2
     }
    }
   },
@@ -101411,9 +101495,9 @@
   "jaspa fletcher": {
    "name": "Jaspa Fletcher",
    "overall": {
-    "games": 92,
+    "games": 93,
     "disp": 17.3,
-    "af": 68.9,
+    "af": 69.0,
     "rating": 8.5,
     "goals": 0.2
    },
@@ -101475,10 +101559,10 @@
      "goals": 0.2
     },
     "ADE": {
-     "games": 5,
-     "disp": 16.4,
-     "af": 66.4,
-     "rating": 5.3,
+     "games": 6,
+     "disp": 16.7,
+     "af": 67.8,
+     "rating": 5.5,
      "goals": 0.0
     },
     "COL": {
@@ -101540,9 +101624,9 @@
    },
    "home_away": {
     "home": {
-     "games": 44,
-     "disp": 16.6,
-     "af": 67.1,
+     "games": 45,
+     "disp": 16.7,
+     "af": 67.3,
      "rating": 8.4,
      "goals": 0.3
     },
@@ -101556,9 +101640,9 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 43,
+     "games": 44,
      "disp": 16.7,
-     "af": 67.4,
+     "af": 67.6,
      "rating": 8.5,
      "goals": 0.3
     },
@@ -102095,10 +102179,10 @@
   "karl worner": {
    "name": "Karl Worner",
    "overall": {
-    "games": 55,
-    "disp": 15.5,
-    "af": 61.9,
-    "rating": 6.6,
+    "games": 56,
+    "disp": 15.6,
+    "af": 62.2,
+    "rating": 6.7,
     "goals": 0.0
    },
    "vs": {
@@ -102152,10 +102236,10 @@
      "goals": 0.0
     },
     "GEE": {
-     "games": 4,
-     "disp": 13.5,
-     "af": 51.5,
-     "rating": 4.5,
+     "games": 5,
+     "disp": 14.4,
+     "af": 56.8,
+     "rating": 6.1,
      "goals": 0.0
     },
     "RIC": {
@@ -102224,10 +102308,10 @@
    },
    "home_away": {
     "home": {
-     "games": 28,
-     "disp": 15.2,
-     "af": 60.1,
-     "rating": 6.2,
+     "games": 29,
+     "disp": 15.3,
+     "af": 60.8,
+     "rating": 6.4,
      "goals": 0.0
     },
     "away": {
@@ -102240,10 +102324,10 @@
    },
    "by_venue": {
     "Perth Stadium": {
-     "games": 32,
-     "disp": 15.0,
-     "af": 59.0,
-     "rating": 6.3,
+     "games": 33,
+     "disp": 15.1,
+     "af": 59.6,
+     "rating": 6.5,
      "goals": 0.0
     },
     "M.C.G.": {
@@ -102366,9 +102450,9 @@
   "luke nankervis": {
    "name": "Luke Nankervis",
    "overall": {
-    "games": 48,
-    "disp": 15.4,
-    "af": 59.7,
+    "games": 49,
+    "disp": 15.5,
+    "af": 59.9,
     "rating": 7.4,
     "goals": 0.1
    },
@@ -102395,11 +102479,11 @@
      "goals": 0.3
     },
     "BRI": {
-     "games": 3,
-     "disp": 13.7,
-     "af": 50.7,
-     "rating": 6.8,
-     "goals": 0.0
+     "games": 4,
+     "disp": 14.8,
+     "af": 55.2,
+     "rating": 7.3,
+     "goals": 0.2
     },
     "CAR": {
      "games": 3,
@@ -102495,10 +102579,10 @@
      "goals": 0.1
     },
     "away": {
-     "games": 23,
-     "disp": 15.0,
-     "af": 57.8,
-     "rating": 7.0,
+     "games": 24,
+     "disp": 15.1,
+     "af": 58.2,
+     "rating": 7.1,
      "goals": 0.1
     }
    },
@@ -102529,10 +102613,10 @@
   "mark keane": {
    "name": "Mark Keane",
    "overall": {
-    "games": 61,
-    "disp": 15.6,
-    "af": 58.7,
-    "rating": 9.8,
+    "games": 62,
+    "disp": 15.4,
+    "af": 57.9,
+    "rating": 9.7,
     "goals": 0.0
    },
    "vs": {
@@ -102551,10 +102635,10 @@
      "goals": 0.0
     },
     "BRI": {
-     "games": 4,
-     "disp": 13.2,
-     "af": 50.8,
-     "rating": 8.6,
+     "games": 5,
+     "disp": 11.4,
+     "af": 43.2,
+     "rating": 7.1,
      "goals": 0.0
     },
     "SYD": {
@@ -102665,10 +102749,10 @@
      "goals": 0.0
     },
     "away": {
-     "games": 27,
-     "disp": 15.6,
-     "af": 56.3,
-     "rating": 9.2,
+     "games": 28,
+     "disp": 15.2,
+     "af": 54.8,
+     "rating": 9.0,
      "goals": 0.0
     }
    },
@@ -102785,9 +102869,9 @@
   "james borlase": {
    "name": "James Borlase",
    "overall": {
-    "games": 34,
-    "disp": 10.1,
-    "af": 43.5,
+    "games": 35,
+    "disp": 9.9,
+    "af": 42.7,
     "rating": 7.3,
     "goals": 0.0
    },
@@ -102797,6 +102881,13 @@
      "disp": 11.0,
      "af": 43.5,
      "rating": 6.8,
+     "goals": 0.0
+    },
+    "BRI": {
+     "games": 2,
+     "disp": 4.0,
+     "af": 11.5,
+     "rating": 3.4,
      "goals": 0.0
     },
     "SYD": {
@@ -102872,9 +102963,9 @@
      "goals": 0.1
     },
     "away": {
-     "games": 16,
-     "disp": 10.9,
-     "af": 43.4,
+     "games": 17,
+     "disp": 10.5,
+     "af": 41.7,
      "rating": 7.4,
      "goals": 0.0
     }
@@ -105807,10 +105898,10 @@
   "shaun mannagh": {
    "name": "Shaun Mannagh",
    "overall": {
-    "games": 59,
+    "games": 60,
     "disp": 17.6,
-    "af": 80.2,
-    "rating": 12.8,
+    "af": 80.1,
+    "rating": 12.7,
     "goals": 1.4
    },
    "vs": {
@@ -105857,11 +105948,11 @@
      "goals": 2.2
     },
     "FRE": {
-     "games": 3,
-     "disp": 14.7,
-     "af": 60.3,
-     "rating": 11.1,
-     "goals": 1.7
+     "games": 4,
+     "disp": 15.2,
+     "af": 63.5,
+     "rating": 10.5,
+     "goals": 1.8
     },
     "WCE": {
      "games": 3,
@@ -105943,10 +106034,10 @@
      "goals": 1.2
     },
     "away": {
-     "games": 27,
+     "games": 28,
      "disp": 17.3,
-     "af": 77.6,
-     "rating": 13.5,
+     "af": 77.4,
+     "rating": 13.3,
      "goals": 1.6
     }
    },
@@ -105971,6 +106062,13 @@
      "af": 78.4,
      "rating": 13.3,
      "goals": 1.4
+    },
+    "Perth Stadium": {
+     "games": 4,
+     "disp": 15.8,
+     "af": 63.2,
+     "rating": 10.1,
+     "goals": 1.2
     }
    }
   },
@@ -107315,10 +107413,10 @@
   "connor o sullivan": {
    "name": "Connor O'Sullivan",
    "overall": {
-    "games": 50,
+    "games": 51,
     "disp": 13.7,
-    "af": 59.5,
-    "rating": 8.8,
+    "af": 59.7,
+    "rating": 8.7,
     "goals": 0.0
    },
    "vs": {
@@ -107330,10 +107428,10 @@
      "goals": 0.0
     },
     "FRE": {
-     "games": 3,
-     "disp": 13.0,
-     "af": 58.0,
-     "rating": 7.1,
+     "games": 4,
+     "disp": 13.5,
+     "af": 61.8,
+     "rating": 6.6,
      "goals": 0.0
     },
     "STK": {
@@ -107444,10 +107542,10 @@
      "goals": 0.0
     },
     "away": {
-     "games": 23,
+     "games": 24,
      "disp": 15.0,
-     "af": 63.1,
-     "rating": 10.4,
+     "af": 63.5,
+     "rating": 10.2,
      "goals": 0.0
     }
    },
@@ -107578,10 +107676,10 @@
   "patrick voss": {
    "name": "Patrick Voss",
    "overall": {
-    "games": 50,
-    "disp": 9.9,
-    "af": 55.5,
-    "rating": 6.8,
+    "games": 51,
+    "disp": 10.0,
+    "af": 55.9,
+    "rating": 6.9,
     "goals": 1.7
    },
    "vs": {
@@ -107614,11 +107712,11 @@
      "goals": 0.8
     },
     "GEE": {
-     "games": 3,
-     "disp": 9.3,
-     "af": 47.7,
-     "rating": 4.3,
-     "goals": 0.7
+     "games": 4,
+     "disp": 10.0,
+     "af": 54.5,
+     "rating": 6.9,
+     "goals": 1.5
     },
     "GWS": {
      "games": 3,
@@ -107707,11 +107805,11 @@
    },
    "home_away": {
     "home": {
-     "games": 26,
-     "disp": 9.8,
-     "af": 49.7,
-     "rating": 5.9,
-     "goals": 1.2
+     "games": 27,
+     "disp": 9.9,
+     "af": 50.6,
+     "rating": 6.2,
+     "goals": 1.3
     },
     "away": {
      "games": 24,
@@ -107723,11 +107821,11 @@
    },
    "by_venue": {
     "Perth Stadium": {
-     "games": 29,
-     "disp": 10.0,
-     "af": 51.0,
-     "rating": 5.8,
-     "goals": 1.3
+     "games": 30,
+     "disp": 10.1,
+     "af": 51.8,
+     "rating": 6.1,
+     "goals": 1.4
     },
     "Docklands": {
      "games": 4,
@@ -108168,11 +108266,11 @@
   "daniel curtin": {
    "name": "Daniel Curtin",
    "overall": {
-    "games": 49,
-    "disp": 13.3,
-    "af": 61.4,
-    "rating": 9.0,
-    "goals": 0.3
+    "games": 50,
+    "disp": 13.5,
+    "af": 61.7,
+    "rating": 9.1,
+    "goals": 0.4
    },
    "vs": {
     "PA": {
@@ -108183,11 +108281,11 @@
      "goals": 0.0
     },
     "BRI": {
-     "games": 2,
-     "disp": 9.5,
-     "af": 45.0,
-     "rating": 3.8,
-     "goals": 0.0
+     "games": 3,
+     "disp": 13.7,
+     "af": 54.0,
+     "rating": 7.1,
+     "goals": 0.3
     },
     "HAW": {
      "games": 5,
@@ -108290,10 +108388,10 @@
      "goals": 0.3
     },
     "away": {
-     "games": 22,
-     "disp": 12.4,
-     "af": 61.5,
-     "rating": 9.1,
+     "games": 23,
+     "disp": 12.8,
+     "af": 62.0,
+     "rating": 9.3,
      "goals": 0.4
     }
    },
@@ -108389,9 +108487,9 @@
   "logan morris": {
    "name": "Logan Morris",
    "overall": {
-    "games": 68,
+    "games": 69,
     "disp": 9.9,
-    "af": 58.5,
+    "af": 58.3,
     "rating": 8.3,
     "goals": 2.1
    },
@@ -108404,11 +108502,11 @@
      "goals": 2.3
     },
     "ADE": {
-     "games": 4,
+     "games": 5,
      "disp": 8.0,
-     "af": 39.0,
-     "rating": 9.2,
-     "goals": 1.2
+     "af": 40.8,
+     "rating": 9.1,
+     "goals": 1.4
     },
     "RIC": {
      "games": 3,
@@ -108518,10 +108616,10 @@
    },
    "home_away": {
     "home": {
-     "games": 30,
-     "disp": 9.9,
-     "af": 58.8,
-     "rating": 7.2,
+     "games": 31,
+     "disp": 9.8,
+     "af": 58.5,
+     "rating": 7.3,
      "goals": 2.1
     },
     "away": {
@@ -108534,10 +108632,10 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 30,
-     "disp": 9.9,
-     "af": 58.8,
-     "rating": 7.2,
+     "games": 31,
+     "disp": 9.8,
+     "af": 58.5,
+     "rating": 7.3,
      "goals": 2.1
     },
     "Docklands": {
@@ -110564,9 +110662,9 @@
   "lawson humphries": {
    "name": "Lawson Humphries",
    "overall": {
-    "games": 59,
-    "disp": 17.9,
-    "af": 74.5,
+    "games": 60,
+    "disp": 18.0,
+    "af": 74.7,
     "rating": 9.8,
     "goals": 0.2
    },
@@ -110614,10 +110712,10 @@
      "goals": 0.3
     },
     "FRE": {
-     "games": 4,
-     "disp": 21.2,
-     "af": 86.5,
-     "rating": 8.9,
+     "games": 5,
+     "disp": 21.4,
+     "af": 86.2,
+     "rating": 9.7,
      "goals": 0.0
     },
     "STK": {
@@ -110700,10 +110798,10 @@
      "goals": 0.2
     },
     "away": {
-     "games": 27,
-     "disp": 18.1,
-     "af": 74.4,
-     "rating": 10.0,
+     "games": 28,
+     "disp": 18.2,
+     "af": 74.8,
+     "rating": 10.1,
      "goals": 0.1
     }
    },
@@ -110721,6 +110819,13 @@
      "af": 76.3,
      "rating": 9.5,
      "goals": 0.3
+    },
+    "Perth Stadium": {
+     "games": 4,
+     "disp": 18.5,
+     "af": 77.5,
+     "rating": 8.6,
+     "goals": 0.0
     },
     "Docklands": {
      "games": 4,
@@ -110741,10 +110846,10 @@
   "zac taylor": {
    "name": "Zac Taylor",
    "overall": {
-    "games": 47,
-    "disp": 10.8,
-    "af": 47.4,
-    "rating": 6.5,
+    "games": 48,
+    "disp": 10.9,
+    "af": 48.0,
+    "rating": 6.7,
     "goals": 0.4
    },
    "vs": {
@@ -110756,10 +110861,10 @@
      "goals": 0.0
     },
     "BRI": {
-     "games": 2,
-     "disp": 10.5,
-     "af": 40.5,
-     "rating": 4.5,
+     "games": 3,
+     "disp": 12.7,
+     "af": 51.3,
+     "rating": 8.1,
      "goals": 0.0
     },
     "STK": {
@@ -110877,11 +110982,11 @@
      "goals": 0.2
     },
     "away": {
-     "games": 21,
-     "disp": 11.7,
-     "af": 52.5,
-     "rating": 8.5,
-     "goals": 0.8
+     "games": 22,
+     "disp": 11.9,
+     "af": 53.4,
+     "rating": 8.8,
+     "goals": 0.7
     }
    },
    "by_venue": {
@@ -112788,19 +112893,19 @@
   "murphy reid": {
    "name": "Murphy Reid",
    "overall": {
-    "games": 46,
-    "disp": 18.8,
-    "af": 67.1,
+    "games": 47,
+    "disp": 18.9,
+    "af": 67.4,
     "rating": 9.9,
     "goals": 0.8
    },
    "vs": {
     "GEE": {
-     "games": 3,
-     "disp": 19.7,
-     "af": 81.3,
-     "rating": 9.4,
-     "goals": 2.0
+     "games": 4,
+     "disp": 20.5,
+     "af": 80.5,
+     "rating": 9.5,
+     "goals": 1.5
     },
     "SYD": {
      "games": 3,
@@ -112917,9 +113022,9 @@
    },
    "home_away": {
     "home": {
-     "games": 23,
-     "disp": 19.2,
-     "af": 68.1,
+     "games": 24,
+     "disp": 19.4,
+     "af": 68.5,
      "rating": 10.5,
      "goals": 0.8
     },
@@ -112933,11 +113038,11 @@
    },
    "by_venue": {
     "Perth Stadium": {
-     "games": 26,
-     "disp": 19.3,
-     "af": 69.1,
+     "games": 27,
+     "disp": 19.5,
+     "af": 69.4,
      "rating": 10.3,
-     "goals": 0.8
+     "goals": 0.7
     },
     "M.C.G.": {
      "games": 4,
@@ -113691,9 +113796,9 @@
   "levi ashcroft": {
    "name": "Levi Ashcroft",
    "overall": {
-    "games": 51,
+    "games": 52,
     "disp": 19.5,
-    "af": 74.5,
+    "af": 75.0,
     "rating": 7.7,
     "goals": 0.5
    },
@@ -113783,11 +113888,11 @@
      "goals": 0.7
     },
     "ADE": {
-     "games": 2,
-     "disp": 22.5,
-     "af": 68.0,
-     "rating": 10.6,
-     "goals": 0.0
+     "games": 3,
+     "disp": 22.0,
+     "af": 77.3,
+     "rating": 10.3,
+     "goals": 0.3
     },
     "GWS": {
      "games": 2,
@@ -113820,9 +113925,9 @@
    },
    "home_away": {
     "home": {
-     "games": 23,
+     "games": 24,
      "disp": 20.3,
-     "af": 79.1,
+     "af": 79.8,
      "rating": 8.8,
      "goals": 0.6
     },
@@ -113836,9 +113941,9 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 23,
+     "games": 24,
      "disp": 20.3,
-     "af": 79.1,
+     "af": 79.8,
      "rating": 8.8,
      "goals": 0.6
     },
@@ -114369,9 +114474,9 @@
   "isaiah dudley": {
    "name": "Isaiah Dudley",
    "overall": {
-    "games": 40,
+    "games": 41,
     "disp": 9.0,
-    "af": 43.7,
+    "af": 43.8,
     "rating": 7.1,
     "goals": 1.1
    },
@@ -114468,18 +114573,18 @@
      "goals": 1.0
     },
     "GEE": {
-     "games": 2,
-     "disp": 8.5,
-     "af": 52.0,
-     "rating": 10.5,
+     "games": 3,
+     "disp": 8.3,
+     "af": 51.0,
+     "rating": 9.4,
      "goals": 2.0
     }
    },
    "home_away": {
     "home": {
-     "games": 21,
-     "disp": 9.0,
-     "af": 45.4,
+     "games": 22,
+     "disp": 8.9,
+     "af": 45.5,
      "rating": 6.6,
      "goals": 1.1
     },
@@ -114493,10 +114598,10 @@
    },
    "by_venue": {
     "Perth Stadium": {
-     "games": 23,
+     "games": 24,
      "disp": 8.8,
-     "af": 45.1,
-     "rating": 6.7,
+     "af": 45.2,
+     "rating": 6.8,
      "goals": 1.1
     },
     "Adelaide Oval": {
@@ -114539,19 +114644,19 @@
      "rating": 7.2,
      "goals": 0.0
     },
-    "CAR": {
-     "games": 2,
-     "disp": 12.0,
-     "af": 44.5,
-     "rating": 1.1,
-     "goals": 0.0
-    },
     "GCS": {
      "games": 2,
      "disp": 10.5,
      "af": 53.5,
      "rating": 7.6,
      "goals": 0.5
+    },
+    "CAR": {
+     "games": 2,
+     "disp": 12.0,
+     "af": 44.5,
+     "rating": 1.1,
+     "goals": 0.0
     }
    },
    "home_away": {
@@ -115407,10 +115512,10 @@
   "oliver wiltshire": {
    "name": "Oliver Wiltshire",
    "overall": {
-    "games": 17,
+    "games": 18,
     "disp": 10.8,
-    "af": 43.9,
-    "rating": 6.5,
+    "af": 44.3,
+    "rating": 6.2,
     "goals": 0.8
    },
    "vs": {
@@ -115434,6 +115539,13 @@
      "af": 47.0,
      "rating": 6.7,
      "goals": 0.0
+    },
+    "FRE": {
+     "games": 2,
+     "disp": 10.5,
+     "af": 51.0,
+     "rating": 3.4,
+     "goals": 1.5
     }
    },
    "home_away": {
@@ -115445,10 +115557,10 @@
      "goals": 0.6
     },
     "away": {
-     "games": 9,
-     "disp": 9.3,
-     "af": 39.9,
-     "rating": 5.6,
+     "games": 10,
+     "disp": 9.5,
+     "af": 41.1,
+     "rating": 5.2,
      "goals": 1.0
     }
    },
@@ -116458,18 +116570,18 @@
   "ty gallop": {
    "name": "Ty Gallop",
    "overall": {
-    "games": 24,
+    "games": 25,
     "disp": 9.2,
-    "af": 46.8,
-    "rating": 6.8,
+    "af": 46.7,
+    "rating": 6.9,
     "goals": 0.2
    },
    "vs": {
     "ADE": {
-     "games": 2,
-     "disp": 9.0,
-     "af": 49.5,
-     "rating": 4.3,
+     "games": 3,
+     "disp": 9.3,
+     "af": 48.3,
+     "rating": 5.8,
      "goals": 0.0
     },
     "GEE": {
@@ -116510,10 +116622,10 @@
    },
    "home_away": {
     "home": {
-     "games": 9,
+     "games": 10,
      "disp": 10.4,
-     "af": 55.9,
-     "rating": 6.8,
+     "af": 54.9,
+     "rating": 7.0,
      "goals": 0.1
     },
     "away": {
@@ -116526,10 +116638,10 @@
    },
    "by_venue": {
     "Gabba": {
-     "games": 9,
+     "games": 10,
      "disp": 10.4,
-     "af": 55.9,
-     "rating": 6.8,
+     "af": 54.9,
+     "rating": 7.0,
      "goals": 0.1
     },
     "M.C.G.": {
@@ -118833,18 +118945,18 @@
   "mitchell edwards": {
    "name": "Mitchell Edwards",
    "overall": {
-    "games": 19,
-    "disp": 10.4,
-    "af": 57.2,
-    "rating": 7.9,
-    "goals": 0.2
+    "games": 20,
+    "disp": 10.3,
+    "af": 56.2,
+    "rating": 7.8,
+    "goals": 0.1
    },
    "vs": {
     "FRE": {
-     "games": 2,
-     "disp": 10.0,
-     "af": 42.0,
-     "rating": 6.8,
+     "games": 3,
+     "disp": 9.7,
+     "af": 40.7,
+     "rating": 6.5,
      "goals": 0.0
     },
     "NM": {
@@ -118878,10 +118990,10 @@
      "goals": 0.1
     },
     "away": {
-     "games": 8,
-     "disp": 10.1,
-     "af": 54.0,
-     "rating": 6.6,
+     "games": 9,
+     "disp": 10.0,
+     "af": 52.2,
+     "rating": 6.5,
      "goals": 0.2
     }
    },
@@ -119849,7 +119961,7 @@
      "games": 2,
      "disp": 23.0,
      "af": 76.5,
-     "rating": 6.2,
+     "rating": 6.5,
      "goals": 0.0
     },
     "STK": {
@@ -119865,7 +119977,7 @@
      "games": 9,
      "disp": 20.9,
      "af": 75.7,
-     "rating": 7.5,
+     "rating": 7.6,
      "goals": 0.1
     },
     "away": {
@@ -120122,10 +120234,10 @@
   "hugo hall kahan": {
    "name": "Hugo Hall-Kahan",
    "overall": {
-    "games": 12,
-    "disp": 19.5,
-    "af": 71.8,
-    "rating": 6.4,
+    "games": 13,
+    "disp": 19.8,
+    "af": 72.2,
+    "rating": 7.2,
     "goals": 0.1
    },
    "vs": {
@@ -120146,11 +120258,11 @@
      "goals": 0.0
     },
     "away": {
-     "games": 6,
-     "disp": 19.5,
-     "af": 73.7,
-     "rating": 7.8,
-     "goals": 0.2
+     "games": 7,
+     "disp": 20.1,
+     "af": 74.1,
+     "rating": 9.1,
+     "goals": 0.1
     }
    },
    "by_venue": {
