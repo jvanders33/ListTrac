@@ -14,7 +14,7 @@
  ],
  "attribution": "All-Australian teams from Wikipedia — the AFL's official team of the year (44-man squad, final 22) each season.",
  "source_url": "https://en.wikipedia.org/wiki/All-Australian_team",
- "count": 234,
+ "count": 236,
  "by_year": {
   "2015": {
    "team": [
@@ -405,10 +405,12 @@
     "Jordan Ridley",
     "Nat Fyfe",
     "Luke Ryan",
+    "Matt Taberner",
     "Mark Blicavs",
     "Patrick Dangerfield",
     "Cameron Guthrie",
     "Tom Hawkins",
+    "Sam Menegola",
     "Nick Haynes",
     "Jack Gunston",
     "Max Gawn",
@@ -2522,6 +2524,24 @@
   },
   "jordan ridley": {
    "name": "Jordan Ridley",
+   "team_years": [],
+   "squad_years": [
+    2020
+   ],
+   "team_count": 0,
+   "squad_count": 1
+  },
+  "matt taberner": {
+   "name": "Matt Taberner",
+   "team_years": [],
+   "squad_years": [
+    2020
+   ],
+   "team_count": 0,
+   "squad_count": 1
+  },
+  "sam menegola": {
+   "name": "Sam Menegola",
    "team_years": [],
    "squad_years": [
     2020

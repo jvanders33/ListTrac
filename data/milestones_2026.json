@@ -5,34 +5,42 @@
   {
    "name": "Charlie Curnow",
    "club": "SYD",
-   "goals": 74,
-   "games": 23,
-   "per_game": 3.2,
+   "goals": 75,
+   "games": 24,
+   "per_game": 3.1,
    "rank": 1
   },
   {
    "name": "Logan Morris",
    "club": "BRI",
-   "goals": 67,
-   "games": 24,
+   "goals": 69,
+   "games": 25,
    "per_game": 2.8,
    "rank": 2
   },
   {
    "name": "Jack Gunston",
    "club": "HAW",
-   "goals": 61,
-   "games": 18,
-   "per_game": 3.4,
+   "goals": 66,
+   "games": 19,
+   "per_game": 3.5,
    "rank": 3
+  },
+  {
+   "name": "Nick Watson",
+   "club": "HAW",
+   "goals": 63,
+   "games": 23,
+   "per_game": 2.7,
+   "rank": 4
   },
   {
    "name": "Jye Amiss",
    "club": "FRE",
-   "goals": 61,
-   "games": 24,
+   "goals": 62,
+   "games": 25,
    "per_game": 2.5,
-   "rank": 4
+   "rank": 5
   },
   {
    "name": "Ben King",
@@ -40,31 +48,31 @@
    "goals": 60,
    "games": 23,
    "per_game": 2.6,
-   "rank": 5
+   "rank": 6
   },
   {
-   "name": "Nick Watson",
-   "club": "HAW",
-   "goals": 57,
-   "games": 22,
-   "per_game": 2.6,
-   "rank": 6
+   "name": "Charlie Cameron",
+   "club": "BRI",
+   "goals": 58,
+   "games": 26,
+   "per_game": 2.2,
+   "rank": 7
   },
   {
    "name": "Josh Treacy",
    "club": "FRE",
    "goals": 56,
-   "games": 25,
-   "per_game": 2.2,
-   "rank": 7
-  },
-  {
-   "name": "Charlie Cameron",
-   "club": "BRI",
-   "goals": 55,
-   "games": 25,
+   "games": 26,
    "per_game": 2.2,
    "rank": 8
+  },
+  {
+   "name": "Kai Lohmann",
+   "club": "BRI",
+   "goals": 53,
+   "games": 26,
+   "per_game": 2.0,
+   "rank": 9
   },
   {
    "name": "Shannon Neale",
@@ -72,7 +80,7 @@
    "goals": 52,
    "games": 25,
    "per_game": 2.1,
-   "rank": 9
+   "rank": 10
   },
   {
    "name": "Mitch Georgiades",
@@ -80,7 +88,15 @@
    "goals": 51,
    "games": 21,
    "per_game": 2.4,
-   "rank": 10
+   "rank": 11
+  },
+  {
+   "name": "Logan McDonald",
+   "club": "SYD",
+   "goals": 51,
+   "games": 23,
+   "per_game": 2.2,
+   "rank": 12
   },
   {
    "name": "Aaron Naughton",
@@ -88,7 +104,7 @@
    "goals": 51,
    "games": 24,
    "per_game": 2.1,
-   "rank": 11
+   "rank": 13
   },
   {
    "name": "Jake Waterman",
@@ -96,15 +112,7 @@
    "goals": 49,
    "games": 23,
    "per_game": 2.1,
-   "rank": 12
-  },
-  {
-   "name": "Logan McDonald",
-   "club": "SYD",
-   "goals": 48,
-   "games": 22,
-   "per_game": 2.2,
-   "rank": 13
+   "rank": 14
   },
   {
    "name": "Jake Stringer",
@@ -112,7 +120,7 @@
    "goals": 48,
    "games": 23,
    "per_game": 2.1,
-   "rank": 14
+   "rank": 15
   },
   {
    "name": "Oliver Henry",
@@ -120,14 +128,6 @@
    "goals": 48,
    "games": 24,
    "per_game": 2.0,
-   "rank": 15
-  },
-  {
-   "name": "Kai Lohmann",
-   "club": "BRI",
-   "goals": 48,
-   "games": 25,
-   "per_game": 1.9,
    "rank": 16
   },
   {
@@ -147,19 +147,19 @@
    "rank": 18
   },
   {
+   "name": "Patrick Voss",
+   "club": "FRE",
+   "goals": 46,
+   "games": 25,
+   "per_game": 1.8,
+   "rank": 19
+  },
+  {
    "name": "Nick Larkey",
    "club": "NM",
    "goals": 45,
    "games": 23,
    "per_game": 2.0,
-   "rank": 19
-  },
-  {
-   "name": "Patrick Voss",
-   "club": "FRE",
-   "goals": 45,
-   "games": 24,
-   "per_game": 1.9,
    "rank": 20
   },
   {
@@ -187,19 +187,19 @@
    "rank": 23
   },
   {
+   "name": "Mitch Lewis",
+   "club": "HAW",
+   "goals": 39,
+   "games": 24,
+   "per_game": 1.6,
+   "rank": 24
+  },
+  {
    "name": "Brodie Kemp",
    "club": "CAR",
    "goals": 39,
    "games": 25,
    "per_game": 1.6,
-   "rank": 24
-  },
-  {
-   "name": "Paul Curtis",
-   "club": "NM",
-   "goals": 38,
-   "games": 20,
-   "per_game": 1.9,
    "rank": 25
   }
  ],
@@ -212,20 +212,6 @@
    "away": 1
   },
   {
-   "name": "Dylan Moore",
-   "club": "HAW",
-   "games": 149,
-   "milestone": 150,
-   "away": 1
-  },
-  {
-   "name": "Caleb Serong",
-   "club": "FRE",
-   "games": 149,
-   "milestone": 150,
-   "away": 1
-  },
-  {
    "name": "Tom Powell",
    "club": "NM",
    "games": 99,
@@ -235,6 +221,13 @@
   {
    "name": "Luke Pedlar",
    "club": "ADE",
+   "games": 49,
+   "milestone": 50,
+   "away": 1
+  },
+  {
+   "name": "Angus Sheldrick",
+   "club": "SYD",
    "games": 49,
    "milestone": 50,
    "away": 1
@@ -296,6 +289,13 @@
    "away": 2
   },
   {
+   "name": "Conor McKenna",
+   "club": "BRI",
+   "games": 148,
+   "milestone": 150,
+   "away": 2
+  },
+  {
    "name": "Paul Curtis",
    "club": "NM",
    "games": 98,
@@ -345,13 +345,6 @@
    "away": 2
   },
   {
-   "name": "Angus Sheldrick",
-   "club": "SYD",
-   "games": 48,
-   "milestone": 50,
-   "away": 2
-  },
-  {
    "name": "Archie Roberts",
    "club": "ESS",
    "games": 48,
@@ -366,6 +359,13 @@
    "away": 2
   },
   {
+   "name": "Murphy Reid",
+   "club": "FRE",
+   "games": 48,
+   "milestone": 50,
+   "away": 2
+  },
+  {
    "name": "Callum Mills",
    "club": "SYD",
    "games": 197,
@@ -373,22 +373,8 @@
    "away": 3
   },
   {
-   "name": "Conor McKenna",
-   "club": "BRI",
-   "games": 147,
-   "milestone": 150,
-   "away": 3
-  },
-  {
    "name": "Elijah Hollands",
    "club": "CAR",
-   "games": 47,
-   "milestone": 50,
-   "away": 3
-  },
-  {
-   "name": "Murphy Reid",
-   "club": "FRE",
    "games": 47,
    "milestone": 50,
    "away": 3
@@ -401,10 +387,31 @@
    "away": 4
   },
   {
+   "name": "Andrew Brayshaw",
+   "club": "FRE",
+   "games": 196,
+   "milestone": 200,
+   "away": 4
+  },
+  {
+   "name": "Tom Barrass",
+   "club": "HAW",
+   "games": 196,
+   "milestone": 200,
+   "away": 4
+  },
+  {
    "name": "Jy Simpkin",
    "club": "NM",
    "games": 196,
    "milestone": 200,
+   "away": 4
+  },
+  {
+   "name": "Jye Amiss",
+   "club": "FRE",
+   "games": 96,
+   "milestone": 100,
    "away": 4
   },
   {
@@ -436,22 +443,15 @@
    "away": 4
   },
   {
-   "name": "Andrew Brayshaw",
-   "club": "FRE",
-   "games": 195,
-   "milestone": 200,
-   "away": 5
-  },
-  {
-   "name": "Tom Barrass",
-   "club": "HAW",
-   "games": 195,
-   "milestone": 200,
-   "away": 5
-  },
-  {
    "name": "Charlie Ballard",
    "club": "GCS",
+   "games": 145,
+   "milestone": 150,
+   "away": 5
+  },
+  {
+   "name": "Luke Jackson",
+   "club": "FRE",
    "games": 145,
    "milestone": 150,
    "away": 5
@@ -492,13 +492,6 @@
    "away": 5
   },
   {
-   "name": "Jye Amiss",
-   "club": "FRE",
-   "games": 95,
-   "milestone": 100,
-   "away": 5
-  },
-  {
    "name": "Will Setterfield",
    "club": "ESS",
    "games": 95,
@@ -534,13 +527,6 @@
    "away": 6
   },
   {
-   "name": "Luke Jackson",
-   "club": "FRE",
-   "games": 144,
-   "milestone": 150,
-   "away": 6
-  },
-  {
    "name": "Brandon Zerk-Thatcher",
    "club": "PA",
    "games": 94,
@@ -569,6 +555,13 @@
    "away": 6
   },
   {
+   "name": "Jaspa Fletcher",
+   "club": "BRI",
+   "games": 94,
+   "milestone": 100,
+   "away": 6
+  },
+  {
    "name": "Lewis Young",
    "club": "CAR",
    "games": 94,
@@ -592,6 +585,13 @@
   {
    "name": "Bayley Fritsch",
    "club": "MEL",
+   "games": 193,
+   "milestone": 200,
+   "away": 7
+  },
+  {
+   "name": "Cam Rayner",
+   "club": "BRI",
    "games": 193,
    "milestone": 200,
    "away": 7
@@ -639,8 +639,8 @@
    "away": 7
   },
   {
-   "name": "Jaspa Fletcher",
-   "club": "BRI",
+   "name": "Logan McDonald",
+   "club": "SYD",
    "games": 93,
    "milestone": 100,
    "away": 7
@@ -658,13 +658,6 @@
    "games": 43,
    "milestone": 50,
    "away": 7
-  },
-  {
-   "name": "Cam Rayner",
-   "club": "BRI",
-   "games": 192,
-   "milestone": 200,
-   "away": 8
   },
   {
    "name": "Liam Ryan",
@@ -688,8 +681,8 @@
    "away": 8
   },
   {
-   "name": "Logan McDonald",
-   "club": "SYD",
+   "name": "Josh Ward",
+   "club": "HAW",
    "games": 92,
    "milestone": 100,
    "away": 8
@@ -706,6 +699,13 @@
    "club": "MEL",
    "games": 92,
    "milestone": 100,
+   "away": 8
+  },
+  {
+   "name": "Isaiah Dudley",
+   "club": "FRE",
+   "games": 42,
+   "milestone": 50,
    "away": 8
   },
   {
@@ -730,6 +730,13 @@
    "away": 8
   },
   {
+   "name": "Zac Bailey",
+   "club": "BRI",
+   "games": 191,
+   "milestone": 200,
+   "away": 9
+  },
+  {
    "name": "Nathan Broad",
    "club": "RIC",
    "games": 191,
@@ -751,6 +758,13 @@
    "away": 9
   },
   {
+   "name": "Massimo D'Ambrosio",
+   "club": "HAW",
+   "games": 91,
+   "milestone": 100,
+   "away": 9
+  },
+  {
    "name": "Matthew Owies",
    "club": "WCE",
    "games": 91,
@@ -765,24 +779,10 @@
    "away": 9
   },
   {
-   "name": "Josh Ward",
-   "club": "HAW",
-   "games": 91,
-   "milestone": 100,
-   "away": 9
-  },
-  {
    "name": "Cooper Sharman",
    "club": "STK",
    "games": 91,
    "milestone": 100,
-   "away": 9
-  },
-  {
-   "name": "Isaiah Dudley",
-   "club": "FRE",
-   "games": 41,
-   "milestone": 50,
    "away": 9
   },
   {
@@ -791,13 +791,6 @@
    "games": 41,
    "milestone": 50,
    "away": 9
-  },
-  {
-   "name": "Zac Bailey",
-   "club": "BRI",
-   "games": 190,
-   "milestone": 200,
-   "away": 10
   },
   {
    "name": "Aaron Naughton",
@@ -842,8 +835,8 @@
    "away": 10
   },
   {
-   "name": "Massimo D'Ambrosio",
-   "club": "HAW",
+   "name": "Heath Chapman",
+   "club": "FRE",
    "games": 90,
    "milestone": 100,
    "away": 10
@@ -898,15 +891,15 @@
    "away": 11
   },
   {
-   "name": "Tanner Bruhn",
-   "club": "GEE",
+   "name": "Will Day",
+   "club": "HAW",
    "games": 89,
    "milestone": 100,
    "away": 11
   },
   {
-   "name": "Heath Chapman",
-   "club": "FRE",
+   "name": "Tanner Bruhn",
+   "club": "GEE",
    "games": 89,
    "milestone": 100,
    "away": 11
@@ -940,6 +933,20 @@
    "away": 12
   },
   {
+   "name": "Harry Morrison",
+   "club": "HAW",
+   "games": 138,
+   "milestone": 150,
+   "away": 12
+  },
+  {
+   "name": "Mitch Lewis",
+   "club": "HAW",
+   "games": 88,
+   "milestone": 100,
+   "away": 12
+  },
+  {
    "name": "Matthew Cottrell",
    "club": "CAR",
    "games": 88,
@@ -954,15 +961,15 @@
    "away": 12
   },
   {
-   "name": "Will Day",
-   "club": "HAW",
+   "name": "Mac Andrew",
+   "club": "GCS",
    "games": 88,
    "milestone": 100,
    "away": 12
   },
   {
-   "name": "Mac Andrew",
-   "club": "GCS",
+   "name": "Judd McVee",
+   "club": "FRE",
    "games": 88,
    "milestone": 100,
    "away": 12
@@ -1003,20 +1010,6 @@
    "away": 13
   },
   {
-   "name": "Harry Morrison",
-   "club": "HAW",
-   "games": 137,
-   "milestone": 150,
-   "away": 13
-  },
-  {
-   "name": "Mitch Lewis",
-   "club": "HAW",
-   "games": 87,
-   "milestone": 100,
-   "away": 13
-  },
-  {
    "name": "Corey Durdin",
    "club": "PA",
    "games": 87,
@@ -1026,13 +1019,6 @@
   {
    "name": "Cody Weightman",
    "club": "WB",
-   "games": 87,
-   "milestone": 100,
-   "away": 13
-  },
-  {
-   "name": "Judd McVee",
-   "club": "FRE",
    "games": 87,
    "milestone": 100,
    "away": 13

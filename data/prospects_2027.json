@@ -216,6 +216,14 @@
    "rank": 23
   },
   {
+   "name": "Charlie Fischer",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
+   "games": 19,
+   "source": "afl"
+  },
+  {
    "name": "Bryce McMillan",
    "state_team": "Vic Metro",
    "position": null,
@@ -224,7 +232,7 @@
    "source": "afl"
   },
   {
-   "name": "Charlie Fischer",
+   "name": "Jimmy Little",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Gippsland Power",
@@ -232,7 +240,7 @@
    "source": "afl"
   },
   {
-   "name": "Jimmy Little",
+   "name": "Cohen Dent",
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "Gippsland Power",
@@ -260,14 +268,6 @@
    "state_team": "Vic Metro",
    "position": null,
    "junior_club": "Eastern Ranges",
-   "games": 16,
-   "source": "afl"
-  },
-  {
-   "name": "Cohen Dent",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Gippsland Power",
    "games": 16,
    "source": "afl"
   },
@@ -408,6 +408,14 @@
    "source": "afl"
   },
   {
+   "name": "Harvey Egan",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
+   "games": 14,
+   "source": "afl"
+  },
+  {
    "name": "Jake Beams",
    "state_team": "Allies",
    "position": null,
@@ -448,10 +456,10 @@
    "source": "afl"
   },
   {
-   "name": "Harvey Egan",
+   "name": "Henry Allsop",
    "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Dandenong Stingrays",
+   "junior_club": "Gippsland Power",
    "games": 13,
    "source": "afl"
   },
@@ -476,6 +484,14 @@
    "state_team": "Vic Metro",
    "position": null,
    "junior_club": "Calder Cannons",
+   "games": 13,
+   "source": "afl"
+  },
+  {
+   "name": "Oscar Henwood",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Gippsland Power",
    "games": 13,
    "source": "afl"
   },
@@ -544,14 +560,6 @@
    "source": "afl"
   },
   {
-   "name": "Henry Allsop",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Gippsland Power",
-   "games": 12,
-   "source": "afl"
-  },
-  {
    "name": "Hugo Wozniak",
    "state_team": "Vic Metro",
    "position": null,
@@ -568,18 +576,18 @@
    "source": "afl"
   },
   {
-   "name": "Lincoln Brand",
+   "name": "Leo Stephenson",
    "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Murray Bushrangers",
+   "junior_club": "Gippsland Power",
    "games": 12,
    "source": "afl"
   },
   {
-   "name": "Oscar Henwood",
+   "name": "Lincoln Brand",
    "state_team": "Vic Country",
    "position": null,
-   "junior_club": "Gippsland Power",
+   "junior_club": "Murray Bushrangers",
    "games": 12,
    "source": "afl"
   },
@@ -608,6 +616,30 @@
    "source": "afl"
   },
   {
+   "name": "Archer McCarthy",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
+   "games": 11,
+   "source": "afl"
+  },
+  {
+   "name": "Caiden Styles",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
+   "games": 11,
+   "source": "afl"
+  },
+  {
+   "name": "Corey Ah-Mu",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
+   "games": 11,
+   "source": "afl"
+  },
+  {
    "name": "Hamish Andrews",
    "state_team": "Vic Country",
    "position": null,
@@ -628,14 +660,6 @@
    "state_team": "Vic Country",
    "position": null,
    "junior_club": "GWV Rebels",
-   "games": 11,
-   "source": "afl"
-  },
-  {
-   "name": "Leo Stephenson",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Gippsland Power",
    "games": 11,
    "source": "afl"
   },
@@ -672,14 +696,6 @@
    "source": "afl"
   },
   {
-   "name": "Archer McCarthy",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Dandenong Stingrays",
-   "games": 10,
-   "source": "afl"
-  },
-  {
    "name": "Benji Russell",
    "state_team": "Allies",
    "position": null,
@@ -696,14 +712,6 @@
    "source": "afl"
   },
   {
-   "name": "Caiden Styles",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Dandenong Stingrays",
-   "games": 10,
-   "source": "afl"
-  },
-  {
    "name": "Campbell McCarty",
    "state_team": "Vic Country",
    "position": null,
@@ -712,18 +720,18 @@
    "source": "afl"
   },
   {
-   "name": "Corey Ah-Mu",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Dandenong Stingrays",
-   "games": 10,
-   "source": "afl"
-  },
-  {
    "name": "Eli Kravic",
    "state_team": "Vic Metro",
    "position": null,
    "junior_club": "Oakleigh Chargers",
+   "games": 10,
+   "source": "afl"
+  },
+  {
+   "name": "Finn Marsh",
+   "state_team": "Vic Country",
+   "position": null,
+   "junior_club": "Dandenong Stingrays",
    "games": 10,
    "source": "afl"
   },
@@ -796,14 +804,6 @@
    "state_team": "Vic Metro",
    "position": null,
    "junior_club": "Western Jets",
-   "games": 9,
-   "source": "afl"
-  },
-  {
-   "name": "Finn Marsh",
-   "state_team": "Vic Country",
-   "position": null,
-   "junior_club": "Dandenong Stingrays",
    "games": 9,
    "source": "afl"
   },

@@ -12,20 +12,20 @@
  "systems": {
   "rating": {
    "label": "AFL Player Rating",
-   "spearman": 0.607,
+   "spearman": 0.61,
    "top10": 4.3,
    "top25": 15.7,
-   "aa_hit_rate": 0.455,
-   "aa_hits": 30,
+   "aa_hit_rate": 0.439,
+   "aa_hits": 29,
    "aa_n": 66,
    "rank": 3,
    "aa_rank": 2
   },
   "rating_pg": {
    "label": "Rating per game",
-   "spearman": 0.421,
+   "spearman": 0.425,
    "top10": 0.7,
-   "top25": 2.7,
+   "top25": 3.3,
    "aa_hit_rate": 0.091,
    "aa_hits": 6,
    "aa_n": 66,
@@ -46,10 +46,10 @@
   "predictor": {
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
-   "top10": 6.7,
-   "top25": 17.3,
-   "aa_hit_rate": 0.561,
-   "aa_hits": 37,
+   "top10": 7.0,
+   "top25": 17.7,
+   "aa_hit_rate": 0.591,
+   "aa_hits": 39,
    "aa_n": 66,
    "rank": 1,
    "aa_rank": 1
@@ -59,10 +59,10 @@
   {
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
-   "top10": 6.7,
-   "top25": 17.3,
-   "aa_hit_rate": 0.561,
-   "aa_hits": 37,
+   "top10": 7.0,
+   "top25": 17.7,
+   "aa_hit_rate": 0.591,
+   "aa_hits": 39,
    "aa_n": 66,
    "rank": 1,
    "aa_rank": 1
@@ -80,20 +80,20 @@
   },
   {
    "label": "AFL Player Rating",
-   "spearman": 0.607,
+   "spearman": 0.61,
    "top10": 4.3,
    "top25": 15.7,
-   "aa_hit_rate": 0.455,
-   "aa_hits": 30,
+   "aa_hit_rate": 0.439,
+   "aa_hits": 29,
    "aa_n": 66,
    "rank": 3,
    "aa_rank": 2
   },
   {
    "label": "Rating per game",
-   "spearman": 0.421,
+   "spearman": 0.425,
    "top10": 0.7,
-   "top25": 2.7,
+   "top25": 3.3,
    "aa_hit_rate": 0.091,
    "aa_hits": 6,
    "aa_n": 66,
@@ -105,21 +105,21 @@
   {
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
-   "top10": 6.7,
-   "top25": 17.3,
-   "aa_hit_rate": 0.561,
-   "aa_hits": 37,
+   "top10": 7.0,
+   "top25": 17.7,
+   "aa_hit_rate": 0.591,
+   "aa_hits": 39,
    "aa_n": 66,
    "rank": 1,
    "aa_rank": 1
   },
   {
    "label": "AFL Player Rating",
-   "spearman": 0.607,
+   "spearman": 0.61,
    "top10": 4.3,
    "top25": 15.7,
-   "aa_hit_rate": 0.455,
-   "aa_hits": 30,
+   "aa_hit_rate": 0.439,
+   "aa_hits": 29,
    "aa_n": 66,
    "rank": 3,
    "aa_rank": 2
@@ -137,9 +137,9 @@
   },
   {
    "label": "Rating per game",
-   "spearman": 0.421,
+   "spearman": 0.425,
    "top10": 0.7,
-   "top25": 2.7,
+   "top25": 3.3,
    "aa_hit_rate": 0.091,
    "aa_hits": 6,
    "aa_n": 66,
@@ -178,8 +178,8 @@
     "predictor": {
      "spearman": 0.662,
      "top10": 7,
-     "top25": 18,
-     "aa_hits": 11,
+     "top25": 19,
+     "aa_hits": 12,
      "aa_n": 22
     }
    }
@@ -227,16 +227,16 @@
    "winner": "matt rowell",
    "systems": {
     "rating": {
-     "spearman": 0.637,
+     "spearman": 0.648,
      "top10": 5,
      "top25": 17,
-     "aa_hits": 8,
+     "aa_hits": 7,
      "aa_n": 22
     },
     "rating_pg": {
-     "spearman": 0.445,
+     "spearman": 0.459,
      "top10": 1,
-     "top25": 2,
+     "top25": 4,
      "aa_hits": 1,
      "aa_n": 22
     },
@@ -249,9 +249,9 @@
     },
     "predictor": {
      "spearman": 0.653,
-     "top10": 7,
+     "top10": 8,
      "top25": 17,
-     "aa_hits": 13,
+     "aa_hits": 14,
      "aa_n": 22
     }
    }

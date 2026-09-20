@@ -3,7 +3,7 @@
  "source_url": "https://www.afl.com.au/news",
  "attribution": "Contract & movement events from the AFL's own content API and AFLRATINGS' reporting, with hand-verified corrections; each event links to its source. The AFL does not disclose contract terms — no dollar figures are tracked.",
  "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
- "count": 1552,
+ "count": 1554,
  "events": [
   {
    "name": "Scott Pendlebury",
@@ -20369,7 +20369,7 @@
    "name": "Jesse Hogan",
    "norm": "jessehogan",
    "date": "2026-06-29",
-   "kind": "retire",
+   "kind": "extension",
    "club": null,
    "length": null,
    "end_year": null,
@@ -21011,7 +21011,7 @@
    "name": "Scott Pendlebury Free Agency News",
    "norm": "scottpendleburyfreeagencynews",
    "date": "2026-08-29",
-   "kind": "retire",
+   "kind": "signing",
    "club": null,
    "length": null,
    "end_year": null,
@@ -21066,6 +21066,30 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2026/09/12/butters-nominates-bulldogs/"
+  },
+  {
+   "name": "Logan Morris contract news",
+   "norm": "loganmorriscontractnews",
+   "date": "2026-09-15",
+   "kind": "extension",
+   "club": null,
+   "length": 2,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/09/15/logan-morris-contract-news/"
+  },
+  {
+   "name": "Toby Greene to join Cats",
+   "norm": "tobygreenetojoincats",
+   "date": "2026-09-17",
+   "kind": "signing",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/09/17/toby-greene-to-join-cats/"
   }
  ]
 }
