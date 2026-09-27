@@ -2,6 +2,23 @@
  "source": "AFL.com.au",
  "source_url": "https://www.afl.com.au/news",
  "note": "Contract / free-agency / trade movement coverage from the AFL — headline & link only.",
- "count": 0,
- "items": []
+ "count": 2,
+ "items": [
+  {
+   "title": "AFL Trade Radio is back for 2026: Watch LIVE from 12pm AEST",
+   "summary": "Join Cal Twomey, Riley Beveridge and more on Continental Tyres AFL Trade Radio for 2026",
+   "date": "2026-09-27",
+   "author": "staff writers",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1619238/afl-trade-radio-is-back-for-2026-watch-live-from-12pm-aest"
+  },
+  {
+   "title": "The 12 influential figures who will shape the 2026 Trade Period",
+   "summary": "Cal Twomey takes a look at who will shape the 2026 trade and free agency periods",
+   "date": "2026-09-27",
+   "author": "Callum Twomey",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1621098/the-12-influential-figures-who-will-shape-the-2026-trade-period"
+  }
+ ]
 }

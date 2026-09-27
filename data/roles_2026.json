@@ -47,7 +47,7 @@
     "charlie cameron",
     "cody weightman"
    ],
-   "count": 52
+   "count": 53
   },
   "gen_fwd": {
    "label": "General forward",
@@ -58,7 +58,7 @@
     "mitch georgiades",
     "dylan moore"
    ],
-   "count": 39
+   "count": 38
   },
   "inside_mid": {
    "label": "Contested inside midfielder",
@@ -161,12 +161,12 @@
      "similarity": 82.6
     },
     {
-     "name": "Jarrod Witts",
+     "name": "Mason Cox",
      "similarity": 81.9
     },
     {
-     "name": "Mason Cox",
-     "similarity": 81.8
+     "name": "Jarrod Witts",
+     "similarity": 81.9
     },
     {
      "name": "Samson Ryan",
@@ -188,11 +188,11 @@
    "comps": [
     {
      "name": "Dayne Zorko",
-     "similarity": 89.4
+     "similarity": 88.6
     },
     {
      "name": "Jack Sinclair",
-     "similarity": 87.2
+     "similarity": 87.3
     },
     {
      "name": "Jayden Short",
@@ -250,7 +250,7 @@
     },
     {
      "name": "Sam De Koning",
-     "similarity": 79.5
+     "similarity": 79.6
     },
     {
      "name": "Sam Grlj",
@@ -258,7 +258,7 @@
     },
     {
      "name": "Judd McVee",
-     "similarity": 77.0
+     "similarity": 77.1
     },
     {
      "name": "Harry Cunningham",
@@ -300,15 +300,15 @@
     },
     {
      "name": "Angus Anderson",
-     "similarity": 80.7
+     "similarity": 80.8
     },
     {
      "name": "Phoenix Gothard",
      "similarity": 80.2
     },
     {
-     "name": "Leonardo Lombard",
-     "similarity": 80.0
+     "name": "Kai Lohmann",
+     "similarity": 80.1
     }
    ]
   },
@@ -376,7 +376,7 @@
     },
     {
      "name": "Eric Hipwood",
-     "similarity": 88.7
+     "similarity": 88.4
     },
     {
      "name": "Brodie Kemp",
@@ -429,15 +429,15 @@
      "similarity": 90.6
     },
     {
-     "name": "Darcy Gardiner",
-     "similarity": 90.3
-    },
-    {
      "name": "James Borlase",
      "similarity": 89.8
     },
     {
      "name": "Joel Hamling",
+     "similarity": 89.7
+    },
+    {
+     "name": "Darcy Gardiner",
      "similarity": 89.7
     },
     {
@@ -464,18 +464,18 @@
    "comps": [
     {
      "name": "Jacob van Rooyen",
-     "similarity": 88.1
+     "similarity": 88.2
     },
     {
      "name": "Mitch Lewis",
      "similarity": 86.5
     },
     {
-     "name": "Eric Hipwood",
-     "similarity": 85.6
+     "name": "Jack Darling",
+     "similarity": 84.9
     },
     {
-     "name": "Jack Darling",
+     "name": "Eric Hipwood",
      "similarity": 84.9
     },
     {
@@ -513,12 +513,12 @@
      "similarity": 90.5
     },
     {
-     "name": "Neil Erasmus",
+     "name": "Mason Wood",
      "similarity": 89.4
     },
     {
-     "name": "Mason Wood",
-     "similarity": 89.4
+     "name": "Neil Erasmus",
+     "similarity": 89.1
     },
     {
      "name": "Jai Serong",
@@ -602,35 +602,35 @@
    "comps": [
     {
      "name": "Hayden Young",
-     "similarity": 90.2
+     "similarity": 89.6
     },
     {
      "name": "Sam Lalor",
-     "similarity": 84.8
+     "similarity": 84.1
     },
     {
      "name": "Touk Miller",
-     "similarity": 82.8
-    },
-    {
-     "name": "Darcy Wilson",
-     "similarity": 82.2
+     "similarity": 82.9
     },
     {
      "name": "Will Day",
      "similarity": 82.2
     },
     {
-     "name": "Jy Simpkin",
+     "name": "Darcy Wilson",
      "similarity": 81.9
     },
     {
      "name": "Patrick Lipinski",
-     "similarity": 81.6
+     "similarity": 81.8
+    },
+    {
+     "name": "Jy Simpkin",
+     "similarity": 81.7
     },
     {
      "name": "Xavier O'Halloran",
-     "similarity": 81.4
+     "similarity": 81.0
     }
    ]
   },
@@ -718,7 +718,7 @@
     },
     {
      "name": "Billy Wilson",
-     "similarity": 86.7
+     "similarity": 86.8
     },
     {
      "name": "Harry Perryman",
@@ -748,7 +748,7 @@
     },
     {
      "name": "Jye Amiss",
-     "similarity": 90.6
+     "similarity": 90.9
     },
     {
      "name": "Nate Caddy",
@@ -855,11 +855,11 @@
      "similarity": 83.0
     },
     {
-     "name": "Oscar McDonald",
-     "similarity": 82.2
+     "name": "Luke Trainor",
+     "similarity": 81.4
     },
     {
-     "name": "Luke Trainor",
+     "name": "Wade Derksen",
      "similarity": 81.4
     }
    ]
@@ -897,16 +897,16 @@
      "similarity": 89.6
     },
     {
+     "name": "Oscar McDonald",
+     "similarity": 89.3
+    },
+    {
      "name": "Harry Himmelberg",
      "similarity": 89.2
     },
     {
      "name": "Harris Andrews",
-     "similarity": 88.2
-    },
-    {
-     "name": "Oscar McDonald",
-     "similarity": 87.8
+     "similarity": 88.5
     }
    ]
   },
@@ -947,12 +947,12 @@
      "similarity": 82.2
     },
     {
-     "name": "Will Ashcroft",
-     "similarity": 81.4
-    },
-    {
      "name": "Sam Walsh",
      "similarity": 81.2
+    },
+    {
+     "name": "Tim Kelly",
+     "similarity": 81.0
     }
    ]
   },
@@ -982,7 +982,7 @@
     },
     {
      "name": "Neil Erasmus",
-     "similarity": 87.7
+     "similarity": 87.8
     },
     {
      "name": "Lachie Weller",
@@ -990,7 +990,7 @@
     },
     {
      "name": "Ryan Maric",
-     "similarity": 87.0
+     "similarity": 87.1
     },
     {
      "name": "Nathan O'Driscoll",
@@ -1015,16 +1015,16 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Sam Durham",
-     "similarity": 89.6
-    },
-    {
      "name": "Jack Ross",
      "similarity": 89.6
     },
     {
+     "name": "Sam Durham",
+     "similarity": 89.6
+    },
+    {
      "name": "Josh Ward",
-     "similarity": 89.2
+     "similarity": 89.3
     },
     {
      "name": "Will Setterfield",
@@ -1069,10 +1069,6 @@
      "similarity": 90.5
     },
     {
-     "name": "Patrick Voss",
-     "similarity": 90.2
-    },
-    {
      "name": "Arthur Jones",
      "similarity": 90.1
     },
@@ -1085,12 +1081,16 @@
      "similarity": 89.2
     },
     {
-     "name": "Charlie Cameron",
-     "similarity": 89.2
+     "name": "Patrick Voss",
+     "similarity": 88.9
     },
     {
      "name": "Mitch Owens",
-     "similarity": 88.4
+     "similarity": 88.5
+    },
+    {
+     "name": "Shannon Neale",
+     "similarity": 88.2
     }
    ]
   },
@@ -1127,16 +1127,16 @@
      "similarity": 87.5
     },
     {
-     "name": "Oscar McDonald",
-     "similarity": 87.2
-    },
-    {
      "name": "Tom McDonald",
      "similarity": 86.9
     },
     {
      "name": "Luke Trainor",
      "similarity": 86.3
+    },
+    {
+     "name": "Oscar McDonald",
+     "similarity": 86.2
     }
    ]
   },
@@ -1158,7 +1158,7 @@
     },
     {
      "name": "Darcy Gardiner",
-     "similarity": 90.6
+     "similarity": 90.1
     },
     {
      "name": "Charlie Ballard",
@@ -1270,7 +1270,7 @@
     },
     {
      "name": "Andrew Brayshaw",
-     "similarity": 81.3
+     "similarity": 82.0
     },
     {
      "name": "Sam Berry",
@@ -1320,7 +1320,7 @@
     },
     {
      "name": "Matthew Jefferson",
-     "similarity": 84.5
+     "similarity": 84.6
     }
    ]
   },
@@ -1337,36 +1337,36 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Will Setterfield",
+     "name": "Jack Steele",
      "similarity": 85.2
     },
     {
-     "name": "Jack Steele",
+     "name": "Tom Sparrow",
+     "similarity": 85.2
+    },
+    {
+     "name": "Will Setterfield",
      "similarity": 84.9
     },
     {
-     "name": "Tom Sparrow",
-     "similarity": 84.1
-    },
-    {
      "name": "Hugo Garcia",
-     "similarity": 82.8
-    },
-    {
-     "name": "Matthew Kennedy",
-     "similarity": 81.8
-    },
-    {
-     "name": "Jack Ross",
-     "similarity": 81.3
+     "similarity": 83.3
     },
     {
      "name": "James Worpel",
-     "similarity": 81.3
+     "similarity": 82.0
+    },
+    {
+     "name": "Matthew Kennedy",
+     "similarity": 81.5
+    },
+    {
+     "name": "Jack Ross",
+     "similarity": 80.7
     },
     {
      "name": "Sam Durham",
-     "similarity": 80.4
+     "similarity": 80.1
     }
    ]
   },
@@ -1384,35 +1384,35 @@
    "comps": [
     {
      "name": "Bailey Humphrey",
-     "similarity": 87.6
+     "similarity": 87.3
     },
     {
      "name": "Dylan Moore",
-     "similarity": 86.6
-    },
-    {
-     "name": "Connor Macdonald",
-     "similarity": 85.4
+     "similarity": 86.5
     },
     {
      "name": "Josh Rachele",
-     "similarity": 84.8
+     "similarity": 85.0
+    },
+    {
+     "name": "Connor Macdonald",
+     "similarity": 85.0
     },
     {
      "name": "Shaun Mannagh",
-     "similarity": 83.4
-    },
-    {
-     "name": "Rhylee West",
-     "similarity": 82.4
+     "similarity": 83.9
     },
     {
      "name": "Murphy Reid",
-     "similarity": 82.3
+     "similarity": 83.3
+    },
+    {
+     "name": "Rhylee West",
+     "similarity": 82.0
     },
     {
      "name": "Harry Sharp",
-     "similarity": 81.6
+     "similarity": 81.9
     }
    ]
   },
@@ -1491,12 +1491,12 @@
      "similarity": 79.5
     },
     {
-     "name": "Changkuoth Jiath",
-     "similarity": 79.0
+     "name": "Heath Chapman",
+     "similarity": 79.2
     },
     {
-     "name": "Heath Chapman",
-     "similarity": 78.9
+     "name": "Changkuoth Jiath",
+     "similarity": 79.0
     },
     {
      "name": "Noah Answerth",
@@ -1525,12 +1525,12 @@
      "similarity": 83.5
     },
     {
-     "name": "Hugh McCluggage",
-     "similarity": 80.4
+     "name": "Hayden Young",
+     "similarity": 82.4
     },
     {
-     "name": "Hayden Young",
-     "similarity": 80.2
+     "name": "Hugh McCluggage",
+     "similarity": 80.7
     },
     {
      "name": "Max Hall",
@@ -1550,7 +1550,7 @@
     },
     {
      "name": "Shai Bolton",
-     "similarity": 74.9
+     "similarity": 73.9
     }
    ]
   },
@@ -1587,16 +1587,16 @@
      "similarity": 83.8
     },
     {
-     "name": "Dayne Zorko",
-     "similarity": 83.6
-    },
-    {
      "name": "Lawson Humphries",
      "similarity": 83.4
     },
     {
      "name": "Jordan Clark",
-     "similarity": 83.4
+     "similarity": 82.9
+    },
+    {
+     "name": "Trent Rivers",
+     "similarity": 82.3
     }
    ]
   },
@@ -1668,7 +1668,7 @@
     },
     {
      "name": "Zak Butters",
-     "similarity": 82.3
+     "similarity": 82.4
     },
     {
      "name": "Tim Kelly",
@@ -1680,7 +1680,7 @@
     },
     {
      "name": "Will Ashcroft",
-     "similarity": 80.0
+     "similarity": 80.4
     },
     {
      "name": "Kysaiah Pickett",
@@ -1752,35 +1752,35 @@
    "comps": [
     {
      "name": "Justin McInerney",
-     "similarity": 83.6
+     "similarity": 84.0
     },
     {
      "name": "Jordan De Goey",
-     "similarity": 82.0
+     "similarity": 82.7
     },
     {
      "name": "Max Hall",
      "similarity": 81.6
     },
     {
-     "name": "Toby Greene",
-     "similarity": 81.6
+     "name": "Jy Simpkin",
+     "similarity": 81.4
     },
     {
-     "name": "Jy Simpkin",
-     "similarity": 80.4
+     "name": "Toby Greene",
+     "similarity": 80.6
     },
     {
      "name": "Darcy Wilson",
-     "similarity": 79.4
-    },
-    {
-     "name": "Jason Horne-Francis",
-     "similarity": 78.6
+     "similarity": 80.5
     },
     {
      "name": "Hayden Young",
-     "similarity": 76.7
+     "similarity": 78.8
+    },
+    {
+     "name": "Jason Horne-Francis",
+     "similarity": 78.1
     }
    ]
   },
@@ -1918,7 +1918,7 @@
     },
     {
      "name": "Jye Amiss",
-     "similarity": 86.7
+     "similarity": 87.3
     }
    ]
   },
@@ -1935,12 +1935,8 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Kai Lohmann",
-     "similarity": 92.7
-    },
-    {
      "name": "Patrick Voss",
-     "similarity": 89.3
+     "similarity": 89.4
     },
     {
      "name": "Shannon Neale",
@@ -1965,6 +1961,10 @@
     {
      "name": "Mabior Chol",
      "similarity": 84.0
+    },
+    {
+     "name": "Rhyan Mansell",
+     "similarity": 83.8
     }
    ]
   },
@@ -2002,7 +2002,7 @@
     },
     {
      "name": "Hugh McCluggage",
-     "similarity": 81.6
+     "similarity": 81.8
     },
     {
      "name": "Justin McInerney",
@@ -2055,7 +2055,7 @@
      "similarity": 87.5
     },
     {
-     "name": "Jack Martin",
+     "name": "Callum Ah Chee",
      "similarity": 87.4
     }
    ]
@@ -2094,7 +2094,7 @@
     },
     {
      "name": "Darcy Gardiner",
-     "similarity": 86.8
+     "similarity": 87.6
     },
     {
      "name": "Darcy Moore",
@@ -2148,7 +2148,7 @@
     },
     {
      "name": "Lachie Weller",
-     "similarity": 76.5
+     "similarity": 76.4
     }
    ]
   },
@@ -2174,7 +2174,7 @@
     },
     {
      "name": "Oscar Allen",
-     "similarity": 88.5
+     "similarity": 89.7
     },
     {
      "name": "Jasper Alger",
@@ -2211,36 +2211,36 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Brody Mihocek",
-     "similarity": 95.1
+     "name": "Jed Walter",
+     "similarity": 95.0
     },
     {
      "name": "Jay Polkinghorne",
-     "similarity": 94.1
+     "similarity": 94.4
     },
     {
-     "name": "Jed Walter",
-     "similarity": 94.0
-    },
-    {
-     "name": "Max Gruzewski",
-     "similarity": 91.8
+     "name": "Brody Mihocek",
+     "similarity": 94.2
     },
     {
      "name": "Joel Amartey",
-     "similarity": 90.7
+     "similarity": 92.2
     },
     {
-     "name": "Jesse Hogan",
-     "similarity": 90.4
+     "name": "Max Gruzewski",
+     "similarity": 90.3
     },
     {
      "name": "Liam Ryan",
-     "similarity": 88.5
+     "similarity": 89.7
+    },
+    {
+     "name": "Jesse Hogan",
+     "similarity": 89.4
     },
     {
      "name": "Tom Lynch",
-     "similarity": 88.3
+     "similarity": 88.1
     }
    ]
   },
@@ -2354,7 +2354,7 @@
     },
     {
      "name": "Joe Richards",
-     "similarity": 80.8
+     "similarity": 80.7
     },
     {
      "name": "Alex Neal-Bullen",
@@ -2366,7 +2366,7 @@
     },
     {
      "name": "Francis Evans",
-     "similarity": 78.7
+     "similarity": 78.8
     },
     {
      "name": "Leonardo Lombard",
@@ -2466,7 +2466,7 @@
     },
     {
      "name": "Blake Hardwick",
-     "similarity": 88.8
+     "similarity": 88.9
     },
     {
      "name": "Lachie Jaques",
@@ -2488,11 +2488,11 @@
    "comps": [
     {
      "name": "Darcy Fort",
-     "similarity": 89.3
+     "similarity": 89.2
     },
     {
      "name": "Sam Draper",
-     "similarity": 88.0
+     "similarity": 87.7
     },
     {
      "name": "Ned Moyle",
@@ -2549,11 +2549,11 @@
      "similarity": 81.4
     },
     {
-     "name": "Cam Rayner",
+     "name": "Matthew Cottrell",
      "similarity": 80.8
     },
     {
-     "name": "Matthew Cottrell",
+     "name": "Cam Rayner",
      "similarity": 80.8
     },
     {
@@ -2592,7 +2592,7 @@
     },
     {
      "name": "Luke Jackson",
-     "similarity": 72.9
+     "similarity": 72.3
     },
     {
      "name": "Bailey J. Williams",
@@ -2607,7 +2607,7 @@
      "similarity": 63.0
     },
     {
-     "name": "Kieren Briggs",
+     "name": "Jordon Sweet",
      "similarity": 62.7
     }
    ]
@@ -2653,8 +2653,8 @@
      "similarity": 90.1
     },
     {
-     "name": "Darcy Gardiner",
-     "similarity": 89.9
+     "name": "Harry Dean",
+     "similarity": 89.7
     }
    ]
   },
@@ -2718,7 +2718,7 @@
    "comps": [
     {
      "name": "Ty Gallop",
-     "similarity": 91.5
+     "similarity": 91.0
     },
     {
      "name": "Max Michalanney",
@@ -2733,16 +2733,16 @@
      "similarity": 88.1
     },
     {
-     "name": "Liam Stocker",
-     "similarity": 87.1
+     "name": "Heath Chapman",
+     "similarity": 87.5
     },
     {
-     "name": "Heath Chapman",
-     "similarity": 87.1
+     "name": "Liam Stocker",
+     "similarity": 87.2
     },
     {
      "name": "Josh Lai",
-     "similarity": 86.7
+     "similarity": 86.8
     },
     {
      "name": "Changkuoth Jiath",
@@ -2772,7 +2772,7 @@
     },
     {
      "name": "Jordan Clark",
-     "similarity": 85.9
+     "similarity": 84.5
     },
     {
      "name": "Oliver Florent",
@@ -2783,16 +2783,16 @@
      "similarity": 82.7
     },
     {
+     "name": "Dayne Zorko",
+     "similarity": 81.8
+    },
+    {
      "name": "Bradley Hill",
-     "similarity": 81.4
+     "similarity": 81.5
     },
     {
      "name": "Caleb Daniel",
      "similarity": 81.4
-    },
-    {
-     "name": "Dayne Zorko",
-     "similarity": 81.3
     }
    ]
   },
@@ -2817,10 +2817,6 @@
      "similarity": 87.4
     },
     {
-     "name": "Corey Wagner",
-     "similarity": 85.4
-    },
-    {
      "name": "Marcus Windhager",
      "similarity": 85.2
     },
@@ -2831,6 +2827,10 @@
     {
      "name": "Brayden Cook",
      "similarity": 84.6
+    },
+    {
+     "name": "Corey Wagner",
+     "similarity": 84.5
     },
     {
      "name": "Cooper Lord",
@@ -2994,35 +2994,35 @@
    "comps": [
     {
      "name": "Darcy Fort",
-     "similarity": 88.3
+     "similarity": 87.8
     },
     {
      "name": "Tom De Koning",
-     "similarity": 88.0
+     "similarity": 87.7
     },
     {
      "name": "Jarrod Witts",
-     "similarity": 84.8
+     "similarity": 84.6
     },
     {
      "name": "Ned Moyle",
-     "similarity": 84.0
+     "similarity": 83.9
     },
     {
      "name": "Mitchell Edwards",
-     "similarity": 82.0
+     "similarity": 81.6
     },
     {
      "name": "Nick Bryan",
-     "similarity": 79.4
+     "similarity": 79.3
     },
     {
      "name": "Oliver Hayes-Brown",
-     "similarity": 78.2
+     "similarity": 78.0
     },
     {
      "name": "Jordon Sweet",
-     "similarity": 78.1
+     "similarity": 77.9
     }
    ]
   },
@@ -3051,12 +3051,12 @@
      "similarity": 89.0
     },
     {
-     "name": "Oscar McDonald",
-     "similarity": 88.3
-    },
-    {
      "name": "Toby Pink",
      "similarity": 87.8
+    },
+    {
+     "name": "Oscar McDonald",
+     "similarity": 87.2
     },
     {
      "name": "Josh Lai",
@@ -3064,7 +3064,7 @@
     },
     {
      "name": "Tylar Young",
-     "similarity": 86.3
+     "similarity": 86.4
     },
     {
      "name": "Liam Stocker",
@@ -3102,7 +3102,7 @@
     },
     {
      "name": "Caiden Cleary",
-     "similarity": 85.9
+     "similarity": 86.0
     },
     {
      "name": "Bailey Humphrey",
@@ -3278,7 +3278,7 @@
     },
     {
      "name": "George Wardlaw",
-     "similarity": 88.2
+     "similarity": 88.3
     },
     {
      "name": "Cam Mackenzie",
@@ -3320,6 +3320,10 @@
     },
     {
      "name": "Archie Roberts",
+     "similarity": 80.9
+    },
+    {
+     "name": "Jordan Clark",
      "similarity": 80.8
     },
     {
@@ -3327,12 +3331,8 @@
      "similarity": 80.3
     },
     {
-     "name": "Jordan Clark",
-     "similarity": 80.2
-    },
-    {
      "name": "Dayne Zorko",
-     "similarity": 79.5
+     "similarity": 78.9
     },
     {
      "name": "Jack Sinclair",
@@ -3340,7 +3340,7 @@
     },
     {
      "name": "Lachie Ash",
-     "similarity": 78.1
+     "similarity": 78.0
     },
     {
      "name": "Oliver Florent",
@@ -3366,7 +3366,7 @@
     },
     {
      "name": "Jaspa Fletcher",
-     "similarity": 88.7
+     "similarity": 88.2
     },
     {
      "name": "Joel Jeffrey",
@@ -3420,7 +3420,7 @@
     },
     {
      "name": "Will Ashcroft",
-     "similarity": 82.6
+     "similarity": 82.7
     },
     {
      "name": "Tim Kelly",
@@ -3592,7 +3592,7 @@
    "comps": [
     {
      "name": "Luke Davies-Uniacke",
-     "similarity": 82.3
+     "similarity": 82.4
     },
     {
      "name": "Marcus Bontempelli",
@@ -3604,7 +3604,7 @@
     },
     {
      "name": "Ed Richards",
-     "similarity": 77.3
+     "similarity": 77.4
     },
     {
      "name": "Harley Reid",
@@ -3615,12 +3615,12 @@
      "similarity": 76.2
     },
     {
-     "name": "Bailey Smith",
-     "similarity": 75.5
+     "name": "Will Ashcroft",
+     "similarity": 75.8
     },
     {
-     "name": "Noah Anderson",
-     "similarity": 75.3
+     "name": "Bailey Smith",
+     "similarity": 75.5
     }
    ]
   },
@@ -3646,7 +3646,7 @@
     },
     {
      "name": "Tom Atkins",
-     "similarity": 85.1
+     "similarity": 85.2
     },
     {
      "name": "George Wardlaw",
@@ -3658,11 +3658,11 @@
     },
     {
      "name": "Willem Drew",
-     "similarity": 80.2
+     "similarity": 80.3
     },
     {
      "name": "Alex Davies",
-     "similarity": 79.3
+     "similarity": 79.4
     },
     {
      "name": "Toby Bedford",
@@ -3699,16 +3699,16 @@
      "similarity": 89.0
     },
     {
+     "name": "Sam Switkowski",
+     "similarity": 88.4
+    },
+    {
      "name": "Caiden Cleary",
      "similarity": 87.8
     },
     {
      "name": "Francis Evans",
-     "similarity": 87.7
-    },
-    {
-     "name": "Sam Switkowski",
-     "similarity": 87.7
+     "similarity": 87.8
     },
     {
      "name": "Ben Keays",
@@ -3738,7 +3738,7 @@
     },
     {
      "name": "Nick Daicos",
-     "similarity": 74.7
+     "similarity": 74.8
     },
     {
      "name": "Marcus Bontempelli",
@@ -3758,7 +3758,7 @@
     },
     {
      "name": "Will Ashcroft",
-     "similarity": 67.3
+     "similarity": 67.6
     }
    ]
   },
@@ -3842,11 +3842,11 @@
     },
     {
      "name": "Hugh McCluggage",
-     "similarity": 81.4
+     "similarity": 81.0
     },
     {
      "name": "Hayden Young",
-     "similarity": 80.8
+     "similarity": 79.3
     },
     {
      "name": "Darcy Wilson",
@@ -3868,7 +3868,7 @@
    "comps": [
     {
      "name": "Jye Amiss",
-     "similarity": 91.3
+     "similarity": 90.8
     },
     {
      "name": "Logan McDonald",
@@ -3895,8 +3895,8 @@
      "similarity": 85.0
     },
     {
-     "name": "Liam Ryan",
-     "similarity": 84.2
+     "name": "Oscar Allen",
+     "similarity": 84.5
     }
    ]
   },
@@ -3914,34 +3914,34 @@
    "comps": [
     {
      "name": "Oliver Florent",
-     "similarity": 90.7
+     "similarity": 91.7
     },
     {
      "name": "Trent Rivers",
-     "similarity": 89.1
+     "similarity": 89.6
     },
     {
      "name": "Hugo Hall-Kahan",
-     "similarity": 87.1
-    },
-    {
-     "name": "Lachie Whitfield",
-     "similarity": 86.1
-    },
-    {
-     "name": "Josh Daicos",
-     "similarity": 85.9
+     "similarity": 87.3
     },
     {
      "name": "Lawson Humphries",
-     "similarity": 85.8
+     "similarity": 86.5
     },
     {
-     "name": "Jack Sinclair",
-     "similarity": 85.3
+     "name": "Tom McCarthy",
+     "similarity": 86.1
+    },
+    {
+     "name": "Lachie Whitfield",
+     "similarity": 85.6
     },
     {
      "name": "Wayne Milera",
+     "similarity": 85.6
+    },
+    {
+     "name": "Jack Sinclair",
      "similarity": 85.2
     }
    ]
@@ -4010,7 +4010,7 @@
     },
     {
      "name": "Cam Rayner",
-     "similarity": 86.6
+     "similarity": 86.5
     },
     {
      "name": "Connor Macdonald",
@@ -4076,7 +4076,7 @@
     },
     {
      "name": "Sam Switkowski",
-     "similarity": 85.8
+     "similarity": 85.7
     },
     {
      "name": "Cody Weightman",
@@ -4098,7 +4098,7 @@
    "comps": [
     {
      "name": "Leonardo Lombard",
-     "similarity": 89.0
+     "similarity": 89.1
     },
     {
      "name": "Bailey Humphrey",
@@ -4163,12 +4163,12 @@
      "similarity": 86.3
     },
     {
-     "name": "Max Michalanney",
-     "similarity": 85.6
+     "name": "Heath Chapman",
+     "similarity": 85.8
     },
     {
-     "name": "Heath Chapman",
-     "similarity": 85.4
+     "name": "Max Michalanney",
+     "similarity": 85.6
     },
     {
      "name": "Noah Answerth",
@@ -4198,7 +4198,7 @@
     },
     {
      "name": "George Wardlaw",
-     "similarity": 84.7
+     "similarity": 84.8
     },
     {
      "name": "Tom Liberatore",
@@ -4335,12 +4335,12 @@
      "similarity": 89.4
     },
     {
-     "name": "Blake Hardwick",
-     "similarity": 88.5
+     "name": "Karl Worner",
+     "similarity": 88.7
     },
     {
-     "name": "Karl Worner",
-     "similarity": 88.5
+     "name": "Blake Hardwick",
+     "similarity": 88.6
     },
     {
      "name": "Lachlan Cowan",
@@ -4356,7 +4356,7 @@
     },
     {
      "name": "Brayden Maynard",
-     "similarity": 87.0
+     "similarity": 87.1
     }
    ]
   },
@@ -4377,12 +4377,12 @@
      "similarity": 94.3
     },
     {
-     "name": "Liam Ryan",
-     "similarity": 91.2
+     "name": "Oscar Allen",
+     "similarity": 92.2
     },
     {
-     "name": "Oscar Allen",
-     "similarity": 90.7
+     "name": "Liam Ryan",
+     "similarity": 91.2
     },
     {
      "name": "Jasper Alger",
@@ -4424,7 +4424,7 @@
     },
     {
      "name": "Eric Hipwood",
-     "similarity": 91.3
+     "similarity": 91.0
     },
     {
      "name": "Corey Durdin",
@@ -4447,8 +4447,8 @@
      "similarity": 88.5
     },
     {
-     "name": "Jack Darling",
-     "similarity": 88.0
+     "name": "Oscar Allen",
+     "similarity": 88.1
     }
    ]
   },
@@ -4539,8 +4539,8 @@
      "similarity": 84.3
     },
     {
-     "name": "Leonardo Lombard",
-     "similarity": 83.9
+     "name": "Sam Switkowski",
+     "similarity": 84.0
     }
    ]
   },
@@ -4604,7 +4604,7 @@
    "comps": [
     {
      "name": "Jaspa Fletcher",
-     "similarity": 91.3
+     "similarity": 91.6
     },
     {
      "name": "Bailey Williams",
@@ -4708,15 +4708,11 @@
     },
     {
      "name": "Beau McCreery",
-     "similarity": 80.8
+     "similarity": 80.7
     },
     {
      "name": "Lachie Schultz",
      "similarity": 79.2
-    },
-    {
-     "name": "Cam Rayner",
-     "similarity": 77.5
     },
     {
      "name": "Gryan Miers",
@@ -4725,6 +4721,10 @@
     {
      "name": "Francis Evans",
      "similarity": 76.9
+    },
+    {
+     "name": "Dylan Moore",
+     "similarity": 76.7
     }
    ]
   },
@@ -4762,7 +4762,7 @@
     },
     {
      "name": "Zak Butters",
-     "similarity": 77.3
+     "similarity": 77.4
     },
     {
      "name": "Kysaiah Pickett",
@@ -4770,7 +4770,7 @@
     },
     {
      "name": "Finn Callaghan",
-     "similarity": 77.2
+     "similarity": 77.3
     }
    ]
   },
@@ -4788,7 +4788,7 @@
    "comps": [
     {
      "name": "Oscar McDonald",
-     "similarity": 91.9
+     "similarity": 92.0
     },
     {
      "name": "Josh Lai",
@@ -4804,11 +4804,11 @@
     },
     {
      "name": "Nathan Broad",
-     "similarity": 89.8
+     "similarity": 89.9
     },
     {
      "name": "Heath Chapman",
-     "similarity": 89.6
+     "similarity": 89.7
     },
     {
      "name": "Changkuoth Jiath",
@@ -4834,7 +4834,7 @@
    "comps": [
     {
      "name": "Josh Treacy",
-     "similarity": 86.5
+     "similarity": 87.3
     },
     {
      "name": "Patrick Dangerfield",
@@ -4888,7 +4888,7 @@
     },
     {
      "name": "Lachlan McAndrew",
-     "similarity": 86.6
+     "similarity": 86.7
     },
     {
      "name": "Jordon Sweet",
@@ -4896,7 +4896,7 @@
     },
     {
      "name": "Nick Bryan",
-     "similarity": 83.9
+     "similarity": 84.0
     },
     {
      "name": "Nicholas Madden",
@@ -4972,7 +4972,7 @@
    "comps": [
     {
      "name": "Michael Frederick",
-     "similarity": 89.1
+     "similarity": 90.1
     },
     {
      "name": "Arthur Jones",
@@ -5063,12 +5063,12 @@
    "manual_note": "Heavy midfield minutes drive his numbers, but he remains a genuine small-forward threat — the forward craft the mid-heavy output understates.",
    "comps": [
     {
-     "name": "Shai Bolton",
-     "similarity": 84.8
-    },
-    {
      "name": "Izak Rankine",
      "similarity": 84.6
+    },
+    {
+     "name": "Shai Bolton",
+     "similarity": 84.5
     },
     {
      "name": "Will Day",
@@ -5155,12 +5155,12 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Touk Miller",
-     "similarity": 85.7
+     "name": "Hayden Young",
+     "similarity": 86.4
     },
     {
-     "name": "Hayden Young",
-     "similarity": 84.4
+     "name": "Touk Miller",
+     "similarity": 85.7
     },
     {
      "name": "Tim Kelly",
@@ -5263,20 +5263,20 @@
      "similarity": 84.6
     },
     {
-     "name": "Isaiah Dudley",
-     "similarity": 84.4
-    },
-    {
      "name": "Arthur Jones",
      "similarity": 83.7
+    },
+    {
+     "name": "Michael Frederick",
+     "similarity": 83.5
     },
     {
      "name": "Rhyan Mansell",
      "similarity": 83.4
     },
     {
-     "name": "Michael Frederick",
-     "similarity": 82.8
+     "name": "Isaiah Dudley",
+     "similarity": 83.3
     }
    ]
   },
@@ -5310,7 +5310,11 @@
     },
     {
      "name": "Mitch McGovern",
-     "similarity": 85.7
+     "similarity": 85.8
+    },
+    {
+     "name": "Eric Hipwood",
+     "similarity": 85.6
     },
     {
      "name": "Jack Whitlock",
@@ -5319,10 +5323,6 @@
     {
      "name": "Callum Ah Chee",
      "similarity": 84.8
-    },
-    {
-     "name": "Charlie Spargo",
-     "similarity": 84.7
     }
    ]
   },
@@ -5352,7 +5352,7 @@
     },
     {
      "name": "Darcy Gardiner",
-     "similarity": 91.3
+     "similarity": 91.0
     },
     {
      "name": "Jack Henry",
@@ -5367,7 +5367,7 @@
      "similarity": 90.1
     },
     {
-     "name": "Brandon Zerk-Thatcher",
+     "name": "Alex Pearce",
      "similarity": 88.8
     }
    ]
@@ -5436,7 +5436,7 @@
     },
     {
      "name": "Finn Maginness",
-     "similarity": 87.0
+     "similarity": 87.1
     },
     {
      "name": "Paddy Cross",
@@ -5494,15 +5494,15 @@
     },
     {
      "name": "Darcy Gardiner",
-     "similarity": 92.6
+     "similarity": 92.2
+    },
+    {
+     "name": "Alex Pearce",
+     "similarity": 91.9
     },
     {
      "name": "Jake Kolodjashnij",
      "similarity": 91.7
-    },
-    {
-     "name": "Alex Pearce",
-     "similarity": 91.5
     },
     {
      "name": "Lewis Young",
@@ -5536,7 +5536,7 @@
     },
     {
      "name": "Liam Duggan",
-     "similarity": 88.2
+     "similarity": 88.3
     },
     {
      "name": "Jaspa Fletcher",
@@ -5574,11 +5574,11 @@
     },
     {
      "name": "Will Ashcroft",
-     "similarity": 82.0
+     "similarity": 82.1
     },
     {
      "name": "Izak Rankine",
-     "similarity": 80.5
+     "similarity": 80.6
     },
     {
      "name": "Tim Kelly",
@@ -5598,7 +5598,7 @@
     },
     {
      "name": "Jordan Dawson",
-     "similarity": 77.4
+     "similarity": 77.5
     }
    ]
   },
@@ -5624,7 +5624,7 @@
     },
     {
      "name": "Caleb Serong",
-     "similarity": 72.8
+     "similarity": 72.9
     },
     {
      "name": "Tom Sparrow",
@@ -5644,7 +5644,7 @@
     },
     {
      "name": "Hugo Garcia",
-     "similarity": 70.7
+     "similarity": 70.8
     }
    ]
   },
@@ -5690,7 +5690,7 @@
     },
     {
      "name": "Liam Baker",
-     "similarity": 79.5
+     "similarity": 79.6
     }
    ]
   },
@@ -5712,7 +5712,7 @@
     },
     {
      "name": "Eric Hipwood",
-     "similarity": 90.0
+     "similarity": 89.7
     },
     {
      "name": "Mitch McGovern",
@@ -5735,7 +5735,7 @@
      "similarity": 88.1
     },
     {
-     "name": "Jack Martin",
+     "name": "Nick Larkey",
      "similarity": 87.5
     }
    ]
@@ -5754,7 +5754,7 @@
    "comps": [
     {
      "name": "Dayne Zorko",
-     "similarity": 85.9
+     "similarity": 86.6
     },
     {
      "name": "John Noble",
@@ -5766,7 +5766,7 @@
     },
     {
      "name": "Nick Blakey",
-     "similarity": 78.1
+     "similarity": 78.0
     },
     {
      "name": "Archie Roberts",
@@ -5800,35 +5800,35 @@
    "comps": [
     {
      "name": "Hugh McCluggage",
-     "similarity": 90.2
+     "similarity": 89.6
     },
     {
      "name": "Touk Miller",
-     "similarity": 85.3
+     "similarity": 86.5
     },
     {
      "name": "Will Day",
-     "similarity": 84.4
+     "similarity": 86.4
     },
     {
      "name": "Jy Simpkin",
-     "similarity": 83.8
-    },
-    {
-     "name": "Jagga Smith",
-     "similarity": 83.3
+     "similarity": 82.9
     },
     {
      "name": "Darcy Wilson",
-     "similarity": 83.0
-    },
-    {
-     "name": "Sam Lalor",
      "similarity": 82.9
     },
     {
      "name": "Justin McInerney",
-     "similarity": 82.2
+     "similarity": 82.8
+    },
+    {
+     "name": "Jagga Smith",
+     "similarity": 82.4
+    },
+    {
+     "name": "Sam Lalor",
+     "similarity": 82.4
     }
    ]
   },
@@ -5858,7 +5858,7 @@
     },
     {
      "name": "Jarrod Berry",
-     "similarity": 81.1
+     "similarity": 81.2
     },
     {
      "name": "Blake Acres",
@@ -5869,12 +5869,12 @@
      "similarity": 80.2
     },
     {
-     "name": "Corey Wagner",
-     "similarity": 79.8
-    },
-    {
      "name": "Dylan Stephens",
      "similarity": 79.7
+    },
+    {
+     "name": "Oliver Hollands",
+     "similarity": 79.1
     }
    ]
   },
@@ -5941,16 +5941,16 @@
      "similarity": 91.9
     },
     {
+     "name": "Jordan Clark",
+     "similarity": 89.6
+    },
+    {
      "name": "Oliver Florent",
-     "similarity": 89.3
+     "similarity": 89.4
     },
     {
      "name": "Hugo Hall-Kahan",
      "similarity": 89.3
-    },
-    {
-     "name": "Jordan Clark",
-     "similarity": 89.1
     },
     {
      "name": "Riley Bice",
@@ -6122,23 +6122,23 @@
    "comps": [
     {
      "name": "Brodie Grundy",
-     "similarity": 80.4
+     "similarity": 79.9
     },
     {
      "name": "Tristan Xerri",
-     "similarity": 72.9
+     "similarity": 72.3
     },
     {
      "name": "Rowan Marshall",
-     "similarity": 70.4
+     "similarity": 70.6
     },
     {
      "name": "Jordon Sweet",
-     "similarity": 69.9
+     "similarity": 70.2
     },
     {
      "name": "Lachlan McAndrew",
-     "similarity": 69.5
+     "similarity": 70.0
     },
     {
      "name": "Darcy Cameron",
@@ -6146,11 +6146,11 @@
     },
     {
      "name": "Bailey J. Williams",
-     "similarity": 68.8
+     "similarity": 69.0
     },
     {
      "name": "Toby Nankervis",
-     "similarity": 67.4
+     "similarity": 67.3
     }
    ]
   },
@@ -6168,35 +6168,35 @@
    "comps": [
     {
      "name": "Jai Newcombe",
-     "similarity": 86.9
+     "similarity": 88.0
     },
     {
      "name": "Tim Taranto",
-     "similarity": 85.2
+     "similarity": 85.4
     },
     {
      "name": "Hugo Garcia",
-     "similarity": 83.7
-    },
-    {
-     "name": "Tom Sparrow",
-     "similarity": 80.0
-    },
-    {
-     "name": "Jack Steele",
-     "similarity": 79.6
+     "similarity": 82.7
     },
     {
      "name": "Clayton Oliver",
-     "similarity": 79.1
+     "similarity": 79.8
+    },
+    {
+     "name": "Patrick Cripps",
+     "similarity": 78.8
+    },
+    {
+     "name": "Tom Sparrow",
+     "similarity": 78.5
+    },
+    {
+     "name": "Jack Steele",
+     "similarity": 78.4
     },
     {
      "name": "Matthew Kennedy",
-     "similarity": 78.6
-    },
-    {
-     "name": "Andrew Brayshaw",
-     "similarity": 78.4
+     "similarity": 77.7
     }
    ]
   },
@@ -6214,7 +6214,7 @@
    "comps": [
     {
      "name": "Lachlan McNeil",
-     "similarity": 87.0
+     "similarity": 87.1
     },
     {
      "name": "Nik Cox",
@@ -6360,7 +6360,7 @@
     },
     {
      "name": "Logan Morris",
-     "similarity": 85.2
+     "similarity": 84.8
     },
     {
      "name": "Nick Larkey",
@@ -6398,7 +6398,7 @@
    "comps": [
     {
      "name": "Angus Clarke",
-     "similarity": 87.2
+     "similarity": 87.3
     },
     {
      "name": "Paddy Cross",
@@ -6444,35 +6444,35 @@
    "comps": [
     {
      "name": "Will Lewis",
-     "similarity": 90.7
+     "similarity": 90.2
     },
     {
      "name": "Arthur Jones",
-     "similarity": 88.6
+     "similarity": 89.5
     },
     {
      "name": "Ben Long",
-     "similarity": 88.3
-    },
-    {
-     "name": "Bailey Laurie",
-     "similarity": 88.0
+     "similarity": 89.2
     },
     {
      "name": "Oliver Wiltshire",
-     "similarity": 87.7
+     "similarity": 88.4
+    },
+    {
+     "name": "Bailey Laurie",
+     "similarity": 87.9
     },
     {
      "name": "Steely Green",
-     "similarity": 87.2
-    },
-    {
-     "name": "Talor Byrne",
-     "similarity": 86.4
+     "similarity": 85.9
     },
     {
      "name": "Michael Frederick",
-     "similarity": 84.8
+     "similarity": 85.2
+    },
+    {
+     "name": "Talor Byrne",
+     "similarity": 84.9
     }
    ]
   },
@@ -6544,7 +6544,7 @@
     },
     {
      "name": "Will Ashcroft",
-     "similarity": 81.2
+     "similarity": 80.5
     },
     {
      "name": "Max Hall",
@@ -6555,8 +6555,8 @@
      "similarity": 79.2
     },
     {
-     "name": "Zac Bailey",
-     "similarity": 78.6
+     "name": "Hayden Young",
+     "similarity": 78.2
     },
     {
      "name": "Touk Miller",
@@ -6597,12 +6597,12 @@
      "similarity": 81.3
     },
     {
-     "name": "Jack Ginnivan",
-     "similarity": 80.8
+     "name": "Michael Frederick",
+     "similarity": 80.9
     },
     {
-     "name": "Michael Frederick",
-     "similarity": 80.6
+     "name": "Jack Ginnivan",
+     "similarity": 80.8
     },
     {
      "name": "Jesse Dattoli",
@@ -6736,7 +6736,7 @@
     },
     {
      "name": "Sam Switkowski",
-     "similarity": 89.1
+     "similarity": 89.0
     },
     {
      "name": "Rhylee West",
@@ -6766,7 +6766,7 @@
    "comps": [
     {
      "name": "Jordan De Goey",
-     "similarity": 88.1
+     "similarity": 88.2
     },
     {
      "name": "Jy Simpkin",
@@ -6774,15 +6774,15 @@
     },
     {
      "name": "Zac Bailey",
-     "similarity": 83.6
+     "similarity": 84.0
+    },
+    {
+     "name": "Hayden Young",
+     "similarity": 82.8
     },
     {
      "name": "Darcy Wilson",
      "similarity": 82.4
-    },
-    {
-     "name": "Hayden Young",
-     "similarity": 82.2
     },
     {
      "name": "Oliver Dempsey",
@@ -6882,7 +6882,7 @@
     },
     {
      "name": "Darcy Fort",
-     "similarity": 85.2
+     "similarity": 85.1
     },
     {
      "name": "Nicholas Madden",
@@ -6928,11 +6928,11 @@
     },
     {
      "name": "Karl Worner",
-     "similarity": 82.3
+     "similarity": 82.9
     },
     {
-     "name": "Wayne Milera",
-     "similarity": 81.0
+     "name": "Darcy Wilmot",
+     "similarity": 81.4
     }
    ]
   },
@@ -6962,7 +6962,7 @@
     },
     {
      "name": "Ryan Maric",
-     "similarity": 87.7
+     "similarity": 87.8
     },
     {
      "name": "Nathan O'Driscoll",
@@ -7088,7 +7088,7 @@
    "comps": [
     {
      "name": "Shai Bolton",
-     "similarity": 83.6
+     "similarity": 84.5
     },
     {
      "name": "Marcus Bontempelli",
@@ -7115,8 +7115,8 @@
      "similarity": 73.9
     },
     {
-     "name": "Will Ashcroft",
-     "similarity": 73.5
+     "name": "Nick Daicos",
+     "similarity": 73.4
     }
    ]
   },
@@ -7234,7 +7234,7 @@
     },
     {
      "name": "Mason Cox",
-     "similarity": 88.2
+     "similarity": 88.3
     },
     {
      "name": "Toby Murray",
@@ -7345,8 +7345,8 @@
      "similarity": 79.2
     },
     {
-     "name": "Conor Nash",
-     "similarity": 78.1
+     "name": "Andrew Brayshaw",
+     "similarity": 78.3
     }
    ]
   },
@@ -7371,12 +7371,12 @@
      "similarity": 90.5
     },
     {
-     "name": "Oscar McDonald",
-     "similarity": 90.4
-    },
-    {
      "name": "Luke Trainor",
      "similarity": 90.0
+    },
+    {
+     "name": "Oscar McDonald",
+     "similarity": 89.5
     },
     {
      "name": "Toby Pink",
@@ -7410,35 +7410,35 @@
    "comps": [
     {
      "name": "Riley Thilthorpe",
-     "similarity": 86.5
+     "similarity": 87.3
     },
     {
      "name": "Shannon Neale",
-     "similarity": 84.0
+     "similarity": 84.2
     },
     {
      "name": "Jake Stringer",
-     "similarity": 82.6
+     "similarity": 82.7
     },
     {
      "name": "Aaron Cadman",
-     "similarity": 81.7
-    },
-    {
-     "name": "Charlie Cameron",
-     "similarity": 80.5
-    },
-    {
-     "name": "Patrick Voss",
-     "similarity": 80.2
+     "similarity": 82.3
     },
     {
      "name": "Bayley Fritsch",
-     "similarity": 79.9
+     "similarity": 80.6
+    },
+    {
+     "name": "Patrick Voss",
+     "similarity": 80.5
+    },
+    {
+     "name": "Will Hayward",
+     "similarity": 80.2
     },
     {
      "name": "Oliver Henry",
-     "similarity": 79.9
+     "similarity": 80.1
     }
    ]
   },
@@ -7467,12 +7467,12 @@
      "similarity": 85.4
     },
     {
-     "name": "Callum Mills",
-     "similarity": 84.7
+     "name": "Jordan Clark",
+     "similarity": 84.9
     },
     {
-     "name": "Jordan Clark",
-     "similarity": 83.7
+     "name": "Callum Mills",
+     "similarity": 84.7
     },
     {
      "name": "Archie Roberts",
@@ -7484,7 +7484,7 @@
     },
     {
      "name": "Lachie Whitfield",
-     "similarity": 80.6
+     "similarity": 80.7
     }
    ]
   },
@@ -7509,16 +7509,16 @@
      "similarity": 90.1
     },
     {
-     "name": "Michael Frederick",
-     "similarity": 89.2
-    },
-    {
      "name": "Zac Banch",
      "similarity": 88.7
     },
     {
+     "name": "Michael Frederick",
+     "similarity": 88.6
+    },
+    {
      "name": "Isaiah Dudley",
-     "similarity": 88.0
+     "similarity": 87.9
     },
     {
      "name": "Tom Hanily",
@@ -7572,7 +7572,7 @@
     },
     {
      "name": "Michael Frederick",
-     "similarity": 75.4
+     "similarity": 75.3
     },
     {
      "name": "Tom Cole",
@@ -7597,12 +7597,12 @@
      "similarity": 92.0
     },
     {
-     "name": "Charlie Cameron",
-     "similarity": 91.5
-    },
-    {
      "name": "Aaron Cadman",
      "similarity": 91.3
+    },
+    {
+     "name": "Charlie Cameron",
+     "similarity": 91.0
     },
     {
      "name": "Bayley Fritsch",
@@ -7613,16 +7613,16 @@
      "similarity": 89.5
     },
     {
-     "name": "Patrick Voss",
-     "similarity": 89.1
-    },
-    {
      "name": "Arthur Jones",
      "similarity": 89.0
     },
     {
-     "name": "Kai Lohmann",
-     "similarity": 88.8
+     "name": "Patrick Voss",
+     "similarity": 88.6
+    },
+    {
+     "name": "Mabior Chol",
+     "similarity": 88.2
     }
    ]
   },
@@ -7660,7 +7660,7 @@
     },
     {
      "name": "Sam Lalor",
-     "similarity": 74.2
+     "similarity": 74.3
     },
     {
      "name": "Oliver Dempsey",
@@ -7752,7 +7752,7 @@
     },
     {
      "name": "Corey Wagner",
-     "similarity": 41.0
+     "similarity": 40
     },
     {
      "name": "Jai Serong",
@@ -7778,11 +7778,11 @@
    "comps": [
     {
      "name": "Shaun Mannagh",
-     "similarity": 81.1
+     "similarity": 81.2
     },
     {
      "name": "Connor Macdonald",
-     "similarity": 80.7
+     "similarity": 80.6
     },
     {
      "name": "Kade Chandler",
@@ -7790,7 +7790,7 @@
     },
     {
      "name": "Murphy Reid",
-     "similarity": 79.2
+     "similarity": 80.0
     },
     {
      "name": "Bailey Humphrey",
@@ -7832,7 +7832,7 @@
     },
     {
      "name": "Christian Salem",
-     "similarity": 87.4
+     "similarity": 87.5
     },
     {
      "name": "Zak Johnson",
@@ -7881,16 +7881,16 @@
      "similarity": 89.5
     },
     {
-     "name": "Neil Erasmus",
-     "similarity": 89.3
-    },
-    {
      "name": "Ryan Maric",
      "similarity": 89.1
     },
     {
      "name": "Lachie Weller",
      "similarity": 89.0
+    },
+    {
+     "name": "Neil Erasmus",
+     "similarity": 88.9
     },
     {
      "name": "Sam Clohesy",
@@ -7916,35 +7916,35 @@
    "comps": [
     {
      "name": "Changkuoth Jiath",
-     "similarity": 93.0
+     "similarity": 93.1
     },
     {
      "name": "Blake Howes",
-     "similarity": 91.9
+     "similarity": 92.1
     },
     {
      "name": "Oscar McDonald",
-     "similarity": 90.7
+     "similarity": 90.8
     },
     {
      "name": "Liam Stocker",
-     "similarity": 89.6
+     "similarity": 89.7
     },
     {
      "name": "Kyle Langford",
-     "similarity": 89.5
-    },
-    {
-     "name": "Harry Himmelberg",
-     "similarity": 88.9
+     "similarity": 89.6
     },
     {
      "name": "Josh Lai",
-     "similarity": 88.8
+     "similarity": 88.9
+    },
+    {
+     "name": "Harry Himmelberg",
+     "similarity": 88.6
     },
     {
      "name": "Max Michalanney",
-     "similarity": 88.3
+     "similarity": 88.5
     }
    ]
   },
@@ -7973,12 +7973,12 @@
      "similarity": 89.7
     },
     {
-     "name": "Jacob van Rooyen",
-     "similarity": 88.8
+     "name": "Jye Amiss",
+     "similarity": 89.0
     },
     {
-     "name": "Jye Amiss",
-     "similarity": 88.6
+     "name": "Jacob van Rooyen",
+     "similarity": 88.8
     },
     {
      "name": "Joel Amartey",
@@ -7990,7 +7990,7 @@
     },
     {
      "name": "Darcy Fogarty",
-     "similarity": 87.8
+     "similarity": 87.9
     }
    ]
   },
@@ -8077,12 +8077,12 @@
      "similarity": 87.6
     },
     {
-     "name": "Neil Erasmus",
-     "similarity": 86.8
-    },
-    {
      "name": "Matt Roberts",
      "similarity": 86.7
+    },
+    {
+     "name": "Neil Erasmus",
+     "similarity": 86.5
     }
    ]
   },
@@ -8127,8 +8127,8 @@
      "similarity": 81.7
     },
     {
-     "name": "Cam Mackenzie",
-     "similarity": 81.3
+     "name": "Angus Sheldrick",
+     "similarity": 81.4
     }
    ]
   },
@@ -8165,15 +8165,15 @@
      "similarity": 89.6
     },
     {
+     "name": "Darcy Gardiner",
+     "similarity": 89.3
+    },
+    {
      "name": "Harrison Jones",
      "similarity": 89.0
     },
     {
      "name": "James Leake",
-     "similarity": 88.8
-    },
-    {
-     "name": "Liam Puncher",
      "similarity": 88.8
     }
    ]
@@ -8254,11 +8254,11 @@
     },
     {
      "name": "Darcy Wilson",
-     "similarity": 78.0
+     "similarity": 78.1
     },
     {
      "name": "Hayden Young",
-     "similarity": 77.9
+     "similarity": 77.8
     },
     {
      "name": "Tim Kelly",
@@ -8292,7 +8292,7 @@
     },
     {
      "name": "Darcy Wilmot",
-     "similarity": 90.0
+     "similarity": 90.2
     },
     {
      "name": "Oliver Florent",
@@ -8308,7 +8308,7 @@
     },
     {
      "name": "Karl Worner",
-     "similarity": 88.4
+     "similarity": 88.5
     },
     {
      "name": "Liam Duggan",
@@ -8349,16 +8349,16 @@
      "similarity": 87.1
     },
     {
+     "name": "Oscar McDonald",
+     "similarity": 86.9
+    },
+    {
      "name": "Jayden Laverde",
      "similarity": 86.6
     },
     {
      "name": "Billy Frampton",
      "similarity": 86.6
-    },
-    {
-     "name": "Josh Lai",
-     "similarity": 86.4
     }
    ]
   },
@@ -8410,8 +8410,8 @@
   },
   "kai lohmann": {
    "name": "Kai Lohmann",
-   "role": "gen_fwd",
-   "role_label": "General forward",
+   "role": "small_fwd",
+   "role_label": "Pressure small forward",
    "role_group": "FWD",
    "confidence": "low",
    "secondary_role": null,
@@ -8421,36 +8421,36 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Paul Curtis",
-     "similarity": 92.7
+     "name": "Ben Keays",
+     "similarity": 88.2
     },
     {
-     "name": "Shannon Neale",
-     "similarity": 89.1
+     "name": "Josh Rachele",
+     "similarity": 87.0
     },
     {
-     "name": "Oliver Henry",
-     "similarity": 88.8
+     "name": "Bailey Humphrey",
+     "similarity": 82.9
     },
     {
-     "name": "Jake Stringer",
-     "similarity": 86.7
+     "name": "Francis Evans",
+     "similarity": 82.4
     },
     {
-     "name": "Patrick Voss",
-     "similarity": 86.2
+     "name": "Angus Anderson",
+     "similarity": 82.3
     },
     {
-     "name": "Charlie Cameron",
-     "similarity": 85.0
+     "name": "Harry Sharp",
+     "similarity": 80.5
     },
     {
-     "name": "Bayley Fritsch",
-     "similarity": 84.7
+     "name": "Lachie Schultz",
+     "similarity": 80.1
     },
     {
-     "name": "Arthur Jones",
-     "similarity": 84.5
+     "name": "Phoenix Gothard",
+     "similarity": 80.0
     }
    ]
   },
@@ -8568,7 +8568,7 @@
     },
     {
      "name": "Ty Gallop",
-     "similarity": 89.2
+     "similarity": 89.0
     },
     {
      "name": "Brady Hough",
@@ -8576,7 +8576,7 @@
     },
     {
      "name": "Heath Chapman",
-     "similarity": 88.3
+     "similarity": 88.5
     },
     {
      "name": "James Trezise",
@@ -8584,7 +8584,7 @@
     },
     {
      "name": "Liam Stocker",
-     "similarity": 87.3
+     "similarity": 87.4
     },
     {
      "name": "Luke Trainor",
@@ -8626,7 +8626,7 @@
     },
     {
      "name": "Corey Wagner",
-     "similarity": 56.0
+     "similarity": 54.7
     },
     {
      "name": "Dylan Stephens",
@@ -8672,7 +8672,7 @@
     },
     {
      "name": "Darcy Gardiner",
-     "similarity": 89.3
+     "similarity": 89.5
     },
     {
      "name": "Brandon Zerk-Thatcher",
@@ -8702,7 +8702,7 @@
     },
     {
      "name": "Daniel Curtin",
-     "similarity": 89.3
+     "similarity": 89.4
     },
     {
      "name": "Dion Prestia",
@@ -8714,7 +8714,7 @@
     },
     {
      "name": "Matthew Johnson",
-     "similarity": 88.5
+     "similarity": 88.6
     },
     {
      "name": "Jake Soligo",
@@ -8755,12 +8755,12 @@
      "similarity": 90.6
     },
     {
-     "name": "Wade Derksen",
-     "similarity": 88.7
+     "name": "Oscar McDonald",
+     "similarity": 89.6
     },
     {
-     "name": "Oscar McDonald",
-     "similarity": 88.5
+     "name": "Wade Derksen",
+     "similarity": 88.7
     },
     {
      "name": "Nathan Broad",
@@ -8771,7 +8771,7 @@
      "similarity": 86.3
     },
     {
-     "name": "Jake Lever",
+     "name": "Harris Andrews",
      "similarity": 86.0
     }
    ]
@@ -8802,7 +8802,7 @@
     },
     {
      "name": "Jaspa Fletcher",
-     "similarity": 87.0
+     "similarity": 86.8
     },
     {
      "name": "Lachlan Cowan",
@@ -8994,7 +8994,7 @@
     },
     {
      "name": "Adam Treloar",
-     "similarity": 81.2
+     "similarity": 81.1
     },
     {
      "name": "Christian Moraes",
@@ -9032,7 +9032,7 @@
     },
     {
      "name": "Tyler Sonsie",
-     "similarity": 88.7
+     "similarity": 88.8
     },
     {
      "name": "Jai Murray",
@@ -9074,7 +9074,7 @@
     },
     {
      "name": "Mason Cox",
-     "similarity": 89.8
+     "similarity": 89.9
     },
     {
      "name": "Samson Ryan",
@@ -9131,16 +9131,16 @@
      "similarity": 64.0
     },
     {
-     "name": "Corey Wagner",
-     "similarity": 61.3
-    },
-    {
      "name": "Jai Serong",
      "similarity": 60.9
     },
     {
      "name": "Dylan Stephens",
-     "similarity": 60.3
+     "similarity": 60.4
+    },
+    {
+     "name": "Corey Wagner",
+     "similarity": 59.8
     }
    ]
   },
@@ -9149,7 +9149,7 @@
    "role": "lockdown_def",
    "role_label": "Lockdown key defender",
    "role_group": "DEF",
-   "confidence": "high",
+   "confidence": "medium",
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
@@ -9170,7 +9170,7 @@
     },
     {
      "name": "Judd McVee",
-     "similarity": 86.4
+     "similarity": 86.2
     },
     {
      "name": "Harry Kyle",
@@ -9212,7 +9212,7 @@
     },
     {
      "name": "Oscar McDonald",
-     "similarity": 88.7
+     "similarity": 89.4
     },
     {
      "name": "Charlie Comben",
@@ -9220,7 +9220,7 @@
     },
     {
      "name": "Jayden Laverde",
-     "similarity": 87.9
+     "similarity": 88.0
     },
     {
      "name": "Liam Stocker",
@@ -9254,23 +9254,19 @@
     },
     {
      "name": "Patrick Voss",
-     "similarity": 91.7
+     "similarity": 92.0
     },
     {
      "name": "Aaron Cadman",
      "similarity": 90.3
     },
     {
-     "name": "Charlie Cameron",
-     "similarity": 89.4
-    },
-    {
      "name": "Jake Stringer",
      "similarity": 89.1
     },
     {
-     "name": "Kai Lohmann",
-     "similarity": 89.1
+     "name": "Charlie Cameron",
+     "similarity": 89.0
     },
     {
      "name": "Paul Curtis",
@@ -9279,6 +9275,10 @@
     {
      "name": "Mabior Chol",
      "similarity": 88.3
+    },
+    {
+     "name": "Bayley Fritsch",
+     "similarity": 88.2
     }
    ]
   },
@@ -9296,35 +9296,35 @@
    "comps": [
     {
      "name": "Harry Rowston",
-     "similarity": 90.5
+     "similarity": 90.4
     },
     {
      "name": "Daniel Curtin",
-     "similarity": 89.4
+     "similarity": 89.7
     },
     {
      "name": "Dion Prestia",
-     "similarity": 89.0
+     "similarity": 89.3
     },
     {
      "name": "Ryan Angwin",
-     "similarity": 88.5
+     "similarity": 88.6
     },
     {
      "name": "Mattaes Phillipou",
-     "similarity": 88.1
-    },
-    {
-     "name": "Jaeger O'Meara",
-     "similarity": 87.0
+     "similarity": 88.3
     },
     {
      "name": "Jake Soligo",
-     "similarity": 86.9
+     "similarity": 86.8
+    },
+    {
+     "name": "Jaeger O'Meara",
+     "similarity": 86.7
     },
     {
      "name": "Stephen Coniglio",
-     "similarity": 86.6
+     "similarity": 86.3
     }
    ]
   },
@@ -9341,8 +9341,12 @@
    "manual_note": null,
    "comps": [
     {
+     "name": "Kai Lohmann",
+     "similarity": 87.0
+    },
+    {
      "name": "Bailey Humphrey",
-     "similarity": 86.9
+     "similarity": 87.0
     },
     {
      "name": "Ben Keays",
@@ -9350,7 +9354,7 @@
     },
     {
      "name": "Cam Rayner",
-     "similarity": 84.8
+     "similarity": 85.0
     },
     {
      "name": "Dylan Moore",
@@ -9367,10 +9371,6 @@
     {
      "name": "Shaun Mannagh",
      "similarity": 82.5
-    },
-    {
-     "name": "Francis Evans",
-     "similarity": 82.2
     }
    ]
   },
@@ -9395,16 +9395,16 @@
      "similarity": 90.9
     },
     {
+     "name": "Sam Switkowski",
+     "similarity": 89.5
+    },
+    {
      "name": "Brad Close",
      "similarity": 89.5
     },
     {
      "name": "Rhylee West",
      "similarity": 89.5
-    },
-    {
-     "name": "Sam Switkowski",
-     "similarity": 89.4
     },
     {
      "name": "Matthew Cottrell",
@@ -9438,31 +9438,31 @@
     },
     {
      "name": "Lawson Humphries",
-     "similarity": 90.0
+     "similarity": 90.2
     },
     {
      "name": "Karl Worner",
-     "similarity": 89.8
+     "similarity": 89.9
     },
     {
      "name": "Dan Houston",
-     "similarity": 89.4
+     "similarity": 89.0
     },
     {
      "name": "Josh Battle",
-     "similarity": 87.5
+     "similarity": 88.4
     },
     {
      "name": "Blake Hardwick",
-     "similarity": 87.0
+     "similarity": 87.3
     },
     {
-     "name": "Rory Laird",
-     "similarity": 86.9
+     "name": "Darcy Byrne-Jones",
+     "similarity": 86.7
     },
     {
      "name": "Luke Parker",
-     "similarity": 86.4
+     "similarity": 86.6
     }
    ]
   },
@@ -9484,7 +9484,7 @@
     },
     {
      "name": "Angus Sheldrick",
-     "similarity": 87.5
+     "similarity": 87.7
     },
     {
      "name": "James Peatling",
@@ -9572,11 +9572,11 @@
    "comps": [
     {
      "name": "Neil Erasmus",
-     "similarity": 90.2
+     "similarity": 90.0
     },
     {
      "name": "Jarrod Berry",
-     "similarity": 89.0
+     "similarity": 89.7
     },
     {
      "name": "Harry Morrison",
@@ -9596,7 +9596,7 @@
     },
     {
      "name": "Brayden Cook",
-     "similarity": 85.4
+     "similarity": 85.5
     },
     {
      "name": "Steele Sidebottom",
@@ -9618,11 +9618,11 @@
    "comps": [
     {
      "name": "Murphy Reid",
-     "similarity": 85.8
+     "similarity": 86.7
     },
     {
      "name": "Cam Rayner",
-     "similarity": 85.4
+     "similarity": 85.0
     },
     {
      "name": "Dylan Moore",
@@ -9638,7 +9638,7 @@
     },
     {
      "name": "Braeden Campbell",
-     "similarity": 80.7
+     "similarity": 80.6
     },
     {
      "name": "Alex Neal-Bullen",
@@ -9688,7 +9688,7 @@
     },
     {
      "name": "Matthew Johnson",
-     "similarity": 86.9
+     "similarity": 86.8
     },
     {
      "name": "Jye Caldwell",
@@ -9714,7 +9714,7 @@
     },
     {
      "name": "Matthew Kennedy",
-     "similarity": 89.2
+     "similarity": 89.3
     },
     {
      "name": "George Hewett",
@@ -9764,7 +9764,7 @@
     },
     {
      "name": "Tom Blamires",
-     "similarity": 88.7
+     "similarity": 88.8
     },
     {
      "name": "Hugo Ralphsmith",
@@ -9776,15 +9776,15 @@
     },
     {
      "name": "Steele Sidebottom",
-     "similarity": 88.3
+     "similarity": 88.4
     },
     {
      "name": "Matt Roberts",
      "similarity": 87.8
     },
     {
-     "name": "Sam Swadling",
-     "similarity": 86.9
+     "name": "Neil Erasmus",
+     "similarity": 87.1
     }
    ]
   },
@@ -9806,7 +9806,7 @@
     },
     {
      "name": "Oscar McDonald",
-     "similarity": 88.5
+     "similarity": 87.4
     },
     {
      "name": "Tom McDonald",
@@ -9814,7 +9814,7 @@
     },
     {
      "name": "Liam Stocker",
-     "similarity": 86.6
+     "similarity": 86.7
     },
     {
      "name": "Nathan Broad",
@@ -9848,7 +9848,7 @@
    "comps": [
     {
      "name": "Heath Chapman",
-     "similarity": 91.9
+     "similarity": 92.1
     },
     {
      "name": "James Trezise",
@@ -9876,7 +9876,7 @@
     },
     {
      "name": "Oscar McDonald",
-     "similarity": 89.0
+     "similarity": 88.7
     }
    ]
   },
@@ -9894,7 +9894,7 @@
    "comps": [
     {
      "name": "Jack Graham",
-     "similarity": 89.8
+     "similarity": 89.9
     },
     {
      "name": "James Rowbottom",
@@ -9902,7 +9902,7 @@
     },
     {
      "name": "Edward Allan",
-     "similarity": 85.6
+     "similarity": 85.7
     },
     {
      "name": "Hugh Boxshall",
@@ -9986,7 +9986,7 @@
    "comps": [
     {
      "name": "Mason Cox",
-     "similarity": 90.8
+     "similarity": 90.3
     },
     {
      "name": "Oscar Steene",
@@ -10014,7 +10014,7 @@
     },
     {
      "name": "Louis Emmett",
-     "similarity": 84.8
+     "similarity": 84.9
     }
    ]
   },
@@ -10052,7 +10052,7 @@
     },
     {
      "name": "Rhylee West",
-     "similarity": 87.7
+     "similarity": 87.8
     },
     {
      "name": "Phoenix Gothard",
@@ -10106,7 +10106,7 @@
     },
     {
      "name": "Ryan Lester",
-     "similarity": 86.8
+     "similarity": 86.6
     }
    ]
   },
@@ -10128,7 +10128,7 @@
     },
     {
      "name": "Josh Battle",
-     "similarity": 90.4
+     "similarity": 90.5
     },
     {
      "name": "Luke Parker",
@@ -10136,7 +10136,7 @@
     },
     {
      "name": "Karl Worner",
-     "similarity": 88.3
+     "similarity": 88.2
     },
     {
      "name": "Josh Worrell",
@@ -10170,35 +10170,35 @@
    "comps": [
     {
      "name": "Jake Kolodjashnij",
-     "similarity": 88.0
+     "similarity": 87.7
     },
     {
      "name": "James O'Donnell",
-     "similarity": 87.0
-    },
-    {
-     "name": "Aidan Corr",
-     "similarity": 86.7
+     "similarity": 86.6
     },
     {
      "name": "Saad El-Hawli",
-     "similarity": 86.4
+     "similarity": 86.2
+    },
+    {
+     "name": "Aidan Corr",
+     "similarity": 86.1
     },
     {
      "name": "Jack Buckley",
-     "similarity": 85.8
-    },
-    {
-     "name": "Lewis Melican",
      "similarity": 85.4
     },
     {
-     "name": "Jordon Butts",
+     "name": "Lewis Melican",
      "similarity": 85.2
     },
     {
      "name": "Lewis Young",
      "similarity": 85.0
+    },
+    {
+     "name": "Jordon Butts",
+     "similarity": 84.7
     }
    ]
   },
@@ -10243,8 +10243,8 @@
      "similarity": 88.8
     },
     {
-     "name": "Alex Pearce",
-     "similarity": 88.4
+     "name": "Jack Buckley",
+     "similarity": 87.8
     }
    ]
   },
@@ -10286,7 +10286,7 @@
     },
     {
      "name": "Harry McKay",
-     "similarity": 88.1
+     "similarity": 88.2
     },
     {
      "name": "Mitch Lewis",
@@ -10354,35 +10354,35 @@
    "comps": [
     {
      "name": "Shannon Neale",
-     "similarity": 91.7
+     "similarity": 92.0
     },
     {
      "name": "Aaron Cadman",
-     "similarity": 91.5
-    },
-    {
-     "name": "Bayley Fritsch",
-     "similarity": 90.2
+     "similarity": 90.4
     },
     {
      "name": "Paul Curtis",
-     "similarity": 89.3
+     "similarity": 89.4
+    },
+    {
+     "name": "Bayley Fritsch",
+     "similarity": 88.9
     },
     {
      "name": "Oliver Henry",
-     "similarity": 89.1
+     "similarity": 88.6
     },
     {
      "name": "Mabior Chol",
-     "similarity": 88.4
+     "similarity": 87.2
     },
     {
      "name": "Charlie Cameron",
-     "similarity": 87.5
+     "similarity": 86.8
     },
     {
      "name": "Ben Long",
-     "similarity": 87.1
+     "similarity": 85.7
     }
    ]
   },
@@ -10496,11 +10496,11 @@
     },
     {
      "name": "Bayley Fritsch",
-     "similarity": 87.5
+     "similarity": 87.6
     },
     {
      "name": "Mabior Chol",
-     "similarity": 87.2
+     "similarity": 87.3
     },
     {
      "name": "Aaron Cadman",
@@ -10511,12 +10511,12 @@
      "similarity": 87.0
     },
     {
-     "name": "Michael Frederick",
-     "similarity": 86.2
-    },
-    {
      "name": "Ben Long",
      "similarity": 85.8
+    },
+    {
+     "name": "Michael Frederick",
+     "similarity": 85.7
     },
     {
      "name": "Mitch Owens",
@@ -10646,7 +10646,7 @@
     },
     {
      "name": "Jarrod Berry",
-     "similarity": 88.6
+     "similarity": 88.2
     },
     {
      "name": "Nathan O'Driscoll",
@@ -10737,12 +10737,12 @@
      "similarity": 88.5
     },
     {
-     "name": "Daniel Turner",
-     "similarity": 88.2
+     "name": "Oscar McDonald",
+     "similarity": 88.3
     },
     {
-     "name": "Oscar McDonald",
-     "similarity": 88.0
+     "name": "Daniel Turner",
+     "similarity": 88.2
     },
     {
      "name": "Changkuoth Jiath",
@@ -10821,24 +10821,24 @@
      "similarity": 91.8
     },
     {
-     "name": "Patrick Voss",
-     "similarity": 91.5
-    },
-    {
      "name": "Oliver Henry",
      "similarity": 91.3
+    },
+    {
+     "name": "Patrick Voss",
+     "similarity": 90.4
     },
     {
      "name": "Shannon Neale",
      "similarity": 90.3
     },
     {
-     "name": "Charlie Cameron",
-     "similarity": 90.0
-    },
-    {
      "name": "Arthur Jones",
      "similarity": 89.1
+    },
+    {
+     "name": "Charlie Cameron",
+     "similarity": 88.9
     },
     {
      "name": "Ben Long",
@@ -10863,20 +10863,20 @@
      "similarity": 86.4
     },
     {
-     "name": "Hayden Young",
-     "similarity": 81.4
-    },
-    {
      "name": "Jase Burgoyne",
      "similarity": 80.9
     },
     {
-     "name": "Hugh McCluggage",
-     "similarity": 80.8
+     "name": "Hayden Young",
+     "similarity": 80.5
     },
     {
      "name": "Jack Crisp",
      "similarity": 80.4
+    },
+    {
+     "name": "Hugh McCluggage",
+     "similarity": 80.3
     },
     {
      "name": "Caleb Windsor",
@@ -10918,7 +10918,7 @@
     },
     {
      "name": "Luke McDonald",
-     "similarity": 90.2
+     "similarity": 90.3
     },
     {
      "name": "Isaac Quaynor",
@@ -10926,7 +10926,7 @@
     },
     {
      "name": "Karl Worner",
-     "similarity": 89.4
+     "similarity": 89.6
     },
     {
      "name": "Joe Fonti",
@@ -10934,7 +10934,7 @@
     },
     {
      "name": "Zach Guthrie",
-     "similarity": 88.5
+     "similarity": 88.6
     }
    ]
   },
@@ -10956,11 +10956,11 @@
     },
     {
      "name": "Dyson Sharp",
-     "similarity": 88.3
+     "similarity": 88.4
     },
     {
      "name": "Matthew Johnson",
-     "similarity": 88.1
+     "similarity": 88.3
     },
     {
      "name": "James Jordon",
@@ -10976,7 +10976,7 @@
     },
     {
      "name": "Harry Rowston",
-     "similarity": 86.7
+     "similarity": 86.8
     },
     {
      "name": "Ryan Angwin",
@@ -10989,44 +10989,44 @@
    "role": "outside_mid",
    "role_label": "Outside / run midfielder",
    "role_group": "MID",
-   "confidence": "high",
-   "secondary_role": null,
-   "secondary_label": null,
+   "confidence": "low",
+   "secondary_role": "ruck",
+   "secondary_label": "Ruck",
    "official_position": "Midfielder",
    "manual": false,
    "manual_note": null,
    "comps": [
     {
      "name": "Jai Serong",
-     "similarity": 90.2
+     "similarity": 90.0
     },
     {
      "name": "Harry Morrison",
-     "similarity": 89.4
+     "similarity": 89.1
     },
     {
      "name": "Nathan O'Driscoll",
-     "similarity": 89.3
+     "similarity": 88.9
     },
     {
      "name": "Jarrod Berry",
-     "similarity": 88.0
+     "similarity": 87.9
     },
     {
      "name": "Isaac Cumming",
-     "similarity": 87.7
+     "similarity": 87.8
     },
     {
      "name": "Ryan Maric",
-     "similarity": 86.9
+     "similarity": 87.3
     },
     {
      "name": "Steele Sidebottom",
-     "similarity": 86.9
+     "similarity": 87.2
     },
     {
-     "name": "Sam Clohesy",
-     "similarity": 86.8
+     "name": "Tyler Sonsie",
+     "similarity": 87.1
     }
    ]
   },
@@ -11048,11 +11048,11 @@
     },
     {
      "name": "Joel Fitzgerald",
-     "similarity": 87.5
+     "similarity": 87.7
     },
     {
      "name": "Matthew Johnson",
-     "similarity": 85.5
+     "similarity": 85.4
     },
     {
      "name": "James Peatling",
@@ -11060,11 +11060,11 @@
     },
     {
      "name": "Ryley Sanders",
-     "similarity": 84.4
+     "similarity": 84.5
     },
     {
      "name": "Harvey Thomas",
-     "similarity": 84.4
+     "similarity": 84.2
     },
     {
      "name": "Sam Durham",
@@ -11072,7 +11072,7 @@
     },
     {
      "name": "Dion Prestia",
-     "similarity": 84.0
+     "similarity": 83.9
     }
    ]
   },
@@ -11118,7 +11118,7 @@
     },
     {
      "name": "Matthew Jefferson",
-     "similarity": 88.8
+     "similarity": 88.9
     }
    ]
   },
@@ -11140,7 +11140,7 @@
     },
     {
      "name": "Michael Frederick",
-     "similarity": 91.2
+     "similarity": 90.9
     },
     {
      "name": "Bayley Fritsch",
@@ -11151,16 +11151,16 @@
      "similarity": 89.7
     },
     {
+     "name": "Isaiah Dudley",
+     "similarity": 89.5
+    },
+    {
      "name": "Aaron Cadman",
      "similarity": 89.1
     },
     {
      "name": "Oliver Henry",
      "similarity": 89.0
-    },
-    {
-     "name": "Isaiah Dudley",
-     "similarity": 88.6
     },
     {
      "name": "Will Lewis",
@@ -11181,36 +11181,36 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Ben King",
-     "similarity": 91.3
+     "name": "Nick Larkey",
+     "similarity": 90.9
     },
     {
-     "name": "Nick Larkey",
-     "similarity": 90.6
+     "name": "Ben King",
+     "similarity": 90.8
     },
     {
      "name": "Logan McDonald",
-     "similarity": 88.6
-    },
-    {
-     "name": "Nate Caddy",
-     "similarity": 86.8
+     "similarity": 89.0
     },
     {
      "name": "Aaron Naughton",
-     "similarity": 86.7
+     "similarity": 87.3
+    },
+    {
+     "name": "Nate Caddy",
+     "similarity": 87.3
     },
     {
      "name": "Tim Membrey",
-     "similarity": 85.0
+     "similarity": 85.1
     },
     {
-     "name": "Jay Polkinghorne",
-     "similarity": 83.9
+     "name": "Logan Morris",
+     "similarity": 84.2
     },
     {
      "name": "Joel Amartey",
-     "similarity": 83.8
+     "similarity": 84.0
     }
    ]
   },
@@ -11298,7 +11298,7 @@
     },
     {
      "name": "Sam Davidson",
-     "similarity": 85.2
+     "similarity": 85.3
     },
     {
      "name": "Lachlan McNeil",
@@ -11348,7 +11348,7 @@
     },
     {
      "name": "Will Graham",
-     "similarity": 85.8
+     "similarity": 85.9
     }
    ]
   },
@@ -11373,10 +11373,6 @@
      "similarity": 81.5
     },
     {
-     "name": "Will Ashcroft",
-     "similarity": 80.8
-    },
-    {
      "name": "Will Day",
      "similarity": 80.5
     },
@@ -11389,11 +11385,15 @@
      "similarity": 79.8
     },
     {
-     "name": "Shai Bolton",
-     "similarity": 79.7
+     "name": "Izak Rankine",
+     "similarity": 79.6
     },
     {
-     "name": "Izak Rankine",
+     "name": "Shai Bolton",
+     "similarity": 79.5
+    },
+    {
+     "name": "Will Ashcroft",
      "similarity": 79.5
     }
    ]
@@ -11415,16 +11415,16 @@
      "similarity": 91.5
     },
     {
-     "name": "Isaiah Dudley",
-     "similarity": 87.7
+     "name": "Conor McKenna",
+     "similarity": 89.3
     },
     {
-     "name": "Conor McKenna",
-     "similarity": 87.6
+     "name": "Isaiah Dudley",
+     "similarity": 88.4
     },
     {
      "name": "Zac Banch",
-     "similarity": 87.5
+     "similarity": 87.4
     },
     {
      "name": "Tom Hanily",
@@ -11439,8 +11439,8 @@
      "similarity": 86.0
     },
     {
-     "name": "Michael Frederick",
-     "similarity": 85.7
+     "name": "Arthur Jones",
+     "similarity": 85.2
     }
    ]
   },
@@ -11474,7 +11474,7 @@
     },
     {
      "name": "Max Kondogiannis",
-     "similarity": 85.8
+     "similarity": 85.9
     },
     {
      "name": "Ewan Mackinlay",
@@ -11504,7 +11504,7 @@
    "comps": [
     {
      "name": "Caleb Serong",
-     "similarity": 86.9
+     "similarity": 88.0
     },
     {
      "name": "Clayton Oliver",
@@ -11524,7 +11524,7 @@
     },
     {
      "name": "Hugo Garcia",
-     "similarity": 80.2
+     "similarity": 80.3
     },
     {
      "name": "Matthew Kennedy",
@@ -11532,7 +11532,7 @@
     },
     {
      "name": "Jack Steele",
-     "similarity": 76.7
+     "similarity": 76.8
     }
    ]
   },
@@ -11557,28 +11557,28 @@
      "similarity": 88.7
     },
     {
-     "name": "Michael Frederick",
-     "similarity": 88.1
-    },
-    {
      "name": "Tom Hanily",
      "similarity": 88.1
     },
     {
+     "name": "Michael Frederick",
+     "similarity": 87.8
+    },
+    {
      "name": "Oliver Wiltshire",
-     "similarity": 87.5
+     "similarity": 87.4
     },
     {
      "name": "Conor McKenna",
-     "similarity": 85.5
+     "similarity": 86.2
+    },
+    {
+     "name": "Isaiah Dudley",
+     "similarity": 84.5
     },
     {
      "name": "Arthur Jones",
      "similarity": 84.3
-    },
-    {
-     "name": "Isaiah Dudley",
-     "similarity": 83.7
     }
    ]
   },
@@ -11600,7 +11600,7 @@
     },
     {
      "name": "Mason Cox",
-     "similarity": 88.5
+     "similarity": 88.2
     },
     {
      "name": "Samson Ryan",
@@ -11738,7 +11738,7 @@
     },
     {
      "name": "Darcy Fort",
-     "similarity": 88.0
+     "similarity": 88.3
     },
     {
      "name": "Mitchell Edwards",
@@ -11762,7 +11762,7 @@
     },
     {
      "name": "Sam Draper",
-     "similarity": 84.0
+     "similarity": 83.9
     }
    ]
   },
@@ -11780,35 +11780,35 @@
    "comps": [
     {
      "name": "Josh Battle",
-     "similarity": 90.6
+     "similarity": 90.7
     },
     {
      "name": "Luke Ryan",
-     "similarity": 89.9
+     "similarity": 90.5
     },
     {
      "name": "Darcy Wilmot",
-     "similarity": 89.8
+     "similarity": 89.9
     },
     {
      "name": "Logan Evans",
-     "similarity": 89.4
+     "similarity": 89.6
     },
     {
      "name": "Isaac Quaynor",
-     "similarity": 88.5
+     "similarity": 88.7
     },
     {
      "name": "Lawson Humphries",
-     "similarity": 88.4
+     "similarity": 88.5
     },
     {
      "name": "Bodhi Uwland",
-     "similarity": 88.3
+     "similarity": 88.2
     },
     {
      "name": "Blake Hardwick",
-     "similarity": 87.9
+     "similarity": 87.4
     }
    ]
   },
@@ -11846,7 +11846,7 @@
     },
     {
      "name": "Hugh Bond",
-     "similarity": 84.6
+     "similarity": 84.7
     },
     {
      "name": "Harry Kyle",
@@ -11900,7 +11900,7 @@
     },
     {
      "name": "Ryan Maric",
-     "similarity": 83.7
+     "similarity": 83.8
     }
    ]
   },
@@ -11922,7 +11922,7 @@
     },
     {
      "name": "Matthew Johnson",
-     "similarity": 90.5
+     "similarity": 90.4
     },
     {
      "name": "Jaeger O'Meara",
@@ -11968,7 +11968,7 @@
     },
     {
      "name": "Kieren Briggs",
-     "similarity": 86.6
+     "similarity": 86.7
     },
     {
      "name": "Bailey J. Williams",
@@ -12026,11 +12026,11 @@
     },
     {
      "name": "Harry Perryman",
-     "similarity": 88.9
+     "similarity": 89.0
     },
     {
      "name": "Luke McDonald",
-     "similarity": 88.4
+     "similarity": 88.5
     },
     {
      "name": "Isaac Quaynor",
@@ -12072,7 +12072,7 @@
     },
     {
      "name": "Oscar Allen",
-     "similarity": 86.9
+     "similarity": 86.7
     },
     {
      "name": "Charlie West",
@@ -12122,7 +12122,7 @@
     },
     {
      "name": "Conor Stone",
-     "similarity": 76.9
+     "similarity": 77.0
     },
     {
      "name": "Zeke Uwland",
@@ -12214,7 +12214,7 @@
     },
     {
      "name": "Dylan Patterson",
-     "similarity": 87.0
+     "similarity": 87.1
     },
     {
      "name": "Luke Pedlar",
@@ -12239,16 +12239,16 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Mason Cox",
-     "similarity": 90.2
-    },
-    {
      "name": "Max Heath",
      "similarity": 90.0
     },
     {
      "name": "Dante Visentini",
      "similarity": 89.9
+    },
+    {
+     "name": "Mason Cox",
+     "similarity": 89.5
     },
     {
      "name": "Sean Darcy",
@@ -12267,8 +12267,8 @@
      "similarity": 84.3
     },
     {
-     "name": "Mitchell Edwards",
-     "similarity": 82.7
+     "name": "Darcy Fort",
+     "similarity": 82.8
     }
    ]
   },
@@ -12298,7 +12298,7 @@
     },
     {
      "name": "Ned Long",
-     "similarity": 85.6
+     "similarity": 85.7
     },
     {
      "name": "Jack Graham",
@@ -12439,16 +12439,16 @@
      "similarity": 88.4
     },
     {
-     "name": "Isaiah Dudley",
-     "similarity": 87.2
-    },
-    {
      "name": "Tom Cole",
      "similarity": 86.1
     },
     {
+     "name": "Isaiah Dudley",
+     "similarity": 85.9
+    },
+    {
      "name": "Michael Frederick",
-     "similarity": 85.6
+     "similarity": 85.7
     },
     {
      "name": "Arthur Jones",
@@ -12481,10 +12481,6 @@
      "similarity": 87.7
     },
     {
-     "name": "Ty Gallop",
-     "similarity": 86.8
-    },
-    {
      "name": "Mark O'Connor",
      "similarity": 86.3
     },
@@ -12493,12 +12489,16 @@
      "similarity": 86.2
     },
     {
+     "name": "Ty Gallop",
+     "similarity": 85.7
+    },
+    {
      "name": "Luke Trainor",
      "similarity": 81.9
     },
     {
      "name": "Liam Stocker",
-     "similarity": 81.1
+     "similarity": 81.2
     }
    ]
   },
@@ -12524,11 +12524,11 @@
     },
     {
      "name": "Bailey Smith",
-     "similarity": 74.7
+     "similarity": 74.8
     },
     {
      "name": "Ed Richards",
-     "similarity": 73.8
+     "similarity": 73.9
     },
     {
      "name": "Chad Warner",
@@ -12544,7 +12544,7 @@
     },
     {
      "name": "Shai Bolton",
-     "similarity": 67.7
+     "similarity": 68.4
     }
    ]
   },
@@ -12582,7 +12582,7 @@
     },
     {
      "name": "Ed Richards",
-     "similarity": 77.2
+     "similarity": 77.3
     },
     {
      "name": "Zach Merrett",
@@ -12590,7 +12590,7 @@
     },
     {
      "name": "Will Ashcroft",
-     "similarity": 76.4
+     "similarity": 76.9
     }
    ]
   },
@@ -12631,12 +12631,12 @@
      "similarity": 83.2
     },
     {
-     "name": "Corey Wagner",
-     "similarity": 83.0
+     "name": "Jarrod Berry",
+     "similarity": 82.7
     },
     {
-     "name": "Jarrod Berry",
-     "similarity": 82.6
+     "name": "Corey Wagner",
+     "similarity": 82.1
     }
    ]
   },
@@ -12654,7 +12654,7 @@
    "comps": [
     {
      "name": "Bayley Fritsch",
-     "similarity": 88.4
+     "similarity": 88.5
     },
     {
      "name": "Mabior Chol",
@@ -12704,7 +12704,7 @@
     },
     {
      "name": "Jordan Clark",
-     "similarity": 87.1
+     "similarity": 87.3
     },
     {
      "name": "Billy Wilson",
@@ -12716,7 +12716,7 @@
     },
     {
      "name": "Daniel Rioli",
-     "similarity": 85.1
+     "similarity": 85.2
     },
     {
      "name": "Karl Amon",
@@ -12841,12 +12841,12 @@
      "similarity": 85.2
     },
     {
-     "name": "Oliver Henry",
-     "similarity": 80.2
+     "name": "Charlie Cameron",
+     "similarity": 80.8
     },
     {
-     "name": "Charlie Cameron",
-     "similarity": 79.7
+     "name": "Oliver Henry",
+     "similarity": 80.2
     },
     {
      "name": "Shannon Neale",
@@ -12854,19 +12854,19 @@
     },
     {
      "name": "Patrick Dangerfield",
-     "similarity": 79.1
-    },
-    {
-     "name": "Kai Lohmann",
-     "similarity": 78.8
+     "similarity": 79.2
     },
     {
      "name": "Mitch Owens",
-     "similarity": 77.1
+     "similarity": 77.2
     },
     {
      "name": "Bayley Fritsch",
      "similarity": 77.0
+    },
+    {
+     "name": "Patrick Voss",
+     "similarity": 75.9
     }
    ]
   },
@@ -12888,7 +12888,7 @@
     },
     {
      "name": "James Peatling",
-     "similarity": 88.2
+     "similarity": 88.3
     },
     {
      "name": "Jye Caldwell",
@@ -12904,7 +12904,7 @@
     },
     {
      "name": "Conor Nash",
-     "similarity": 84.7
+     "similarity": 84.8
     },
     {
      "name": "Jack Graham",
@@ -13022,7 +13022,7 @@
    "comps": [
     {
      "name": "Luke Davies-Uniacke",
-     "similarity": 79.1
+     "similarity": 79.2
     },
     {
      "name": "Christian Petracca",
@@ -13042,7 +13042,7 @@
     },
     {
      "name": "Isaac Heeney",
-     "similarity": 74.8
+     "similarity": 74.9
     },
     {
      "name": "Darcy Parish",
@@ -13088,7 +13088,7 @@
     },
     {
      "name": "Finnbar Maley",
-     "similarity": 89.2
+     "similarity": 89.3
     },
     {
      "name": "Archer Reid",
@@ -13134,7 +13134,7 @@
     },
     {
      "name": "Jarrod Berry",
-     "similarity": 81.6
+     "similarity": 81.8
     },
     {
      "name": "Cooper Lord",
@@ -13180,11 +13180,11 @@
     },
     {
      "name": "Cam Rayner",
-     "similarity": 87.6
+     "similarity": 87.3
     },
     {
      "name": "Josh Rachele",
-     "similarity": 86.9
+     "similarity": 87.0
     },
     {
      "name": "Milan Murdock",
@@ -13221,12 +13221,12 @@
      "similarity": 84.8
     },
     {
-     "name": "Bailey Dale",
-     "similarity": 84.2
+     "name": "Jordan Clark",
+     "similarity": 84.6
     },
     {
-     "name": "Jordan Clark",
-     "similarity": 84.0
+     "name": "Bailey Dale",
+     "similarity": 84.2
     },
     {
      "name": "Luke Parker",
@@ -13252,34 +13252,34 @@
    "comps": [
     {
      "name": "Sam Walsh",
-     "similarity": 82.6
+     "similarity": 82.7
     },
     {
      "name": "Noah Anderson",
-     "similarity": 82.0
+     "similarity": 82.1
     },
     {
      "name": "Marcus Bontempelli",
-     "similarity": 81.8
-    },
-    {
-     "name": "Izak Rankine",
-     "similarity": 81.4
-    },
-    {
-     "name": "Jason Horne-Francis",
      "similarity": 81.2
     },
     {
-     "name": "Max Hall",
+     "name": "Izak Rankine",
      "similarity": 80.8
     },
     {
-     "name": "Luke Davies-Uniacke",
-     "similarity": 80.0
+     "name": "Jason Horne-Francis",
+     "similarity": 80.5
     },
     {
-     "name": "Harry Sheezel",
+     "name": "Luke Davies-Uniacke",
+     "similarity": 80.4
+    },
+    {
+     "name": "Max Hall",
+     "similarity": 79.5
+    },
+    {
+     "name": "Tim Kelly",
      "similarity": 79.2
     }
    ]
@@ -13310,7 +13310,7 @@
     },
     {
      "name": "Will Ashcroft",
-     "similarity": 79.2
+     "similarity": 78.5
     },
     {
      "name": "Noah Anderson",
@@ -13348,7 +13348,7 @@
     },
     {
      "name": "Harvey Johnston",
-     "similarity": 89.4
+     "similarity": 89.5
     },
     {
      "name": "Jordan Croft",
@@ -13410,7 +13410,7 @@
     },
     {
      "name": "Jaxon Artemis",
-     "similarity": 88.0
+     "similarity": 88.1
     },
     {
      "name": "Sandy Brock",
@@ -13452,7 +13452,7 @@
     },
     {
      "name": "Noah Answerth",
-     "similarity": 77.9
+     "similarity": 78.0
     },
     {
      "name": "Kyle Langford",
@@ -13460,7 +13460,7 @@
     },
     {
      "name": "Heath Chapman",
-     "similarity": 76.7
+     "similarity": 77.0
     },
     {
      "name": "Noah Balta",
@@ -13486,7 +13486,7 @@
     },
     {
      "name": "Lachie Jaques",
-     "similarity": 85.7
+     "similarity": 85.8
     },
     {
      "name": "Zak Johnson",
@@ -13574,34 +13574,34 @@
    "comps": [
     {
      "name": "Riley Bice",
-     "similarity": 91.3
+     "similarity": 91.6
     },
     {
-     "name": "Jacob Farrow",
-     "similarity": 90.2
+     "name": "Billy Wilson",
+     "similarity": 90.4
     },
     {
      "name": "Joel Jeffrey",
      "similarity": 90.2
     },
     {
-     "name": "Billy Wilson",
-     "similarity": 90.0
-    },
-    {
      "name": "Bailey Williams",
-     "similarity": 89.8
+     "similarity": 89.9
     },
     {
-     "name": "Liam Duggan",
+     "name": "Jacob Farrow",
      "similarity": 89.4
     },
     {
-     "name": "Keidean Coleman",
-     "similarity": 88.7
+     "name": "Liam Duggan",
+     "similarity": 89.2
     },
     {
      "name": "Miles Bergman",
+     "similarity": 88.2
+    },
+    {
+     "name": "Keidean Coleman",
      "similarity": 88.2
     }
    ]
@@ -13619,12 +13619,12 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Joel Amartey",
-     "similarity": 94.3
+     "name": "Oscar Allen",
+     "similarity": 95.0
     },
     {
-     "name": "Oscar Allen",
-     "similarity": 94.0
+     "name": "Joel Amartey",
+     "similarity": 94.3
     },
     {
      "name": "Brody Mihocek",
@@ -13774,7 +13774,7 @@
     },
     {
      "name": "Campbell Gray",
-     "similarity": 86.9
+     "similarity": 87.0
     },
     {
      "name": "Harry Kyle",
@@ -13782,7 +13782,7 @@
     },
     {
      "name": "Lachlan Blakiston",
-     "similarity": 85.9
+     "similarity": 86.0
     },
     {
      "name": "Sandy Brock",
@@ -13850,11 +13850,11 @@
    "comps": [
     {
      "name": "Matthew Johnson",
-     "similarity": 89.4
+     "similarity": 89.7
     },
     {
      "name": "Ryan Angwin",
-     "similarity": 89.3
+     "similarity": 89.4
     },
     {
      "name": "Harvey Thomas",
@@ -13866,7 +13866,7 @@
     },
     {
      "name": "Willem Duursma",
-     "similarity": 87.1
+     "similarity": 87.2
     },
     {
      "name": "Harry Rowston",
@@ -13878,7 +13878,7 @@
     },
     {
      "name": "Oisin Mullin",
-     "similarity": 84.0
+     "similarity": 84.1
     }
    ]
   },
@@ -13924,7 +13924,7 @@
     },
     {
      "name": "Jack Dalton",
-     "similarity": 81.8
+     "similarity": 81.9
     }
    ]
   },
@@ -13942,7 +13942,7 @@
    "comps": [
     {
      "name": "Sam Switkowski",
-     "similarity": 90.6
+     "similarity": 90.9
     },
     {
      "name": "Zac Taylor",
@@ -13992,7 +13992,7 @@
     },
     {
      "name": "Gryan Miers",
-     "similarity": 79.0
+     "similarity": 79.1
     },
     {
      "name": "Seth Campbell",
@@ -14100,11 +14100,11 @@
     },
     {
      "name": "Matthew Johnson",
-     "similarity": 85.5
+     "similarity": 85.3
     },
     {
      "name": "Jye Caldwell",
-     "similarity": 84.9
+     "similarity": 85.0
     },
     {
      "name": "Harry Rowston",
@@ -14154,7 +14154,7 @@
     },
     {
      "name": "Hugh McCluggage",
-     "similarity": 78.9
+     "similarity": 78.8
     }
    ]
   },
@@ -14192,7 +14192,7 @@
     },
     {
      "name": "Jai Culley",
-     "similarity": 85.8
+     "similarity": 85.9
     },
     {
      "name": "Stephen Coniglio",
@@ -14330,7 +14330,7 @@
     },
     {
      "name": "George Wardlaw",
-     "similarity": 82.4
+     "similarity": 82.5
     },
     {
      "name": "Willem Drew",
@@ -14360,7 +14360,7 @@
     },
     {
      "name": "Mattaes Phillipou",
-     "similarity": 88.3
+     "similarity": 88.4
     },
     {
      "name": "Sullivan Robey",
@@ -14380,7 +14380,7 @@
     },
     {
      "name": "Matthew Johnson",
-     "similarity": 85.8
+     "similarity": 85.9
     },
     {
      "name": "Ryley Sanders",
@@ -14402,7 +14402,7 @@
    "comps": [
     {
      "name": "Sam Butler",
-     "similarity": 87.2
+     "similarity": 87.3
     },
     {
      "name": "Sam Davidson",
@@ -14456,7 +14456,7 @@
     },
     {
      "name": "Liam Puncher",
-     "similarity": 86.0
+     "similarity": 86.1
     },
     {
      "name": "Alix Tauru",
@@ -14544,7 +14544,7 @@
     },
     {
      "name": "Oscar Allen",
-     "similarity": 94.1
+     "similarity": 94.4
     },
     {
      "name": "Jed Walter",
@@ -14614,7 +14614,7 @@
     },
     {
      "name": "Oliver Dempsey",
-     "similarity": 76.8
+     "similarity": 76.7
     }
    ]
   },
@@ -14632,11 +14632,11 @@
    "comps": [
     {
      "name": "Jaspa Fletcher",
-     "similarity": 90.0
+     "similarity": 90.4
     },
     {
      "name": "Karl Amon",
-     "similarity": 89.8
+     "similarity": 89.9
     },
     {
      "name": "Riley Bice",
@@ -14669,7 +14669,7 @@
    "role": "gen_fwd",
    "role_label": "General forward",
    "role_group": "FWD",
-   "confidence": "medium",
+   "confidence": "low",
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
@@ -14702,11 +14702,11 @@
     },
     {
      "name": "Michael Frederick",
-     "similarity": 85.9
+     "similarity": 85.8
     },
     {
-     "name": "Isaiah Dudley",
-     "similarity": 84.4
+     "name": "Steely Green",
+     "similarity": 84.1
     }
    ]
   },
@@ -14740,7 +14740,7 @@
     },
     {
      "name": "Jonty Faull",
-     "similarity": 87.9
+     "similarity": 88.0
     },
     {
      "name": "Cody Curtin",
@@ -14827,11 +14827,11 @@
      "similarity": 84.1
     },
     {
-     "name": "Caleb Serong",
-     "similarity": 83.7
+     "name": "James Worpel",
+     "similarity": 83.3
     },
     {
-     "name": "James Worpel",
+     "name": "Andrew Brayshaw",
      "similarity": 83.3
     },
     {
@@ -14843,8 +14843,8 @@
      "similarity": 83.1
     },
     {
-     "name": "Andrew Brayshaw",
-     "similarity": 82.8
+     "name": "Caleb Serong",
+     "similarity": 82.7
     }
    ]
   },
@@ -14882,11 +14882,11 @@
     },
     {
      "name": "Hayden Young",
-     "similarity": 78.1
+     "similarity": 76.9
     },
     {
      "name": "Hugh McCluggage",
-     "similarity": 77.1
+     "similarity": 76.4
     },
     {
      "name": "Darcy Wilson",
@@ -15012,7 +15012,7 @@
     },
     {
      "name": "Hayden Young",
-     "similarity": 83.0
+     "similarity": 82.9
     },
     {
      "name": "Oliver Dempsey",
@@ -15023,12 +15023,12 @@
      "similarity": 82.4
     },
     {
-     "name": "Hugh McCluggage",
+     "name": "Jordan De Goey",
      "similarity": 82.2
     },
     {
-     "name": "Jordan De Goey",
-     "similarity": 82.2
+     "name": "Hugh McCluggage",
+     "similarity": 81.9
     }
    ]
   },
@@ -15165,8 +15165,8 @@
      "similarity": 88.6
     },
     {
-     "name": "Eric Hipwood",
-     "similarity": 87.7
+     "name": "Jake Riccardi",
+     "similarity": 87.4
     }
    ]
   },
@@ -15187,12 +15187,12 @@
      "similarity": 92.2
     },
     {
-     "name": "Oscar Allen",
-     "similarity": 91.8
-    },
-    {
      "name": "Jesse Hogan",
      "similarity": 91.6
+    },
+    {
+     "name": "Oscar Allen",
+     "similarity": 90.3
     },
     {
      "name": "Jay Polkinghorne",
@@ -15245,12 +15245,12 @@
      "similarity": 84.5
     },
     {
-     "name": "Angus Sheldrick",
-     "similarity": 84.4
-    },
-    {
      "name": "Ryley Sanders",
      "similarity": 84.3
+    },
+    {
+     "name": "Angus Sheldrick",
+     "similarity": 84.2
     },
     {
      "name": "Dion Prestia",
@@ -15258,7 +15258,7 @@
     },
     {
      "name": "Willem Duursma",
-     "similarity": 83.7
+     "similarity": 83.8
     }
    ]
   },
@@ -15372,7 +15372,7 @@
     },
     {
      "name": "Jacob Konstanty",
-     "similarity": 89.4
+     "similarity": 89.5
     },
     {
      "name": "Jade Gresham",
@@ -15442,7 +15442,7 @@
     },
     {
      "name": "James Leake",
-     "similarity": 85.1
+     "similarity": 85.2
     }
    ]
   },
@@ -15460,35 +15460,35 @@
    "comps": [
     {
      "name": "Charlie Curnow",
-     "similarity": 91.1
+     "similarity": 90.9
     },
     {
      "name": "Aaron Naughton",
-     "similarity": 86.4
+     "similarity": 86.3
     },
     {
      "name": "Jake Waterman",
-     "similarity": 85.6
+     "similarity": 85.4
     },
     {
      "name": "Mitch Georgiades",
-     "similarity": 85.2
-    },
-    {
-     "name": "Jack Gunston",
      "similarity": 84.8
     },
     {
+     "name": "Jack Gunston",
+     "similarity": 84.6
+    },
+    {
      "name": "Nate Caddy",
+     "similarity": 84.4
+    },
+    {
+     "name": "Jye Amiss",
      "similarity": 84.2
     },
     {
-     "name": "Darcy Fogarty",
-     "similarity": 83.9
-    },
-    {
      "name": "Logan McDonald",
-     "similarity": 83.8
+     "similarity": 84.0
     }
    ]
   },
@@ -15514,7 +15514,7 @@
     },
     {
      "name": "Anthony Caminiti",
-     "similarity": 85.9
+     "similarity": 86.0
     },
     {
      "name": "Jaxon Artemis",
@@ -15576,7 +15576,7 @@
     },
     {
      "name": "Jai Culley",
-     "similarity": 85.0
+     "similarity": 85.1
     },
     {
      "name": "Harry Rowston",
@@ -15644,7 +15644,7 @@
    "comps": [
     {
      "name": "Hugh McCluggage",
-     "similarity": 84.8
+     "similarity": 84.1
     },
     {
      "name": "Jack Bowes",
@@ -15656,7 +15656,7 @@
     },
     {
      "name": "Hayden Young",
-     "similarity": 82.9
+     "similarity": 82.4
     },
     {
      "name": "Xavier O'Halloran",
@@ -15672,7 +15672,7 @@
     },
     {
      "name": "Kane McAuliffe",
-     "similarity": 78.1
+     "similarity": 78.2
     }
    ]
   },
@@ -15752,7 +15752,7 @@
     },
     {
      "name": "Matthew Johnson",
-     "similarity": 85.9
+     "similarity": 86.2
     },
     {
      "name": "Mattaes Phillipou",
@@ -15828,11 +15828,11 @@
    "comps": [
     {
      "name": "Connor Macdonald",
-     "similarity": 85.8
+     "similarity": 86.7
     },
     {
      "name": "Cam Rayner",
-     "similarity": 82.3
+     "similarity": 83.3
     },
     {
      "name": "Gryan Miers",
@@ -15844,19 +15844,19 @@
     },
     {
      "name": "Braeden Campbell",
-     "similarity": 79.2
+     "similarity": 80.0
     },
     {
      "name": "Shaun Mannagh",
-     "similarity": 78.6
+     "similarity": 79.2
     },
     {
      "name": "Bailey Humphrey",
-     "similarity": 76.7
+     "similarity": 77.2
     },
     {
      "name": "Leonardo Lombard",
-     "similarity": 75.8
+     "similarity": 76.2
     }
    ]
   },
@@ -15878,15 +15878,15 @@
     },
     {
      "name": "Touk Miller",
-     "similarity": 83.9
-    },
-    {
-     "name": "Hayden Young",
-     "similarity": 83.3
+     "similarity": 84.0
     },
     {
      "name": "Scott Pendlebury",
      "similarity": 82.7
+    },
+    {
+     "name": "Hayden Young",
+     "similarity": 82.4
     },
     {
      "name": "Christian Petracca",
@@ -15894,11 +15894,11 @@
     },
     {
      "name": "Justin McInerney",
-     "similarity": 78.9
+     "similarity": 79.0
     },
     {
      "name": "Hugh McCluggage",
-     "similarity": 78.2
+     "similarity": 78.3
     },
     {
      "name": "Will Day",
@@ -15940,7 +15940,7 @@
     },
     {
      "name": "Jedd Busslinger",
-     "similarity": 82.7
+     "similarity": 82.8
     },
     {
      "name": "Cooper Harvey",
@@ -15993,8 +15993,8 @@
      "similarity": 86.2
     },
     {
-     "name": "Oscar McDonald",
-     "similarity": 86.0
+     "name": "Noah Answerth",
+     "similarity": 85.9
     }
    ]
   },
@@ -16316,7 +16316,7 @@
     },
     {
      "name": "Hugh McCluggage",
-     "similarity": 76.9
+     "similarity": 76.6
     }
    ]
   },
@@ -16345,12 +16345,12 @@
      "similarity": 85.1
     },
     {
-     "name": "Mason Cox",
-     "similarity": 83.7
-    },
-    {
      "name": "Max Heath",
      "similarity": 83.6
+    },
+    {
+     "name": "Mason Cox",
+     "similarity": 83.5
     },
     {
      "name": "Sean Darcy",
@@ -16383,15 +16383,15 @@
      "similarity": 92.1
     },
     {
-     "name": "Sam Switkowski",
-     "similarity": 90.0
-    },
-    {
      "name": "Josh Dolan",
      "similarity": 89.9
     },
     {
      "name": "Cody Weightman",
+     "similarity": 88.9
+    },
+    {
+     "name": "Sam Switkowski",
      "similarity": 88.9
     },
     {
@@ -16426,35 +16426,35 @@
    "comps": [
     {
      "name": "Mason Wood",
-     "similarity": 89.6
+     "similarity": 89.8
     },
     {
      "name": "Cooper Lord",
-     "similarity": 88.0
+     "similarity": 87.4
     },
     {
      "name": "Ed Langdon",
-     "similarity": 85.8
+     "similarity": 86.0
     },
     {
      "name": "Harry Morrison",
-     "similarity": 85.8
+     "similarity": 85.4
     },
     {
      "name": "Blake Acres",
-     "similarity": 85.2
+     "similarity": 84.6
     },
     {
      "name": "Dylan Stephens",
-     "similarity": 84.2
+     "similarity": 83.9
     },
     {
      "name": "Nathan O'Driscoll",
-     "similarity": 83.5
+     "similarity": 83.4
     },
     {
-     "name": "Neil Erasmus",
-     "similarity": 83.5
+     "name": "Bruce Reville",
+     "similarity": 83.4
     }
    ]
   },
@@ -16480,7 +16480,7 @@
     },
     {
      "name": "Lachy Dovaston",
-     "similarity": 88.7
+     "similarity": 88.8
     },
     {
      "name": "Harry Schoenberg",
@@ -16630,7 +16630,7 @@
     },
     {
      "name": "Heath Chapman",
-     "similarity": 81.8
+     "similarity": 81.9
     },
     {
      "name": "Connor O'Sullivan",
@@ -16638,7 +16638,7 @@
     },
     {
      "name": "Charlie Comben",
-     "similarity": 81.4
+     "similarity": 81.5
     }
    ]
   },
@@ -16725,12 +16725,12 @@
      "similarity": 85.0
     },
     {
-     "name": "Sam Switkowski",
+     "name": "Cooper Duff-Tytler",
      "similarity": 84.5
     },
     {
-     "name": "Cooper Duff-Tytler",
-     "similarity": 84.5
+     "name": "Sam Switkowski",
+     "similarity": 84.4
     }
    ]
   },
@@ -16767,11 +16767,11 @@
      "similarity": 87.2
     },
     {
-     "name": "Cooper Duff-Tytler",
+     "name": "Hussien El Achkar",
      "similarity": 86.9
     },
     {
-     "name": "Hussien El Achkar",
+     "name": "Cooper Duff-Tytler",
      "similarity": 86.9
     },
     {
@@ -16990,7 +16990,7 @@
     },
     {
      "name": "Lachlan Gulbin",
-     "similarity": 88.9
+     "similarity": 89.0
     },
     {
      "name": "Caiden Cleary",
@@ -17082,19 +17082,19 @@
     },
     {
      "name": "Harry Sharp",
-     "similarity": 89.0
+     "similarity": 89.1
+    },
+    {
+     "name": "Sam Switkowski",
+     "similarity": 88.8
     },
     {
      "name": "Bailey Humphrey",
      "similarity": 88.5
     },
     {
-     "name": "Sam Switkowski",
-     "similarity": 88.4
-    },
-    {
      "name": "Ben Keays",
-     "similarity": 88.1
+     "similarity": 88.2
     },
     {
      "name": "Angus Anderson",
@@ -17136,7 +17136,7 @@
     },
     {
      "name": "Archer Day-Wicks",
-     "similarity": 88.9
+     "similarity": 89.0
     },
     {
      "name": "Joe Berry",
@@ -17182,7 +17182,7 @@
     },
     {
      "name": "Ryan Maric",
-     "similarity": 85.7
+     "similarity": 85.8
     },
     {
      "name": "James Tunstill",
@@ -17236,7 +17236,7 @@
     },
     {
      "name": "Hugo Ralphsmith",
-     "similarity": 87.7
+     "similarity": 87.8
     }
    ]
   },
@@ -17370,7 +17370,7 @@
     },
     {
      "name": "Michael Frederick",
-     "similarity": 81.6
+     "similarity": 81.4
     },
     {
      "name": "Ben Ainsworth",
@@ -17396,7 +17396,7 @@
     },
     {
      "name": "William Hayes",
-     "similarity": 90.5
+     "similarity": 90.6
     },
     {
      "name": "Malakai Champion",
@@ -17450,7 +17450,7 @@
     },
     {
      "name": "Jake Rogers",
-     "similarity": 83.3
+     "similarity": 83.4
     },
     {
      "name": "Luke Kennedy",
@@ -17504,7 +17504,7 @@
     },
     {
      "name": "Oscar Adams",
-     "similarity": 86.0
+     "similarity": 86.1
     },
     {
      "name": "Ben McKay",
@@ -17542,7 +17542,7 @@
     },
     {
      "name": "Zane Duursma",
-     "similarity": 89.2
+     "similarity": 89.3
     },
     {
      "name": "Charlie West",
@@ -17596,15 +17596,15 @@
     },
     {
      "name": "Heath Chapman",
-     "similarity": 85.8
-    },
-    {
-     "name": "Ty Gallop",
-     "similarity": 85.0
+     "similarity": 86.0
     },
     {
      "name": "Noah Answerth",
-     "similarity": 84.9
+     "similarity": 85.0
+    },
+    {
+     "name": "Ty Gallop",
+     "similarity": 84.3
     }
    ]
   },
@@ -17622,7 +17622,7 @@
    "comps": [
     {
      "name": "Jack Whitlock",
-     "similarity": 90.1
+     "similarity": 90.2
     },
     {
      "name": "Cooper Trembath",
@@ -17631,6 +17631,10 @@
     {
      "name": "Mitch McGovern",
      "similarity": 88.7
+    },
+    {
+     "name": "Eric Hipwood",
+     "similarity": 87.7
     },
     {
      "name": "Jack Martin",
@@ -17647,10 +17651,6 @@
     {
      "name": "Oskar Baker",
      "similarity": 86.7
-    },
-    {
-     "name": "Oscar Allen",
-     "similarity": 86.6
     }
    ]
   },
@@ -17692,7 +17692,7 @@
     },
     {
      "name": "Eric Hipwood",
-     "similarity": 88.6
+     "similarity": 89.0
     },
     {
      "name": "Jake Riccardi",
@@ -17780,7 +17780,7 @@
     },
     {
      "name": "Rhylee West",
-     "similarity": 86.9
+     "similarity": 87.0
     },
     {
      "name": "Leonardo Lombard",
@@ -17788,7 +17788,7 @@
     },
     {
      "name": "Sam Switkowski",
-     "similarity": 85.5
+     "similarity": 85.8
     }
    ]
   },
@@ -17822,7 +17822,7 @@
     },
     {
      "name": "Jobe Shanahan",
-     "similarity": 90.1
+     "similarity": 90.2
     },
     {
      "name": "Ethan Read",
@@ -17860,7 +17860,7 @@
     },
     {
      "name": "Jarrod Berry",
-     "similarity": 85.9
+     "similarity": 85.4
     },
     {
      "name": "Zeke Uwland",
@@ -17944,7 +17944,7 @@
    "comps": [
     {
      "name": "Mark Blicavs",
-     "similarity": 85.8
+     "similarity": 85.9
     },
     {
      "name": "Oisin Mullin",
@@ -17994,15 +17994,11 @@
     },
     {
      "name": "Levi Ashcroft",
-     "similarity": 88.0
+     "similarity": 87.4
     },
     {
      "name": "Blake Acres",
      "similarity": 87.2
-    },
-    {
-     "name": "Neil Erasmus",
-     "similarity": 86.7
     },
     {
      "name": "Dylan Stephens",
@@ -18019,6 +18015,10 @@
     {
      "name": "Nathan O'Driscoll",
      "similarity": 86.4
+    },
+    {
+     "name": "Neil Erasmus",
+     "similarity": 85.8
     }
    ]
   },
@@ -18056,7 +18056,7 @@
     },
     {
      "name": "Riley Hamilton",
-     "similarity": 84.0
+     "similarity": 84.1
     },
     {
      "name": "Hussien El Achkar",
@@ -18331,16 +18331,16 @@
      "similarity": 89.4
     },
     {
-     "name": "Karl Worner",
-     "similarity": 87.2
-    },
-    {
      "name": "Jaxon Prior",
      "similarity": 87.0
     },
     {
      "name": "Marcus Herbert",
      "similarity": 87.0
+    },
+    {
+     "name": "Karl Worner",
+     "similarity": 86.7
     }
    ]
   },
@@ -18358,7 +18358,7 @@
    "comps": [
     {
      "name": "Hugh Bond",
-     "similarity": 88.0
+     "similarity": 88.1
     },
     {
      "name": "Harry Cunningham",
@@ -18412,7 +18412,7 @@
     },
     {
      "name": "Mitch Zadow",
-     "similarity": 90.5
+     "similarity": 90.6
     },
     {
      "name": "Malakai Champion",
@@ -18458,7 +18458,7 @@
     },
     {
      "name": "Buku Khamis",
-     "similarity": 91.7
+     "similarity": 91.8
     },
     {
      "name": "Kye Annand",
@@ -18477,8 +18477,8 @@
      "similarity": 89.9
     },
     {
-     "name": "Jordon Butts",
-     "similarity": 89.6
+     "name": "Darcy Gardiner",
+     "similarity": 89.9
     }
    ]
   },
@@ -18520,7 +18520,7 @@
     },
     {
      "name": "Lachlan Gulbin",
-     "similarity": 84.8
+     "similarity": 84.9
     },
     {
      "name": "Rhys Unwin",
@@ -18608,7 +18608,7 @@
     },
     {
      "name": "Jordan Croft",
-     "similarity": 82.6
+     "similarity": 82.7
     },
     {
      "name": "Malakai Champion",
@@ -18776,7 +18776,7 @@
     },
     {
      "name": "Dante Visentini",
-     "similarity": 84.8
+     "similarity": 84.9
     },
     {
      "name": "Max Heath",
@@ -18796,7 +18796,7 @@
     },
     {
      "name": "Mason Cox",
-     "similarity": 79.7
+     "similarity": 79.8
     },
     {
      "name": "Ned Reeves",
@@ -18875,10 +18875,6 @@
      "similarity": 91.4
     },
     {
-     "name": "Darcy Gardiner",
-     "similarity": 91.2
-    },
-    {
      "name": "Griffin Logue",
      "similarity": 91.1
     },
@@ -18889,6 +18885,10 @@
     {
      "name": "Sam Taylor",
      "similarity": 90.9
+    },
+    {
+     "name": "Darcy Gardiner",
+     "similarity": 90.6
     },
     {
      "name": "James Borlase",
@@ -18922,15 +18922,15 @@
     },
     {
      "name": "Daniel Curtin",
-     "similarity": 87.1
+     "similarity": 87.2
+    },
+    {
+     "name": "Matthew Johnson",
+     "similarity": 85.5
     },
     {
      "name": "Harry Rowston",
      "similarity": 85.3
-    },
-    {
-     "name": "Matthew Johnson",
-     "similarity": 85.1
     },
     {
      "name": "Jake Soligo",
@@ -18980,7 +18980,7 @@
     },
     {
      "name": "Buku Khamis",
-     "similarity": 86.9
+     "similarity": 87.0
     },
     {
      "name": "Brennan Cox",
@@ -19010,7 +19010,7 @@
     },
     {
      "name": "Latrelle Pickett",
-     "similarity": 87.0
+     "similarity": 87.1
     },
     {
      "name": "Lachy Dovaston",
@@ -19056,7 +19056,7 @@
     },
     {
      "name": "Sam Switkowski",
-     "similarity": 90.7
+     "similarity": 90.0
     },
     {
      "name": "Isaac Kako",
@@ -19098,7 +19098,7 @@
     },
     {
      "name": "Jaspa Fletcher",
-     "similarity": 90.2
+     "similarity": 89.4
     },
     {
      "name": "Cameron Zurhaar",
@@ -19140,35 +19140,35 @@
    "comps": [
     {
      "name": "Noah Answerth",
-     "similarity": 91.5
+     "similarity": 91.0
     },
     {
      "name": "Max Michalanney",
-     "similarity": 89.2
-    },
-    {
-     "name": "Blake Howes",
-     "similarity": 88.4
+     "similarity": 89.0
     },
     {
      "name": "Josh Lai",
-     "similarity": 87.9
+     "similarity": 88.4
     },
     {
-     "name": "Oscar McDonald",
-     "similarity": 87.3
+     "name": "Blake Howes",
+     "similarity": 88.2
     },
     {
      "name": "Liam Stocker",
-     "similarity": 87.2
+     "similarity": 87.6
+    },
+    {
+     "name": "Oscar McDonald",
+     "similarity": 87.0
     },
     {
      "name": "Tom McDonald",
-     "similarity": 86.9
+     "similarity": 86.8
     },
     {
-     "name": "Brady Hough",
-     "similarity": 86.8
+     "name": "Luke Trainor",
+     "similarity": 85.9
     }
    ]
   },
@@ -19252,7 +19252,7 @@
     },
     {
      "name": "Darcy Fort",
-     "similarity": 79.5
+     "similarity": 79.3
     },
     {
      "name": "Ned Reeves",
@@ -19352,7 +19352,7 @@
     },
     {
      "name": "Anthony Caminiti",
-     "similarity": 86.9
+     "similarity": 87.0
     }
    ]
   },
@@ -19370,7 +19370,7 @@
    "comps": [
     {
      "name": "Isaiah Dudley",
-     "similarity": 90.7
+     "similarity": 90.2
     },
     {
      "name": "Steely Green",
@@ -19390,7 +19390,7 @@
     },
     {
      "name": "Ben Long",
-     "similarity": 87.2
+     "similarity": 87.3
     },
     {
      "name": "Bailey Laurie",
@@ -19440,7 +19440,7 @@
     },
     {
      "name": "Nick Holman",
-     "similarity": 86.7
+     "similarity": 86.8
     },
     {
      "name": "Angus Clarke",
@@ -19473,6 +19473,10 @@
      "similarity": 86.3
     },
     {
+     "name": "Jordan Clark",
+     "similarity": 86.1
+    },
+    {
      "name": "Wayne Milera",
      "similarity": 86.1
     },
@@ -19485,12 +19489,8 @@
      "similarity": 85.2
     },
     {
-     "name": "Jordan Clark",
-     "similarity": 85.1
-    },
-    {
      "name": "Lawson Humphries",
-     "similarity": 84.9
+     "similarity": 85.0
     }
    ]
   },
@@ -19524,7 +19524,7 @@
     },
     {
      "name": "Isaiah Dudley",
-     "similarity": 86.4
+     "similarity": 84.9
     },
     {
      "name": "Tom Cole",
@@ -19535,8 +19535,8 @@
      "similarity": 84.2
     },
     {
-     "name": "Ben Long",
-     "similarity": 83.9
+     "name": "Michael Frederick",
+     "similarity": 84.1
     }
    ]
   },
@@ -19604,7 +19604,7 @@
     },
     {
      "name": "Paddy Cross",
-     "similarity": 85.8
+     "similarity": 85.9
     },
     {
      "name": "Nick Holman",
@@ -19787,12 +19787,12 @@
      "similarity": 91.9
     },
     {
-     "name": "Changkuoth Jiath",
-     "similarity": 91.3
+     "name": "Oscar McDonald",
+     "similarity": 91.5
     },
     {
-     "name": "Oscar McDonald",
-     "similarity": 91.2
+     "name": "Changkuoth Jiath",
+     "similarity": 91.3
     },
     {
      "name": "Tylar Young",
@@ -19800,19 +19800,19 @@
     },
     {
      "name": "Heath Chapman",
-     "similarity": 88.8
+     "similarity": 88.9
     },
     {
      "name": "Nathan Broad",
      "similarity": 88.6
     },
     {
-     "name": "Tom McDonald",
-     "similarity": 88.0
+     "name": "Ty Gallop",
+     "similarity": 88.4
     },
     {
-     "name": "Ty Gallop",
-     "similarity": 87.9
+     "name": "Tom McDonald",
+     "similarity": 88.0
     }
    ]
   },
@@ -19934,15 +19934,15 @@
     },
     {
      "name": "Hugh McCluggage",
-     "similarity": 80.3
-    },
-    {
-     "name": "Hayden Young",
-     "similarity": 80.1
+     "similarity": 80.5
     },
     {
      "name": "Touk Miller",
      "similarity": 79.4
+    },
+    {
+     "name": "Hayden Young",
+     "similarity": 78.7
     },
     {
      "name": "Justin McInerney",
@@ -19968,19 +19968,15 @@
    "comps": [
     {
      "name": "John Noble",
-     "similarity": 89.4
+     "similarity": 88.6
     },
     {
      "name": "Jack Sinclair",
-     "similarity": 88.7
+     "similarity": 88.2
     },
     {
      "name": "Lachie Ash",
-     "similarity": 85.9
-    },
-    {
-     "name": "Kane Farrell",
-     "similarity": 83.6
+     "similarity": 86.6
     },
     {
      "name": "Tom McCarthy",
@@ -19988,15 +19984,19 @@
     },
     {
      "name": "Lachie Whitfield",
-     "similarity": 83.0
+     "similarity": 83.2
+    },
+    {
+     "name": "Kane Farrell",
+     "similarity": 82.0
+    },
+    {
+     "name": "Josh Daicos",
+     "similarity": 81.8
     },
     {
      "name": "Jordan Clark",
-     "similarity": 83.0
-    },
-    {
-     "name": "Oliver Florent",
-     "similarity": 81.4
+     "similarity": 81.7
     }
    ]
   },
@@ -20041,7 +20041,7 @@
      "similarity": 80.4
     },
     {
-     "name": "Charlie Cameron",
+     "name": "Aaron Cadman",
      "similarity": 79.7
     }
    ]
@@ -20083,12 +20083,12 @@
      "similarity": 85.7
     },
     {
-     "name": "Eric Hipwood",
-     "similarity": 85.7
-    },
-    {
      "name": "Tim Membrey",
      "similarity": 85.1
+    },
+    {
+     "name": "Nick Larkey",
+     "similarity": 85.0
     }
    ]
   },
@@ -20164,7 +20164,7 @@
     },
     {
      "name": "Tyler Sonsie",
-     "similarity": 88.3
+     "similarity": 88.4
     },
     {
      "name": "Harry Morrison",
@@ -20176,11 +20176,11 @@
     },
     {
      "name": "Neil Erasmus",
-     "similarity": 86.9
+     "similarity": 87.2
     },
     {
      "name": "Matt Roberts",
-     "similarity": 85.9
+     "similarity": 86.0
     }
    ]
   },
@@ -20256,7 +20256,7 @@
     },
     {
      "name": "Darcy Cameron",
-     "similarity": 67.6
+     "similarity": 67.7
     },
     {
      "name": "Bailey J. Williams",
@@ -20264,7 +20264,7 @@
     },
     {
      "name": "Luke Jackson",
-     "similarity": 62.4
+     "similarity": 62.1
     },
     {
      "name": "Tom De Koning",
@@ -20289,12 +20289,12 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Ryan Angwin",
-     "similarity": 89.1
+     "name": "Matthew Johnson",
+     "similarity": 89.3
     },
     {
-     "name": "Matthew Johnson",
-     "similarity": 89.0
+     "name": "Ryan Angwin",
+     "similarity": 89.1
     },
     {
      "name": "Willem Duursma",
@@ -20348,11 +20348,7 @@
     },
     {
      "name": "Darcy Wilmot",
-     "similarity": 86.4
-    },
-    {
-     "name": "Luke Ryan",
-     "similarity": 86.2
+     "similarity": 86.6
     },
     {
      "name": "Josh Battle",
@@ -20363,8 +20359,12 @@
      "similarity": 85.8
     },
     {
-     "name": "Karl Worner",
+     "name": "Luke Ryan",
      "similarity": 85.7
+    },
+    {
+     "name": "Karl Worner",
+     "similarity": 85.6
     }
    ]
   },
@@ -20390,7 +20390,7 @@
     },
     {
      "name": "James Peatling",
-     "similarity": 83.3
+     "similarity": 83.4
     },
     {
      "name": "Joel Freijah",
@@ -20473,23 +20473,23 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Eric Hipwood",
-     "similarity": 90.8
-    },
-    {
      "name": "Jack Martin",
      "similarity": 90.1
+    },
+    {
+     "name": "Eric Hipwood",
+     "similarity": 89.8
     },
     {
      "name": "Cooper Trembath",
      "similarity": 89.7
     },
     {
-     "name": "Tom Lynch",
+     "name": "Daniel McStay",
      "similarity": 89.1
     },
     {
-     "name": "Daniel McStay",
+     "name": "Tom Lynch",
      "similarity": 89.1
     },
     {
@@ -20502,7 +20502,7 @@
     },
     {
      "name": "Darcy Fogarty",
-     "similarity": 88.2
+     "similarity": 88.3
     }
    ]
   },
@@ -20570,7 +20570,7 @@
     },
     {
      "name": "Logan Morris",
-     "similarity": 84.8
+     "similarity": 84.6
     },
     {
      "name": "Mitch Georgiades",
@@ -20611,12 +20611,12 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Oscar McDonald",
-     "similarity": 90.6
-    },
-    {
      "name": "Liam Stocker",
      "similarity": 90.3
+    },
+    {
+     "name": "Oscar McDonald",
+     "similarity": 90.0
     },
     {
      "name": "Josh Lai",
@@ -20635,12 +20635,12 @@
      "similarity": 87.0
     },
     {
-     "name": "Ty Gallop",
+     "name": "Toby Pink",
      "similarity": 86.9
     },
     {
-     "name": "Toby Pink",
-     "similarity": 86.9
+     "name": "Luke Trainor",
+     "similarity": 86.8
     }
    ]
   },
@@ -20658,35 +20658,35 @@
    "comps": [
     {
      "name": "Connor O'Sullivan",
-     "similarity": 87.3
-    },
-    {
-     "name": "Mac Andrew",
      "similarity": 86.8
     },
     {
-     "name": "Changkuoth Jiath",
-     "similarity": 86.5
+     "name": "Mac Andrew",
+     "similarity": 86.6
     },
     {
      "name": "Heath Chapman",
-     "similarity": 86.3
+     "similarity": 86.2
+    },
+    {
+     "name": "Changkuoth Jiath",
+     "similarity": 86.2
     },
     {
      "name": "Nick Haynes",
-     "similarity": 85.8
+     "similarity": 85.2
     },
     {
      "name": "Harry Himmelberg",
-     "similarity": 85.4
+     "similarity": 84.9
     },
     {
      "name": "Daniel Turner",
-     "similarity": 84.7
+     "similarity": 84.4
     },
     {
      "name": "Jack Silvagni",
-     "similarity": 84.3
+     "similarity": 83.8
     }
    ]
   },
@@ -20762,7 +20762,7 @@
     },
     {
      "name": "Bodhi Uwland",
-     "similarity": 84.2
+     "similarity": 84.3
     },
     {
      "name": "Luke Parker",
@@ -20770,7 +20770,7 @@
     },
     {
      "name": "Karl Worner",
-     "similarity": 81.0
+     "similarity": 81.6
     },
     {
      "name": "Callum Mills",
@@ -20795,12 +20795,12 @@
    "manual_note": null,
    "comps": [
     {
-     "name": "Oscar Allen",
-     "similarity": 95.1
-    },
-    {
      "name": "Jay Polkinghorne",
      "similarity": 94.6
+    },
+    {
+     "name": "Oscar Allen",
+     "similarity": 94.2
     },
     {
      "name": "Jed Walter",
@@ -20854,7 +20854,7 @@
     },
     {
      "name": "Matthew Johnson",
-     "similarity": 86.6
+     "similarity": 86.3
     },
     {
      "name": "Beau Addinsall",
@@ -20892,7 +20892,7 @@
     },
     {
      "name": "Darcy Fort",
-     "similarity": 87.4
+     "similarity": 87.2
     },
     {
      "name": "Nick Bryan",
@@ -20907,16 +20907,16 @@
      "similarity": 85.7
     },
     {
-     "name": "Sam Draper",
-     "similarity": 84.8
-    },
-    {
      "name": "Ned Reeves",
      "similarity": 84.7
     },
     {
      "name": "Lloyd Meek",
      "similarity": 84.7
+    },
+    {
+     "name": "Sam Draper",
+     "similarity": 84.6
     }
    ]
   },
@@ -21000,7 +21000,7 @@
     },
     {
      "name": "James Peatling",
-     "similarity": 83.1
+     "similarity": 83.2
     },
     {
      "name": "Edward Allan",
@@ -21026,7 +21026,7 @@
    "comps": [
     {
      "name": "Darcy Wilmot",
-     "similarity": 86.9
+     "similarity": 86.3
     },
     {
      "name": "Marcus Herbert",
@@ -21045,16 +21045,16 @@
      "similarity": 83.7
     },
     {
-     "name": "Karl Worner",
-     "similarity": 83.5
-    },
-    {
      "name": "Riley Bice",
      "similarity": 83.4
     },
     {
      "name": "Bailey Williams",
      "similarity": 83.1
+    },
+    {
+     "name": "Dan Houston",
+     "similarity": 82.9
     }
    ]
   },
@@ -21072,35 +21072,35 @@
    "comps": [
     {
      "name": "Will Ashcroft",
-     "similarity": 77.7
+     "similarity": 78.9
     },
     {
      "name": "Darcy Parish",
-     "similarity": 77.3
+     "similarity": 78.4
     },
     {
      "name": "Sam Walsh",
-     "similarity": 76.9
+     "similarity": 77.0
     },
     {
      "name": "Tim Kelly",
-     "similarity": 75.7
-    },
-    {
-     "name": "Luke Davies-Uniacke",
-     "similarity": 75.6
+     "similarity": 76.2
     },
     {
      "name": "Jason Horne-Francis",
-     "similarity": 75.4
+     "similarity": 76.1
     },
     {
-     "name": "Harley Reid",
-     "similarity": 73.8
+     "name": "Luke Davies-Uniacke",
+     "similarity": 75.5
+    },
+    {
+     "name": "Christian Petracca",
+     "similarity": 74.3
     },
     {
      "name": "Izak Rankine",
-     "similarity": 73.7
+     "similarity": 73.8
     }
    ]
   },
@@ -21141,12 +21141,12 @@
      "similarity": 85.1
     },
     {
-     "name": "Harrison Petty",
-     "similarity": 84.7
+     "name": "Eric Hipwood",
+     "similarity": 85.0
     },
     {
-     "name": "Charlie Spargo",
-     "similarity": 84.5
+     "name": "Harrison Petty",
+     "similarity": 84.7
     }
    ]
   },
@@ -21168,7 +21168,7 @@
     },
     {
      "name": "Arthur Jones",
-     "similarity": 87.9
+     "similarity": 88.0
     },
     {
      "name": "Ben Long",
@@ -21191,8 +21191,8 @@
      "similarity": 86.6
     },
     {
-     "name": "Patrick Voss",
-     "similarity": 84.9
+     "name": "Isaiah Dudley",
+     "similarity": 84.4
     }
    ]
   },
@@ -21237,7 +21237,7 @@
      "similarity": 88.3
     },
     {
-     "name": "Oscar Allen",
+     "name": "Jed Walter",
      "similarity": 88.3
     }
    ]
@@ -21264,7 +21264,7 @@
     },
     {
      "name": "Logan Morris",
-     "similarity": 80.8
+     "similarity": 80.7
     },
     {
      "name": "Darcy Fogarty",
@@ -21322,7 +21322,7 @@
     },
     {
      "name": "Hugh McCluggage",
-     "similarity": 79.2
+     "similarity": 79.4
     },
     {
      "name": "Darcy Wilson",
@@ -21330,7 +21330,7 @@
     },
     {
      "name": "Hayden Young",
-     "similarity": 77.7
+     "similarity": 78.6
     }
    ]
   },
@@ -21363,20 +21363,20 @@
      "similarity": 87.4
     },
     {
-     "name": "Kai Lohmann",
-     "similarity": 86.7
-    },
-    {
      "name": "Nick Watson",
      "similarity": 85.2
     },
     {
-     "name": "Patrick Voss",
+     "name": "Patrick Dangerfield",
      "similarity": 85.0
     },
     {
-     "name": "Patrick Dangerfield",
-     "similarity": 85.0
+     "name": "Aaron Cadman",
+     "similarity": 84.9
+    },
+    {
+     "name": "Patrick Voss",
+     "similarity": 84.9
     }
    ]
   },
@@ -21394,7 +21394,7 @@
    "comps": [
     {
      "name": "Luke Jackson",
-     "similarity": 80.4
+     "similarity": 79.9
     },
     {
      "name": "Tristan Xerri",
@@ -21497,12 +21497,12 @@
      "similarity": 87.4
     },
     {
-     "name": "Jordan Clark",
-     "similarity": 86.1
-    },
-    {
      "name": "Wayne Milera",
      "similarity": 85.8
+    },
+    {
+     "name": "Jordan Clark",
+     "similarity": 85.6
     },
     {
      "name": "Caleb Daniel",
@@ -21559,8 +21559,8 @@
      "similarity": 83.6
     },
     {
-     "name": "Harvey Thomas",
-     "similarity": 82.8
+     "name": "Angus Sheldrick",
+     "similarity": 82.9
     }
    ]
   },
@@ -21586,7 +21586,7 @@
     },
     {
      "name": "Harris Andrews",
-     "similarity": 85.4
+     "similarity": 85.7
     },
     {
      "name": "Jacob Weitering",
@@ -21640,7 +21640,7 @@
     },
     {
      "name": "Darcy Gardiner",
-     "similarity": 90.0
+     "similarity": 90.4
     },
     {
      "name": "James Borlase",
@@ -21694,7 +21694,7 @@
     },
     {
      "name": "Eric Hipwood",
-     "similarity": 87.6
+     "similarity": 87.5
     },
     {
      "name": "Jacob van Rooyen",
@@ -21732,7 +21732,7 @@
     },
     {
      "name": "Matthew Johnson",
-     "similarity": 87.0
+     "similarity": 86.7
     },
     {
      "name": "Bo Allan",
@@ -21870,7 +21870,7 @@
     },
     {
      "name": "Jordan Clark",
-     "similarity": 84.3
+     "similarity": 83.9
     },
     {
      "name": "Hugo Hall-Kahan",
@@ -21911,16 +21911,16 @@
      "similarity": 90.5
     },
     {
+     "name": "Oscar McDonald",
+     "similarity": 90.0
+    },
+    {
      "name": "Tylar Young",
      "similarity": 90.0
     },
     {
      "name": "Liam Stocker",
-     "similarity": 89.8
-    },
-    {
-     "name": "Oscar McDonald",
-     "similarity": 89.8
+     "similarity": 89.9
     },
     {
      "name": "Nick Coffield",
@@ -21958,7 +21958,7 @@
     },
     {
      "name": "Alex Pearce",
-     "similarity": 92.2
+     "similarity": 93.1
     },
     {
      "name": "Oscar Adams",
@@ -21966,7 +21966,7 @@
     },
     {
      "name": "Darcy Gardiner",
-     "similarity": 91.4
+     "similarity": 91.1
     },
     {
      "name": "Lewis Young",
@@ -22004,7 +22004,7 @@
     },
     {
      "name": "Ryan Lester",
-     "similarity": 85.8
+     "similarity": 85.2
     },
     {
      "name": "Daniel Turner",
@@ -22020,7 +22020,7 @@
     },
     {
      "name": "Harry Himmelberg",
-     "similarity": 84.8
+     "similarity": 84.7
     }
    ]
   },
@@ -22038,7 +22038,7 @@
    "comps": [
     {
      "name": "Levi Ashcroft",
-     "similarity": 89.6
+     "similarity": 89.8
     },
     {
      "name": "Harry Morrison",
@@ -22049,12 +22049,12 @@
      "similarity": 88.2
     },
     {
-     "name": "Jarrod Berry",
-     "similarity": 87.3
-    },
-    {
      "name": "Brayden Cook",
      "similarity": 87.2
+    },
+    {
+     "name": "Jarrod Berry",
+     "similarity": 86.6
     },
     {
      "name": "Dylan Stephens",
@@ -22100,7 +22100,7 @@
     },
     {
      "name": "Michael Frederick",
-     "similarity": 81.8
+     "similarity": 81.5
     },
     {
      "name": "Ben Ainsworth",
@@ -22134,7 +22134,7 @@
     },
     {
      "name": "Zac Bailey",
-     "similarity": 81.6
+     "similarity": 80.6
     },
     {
      "name": "Christian Petracca",
@@ -22176,7 +22176,7 @@
    "comps": [
     {
      "name": "Harris Andrews",
-     "similarity": 89.1
+     "similarity": 89.4
     },
     {
      "name": "Jayden Laverde",
@@ -22188,7 +22188,7 @@
     },
     {
      "name": "Charlie Comben",
-     "similarity": 85.1
+     "similarity": 85.2
     },
     {
      "name": "Jake Lever",
@@ -22204,7 +22204,7 @@
     },
     {
      "name": "Wade Derksen",
-     "similarity": 83.5
+     "similarity": 83.6
     }
    ]
   },
@@ -22272,11 +22272,11 @@
     },
     {
      "name": "Lachie Whitfield",
-     "similarity": 81.5
+     "similarity": 81.6
     },
     {
      "name": "Josh Daicos",
-     "similarity": 81.4
+     "similarity": 81.5
     },
     {
      "name": "Kane Farrell",
@@ -22287,7 +22287,7 @@
      "similarity": 79.1
     },
     {
-     "name": "Jordan Clark",
+     "name": "John Noble",
      "similarity": 78.6
     },
     {
@@ -22295,8 +22295,8 @@
      "similarity": 78.6
     },
     {
-     "name": "John Noble",
-     "similarity": 78.6
+     "name": "Jordan Clark",
+     "similarity": 77.3
     }
    ]
   },
@@ -22384,7 +22384,7 @@
     },
     {
      "name": "Eric Hipwood",
-     "similarity": 88.8
+     "similarity": 89.2
     },
     {
      "name": "Jake Riccardi",
@@ -22418,7 +22418,7 @@
     },
     {
      "name": "Andrew Brayshaw",
-     "similarity": 84.9
+     "similarity": 85.2
     },
     {
      "name": "Jack Ross",
@@ -22471,16 +22471,16 @@
      "similarity": 85.0
     },
     {
-     "name": "Darcy Wilmot",
-     "similarity": 84.9
-    },
-    {
      "name": "Oliver Florent",
      "similarity": 84.8
     },
     {
      "name": "John Noble",
      "similarity": 84.6
+    },
+    {
+     "name": "Darcy Wilmot",
+     "similarity": 84.5
     }
    ]
   },
@@ -22498,35 +22498,35 @@
    "comps": [
     {
      "name": "Jake Kolodjashnij",
-     "similarity": 93.4
+     "similarity": 92.9
     },
     {
      "name": "James Borlase",
-     "similarity": 92.6
+     "similarity": 92.2
     },
     {
      "name": "Buku Khamis",
-     "similarity": 91.9
-    },
-    {
-     "name": "Tom Barrass",
      "similarity": 91.7
     },
     {
      "name": "Griffin Logue",
-     "similarity": 91.7
+     "similarity": 91.5
+    },
+    {
+     "name": "Tom Barrass",
+     "similarity": 91.5
     },
     {
      "name": "Joel Hamling",
-     "similarity": 91.4
+     "similarity": 91.1
     },
     {
      "name": "Charlie Ballard",
-     "similarity": 91.3
+     "similarity": 91.0
     },
     {
      "name": "Harry Dean",
-     "similarity": 91.2
+     "similarity": 90.6
     }
    ]
   },
@@ -22544,7 +22544,7 @@
    "comps": [
     {
      "name": "Darcy Gardiner",
-     "similarity": 93.4
+     "similarity": 92.9
     },
     {
      "name": "Aidan Corr",
@@ -22606,7 +22606,7 @@
     },
     {
      "name": "Levi Ashcroft",
-     "similarity": 85.2
+     "similarity": 84.6
     },
     {
      "name": "Harry Morrison",
@@ -22643,8 +22643,8 @@
      "similarity": 90.6
     },
     {
-     "name": "Oscar Allen",
-     "similarity": 90.4
+     "name": "Eric Hipwood",
+     "similarity": 89.8
     },
     {
      "name": "Tom Lynch",
@@ -22655,12 +22655,12 @@
      "similarity": 89.6
     },
     {
-     "name": "Jay Polkinghorne",
-     "similarity": 89.1
+     "name": "Oscar Allen",
+     "similarity": 89.4
     },
     {
-     "name": "Eric Hipwood",
-     "similarity": 88.7
+     "name": "Jay Polkinghorne",
+     "similarity": 89.1
     },
     {
      "name": "Brodie Kemp",
@@ -22686,7 +22686,7 @@
     },
     {
      "name": "Logan Evans",
-     "similarity": 90.2
+     "similarity": 90.3
     },
     {
      "name": "Cooper Harvey",
@@ -22740,7 +22740,7 @@
     },
     {
      "name": "Sam Banks",
-     "similarity": 87.4
+     "similarity": 87.5
     },
     {
      "name": "Josh Lindsay",
@@ -22756,7 +22756,7 @@
     },
     {
      "name": "Lachie Jaques",
-     "similarity": 84.4
+     "similarity": 84.3
     }
    ]
   },
@@ -22824,7 +22824,7 @@
     },
     {
      "name": "Nick Haynes",
-     "similarity": 77.4
+     "similarity": 77.5
     },
     {
      "name": "Tom McCartin",
@@ -22848,7 +22848,7 @@
     },
     {
      "name": "Harris Andrews",
-     "similarity": 70.5
+     "similarity": 70.7
     }
    ]
   },
@@ -22874,7 +22874,7 @@
     },
     {
      "name": "Taj Hotton",
-     "similarity": 85.8
+     "similarity": 85.9
     },
     {
      "name": "Oisin Mullin",
@@ -22912,7 +22912,7 @@
    "comps": [
     {
      "name": "Eric Hipwood",
-     "similarity": 93.1
+     "similarity": 93.7
     },
     {
      "name": "Callum Brown",
@@ -22958,7 +22958,7 @@
    "comps": [
     {
      "name": "Billy Wilson",
-     "similarity": 89.8
+     "similarity": 89.9
     },
     {
      "name": "Nic Newman",
@@ -22986,7 +22986,7 @@
     },
     {
      "name": "Jordan Clark",
-     "similarity": 83.9
+     "similarity": 84.0
     }
    ]
   },
@@ -23016,7 +23016,7 @@
     },
     {
      "name": "Will Ashcroft",
-     "similarity": 81.8
+     "similarity": 81.2
     },
     {
      "name": "Kysaiah Pickett",
@@ -23078,7 +23078,7 @@
     },
     {
      "name": "Sam Davidson",
-     "similarity": 86.7
+     "similarity": 86.8
     }
    ]
   },
@@ -23116,14 +23116,14 @@
     },
     {
      "name": "Jacob van Rooyen",
-     "similarity": 84.9
-    },
-    {
-     "name": "Eric Hipwood",
-     "similarity": 84.9
+     "similarity": 85.0
     },
     {
      "name": "Corey Durdin",
+     "similarity": 84.5
+    },
+    {
+     "name": "Mitch McGovern",
      "similarity": 84.5
     }
    ]
@@ -23162,7 +23162,7 @@
     },
     {
      "name": "Darcy Wilmot",
-     "similarity": 79.7
+     "similarity": 79.3
     },
     {
      "name": "Wayne Milera",
@@ -23296,7 +23296,7 @@
     },
     {
      "name": "Shai Bolton",
-     "similarity": 80.1
+     "similarity": 79.3
     },
     {
      "name": "Harley Reid",
@@ -23307,7 +23307,7 @@
      "similarity": 77.8
     },
     {
-     "name": "Justin McInerney",
+     "name": "Hayden Young",
      "similarity": 77.3
     }
    ]
@@ -23326,19 +23326,19 @@
    "comps": [
     {
      "name": "Tom De Koning",
-     "similarity": 89.3
-    },
-    {
-     "name": "Sam Draper",
-     "similarity": 88.3
+     "similarity": 89.2
     },
     {
      "name": "Ned Moyle",
-     "similarity": 88.0
+     "similarity": 88.3
+    },
+    {
+     "name": "Sam Draper",
+     "similarity": 87.8
     },
     {
      "name": "Jarrod Witts",
-     "similarity": 87.4
+     "similarity": 87.2
     },
     {
      "name": "Mitchell Edwards",
@@ -23346,15 +23346,15 @@
     },
     {
      "name": "Nick Bryan",
-     "similarity": 85.2
+     "similarity": 85.1
     },
     {
      "name": "Tim English",
      "similarity": 83.5
     },
     {
-     "name": "Lloyd Meek",
-     "similarity": 82.6
+     "name": "Oscar Steene",
+     "similarity": 82.8
     }
    ]
   },
@@ -23388,7 +23388,7 @@
     },
     {
      "name": "Harry Morrison",
-     "similarity": 87.0
+     "similarity": 87.1
     },
     {
      "name": "Matt Roberts",
@@ -23399,8 +23399,8 @@
      "similarity": 86.9
     },
     {
-     "name": "Jarrod Berry",
-     "similarity": 86.8
+     "name": "Blake Acres",
+     "similarity": 86.7
     }
    ]
   },
@@ -23422,7 +23422,7 @@
     },
     {
      "name": "Jaspa Fletcher",
-     "similarity": 89.4
+     "similarity": 89.2
     },
     {
      "name": "Lawson Humphries",
@@ -23438,7 +23438,7 @@
     },
     {
      "name": "Miles Bergman",
-     "similarity": 88.2
+     "similarity": 88.3
     },
     {
      "name": "Riley Bice",
@@ -23463,20 +23463,20 @@
    "manual_note": null,
    "comps": [
     {
+     "name": "Hayden Young",
+     "similarity": 86.5
+    },
+    {
      "name": "Will Day",
      "similarity": 85.7
     },
     {
-     "name": "Hayden Young",
-     "similarity": 85.3
-    },
-    {
      "name": "Jagga Smith",
-     "similarity": 83.9
+     "similarity": 84.0
     },
     {
      "name": "Hugh McCluggage",
-     "similarity": 82.8
+     "similarity": 82.9
     },
     {
      "name": "Tim Kelly",
@@ -23492,7 +23492,7 @@
     },
     {
      "name": "Darcy Parish",
-     "similarity": 80.4
+     "similarity": 80.5
     }
    ]
   },
@@ -23517,12 +23517,12 @@
      "similarity": 92.6
     },
     {
-     "name": "Billy Frampton",
-     "similarity": 90.2
+     "name": "Oscar McDonald",
+     "similarity": 90.5
     },
     {
-     "name": "Oscar McDonald",
-     "similarity": 89.1
+     "name": "Billy Frampton",
+     "similarity": 90.2
     },
     {
      "name": "Jake Lever",
@@ -23530,7 +23530,7 @@
     },
     {
      "name": "Wade Derksen",
-     "similarity": 87.9
+     "similarity": 88.0
     },
     {
      "name": "Nathan Broad",
@@ -23563,12 +23563,12 @@
      "similarity": 90.6
     },
     {
-     "name": "Jack Silvagni",
-     "similarity": 89.6
+     "name": "Harris Andrews",
+     "similarity": 89.9
     },
     {
-     "name": "Harris Andrews",
-     "similarity": 89.4
+     "name": "Jack Silvagni",
+     "similarity": 89.6
     },
     {
      "name": "Harry Himmelberg",
@@ -23629,8 +23629,8 @@
      "similarity": 85.9
     },
     {
-     "name": "Oscar Adams",
-     "similarity": 85.5
+     "name": "Darcy Gardiner",
+     "similarity": 85.8
     }
    ]
   },
@@ -23652,19 +23652,19 @@
     },
     {
      "name": "Tim English",
-     "similarity": 74.2
+     "similarity": 74.3
     },
     {
      "name": "Darcy Fort",
-     "similarity": 73.2
+     "similarity": 73.4
     },
     {
      "name": "Sam Draper",
-     "similarity": 71.5
+     "similarity": 72.4
     },
     {
      "name": "Oscar Steene",
-     "similarity": 71.2
+     "similarity": 71.3
     },
     {
      "name": "Toby Murray",
@@ -23740,35 +23740,35 @@
    "comps": [
     {
      "name": "Tom Barrass",
-     "similarity": 93.0
+     "similarity": 93.3
     },
     {
      "name": "Joel Hamling",
-     "similarity": 92.2
+     "similarity": 93.1
     },
     {
      "name": "James Borlase",
-     "similarity": 91.5
+     "similarity": 91.9
     },
     {
      "name": "Jordon Butts",
-     "similarity": 89.7
-    },
-    {
-     "name": "Jack Buckley",
-     "similarity": 88.6
-    },
-    {
-     "name": "Rhett Bazzo",
-     "similarity": 88.4
+     "similarity": 89.3
     },
     {
      "name": "Charlie Ballard",
-     "similarity": 88.0
+     "similarity": 88.8
+    },
+    {
+     "name": "Jack Buckley",
+     "similarity": 88.1
+    },
+    {
+     "name": "Lewis Young",
+     "similarity": 87.8
     },
     {
      "name": "Darcy Gardiner",
-     "similarity": 88.0
+     "similarity": 87.7
     }
    ]
   },
@@ -23936,7 +23936,7 @@
     },
     {
      "name": "Harley Reid",
-     "similarity": 74.8
+     "similarity": 74.9
     },
     {
      "name": "Luke Davies-Uniacke",
@@ -23951,8 +23951,8 @@
      "similarity": 72.5
     },
     {
-     "name": "Will Ashcroft",
-     "similarity": 72.4
+     "name": "Max Hall",
+     "similarity": 72.2
     }
    ]
   },
@@ -23961,7 +23961,7 @@
    "role": "intercept_def",
    "role_label": "Intercept key defender",
    "role_group": "DEF",
-   "confidence": "high",
+   "confidence": "medium",
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium defender",
@@ -23974,7 +23974,7 @@
     },
     {
      "name": "Heath Chapman",
-     "similarity": 89.5
+     "similarity": 89.6
     },
     {
      "name": "Mark O'Connor",
@@ -23989,12 +23989,12 @@
      "similarity": 87.0
     },
     {
-     "name": "Jack Silvagni",
-     "similarity": 86.1
+     "name": "Oscar McDonald",
+     "similarity": 86.5
     },
     {
-     "name": "Oscar McDonald",
-     "similarity": 86.0
+     "name": "Jack Silvagni",
+     "similarity": 86.1
     },
     {
      "name": "Noah Mraz",
@@ -24024,11 +24024,11 @@
     },
     {
      "name": "Alex Pearce",
-     "similarity": 93.0
+     "similarity": 93.3
     },
     {
      "name": "Darcy Gardiner",
-     "similarity": 91.7
+     "similarity": 91.5
     },
     {
      "name": "Griffin Logue",
@@ -24086,7 +24086,7 @@
     },
     {
      "name": "Kieren Briggs",
-     "similarity": 75.5
+     "similarity": 75.4
     },
     {
      "name": "Brodie Grundy",
@@ -24108,19 +24108,19 @@
    "comps": [
     {
      "name": "Oliver Henry",
-     "similarity": 91.5
-    },
-    {
-     "name": "Aaron Cadman",
-     "similarity": 90.0
+     "similarity": 91.0
     },
     {
      "name": "Shannon Neale",
-     "similarity": 89.4
+     "similarity": 89.0
+    },
+    {
+     "name": "Aaron Cadman",
+     "similarity": 88.9
     },
     {
      "name": "Bayley Fritsch",
-     "similarity": 89.2
+     "similarity": 88.1
     },
     {
      "name": "Jake Stringer",
@@ -24128,15 +24128,15 @@
     },
     {
      "name": "Patrick Voss",
-     "similarity": 87.5
+     "similarity": 86.8
     },
     {
      "name": "Mabior Chol",
-     "similarity": 85.3
+     "similarity": 84.3
     },
     {
-     "name": "Kai Lohmann",
-     "similarity": 85.0
+     "name": "Paul Curtis",
+     "similarity": 83.3
     }
    ]
   },
@@ -24165,16 +24165,16 @@
      "similarity": 83.6
     },
     {
+     "name": "Caleb Serong",
+     "similarity": 78.8
+    },
+    {
      "name": "Hugo Garcia",
      "similarity": 78.4
     },
     {
-     "name": "Caleb Serong",
-     "similarity": 78.1
-    },
-    {
      "name": "Tom Liberatore",
-     "similarity": 73.1
+     "similarity": 73.2
     },
     {
      "name": "Jack Steele",
@@ -24204,7 +24204,7 @@
     },
     {
      "name": "Darcy Fort",
-     "similarity": 79.2
+     "similarity": 79.7
     },
     {
      "name": "Nicholas Madden",
@@ -24246,7 +24246,7 @@
    "comps": [
     {
      "name": "Ned Long",
-     "similarity": 89.8
+     "similarity": 89.9
     },
     {
      "name": "James Rowbottom",
@@ -24274,7 +24274,7 @@
     },
     {
      "name": "Josh Dunkley",
-     "similarity": 81.4
+     "similarity": 80.9
     }
    ]
   },
@@ -24354,7 +24354,7 @@
     },
     {
      "name": "Oscar McDonald",
-     "similarity": 88.6
+     "similarity": 89.5
     },
     {
      "name": "Jack Silvagni",
@@ -24362,7 +24362,7 @@
     },
     {
      "name": "Jacob Weitering",
-     "similarity": 86.9
+     "similarity": 86.8
     },
     {
      "name": "Mark Keane",
@@ -24388,23 +24388,23 @@
     },
     {
      "name": "Riley Bice",
-     "similarity": 87.0
+     "similarity": 87.1
+    },
+    {
+     "name": "Darcy Wilmot",
+     "similarity": 86.7
     },
     {
      "name": "Lawson Humphries",
      "similarity": 86.4
     },
     {
-     "name": "Darcy Wilmot",
-     "similarity": 86.2
+     "name": "Jaspa Fletcher",
+     "similarity": 86.4
     },
     {
      "name": "Isaac Quaynor",
      "similarity": 86.0
-    },
-    {
-     "name": "Jaspa Fletcher",
-     "similarity": 85.9
     },
     {
      "name": "Dan Houston",
@@ -24434,7 +24434,7 @@
     },
     {
      "name": "Isaac Quaynor",
-     "similarity": 87.0
+     "similarity": 87.1
     },
     {
      "name": "Harry Perryman",
@@ -24458,7 +24458,7 @@
     },
     {
      "name": "Karl Worner",
-     "similarity": 82.8
+     "similarity": 83.1
     }
    ]
   },
@@ -24568,35 +24568,35 @@
    "comps": [
     {
      "name": "Brad Close",
-     "similarity": 92.3
-    },
-    {
-     "name": "Josh Dolan",
-     "similarity": 90.7
+     "similarity": 91.2
     },
     {
      "name": "Caiden Cleary",
-     "similarity": 90.6
+     "similarity": 90.9
     },
     {
-     "name": "Isaac Kako",
+     "name": "Josh Dolan",
      "similarity": 90.0
     },
     {
      "name": "Zac Taylor",
-     "similarity": 89.4
+     "similarity": 89.5
     },
     {
      "name": "Cody Weightman",
-     "similarity": 89.1
+     "similarity": 89.0
+    },
+    {
+     "name": "Isaac Kako",
+     "similarity": 88.9
     },
     {
      "name": "Leonardo Lombard",
-     "similarity": 88.4
+     "similarity": 88.8
     },
     {
      "name": "Rhylee West",
-     "similarity": 87.7
+     "similarity": 88.4
     }
    ]
   },
@@ -24634,7 +24634,7 @@
     },
     {
      "name": "Noah Anderson",
-     "similarity": 77.4
+     "similarity": 77.5
     },
     {
      "name": "Will Day",
@@ -24687,8 +24687,8 @@
      "similarity": 79.7
     },
     {
-     "name": "Darcy Fort",
-     "similarity": 78.8
+     "name": "Lachlan McAndrew",
+     "similarity": 78.6
     }
    ]
   },
@@ -24714,7 +24714,7 @@
     },
     {
      "name": "Jaspa Fletcher",
-     "similarity": 89.8
+     "similarity": 89.9
     },
     {
      "name": "Joel Jeffrey",
@@ -24825,8 +24825,8 @@
      "similarity": 75.2
     },
     {
-     "name": "Darcy Fort",
-     "similarity": 72.8
+     "name": "Kieren Briggs",
+     "similarity": 72.6
     }
    ]
   },
@@ -24844,35 +24844,35 @@
    "comps": [
     {
      "name": "Liam Stocker",
-     "similarity": 91.9
+     "similarity": 92.0
     },
     {
      "name": "Josh Lai",
-     "similarity": 91.2
+     "similarity": 91.5
     },
     {
      "name": "Heath Chapman",
-     "similarity": 90.7
-    },
-    {
-     "name": "Tom McDonald",
-     "similarity": 90.6
-    },
-    {
-     "name": "Zach Reid",
-     "similarity": 90.4
-    },
-    {
-     "name": "Nathan Broad",
-     "similarity": 89.8
+     "similarity": 90.8
     },
     {
      "name": "Jayden Laverde",
-     "similarity": 89.1
+     "similarity": 90.5
     },
     {
-     "name": "Changkuoth Jiath",
-     "similarity": 89.0
+     "name": "Nathan Broad",
+     "similarity": 90.0
+    },
+    {
+     "name": "Tom McDonald",
+     "similarity": 90.0
+    },
+    {
+     "name": "Charlie Comben",
+     "similarity": 89.6
+    },
+    {
+     "name": "Billy Frampton",
+     "similarity": 89.5
     }
    ]
   },
@@ -24917,8 +24917,8 @@
      "similarity": 89.0
     },
     {
-     "name": "Heath Chapman",
-     "similarity": 88.9
+     "name": "Oscar McDonald",
+     "similarity": 89.0
     }
    ]
   },
@@ -24960,7 +24960,7 @@
     },
     {
      "name": "Wade Derksen",
-     "similarity": 77.6
+     "similarity": 77.7
     },
     {
      "name": "Tom McDonald",
@@ -24986,11 +24986,11 @@
     },
     {
      "name": "Zach Guthrie",
-     "similarity": 88.8
+     "similarity": 88.9
     },
     {
      "name": "Isaac Quaynor",
-     "similarity": 88.5
+     "similarity": 88.6
     },
     {
      "name": "Logan Evans",
@@ -25002,15 +25002,15 @@
     },
     {
      "name": "Karl Worner",
-     "similarity": 87.9
+     "similarity": 87.4
+    },
+    {
+     "name": "Darcy Wilmot",
+     "similarity": 87.3
     },
     {
      "name": "Darcy Byrne-Jones",
      "similarity": 87.1
-    },
-    {
-     "name": "Darcy Wilmot",
-     "similarity": 87.0
     }
    ]
   },
@@ -25035,15 +25035,15 @@
      "similarity": 84.0
     },
     {
-     "name": "Hayden Young",
-     "similarity": 81.4
-    },
-    {
      "name": "Touk Miller",
-     "similarity": 80.4
+     "similarity": 80.5
     },
     {
      "name": "Christian Petracca",
+     "similarity": 80.2
+    },
+    {
+     "name": "Hayden Young",
      "similarity": 80.2
     },
     {
@@ -25052,11 +25052,11 @@
     },
     {
      "name": "Lachie Neale",
-     "similarity": 77.3
+     "similarity": 78.4
     },
     {
-     "name": "Jason Horne-Francis",
-     "similarity": 77.3
+     "name": "Will Ashcroft",
+     "similarity": 77.9
     }
    ]
   },
@@ -25082,7 +25082,7 @@
     },
     {
      "name": "Michael Frederick",
-     "similarity": 87.1
+     "similarity": 87.5
     },
     {
      "name": "Bailey Laurie",
@@ -25128,7 +25128,7 @@
     },
     {
      "name": "Billy Frampton",
-     "similarity": 86.9
+     "similarity": 86.8
     },
     {
      "name": "Wade Derksen",
@@ -25166,35 +25166,35 @@
    "comps": [
     {
      "name": "Jack Graham",
-     "similarity": 81.4
+     "similarity": 80.9
     },
     {
      "name": "Jack Steele",
-     "similarity": 80.3
+     "similarity": 80.0
     },
     {
      "name": "Will Setterfield",
-     "similarity": 80.2
+     "similarity": 78.8
     },
     {
      "name": "Willem Drew",
-     "similarity": 79.1
-    },
-    {
-     "name": "Ned Long",
-     "similarity": 78.5
-    },
-    {
-     "name": "George Wardlaw",
-     "similarity": 78.3
-    },
-    {
-     "name": "Andrew Brayshaw",
-     "similarity": 78.2
+     "similarity": 78.6
     },
     {
      "name": "Oliver Francou",
-     "similarity": 77.9
+     "similarity": 78.4
+    },
+    {
+     "name": "Ned Long",
+     "similarity": 78.2
+    },
+    {
+     "name": "George Wardlaw",
+     "similarity": 77.6
+    },
+    {
+     "name": "Andrew Brayshaw",
+     "similarity": 77.4
     }
    ]
   },
@@ -25216,7 +25216,7 @@
     },
     {
      "name": "Cam Rayner",
-     "similarity": 83.4
+     "similarity": 83.9
     },
     {
      "name": "Josh Rachele",
@@ -25228,7 +25228,7 @@
     },
     {
      "name": "Braeden Campbell",
-     "similarity": 81.1
+     "similarity": 81.2
     },
     {
      "name": "Connor Macdonald",
@@ -25240,7 +25240,7 @@
     },
     {
      "name": "Murphy Reid",
-     "similarity": 78.6
+     "similarity": 79.2
     }
    ]
   },
@@ -25286,7 +25286,7 @@
     },
     {
      "name": "Marc Pittonet",
-     "similarity": 79.2
+     "similarity": 79.3
     }
    ]
   },
@@ -25374,11 +25374,11 @@
     },
     {
      "name": "Trent Rivers",
-     "similarity": 85.5
+     "similarity": 85.6
     },
     {
      "name": "Karl Worner",
-     "similarity": 85.0
+     "similarity": 85.5
     }
    ]
   },
@@ -25404,10 +25404,14 @@
     },
     {
      "name": "Michael Frederick",
-     "similarity": 89.9
+     "similarity": 89.8
     },
     {
      "name": "Bayley Fritsch",
+     "similarity": 89.2
+    },
+    {
+     "name": "Isaiah Dudley",
      "similarity": 89.2
     },
     {
@@ -25417,10 +25421,6 @@
     {
      "name": "Aaron Cadman",
      "similarity": 88.6
-    },
-    {
-     "name": "Isaiah Dudley",
-     "similarity": 88.3
     },
     {
      "name": "Bailey Laurie",
@@ -25445,32 +25445,32 @@
      "similarity": 86.7
     },
     {
-     "name": "Massimo D'Ambrosio",
-     "similarity": 85.4
-    },
-    {
      "name": "Tom Blamires",
-     "similarity": 84.7
-    },
-    {
-     "name": "Dylan Stephens",
-     "similarity": 84.4
-    },
-    {
-     "name": "Neil Erasmus",
-     "similarity": 84.3
+     "similarity": 85.5
     },
     {
      "name": "Nathan O'Driscoll",
-     "similarity": 84.2
+     "similarity": 84.7
+    },
+    {
+     "name": "Massimo D'Ambrosio",
+     "similarity": 84.5
+    },
+    {
+     "name": "Neil Erasmus",
+     "similarity": 84.0
     },
     {
      "name": "Cooper Lord",
+     "similarity": 83.9
+    },
+    {
+     "name": "Dylan Stephens",
      "similarity": 83.8
     },
     {
      "name": "Brayden Cook",
-     "similarity": 83.6
+     "similarity": 83.4
     }
    ]
   },
@@ -25503,8 +25503,12 @@
      "similarity": 88.5
     },
     {
+     "name": "Kai Lohmann",
+     "similarity": 88.2
+    },
+    {
      "name": "Leonardo Lombard",
-     "similarity": 88.1
+     "similarity": 88.2
     },
     {
      "name": "Rhylee West",
@@ -25513,10 +25517,6 @@
     {
      "name": "Harry Sharp",
      "similarity": 86.6
-    },
-    {
-     "name": "Josh Rachele",
-     "similarity": 86.3
     }
    ]
   },
@@ -25534,35 +25534,35 @@
    "comps": [
     {
      "name": "Mitch McGovern",
-     "similarity": 93.1
+     "similarity": 93.7
     },
     {
      "name": "Jake Riccardi",
-     "similarity": 91.3
+     "similarity": 91.0
     },
     {
      "name": "Jack Darling",
-     "similarity": 90.8
-    },
-    {
-     "name": "Brodie Kemp",
-     "similarity": 90.0
-    },
-    {
-     "name": "Jack Martin",
-     "similarity": 88.8
-    },
-    {
-     "name": "Mitch Lewis",
-     "similarity": 88.7
+     "similarity": 89.8
     },
     {
      "name": "Jesse Hogan",
-     "similarity": 88.7
+     "similarity": 89.8
+    },
+    {
+     "name": "Brodie Kemp",
+     "similarity": 89.7
+    },
+    {
+     "name": "Jack Martin",
+     "similarity": 89.2
     },
     {
      "name": "Cooper Trembath",
-     "similarity": 88.6
+     "similarity": 89.0
+    },
+    {
+     "name": "Mitch Lewis",
+     "similarity": 88.4
     }
    ]
   },
@@ -25583,32 +25583,32 @@
      "similarity": 85.7
     },
     {
-     "name": "Kysaiah Pickett",
-     "similarity": 84.8
-    },
-    {
      "name": "Chad Warner",
-     "similarity": 83.6
+     "similarity": 84.5
     },
     {
-     "name": "Christian Petracca",
-     "similarity": 80.1
+     "name": "Kysaiah Pickett",
+     "similarity": 84.5
     },
     {
      "name": "Max Hall",
-     "similarity": 79.7
+     "similarity": 79.5
     },
     {
-     "name": "Will Ashcroft",
-     "similarity": 78.1
+     "name": "Christian Petracca",
+     "similarity": 79.3
     },
     {
      "name": "Marcus Bontempelli",
-     "similarity": 77.7
+     "similarity": 77.9
     },
     {
-     "name": "Will Day",
-     "similarity": 77.2
+     "name": "Will Ashcroft",
+     "similarity": 77.9
+    },
+    {
+     "name": "Izak Rankine",
+     "similarity": 76.5
     }
    ]
   },
@@ -25645,16 +25645,16 @@
      "similarity": 84.7
     },
     {
-     "name": "Hayden Young",
-     "similarity": 83.8
-    },
-    {
      "name": "Jack Bowes",
      "similarity": 83.3
     },
     {
+     "name": "Hayden Young",
+     "similarity": 82.9
+    },
+    {
      "name": "Hugh McCluggage",
-     "similarity": 81.9
+     "similarity": 81.7
     }
    ]
   },
@@ -25687,10 +25687,6 @@
      "similarity": 89.4
     },
     {
-     "name": "Patrick Voss",
-     "similarity": 88.4
-    },
-    {
      "name": "Shannon Neale",
      "similarity": 88.3
     },
@@ -25701,6 +25697,10 @@
     {
      "name": "Mitch Owens",
      "similarity": 87.5
+    },
+    {
+     "name": "Cooper Sharman",
+     "similarity": 87.3
     }
    ]
   },
@@ -25718,7 +25718,7 @@
    "comps": [
     {
      "name": "Justin McInerney",
-     "similarity": 88.1
+     "similarity": 88.2
     },
     {
      "name": "Jy Simpkin",
@@ -25729,6 +25729,10 @@
      "similarity": 83.0
     },
     {
+     "name": "Zac Bailey",
+     "similarity": 82.7
+    },
+    {
      "name": "Jack Bowes",
      "similarity": 82.5
     },
@@ -25737,16 +25741,12 @@
      "similarity": 82.2
     },
     {
-     "name": "Zac Bailey",
-     "similarity": 82.0
-    },
-    {
      "name": "Hayden Young",
-     "similarity": 81.2
+     "similarity": 80.6
     },
     {
-     "name": "Hugh McCluggage",
-     "similarity": 78.1
+     "name": "Patrick Lipinski",
+     "similarity": 78.0
     }
    ]
   },
@@ -25768,7 +25768,7 @@
     },
     {
      "name": "Darcy Wilmot",
-     "similarity": 89.4
+     "similarity": 89.0
     },
     {
      "name": "Oliver Florent",
@@ -25788,7 +25788,7 @@
     },
     {
      "name": "Karl Worner",
-     "similarity": 87.0
+     "similarity": 86.9
     },
     {
      "name": "Bodhi Uwland",
@@ -25818,7 +25818,7 @@
     },
     {
      "name": "James Rowbottom",
-     "similarity": 85.1
+     "similarity": 85.2
     },
     {
      "name": "Jack Graham",
@@ -25860,11 +25860,11 @@
     },
     {
      "name": "Dayne Zorko",
-     "similarity": 88.7
+     "similarity": 88.2
     },
     {
      "name": "John Noble",
-     "similarity": 87.2
+     "similarity": 87.3
     },
     {
      "name": "Josh Daicos",
@@ -25880,7 +25880,7 @@
     },
     {
      "name": "Jordan Clark",
-     "similarity": 85.3
+     "similarity": 85.2
     },
     {
      "name": "Archie Roberts",
@@ -25906,31 +25906,31 @@
     },
     {
      "name": "Jake Lever",
-     "similarity": 89.4
+     "similarity": 89.9
     },
     {
      "name": "Sam Collins",
-     "similarity": 89.1
+     "similarity": 89.4
     },
     {
      "name": "Jack Silvagni",
-     "similarity": 88.2
+     "similarity": 88.5
     },
     {
      "name": "Connor O'Sullivan",
-     "similarity": 87.3
+     "similarity": 87.6
     },
     {
      "name": "Jayden Laverde",
-     "similarity": 86.0
+     "similarity": 86.3
     },
     {
      "name": "Charlie Comben",
-     "similarity": 85.8
+     "similarity": 86.0
     },
     {
      "name": "Aliir Aliir",
-     "similarity": 85.4
+     "similarity": 85.7
     }
    ]
   },
@@ -25960,7 +25960,7 @@
     },
     {
      "name": "Logan Morris",
-     "similarity": 85.6
+     "similarity": 85.4
     },
     {
      "name": "Aaron Naughton",
@@ -25972,7 +25972,7 @@
     },
     {
      "name": "Tim Membrey",
-     "similarity": 83.3
+     "similarity": 83.4
     },
     {
      "name": "Darcy Fogarty",
@@ -26006,7 +26006,7 @@
     },
     {
      "name": "Caleb Serong",
-     "similarity": 79.1
+     "similarity": 79.8
     },
     {
      "name": "Tom Liberatore",
@@ -26022,7 +26022,7 @@
     },
     {
      "name": "Jack Steele",
-     "similarity": 71.6
+     "similarity": 71.7
     }
    ]
   },
@@ -26086,7 +26086,7 @@
    "comps": [
     {
      "name": "Logan Morris",
-     "similarity": 91.1
+     "similarity": 90.9
     },
     {
      "name": "Jack Gunston",
@@ -26098,7 +26098,7 @@
     },
     {
      "name": "Jye Amiss",
-     "similarity": 82.3
+     "similarity": 82.7
     },
     {
      "name": "Logan McDonald",
@@ -26186,7 +26186,7 @@
     },
     {
      "name": "Cam Rayner",
-     "similarity": 79.9
+     "similarity": 80.6
     },
     {
      "name": "Bailey Humphrey",
@@ -26205,8 +26205,8 @@
      "similarity": 77.1
     },
     {
-     "name": "Ben Keays",
-     "similarity": 75.4
+     "name": "Kai Lohmann",
+     "similarity": 76.8
     }
    ]
   },
@@ -26298,7 +26298,7 @@
     },
     {
      "name": "Jaspa Fletcher",
-     "similarity": 87.2
+     "similarity": 87.1
     }
    ]
   },
@@ -26344,7 +26344,7 @@
     },
     {
      "name": "Michael Frederick",
-     "similarity": 81.8
+     "similarity": 81.7
     }
    ]
   },
@@ -26378,7 +26378,7 @@
     },
     {
      "name": "Darcy Gardiner",
-     "similarity": 89.2
+     "similarity": 88.5
     },
     {
      "name": "Charlie Ballard",
@@ -26445,7 +26445,7 @@
    "role": "gen_fwd",
    "role_label": "General forward",
    "role_group": "FWD",
-   "confidence": "medium",
+   "confidence": "low",
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
@@ -26454,35 +26454,35 @@
    "comps": [
     {
      "name": "Oliver Wiltshire",
-     "similarity": 87.6
-    },
-    {
-     "name": "Michael Frederick",
-     "similarity": 86.0
+     "similarity": 89.3
     },
     {
      "name": "Zac Banch",
-     "similarity": 85.5
+     "similarity": 86.2
     },
     {
      "name": "Bailey Laurie",
-     "similarity": 84.8
+     "similarity": 85.9
+    },
+    {
+     "name": "Michael Frederick",
+     "similarity": 85.2
     },
     {
      "name": "Arthur Jones",
-     "similarity": 82.8
-    },
-    {
-     "name": "Bayley Fritsch",
-     "similarity": 82.0
-    },
-    {
-     "name": "Ben Long",
-     "similarity": 81.6
+     "similarity": 83.6
     },
     {
      "name": "Isaiah Dudley",
-     "similarity": 80.2
+     "similarity": 83.4
+    },
+    {
+     "name": "Ben Long",
+     "similarity": 82.5
+    },
+    {
+     "name": "Bayley Fritsch",
+     "similarity": 82.3
     }
    ]
   },
@@ -26512,7 +26512,7 @@
     },
     {
      "name": "Darcy Gardiner",
-     "similarity": 91.7
+     "similarity": 91.5
     },
     {
      "name": "Tom Barrass",
@@ -26592,7 +26592,7 @@
    "comps": [
     {
      "name": "Jordan Clark",
-     "similarity": 90.7
+     "similarity": 91.7
     },
     {
      "name": "Lawson Humphries",
@@ -26600,7 +26600,7 @@
     },
     {
      "name": "Trent Rivers",
-     "similarity": 89.3
+     "similarity": 89.4
     },
     {
      "name": "Wayne Milera",
@@ -26657,16 +26657,16 @@
      "similarity": 85.8
     },
     {
+     "name": "Oscar McDonald",
+     "similarity": 85.4
+    },
+    {
      "name": "Liam Stocker",
      "similarity": 85.2
     },
     {
      "name": "Connor Idun",
      "similarity": 85.0
-    },
-    {
-     "name": "Heath Chapman",
-     "similarity": 84.9
     }
    ]
   },
@@ -26712,7 +26712,7 @@
     },
     {
      "name": "Michael Frederick",
-     "similarity": 80.4
+     "similarity": 80.2
     }
    ]
   },
@@ -26730,35 +26730,35 @@
    "comps": [
     {
      "name": "Jai Serong",
-     "similarity": 89.0
+     "similarity": 89.7
     },
     {
      "name": "Brayden Cook",
-     "similarity": 88.6
+     "similarity": 88.2
     },
     {
      "name": "Neil Erasmus",
-     "similarity": 88.0
+     "similarity": 87.9
     },
     {
      "name": "Mason Wood",
-     "similarity": 87.3
+     "similarity": 86.6
     },
     {
      "name": "Ed Langdon",
-     "similarity": 86.8
-    },
-    {
-     "name": "Dylan Stephens",
-     "similarity": 86.5
+     "similarity": 86.6
     },
     {
      "name": "Matt Roberts",
-     "similarity": 86.1
+     "similarity": 86.2
     },
     {
-     "name": "Patrick Retschko",
-     "similarity": 85.9
+     "name": "Harry Morrison",
+     "similarity": 86.0
+    },
+    {
+     "name": "Dylan Stephens",
+     "similarity": 85.7
     }
    ]
   },
@@ -26776,27 +26776,27 @@
    "comps": [
     {
      "name": "Karl Worner",
-     "similarity": 90.6
+     "similarity": 90.7
     },
     {
      "name": "Bodhi Uwland",
-     "similarity": 90.4
+     "similarity": 90.5
     },
     {
      "name": "Jeremy Howe",
      "similarity": 88.9
     },
     {
-     "name": "Luke Ryan",
-     "similarity": 87.7
+     "name": "Darcy Wilmot",
+     "similarity": 88.4
     },
     {
      "name": "Josh Worrell",
      "similarity": 87.7
     },
     {
-     "name": "Darcy Wilmot",
-     "similarity": 87.5
+     "name": "Luke Ryan",
+     "similarity": 87.4
     },
     {
      "name": "Tom Stewart",
@@ -26834,7 +26834,7 @@
     },
     {
      "name": "Mason Cox",
-     "similarity": 87.6
+     "similarity": 87.9
     },
     {
      "name": "Oscar Steene",
@@ -26876,7 +26876,7 @@
     },
     {
      "name": "Caleb Serong",
-     "similarity": 85.2
+     "similarity": 85.4
     },
     {
      "name": "Patrick Cripps",
@@ -26930,7 +26930,7 @@
     },
     {
      "name": "Lachlan Cowan",
-     "similarity": 88.9
+     "similarity": 89.0
     },
     {
      "name": "Sam Wicks",
@@ -26972,7 +26972,7 @@
     },
     {
      "name": "Andrew Brayshaw",
-     "similarity": 85.2
+     "similarity": 84.9
     },
     {
      "name": "Josh Ward",
@@ -26997,7 +26997,7 @@
    "role": "gun_mid",
    "role_label": "Elite two-way midfielder",
    "role_group": "MID",
-   "confidence": "high",
+   "confidence": "medium",
    "secondary_role": "small_fwd",
    "secondary_label": "Pressure small forward",
    "official_position": "Midfielder",
@@ -27052,7 +27052,7 @@
    "comps": [
     {
      "name": "Heath Chapman",
-     "similarity": 93.0
+     "similarity": 93.1
     },
     {
      "name": "Josh Lai",
@@ -27064,7 +27064,7 @@
     },
     {
      "name": "Oscar McDonald",
-     "similarity": 89.0
+     "similarity": 89.1
     },
     {
      "name": "Daniel Turner",
@@ -27117,15 +27117,15 @@
      "similarity": 87.2
     },
     {
-     "name": "Jaspa Fletcher",
-     "similarity": 87.1
-    },
-    {
      "name": "Miles Bergman",
      "similarity": 87.0
     },
     {
      "name": "Mason Redman",
+     "similarity": 86.9
+    },
+    {
+     "name": "Bailey Williams",
      "similarity": 86.9
     }
    ]
@@ -27144,35 +27144,35 @@
    "comps": [
     {
      "name": "Dante Visentini",
-     "similarity": 90.8
-    },
-    {
-     "name": "Oscar Steene",
-     "similarity": 90.2
+     "similarity": 90.3
     },
     {
      "name": "Max Heath",
-     "similarity": 89.8
+     "similarity": 89.9
     },
     {
-     "name": "Toby Murray",
-     "similarity": 88.5
+     "name": "Oscar Steene",
+     "similarity": 89.5
     },
     {
      "name": "Samson Ryan",
+     "similarity": 88.3
+    },
+    {
+     "name": "Toby Murray",
      "similarity": 88.2
     },
     {
      "name": "Sean Darcy",
-     "similarity": 87.6
+     "similarity": 87.9
     },
     {
      "name": "Wil Dawson",
-     "similarity": 83.7
+     "similarity": 83.5
     },
     {
-     "name": "Ned Reeves",
-     "similarity": 82.0
+     "name": "Callum Coleman-Jones",
+     "similarity": 81.9
     }
    ]
   },
@@ -27190,15 +27190,15 @@
    "comps": [
     {
      "name": "Karl Worner",
-     "similarity": 89.9
-    },
-    {
-     "name": "Josh Battle",
-     "similarity": 87.7
+     "similarity": 90.5
     },
     {
      "name": "Logan Evans",
-     "similarity": 86.4
+     "similarity": 87.6
+    },
+    {
+     "name": "Josh Battle",
+     "similarity": 87.4
     },
     {
      "name": "Jayden Short",
@@ -27206,19 +27206,19 @@
     },
     {
      "name": "Luke Parker",
-     "similarity": 86.2
+     "similarity": 85.7
     },
     {
      "name": "Darcy Wilmot",
-     "similarity": 84.8
+     "similarity": 85.6
     },
     {
      "name": "Liam Duggan",
-     "similarity": 84.7
+     "similarity": 85.5
     },
     {
-     "name": "Bodhi Uwland",
-     "similarity": 84.6
+     "name": "Mason Redman",
+     "similarity": 85.3
     }
    ]
   },
@@ -27243,11 +27243,11 @@
      "similarity": 93.8
     },
     {
-     "name": "Darcy Gardiner",
-     "similarity": 91.9
+     "name": "James O'Donnell",
+     "similarity": 91.8
     },
     {
-     "name": "James O'Donnell",
+     "name": "Darcy Gardiner",
      "similarity": 91.7
     },
     {
@@ -27282,35 +27282,35 @@
    "comps": [
     {
      "name": "Arthur Jones",
-     "similarity": 91.2
-    },
-    {
-     "name": "Ben Long",
-     "similarity": 89.9
-    },
-    {
-     "name": "Bailey Laurie",
-     "similarity": 89.2
+     "similarity": 90.9
     },
     {
      "name": "Rhyan Mansell",
-     "similarity": 89.1
+     "similarity": 90.1
     },
     {
-     "name": "Bayley Fritsch",
-     "similarity": 88.2
+     "name": "Ben Long",
+     "similarity": 89.8
+    },
+    {
+     "name": "Bailey Laurie",
+     "similarity": 88.6
     },
     {
      "name": "Zac Banch",
-     "similarity": 88.1
+     "similarity": 87.8
+    },
+    {
+     "name": "Bayley Fritsch",
+     "similarity": 87.7
     },
     {
      "name": "Tom Cole",
-     "similarity": 87.1
+     "similarity": 87.5
     },
     {
      "name": "Mabior Chol",
-     "similarity": 86.9
+     "similarity": 87.2
     }
    ]
   },
@@ -27319,7 +27319,7 @@
    "role": "small_fwd",
    "role_label": "Pressure small forward",
    "role_group": "FWD",
-   "confidence": "medium",
+   "confidence": "low",
    "secondary_role": null,
    "secondary_label": null,
    "official_position": "Small/medium forward",
@@ -27331,23 +27331,23 @@
      "similarity": 93.5
     },
     {
-     "name": "Sam Switkowski",
-     "similarity": 92.3
-    },
-    {
      "name": "Isaac Kako",
      "similarity": 92.1
+    },
+    {
+     "name": "Sam Switkowski",
+     "similarity": 91.2
     },
     {
      "name": "Lachlan Gulbin",
      "similarity": 91.2
     },
     {
-     "name": "Zac Taylor",
+     "name": "Cody Weightman",
      "similarity": 89.5
     },
     {
-     "name": "Cody Weightman",
+     "name": "Zac Taylor",
      "similarity": 89.5
     },
     {
@@ -27386,7 +27386,7 @@
     },
     {
      "name": "Jack Darling",
-     "similarity": 88.2
+     "similarity": 88.3
     },
     {
      "name": "Taylor Walker",
@@ -27394,15 +27394,15 @@
     },
     {
      "name": "Logan McDonald",
-     "similarity": 87.8
+     "similarity": 87.9
     },
     {
      "name": "Mitch Lewis",
      "similarity": 87.8
     },
     {
-     "name": "Eric Hipwood",
-     "similarity": 87.4
+     "name": "Brodie Kemp",
+     "similarity": 87.3
     }
    ]
   },
@@ -27424,7 +27424,7 @@
     },
     {
      "name": "Andrew Brayshaw",
-     "similarity": 84.1
+     "similarity": 85.2
     },
     {
      "name": "Hugo Garcia",
@@ -27433,10 +27433,6 @@
     {
      "name": "Jack Steele",
      "similarity": 82.5
-    },
-    {
-     "name": "Caleb Serong",
-     "similarity": 80.0
     },
     {
      "name": "Willem Drew",
@@ -27449,6 +27445,10 @@
     {
      "name": "Will Setterfield",
      "similarity": 78.6
+    },
+    {
+     "name": "Caleb Serong",
+     "similarity": 78.5
     }
    ]
   }
