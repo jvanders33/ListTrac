@@ -2,23 +2,127 @@
  "source": "AFL.com.au",
  "source_url": "https://www.afl.com.au/news",
  "note": "Contract / free-agency / trade movement coverage from the AFL — headline & link only.",
- "count": 2,
+ "count": 15,
  "items": [
   {
-   "title": "AFL Trade Radio is back for 2026: Watch LIVE from 12pm AEST",
+   "title": "Trade Talk LIVE: First trade done, Essendon's Merrett warning, Hawks' unusual signing",
+   "summary": "Follow all the news and live updates during the 2026 Continental Tyres AFL Trade Period",
+   "date": "2026-10-04",
+   "author": "staff writers",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1626361/trade-talk-live-october-5-all-the-latest-trade-and-free-agency-rumours-ahead-of-the-trade-period"
+  },
+  {
+   "title": "Pies complete deal with Giants for former Coleman Medal winner",
+   "summary": "Jesse Hogan has joined the Magpies in a trade from the Giants",
+   "date": "2026-10-04",
+   "author": "staff writers",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1627079/collingwood-magpies-complete-deal-with-greater-western-sydney-giants-for-former-coleman-medal-winner-jesse-hogan"
+  },
+  {
+   "title": "Why Blues want Whitfield, Cripps' captaincy future unclear",
+   "summary": "Blues footy boss Chris Davies on Lachie Whitfield, Cody Walker, the skipper's new contract and more",
+   "date": "2026-10-04",
+   "author": "AFL.com.au",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1628127/the-on-field-strategy-thats-driving-blues-pursuit-of-veteran-giant-lachie-whitfield"
+  },
+  {
+   "title": "AFL Trade Radio is back for 2026: Watch LIVE from 7am AEDT",
    "summary": "Join Cal Twomey, Riley Beveridge and more on Continental Tyres AFL Trade Radio for 2026",
-   "date": "2026-09-27",
+   "date": "2026-10-04",
    "author": "staff writers",
    "tag": "Contract",
    "url": "https://www.afl.com.au/news/1619238/afl-trade-radio-is-back-for-2026-watch-live-from-12pm-aest"
   },
   {
-   "title": "The 12 influential figures who will shape the 2026 Trade Period",
-   "summary": "Cal Twomey takes a look at who will shape the 2026 trade and free agency periods",
-   "date": "2026-09-27",
-   "author": "Callum Twomey",
+   "title": "Lion's call looms, how compo picks impact Merrett, top prospect in eye of the Tigers",
+   "summary": "Check out all the latest trade news ahead of the opening day of the 2026 Continental Tyres AFL Trade Period",
+   "date": "2026-10-04",
+   "author": "Callum Twomey and Riley Beveridge",
    "tag": "Contract",
-   "url": "https://www.afl.com.au/news/1621098/the-12-influential-figures-who-will-shape-the-2026-trade-period"
+   "url": "https://www.afl.com.au/news/1627010/inside-trading-port-adelaide-power-explore-pick-swaps-lachie-whitfield-talks-to-ramp-up-for-carlton-blues-jesse-hogan-move-to-collingwood-edges-closer"
+  },
+  {
+   "title": "Pie hits trigger, Lions confident over Academy prospect, Combine record falls",
+   "summary": "Check out all the latest trade news from around the League",
+   "date": "2026-10-03",
+   "author": "Callum Twomey, Riley Beveridge, Josh Gabelich",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1626884/inside-trading-cat-undergoes-eagles-medical-suns-keen-to-meet-hawk-pie-hits-trigger"
+  },
+  {
+   "title": "Trade Tracker: Every move in the 2026 Trade & Free Agency period so far",
+   "summary": "Get all the details on every move in the 2026 Trade and Free Agency period so far",
+   "date": "2026-10-03",
+   "author": "AFL.com.au",
+   "tag": "Trade",
+   "url": "https://www.afl.com.au/news/1626633/trade-tracker-every-move-in-the-2026-trade-free-agency-period"
+  },
+  {
+   "title": "Another compensation pick lands as Bulldogs secure Crows defender",
+   "summary": "Jordon Butts has joined the Bulldogs from the Crows as an unrestricted free agent",
+   "date": "2026-10-02",
+   "author": "AAP",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1625817/western-bulldogs-boost-defensive-stocks-by-adding-adelaide-crows-free-agent-jordon-butts"
+  },
+  {
+   "title": "TRADE TALK RECAP: Eagles eye experience, star Crow re-signs, compo confirmed",
+   "summary": "Follow all the news and live updates during the 2026 Continental Tyres AFL Trade Period",
+   "date": "2026-10-02",
+   "author": "staff writers",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1626218/trade-talk-live-october-2-all-the-latest-trade-and-free-agency-rumours-ahead-of-the-trade-period"
+  },
+  {
+   "title": "Hawk weighs Suns' play, lifeline looms for axed Docker, draft gun nears big call",
+   "summary": "Check out all the latest trade news from around the League",
+   "date": "2026-10-02",
+   "author": "Callum Twomey, Riley Beveridge, Josh Gabelich",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1626304/luckless-lion-open-to-move-crows-compo-blow-tiger-meets-with-pies"
+  },
+  {
+   "title": "Compensation pick revealed for Lions as star mid joins third club with Pies move",
+   "summary": "Lachie Neale has joined the Magpies from the Lions as an unrestricted free agent",
+   "date": "2026-10-02",
+   "author": "Staff writer",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1625750/brisbane-lions-champion-lachie-neale-joins-third-club-with-collingwood-magpies-move"
+  },
+  {
+   "title": "Saints drive tough bargain on Marshall, Tauru welcome after Suns visit",
+   "summary": "Saints footy boss Lenny Hayes has provided an update on the club's dealings ahead of the Trade Period opening on Monday",
+   "date": "2026-10-02",
+   "author": "Michael Rogers",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1626305/st-kilda-saints-drive-tough-bargain-on-rowan-marshall-alix-tauru-welcome-after-gold-coast-suns-visit"
+  },
+  {
+   "title": "Tall forward joins Carlton from Sydney, Swans learn compo",
+   "summary": "Joel Amartey has joined the Blues from the Swans as an unrestricted free agent",
+   "date": "2026-10-02",
+   "author": "Staff writer",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1625737/new-blue-tall-forward-joel-amartey-joins-carlton-from-sydney-swans"
+  },
+  {
+   "title": "Giants receive compensation as Tigers land big ruck",
+   "summary": "Kieren Briggs has joined the Tigers from the Giants as an unrestricted free agent",
+   "date": "2026-10-02",
+   "author": "Staff writer",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1625735/richmond-tigers-land-greater-western-sydney-giant-kieren-briggs-to-bolster-ruck-stocks"
+  },
+  {
+   "title": "Compo pick revealed as Giants star completes free agent move to Cats",
+   "summary": "Toby Greene has joined the Cats from the Giants as an unrestricted free agent",
+   "date": "2026-10-02",
+   "author": "Staff writer",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1625751/greater-western-sydney-giants-star-toby-greene-completes-move-to-geelong-cats-as-free-agent"
   }
  ]
 }

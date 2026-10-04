@@ -3,7 +3,7 @@
  "source_url": "https://www.afl.com.au/news",
  "attribution": "Contract & movement events from the AFL's own content API and AFLRATINGS' reporting, with hand-verified corrections; each event links to its source. The AFL does not disclose contract terms — no dollar figures are tracked.",
  "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
- "count": 1554,
+ "count": 1560,
  "events": [
   {
    "name": "Scott Pendlebury",
@@ -21035,7 +21035,7 @@
    "name": "Zac Bailey contract news",
    "norm": "zacbaileycontractnews",
    "date": "2026-09-08",
-   "kind": "extension",
+   "kind": "retire",
    "club": null,
    "length": 8,
    "end_year": 2034,
@@ -21090,6 +21090,78 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2026/09/17/toby-greene-to-join-cats/"
+  },
+  {
+   "name": "Devils confirm 8 signings",
+   "norm": "devilsconfirmsignings",
+   "date": "2026-09-29",
+   "kind": "signing",
+   "club": null,
+   "length": 2,
+   "end_year": 2028,
+   "end_estimated": true,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/09/29/devils-confirm-8-signings/"
+  },
+  {
+   "name": "Lachie Neale joins Magpies",
+   "norm": "lachienealejoinsmagpies",
+   "date": "2026-10-02",
+   "kind": "signing",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/10/02/lachie-neale-joins-magpies/"
+  },
+  {
+   "name": "Kieren Briggs joins Tigers",
+   "norm": "kierenbriggsjoinstigers",
+   "date": "2026-10-02",
+   "kind": "signing",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/10/02/kieren-briggs-joins-tigers/"
+  },
+  {
+   "name": "Joel Amartey joins Blues",
+   "norm": "joelamarteyjoinsblues",
+   "date": "2026-10-02",
+   "kind": "signing",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/10/02/joel-amartey-joins-blues/"
+  },
+  {
+   "name": "Toby Greene joins Cats",
+   "norm": "tobygreenejoinscats",
+   "date": "2026-10-02",
+   "kind": "signing",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/10/02/toby-greene-joins-cats/"
+  },
+  {
+   "name": "Jordon Butts joins Bulldogs",
+   "norm": "jordonbuttsjoinsbulldogs",
+   "date": "2026-10-03",
+   "kind": "signing",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/10/03/jordon-butts-joins-bulldogs/"
   }
  ]
 }
