@@ -1557,7 +1557,7 @@
      "games": 6,
      "disp": 18.3,
      "af": 80.5,
-     "rating": 11.0,
+     "rating": 11.1,
      "goals": 0.3
     }
    }
@@ -3896,7 +3896,7 @@
      "games": 7,
      "disp": 11.1,
      "af": 61.1,
-     "rating": 8.9,
+     "rating": 8.8,
      "goals": 2.1
     },
     "STK": {
@@ -4860,7 +4860,7 @@
      "games": 6,
      "disp": 28.8,
      "af": 105.7,
-     "rating": 14.5,
+     "rating": 14.4,
      "goals": 0.5
     },
     "ESS": {
@@ -5880,7 +5880,7 @@
      "games": 6,
      "disp": 21.0,
      "af": 81.5,
-     "rating": 12.1,
+     "rating": 12.0,
      "goals": 0.7
     },
     "GEE": {
@@ -14438,7 +14438,7 @@
      "games": 8,
      "disp": 21.8,
      "af": 88.1,
-     "rating": 12.1,
+     "rating": 12.0,
      "goals": 0.9
     },
     "ESS": {
@@ -14547,7 +14547,7 @@
      "games": 19,
      "disp": 19.3,
      "af": 87.1,
-     "rating": 11.1,
+     "rating": 11.0,
      "goals": 1.1
     },
     "Docklands": {
@@ -14736,7 +14736,7 @@
      "games": 2,
      "disp": 9.0,
      "af": 37.5,
-     "rating": 5.2,
+     "rating": 5.3,
      "goals": 0.0
     },
     "ESS": {
@@ -21543,7 +21543,7 @@
      "games": 4,
      "disp": 17.2,
      "af": 68.8,
-     "rating": 5.2,
+     "rating": 5.3,
      "goals": 0.2
     },
     "RIC": {
@@ -22321,7 +22321,7 @@
      "games": 6,
      "disp": 17.5,
      "af": 64.3,
-     "rating": 6.0,
+     "rating": 5.9,
      "goals": 0.0
     }
    },
@@ -23150,7 +23150,7 @@
    "overall": {
     "games": 94,
     "disp": 12.3,
-    "af": 55.5,
+    "af": 55.6,
     "rating": 6.8,
     "goals": 0.4
    },
@@ -23242,7 +23242,7 @@
     "ESS": {
      "games": 7,
      "disp": 15.0,
-     "af": 68.1,
+     "af": 68.7,
      "rating": 7.3,
      "goals": 0.7
     },
@@ -23286,7 +23286,7 @@
     "away": {
      "games": 47,
      "disp": 12.5,
-     "af": 55.8,
+     "af": 55.9,
      "rating": 7.1,
      "goals": 0.4
     }
@@ -23323,7 +23323,7 @@
     "M.C.G.": {
      "games": 14,
      "disp": 10.3,
-     "af": 49.2,
+     "af": 49.5,
      "rating": 6.1,
      "goals": 0.1
     },
@@ -23937,7 +23937,7 @@
      "games": 8,
      "disp": 15.2,
      "af": 59.0,
-     "rating": 7.9,
+     "rating": 8.0,
      "goals": 0.5
     },
     "SYD": {
@@ -25371,7 +25371,7 @@
      "games": 6,
      "disp": 16.5,
      "af": 70.7,
-     "rating": 9.0,
+     "rating": 8.9,
      "goals": 0.7
     }
    }
@@ -31958,7 +31958,7 @@
      "games": 5,
      "disp": 22.4,
      "af": 80.0,
-     "rating": 10.8,
+     "rating": 10.7,
      "goals": 0.2
     },
     "WCE": {
@@ -33765,7 +33765,7 @@
      "games": 4,
      "disp": 16.8,
      "af": 65.2,
-     "rating": 14.7,
+     "rating": 14.8,
      "goals": 0.2
     },
     "PA": {
@@ -35281,7 +35281,7 @@
      "games": 6,
      "disp": 9.2,
      "af": 51.0,
-     "rating": 8.2,
+     "rating": 8.1,
      "goals": 2.2
     },
     "NM": {
@@ -45100,7 +45100,7 @@
     "CAR": {
      "games": 7,
      "disp": 14.3,
-     "af": 66.4,
+     "af": 65.9,
      "rating": 9.1,
      "goals": 0.4
     },
@@ -45132,7 +45132,7 @@
     "M.C.G.": {
      "games": 33,
      "disp": 13.5,
-     "af": 70.5,
+     "af": 70.4,
      "rating": 10.5,
      "goals": 0.5
     },
@@ -57864,7 +57864,7 @@
    "overall": {
     "games": 121,
     "disp": 18.5,
-    "af": 77.4,
+    "af": 77.5,
     "rating": 11.6,
     "goals": 0.1
    },
@@ -57915,7 +57915,7 @@
      "games": 8,
      "disp": 15.5,
      "af": 68.5,
-     "rating": 11.5,
+     "rating": 11.6,
      "goals": 0.1
     },
     "GWS": {
@@ -57977,8 +57977,8 @@
     "CAR": {
      "games": 7,
      "disp": 15.1,
-     "af": 67.0,
-     "rating": 10.2,
+     "af": 67.6,
+     "rating": 10.3,
      "goals": 0.1
     },
     "GCS": {
@@ -58000,7 +58000,7 @@
     "away": {
      "games": 57,
      "disp": 18.7,
-     "af": 76.0,
+     "af": 76.1,
      "rating": 12.0,
      "goals": 0.1
     }
@@ -58009,7 +58009,7 @@
     "M.C.G.": {
      "games": 35,
      "disp": 18.3,
-     "af": 73.7,
+     "af": 73.8,
      "rating": 12.2,
      "goals": 0.1
     },
@@ -66735,7 +66735,7 @@
    "overall": {
     "games": 115,
     "disp": 23.3,
-    "af": 90.9,
+    "af": 90.8,
     "rating": 15.1,
     "goals": 1.1
    },
@@ -66792,7 +66792,7 @@
     "ESS": {
      "games": 7,
      "disp": 26.4,
-     "af": 99.9,
+     "af": 99.3,
      "rating": 16.5,
      "goals": 1.3
     },
@@ -66871,7 +66871,7 @@
     "away": {
      "games": 58,
      "disp": 22.4,
-     "af": 89.3,
+     "af": 89.2,
      "rating": 14.5,
      "goals": 1.1
     }
@@ -66901,7 +66901,7 @@
     "M.C.G.": {
      "games": 15,
      "disp": 23.1,
-     "af": 90.6,
+     "af": 90.3,
      "rating": 15.4,
      "goals": 1.1
     },
@@ -67594,7 +67594,7 @@
      "games": 4,
      "disp": 11.2,
      "af": 60.5,
-     "rating": 8.7,
+     "rating": 8.8,
      "goals": 1.5
     },
     "CAR": {
@@ -70979,7 +70979,7 @@
      "games": 7,
      "disp": 19.9,
      "af": 81.9,
-     "rating": 7.2,
+     "rating": 7.3,
      "goals": 0.1
     },
     "WB": {
@@ -72805,7 +72805,7 @@
      "games": 6,
      "disp": 14.3,
      "af": 71.8,
-     "rating": 7.1,
+     "rating": 7.2,
      "goals": 0.3
     },
     "COL": {
@@ -72833,7 +72833,7 @@
      "games": 4,
      "disp": 15.8,
      "af": 66.2,
-     "rating": 2.1,
+     "rating": 2.0,
      "goals": 0.0
     },
     "MEL": {
@@ -73167,7 +73167,7 @@
      "games": 4,
      "disp": 22.2,
      "af": 76.0,
-     "rating": 14.9,
+     "rating": 14.4,
      "goals": 0.5
     },
     "ESS": {
@@ -73195,7 +73195,7 @@
      "games": 4,
      "disp": 22.2,
      "af": 84.0,
-     "rating": 12.3,
+     "rating": 12.2,
      "goals": 0.2
     },
     "COL": {
@@ -73274,7 +73274,7 @@
      "games": 37,
      "disp": 20.9,
      "af": 78.9,
-     "rating": 12.0,
+     "rating": 11.9,
      "goals": 0.4
     }
    },
@@ -73290,7 +73290,7 @@
      "games": 13,
      "disp": 21.8,
      "af": 81.5,
-     "rating": 11.3,
+     "rating": 11.1,
      "goals": 0.3
     },
     "Docklands": {
@@ -75191,7 +75191,7 @@
     "games": 70,
     "disp": 12.1,
     "af": 51.9,
-    "rating": 8.2,
+    "rating": 8.1,
     "goals": 0.1
    },
    "vs": {
@@ -87299,7 +87299,7 @@
      "games": 5,
      "disp": 15.4,
      "af": 55.4,
-     "rating": 5.7,
+     "rating": 5.6,
      "goals": 0.0
     },
     "WB": {
@@ -87394,7 +87394,7 @@
      "games": 4,
      "disp": 17.2,
      "af": 62.2,
-     "rating": 7.6,
+     "rating": 7.5,
      "goals": 0.0
     },
     "Docklands": {
@@ -89177,7 +89177,7 @@
      "games": 4,
      "disp": 14.8,
      "af": 62.0,
-     "rating": 7.5,
+     "rating": 7.4,
      "goals": 0.2
     },
     "GEE": {
@@ -90412,7 +90412,7 @@
      "games": 5,
      "disp": 15.0,
      "af": 77.5,
-     "rating": 6.1,
+     "rating": 6.2,
      "goals": 0.2
     },
     "GEE": {
@@ -92219,7 +92219,7 @@
      "games": 3,
      "disp": 16.3,
      "af": 68.3,
-     "rating": 6.4,
+     "rating": 6.3,
      "goals": 0.0
     },
     "NM": {
@@ -93577,7 +93577,7 @@
      "games": 5,
      "disp": 7.0,
      "af": 50.6,
-     "rating": 6.0,
+     "rating": 5.9,
      "goals": 2.6
     },
     "STK": {
@@ -95932,7 +95932,7 @@
      "games": 42,
      "disp": 15.1,
      "af": 64.7,
-     "rating": 6.5,
+     "rating": 6.6,
      "goals": 0.2
     }
    },
@@ -96391,7 +96391,7 @@
      "games": 5,
      "disp": 28.2,
      "af": 102.0,
-     "rating": 11.4,
+     "rating": 11.3,
      "goals": 0.4
     },
     "ADE": {
@@ -96405,7 +96405,7 @@
      "games": 6,
      "disp": 25.3,
      "af": 95.2,
-     "rating": 14.0,
+     "rating": 13.9,
      "goals": 0.7
     },
     "RIC": {
@@ -99345,7 +99345,7 @@
      "games": 5,
      "disp": 8.4,
      "af": 53.0,
-     "rating": 5.8,
+     "rating": 5.9,
      "goals": 1.6
     },
     "GEE": {
@@ -100794,7 +100794,7 @@
      "games": 4,
      "disp": 15.8,
      "af": 67.2,
-     "rating": 8.9,
+     "rating": 8.8,
      "goals": 0.0
     },
     "ESS": {
@@ -101255,7 +101255,7 @@
      "games": 2,
      "disp": 10.0,
      "af": 40.5,
-     "rating": 6.6,
+     "rating": 6.7,
      "goals": 0.0
     },
     "RIC": {
@@ -103170,7 +103170,7 @@
     "games": 36,
     "disp": 9.7,
     "af": 38.8,
-    "rating": 4.5,
+    "rating": 4.6,
     "goals": 0.2
    },
    "vs": {
@@ -103255,7 +103255,7 @@
      "games": 2,
      "disp": 7.0,
      "af": 24.0,
-     "rating": -0.4,
+     "rating": -0.2,
      "goals": 0.0
     },
     "WCE": {
@@ -103301,7 +103301,7 @@
      "games": 4,
      "disp": 8.5,
      "af": 27.2,
-     "rating": 1.3,
+     "rating": 1.4,
      "goals": 0.0
     }
    }
@@ -103671,7 +103671,7 @@
     "games": 38,
     "disp": 14.3,
     "af": 54.5,
-    "rating": 6.1,
+    "rating": 6.2,
     "goals": 0.1
    },
    "vs": {
@@ -103686,7 +103686,7 @@
      "games": 3,
      "disp": 16.3,
      "af": 57.3,
-     "rating": 7.1,
+     "rating": 7.2,
      "goals": 0.3
     },
     "NM": {
@@ -104403,7 +104403,7 @@
      "games": 5,
      "disp": 16.6,
      "af": 74.0,
-     "rating": 12.0,
+     "rating": 11.9,
      "goals": 0.8
     },
     "CAR": {
@@ -104526,7 +104526,7 @@
      "games": 7,
      "disp": 16.1,
      "af": 59.3,
-     "rating": 7.5,
+     "rating": 7.4,
      "goals": 0.1
     },
     "Adelaide Oval": {
@@ -105886,7 +105886,7 @@
      "games": 4,
      "disp": 15.5,
      "af": 57.5,
-     "rating": 7.6,
+     "rating": 7.5,
      "goals": 1.0
     },
     "BRI": {
@@ -107089,7 +107089,7 @@
      "games": 5,
      "disp": 7.0,
      "af": 30.2,
-     "rating": 4.1,
+     "rating": 4.2,
      "goals": 0.4
     },
     "WCE": {
@@ -107170,7 +107170,7 @@
      "games": 4,
      "disp": 6.8,
      "af": 30.8,
-     "rating": 4.5,
+     "rating": 4.6,
      "goals": 0.2
     },
     "Docklands": {
@@ -107792,7 +107792,7 @@
      "games": 3,
      "disp": 9.3,
      "af": 57.3,
-     "rating": 8.6,
+     "rating": 8.7,
      "goals": 1.7
     },
     "PA": {
@@ -108509,7 +108509,7 @@
     "games": 14,
     "disp": 8.2,
     "af": 34.9,
-    "rating": 3.6,
+    "rating": 3.7,
     "goals": 0.3
    },
    "vs": {
@@ -108531,7 +108531,7 @@
      "games": 2,
      "disp": 7.0,
      "af": 27.0,
-     "rating": 2.8,
+     "rating": 2.9,
      "goals": 0.0
     }
    },
@@ -108556,7 +108556,7 @@
      "games": 8,
      "disp": 8.1,
      "af": 34.4,
-     "rating": 3.6,
+     "rating": 3.7,
      "goals": 0.2
     }
    }
@@ -109612,7 +109612,7 @@
      "games": 2,
      "disp": 8.0,
      "af": 57.5,
-     "rating": 6.6,
+     "rating": 6.7,
      "goals": 0.0
     },
     "SYD": {
@@ -110063,7 +110063,7 @@
      "games": 2,
      "disp": 15.0,
      "af": 75.0,
-     "rating": 5.3,
+     "rating": 5.4,
      "goals": 0.5
     },
     "SYD": {
@@ -110307,7 +110307,7 @@
      "games": 2,
      "disp": 15.5,
      "af": 68.5,
-     "rating": 6.4,
+     "rating": 6.3,
      "goals": 0.0
     },
     "RIC": {
@@ -111025,7 +111025,7 @@
      "games": 2,
      "disp": 11.5,
      "af": 42.0,
-     "rating": 5.9,
+     "rating": 6.0,
      "goals": 0.5
     },
     "GCS": {
@@ -111218,7 +111218,7 @@
      "games": 3,
      "disp": 16.7,
      "af": 69.3,
-     "rating": 6.1,
+     "rating": 6.2,
      "goals": 0.3
     },
     "ESS": {
@@ -111910,7 +111910,7 @@
      "games": 3,
      "disp": 10.7,
      "af": 48.3,
-     "rating": 7.8,
+     "rating": 7.7,
      "goals": 1.3
     }
    },
@@ -111975,7 +111975,7 @@
      "games": 3,
      "disp": 7.3,
      "af": 39.0,
-     "rating": 7.4,
+     "rating": 7.5,
      "goals": 1.0
     },
     "NM": {
@@ -112446,7 +112446,7 @@
      "games": 3,
      "disp": 8.0,
      "af": 41.0,
-     "rating": 3.6,
+     "rating": 3.4,
      "goals": 1.0
     },
     "GCS": {
@@ -112490,7 +112490,7 @@
      "games": 12,
      "disp": 7.6,
      "af": 43.4,
-     "rating": 6.3,
+     "rating": 6.2,
      "goals": 1.2
     }
    },
@@ -112581,7 +112581,7 @@
      "games": 3,
      "disp": 12.0,
      "af": 53.3,
-     "rating": 8.6,
+     "rating": 8.7,
      "goals": 1.0
     },
     "WCE": {
@@ -112634,7 +112634,7 @@
      "games": 4,
      "disp": 11.5,
      "af": 54.0,
-     "rating": 6.1,
+     "rating": 6.2,
      "goals": 0.5
     }
    }
@@ -113230,7 +113230,7 @@
      "games": 16,
      "disp": 14.1,
      "af": 57.8,
-     "rating": 3.6,
+     "rating": 3.7,
      "goals": 0.1
     },
     "away": {
@@ -113670,7 +113670,7 @@
      "games": 3,
      "disp": 14.7,
      "af": 64.3,
-     "rating": 13.6,
+     "rating": 13.7,
      "goals": 1.3
     }
    },
@@ -113702,7 +113702,7 @@
      "games": 6,
      "disp": 17.3,
      "af": 62.8,
-     "rating": 10.1,
+     "rating": 10.0,
      "goals": 0.5
     },
     "Docklands": {
@@ -116082,7 +116082,7 @@
     "games": 26,
     "disp": 10.7,
     "af": 46.2,
-    "rating": 4.7,
+    "rating": 4.6,
     "goals": 0.3
    },
    "vs": {
@@ -116297,7 +116297,7 @@
      "games": 2,
      "disp": 6.5,
      "af": 36.0,
-     "rating": 4.3,
+     "rating": 4.4,
      "goals": 0.5
     }
    },
@@ -117218,7 +117218,7 @@
      "games": 3,
      "disp": 3.3,
      "af": 21.0,
-     "rating": 3.2,
+     "rating": 3.1,
      "goals": 0.3
     }
    },
@@ -117764,7 +117764,7 @@
      "games": 2,
      "disp": 12.0,
      "af": 38.5,
-     "rating": 5.9,
+     "rating": 5.8,
      "goals": 0.0
     },
     "NM": {
@@ -117803,7 +117803,7 @@
      "games": 11,
      "disp": 11.6,
      "af": 46.9,
-     "rating": 7.1,
+     "rating": 7.0,
      "goals": 0.4
     }
    }
@@ -118355,7 +118355,7 @@
      "games": 2,
      "disp": 12.0,
      "af": 42.0,
-     "rating": 2.2,
+     "rating": 2.1,
      "goals": 0.0
     }
    },
@@ -119228,7 +119228,7 @@
      "games": 9,
      "disp": 8.2,
      "af": 39.3,
-     "rating": 2.9,
+     "rating": 2.8,
      "goals": 0.1
     }
    },
@@ -119300,7 +119300,7 @@
      "games": 2,
      "disp": 15.5,
      "af": 65.0,
-     "rating": 5.3,
+     "rating": 5.2,
      "goals": 0.0
     },
     "COL": {
@@ -119502,7 +119502,7 @@
      "games": 2,
      "disp": 14.0,
      "af": 67.0,
-     "rating": 8.0,
+     "rating": 7.9,
      "goals": 0.5
     }
    },
@@ -119538,7 +119538,7 @@
     "games": 12,
     "disp": 10.2,
     "af": 38.2,
-    "rating": 5.2,
+    "rating": 5.1,
     "goals": 0.1
    },
    "vs": {

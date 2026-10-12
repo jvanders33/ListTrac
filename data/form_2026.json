@@ -379,7 +379,7 @@
      "result": "W",
      "disp": 20,
      "af": 79,
-     "rating": 8.3,
+     "rating": 8.5,
      "goals": 0
     },
     {
@@ -403,7 +403,7 @@
    ],
    "l5_disp": 17.0,
    "l5_af": 73.4,
-   "l5_rating": 9.0,
+   "l5_rating": 9.1,
    "l5_goals": 0.2,
    "played": 5
   },
@@ -822,7 +822,7 @@
      "result": "W",
      "disp": 19,
      "af": 91,
-     "rating": 7.0,
+     "rating": 7.1,
      "goals": 0
     },
     {
@@ -837,7 +837,7 @@
    ],
    "l5_disp": 17.0,
    "l5_af": 79.0,
-   "l5_rating": 5.6,
+   "l5_rating": 5.7,
    "l5_goals": 0.0,
    "played": 2
   },
@@ -1098,7 +1098,7 @@
      "result": "W",
      "disp": 31,
      "af": 139,
-     "rating": 23.5,
+     "rating": 23.4,
      "goals": 2
     },
     {
@@ -1319,7 +1319,7 @@
      "result": "L",
      "disp": 10,
      "af": 63,
-     "rating": 7.2,
+     "rating": 7.0,
      "goals": 2
     },
     {
@@ -2342,7 +2342,7 @@
      "result": "W",
      "disp": 20,
      "af": 65,
-     "rating": -1.9,
+     "rating": -2.0,
      "goals": 0
     },
     {
@@ -2357,7 +2357,7 @@
    ],
    "l5_disp": 14.5,
    "l5_af": 49.5,
-   "l5_rating": -0.0,
+   "l5_rating": -0.1,
    "l5_goals": 0.0,
    "played": 2
   },
@@ -2646,7 +2646,7 @@
      "result": "L",
      "disp": 16,
      "af": 52,
-     "rating": 17.6,
+     "rating": 17.7,
      "goals": 1
     },
     {
@@ -2839,7 +2839,7 @@
      "result": "W",
      "disp": 9,
      "af": 35,
-     "rating": 3.9,
+     "rating": 4.0,
      "goals": 0
     },
     {
@@ -2854,7 +2854,7 @@
    ],
    "l5_disp": 12.4,
    "l5_af": 46.4,
-   "l5_rating": 5.5,
+   "l5_rating": 5.6,
    "l5_goals": 0.0,
    "played": 5
   },
@@ -2986,7 +2986,7 @@
      "result": "W",
      "disp": 15,
      "af": 52,
-     "rating": 7.2,
+     "rating": 7.3,
      "goals": 0
     },
     {
@@ -3041,7 +3041,7 @@
      "result": "W",
      "disp": 16,
      "af": 52,
-     "rating": 8.4,
+     "rating": 8.5,
      "goals": 0
     },
     {
@@ -3401,7 +3401,7 @@
      "result": "W",
      "disp": 20,
      "af": 90,
-     "rating": 9.4,
+     "rating": 9.3,
      "goals": 0
     },
     {
@@ -3416,7 +3416,7 @@
    ],
    "l5_disp": 21.3,
    "l5_af": 73.7,
-   "l5_rating": 11.3,
+   "l5_rating": 11.2,
    "l5_goals": 0.0,
    "played": 3
   },
@@ -3788,7 +3788,7 @@
      "result": "L",
      "disp": 27,
      "af": 96,
-     "rating": 16.1,
+     "rating": 16.0,
      "goals": 0
     },
     {
@@ -4624,13 +4624,13 @@
      "opp": "ESS",
      "result": "W",
      "disp": 23,
-     "af": 106,
+     "af": 102,
      "rating": 21.9,
      "goals": 3
     }
    ],
    "l5_disp": 23.5,
-   "l5_af": 108.0,
+   "l5_af": 106.0,
    "l5_rating": 23.2,
    "l5_goals": 3.0,
    "played": 2
@@ -4974,7 +4974,7 @@
      "result": "L",
      "disp": 26,
      "af": 93,
-     "rating": 7.6,
+     "rating": 7.5,
      "goals": 0
     }
    ],
@@ -5002,7 +5002,7 @@
      "result": "W",
      "disp": 20,
      "af": 82,
-     "rating": 11.9,
+     "rating": 11.8,
      "goals": 2
     },
     {
@@ -5026,7 +5026,7 @@
    ],
    "l5_disp": 11.5,
    "l5_af": 51.8,
-   "l5_rating": 6.4,
+   "l5_rating": 6.3,
    "l5_goals": 1.5,
    "played": 4
   },
@@ -5103,7 +5103,7 @@
      "result": "W",
      "disp": 11,
      "af": 69,
-     "rating": 12.1,
+     "rating": 12.0,
      "goals": 2
     },
     {
@@ -5203,7 +5203,7 @@
      "opp": "ESS",
      "result": "W",
      "disp": 14,
-     "af": 47,
+     "af": 51,
      "rating": 8.7,
      "goals": 0
     },
@@ -5236,7 +5236,7 @@
     }
    ],
    "l5_disp": 16.8,
-   "l5_af": 69.6,
+   "l5_af": 70.4,
    "l5_rating": 12.2,
    "l5_goals": 0.6,
    "played": 5
@@ -5526,7 +5526,7 @@
      "result": "L",
      "disp": 27,
      "af": 92,
-     "rating": 4.1,
+     "rating": 4.2,
      "goals": 0
     },
     {
@@ -5541,7 +5541,7 @@
    ],
    "l5_disp": 30.3,
    "l5_af": 123.0,
-   "l5_rating": 16.1,
+   "l5_rating": 16.2,
    "l5_goals": 0.7,
    "played": 3
   },
@@ -5802,13 +5802,13 @@
      "result": "W",
      "disp": 13,
      "af": 61,
-     "rating": 7.5,
+     "rating": 7.6,
      "goals": 0
     }
    ],
    "l5_disp": 13.0,
    "l5_af": 61.0,
-   "l5_rating": 7.5,
+   "l5_rating": 7.6,
    "l5_goals": 0.0,
    "played": 1
   },
@@ -5867,7 +5867,7 @@
      "result": "W",
      "disp": 12,
      "af": 57,
-     "rating": 1.2,
+     "rating": 1.3,
      "goals": 0
     },
     {
@@ -6659,7 +6659,7 @@
      "result": "L",
      "disp": 13,
      "af": 71,
-     "rating": 6.6,
+     "rating": 6.7,
      "goals": 1
     },
     {
@@ -6677,7 +6677,7 @@
      "result": "W",
      "disp": 23,
      "af": 101,
-     "rating": 16.1,
+     "rating": 15.9,
      "goals": 0
     },
     {
@@ -6701,7 +6701,7 @@
    ],
    "l5_disp": 15.4,
    "l5_af": 63.8,
-   "l5_rating": 9.3,
+   "l5_rating": 9.2,
    "l5_goals": 0.4,
    "played": 5
   },
@@ -6788,7 +6788,7 @@
      "result": "W",
      "disp": 25,
      "af": 87,
-     "rating": 14.7,
+     "rating": 14.8,
      "goals": 0
     },
     {
@@ -7303,13 +7303,13 @@
      "result": "L",
      "disp": 10,
      "af": 39,
-     "rating": 7.4,
+     "rating": 7.6,
      "goals": 0
     }
    ],
    "l5_disp": 11.7,
    "l5_af": 49.3,
-   "l5_rating": 8.3,
+   "l5_rating": 8.4,
    "l5_goals": 0.7,
    "played": 3
   },
@@ -7534,7 +7534,7 @@
      "result": "W",
      "disp": 14,
      "af": 46,
-     "rating": 2.6,
+     "rating": 2.7,
      "goals": 0
     },
     {
@@ -8334,7 +8334,7 @@
      "result": "L",
      "disp": 9,
      "af": 36,
-     "rating": 5.7,
+     "rating": 5.9,
      "goals": 1
     },
     {
@@ -8343,7 +8343,7 @@
      "result": "L",
      "disp": 10,
      "af": 34,
-     "rating": 1.0,
+     "rating": 1.1,
      "goals": 0
     },
     {
@@ -8358,7 +8358,7 @@
    ],
    "l5_disp": 10.0,
    "l5_af": 39.0,
-   "l5_rating": 5.0,
+   "l5_rating": 5.1,
    "l5_goals": 1.0,
    "played": 3
   },
@@ -8583,7 +8583,7 @@
      "result": "L",
      "disp": 12,
      "af": 64,
-     "rating": 12.3,
+     "rating": 12.4,
      "goals": 3
     },
     {
@@ -8712,7 +8712,7 @@
      "result": "L",
      "disp": 20,
      "af": 81,
-     "rating": 15.5,
+     "rating": 15.4,
      "goals": 0
     },
     {
@@ -8754,7 +8754,7 @@
    ],
    "l5_disp": 17.8,
    "l5_af": 58.8,
-   "l5_rating": 10.6,
+   "l5_rating": 10.5,
    "l5_goals": 0.2,
    "played": 5
   },
@@ -8988,7 +8988,7 @@
      "result": "W",
      "disp": 29,
      "af": 114,
-     "rating": 7.3,
+     "rating": 7.2,
      "goals": 0
     },
     {
@@ -8997,13 +8997,13 @@
      "result": "L",
      "disp": 16,
      "af": 51,
-     "rating": 14.3,
+     "rating": 14.1,
      "goals": 1
     }
    ],
    "l5_disp": 22.5,
    "l5_af": 82.5,
-   "l5_rating": 10.8,
+   "l5_rating": 10.7,
    "l5_goals": 0.5,
    "played": 2
   },
@@ -9348,7 +9348,7 @@
      "result": "W",
      "disp": 14,
      "af": 48,
-     "rating": 7.5,
+     "rating": 7.4,
      "goals": 0
     },
     {
@@ -9486,7 +9486,7 @@
      "result": "W",
      "disp": 17,
      "af": 81,
-     "rating": 15.2,
+     "rating": 14.9,
      "goals": 0
     },
     {
@@ -9532,7 +9532,7 @@
      "result": "W",
      "disp": 19,
      "af": 88,
-     "rating": 17.6,
+     "rating": 17.5,
      "goals": 4
     },
     {
@@ -9574,7 +9574,7 @@
    ],
    "l5_disp": 22.0,
    "l5_af": 94.6,
-   "l5_rating": 12.2,
+   "l5_rating": 12.1,
    "l5_goals": 1.2,
    "played": 5
   },
@@ -9596,7 +9596,7 @@
      "result": "L",
      "disp": 14,
      "af": 55,
-     "rating": 8.0,
+     "rating": 8.1,
      "goals": 0
     },
     {
@@ -9698,7 +9698,7 @@
      "result": "W",
      "disp": 2,
      "af": 18,
-     "rating": 2.0,
+     "rating": 1.9,
      "goals": 0
     },
     {
@@ -9799,7 +9799,7 @@
      "result": "W",
      "disp": 13,
      "af": 51,
-     "rating": 7.9,
+     "rating": 7.8,
      "goals": 2
     },
     {
@@ -9872,7 +9872,7 @@
      "result": "W",
      "disp": 14,
      "af": 43,
-     "rating": 5.0,
+     "rating": 5.1,
      "goals": 0
     },
     {
@@ -10093,13 +10093,13 @@
      "result": "L",
      "disp": 25,
      "af": 78,
-     "rating": 11.0,
+     "rating": 10.7,
      "goals": 0
     }
    ],
    "l5_disp": 21.7,
    "l5_af": 69.0,
-   "l5_rating": 11.5,
+   "l5_rating": 11.4,
    "l5_goals": 0.0,
    "played": 3
   },
@@ -10795,7 +10795,7 @@
      "result": "W",
      "disp": 15,
      "af": 58,
-     "rating": 5.0,
+     "rating": 4.9,
      "goals": 0
     },
     {
@@ -10832,7 +10832,7 @@
      "result": "W",
      "disp": 8,
      "af": 61,
-     "rating": 3.6,
+     "rating": 3.7,
      "goals": 0
     },
     {
@@ -10856,7 +10856,7 @@
    ],
    "l5_disp": 6.0,
    "l5_af": 44.3,
-   "l5_rating": 4.2,
+   "l5_rating": 4.3,
    "l5_goals": 0.0,
    "played": 3
   },
@@ -11313,7 +11313,7 @@
      "result": "L",
      "disp": 12,
      "af": 54,
-     "rating": 4.3,
+     "rating": 4.0,
      "goals": 0
     },
     {
@@ -11328,7 +11328,7 @@
    ],
    "l5_disp": 11.0,
    "l5_af": 57.0,
-   "l5_rating": 5.4,
+   "l5_rating": 5.3,
    "l5_goals": 0.7,
    "played": 3
   },
@@ -11488,7 +11488,7 @@
      "result": "L",
      "disp": 4,
      "af": 24,
-     "rating": 1.0,
+     "rating": 1.1,
      "goals": 0
     },
     {
@@ -11683,7 +11683,7 @@
      "result": "L",
      "disp": 24,
      "af": 82,
-     "rating": 5.0,
+     "rating": 4.9,
      "goals": 0
     },
     {
@@ -11692,7 +11692,7 @@
      "result": "L",
      "disp": 23,
      "af": 79,
-     "rating": 6.9,
+     "rating": 7.0,
      "goals": 0
     },
     {
@@ -11729,7 +11729,7 @@
      "result": "L",
      "disp": 14,
      "af": 40,
-     "rating": 2.7,
+     "rating": 2.5,
      "goals": 0
     },
     {
@@ -11744,7 +11744,7 @@
    ],
    "l5_disp": 15.3,
    "l5_af": 48.0,
-   "l5_rating": 8.0,
+   "l5_rating": 7.9,
    "l5_goals": 0.0,
    "played": 3
   },
@@ -11858,7 +11858,7 @@
      "result": "W",
      "disp": 17,
      "af": 74,
-     "rating": 8.3,
+     "rating": 8.4,
      "goals": 0
     },
     {
@@ -11895,7 +11895,7 @@
      "result": "L",
      "disp": 9,
      "af": 46,
-     "rating": 4.0,
+     "rating": 4.1,
      "goals": 0
     },
     {
@@ -11910,7 +11910,7 @@
    ],
    "l5_disp": 10.7,
    "l5_af": 44.7,
-   "l5_rating": 4.2,
+   "l5_rating": 4.3,
    "l5_goals": 0.0,
    "played": 3
   },
@@ -11923,7 +11923,7 @@
      "result": "W",
      "disp": 7,
      "af": 36,
-     "rating": 7.1,
+     "rating": 7.3,
      "goals": 1
     },
     {
@@ -11956,7 +11956,7 @@
    ],
    "l5_disp": 6.8,
    "l5_af": 35.0,
-   "l5_rating": 5.0,
+   "l5_rating": 5.1,
    "l5_goals": 0.8,
    "played": 4
   },
@@ -12190,13 +12190,13 @@
      "result": "L",
      "disp": 11,
      "af": 47,
-     "rating": 6.6,
+     "rating": 6.5,
      "goals": 0
     }
    ],
    "l5_disp": 10.3,
    "l5_af": 45.3,
-   "l5_rating": 5.7,
+   "l5_rating": 5.6,
    "l5_goals": 0.0,
    "played": 3
   },
@@ -12485,7 +12485,7 @@
      "result": "L",
      "disp": 11,
      "af": 41,
-     "rating": 3.6,
+     "rating": 3.4,
      "goals": 0
     },
     {
@@ -12494,7 +12494,7 @@
      "result": "L",
      "disp": 11,
      "af": 56,
-     "rating": 9.3,
+     "rating": 9.2,
      "goals": 1
     },
     {
@@ -12509,7 +12509,7 @@
    ],
    "l5_disp": 12.3,
    "l5_af": 50.0,
-   "l5_rating": 6.7,
+   "l5_rating": 6.6,
    "l5_goals": 0.3,
    "played": 3
   },
@@ -12531,7 +12531,7 @@
      "result": "L",
      "disp": 11,
      "af": 51,
-     "rating": 12.5,
+     "rating": 12.4,
      "goals": 0
     },
     {
@@ -12546,7 +12546,7 @@
    ],
    "l5_disp": 10.3,
    "l5_af": 46.0,
-   "l5_rating": 8.3,
+   "l5_rating": 8.2,
    "l5_goals": 0.0,
    "played": 3
   },
@@ -12632,7 +12632,7 @@
      "result": "W",
      "disp": 11,
      "af": 38,
-     "rating": 7.1,
+     "rating": 7.0,
      "goals": 0
     },
     {
@@ -14695,7 +14695,7 @@
      "result": "W",
      "disp": 13,
      "af": 53,
-     "rating": 0.9,
+     "rating": 0.8,
      "goals": 0
     },
     {
@@ -15045,7 +15045,7 @@
      "result": "W",
      "disp": 21,
      "af": 47,
-     "rating": 6.7,
+     "rating": 6.8,
      "goals": 0
     },
     {
@@ -15091,13 +15091,13 @@
      "result": "L",
      "disp": 13,
      "af": 62,
-     "rating": 3.0,
+     "rating": 3.4,
      "goals": 0
     }
    ],
    "l5_disp": 15.5,
    "l5_af": 61.5,
-   "l5_rating": 6.6,
+   "l5_rating": 6.8,
    "l5_goals": 0.0,
    "played": 2
   },
@@ -15212,7 +15212,7 @@
      "result": "L",
      "disp": 9,
      "af": 49,
-     "rating": 4.4,
+     "rating": 4.3,
      "goals": 2
     },
     {
@@ -15635,7 +15635,7 @@
      "result": "L",
      "disp": 7,
      "af": 43,
-     "rating": 6.8,
+     "rating": 6.9,
      "goals": 0
     },
     {
@@ -17335,7 +17335,7 @@
      "result": "W",
      "disp": 9,
      "af": 35,
-     "rating": 4.6,
+     "rating": 4.5,
      "goals": 0
     },
     {
@@ -17537,7 +17537,7 @@
      "result": "W",
      "disp": 24,
      "af": 85,
-     "rating": 11.9,
+     "rating": 11.7,
      "goals": 0
     },
     {
@@ -17552,7 +17552,7 @@
    ],
    "l5_disp": 25.8,
    "l5_af": 101.4,
-   "l5_rating": 14.8,
+   "l5_rating": 14.7,
    "l5_goals": 0.0,
    "played": 5
   },
@@ -17711,7 +17711,7 @@
      "result": "W",
      "disp": 13,
      "af": 43,
-     "rating": 7.5,
+     "rating": 7.6,
      "goals": 0
     },
     {
@@ -18735,7 +18735,7 @@
      "result": "L",
      "disp": 8,
      "af": 37,
-     "rating": -0.3,
+     "rating": -0.2,
      "goals": 0
     },
     {
@@ -18819,7 +18819,7 @@
      "result": "L",
      "disp": 14,
      "af": 52,
-     "rating": -4.2,
+     "rating": -4.1,
      "goals": 0
     },
     {
@@ -18834,7 +18834,7 @@
    ],
    "l5_disp": 11.5,
    "l5_af": 44.0,
-   "l5_rating": -2.2,
+   "l5_rating": -2.1,
    "l5_goals": 0.0,
    "played": 2
   },
@@ -18903,7 +18903,7 @@
      "result": "W",
      "disp": 12,
      "af": 61,
-     "rating": 9.8,
+     "rating": 9.9,
      "goals": 0
     },
     {
@@ -18927,7 +18927,7 @@
    ],
    "l5_disp": 9.2,
    "l5_af": 38.0,
-   "l5_rating": 6.0,
+   "l5_rating": 6.1,
    "l5_goals": 0.0,
    "played": 4
   },
@@ -19051,7 +19051,7 @@
      "result": "L",
      "disp": 11,
      "af": 32,
-     "rating": 2.1,
+     "rating": 2.5,
      "goals": 0
     },
     {
@@ -19066,7 +19066,7 @@
    ],
    "l5_disp": 15.5,
    "l5_af": 52.0,
-   "l5_rating": 4.8,
+   "l5_rating": 5.0,
    "l5_goals": 0.0,
    "played": 2
   },
@@ -19126,7 +19126,7 @@
      "result": "L",
      "disp": 14,
      "af": 51,
-     "rating": 5.2,
+     "rating": 5.1,
      "goals": 0
     },
     {
@@ -19859,7 +19859,7 @@
      "result": "W",
      "disp": 18,
      "af": 93,
-     "rating": 9.9,
+     "rating": 10.1,
      "goals": 1
     },
     {
@@ -19874,7 +19874,7 @@
    ],
    "l5_disp": 17.3,
    "l5_af": 86.3,
-   "l5_rating": 6.0,
+   "l5_rating": 6.1,
    "l5_goals": 1.0,
    "played": 3
   },
@@ -20008,13 +20008,13 @@
      "result": "W",
      "disp": 14,
      "af": 63,
-     "rating": 1.0,
+     "rating": 0.9,
      "goals": 0
     }
    ],
    "l5_disp": 14.0,
    "l5_af": 63.0,
-   "l5_rating": 1.0,
+   "l5_rating": 0.9,
    "l5_goals": 0.0,
    "played": 1
   },

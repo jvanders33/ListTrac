@@ -629,8 +629,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 5.5,
-     "pct": 36
+     "avg": 5.4,
+     "pct": 35
     }
    }
   },
@@ -711,7 +711,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 6.2,
-     "pct": 15
+     "pct": 16
     }
    }
   },
@@ -791,8 +791,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.3,
-     "pct": 26
+     "avg": 12.4,
+     "pct": 28
     }
    }
   },
@@ -1197,7 +1197,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 6.3,
-     "pct": 20
+     "pct": 21
     }
    }
   },
@@ -1440,7 +1440,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.1,
-     "pct": 77
+     "pct": 76
     }
    }
   },
@@ -1521,7 +1521,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 17.6,
-     "pct": 68
+     "pct": 69
     }
    }
   },
@@ -1763,8 +1763,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 9.9,
-     "pct": 19
+     "avg": 9.8,
+     "pct": 16
     }
    }
   },
@@ -1845,7 +1845,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 4.0,
-     "pct": 7
+     "pct": 8
     }
    }
   },
@@ -2006,8 +2006,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 4.0,
-     "pct": 7
+     "avg": 3.9,
+     "pct": 6
     }
    }
   },
@@ -2087,7 +2087,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 20.6,
+     "avg": 20.7,
      "pct": 95
     }
    }
@@ -2169,7 +2169,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 11.6,
-     "pct": 40
+     "pct": 39
     }
    }
   },
@@ -2195,8 +2195,8 @@
     "totalClearances": {
      "label": "Clearances",
      "group": "ball",
-     "avg": 4.1,
-     "pct": 66
+     "avg": 4.0,
+     "pct": 64
     },
     "metresGained": {
      "label": "Metres gained",
@@ -2249,8 +2249,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 20.5,
-     "pct": 94
+     "avg": 20.4,
+     "pct": 93
     }
    }
   },
@@ -2411,7 +2411,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 16.0,
+     "avg": 15.9,
      "pct": 100
     }
    }
@@ -2493,7 +2493,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.2,
-     "pct": 80
+     "pct": 78
     }
    }
   },
@@ -2573,7 +2573,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 20.8,
+     "avg": 20.9,
      "pct": 91
     }
    }
@@ -2978,7 +2978,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 15.7,
+     "avg": 15.6,
      "pct": 68
     }
    }
@@ -3060,7 +3060,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.4,
-     "pct": 33
+     "pct": 32
     }
    }
   },
@@ -3222,7 +3222,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.3,
-     "pct": 36
+     "pct": 37
     }
    }
   },
@@ -3297,7 +3297,7 @@
      "label": "Tackles",
      "group": "defence",
      "avg": 3.6,
-     "pct": 89
+     "pct": 88
     },
     "pressureActs": {
      "label": "Pressure acts",
@@ -3789,7 +3789,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 6.3,
-     "pct": 20
+     "pct": 21
     }
    }
   },
@@ -3870,7 +3870,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 11.2,
-     "pct": 20
+     "pct": 19
     }
    }
   },
@@ -3951,7 +3951,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.8,
-     "pct": 49
+     "pct": 47
     }
    }
   },
@@ -4031,7 +4031,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 21.6,
+     "avg": 21.7,
      "pct": 100
     }
    }
@@ -4193,8 +4193,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 9.9,
-     "pct": 60
+     "avg": 10.0,
+     "pct": 63
     }
    }
   },
@@ -4518,7 +4518,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 4.7,
-     "pct": 23
+     "pct": 24
     }
    }
   },
@@ -4922,8 +4922,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 6.4,
-     "pct": 59
+     "avg": 6.5,
+     "pct": 61
     }
    }
   },
@@ -5328,7 +5328,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 14.4,
-     "pct": 73
+     "pct": 74
     }
    }
   },
@@ -5489,7 +5489,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 7.4,
+     "avg": 7.3,
      "pct": 1
     }
    }
@@ -5570,8 +5570,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 9.5,
-     "pct": 51
+     "avg": 9.4,
+     "pct": 48
     }
    }
   },
@@ -5598,7 +5598,7 @@
      "label": "Clearances",
      "group": "ball",
      "avg": 4.1,
-     "pct": 66
+     "pct": 67
     },
     "metresGained": {
      "label": "Metres gained",
@@ -5652,7 +5652,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 17.5,
-     "pct": 67
+     "pct": 66
     }
    }
   },
@@ -5975,8 +5975,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.4,
-     "pct": 28
+     "avg": 12.3,
+     "pct": 27
     }
    }
   },
@@ -6218,7 +6218,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 18.8,
+     "avg": 18.7,
      "pct": 81
     }
    }
@@ -6299,7 +6299,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 22.9,
+     "avg": 22.8,
      "pct": 96
     }
    }
@@ -6704,7 +6704,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 5.7,
+     "avg": 5.6,
      "pct": 12
     }
    }
@@ -6866,8 +6866,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.3,
-     "pct": 67
+     "avg": 10.4,
+     "pct": 69
     }
    }
   },
@@ -7029,7 +7029,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.7,
-     "pct": 57
+     "pct": 56
     }
    }
   },
@@ -7109,8 +7109,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 14.1,
-     "pct": 70
+     "avg": 14.2,
+     "pct": 71
     }
    }
   },
@@ -7190,7 +7190,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.8,
+     "avg": 10.9,
      "pct": 75
     }
    }
@@ -7515,7 +7515,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.1,
-     "pct": 90
+     "pct": 89
     }
    }
   },
@@ -7677,7 +7677,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.3,
-     "pct": 57
+     "pct": 56
     }
    }
   },
@@ -7839,7 +7839,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.5,
-     "pct": 52
+     "pct": 53
     }
    }
   },
@@ -8324,7 +8324,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 7.8,
+     "avg": 7.7,
      "pct": 20
     }
    }
@@ -8924,8 +8924,8 @@
     "metresGained": {
      "label": "Metres gained",
      "group": "ball",
-     "avg": 372.2,
-     "pct": 78
+     "avg": 370.7,
+     "pct": 76
     },
     "inside50s": {
      "label": "Inside 50s",
@@ -8972,8 +8972,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 18.3,
-     "pct": 78
+     "avg": 18.1,
+     "pct": 75
     }
    }
   },
@@ -9296,8 +9296,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 5.8,
-     "pct": 44
+     "avg": 5.6,
+     "pct": 40
     }
    }
   },
@@ -9620,8 +9620,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 9.6,
-     "pct": 53
+     "avg": 9.5,
+     "pct": 52
     }
    }
   },
@@ -10026,7 +10026,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 9.9,
-     "pct": 60
+     "pct": 59
     }
    }
   },
@@ -10188,7 +10188,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 14.1,
-     "pct": 45
+     "pct": 44
     }
    }
   },
@@ -10349,8 +10349,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.4,
-     "pct": 69
+     "avg": 10.3,
+     "pct": 67
     }
    }
   },
@@ -10431,7 +10431,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 17.5,
-     "pct": 67
+     "pct": 66
     }
    }
   },
@@ -10512,7 +10512,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 9.5,
-     "pct": 51
+     "pct": 52
     }
    }
   },
@@ -10754,8 +10754,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 19.6,
-     "pct": 88
+     "avg": 19.7,
+     "pct": 89
     }
    }
   },
@@ -10998,7 +10998,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 5.6,
-     "pct": 39
+     "pct": 40
     }
    }
   },
@@ -11079,7 +11079,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 6.8,
-     "pct": 25
+     "pct": 27
     }
    }
   },
@@ -11355,7 +11355,7 @@
      "label": "Metres gained",
      "group": "ball",
      "avg": 371.5,
-     "pct": 77
+     "pct": 78
     },
     "inside50s": {
      "label": "Inside 50s",
@@ -11402,8 +11402,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 13.9,
-     "pct": 40
+     "avg": 13.8,
+     "pct": 39
     }
    }
   },
@@ -11564,8 +11564,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 9.1,
-     "pct": 45
+     "avg": 9.3,
+     "pct": 46
     }
    }
   },
@@ -11646,7 +11646,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 11.7,
-     "pct": 87
+     "pct": 86
     }
    }
   },
@@ -11807,8 +11807,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.3,
-     "pct": 26
+     "avg": 12.2,
+     "pct": 25
     }
    }
   },
@@ -12131,8 +12131,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.3,
-     "pct": 30
+     "avg": 12.4,
+     "pct": 31
     }
    }
   },
@@ -12212,7 +12212,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.7,
+     "avg": 10.8,
      "pct": 16
     }
    }
@@ -12374,8 +12374,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 17.7,
-     "pct": 70
+     "avg": 17.6,
+     "pct": 69
     }
    }
   },
@@ -12941,8 +12941,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.0,
-     "pct": 77
+     "avg": 9.9,
+     "pct": 76
     }
    }
   },
@@ -13103,8 +13103,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.1,
-     "pct": 47
+     "avg": 12.0,
+     "pct": 45
     }
    }
   },
@@ -13265,8 +13265,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.6,
-     "pct": 55
+     "avg": 12.7,
+     "pct": 56
     }
    }
   },
@@ -13509,7 +13509,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 18.2,
-     "pct": 75
+     "pct": 76
     }
    }
   },
@@ -13583,13 +13583,13 @@
     "tackles": {
      "label": "Tackles",
      "group": "defence",
-     "avg": 3.5,
-     "pct": 86
+     "avg": 3.6,
+     "pct": 88
     },
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 15.4,
+     "avg": 15.5,
      "pct": 87
     }
    }
@@ -13670,8 +13670,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 9.4,
-     "pct": 48
+     "avg": 9.5,
+     "pct": 52
     }
    }
   },
@@ -13833,7 +13833,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.4,
-     "pct": 33
+     "pct": 32
     }
    }
   },
@@ -13995,7 +13995,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.8,
-     "pct": 40
+     "pct": 41
     }
    }
   },
@@ -14157,7 +14157,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 17.7,
-     "pct": 70
+     "pct": 71
     }
    }
   },
@@ -14318,8 +14318,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 19.2,
-     "pct": 86
+     "avg": 19.1,
+     "pct": 85
     }
    }
   },
@@ -14642,8 +14642,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.5,
-     "pct": 85
+     "avg": 10.6,
+     "pct": 86
     }
    }
   },
@@ -14885,8 +14885,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.0,
-     "pct": 45
+     "avg": 11.9,
+     "pct": 44
     }
    }
   },
@@ -14966,7 +14966,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 9.2,
+     "avg": 9.3,
      "pct": 46
     }
    }
@@ -15209,8 +15209,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 16.3,
-     "pct": 59
+     "avg": 16.2,
+     "pct": 58
     }
    }
   },
@@ -15372,7 +15372,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 9.7,
-     "pct": 54
+     "pct": 56
     }
    }
   },
@@ -15399,7 +15399,7 @@
      "label": "Clearances",
      "group": "ball",
      "avg": 4.1,
-     "pct": 66
+     "pct": 67
     },
     "metresGained": {
      "label": "Metres gained",
@@ -16263,7 +16263,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 14.0,
-     "pct": 42
+     "pct": 43
     }
    }
   },
@@ -16424,8 +16424,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 11.9,
-     "pct": 44
+     "avg": 12.0,
+     "pct": 45
     }
    }
   },
@@ -16586,7 +16586,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 16.0,
+     "avg": 16.2,
      "pct": 58
     }
    }
@@ -16667,8 +16667,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 7.5,
-     "pct": 16
+     "avg": 7.6,
+     "pct": 17
     }
    }
   },
@@ -16829,8 +16829,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 15.7,
-     "pct": 88
+     "avg": 15.8,
+     "pct": 89
     }
    }
   },
@@ -16910,7 +16910,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 16.7,
+     "avg": 16.6,
      "pct": 76
     }
    }
@@ -17315,7 +17315,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 22.5,
+     "avg": 22.6,
      "pct": 94
     }
    }
@@ -17559,7 +17559,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 14.9,
-     "pct": 80
+     "pct": 79
     }
    }
   },
@@ -17721,7 +17721,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.4,
-     "pct": 33
+     "pct": 32
     }
    }
   },
@@ -17801,7 +17801,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 6.0,
+     "avg": 6.1,
      "pct": 4
     }
    }
@@ -17883,7 +17883,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 6.6,
-     "pct": 64
+     "pct": 65
     }
    }
   },
@@ -18044,8 +18044,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 7.1,
-     "pct": 77
+     "avg": 7.3,
+     "pct": 81
     }
    }
   },
@@ -18125,7 +18125,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.8,
+     "avg": 10.9,
      "pct": 88
     }
    }
@@ -18207,7 +18207,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 5.7,
-     "pct": 41
+     "pct": 42
     }
    }
   },
@@ -18368,8 +18368,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.5,
-     "pct": 85
+     "avg": 10.6,
+     "pct": 86
     }
    }
   },
@@ -18450,7 +18450,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 11.7,
-     "pct": 42
+     "pct": 41
     }
    }
   },
@@ -19016,8 +19016,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 14.0,
-     "pct": 42
+     "avg": 14.1,
+     "pct": 44
     }
    }
   },
@@ -19097,8 +19097,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 8.9,
-     "pct": 42
+     "avg": 8.8,
+     "pct": 41
     }
    }
   },
@@ -19179,7 +19179,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 18.1,
-     "pct": 82
+     "pct": 81
     }
    }
   },
@@ -19341,7 +19341,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 14.8,
-     "pct": 47
+     "pct": 46
     }
    }
   },
@@ -19421,8 +19421,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 8.7,
-     "pct": 62
+     "avg": 8.6,
+     "pct": 61
     }
    }
   },
@@ -19503,7 +19503,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.7,
-     "pct": 57
+     "pct": 56
     }
    }
   },
@@ -19746,7 +19746,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.3,
-     "pct": 30
+     "pct": 29
     }
    }
   },
@@ -19988,8 +19988,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 11.0,
-     "pct": 32
+     "avg": 10.9,
+     "pct": 30
     }
    }
   },
@@ -20069,8 +20069,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.6,
-     "pct": 35
+     "avg": 12.8,
+     "pct": 36
     }
    }
   },
@@ -20151,7 +20151,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 18.8,
-     "pct": 81
+     "pct": 82
     }
    }
   },
@@ -20393,8 +20393,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 6.6,
-     "pct": 64
+     "avg": 6.5,
+     "pct": 61
     }
    }
   },
@@ -20474,7 +20474,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 5.6,
+     "avg": 5.7,
      "pct": 2
     }
    }
@@ -20798,7 +20798,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.7,
+     "avg": 12.8,
      "pct": 30
     }
    }
@@ -21042,7 +21042,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 9.6,
-     "pct": 53
+     "pct": 54
     }
    }
   },
@@ -21123,7 +21123,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 6.3,
-     "pct": 20
+     "pct": 21
     }
    }
   },
@@ -21203,7 +21203,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 6.3,
+     "avg": 6.5,
      "pct": 1
     }
    }
@@ -21609,7 +21609,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 4.1,
-     "pct": 10
+     "pct": 9
     }
    }
   },
@@ -21933,7 +21933,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 15.3,
-     "pct": 51
+     "pct": 52
     }
    }
   },
@@ -22013,8 +22013,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 15.3,
-     "pct": 51
+     "avg": 15.2,
+     "pct": 50
     }
    }
   },
@@ -22176,7 +22176,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.2,
-     "pct": 53
+     "pct": 52
     }
    }
   },
@@ -22527,7 +22527,7 @@
      "label": "Clearances",
      "group": "ball",
      "avg": 4.1,
-     "pct": 66
+     "pct": 67
     },
     "metresGained": {
      "label": "Metres gained",
@@ -23148,7 +23148,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.3,
-     "pct": 29
+     "pct": 28
     }
    }
   },
@@ -23228,8 +23228,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 15.0,
-     "pct": 48
+     "avg": 15.1,
+     "pct": 49
     }
    }
   },
@@ -23309,7 +23309,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 20.1,
+     "avg": 20.0,
      "pct": 92
     }
    }
@@ -23472,7 +23472,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 9.9,
-     "pct": 60
+     "pct": 59
     }
    }
   },
@@ -23715,7 +23715,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 6.8,
-     "pct": 9
+     "pct": 8
     }
    }
   },
@@ -23796,7 +23796,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 11.0,
-     "pct": 78
+     "pct": 77
     }
    }
   },
@@ -23877,7 +23877,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 6.9,
-     "pct": 27
+     "pct": 28
     }
    }
   },
@@ -24200,8 +24200,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 15.2,
-     "pct": 50
+     "avg": 15.3,
+     "pct": 52
     }
    }
   },
@@ -24281,8 +24281,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 14.0,
-     "pct": 42
+     "avg": 13.9,
+     "pct": 41
     }
    }
   },
@@ -24362,7 +24362,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 17.5,
+     "avg": 17.6,
      "pct": 94
     }
    }
@@ -24444,7 +24444,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 14.9,
-     "pct": 80
+     "pct": 79
     }
    }
   },
@@ -24525,7 +24525,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.5,
-     "pct": 52
+     "pct": 53
     }
    }
   },
@@ -24686,8 +24686,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 15.4,
-     "pct": 53
+     "avg": 15.3,
+     "pct": 52
     }
    }
   },
@@ -24767,8 +24767,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 11.9,
-     "pct": 24
+     "avg": 11.8,
+     "pct": 23
     }
    }
   },
@@ -24929,8 +24929,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 8.2,
-     "pct": 53
+     "avg": 8.3,
+     "pct": 56
     }
    }
   },
@@ -25253,7 +25253,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 13.2,
+     "avg": 13.3,
      "pct": 46
     }
    }
@@ -25415,8 +25415,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 7.0,
-     "pct": 28
+     "avg": 6.7,
+     "pct": 25
     }
    }
   },
@@ -25577,8 +25577,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.7,
-     "pct": 30
+     "avg": 12.6,
+     "pct": 29
     }
    }
   },
@@ -25658,8 +25658,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 11.4,
-     "pct": 83
+     "avg": 11.5,
+     "pct": 84
     }
    }
   },
@@ -25739,8 +25739,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 9.3,
-     "pct": 11
+     "avg": 9.4,
+     "pct": 12
     }
    }
   },
@@ -25901,8 +25901,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 18.1,
-     "pct": 82
+     "avg": 18.2,
+     "pct": 84
     }
    }
   },
@@ -26063,8 +26063,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 14.9,
-     "pct": 60
+     "avg": 15.0,
+     "pct": 61
     }
    }
   },
@@ -26144,8 +26144,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 11.6,
-     "pct": 40
+     "avg": 11.8,
+     "pct": 42
     }
    }
   },
@@ -26225,7 +26225,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 9.7,
+     "avg": 9.6,
      "pct": 54
     }
    }
@@ -26387,7 +26387,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 7.7,
+     "avg": 7.6,
      "pct": 88
     }
    }
@@ -26873,8 +26873,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 9.3,
-     "pct": 4
+     "avg": 9.4,
+     "pct": 5
     }
    }
   },
@@ -26954,8 +26954,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.1,
-     "pct": 47
+     "avg": 12.3,
+     "pct": 48
     }
    }
   },
@@ -27035,8 +27035,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 9.9,
-     "pct": 60
+     "avg": 9.5,
+     "pct": 52
     }
    }
   },
@@ -27521,8 +27521,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 8.5,
-     "pct": 36
+     "avg": 8.6,
+     "pct": 38
     }
    }
   },
@@ -27603,7 +27603,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 17.5,
-     "pct": 67
+     "pct": 66
     }
    }
   },
@@ -27683,8 +27683,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 8.8,
-     "pct": 65
+     "avg": 8.9,
+     "pct": 67
     }
    }
   },
@@ -27764,7 +27764,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 13.5,
+     "avg": 13.4,
      "pct": 65
     }
    }
@@ -28250,8 +28250,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.9,
-     "pct": 76
+     "avg": 11.0,
+     "pct": 77
     }
    }
   },
@@ -28331,8 +28331,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.8,
-     "pct": 28
+     "avg": 10.9,
+     "pct": 30
     }
    }
   },
@@ -28493,7 +28493,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 8.6,
+     "avg": 8.8,
      "pct": 1
     }
    }
@@ -28655,8 +28655,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 8.8,
-     "pct": 49
+     "avg": 8.9,
+     "pct": 50
     }
    }
   },
@@ -28979,8 +28979,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 6.6,
-     "pct": 8
+     "avg": 7.0,
+     "pct": 10
     }
    }
   },
@@ -29060,8 +29060,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.4,
-     "pct": 25
+     "avg": 10.3,
+     "pct": 24
     }
    }
   },
@@ -29142,7 +29142,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.3,
-     "pct": 83
+     "pct": 81
     }
    }
   },
@@ -29547,7 +29547,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.5,
-     "pct": 52
+     "pct": 53
     }
    }
   },
@@ -29708,8 +29708,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.0,
-     "pct": 88
+     "avg": 12.1,
+     "pct": 89
     }
    }
   },
@@ -29789,7 +29789,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 14.4,
+     "avg": 14.3,
      "pct": 73
     }
    }
@@ -29951,8 +29951,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 16.3,
-     "pct": 91
+     "avg": 16.4,
+     "pct": 92
     }
    }
   },
@@ -30032,8 +30032,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.5,
-     "pct": 52
+     "avg": 12.4,
+     "pct": 50
     }
    }
   },
@@ -30114,7 +30114,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.6,
-     "pct": 1
+     "pct": 0
     }
    }
   },
@@ -30195,7 +30195,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.3,
-     "pct": 26
+     "pct": 27
     }
    }
   },
@@ -30357,7 +30357,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.6,
-     "pct": 35
+     "pct": 34
     }
    }
   },
@@ -30518,8 +30518,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 11.0,
-     "pct": 32
+     "avg": 11.1,
+     "pct": 35
     }
    }
   },
@@ -30681,7 +30681,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.9,
-     "pct": 21
+     "pct": 22
     }
    }
   },
@@ -30762,7 +30762,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.2,
-     "pct": 53
+     "pct": 52
     }
    }
   },
@@ -31166,8 +31166,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 14.8,
-     "pct": 78
+     "avg": 14.9,
+     "pct": 79
     }
    }
   },
@@ -31328,7 +31328,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.0,
+     "avg": 9.9,
      "pct": 8
     }
    }
@@ -31490,7 +31490,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 15.7,
+     "avg": 15.6,
      "pct": 68
     }
    }
@@ -31647,12 +31647,12 @@
      "label": "Tackles",
      "group": "defence",
      "avg": 3.6,
-     "pct": 89
+     "pct": 88
     },
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 18.5,
+     "avg": 18.6,
      "pct": 97
     }
    }
@@ -31895,8 +31895,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 13.0,
-     "pct": 33
+     "avg": 13.1,
+     "pct": 35
     }
    }
   },
@@ -31976,7 +31976,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.8,
+     "avg": 11.0,
      "pct": 24
     }
    }
@@ -32138,8 +32138,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 9.8,
-     "pct": 57
+     "avg": 10.0,
+     "pct": 63
     }
    }
   },
@@ -32219,8 +32219,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.8,
-     "pct": 95
+     "avg": 13.0,
+     "pct": 96
     }
    }
   },
@@ -32300,8 +32300,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 11.5,
-     "pct": 38
+     "avg": 11.8,
+     "pct": 42
     }
    }
   },
@@ -32382,7 +32382,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 4.6,
-     "pct": 20
+     "pct": 21
     }
    }
   },
@@ -32462,8 +32462,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.6,
-     "pct": 55
+     "avg": 12.8,
+     "pct": 58
     }
    }
   },
@@ -32543,7 +32543,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.6,
+     "avg": 10.5,
      "pct": 26
     }
    }
@@ -32948,7 +32948,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 11.4,
+     "avg": 11.3,
      "pct": 73
     }
    }
@@ -33029,7 +33029,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 7.9,
+     "avg": 7.8,
      "pct": 21
     }
    }
@@ -33111,7 +33111,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.6,
-     "pct": 87
+     "pct": 88
     }
    }
   },
@@ -33192,7 +33192,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 18.2,
-     "pct": 75
+     "pct": 76
     }
    }
   },
@@ -33272,8 +33272,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 3.7,
-     "pct": 5
+     "avg": 3.6,
+     "pct": 3
     }
    }
   },
@@ -33434,7 +33434,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 14.4,
+     "avg": 14.3,
      "pct": 73
     }
    }
@@ -33840,7 +33840,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.7,
-     "pct": 57
+     "pct": 56
     }
    }
   },
@@ -33921,7 +33921,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.3,
-     "pct": 83
+     "pct": 81
     }
    }
   },
@@ -34245,7 +34245,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 14.8,
-     "pct": 78
+     "pct": 77
     }
    }
   },
@@ -34406,8 +34406,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.4,
-     "pct": 13
+     "avg": 10.3,
+     "pct": 11
     }
    }
   },
@@ -34488,7 +34488,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.3,
-     "pct": 57
+     "pct": 56
     }
    }
   },
@@ -34649,8 +34649,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 8.8,
-     "pct": 40
+     "avg": 8.5,
+     "pct": 36
     }
    }
   },
@@ -34731,7 +34731,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.6,
-     "pct": 18
+     "pct": 17
     }
    }
   },
@@ -34892,7 +34892,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 16.5,
+     "avg": 16.4,
      "pct": 74
     }
    }
@@ -35621,8 +35621,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 17.7,
-     "pct": 70
+     "avg": 17.6,
+     "pct": 69
     }
    }
   },
@@ -35703,7 +35703,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.7,
-     "pct": 19
+     "pct": 20
     }
    }
   },
@@ -35946,7 +35946,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.3,
-     "pct": 36
+     "pct": 37
     }
    }
   },
@@ -36512,8 +36512,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 6.3,
-     "pct": 20
+     "avg": 6.2,
+     "pct": 16
     }
    }
   },
@@ -36756,7 +36756,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 10.8,
-     "pct": 75
+     "pct": 74
     }
    }
   },
@@ -36918,7 +36918,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.4,
-     "pct": 33
+     "pct": 32
     }
    }
   },
@@ -36999,7 +36999,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 15.5,
-     "pct": 55
+     "pct": 54
     }
    }
   },
@@ -37403,8 +37403,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 18.3,
-     "pct": 78
+     "avg": 18.2,
+     "pct": 76
     }
    }
   },
@@ -37728,7 +37728,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.1,
-     "pct": 90
+     "pct": 89
     }
    }
   },
@@ -37889,7 +37889,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 4.1,
+     "avg": 4.2,
      "pct": 10
     }
    }
@@ -38051,7 +38051,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 6.6,
+     "avg": 6.5,
      "pct": 24
     }
    }
@@ -38133,7 +38133,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 11.2,
-     "pct": 20
+     "pct": 19
     }
    }
   },
@@ -38295,7 +38295,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.1,
-     "pct": 90
+     "pct": 89
     }
    }
   },
@@ -38376,7 +38376,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.4,
-     "pct": 33
+     "pct": 32
     }
    }
   },
@@ -38537,8 +38537,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 4.7,
-     "pct": 23
+     "avg": 4.6,
+     "pct": 21
     }
    }
   },
@@ -38781,7 +38781,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 12.8,
-     "pct": 59
+     "pct": 58
     }
    }
   },
@@ -39023,8 +39023,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 14.0,
-     "pct": 42
+     "avg": 13.9,
+     "pct": 41
     }
    }
   },
@@ -39104,8 +39104,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.9,
-     "pct": 76
+     "avg": 11.0,
+     "pct": 77
     }
    }
   },
@@ -39185,8 +39185,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 15.4,
-     "pct": 53
+     "avg": 15.5,
+     "pct": 54
     }
    }
   },
@@ -39267,7 +39267,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 9.4,
-     "pct": 13
+     "pct": 12
     }
    }
   },
@@ -39429,7 +39429,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.4,
-     "pct": 33
+     "pct": 32
     }
    }
   },
@@ -39509,8 +39509,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 5.6,
-     "pct": 39
+     "avg": 5.5,
+     "pct": 38
     }
    }
   },
@@ -39671,8 +39671,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.5,
-     "pct": 29
+     "avg": 12.4,
+     "pct": 28
     }
    }
   },
@@ -39753,7 +39753,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 6.2,
-     "pct": 15
+     "pct": 16
     }
    }
   },
@@ -39834,7 +39834,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.6,
-     "pct": 18
+     "pct": 17
     }
    }
   },
@@ -40077,7 +40077,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.1,
-     "pct": 77
+     "pct": 76
     }
    }
   },
@@ -40239,7 +40239,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 10.0,
-     "pct": 77
+     "pct": 78
     }
    }
   },
@@ -41048,8 +41048,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 10.3,
-     "pct": 11
+     "avg": 10.4,
+     "pct": 13
     }
    }
   },
@@ -41130,7 +41130,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 9.5,
-     "pct": 51
+     "pct": 52
     }
    }
   },
@@ -41211,7 +41211,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 14.9,
-     "pct": 60
+     "pct": 59
     }
    }
   },
@@ -41373,7 +41373,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 5.5,
-     "pct": 36
+     "pct": 38
     }
    }
   },
@@ -41940,7 +41940,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 9.3,
-     "pct": 4
+     "pct": 3
     }
    }
   },
@@ -42020,8 +42020,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 17.5,
-     "pct": 67
+     "avg": 17.6,
+     "pct": 69
     }
    }
   },
@@ -42750,7 +42750,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 4.7,
-     "pct": 23
+     "pct": 24
     }
    }
   },
@@ -42830,7 +42830,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 14.0,
+     "avg": 14.1,
      "pct": 97
     }
    }
@@ -43073,8 +43073,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 8.0,
-     "pct": 22
+     "avg": 7.8,
+     "pct": 21
     }
    }
   },
@@ -43154,8 +43154,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 15.0,
-     "pct": 82
+     "avg": 15.1,
+     "pct": 84
     }
    }
   },
@@ -43182,7 +43182,7 @@
      "label": "Clearances",
      "group": "ball",
      "avg": 4.1,
-     "pct": 66
+     "pct": 67
     },
     "metresGained": {
      "label": "Metres gained",
@@ -43398,7 +43398,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.8,
-     "pct": 40
+     "pct": 41
     }
    }
   },
@@ -43884,7 +43884,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 9.9,
-     "pct": 60
+     "pct": 59
     }
    }
   },
@@ -43964,7 +43964,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 14.7,
+     "avg": 14.8,
      "pct": 46
     }
    }
@@ -44289,7 +44289,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 14.9,
-     "pct": 80
+     "pct": 79
     }
    }
   },
@@ -44450,8 +44450,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 11.1,
-     "pct": 18
+     "avg": 11.2,
+     "pct": 19
     }
    }
   },
@@ -44937,7 +44937,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 14.0,
-     "pct": 42
+     "pct": 43
     }
    }
   },
@@ -45099,7 +45099,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 10.5,
-     "pct": 85
+     "pct": 84
     }
    }
   },
@@ -45261,7 +45261,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 11.0,
-     "pct": 78
+     "pct": 77
     }
    }
   },
@@ -45335,14 +45335,14 @@
     "tackles": {
      "label": "Tackles",
      "group": "defence",
-     "avg": 5.9,
-     "pct": 94
+     "avg": 6.0,
+     "pct": 95
     },
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 23.4,
-     "pct": 98
+     "avg": 23.5,
+     "pct": 99
     }
    }
   },
@@ -45422,8 +45422,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 11.5,
-     "pct": 84
+     "avg": 11.4,
+     "pct": 83
     }
    }
   },
@@ -45584,7 +45584,7 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 6.0,
+     "avg": 5.9,
      "pct": 13
     }
    }
@@ -45746,8 +45746,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 8.3,
-     "pct": 29
+     "avg": 8.4,
+     "pct": 32
     }
    }
   },
@@ -45827,8 +45827,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 7.4,
-     "pct": 39
+     "avg": 7.3,
+     "pct": 37
     }
    }
   },
@@ -45989,8 +45989,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 12.0,
-     "pct": 45
+     "avg": 12.1,
+     "pct": 47
     }
    }
   },
@@ -46070,8 +46070,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 4.5,
-     "pct": 17
+     "avg": 4.4,
+     "pct": 14
     }
    }
   },
@@ -46233,7 +46233,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 9.4,
-     "pct": 13
+     "pct": 12
     }
    }
   },
@@ -46314,7 +46314,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 5.4,
-     "pct": 34
+     "pct": 35
     }
    }
   },
@@ -46476,7 +46476,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 11.6,
-     "pct": 40
+     "pct": 39
     }
    }
   },
@@ -46638,7 +46638,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 9.9,
-     "pct": 60
+     "pct": 59
     }
    }
   },
@@ -46718,8 +46718,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 11.6,
-     "pct": 85
+     "avg": 11.7,
+     "pct": 86
     }
    }
   },
@@ -46880,8 +46880,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 11.1,
-     "pct": 35
+     "avg": 11.0,
+     "pct": 32
     }
    }
   },
@@ -47042,8 +47042,8 @@
     "pressureActs": {
      "label": "Pressure acts",
      "group": "defence",
-     "avg": 7.3,
-     "pct": 83
+     "avg": 7.4,
+     "pct": 84
     }
    }
   },
@@ -47319,7 +47319,7 @@
      "label": "Metres gained",
      "group": "ball",
      "avg": 370.9,
-     "pct": 76
+     "pct": 77
     },
     "inside50s": {
      "label": "Inside 50s",
@@ -47529,7 +47529,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 8.3,
-     "pct": 29
+     "pct": 28
     }
    }
   },
@@ -47853,7 +47853,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 4.4,
-     "pct": 13
+     "pct": 14
     }
    }
   },
@@ -47934,7 +47934,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 11.6,
-     "pct": 40
+     "pct": 39
     }
    }
   },
@@ -48096,7 +48096,7 @@
      "label": "Pressure acts",
      "group": "defence",
      "avg": 7.3,
-     "pct": 36
+     "pct": 37
     }
    }
   },
