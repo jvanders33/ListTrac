@@ -3,7 +3,7 @@
  "source_url": "https://www.afl.com.au/news",
  "attribution": "Contract & movement events from the AFL's own content API and AFLRATINGS' reporting, with hand-verified corrections; each event links to its source. The AFL does not disclose contract terms — no dollar figures are tracked.",
  "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
- "count": 1586,
+ "count": 1588,
  "events": [
   {
    "name": "Scott Pendlebury",
@@ -21284,6 +21284,18 @@
    "source_url": "https://aflratings.com.au/2026/10/09/hudson-okeeffe-joins-bulldogs/"
   },
   {
+   "name": "Harry Cunningham joins Crows",
+   "norm": "harrycunninghamjoinscrows",
+   "date": "2026-10-09",
+   "kind": "delist",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/10/09/harry-cunningham-joins-crows/"
+  },
+  {
    "name": "Zak Butters joins Bulldogs",
    "norm": "zakbuttersjoinsbulldogs",
    "date": "2026-10-09",
@@ -21474,6 +21486,18 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2026/10/14/josh-goater-joins-hawks/"
+  },
+  {
+   "name": "Jake Stringer joins Saints",
+   "norm": "jakestringerjoinssaints",
+   "date": "2026-10-19",
+   "kind": "delist",
+   "club": null,
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": null,
+   "source_url": "https://aflratings.com.au/2026/10/19/jake-stringer-joins-saints/"
   }
  ]
 }

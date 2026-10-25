@@ -71905,16 +71905,16 @@
    },
    {
     "cd_id": "CD_I1023261",
-    "rank": 4,
-    "rating": 629.1,
+    "rank": 3,
+    "rating": 627.5,
     "name": "Nick Daicos",
     "team": "COLL",
     "games": 23.0
    },
    {
     "cd_id": "CD_I290528",
-    "rank": 5,
-    "rating": 606.3,
+    "rank": 6,
+    "rating": 597.2,
     "name": "Max Gawn",
     "team": "MELB",
     "games": 24.0
@@ -71944,14 +71944,6 @@
     "games": 20.0
    },
    {
-    "cd_id": "CD_I1009199",
-    "rank": 8,
-    "rating": 569.4,
-    "name": "Noah Anderson",
-    "team": "GCFC",
-    "games": 22.0
-   },
-   {
     "cd_id": "CD_I1004965",
     "rank": 9,
     "rating": 561.8,
@@ -71960,12 +71952,12 @@
     "games": 19.0
    },
    {
-    "cd_id": "CD_I1009528",
-    "rank": 9,
-    "rating": 561.6,
-    "name": "Tom Green",
-    "team": "GWS",
-    "games": 0.0
+    "cd_id": "CD_I1015889",
+    "rank": 11,
+    "rating": 550.5,
+    "name": "Max Holmes",
+    "team": "GEEL",
+    "games": 20.0
    },
    {
     "cd_id": "CD_I293535",
@@ -71984,28 +71976,28 @@
     "games": 17.0
    },
    {
-    "cd_id": "CD_I1015889",
-    "rank": 13,
-    "rating": 543.1,
-    "name": "Max Holmes",
-    "team": "GEEL",
-    "games": 20.0
-   },
-   {
-    "cd_id": "CD_I1009208",
+    "cd_id": "CD_I1008541",
     "rank": 14,
-    "rating": 543.0,
-    "name": "Matt Rowell",
-    "team": "GCFC",
-    "games": 18.0
+    "rating": 539.5,
+    "name": "Kysaiah Pickett",
+    "team": "MELB",
+    "games": 24.0
    },
    {
     "cd_id": "CD_I1006130",
-    "rank": 14,
-    "rating": 538.1,
+    "rank": 15,
+    "rating": 538.9,
     "name": "Bailey Smith",
     "team": "GEEL",
     "games": 24.0
+   },
+   {
+    "cd_id": "CD_I1009528",
+    "rank": 17,
+    "rating": 537.3,
+    "name": "Tom Green",
+    "team": "GWS",
+    "games": 0.0
    },
    {
     "cd_id": "CD_I1009399",
@@ -72016,12 +72008,28 @@
     "games": 27.0
    },
    {
+    "cd_id": "CD_I1009199",
+    "rank": 17,
+    "rating": 531.6,
+    "name": "Noah Anderson",
+    "team": "GCFC",
+    "games": 22.0
+   },
+   {
     "cd_id": "CD_I1000978",
     "rank": 16,
     "rating": 531.1,
     "name": "Hugh McCluggage",
     "team": "BL",
     "games": 17.0
+   },
+   {
+    "cd_id": "CD_I1009208",
+    "rank": 18,
+    "rating": 527.7,
+    "name": "Matt Rowell",
+    "team": "GCFC",
+    "games": 18.0
    },
    {
     "cd_id": "CD_I1002267",
@@ -72048,9 +72056,17 @@
     "games": 22.0
    },
    {
+    "cd_id": "CD_I1023266",
+    "rank": 20,
+    "rating": 520.5,
+    "name": "Finn Callaghan",
+    "team": "GWS",
+    "games": 19.0
+   },
+   {
     "cd_id": "CD_I298210",
     "rank": 19,
-    "rating": 521.1,
+    "rating": 520.2,
     "name": "Christian Petracca",
     "team": "GCFC",
     "games": 20.0
@@ -72080,14 +72096,6 @@
     "games": 22.0
    },
    {
-    "cd_id": "CD_I1008541",
-    "rank": 22,
-    "rating": 514.9,
-    "name": "Kysaiah Pickett",
-    "team": "MELB",
-    "games": 24.0
-   },
-   {
     "cd_id": "CD_I290799",
     "rank": 27,
     "rating": 505.1,
@@ -72102,22 +72110,6 @@
     "name": "Jack Sinclair",
     "team": "STK",
     "games": 15.0
-   },
-   {
-    "cd_id": "CD_I298272",
-    "rank": 24,
-    "rating": 502.3,
-    "name": "Touk Miller",
-    "team": "GCFC",
-    "games": 23.0
-   },
-   {
-    "cd_id": "CD_I1023266",
-    "rank": 27,
-    "rating": 498.7,
-    "name": "Finn Callaghan",
-    "team": "GWS",
-    "games": 19.0
    },
    {
     "cd_id": "CD_I1020895",
@@ -72152,6 +72144,14 @@
     "games": 21.0
    },
    {
+    "cd_id": "CD_I298272",
+    "rank": 29,
+    "rating": 475.4,
+    "name": "Touk Miller",
+    "team": "GCFC",
+    "games": 23.0
+   },
+   {
     "cd_id": "CD_I992016",
     "rank": 32,
     "rating": 472.7,
@@ -72160,12 +72160,12 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I990704",
+    "cd_id": "CD_I294036",
     "rank": 33,
-    "rating": 466.8,
-    "name": "Patrick Cripps",
+    "rating": 466.4,
+    "name": "George Hewett",
     "team": "CARL",
-    "games": 25.0
+    "games": 21.0
    },
    {
     "cd_id": "CD_I298174",
@@ -72176,20 +72176,20 @@
     "games": 12.0
    },
    {
-    "cd_id": "CD_I993878",
-    "rank": 37,
-    "rating": 457.1,
-    "name": "Shaun Mannagh",
-    "team": "GEEL",
+    "cd_id": "CD_I990704",
+    "rank": 34,
+    "rating": 460.6,
+    "name": "Patrick Cripps",
+    "team": "CARL",
     "games": 25.0
    },
    {
-    "cd_id": "CD_I294036",
-    "rank": 38,
-    "rating": 453.1,
-    "name": "George Hewett",
-    "team": "CARL",
-    "games": 21.0
+    "cd_id": "CD_I1009253",
+    "rank": 35,
+    "rating": 459.5,
+    "name": "Lachie Ash",
+    "team": "GWS",
+    "games": 23.0
    },
    {
     "cd_id": "CD_I1023517",
@@ -72216,12 +72216,12 @@
     "games": 13.0
    },
    {
-    "cd_id": "CD_I1006094",
-    "rank": 43,
-    "rating": 441.0,
-    "name": "Sam Walsh",
-    "team": "CARL",
-    "games": 25.0
+    "cd_id": "CD_I996701",
+    "rank": 37,
+    "rating": 442.4,
+    "name": "Clayton Oliver",
+    "team": "GWS",
+    "games": 23.0
    },
    {
     "cd_id": "CD_I1015810",
@@ -72240,28 +72240,20 @@
     "games": 17.0
    },
    {
+    "cd_id": "CD_I994386",
+    "rank": 47,
+    "rating": 435.1,
+    "name": "Tom Atkins",
+    "team": "GEEL",
+    "games": 25.0
+   },
+   {
     "cd_id": "CD_I1004592",
     "rank": 46,
     "rating": 433.5,
     "name": "Tim English",
     "team": "WB",
     "games": 17.0
-   },
-   {
-    "cd_id": "CD_I291975",
-    "rank": 45,
-    "rating": 432.7,
-    "name": "Jarrod Witts",
-    "team": "GCFC",
-    "games": 13.0
-   },
-   {
-    "cd_id": "CD_I990291",
-    "rank": 46,
-    "rating": 432.6,
-    "name": "Darcy Cameron",
-    "team": "COLL",
-    "games": 23.0
    },
    {
     "cd_id": "CD_I992468",
@@ -72272,6 +72264,22 @@
     "games": 21.0
    },
    {
+    "cd_id": "CD_I990291",
+    "rank": 49,
+    "rating": 430.5,
+    "name": "Darcy Cameron",
+    "team": "COLL",
+    "games": 23.0
+   },
+   {
+    "cd_id": "CD_I1006094",
+    "rank": 50,
+    "rating": 430.0,
+    "name": "Sam Walsh",
+    "team": "CARL",
+    "games": 25.0
+   },
+   {
     "cd_id": "CD_I1011640",
     "rank": 50,
     "rating": 429.6,
@@ -72280,12 +72288,20 @@
     "games": 21.0
    },
    {
-    "cd_id": "CD_I1008436",
-    "rank": 58,
-    "rating": 426.5,
-    "name": "Kieren Briggs",
-    "team": "GWS",
-    "games": 18.0
+    "cd_id": "CD_I293871",
+    "rank": 50,
+    "rating": 428.7,
+    "name": "Jack Crisp",
+    "team": "COLL",
+    "games": 24.0
+   },
+   {
+    "cd_id": "CD_I291975",
+    "rank": 52,
+    "rating": 427.4,
+    "name": "Jarrod Witts",
+    "team": "GCFC",
+    "games": 13.0
    },
    {
     "cd_id": "CD_I1000980",
@@ -72328,14 +72344,6 @@
     "games": 18.0
    },
    {
-    "cd_id": "CD_I1005330",
-    "rank": 56,
-    "rating": 418.8,
-    "name": "Kade Chandler",
-    "team": "MELB",
-    "games": 23.0
-   },
-   {
     "cd_id": "CD_I1027704",
     "rank": 56,
     "rating": 418.7,
@@ -72344,28 +72352,36 @@
     "games": 25.0
    },
    {
-    "cd_id": "CD_I1025034",
-    "rank": 56,
-    "rating": 418.3,
-    "name": "Oliver Dempsey",
-    "team": "GEEL",
-    "games": 25.0
-   },
-   {
-    "cd_id": "CD_I293871",
-    "rank": 60,
-    "rating": 416.1,
-    "name": "Jack Crisp",
-    "team": "COLL",
-    "games": 24.0
-   },
-   {
-    "cd_id": "CD_I994386",
+    "cd_id": "CD_I993878",
     "rank": 59,
-    "rating": 408.3,
-    "name": "Tom Atkins",
+    "rating": 417.5,
+    "name": "Shaun Mannagh",
     "team": "GEEL",
     "games": 25.0
+   },
+   {
+    "cd_id": "CD_I1004938",
+    "rank": 62,
+    "rating": 415.1,
+    "name": "Gryan Miers",
+    "team": "GEEL",
+    "games": 17.0
+   },
+   {
+    "cd_id": "CD_I293845",
+    "rank": 63,
+    "rating": 414.4,
+    "name": "Jeremy Cameron",
+    "team": "GEEL",
+    "games": 19.0
+   },
+   {
+    "cd_id": "CD_I1008436",
+    "rank": 64,
+    "rating": 410.5,
+    "name": "Kieren Briggs",
+    "team": "GWS",
+    "games": 18.0
    },
    {
     "cd_id": "CD_I1004912",
@@ -72393,19 +72409,11 @@
    },
    {
     "cd_id": "CD_I296205",
-    "rank": 66,
-    "rating": 404.8,
+    "rank": 65,
+    "rating": 405.6,
     "name": "Jack Steele",
     "team": "MELB",
     "games": 24.0
-   },
-   {
-    "cd_id": "CD_I293845",
-    "rank": 65,
-    "rating": 404.1,
-    "name": "Jeremy Cameron",
-    "team": "GEEL",
-    "games": 19.0
    },
    {
     "cd_id": "CD_I1006314",
@@ -72416,12 +72424,12 @@
     "games": 24.0
    },
    {
-    "cd_id": "CD_I1009253",
-    "rank": 68,
-    "rating": 403.5,
-    "name": "Lachie Ash",
-    "team": "GWS",
-    "games": 23.0
+    "cd_id": "CD_I260257",
+    "rank": 67,
+    "rating": 402.9,
+    "name": "Scott Pendlebury",
+    "team": "COLL",
+    "games": 17.0
    },
    {
     "cd_id": "CD_I992330",
@@ -72430,14 +72438,6 @@
     "name": "Jordon Sweet",
     "team": "PORT",
     "games": 22.0
-   },
-   {
-    "cd_id": "CD_I1004938",
-    "rank": 69,
-    "rating": 401.9,
-    "name": "Gryan Miers",
-    "team": "GEEL",
-    "games": 17.0
    },
    {
     "cd_id": "CD_I993993",
@@ -72456,20 +72456,20 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I260257",
-    "rank": 67,
-    "rating": 401.2,
-    "name": "Scott Pendlebury",
-    "team": "COLL",
-    "games": 17.0
-   },
-   {
     "cd_id": "CD_I1027935",
     "rank": 73,
     "rating": 400.3,
     "name": "Josh Weddle",
     "team": "HAW",
     "games": 22.0
+   },
+   {
+    "cd_id": "CD_I1025034",
+    "rank": 69,
+    "rating": 400.0,
+    "name": "Oliver Dempsey",
+    "team": "GEEL",
+    "games": 25.0
    },
    {
     "cd_id": "CD_I996059",
@@ -72480,12 +72480,12 @@
     "games": 24.0
    },
    {
-    "cd_id": "CD_I295344",
-    "rank": 78,
-    "rating": 397.7,
-    "name": "Toby Greene",
-    "team": "GWS",
-    "games": 21.0
+    "cd_id": "CD_I1005330",
+    "rank": 70,
+    "rating": 398.4,
+    "name": "Kade Chandler",
+    "team": "MELB",
+    "games": 23.0
    },
    {
     "cd_id": "CD_I1006133",
@@ -72504,28 +72504,12 @@
     "games": 27.0
    },
    {
-    "cd_id": "CD_I1005054",
+    "cd_id": "CD_I1017665",
     "rank": 71,
-    "rating": 394.7,
-    "name": "Josh Daicos",
-    "team": "COLL",
-    "games": 24.0
-   },
-   {
-    "cd_id": "CD_I1012825",
-    "rank": 73,
-    "rating": 394.3,
-    "name": "Jake Bowey",
-    "team": "MELB",
-    "games": 16.0
-   },
-   {
-    "cd_id": "CD_I1000223",
-    "rank": 79,
-    "rating": 392.9,
-    "name": "Liam Baker",
-    "team": "WCE",
-    "games": 20.0
+    "rating": 392.2,
+    "name": "Bodhi Uwland",
+    "team": "GCFC",
+    "games": 23.0
    },
    {
     "cd_id": "CD_I1002312",
@@ -72536,20 +72520,20 @@
     "games": 26.0
    },
    {
-    "cd_id": "CD_I996701",
-    "rank": 84,
-    "rating": 390.3,
-    "name": "Clayton Oliver",
-    "team": "GWS",
-    "games": 23.0
+    "cd_id": "CD_I1005054",
+    "rank": 75,
+    "rating": 389.5,
+    "name": "Josh Daicos",
+    "team": "COLL",
+    "games": 24.0
    },
    {
-    "cd_id": "CD_I999391",
-    "rank": 76,
-    "rating": 385.9,
-    "name": "Tom Sparrow",
-    "team": "MELB",
-    "games": 24.0
+    "cd_id": "CD_I295344",
+    "rank": 72,
+    "rating": 389.5,
+    "name": "Toby Greene",
+    "team": "GWS",
+    "games": 21.0
    },
    {
     "cd_id": "CD_I1000972",
@@ -72576,9 +72560,25 @@
     "games": 12.0
    },
    {
+    "cd_id": "CD_I1012825",
+    "rank": 78,
+    "rating": 382.8,
+    "name": "Jake Bowey",
+    "team": "MELB",
+    "games": 16.0
+   },
+   {
+    "cd_id": "CD_I1009378",
+    "rank": 81,
+    "rating": 381.4,
+    "name": "Trent Rivers",
+    "team": "MELB",
+    "games": 17.0
+   },
+   {
     "cd_id": "CD_I295446",
-    "rank": 80,
-    "rating": 382.3,
+    "rank": 83,
+    "rating": 380.7,
     "name": "Sam Collins",
     "team": "GCFC",
     "games": 21.0
@@ -72592,54 +72592,6 @@
     "games": 27.0
    },
    {
-    "cd_id": "CD_I1017665",
-    "rank": 83,
-    "rating": 379.4,
-    "name": "Bodhi Uwland",
-    "team": "GCFC",
-    "games": 23.0
-   },
-   {
-    "cd_id": "CD_I295461",
-    "rank": 87,
-    "rating": 379.4,
-    "name": "Adam Saad",
-    "team": "CARL",
-    "games": 3.0
-   },
-   {
-    "cd_id": "CD_I296347",
-    "rank": 97,
-    "rating": 378.7,
-    "name": "Josh Kelly",
-    "team": "GWS",
-    "games": 0.0
-   },
-   {
-    "cd_id": "CD_I1001438",
-    "rank": 88,
-    "rating": 378.1,
-    "name": "Bayley Fritsch",
-    "team": "MELB",
-    "games": 22.0
-   },
-   {
-    "cd_id": "CD_I296324",
-    "rank": 98,
-    "rating": 378.1,
-    "name": "Jesse Hogan",
-    "team": "GWS",
-    "games": 9.0
-   },
-   {
-    "cd_id": "CD_I295898",
-    "rank": 93,
-    "rating": 377.7,
-    "name": "Tim Kelly",
-    "team": "WCE",
-    "games": 21.0
-   },
-   {
     "cd_id": "CD_I1002235",
     "rank": 96,
     "rating": 376.5,
@@ -72648,12 +72600,36 @@
     "games": 27.0
    },
    {
+    "cd_id": "CD_I1023492",
+    "rank": 88,
+    "rating": 376.3,
+    "name": "Harley Reid",
+    "team": "WCE",
+    "games": 23.0
+   },
+   {
     "cd_id": "CD_I993998",
     "rank": 91,
     "rating": 375.5,
     "name": "Jy Simpkin",
     "team": "NMFC",
     "games": 23.0
+   },
+   {
+    "cd_id": "CD_I999391",
+    "rank": 90,
+    "rating": 374.4,
+    "name": "Tom Sparrow",
+    "team": "MELB",
+    "games": 24.0
+   },
+   {
+    "cd_id": "CD_I294305",
+    "rank": 87,
+    "rating": 373.2,
+    "name": "Lachie Whitfield",
+    "team": "GWS",
+    "games": 21.0
    },
    {
     "cd_id": "CD_I1009260",
@@ -72696,52 +72672,12 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I1009378",
-    "rank": 99,
-    "rating": 368.5,
-    "name": "Trent Rivers",
-    "team": "MELB",
-    "games": 17.0
-   },
-   {
-    "cd_id": "CD_I1009708",
-    "rank": 107,
-    "rating": 367.8,
-    "name": "Jack Buckley",
-    "team": "GWS",
-    "games": 9.0
-   },
-   {
-    "cd_id": "CD_I1004757",
-    "rank": 99,
-    "rating": 366.6,
-    "name": "Beau McCreery",
-    "team": "COLL",
-    "games": 23.0
-   },
-   {
-    "cd_id": "CD_I270917",
-    "rank": 100,
-    "rating": 365.9,
-    "name": "Patrick Dangerfield",
-    "team": "GEEL",
-    "games": 19.0
-   },
-   {
     "cd_id": "CD_I1012807",
     "rank": 101,
     "rating": 365.8,
     "name": "Sam Berry",
     "team": "ADEL",
     "games": 24.0
-   },
-   {
-    "cd_id": "CD_I1020650",
-    "rank": 112,
-    "rating": 364.7,
-    "name": "Darcy Jones",
-    "team": "GWS",
-    "games": 0.0
    },
    {
     "cd_id": "CD_I992059",
@@ -72768,28 +72704,12 @@
     "games": 19.0
    },
    {
-    "cd_id": "CD_I294685",
-    "rank": 111,
-    "rating": 362.0,
-    "name": "Zac Williams",
-    "team": "CARL",
-    "games": 9.0
-   },
-   {
     "cd_id": "CD_I990882",
     "rank": 109,
     "rating": 361.9,
     "name": "Wayne Milera",
     "team": "ADEL",
     "games": 20.0
-   },
-   {
-    "cd_id": "CD_I1005247",
-    "rank": 117,
-    "rating": 361.5,
-    "name": "Sam Taylor",
-    "team": "GWS",
-    "games": 12.0
    },
    {
     "cd_id": "CD_I1023473",
@@ -72800,20 +72720,20 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I291800",
-    "rank": 110,
-    "rating": 360.8,
-    "name": "Tom Stewart",
-    "team": "GEEL",
-    "games": 23.0
+    "cd_id": "CD_I295898",
+    "rank": 99,
+    "rating": 360.5,
+    "name": "Tim Kelly",
+    "team": "WCE",
+    "games": 21.0
    },
    {
-    "cd_id": "CD_I1000072",
-    "rank": 101,
-    "rating": 360.7,
-    "name": "John Noble",
-    "team": "GCFC",
-    "games": 23.0
+    "cd_id": "CD_I1000223",
+    "rank": 100,
+    "rating": 360.3,
+    "name": "Liam Baker",
+    "team": "WCE",
+    "games": 20.0
    },
    {
     "cd_id": "CD_I297566",
@@ -72824,12 +72744,12 @@
     "games": 24.0
    },
    {
-    "cd_id": "CD_I1008083",
-    "rank": 122,
-    "rating": 357.3,
-    "name": "Connor Idun",
-    "team": "GWS",
-    "games": 23.0
+    "cd_id": "CD_I1002239",
+    "rank": 108,
+    "rating": 358.2,
+    "name": "Adam Cerra",
+    "team": "CARL",
+    "games": 22.0
    },
    {
     "cd_id": "CD_I1011936",
@@ -72840,6 +72760,14 @@
     "games": 14.0
    },
    {
+    "cd_id": "CD_I1009708",
+    "rank": 110,
+    "rating": 356.9,
+    "name": "Jack Buckley",
+    "team": "GWS",
+    "games": 9.0
+   },
+   {
     "cd_id": "CD_I1020855",
     "rank": 122,
     "rating": 356.3,
@@ -72848,12 +72776,12 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I294305",
-    "rank": 126,
-    "rating": 355.8,
-    "name": "Lachie Whitfield",
-    "team": "GWS",
-    "games": 21.0
+    "cd_id": "CD_I1001438",
+    "rank": 106,
+    "rating": 354.7,
+    "name": "Bayley Fritsch",
+    "team": "MELB",
+    "games": 22.0
    },
    {
     "cd_id": "CD_I1024023",
@@ -72862,6 +72790,22 @@
     "name": "Daniel Curtin",
     "team": "ADEL",
     "games": 18.0
+   },
+   {
+    "cd_id": "CD_I291800",
+    "rank": 112,
+    "rating": 354.4,
+    "name": "Tom Stewart",
+    "team": "GEEL",
+    "games": 23.0
+   },
+   {
+    "cd_id": "CD_I270917",
+    "rank": 113,
+    "rating": 354.3,
+    "name": "Patrick Dangerfield",
+    "team": "GEEL",
+    "games": 19.0
    },
    {
     "cd_id": "CD_I1017110",
@@ -72888,30 +72832,6 @@
     "games": 24.0
    },
    {
-    "cd_id": "CD_I993832",
-    "rank": 123,
-    "rating": 353.7,
-    "name": "Jacob Weitering",
-    "team": "CARL",
-    "games": 14.0
-   },
-   {
-    "cd_id": "CD_I1016433",
-    "rank": 118,
-    "rating": 353.3,
-    "name": "Shannon Neale",
-    "team": "GEEL",
-    "games": 25.0
-   },
-   {
-    "cd_id": "CD_I993107",
-    "rank": 134,
-    "rating": 351.8,
-    "name": "Harry Himmelberg",
-    "team": "GWS",
-    "games": 23.0
-   },
-   {
     "cd_id": "CD_I1017051",
     "rank": 119,
     "rating": 351.3,
@@ -72928,12 +72848,52 @@
     "games": 24.0
    },
    {
+    "cd_id": "CD_I1020650",
+    "rank": 118,
+    "rating": 350.9,
+    "name": "Darcy Jones",
+    "team": "GWS",
+    "games": 0.0
+   },
+   {
+    "cd_id": "CD_I1023500",
+    "rank": 118,
+    "rating": 350.6,
+    "name": "Bailey Humphrey",
+    "team": "GCFC",
+    "games": 20.0
+   },
+   {
     "cd_id": "CD_I990290",
     "rank": 137,
     "rating": 350.4,
     "name": "Tom Barrass",
     "team": "HAW",
     "games": 21.0
+   },
+   {
+    "cd_id": "CD_I1000072",
+    "rank": 119,
+    "rating": 350.3,
+    "name": "John Noble",
+    "team": "GCFC",
+    "games": 23.0
+   },
+   {
+    "cd_id": "CD_I291313",
+    "rank": 120,
+    "rating": 350.2,
+    "name": "Jeremy Howe",
+    "team": "COLL",
+    "games": 18.0
+   },
+   {
+    "cd_id": "CD_I993832",
+    "rank": 121,
+    "rating": 349.6,
+    "name": "Jacob Weitering",
+    "team": "CARL",
+    "games": 14.0
    },
    {
     "cd_id": "CD_I993794",
@@ -72944,36 +72904,52 @@
     "games": 25.0
    },
    {
-    "cd_id": "CD_I1005992",
-    "rank": 123,
-    "rating": 349.1,
-    "name": "Joel Jeffrey",
-    "team": "GCFC",
-    "games": 22.0
-   },
-   {
-    "cd_id": "CD_I1028546",
-    "rank": 121,
-    "rating": 347.9,
-    "name": "Harvey Langford",
-    "team": "MELB",
-    "games": 24.0
+    "cd_id": "CD_I295461",
+    "rank": 124,
+    "rating": 348.8,
+    "name": "Adam Saad",
+    "team": "CARL",
+    "games": 3.0
    },
    {
     "cd_id": "CD_I1007881",
-    "rank": 129,
-    "rating": 347.5,
+    "rank": 122,
+    "rating": 348.6,
     "name": "Wil Powell",
     "team": "GCFC",
     "games": 20.0
    },
    {
-    "cd_id": "CD_I1023500",
-    "rank": 132,
-    "rating": 346.7,
-    "name": "Bailey Humphrey",
-    "team": "GCFC",
-    "games": 20.0
+    "cd_id": "CD_I298290",
+    "rank": 125,
+    "rating": 348.6,
+    "name": "Marc Pittonet",
+    "team": "CARL",
+    "games": 22.0
+   },
+   {
+    "cd_id": "CD_I1004757",
+    "rank": 122,
+    "rating": 347.7,
+    "name": "Beau McCreery",
+    "team": "COLL",
+    "games": 23.0
+   },
+   {
+    "cd_id": "CD_I1008083",
+    "rank": 131,
+    "rating": 347.5,
+    "name": "Connor Idun",
+    "team": "GWS",
+    "games": 23.0
+   },
+   {
+    "cd_id": "CD_I1016433",
+    "rank": 126,
+    "rating": 347.5,
+    "name": "Shannon Neale",
+    "team": "GEEL",
+    "games": 25.0
    },
    {
     "cd_id": "CD_I998114",
@@ -72984,28 +72960,12 @@
     "games": 6.0
    },
    {
-    "cd_id": "CD_I291313",
-    "rank": 124,
-    "rating": 345.3,
-    "name": "Jeremy Howe",
-    "team": "COLL",
-    "games": 18.0
-   },
-   {
     "cd_id": "CD_I1002947",
     "rank": 128,
     "rating": 344.6,
     "name": "Paul Curtis",
     "team": "NMFC",
     "games": 20.0
-   },
-   {
-    "cd_id": "CD_I297504",
-    "rank": 131,
-    "rating": 342.6,
-    "name": "Daniel McStay",
-    "team": "COLL",
-    "games": 24.0
    },
    {
     "cd_id": "CD_I990740",
@@ -73016,12 +72976,44 @@
     "games": 22.0
    },
    {
-    "cd_id": "CD_I1002239",
-    "rank": 148,
+    "cd_id": "CD_I1017396",
+    "rank": 130,
     "rating": 342.1,
-    "name": "Adam Cerra",
-    "team": "CARL",
-    "games": 22.0
+    "name": "Mac Andrew",
+    "team": "GCFC",
+    "games": 23.0
+   },
+   {
+    "cd_id": "CD_I998260",
+    "rank": 133,
+    "rating": 341.3,
+    "name": "Jack Bowes",
+    "team": "GEEL",
+    "games": 9.0
+   },
+   {
+    "cd_id": "CD_I1002251",
+    "rank": 143,
+    "rating": 341.1,
+    "name": "Brent Daniels",
+    "team": "GWS",
+    "games": 10.0
+   },
+   {
+    "cd_id": "CD_I1028546",
+    "rank": 138,
+    "rating": 340.7,
+    "name": "Harvey Langford",
+    "team": "MELB",
+    "games": 24.0
+   },
+   {
+    "cd_id": "CD_I992010",
+    "rank": 137,
+    "rating": 340.6,
+    "name": "Brayden Maynard",
+    "team": "COLL",
+    "games": 17.0
    },
    {
     "cd_id": "CD_I1012857",
@@ -73032,12 +73024,12 @@
     "games": 24.0
    },
    {
-    "cd_id": "CD_I297255",
-    "rank": 152,
-    "rating": 339.5,
-    "name": "Mitch McGovern",
+    "cd_id": "CD_I294685",
+    "rank": 146,
+    "rating": 339.8,
+    "name": "Zac Williams",
     "team": "CARL",
-    "games": 25.0
+    "games": 9.0
    },
    {
     "cd_id": "CD_I997078",
@@ -73048,14 +73040,6 @@
     "games": 16.0
    },
    {
-    "cd_id": "CD_I992010",
-    "rank": 139,
-    "rating": 338.9,
-    "name": "Brayden Maynard",
-    "team": "COLL",
-    "games": 17.0
-   },
-   {
     "cd_id": "CD_I998134",
     "rank": 150,
     "rating": 338.3,
@@ -73064,20 +73048,12 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I293884",
-    "rank": 151,
-    "rating": 337.7,
-    "name": "Jake Stringer",
-    "team": "GWS",
-    "games": 23.0
-   },
-   {
-    "cd_id": "CD_I1002251",
-    "rank": 152,
-    "rating": 337.2,
-    "name": "Brent Daniels",
-    "team": "GWS",
-    "games": 10.0
+    "cd_id": "CD_I297504",
+    "rank": 145,
+    "rating": 337.0,
+    "name": "Daniel McStay",
+    "team": "COLL",
+    "games": 24.0
    },
    {
     "cd_id": "CD_I295136",
@@ -73085,14 +73061,6 @@
     "rating": 335.9,
     "name": "Caleb Daniel",
     "team": "NMFC",
-    "games": 23.0
-   },
-   {
-    "cd_id": "CD_I1017396",
-    "rank": 152,
-    "rating": 335.7,
-    "name": "Mac Andrew",
-    "team": "GCFC",
     "games": 23.0
    },
    {
@@ -73104,20 +73072,44 @@
     "games": 19.0
    },
    {
-    "cd_id": "CD_I1000981",
-    "rank": 156,
-    "rating": 334.2,
-    "name": "Daniel Rioli",
-    "team": "GCFC",
-    "games": 20.0
-   },
-   {
     "cd_id": "CD_I293801",
-    "rank": 148,
-    "rating": 333.4,
+    "rank": 149,
+    "rating": 335.0,
     "name": "Jamie Elliott",
     "team": "COLL",
     "games": 11.0
+   },
+   {
+    "cd_id": "CD_I993107",
+    "rank": 155,
+    "rating": 334.3,
+    "name": "Harry Himmelberg",
+    "team": "GWS",
+    "games": 23.0
+   },
+   {
+    "cd_id": "CD_I296324",
+    "rank": 157,
+    "rating": 334.2,
+    "name": "Jesse Hogan",
+    "team": "GWS",
+    "games": 9.0
+   },
+   {
+    "cd_id": "CD_I293884",
+    "rank": 158,
+    "rating": 333.3,
+    "name": "Jake Stringer",
+    "team": "GWS",
+    "games": 23.0
+   },
+   {
+    "cd_id": "CD_I994295",
+    "rank": 155,
+    "rating": 333.0,
+    "name": "Dan Houston",
+    "team": "COLL",
+    "games": 24.0
    },
    {
     "cd_id": "CD_I1023275",
@@ -73128,20 +73120,20 @@
     "games": 23.0
    },
    {
+    "cd_id": "CD_I1027925",
+    "rank": 159,
+    "rating": 332.6,
+    "name": "Harvey Thomas",
+    "team": "GWS",
+    "games": 22.0
+   },
+   {
     "cd_id": "CD_I1005144",
     "rank": 161,
     "rating": 331.6,
     "name": "Massimo D'Ambrosio",
     "team": "HAW",
     "games": 25.0
-   },
-   {
-    "cd_id": "CD_I1023492",
-    "rank": 159,
-    "rating": 331.1,
-    "name": "Harley Reid",
-    "team": "WCE",
-    "games": 23.0
    },
    {
     "cd_id": "CD_I296420",
@@ -73153,7 +73145,7 @@
    },
    {
     "cd_id": "CD_I1003130",
-    "rank": 159,
+    "rank": 161,
     "rating": 329.6,
     "name": "Patrick Lipinski",
     "team": "COLL",
@@ -73184,6 +73176,14 @@
     "games": 23.0
    },
    {
+    "cd_id": "CD_I1000981",
+    "rank": 165,
+    "rating": 327.4,
+    "name": "Daniel Rioli",
+    "team": "GCFC",
+    "games": 20.0
+   },
+   {
     "cd_id": "CD_I1002227",
     "rank": 166,
     "rating": 327.3,
@@ -73200,12 +73200,12 @@
     "games": 24.0
    },
    {
-    "cd_id": "CD_I994295",
-    "rank": 165,
-    "rating": 327.0,
-    "name": "Dan Houston",
-    "team": "COLL",
-    "games": 24.0
+    "cd_id": "CD_I1008139",
+    "rank": 172,
+    "rating": 326.7,
+    "name": "Toby Bedford",
+    "team": "GWS",
+    "games": 17.0
    },
    {
     "cd_id": "CD_I1023477",
@@ -73224,6 +73224,14 @@
     "games": 7.0
    },
    {
+    "cd_id": "CD_I1005992",
+    "rank": 170,
+    "rating": 326.5,
+    "name": "Joel Jeffrey",
+    "team": "GCFC",
+    "games": 22.0
+   },
+   {
     "cd_id": "CD_I1018018",
     "rank": 170,
     "rating": 325.4,
@@ -73240,12 +73248,12 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I1013464",
-    "rank": 171,
-    "rating": 322.7,
-    "name": "Lawson Humphries",
-    "team": "GEEL",
-    "games": 24.0
+    "cd_id": "CD_I297255",
+    "rank": 179,
+    "rating": 322.4,
+    "name": "Mitch McGovern",
+    "team": "CARL",
+    "games": 25.0
    },
    {
     "cd_id": "CD_I298289",
@@ -73256,6 +73264,14 @@
     "games": 18.0
    },
    {
+    "cd_id": "CD_I1002222",
+    "rank": 180,
+    "rating": 322.0,
+    "name": "James Worpel",
+    "team": "GEEL",
+    "games": 11.0
+   },
+   {
     "cd_id": "CD_I1013462",
     "rank": 176,
     "rating": 321.5,
@@ -73264,20 +73280,20 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I998103",
-    "rank": 173,
-    "rating": 321.5,
-    "name": "Oliver Florent",
-    "team": "CARL",
-    "games": 25.0
-   },
-   {
     "cd_id": "CD_I1020959",
-    "rank": 177,
-    "rating": 321.3,
+    "rank": 179,
+    "rating": 321.4,
     "name": "Daniel Turner",
     "team": "MELB",
     "games": 20.0
+   },
+   {
+    "cd_id": "CD_I1013464",
+    "rank": 182,
+    "rating": 320.7,
+    "name": "Lawson Humphries",
+    "team": "GEEL",
+    "games": 24.0
    },
    {
     "cd_id": "CD_I998133",
@@ -73289,11 +73305,19 @@
    },
    {
     "cd_id": "CD_I296733",
-    "rank": 182,
-    "rating": 318.0,
+    "rank": 185,
+    "rating": 319.2,
     "name": "Mark Blicavs",
     "team": "GEEL",
     "games": 20.0
+   },
+   {
+    "cd_id": "CD_I998103",
+    "rank": 190,
+    "rating": 317.9,
+    "name": "Oliver Florent",
+    "team": "CARL",
+    "games": 25.0
    },
    {
     "cd_id": "CD_I295584",
@@ -73302,14 +73326,6 @@
     "name": "Bradley Hill",
     "team": "STK",
     "games": 23.0
-   },
-   {
-    "cd_id": "CD_I990827",
-    "rank": 180,
-    "rating": 317.0,
-    "name": "Jack Graham",
-    "team": "WCE",
-    "games": 13.0
    },
    {
     "cd_id": "CD_I1017109",
@@ -73326,6 +73342,14 @@
     "name": "Ryan Lester",
     "team": "BL",
     "games": 23.0
+   },
+   {
+    "cd_id": "CD_I1023025",
+    "rank": 186,
+    "rating": 315.2,
+    "name": "Reuben Ginbey",
+    "team": "WCE",
+    "games": 13.0
    },
    {
     "cd_id": "CD_I1006013",
@@ -73352,6 +73376,14 @@
     "games": 21.0
    },
    {
+    "cd_id": "CD_I1027877",
+    "rank": 192,
+    "rating": 313.4,
+    "name": "Connor O'Sullivan",
+    "team": "GEEL",
+    "games": 25.0
+   },
+   {
     "cd_id": "CD_I1009191",
     "rank": 187,
     "rating": 313.2,
@@ -73360,27 +73392,11 @@
     "games": 16.0
    },
    {
-    "cd_id": "CD_I1027877",
-    "rank": 189,
-    "rating": 313.0,
-    "name": "Connor O'Sullivan",
-    "team": "GEEL",
-    "games": 25.0
-   },
-   {
     "cd_id": "CD_I290838",
     "rank": 190,
     "rating": 312.7,
     "name": "Jack Darling",
     "team": "NMFC",
-    "games": 22.0
-   },
-   {
-    "cd_id": "CD_I298290",
-    "rank": 199,
-    "rating": 311.8,
-    "name": "Marc Pittonet",
-    "team": "CARL",
     "games": 22.0
    },
    {
@@ -73392,20 +73408,12 @@
     "games": 26.0
    },
    {
-    "cd_id": "CD_I1023025",
-    "rank": 192,
-    "rating": 310.1,
-    "name": "Reuben Ginbey",
+    "cd_id": "CD_I1036124",
+    "rank": 201,
+    "rating": 309.7,
+    "name": "Tom McCarthy",
     "team": "WCE",
-    "games": 13.0
-   },
-   {
-    "cd_id": "CD_I1009229",
-    "rank": 193,
-    "rating": 309.6,
-    "name": "Sam De Koning",
-    "team": "GEEL",
-    "games": 19.0
+    "games": 22.0
    },
    {
     "cd_id": "CD_I1007124",
@@ -73424,12 +73432,28 @@
     "games": 12.0
    },
    {
-    "cd_id": "CD_I1000860",
+    "cd_id": "CD_I1009229",
+    "rank": 198,
+    "rating": 308.8,
+    "name": "Sam De Koning",
+    "team": "GEEL",
+    "games": 19.0
+   },
+   {
+    "cd_id": "CD_I1008089",
     "rank": 202,
-    "rating": 307.3,
-    "name": "Lachie Schultz",
+    "rating": 308.7,
+    "name": "Isaac Quaynor",
     "team": "COLL",
-    "games": 22.0
+    "games": 21.0
+   },
+   {
+    "cd_id": "CD_I1005247",
+    "rank": 205,
+    "rating": 308.4,
+    "name": "Sam Taylor",
+    "team": "GWS",
+    "games": 12.0
    },
    {
     "cd_id": "CD_I294674",
@@ -73448,12 +73472,28 @@
     "games": 20.0
    },
    {
-    "cd_id": "CD_I1008089",
-    "rank": 208,
-    "rating": 305.4,
-    "name": "Isaac Quaynor",
+    "cd_id": "CD_I295265",
+    "rank": 214,
+    "rating": 306.0,
+    "name": "Nick Haynes",
+    "team": "CARL",
+    "games": 19.0
+   },
+   {
+    "cd_id": "CD_I1000860",
+    "rank": 210,
+    "rating": 304.8,
+    "name": "Lachie Schultz",
     "team": "COLL",
-    "games": 21.0
+    "games": 22.0
+   },
+   {
+    "cd_id": "CD_I999326",
+    "rank": 203,
+    "rating": 304.0,
+    "name": "Brad Close",
+    "team": "GEEL",
+    "games": 18.0
    },
    {
     "cd_id": "CD_I1012210",
@@ -73472,20 +73512,12 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I1002222",
-    "rank": 207,
-    "rating": 302.2,
-    "name": "James Worpel",
-    "team": "GEEL",
-    "games": 11.0
-   },
-   {
-    "cd_id": "CD_I1006144",
-    "rank": 222,
-    "rating": 302.1,
-    "name": "Ben King",
-    "team": "GCFC",
-    "games": 23.0
+    "cd_id": "CD_I1019038",
+    "rank": 223,
+    "rating": 301.9,
+    "name": "Aaron Cadman",
+    "team": "GWS",
+    "games": 18.0
    },
    {
     "cd_id": "CD_I1008239",
@@ -73512,6 +73544,14 @@
     "games": 26.0
    },
    {
+    "cd_id": "CD_I990827",
+    "rank": 213,
+    "rating": 300.9,
+    "name": "Jack Graham",
+    "team": "WCE",
+    "games": 13.0
+   },
+   {
     "cd_id": "CD_I298409",
     "rank": 213,
     "rating": 300.3,
@@ -73528,6 +73568,14 @@
     "games": 20.0
    },
    {
+    "cd_id": "CD_I991773",
+    "rank": 217,
+    "rating": 298.9,
+    "name": "Billy Frampton",
+    "team": "COLL",
+    "games": 24.0
+   },
+   {
     "cd_id": "CD_I293222",
     "rank": 218,
     "rating": 298.4,
@@ -73536,28 +73584,12 @@
     "games": 20.0
    },
    {
-    "cd_id": "CD_I998260",
-    "rank": 220,
-    "rating": 297.5,
-    "name": "Jack Bowes",
-    "team": "GEEL",
-    "games": 9.0
-   },
-   {
-    "cd_id": "CD_I991773",
-    "rank": 224,
-    "rating": 296.7,
-    "name": "Billy Frampton",
-    "team": "COLL",
-    "games": 24.0
-   },
-   {
-    "cd_id": "CD_I994185",
-    "rank": 225,
-    "rating": 296.1,
-    "name": "Jordan De Goey",
-    "team": "COLL",
-    "games": 22.0
+    "cd_id": "CD_I997100",
+    "rank": 229,
+    "rating": 296.8,
+    "name": "Will Hayward",
+    "team": "CARL",
+    "games": 21.0
    },
    {
     "cd_id": "CD_I1002403",
@@ -73568,28 +73600,28 @@
     "games": 21.0
    },
    {
+    "cd_id": "CD_I1017124",
+    "rank": 226,
+    "rating": 295.8,
+    "name": "Ned Long",
+    "team": "COLL",
+    "games": 22.0
+   },
+   {
+    "cd_id": "CD_I1006114",
+    "rank": 227,
+    "rating": 295.6,
+    "name": "Bailey J. Williams",
+    "team": "WCE",
+    "games": 19.0
+   },
+   {
     "cd_id": "CD_I1023515",
     "rank": 226,
     "rating": 295.5,
     "name": "Archie Roberts",
     "team": "ESS",
     "games": 21.0
-   },
-   {
-    "cd_id": "CD_I1008139",
-    "rank": 210,
-    "rating": 294.4,
-    "name": "Toby Bedford",
-    "team": "GWS",
-    "games": 17.0
-   },
-   {
-    "cd_id": "CD_I298524",
-    "rank": 234,
-    "rating": 294.3,
-    "name": "Lachie Weller",
-    "team": "GCFC",
-    "games": 11.0
    },
    {
     "cd_id": "CD_I1023270",
@@ -73608,14 +73640,6 @@
     "games": 6.0
    },
    {
-    "cd_id": "CD_I993917",
-    "rank": 236,
-    "rating": 292.6,
-    "name": "Ben Long",
-    "team": "GCFC",
-    "games": 21.0
-   },
-   {
     "cd_id": "CD_I1004364",
     "rank": 228,
     "rating": 292.5,
@@ -73624,9 +73648,17 @@
     "games": 17.0
    },
    {
+    "cd_id": "CD_I1006135",
+    "rank": 238,
+    "rating": 292.4,
+    "name": "Xavier O'Halloran",
+    "team": "GWS",
+    "games": 14.0
+   },
+   {
     "cd_id": "CD_I1017720",
-    "rank": 227,
-    "rating": 292.0,
+    "rank": 233,
+    "rating": 290.3,
     "name": "Jacob van Rooyen",
     "team": "MELB",
     "games": 22.0
@@ -73656,36 +73688,28 @@
     "games": 13.0
    },
    {
+    "cd_id": "CD_I994185",
+    "rank": 233,
+    "rating": 289.4,
+    "name": "Jordan De Goey",
+    "team": "COLL",
+    "games": 22.0
+   },
+   {
+    "cd_id": "CD_I298264",
+    "rank": 236,
+    "rating": 288.9,
+    "name": "Ed Langdon",
+    "team": "MELB",
+    "games": 24.0
+   },
+   {
     "cd_id": "CD_I1028495",
     "rank": 237,
     "rating": 288.7,
     "name": "Finn O'Sullivan",
     "team": "NMFC",
     "games": 19.0
-   },
-   {
-    "cd_id": "CD_I999326",
-    "rank": 235,
-    "rating": 288.4,
-    "name": "Brad Close",
-    "team": "GEEL",
-    "games": 18.0
-   },
-   {
-    "cd_id": "CD_I1006135",
-    "rank": 223,
-    "rating": 288.3,
-    "name": "Xavier O'Halloran",
-    "team": "GWS",
-    "games": 14.0
-   },
-   {
-    "cd_id": "CD_I1017124",
-    "rank": 237,
-    "rating": 288.1,
-    "name": "Ned Long",
-    "team": "COLL",
-    "games": 22.0
    },
    {
     "cd_id": "CD_I993940",
@@ -73704,20 +73728,20 @@
     "games": 17.0
    },
    {
-    "cd_id": "CD_I298264",
-    "rank": 239,
-    "rating": 286.2,
-    "name": "Ed Langdon",
-    "team": "MELB",
-    "games": 24.0
-   },
-   {
     "cd_id": "CD_I1017094",
     "rank": 227,
     "rating": 285.5,
     "name": "Connor Macdonald",
     "team": "HAW",
     "games": 25.0
+   },
+   {
+    "cd_id": "CD_I1006144",
+    "rank": 241,
+    "rating": 284.9,
+    "name": "Ben King",
+    "team": "GCFC",
+    "games": 23.0
    },
    {
     "cd_id": "CD_I1001299",
@@ -73728,20 +73752,20 @@
     "games": 2.0
    },
    {
+    "cd_id": "CD_I1004870",
+    "rank": 246,
+    "rating": 284.1,
+    "name": "Zach Guthrie",
+    "team": "GEEL",
+    "games": 25.0
+   },
+   {
     "cd_id": "CD_I1021200",
     "rank": 243,
     "rating": 282.9,
     "name": "Lachlan McAndrew",
     "team": "ADEL",
     "games": 24.0
-   },
-   {
-    "cd_id": "CD_I1004870",
-    "rank": 242,
-    "rating": 282.3,
-    "name": "Zach Guthrie",
-    "team": "GEEL",
-    "games": 25.0
    },
    {
     "cd_id": "CD_I295203",
@@ -73752,14 +73776,6 @@
     "games": 21.0
    },
    {
-    "cd_id": "CD_I295265",
-    "rank": 246,
-    "rating": 282.0,
-    "name": "Nick Haynes",
-    "team": "CARL",
-    "games": 19.0
-   },
-   {
     "cd_id": "CD_I1023272",
     "rank": 249,
     "rating": 280.9,
@@ -73768,12 +73784,20 @@
     "games": 20.0
    },
    {
-    "cd_id": "CD_I1014038",
-    "rank": 234,
-    "rating": 280.8,
-    "name": "Callum Brown",
-    "team": "GWS",
-    "games": 18.0
+    "cd_id": "CD_I1000953",
+    "rank": 251,
+    "rating": 280.1,
+    "name": "Harry McKay",
+    "team": "CARL",
+    "games": 23.0
+   },
+   {
+    "cd_id": "CD_I298524",
+    "rank": 248,
+    "rating": 280.0,
+    "name": "Lachie Weller",
+    "team": "GCFC",
+    "games": 11.0
    },
    {
     "cd_id": "CD_I996765",
@@ -73784,12 +73808,12 @@
     "games": 20.0
    },
    {
-    "cd_id": "CD_I1000953",
-    "rank": 252,
-    "rating": 279.0,
-    "name": "Harry McKay",
-    "team": "CARL",
-    "games": 23.0
+    "cd_id": "CD_I296359",
+    "rank": 250,
+    "rating": 279.5,
+    "name": "Christian Salem",
+    "team": "MELB",
+    "games": 9.0
    },
    {
     "cd_id": "CD_I1000963",
@@ -73808,28 +73832,28 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I1027821",
-    "rank": 251,
-    "rating": 278.3,
-    "name": "Caleb Windsor",
-    "team": "MELB",
-    "games": 21.0
-   },
-   {
-    "cd_id": "CD_I993820",
-    "rank": 237,
-    "rating": 278.3,
-    "name": "Tom Cole",
-    "team": "WCE",
-    "games": 17.0
-   },
-   {
     "cd_id": "CD_I295342",
     "rank": 244,
     "rating": 275.6,
     "name": "Jake Lloyd",
     "team": "SYD",
     "games": 25.0
+   },
+   {
+    "cd_id": "CD_I298288",
+    "rank": 251,
+    "rating": 275.5,
+    "name": "Darcy Moore",
+    "team": "COLL",
+    "games": 4.0
+   },
+   {
+    "cd_id": "CD_I298268",
+    "rank": 252,
+    "rating": 275.1,
+    "name": "Liam Duggan",
+    "team": "WCE",
+    "games": 22.0
    },
    {
     "cd_id": "CD_I1000864",
@@ -73840,28 +73864,12 @@
     "games": 25.0
    },
    {
-    "cd_id": "CD_I298268",
-    "rank": 246,
-    "rating": 274.8,
-    "name": "Liam Duggan",
-    "team": "WCE",
-    "games": 22.0
-   },
-   {
-    "cd_id": "CD_I997100",
-    "rank": 260,
-    "rating": 273.7,
-    "name": "Will Hayward",
-    "team": "CARL",
-    "games": 21.0
-   },
-   {
-    "cd_id": "CD_I1024982",
+    "cd_id": "CD_I993820",
     "rank": 256,
-    "rating": 273.1,
-    "name": "Oisin Mullin",
-    "team": "GEEL",
-    "games": 25.0
+    "rating": 273.5,
+    "name": "Tom Cole",
+    "team": "WCE",
+    "games": 17.0
    },
    {
     "cd_id": "CD_I997033",
@@ -73888,28 +73896,12 @@
     "games": 15.0
    },
    {
-    "cd_id": "CD_I1022915",
-    "rank": 257,
-    "rating": 271.1,
-    "name": "Edward Allan",
-    "team": "COLL",
-    "games": 19.0
-   },
-   {
     "cd_id": "CD_I1008550",
     "rank": 256,
     "rating": 270.0,
     "name": "Will Day",
     "team": "HAW",
     "games": 13.0
-   },
-   {
-    "cd_id": "CD_I1008893",
-    "rank": 262,
-    "rating": 269.8,
-    "name": "Harrison Petty",
-    "team": "MELB",
-    "games": 20.0
    },
    {
     "cd_id": "CD_I1014026",
@@ -73920,12 +73912,12 @@
     "games": 27.0
    },
    {
-    "cd_id": "CD_I1012860",
-    "rank": 263,
-    "rating": 269.3,
-    "name": "Oliver Henry",
-    "team": "GEEL",
-    "games": 24.0
+    "cd_id": "CD_I993917",
+    "rank": 267,
+    "rating": 268.7,
+    "name": "Ben Long",
+    "team": "GCFC",
+    "games": 21.0
    },
    {
     "cd_id": "CD_I1027875",
@@ -73952,16 +73944,8 @@
     "games": 22.0
    },
    {
-    "cd_id": "CD_I290826",
-    "rank": 259,
-    "rating": 267.6,
-    "name": "Jamie Cripps",
-    "team": "WCE",
-    "games": 5.0
-   },
-   {
     "cd_id": "CD_I998205",
-    "rank": 265,
+    "rank": 264,
     "rating": 266.6,
     "name": "Harry Perryman",
     "team": "COLL",
@@ -73984,28 +73968,28 @@
     "games": 21.0
    },
    {
-    "cd_id": "CD_I1007102",
-    "rank": 272,
-    "rating": 264.6,
-    "name": "Mark O'Connor",
-    "team": "GEEL",
-    "games": 22.0
-   },
-   {
-    "cd_id": "CD_I1027925",
-    "rank": 268,
-    "rating": 264.4,
-    "name": "Harvey Thomas",
-    "team": "GWS",
-    "games": 22.0
-   },
-   {
     "cd_id": "CD_I999331",
     "rank": 272,
     "rating": 264.2,
     "name": "Darcy Fogarty",
     "team": "ADEL",
     "games": 16.0
+   },
+   {
+    "cd_id": "CD_I998130",
+    "rank": 275,
+    "rating": 263.9,
+    "name": "Ben Ainsworth",
+    "team": "CARL",
+    "games": 25.0
+   },
+   {
+    "cd_id": "CD_I1000937",
+    "rank": 272,
+    "rating": 263.7,
+    "name": "Jack Henry",
+    "team": "GEEL",
+    "games": 21.0
    },
    {
     "cd_id": "CD_I990609",
@@ -74040,36 +74024,12 @@
     "games": 8.0
    },
    {
-    "cd_id": "CD_I1002228",
-    "rank": 273,
-    "rating": 262.4,
-    "name": "Lachie Fogarty",
-    "team": "CARL",
-    "games": 2.0
-   },
-   {
-    "cd_id": "CD_I998130",
-    "rank": 275,
-    "rating": 262.0,
-    "name": "Ben Ainsworth",
-    "team": "CARL",
-    "games": 25.0
-   },
-   {
     "cd_id": "CD_I291790",
     "rank": 276,
     "rating": 261.9,
     "name": "Adam Treloar",
     "team": "WB",
     "games": 5.0
-   },
-   {
-    "cd_id": "CD_I292128",
-    "rank": 273,
-    "rating": 261.8,
-    "name": "Elliot Yeo",
-    "team": "WCE",
-    "games": 21.0
    },
    {
     "cd_id": "CD_I1023482",
@@ -74080,20 +74040,20 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I1007099",
-    "rank": 277,
-    "rating": 260.1,
-    "name": "Harry Sharp",
+    "cd_id": "CD_I1008893",
+    "rank": 281,
+    "rating": 261.2,
+    "name": "Harrison Petty",
     "team": "MELB",
-    "games": 24.0
+    "games": 20.0
    },
    {
-    "cd_id": "CD_I298281",
-    "rank": 278,
-    "rating": 260.1,
-    "name": "Jake Lever",
+    "cd_id": "CD_I1027821",
+    "rank": 283,
+    "rating": 261.0,
+    "name": "Caleb Windsor",
     "team": "MELB",
-    "games": 22.0
+    "games": 21.0
    },
    {
     "cd_id": "CD_I290627",
@@ -74104,20 +74064,28 @@
     "games": 17.0
    },
    {
-    "cd_id": "CD_I298288",
-    "rank": 280,
-    "rating": 258.9,
-    "name": "Darcy Moore",
-    "team": "COLL",
-    "games": 4.0
-   },
-   {
     "cd_id": "CD_I1009386",
     "rank": 282,
     "rating": 258.7,
     "name": "Jaxon Prior",
     "team": "ESS",
     "games": 22.0
+   },
+   {
+    "cd_id": "CD_I1029416",
+    "rank": 286,
+    "rating": 258.6,
+    "name": "Ryan Maric",
+    "team": "WCE",
+    "games": 12.0
+   },
+   {
+    "cd_id": "CD_I997230",
+    "rank": 283,
+    "rating": 258.6,
+    "name": "Tyson Stengle",
+    "team": "GEEL",
+    "games": 0.0
    },
    {
     "cd_id": "CD_I1015781",
@@ -74136,12 +74104,20 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I996554",
-    "rank": 284,
-    "rating": 256.6,
-    "name": "Jake Waterman",
-    "team": "WCE",
-    "games": 23.0
+    "cd_id": "CD_I1007102",
+    "rank": 285,
+    "rating": 256.9,
+    "name": "Mark O'Connor",
+    "team": "GEEL",
+    "games": 22.0
+   },
+   {
+    "cd_id": "CD_I1012860",
+    "rank": 286,
+    "rating": 256.1,
+    "name": "Oliver Henry",
+    "team": "GEEL",
+    "games": 24.0
    },
    {
     "cd_id": "CD_I1017086",
@@ -74152,28 +74128,20 @@
     "games": 18.0
    },
    {
-    "cd_id": "CD_I296294",
-    "rank": 290,
-    "rating": 255.2,
-    "name": "Blake Acres",
-    "team": "CARL",
-    "games": 12.0
-   },
-   {
-    "cd_id": "CD_I1019038",
-    "rank": 285,
-    "rating": 253.7,
-    "name": "Aaron Cadman",
-    "team": "GWS",
-    "games": 18.0
-   },
-   {
     "cd_id": "CD_I1003203",
     "rank": 292,
     "rating": 253.3,
     "name": "Hayden McLean",
     "team": "SYD",
     "games": 12.0
+   },
+   {
+    "cd_id": "CD_I1014038",
+    "rank": 290,
+    "rating": 252.9,
+    "name": "Callum Brown",
+    "team": "GWS",
+    "games": 18.0
    },
    {
     "cd_id": "CD_I1006103",
@@ -74201,7 +74169,7 @@
    },
    {
     "cd_id": "CD_I1023495",
-    "rank": 295,
+    "rank": 294,
     "rating": 250.9,
     "name": "Oliver Hollands",
     "team": "CARL",
@@ -74216,12 +74184,12 @@
     "games": 26.0
    },
    {
-    "cd_id": "CD_I1000937",
-    "rank": 294,
-    "rating": 250.3,
-    "name": "Jack Henry",
-    "team": "GEEL",
-    "games": 21.0
+    "cd_id": "CD_I298281",
+    "rank": 293,
+    "rating": 250.4,
+    "name": "Jake Lever",
+    "team": "MELB",
+    "games": 22.0
    },
    {
     "cd_id": "CD_I1015873",
@@ -74256,28 +74224,12 @@
     "games": 26.0
    },
    {
-    "cd_id": "CD_I1023167",
-    "rank": 296,
-    "rating": 249.1,
-    "name": "Brady Hough",
-    "team": "WCE",
-    "games": 23.0
-   },
-   {
     "cd_id": "CD_I1023784",
     "rank": 299,
     "rating": 248.8,
     "name": "Anthony Caminiti",
     "team": "STK",
     "games": 18.0
-   },
-   {
-    "cd_id": "CD_I296359",
-    "rank": 300,
-    "rating": 248.8,
-    "name": "Christian Salem",
-    "team": "MELB",
-    "games": 9.0
    },
    {
     "cd_id": "CD_I1011583",
@@ -74304,11 +74256,11 @@
     "games": 21.0
    },
    {
-    "cd_id": "CD_I1006114",
+    "cd_id": "CD_I1022915",
     "rank": 301,
-    "rating": 246.0,
-    "name": "Bailey J. Williams",
-    "team": "WCE",
+    "rating": 245.8,
+    "name": "Edward Allan",
+    "team": "COLL",
     "games": 19.0
    },
    {
@@ -74318,6 +74270,14 @@
     "name": "Cameron Zurhaar",
     "team": "NMFC",
     "games": 23.0
+   },
+   {
+    "cd_id": "CD_I1024982",
+    "rank": 300,
+    "rating": 244.8,
+    "name": "Oisin Mullin",
+    "team": "GEEL",
+    "games": 25.0
    },
    {
     "cd_id": "CD_I1018335",
@@ -74344,20 +74304,12 @@
     "games": 8.0
    },
    {
-    "cd_id": "CD_I1008123",
-    "rank": 306,
-    "rating": 239.9,
-    "name": "Jake Riccardi",
-    "team": "GWS",
-    "games": 9.0
-   },
-   {
-    "cd_id": "CD_I1029416",
-    "rank": 312,
-    "rating": 239.9,
-    "name": "Ryan Maric",
-    "team": "WCE",
-    "games": 12.0
+    "cd_id": "CD_I1007099",
+    "rank": 308,
+    "rating": 241.1,
+    "name": "Harry Sharp",
+    "team": "MELB",
+    "games": 24.0
    },
    {
     "cd_id": "CD_I1036123",
@@ -74376,20 +74328,12 @@
     "games": 18.0
    },
    {
-    "cd_id": "CD_I1023640",
-    "rank": 309,
-    "rating": 238.6,
-    "name": "Koltyn Tholstrup",
-    "team": "MELB",
-    "games": 24.0
-   },
-   {
-    "cd_id": "CD_I1013257",
-    "rank": 310,
-    "rating": 238.4,
-    "name": "Sam Clohesy",
-    "team": "GCFC",
-    "games": 12.0
+    "cd_id": "CD_I1023167",
+    "rank": 314,
+    "rating": 238.0,
+    "name": "Brady Hough",
+    "team": "WCE",
+    "games": 23.0
    },
    {
     "cd_id": "CD_I1010174",
@@ -74408,12 +74352,28 @@
     "games": 23.0
    },
    {
+    "cd_id": "CD_I296294",
+    "rank": 313,
+    "rating": 237.0,
+    "name": "Blake Acres",
+    "team": "CARL",
+    "games": 12.0
+   },
+   {
     "cd_id": "CD_I1012817",
     "rank": 314,
     "rating": 235.7,
     "name": "Zach Reid",
     "team": "ESS",
     "games": 23.0
+   },
+   {
+    "cd_id": "CD_I1002228",
+    "rank": 316,
+    "rating": 235.6,
+    "name": "Lachie Fogarty",
+    "team": "CARL",
+    "games": 2.0
    },
    {
     "cd_id": "CD_I998180",
@@ -74432,6 +74392,14 @@
     "games": 11.0
    },
    {
+    "cd_id": "CD_I1021353",
+    "rank": 320,
+    "rating": 234.0,
+    "name": "Lachlan Cowan",
+    "team": "CARL",
+    "games": 24.0
+   },
+   {
     "cd_id": "CD_I1031988",
     "rank": 319,
     "rating": 233.0,
@@ -74448,6 +74416,14 @@
     "games": 23.0
    },
    {
+    "cd_id": "CD_I1032629",
+    "rank": 325,
+    "rating": 232.6,
+    "name": "Joe Fonti",
+    "team": "GWS",
+    "games": 22.0
+   },
+   {
     "cd_id": "CD_I290307",
     "rank": 322,
     "rating": 231.6,
@@ -74456,20 +74432,28 @@
     "games": 17.0
    },
    {
-    "cd_id": "CD_I1026960",
-    "rank": 328,
-    "rating": 231.4,
-    "name": "Will Graham",
-    "team": "GCFC",
-    "games": 12.0
-   },
-   {
     "cd_id": "CD_I998215",
     "rank": 323,
     "rating": 230.6,
     "name": "Will Setterfield",
     "team": "ESS",
     "games": 11.0
+   },
+   {
+    "cd_id": "CD_I1008123",
+    "rank": 330,
+    "rating": 230.3,
+    "name": "Jake Riccardi",
+    "team": "GWS",
+    "games": 9.0
+   },
+   {
+    "cd_id": "CD_I1023640",
+    "rank": 323,
+    "rating": 229.6,
+    "name": "Koltyn Tholstrup",
+    "team": "MELB",
+    "games": 24.0
    },
    {
     "cd_id": "CD_I997933",
@@ -74488,12 +74472,36 @@
     "games": 22.0
    },
    {
-    "cd_id": "CD_I993902",
-    "rank": 324,
+    "cd_id": "CD_I1017255",
+    "rank": 332,
+    "rating": 229.0,
+    "name": "Francis Evans",
+    "team": "CARL",
+    "games": 23.0
+   },
+   {
+    "cd_id": "CD_I280824",
+    "rank": 327,
     "rating": 228.8,
-    "name": "Matt Flynn",
-    "team": "WCE",
-    "games": 4.0
+    "name": "Jake Melksham",
+    "team": "MELB",
+    "games": 7.0
+   },
+   {
+    "cd_id": "CD_I280317",
+    "rank": 325,
+    "rating": 228.7,
+    "name": "Rhys Stanley",
+    "team": "GEEL",
+    "games": 1.0
+   },
+   {
+    "cd_id": "CD_I291533",
+    "rank": 328,
+    "rating": 228.6,
+    "name": "Tom McDonald",
+    "team": "MELB",
+    "games": 11.0
    },
    {
     "cd_id": "CD_I1020339",
@@ -74504,30 +74512,6 @@
     "games": 20.0
    },
    {
-    "cd_id": "CD_I1021353",
-    "rank": 331,
-    "rating": 226.5,
-    "name": "Lachlan Cowan",
-    "team": "CARL",
-    "games": 24.0
-   },
-   {
-    "cd_id": "CD_I998390",
-    "rank": 328,
-    "rating": 224.1,
-    "name": "Changkuoth Jiath",
-    "team": "MELB",
-    "games": 16.0
-   },
-   {
-    "cd_id": "CD_I1012862",
-    "rank": 333,
-    "rating": 223.8,
-    "name": "Elijah Hollands",
-    "team": "CARL",
-    "games": 6.0
-   },
-   {
     "cd_id": "CD_I1002347",
     "rank": 327,
     "rating": 223.1,
@@ -74536,12 +74520,20 @@
     "games": 0.0
    },
    {
-    "cd_id": "CD_I1011437",
-    "rank": 334,
-    "rating": 220.6,
-    "name": "Harry Edwards",
-    "team": "WCE",
-    "games": 2.0
+    "cd_id": "CD_I298280",
+    "rank": 336,
+    "rating": 222.9,
+    "name": "Jayden Laverde",
+    "team": "GWS",
+    "games": 19.0
+   },
+   {
+    "cd_id": "CD_I294596",
+    "rank": 330,
+    "rating": 222.1,
+    "name": "Tim Membrey",
+    "team": "COLL",
+    "games": 20.0
    },
    {
     "cd_id": "CD_I296355",
@@ -74552,14 +74544,6 @@
     "games": 18.0
    },
    {
-    "cd_id": "CD_I291533",
-    "rank": 332,
-    "rating": 219.6,
-    "name": "Tom McDonald",
-    "team": "MELB",
-    "games": 11.0
-   },
-   {
     "cd_id": "CD_I298630",
     "rank": 333,
     "rating": 219.6,
@@ -74568,20 +74552,28 @@
     "games": 19.0
    },
    {
+    "cd_id": "CD_I296347",
+    "rank": 341,
+    "rating": 217.6,
+    "name": "Josh Kelly",
+    "team": "GWS",
+    "games": 0.0
+   },
+   {
+    "cd_id": "CD_I1018433",
+    "rank": 334,
+    "rating": 216.6,
+    "name": "Tylar Young",
+    "team": "WCE",
+    "games": 23.0
+   },
+   {
     "cd_id": "CD_I1011985",
     "rank": 337,
     "rating": 216.5,
     "name": "Hugo Ralphsmith",
     "team": "RICH",
     "games": 13.0
-   },
-   {
-    "cd_id": "CD_I294596",
-    "rank": 338,
-    "rating": 216.0,
-    "name": "Tim Membrey",
-    "team": "COLL",
-    "games": 20.0
    },
    {
     "cd_id": "CD_I291849",
@@ -74600,12 +74592,12 @@
     "games": 19.0
    },
    {
-    "cd_id": "CD_I297907",
-    "rank": 342,
-    "rating": 214.2,
-    "name": "Nic Newman",
-    "team": "CARL",
-    "games": 16.0
+    "cd_id": "CD_I996554",
+    "rank": 338,
+    "rating": 214.3,
+    "name": "Jake Waterman",
+    "team": "WCE",
+    "games": 23.0
    },
    {
     "cd_id": "CD_I1028491",
@@ -74614,6 +74606,14 @@
     "name": "Sam Lalor",
     "team": "RICH",
     "games": 12.0
+   },
+   {
+    "cd_id": "CD_I291902",
+    "rank": 340,
+    "rating": 213.8,
+    "name": "Jack Viney",
+    "team": "MELB",
+    "games": 1.0
    },
    {
     "cd_id": "CD_I1005053",
@@ -74632,12 +74632,12 @@
     "games": 7.0
    },
    {
-    "cd_id": "CD_I280824",
-    "rank": 341,
-    "rating": 213.1,
-    "name": "Jake Melksham",
-    "team": "MELB",
-    "games": 7.0
+    "cd_id": "CD_I297907",
+    "rank": 349,
+    "rating": 212.9,
+    "name": "Nic Newman",
+    "team": "CARL",
+    "games": 16.0
    },
    {
     "cd_id": "CD_I298437",
@@ -74648,20 +74648,12 @@
     "games": 9.0
    },
    {
-    "cd_id": "CD_I298280",
-    "rank": 336,
-    "rating": 211.0,
-    "name": "Jayden Laverde",
-    "team": "GWS",
-    "games": 19.0
-   },
-   {
-    "cd_id": "CD_I1002401",
-    "rank": 343,
-    "rating": 210.1,
-    "name": "Brandon Starcevich",
-    "team": "WCE",
-    "games": 11.0
+    "cd_id": "CD_I1017122",
+    "rank": 348,
+    "rating": 208.8,
+    "name": "Blake Howes",
+    "team": "MELB",
+    "games": 20.0
    },
    {
     "cd_id": "CD_I993799",
@@ -74678,14 +74670,6 @@
     "name": "Levi Ashcroft",
     "team": "BL",
     "games": 27.0
-   },
-   {
-    "cd_id": "CD_I291969",
-    "rank": 340,
-    "rating": 206.9,
-    "name": "Stephen Coniglio",
-    "team": "GWS",
-    "games": 21.0
    },
    {
     "cd_id": "CD_I1028196",
@@ -74713,7 +74697,7 @@
    },
    {
     "cd_id": "CD_I1017700",
-    "rank": 355,
+    "rank": 359,
     "rating": 202.2,
     "name": "Jesse Motlop",
     "team": "CARL",
@@ -74728,6 +74712,14 @@
     "games": 26.0
    },
    {
+    "cd_id": "CD_I998390",
+    "rank": 363,
+    "rating": 201.6,
+    "name": "Changkuoth Jiath",
+    "team": "MELB",
+    "games": 16.0
+   },
+   {
     "cd_id": "CD_I1028529",
     "rank": 359,
     "rating": 201.0,
@@ -74736,8 +74728,16 @@
     "games": 23.0
    },
    {
+    "cd_id": "CD_I1031913",
+    "rank": 363,
+    "rating": 201.0,
+    "name": "Jobe Shanahan",
+    "team": "WCE",
+    "games": 23.0
+   },
+   {
     "cd_id": "CD_I1032108",
-    "rank": 357,
+    "rank": 361,
     "rating": 200.9,
     "name": "Cooper Lord",
     "team": "CARL",
@@ -74768,12 +74768,20 @@
     "games": 8.0
    },
    {
-    "cd_id": "CD_I1017255",
-    "rank": 359,
+    "cd_id": "CD_I993902",
+    "rank": 364,
+    "rating": 199.6,
+    "name": "Matt Flynn",
+    "team": "WCE",
+    "games": 4.0
+   },
+   {
+    "cd_id": "CD_I290826",
+    "rank": 365,
     "rating": 198.9,
-    "name": "Francis Evans",
-    "team": "CARL",
-    "games": 23.0
+    "name": "Jamie Cripps",
+    "team": "WCE",
+    "games": 5.0
    },
    {
     "cd_id": "CD_I1006232",
@@ -74784,12 +74792,12 @@
     "games": 20.0
    },
    {
-    "cd_id": "CD_I997230",
-    "rank": 362,
-    "rating": 197.3,
-    "name": "Tyson Stengle",
-    "team": "GEEL",
-    "games": 0.0
+    "cd_id": "CD_I1013257",
+    "rank": 367,
+    "rating": 195.5,
+    "name": "Sam Clohesy",
+    "team": "GCFC",
+    "games": 12.0
    },
    {
     "cd_id": "CD_I1009380",
@@ -74798,6 +74806,14 @@
     "name": "Jeremy Sharp",
     "team": "FRE",
     "games": 2.0
+   },
+   {
+    "cd_id": "CD_I291969",
+    "rank": 369,
+    "rating": 194.4,
+    "name": "Stephen Coniglio",
+    "team": "GWS",
+    "games": 21.0
    },
    {
     "cd_id": "CD_I1012013",
@@ -74816,28 +74832,20 @@
     "games": 14.0
    },
    {
-    "cd_id": "CD_I1017122",
-    "rank": 368,
-    "rating": 191.9,
-    "name": "Blake Howes",
-    "team": "MELB",
-    "games": 20.0
-   },
-   {
     "cd_id": "CD_I1027964",
-    "rank": 367,
-    "rating": 191.7,
+    "rank": 371,
+    "rating": 192.0,
     "name": "Matthew Carroll",
     "team": "CARL",
     "games": 10.0
    },
    {
-    "cd_id": "CD_I296190",
-    "rank": 369,
-    "rating": 190.7,
-    "name": "Jack Martin",
-    "team": "GEEL",
-    "games": 18.0
+    "cd_id": "CD_I292128",
+    "rank": 373,
+    "rating": 191.5,
+    "name": "Elliot Yeo",
+    "team": "WCE",
+    "games": 21.0
    },
    {
     "cd_id": "CD_I1021031",
@@ -74856,22 +74864,6 @@
     "games": 15.0
    },
    {
-    "cd_id": "CD_I1012805",
-    "rank": 374,
-    "rating": 187.0,
-    "name": "Tanner Bruhn",
-    "team": "GEEL",
-    "games": 23.0
-   },
-   {
-    "cd_id": "CD_I1013973",
-    "rank": 364,
-    "rating": 187.0,
-    "name": "Matthew Owies",
-    "team": "WCE",
-    "games": 3.0
-   },
-   {
     "cd_id": "CD_I1005000",
     "rank": 371,
     "rating": 185.5,
@@ -74888,28 +74880,20 @@
     "games": 7.0
    },
    {
-    "cd_id": "CD_I1013511",
-    "rank": 367,
-    "rating": 185.1,
-    "name": "Tyler Brockman",
-    "team": "WCE",
-    "games": 0.0
+    "cd_id": "CD_I296190",
+    "rank": 381,
+    "rating": 185.3,
+    "name": "Jack Martin",
+    "team": "GEEL",
+    "games": 18.0
    },
    {
-    "cd_id": "CD_I291902",
+    "cd_id": "CD_I1015777",
     "rank": 377,
-    "rating": 184.8,
-    "name": "Jack Viney",
-    "team": "MELB",
-    "games": 1.0
-   },
-   {
-    "cd_id": "CD_I1020371",
-    "rank": 370,
-    "rating": 183.8,
-    "name": "Jack Williams",
-    "team": "WCE",
-    "games": 12.0
+    "rating": 183.5,
+    "name": "Ryan Angwin",
+    "team": "GWS",
+    "games": 20.0
    },
    {
     "cd_id": "CD_I1017754",
@@ -74920,12 +74904,12 @@
     "games": 26.0
    },
    {
-    "cd_id": "CD_I297456",
-    "rank": 379,
-    "rating": 183.1,
-    "name": "Nick Holman",
-    "team": "GCFC",
-    "games": 7.0
+    "cd_id": "CD_I1012805",
+    "rank": 385,
+    "rating": 182.1,
+    "name": "Tanner Bruhn",
+    "team": "GEEL",
+    "games": 23.0
    },
    {
     "cd_id": "CD_I1001028",
@@ -74942,6 +74926,22 @@
     "name": "Bruce Reville",
     "team": "BL",
     "games": 18.0
+   },
+   {
+    "cd_id": "CD_I1012862",
+    "rank": 383,
+    "rating": 180.2,
+    "name": "Elijah Hollands",
+    "team": "CARL",
+    "games": 6.0
+   },
+   {
+    "cd_id": "CD_I1026960",
+    "rank": 386,
+    "rating": 179.9,
+    "name": "Will Graham",
+    "team": "GCFC",
+    "games": 12.0
    },
    {
     "cd_id": "CD_I1023056",
@@ -74968,20 +74968,20 @@
     "games": 6.0
    },
    {
-    "cd_id": "CD_I280317",
-    "rank": 387,
-    "rating": 175.5,
-    "name": "Rhys Stanley",
-    "team": "GEEL",
-    "games": 1.0
-   },
-   {
     "cd_id": "CD_I1015370",
     "rank": 388,
     "rating": 175.4,
     "name": "Max Michalanney",
     "team": "ADEL",
     "games": 25.0
+   },
+   {
+    "cd_id": "CD_I1029301",
+    "rank": 394,
+    "rating": 174.7,
+    "name": "Leonardo Lombard",
+    "team": "GCFC",
+    "games": 23.0
    },
    {
     "cd_id": "CD_I1017114",
@@ -75000,12 +75000,12 @@
     "games": 14.0
    },
    {
-    "cd_id": "CD_I1013268",
-    "rank": 391,
-    "rating": 173.6,
-    "name": "Alex Davies",
-    "team": "GCFC",
-    "games": 6.0
+    "cd_id": "CD_I1033115",
+    "rank": 397,
+    "rating": 173.0,
+    "name": "Willem Duursma",
+    "team": "WCE",
+    "games": 22.0
    },
    {
     "cd_id": "CD_I1021015",
@@ -75032,6 +75032,22 @@
     "games": 14.0
    },
    {
+    "cd_id": "CD_I1002401",
+    "rank": 401,
+    "rating": 166.0,
+    "name": "Brandon Starcevich",
+    "team": "WCE",
+    "games": 11.0
+   },
+   {
+    "cd_id": "CD_I1020670",
+    "rank": 402,
+    "rating": 165.9,
+    "name": "Elijah Hewett",
+    "team": "WCE",
+    "games": 6.0
+   },
+   {
     "cd_id": "CD_I1004385",
     "rank": 384,
     "rating": 165.3,
@@ -75048,12 +75064,12 @@
     "games": 23.0
    },
    {
-    "cd_id": "CD_I1027501",
+    "cd_id": "CD_I1023736",
     "rank": 401,
     "rating": 165.3,
-    "name": "Roan Steele",
-    "team": "COLL",
-    "games": 19.0
+    "name": "Jed Walter",
+    "team": "GCFC",
+    "games": 18.0
    },
    {
     "cd_id": "CD_I1020250",
@@ -75088,12 +75104,12 @@
     "games": 11.0
    },
    {
-    "cd_id": "CD_I1009241",
-    "rank": 398,
-    "rating": 161.6,
-    "name": "Brodie Kemp",
-    "team": "CARL",
-    "games": 25.0
+    "cd_id": "CD_I1011437",
+    "rank": 404,
+    "rating": 161.5,
+    "name": "Harry Edwards",
+    "team": "WCE",
+    "games": 2.0
    },
    {
     "cd_id": "CD_I291776",
@@ -75112,12 +75128,36 @@
     "games": 20.0
    },
    {
+    "cd_id": "CD_I1032624",
+    "rank": 406,
+    "rating": 159.9,
+    "name": "Hamish Davis",
+    "team": "WCE",
+    "games": 21.0
+   },
+   {
     "cd_id": "CD_I997316",
-    "rank": 403,
+    "rank": 406,
     "rating": 159.4,
     "name": "Lewis Young",
     "team": "CARL",
     "games": 14.0
+   },
+   {
+    "cd_id": "CD_I1013268",
+    "rank": 409,
+    "rating": 159.0,
+    "name": "Alex Davies",
+    "team": "GCFC",
+    "games": 6.0
+   },
+   {
+    "cd_id": "CD_I1009241",
+    "rank": 408,
+    "rating": 158.7,
+    "name": "Brodie Kemp",
+    "team": "CARL",
+    "games": 25.0
    },
    {
     "cd_id": "CD_I291978",
@@ -75144,20 +75184,44 @@
     "games": 17.0
    },
    {
+    "cd_id": "CD_I1021013",
+    "rank": 413,
+    "rating": 155.1,
+    "name": "Ned Moyle",
+    "team": "GCFC",
+    "games": 16.0
+   },
+   {
+    "cd_id": "CD_I1013315",
+    "rank": 412,
+    "rating": 154.1,
+    "name": "Sandy Brock",
+    "team": "WCE",
+    "games": 6.0
+   },
+   {
+    "cd_id": "CD_I1027501",
+    "rank": 413,
+    "rating": 153.9,
+    "name": "Roan Steele",
+    "team": "COLL",
+    "games": 19.0
+   },
+   {
+    "cd_id": "CD_I297456",
+    "rank": 417,
+    "rating": 151.5,
+    "name": "Nick Holman",
+    "team": "GCFC",
+    "games": 7.0
+   },
+   {
     "cd_id": "CD_I1023530",
     "rank": 419,
     "rating": 150.8,
     "name": "Jacob Konstanty",
     "team": "NMFC",
     "games": 10.0
-   },
-   {
-    "cd_id": "CD_I1024304",
-    "rank": 420,
-    "rating": 150.8,
-    "name": "Mitchell Edwards",
-    "team": "GEEL",
-    "games": 20.0
    },
    {
     "cd_id": "CD_I1020668",
@@ -75168,12 +75232,12 @@
     "games": 0.0
    },
    {
-    "cd_id": "CD_I1020670",
-    "rank": 405,
-    "rating": 150.2,
-    "name": "Elijah Hewett",
+    "cd_id": "CD_I1005972",
+    "rank": 418,
+    "rating": 148.6,
+    "name": "Milan Murdock",
     "team": "WCE",
-    "games": 6.0
+    "games": 20.0
    },
    {
     "cd_id": "CD_I1011954",
@@ -75184,28 +75248,28 @@
     "games": 13.0
    },
    {
-    "cd_id": "CD_I1008691",
-    "rank": 402,
-    "rating": 146.3,
-    "name": "Leek Aleer",
-    "team": "GWS",
-    "games": 7.0
-   },
-   {
-    "cd_id": "CD_I1032629",
-    "rank": 404,
-    "rating": 145.3,
-    "name": "Joe Fonti",
-    "team": "GWS",
-    "games": 22.0
-   },
-   {
     "cd_id": "CD_I1008747",
     "rank": 425,
     "rating": 144.7,
     "name": "Mykelti Lefau",
     "team": "RICH",
     "games": 21.0
+   },
+   {
+    "cd_id": "CD_I1020371",
+    "rank": 425,
+    "rating": 144.1,
+    "name": "Jack Williams",
+    "team": "WCE",
+    "games": 12.0
+   },
+   {
+    "cd_id": "CD_I1013511",
+    "rank": 429,
+    "rating": 141.5,
+    "name": "Tyler Brockman",
+    "team": "WCE",
+    "games": 0.0
    },
    {
     "cd_id": "CD_I1002143",
@@ -75240,11 +75304,11 @@
     "games": 5.0
    },
    {
-    "cd_id": "CD_I1021013",
-    "rank": 423,
-    "rating": 140.0,
-    "name": "Ned Moyle",
-    "team": "GCFC",
+    "cd_id": "CD_I1032042",
+    "rank": 424,
+    "rating": 139.9,
+    "name": "Phoenix Gothard",
+    "team": "GWS",
     "games": 16.0
    },
    {
@@ -75265,27 +75329,19 @@
    },
    {
     "cd_id": "CD_I281085",
-    "rank": 438,
+    "rank": 430,
     "rating": 138.0,
     "name": "Steven May",
     "team": "MELB",
     "games": 0.0
    },
    {
-    "cd_id": "CD_I1028531",
-    "rank": 439,
-    "rating": 137.5,
-    "name": "Xavier Lindsay",
-    "team": "MELB",
+    "cd_id": "CD_I1008691",
+    "rank": 427,
+    "rating": 137.0,
+    "name": "Leek Aleer",
+    "team": "GWS",
     "games": 7.0
-   },
-   {
-    "cd_id": "CD_I1036124",
-    "rank": 422,
-    "rating": 137.3,
-    "name": "Tom McCarthy",
-    "team": "WCE",
-    "games": 22.0
    },
    {
     "cd_id": "CD_I1011558",
@@ -75328,6 +75384,30 @@
     "games": 10.0
    },
    {
+    "cd_id": "CD_I1028515",
+    "rank": 435,
+    "rating": 132.0,
+    "name": "Jagga Smith",
+    "team": "CARL",
+    "games": 25.0
+   },
+   {
+    "cd_id": "CD_I1028449",
+    "rank": 440,
+    "rating": 131.7,
+    "name": "Bo Allan",
+    "team": "WCE",
+    "games": 19.0
+   },
+   {
+    "cd_id": "CD_I1028531",
+    "rank": 442,
+    "rating": 131.5,
+    "name": "Xavier Lindsay",
+    "team": "MELB",
+    "games": 7.0
+   },
+   {
     "cd_id": "CD_I1008312",
     "rank": 428,
     "rating": 131.4,
@@ -75350,6 +75430,14 @@
     "name": "Christian Moraes",
     "team": "PORT",
     "games": 12.0
+   },
+   {
+    "cd_id": "CD_I1027971",
+    "rank": 439,
+    "rating": 129.7,
+    "name": "Toby McMullin",
+    "team": "GWS",
+    "games": 8.0
    },
    {
     "cd_id": "CD_I1043261",
@@ -75376,22 +75464,6 @@
     "games": 6.0
    },
    {
-    "cd_id": "CD_I1023736",
-    "rank": 441,
-    "rating": 126.8,
-    "name": "Jed Walter",
-    "team": "GCFC",
-    "games": 18.0
-   },
-   {
-    "cd_id": "CD_I1018433",
-    "rank": 432,
-    "rating": 126.7,
-    "name": "Tylar Young",
-    "team": "WCE",
-    "games": 23.0
-   },
-   {
     "cd_id": "CD_I1032106",
     "rank": 454,
     "rating": 126.0,
@@ -75406,14 +75478,6 @@
     "name": "Brandon Walker",
     "team": "FRE",
     "games": 2.0
-   },
-   {
-    "cd_id": "CD_I1023142",
-    "rank": 433,
-    "rating": 125.6,
-    "name": "Tyrell Dewar",
-    "team": "WCE",
-    "games": 0.0
    },
    {
     "cd_id": "CD_I1008855",
@@ -75432,14 +75496,6 @@
     "games": 19.0
    },
    {
-    "cd_id": "CD_I1013315",
-    "rank": 434,
-    "rating": 124.6,
-    "name": "Sandy Brock",
-    "team": "WCE",
-    "games": 6.0
-   },
-   {
     "cd_id": "CD_I1013220",
     "rank": 440,
     "rating": 124.5,
@@ -75448,20 +75504,12 @@
     "games": 17.0
    },
    {
-    "cd_id": "CD_I1023537",
-    "rank": 457,
-    "rating": 124.4,
-    "name": "Jhye Clark",
-    "team": "GEEL",
-    "games": 9.0
-   },
-   {
-    "cd_id": "CD_I1029301",
-    "rank": 448,
-    "rating": 123.9,
-    "name": "Leonardo Lombard",
-    "team": "GCFC",
-    "games": 23.0
+    "cd_id": "CD_I1006148",
+    "rank": 449,
+    "rating": 124.1,
+    "name": "Bobby Hill",
+    "team": "COLL",
+    "games": 0.0
    },
    {
     "cd_id": "CD_I1015883",
@@ -75472,20 +75520,36 @@
     "games": 17.0
    },
    {
-    "cd_id": "CD_I1006148",
-    "rank": 456,
-    "rating": 123.4,
-    "name": "Bobby Hill",
-    "team": "COLL",
-    "games": 0.0
-   },
-   {
     "cd_id": "CD_I1034305",
     "rank": 465,
     "rating": 121.9,
     "name": "Jacob Farrow",
     "team": "ESS",
     "games": 21.0
+   },
+   {
+    "cd_id": "CD_I1036098",
+    "rank": 454,
+    "rating": 121.5,
+    "name": "Jack Hutchinson",
+    "team": "WCE",
+    "games": 6.0
+   },
+   {
+    "cd_id": "CD_I1008154",
+    "rank": 452,
+    "rating": 121.1,
+    "name": "Matthew Cottrell",
+    "team": "CARL",
+    "games": 14.0
+   },
+   {
+    "cd_id": "CD_I1027033",
+    "rank": 454,
+    "rating": 120.8,
+    "name": "Ethan Read",
+    "team": "GCFC",
+    "games": 15.0
    },
    {
     "cd_id": "CD_I1018424",
@@ -75504,44 +75568,12 @@
     "games": 7.0
    },
    {
-    "cd_id": "CD_I1027971",
-    "rank": 436,
-    "rating": 120.5,
-    "name": "Toby McMullin",
-    "team": "GWS",
-    "games": 8.0
-   },
-   {
     "cd_id": "CD_I1029265",
     "rank": 466,
     "rating": 120.5,
     "name": "Archer Day-Wicks",
     "team": "ESS",
     "games": 21.0
-   },
-   {
-    "cd_id": "CD_I1023744",
-    "rank": 463,
-    "rating": 119.7,
-    "name": "Angus Anderson",
-    "team": "COLL",
-    "games": 17.0
-   },
-   {
-    "cd_id": "CD_I1015777",
-    "rank": 437,
-    "rating": 119.5,
-    "name": "Ryan Angwin",
-    "team": "GWS",
-    "games": 20.0
-   },
-   {
-    "cd_id": "CD_I1036098",
-    "rank": 451,
-    "rating": 116.0,
-    "name": "Jack Hutchinson",
-    "team": "WCE",
-    "games": 6.0
    },
    {
     "cd_id": "CD_I1027168",
@@ -75566,14 +75598,6 @@
     "name": "Archer May",
     "team": "ESS",
     "games": 10.0
-   },
-   {
-    "cd_id": "CD_I1008882",
-    "rank": 462,
-    "rating": 112.8,
-    "name": "Charlie Ballard",
-    "team": "GCFC",
-    "games": 11.0
    },
    {
     "cd_id": "CD_I1036579",
@@ -75608,16 +75632,16 @@
     "games": 10.0
    },
    {
-    "cd_id": "CD_I1024188",
-    "rank": 456,
-    "rating": 111.1,
-    "name": "Clay Hall",
-    "team": "WCE",
-    "games": 0.0
+    "cd_id": "CD_I1023744",
+    "rank": 472,
+    "rating": 111.9,
+    "name": "Angus Anderson",
+    "team": "COLL",
+    "games": 17.0
    },
    {
     "cd_id": "CD_I998480",
-    "rank": 479,
+    "rank": 474,
     "rating": 110.9,
     "name": "Lachlan Sullivan",
     "team": "COLL",
@@ -75648,14 +75672,6 @@
     "games": 0.0
    },
    {
-    "cd_id": "CD_I1020881",
-    "rank": 482,
-    "rating": 109.8,
-    "name": "Oliver Wiltshire",
-    "team": "GEEL",
-    "games": 16.0
-   },
-   {
     "cd_id": "CD_I1027887",
     "rank": 483,
     "rating": 109.3,
@@ -75670,6 +75686,14 @@
     "name": "Jordan Ridley",
     "team": "ESS",
     "games": 7.0
+   },
+   {
+    "cd_id": "CD_I296291",
+    "rank": 472,
+    "rating": 108.0,
+    "name": "Jake Kolodjashnij",
+    "team": "GEEL",
+    "games": 11.0
    },
    {
     "cd_id": "CD_I1019916",
@@ -75688,12 +75712,12 @@
     "games": 10.0
    },
    {
-    "cd_id": "CD_I1008154",
-    "rank": 464,
-    "rating": 107.5,
-    "name": "Matthew Cottrell",
-    "team": "CARL",
-    "games": 14.0
+    "cd_id": "CD_I1024304",
+    "rank": 475,
+    "rating": 107.6,
+    "name": "Mitchell Edwards",
+    "team": "GEEL",
+    "games": 20.0
    },
    {
     "cd_id": "CD_I1004034",
@@ -75702,14 +75726,6 @@
     "name": "Brandon Zerk-Thatcher",
     "team": "PORT",
     "games": 4.0
-   },
-   {
-    "cd_id": "CD_I1027033",
-    "rank": 470,
-    "rating": 106.8,
-    "name": "Ethan Read",
-    "team": "GCFC",
-    "games": 15.0
    },
    {
     "cd_id": "CD_I1004995",
@@ -75728,8 +75744,24 @@
     "games": 11.0
    },
    {
+    "cd_id": "CD_I1017718",
+    "rank": 484,
+    "rating": 106.0,
+    "name": "Rhett Bazzo",
+    "team": "WCE",
+    "games": 14.0
+   },
+   {
+    "cd_id": "CD_I1024188",
+    "rank": 488,
+    "rating": 104.2,
+    "name": "Clay Hall",
+    "team": "WCE",
+    "games": 0.0
+   },
+   {
     "cd_id": "CD_I1020802",
-    "rank": 491,
+    "rank": 486,
     "rating": 103.8,
     "name": "Jai Culley",
     "team": "MELB",
@@ -75744,14 +75776,6 @@
     "games": 15.0
    },
    {
-    "cd_id": "CD_I1023486",
-    "rank": 495,
-    "rating": 102.8,
-    "name": "Matthew Jefferson",
-    "team": "MELB",
-    "games": 16.0
-   },
-   {
     "cd_id": "CD_I1023785",
     "rank": 499,
     "rating": 102.5,
@@ -75760,12 +75784,12 @@
     "games": 6.0
    },
    {
-    "cd_id": "CD_I1012826",
-    "rank": 497,
-    "rating": 102.4,
-    "name": "Bailey Laurie",
-    "team": "MELB",
-    "games": 17.0
+    "cd_id": "CD_I1023142",
+    "rank": 495,
+    "rating": 101.8,
+    "name": "Tyrell Dewar",
+    "team": "WCE",
+    "games": 0.0
    },
    {
     "cd_id": "CD_I1013611",
@@ -75776,6 +75800,14 @@
     "games": 0.0
    },
    {
+    "cd_id": "CD_I1018123",
+    "rank": 496,
+    "rating": 99.2,
+    "name": "Jake Rogers",
+    "team": "GCFC",
+    "games": 9.0
+   },
+   {
     "cd_id": "CD_I1027099",
     "rank": 507,
     "rating": 98.9,
@@ -75784,12 +75816,52 @@
     "games": 14.0
    },
    {
+    "cd_id": "CD_I1033078",
+    "rank": 502,
+    "rating": 98.5,
+    "name": "Josh Lindsay",
+    "team": "WCE",
+    "games": 15.0
+   },
+   {
     "cd_id": "CD_I1027284",
     "rank": 509,
     "rating": 97.8,
     "name": "Angus Clarke",
     "team": "ESS",
     "games": 6.0
+   },
+   {
+    "cd_id": "CD_I1027921",
+    "rank": 485,
+    "rating": 96.9,
+    "name": "Max Gruzewski",
+    "team": "GWS",
+    "games": 15.0
+   },
+   {
+    "cd_id": "CD_I1015515",
+    "rank": 502,
+    "rating": 96.5,
+    "name": "Oscar Adams",
+    "team": "GCFC",
+    "games": 13.0
+   },
+   {
+    "cd_id": "CD_I1027693",
+    "rank": 512,
+    "rating": 96.1,
+    "name": "Archer Reid",
+    "team": "WCE",
+    "games": 6.0
+   },
+   {
+    "cd_id": "CD_I1029297",
+    "rank": 504,
+    "rating": 95.2,
+    "name": "Zeke Uwland",
+    "team": "GCFC",
+    "games": 17.0
    },
    {
     "cd_id": "CD_I1023273",
@@ -75816,28 +75888,12 @@
     "games": 21.0
    },
    {
-    "cd_id": "CD_I1027693",
-    "rank": 471,
-    "rating": 92.0,
-    "name": "Archer Reid",
+    "cd_id": "CD_I1013973",
+    "rank": 515,
+    "rating": 93.1,
+    "name": "Matthew Owies",
     "team": "WCE",
-    "games": 6.0
-   },
-   {
-    "cd_id": "CD_I1018123",
-    "rank": 492,
-    "rating": 91.9,
-    "name": "Jake Rogers",
-    "team": "GCFC",
-    "games": 9.0
-   },
-   {
-    "cd_id": "CD_I1015515",
-    "rank": 494,
-    "rating": 90.7,
-    "name": "Oscar Adams",
-    "team": "GCFC",
-    "games": 13.0
+    "games": 3.0
    },
    {
     "cd_id": "CD_I1029148",
@@ -75854,6 +75910,22 @@
     "name": "Saad El-Hawli",
     "team": "ESS",
     "games": 8.0
+   },
+   {
+    "cd_id": "CD_I1033084",
+    "rank": 499,
+    "rating": 88.2,
+    "name": "Harry Dean",
+    "team": "CARL",
+    "games": 22.0
+   },
+   {
+    "cd_id": "CD_I1021122",
+    "rank": 501,
+    "rating": 87.8,
+    "name": "Harry Rowston",
+    "team": "GWS",
+    "games": 12.0
    },
    {
     "cd_id": "CD_I1022677",
@@ -75880,6 +75952,14 @@
     "games": 15.0
    },
    {
+    "cd_id": "CD_I1023537",
+    "rank": 515,
+    "rating": 86.9,
+    "name": "Jhye Clark",
+    "team": "GEEL",
+    "games": 9.0
+   },
+   {
     "cd_id": "CD_I1028519",
     "rank": 525,
     "rating": 85.8,
@@ -75888,20 +75968,12 @@
     "games": 7.0
    },
    {
-    "cd_id": "CD_I1028515",
-    "rank": 493,
-    "rating": 84.4,
-    "name": "Jagga Smith",
-    "team": "CARL",
-    "games": 25.0
-   },
-   {
-    "cd_id": "CD_I1017057",
-    "rank": 494,
-    "rating": 83.7,
-    "name": "Campbell Chesser",
-    "team": "CARL",
-    "games": 3.0
+    "cd_id": "CD_I1012826",
+    "rank": 526,
+    "rating": 83.1,
+    "name": "Bailey Laurie",
+    "team": "MELB",
+    "games": 17.0
    },
    {
     "cd_id": "CD_I1000887",
@@ -75920,12 +75992,12 @@
     "games": 0.0
    },
    {
-    "cd_id": "CD_I1017073",
-    "rank": 528,
-    "rating": 82.0,
-    "name": "Joel Fitzgerald",
-    "team": "MELB",
-    "games": 11.0
+    "cd_id": "CD_I1020881",
+    "rank": 523,
+    "rating": 81.8,
+    "name": "Oliver Wiltshire",
+    "team": "GEEL",
+    "games": 16.0
    },
    {
     "cd_id": "CD_I1011803",
@@ -75952,6 +76024,22 @@
     "games": 10.0
    },
    {
+    "cd_id": "CD_I1015862",
+    "rank": 516,
+    "rating": 76.8,
+    "name": "Conor Stone",
+    "team": "GWS",
+    "games": 10.0
+   },
+   {
+    "cd_id": "CD_I1023486",
+    "rank": 536,
+    "rating": 75.1,
+    "name": "Matthew Jefferson",
+    "team": "MELB",
+    "games": 16.0
+   },
+   {
     "cd_id": "CD_I1030433",
     "rank": 504,
     "rating": 74.2,
@@ -75960,20 +76048,20 @@
     "games": 9.0
    },
    {
-    "cd_id": "CD_I296291",
-    "rank": 537,
-    "rating": 72.8,
-    "name": "Jake Kolodjashnij",
-    "team": "GEEL",
-    "games": 11.0
-   },
-   {
     "cd_id": "CD_I1017087",
     "rank": 516,
     "rating": 71.8,
     "name": "Harvey Gallagher",
     "team": "WB",
     "games": 3.0
+   },
+   {
+    "cd_id": "CD_I1028725",
+    "rank": 537,
+    "rating": 71.7,
+    "name": "Cooper Duff-Tytler",
+    "team": "WCE",
+    "games": 16.0
    },
    {
     "cd_id": "CD_I996232",
@@ -75990,14 +76078,6 @@
     "name": "Toby Murray",
     "team": "ADEL",
     "games": 13.0
-   },
-   {
-    "cd_id": "CD_I1031913",
-    "rank": 489,
-    "rating": 70.2,
-    "name": "Jobe Shanahan",
-    "team": "WCE",
-    "games": 23.0
    },
    {
     "cd_id": "CD_I295222",
@@ -76024,14 +76104,6 @@
     "games": 9.0
    },
    {
-    "cd_id": "CD_I1009301",
-    "rank": 528,
-    "rating": 68.9,
-    "name": "Jamarra Ugle-Hagan",
-    "team": "GCFC",
-    "games": 3.0
-   },
-   {
     "cd_id": "CD_I1024057",
     "rank": 492,
     "rating": 68.6,
@@ -76040,28 +76112,12 @@
     "games": 11.0
    },
    {
-    "cd_id": "CD_I1021122",
-    "rank": 490,
-    "rating": 68.2,
-    "name": "Harry Rowston",
-    "team": "GWS",
-    "games": 12.0
-   },
-   {
     "cd_id": "CD_I1015886",
-    "rank": 546,
+    "rank": 542,
     "rating": 68.0,
     "name": "Max Heath",
     "team": "MELB",
     "games": 7.0
-   },
-   {
-    "cd_id": "CD_I1032624",
-    "rank": 494,
-    "rating": 67.8,
-    "name": "Hamish Davis",
-    "team": "WCE",
-    "games": 21.0
    },
    {
     "cd_id": "CD_I1006058",
@@ -76070,6 +76126,14 @@
     "name": "Bailey Scott",
     "team": "NMFC",
     "games": 3.0
+   },
+   {
+    "cd_id": "CD_I1008882",
+    "rank": 544,
+    "rating": 67.1,
+    "name": "Charlie Ballard",
+    "team": "GCFC",
+    "games": 11.0
    },
    {
     "cd_id": "CD_I1011755",
@@ -76081,11 +76145,19 @@
    },
    {
     "cd_id": "CD_I1020097",
-    "rank": 523,
+    "rank": 534,
     "rating": 65.7,
     "name": "Ashton Moir",
     "team": "CARL",
     "games": 2.0
+   },
+   {
+    "cd_id": "CD_I1015798",
+    "rank": 550,
+    "rating": 64.2,
+    "name": "Marcus Herbert",
+    "team": "WCE",
+    "games": 10.0
    },
    {
     "cd_id": "CD_I1033488",
@@ -76128,16 +76200,24 @@
     "games": 24.0
    },
    {
-    "cd_id": "CD_I1002795",
-    "rank": 525,
-    "rating": 62.9,
-    "name": "Jordan Boyd",
+    "cd_id": "CD_I1027678",
+    "rank": 541,
+    "rating": 63.0,
+    "name": "Billy Wilson",
     "team": "CARL",
+    "games": 17.0
+   },
+   {
+    "cd_id": "CD_I1021103",
+    "rank": 551,
+    "rating": 62.4,
+    "name": "Mitch Knevitt",
+    "team": "GEEL",
     "games": 2.0
    },
    {
     "cd_id": "CD_I1022844",
-    "rank": 556,
+    "rank": 557,
     "rating": 62.1,
     "name": "Oscar Steene",
     "team": "COLL",
@@ -76145,7 +76225,7 @@
    },
    {
     "cd_id": "CD_I1020887",
-    "rank": 559,
+    "rank": 555,
     "rating": 61.9,
     "name": "Paddy Cross",
     "team": "MELB",
@@ -76177,7 +76257,7 @@
    },
    {
     "cd_id": "CD_I999715",
-    "rank": 547,
+    "rank": 558,
     "rating": 61.4,
     "name": "Jy Farrar",
     "team": "GCFC",
@@ -76192,6 +76272,14 @@
     "games": 1.0
    },
    {
+    "cd_id": "CD_I1017057",
+    "rank": 549,
+    "rating": 61.0,
+    "name": "Campbell Chesser",
+    "team": "CARL",
+    "games": 3.0
+   },
+   {
     "cd_id": "CD_I1029262",
     "rank": 562,
     "rating": 60.8,
@@ -76201,35 +76289,27 @@
    },
    {
     "cd_id": "CD_I1009392",
-    "rank": 562,
+    "rank": 563,
     "rating": 60.5,
     "name": "Jack Buller",
     "team": "COLL",
     "games": 10.0
    },
    {
-    "cd_id": "CD_I1027921",
-    "rank": 505,
-    "rating": 60.0,
-    "name": "Max Gruzewski",
-    "team": "GWS",
-    "games": 15.0
-   },
-   {
-    "cd_id": "CD_I1032922",
-    "rank": 566,
-    "rating": 58.9,
-    "name": "William Hayes",
-    "team": "COLL",
-    "games": 10.0
-   },
-   {
-    "cd_id": "CD_I1021103",
-    "rank": 571,
-    "rating": 58.2,
-    "name": "Mitch Knevitt",
+    "cd_id": "CD_I293883",
+    "rank": 561,
+    "rating": 60.2,
+    "name": "Jed Bews",
     "team": "GEEL",
-    "games": 2.0
+    "games": 0.0
+   },
+   {
+    "cd_id": "CD_I1023743",
+    "rank": 554,
+    "rating": 58.9,
+    "name": "Nicholas Madden",
+    "team": "GWS",
+    "games": 9.0
    },
    {
     "cd_id": "CD_I1015323",
@@ -76246,14 +76326,6 @@
     "name": "Wil Dawson",
     "team": "NMFC",
     "games": 10.0
-   },
-   {
-    "cd_id": "CD_I1008543",
-    "rank": 515,
-    "rating": 57.1,
-    "name": "Harry Schoenberg",
-    "team": "WCE",
-    "games": 5.0
    },
    {
     "cd_id": "CD_I1015827",
@@ -76280,28 +76352,20 @@
     "games": 8.0
    },
    {
-    "cd_id": "CD_I1037021",
-    "rank": 571,
-    "rating": 56.8,
-    "name": "Sam Swadling",
-    "team": "COLL",
-    "games": 9.0
-   },
-   {
-    "cd_id": "CD_I1029297",
-    "rank": 558,
-    "rating": 55.9,
-    "name": "Zeke Uwland",
-    "team": "GCFC",
-    "games": 17.0
-   },
-   {
     "cd_id": "CD_I1023534",
     "rank": 577,
     "rating": 55.2,
     "name": "Hugh Bond",
     "team": "ADEL",
     "games": 7.0
+   },
+   {
+    "cd_id": "CD_I1012873",
+    "rank": 571,
+    "rating": 55.1,
+    "name": "Wil Parker",
+    "team": "COLL",
+    "games": 5.0
    },
    {
     "cd_id": "CD_I293581",
@@ -76320,20 +76384,12 @@
     "games": 14.0
    },
    {
-    "cd_id": "CD_I1012873",
-    "rank": 576,
-    "rating": 54.0,
-    "name": "Wil Parker",
-    "team": "COLL",
-    "games": 5.0
-   },
-   {
-    "cd_id": "CD_I1015332",
-    "rank": 577,
-    "rating": 53.9,
-    "name": "Harvey Harrison",
-    "team": "COLL",
-    "games": 12.0
+    "cd_id": "CD_I1020877",
+    "rank": 561,
+    "rating": 53.6,
+    "name": "Flynn Young",
+    "team": "CARL",
+    "games": 3.0
    },
    {
     "cd_id": "CD_I1020930",
@@ -76358,22 +76414,6 @@
     "name": "Lance Collard",
     "team": "STK",
     "games": 0.0
-   },
-   {
-    "cd_id": "CD_I1028449",
-    "rank": 522,
-    "rating": 52.7,
-    "name": "Bo Allan",
-    "team": "WCE",
-    "games": 19.0
-   },
-   {
-    "cd_id": "CD_I1033084",
-    "rank": 550,
-    "rating": 52.3,
-    "name": "Harry Dean",
-    "team": "CARL",
-    "games": 22.0
    },
    {
     "cd_id": "CD_I1020621",
@@ -76424,12 +76464,36 @@
     "games": 7.0
    },
    {
-    "cd_id": "CD_I1023496",
-    "rank": 528,
-    "rating": 47.8,
-    "name": "Noah Long",
-    "team": "WCE",
-    "games": 0.0
+    "cd_id": "CD_I1032398",
+    "rank": 583,
+    "rating": 48.6,
+    "name": "Beau Addinsall",
+    "team": "GCFC",
+    "games": 9.0
+   },
+   {
+    "cd_id": "CD_I1017073",
+    "rank": 584,
+    "rating": 48.5,
+    "name": "Joel Fitzgerald",
+    "team": "MELB",
+    "games": 11.0
+   },
+   {
+    "cd_id": "CD_I1015332",
+    "rank": 589,
+    "rating": 48.4,
+    "name": "Harvey Harrison",
+    "team": "COLL",
+    "games": 12.0
+   },
+   {
+    "cd_id": "CD_I1032922",
+    "rank": 590,
+    "rating": 48.1,
+    "name": "William Hayes",
+    "team": "COLL",
+    "games": 10.0
    },
    {
     "cd_id": "CD_I1028538",
@@ -76440,12 +76504,12 @@
     "games": 7.0
    },
    {
-    "cd_id": "CD_I1012828",
-    "rank": 531,
-    "rating": 46.6,
-    "name": "Finlay Macrae",
+    "cd_id": "CD_I1029136",
+    "rank": 591,
+    "rating": 46.7,
+    "name": "Malakai Champion",
     "team": "WCE",
-    "games": 0.0
+    "games": 8.0
    },
    {
     "cd_id": "CD_I1034411",
@@ -76464,14 +76528,6 @@
     "games": 11.0
    },
    {
-    "cd_id": "CD_I1033115",
-    "rank": 534,
-    "rating": 45.5,
-    "name": "Willem Duursma",
-    "team": "WCE",
-    "games": 22.0
-   },
-   {
     "cd_id": "CD_I1022383",
     "rank": 596,
     "rating": 43.9,
@@ -76480,12 +76536,28 @@
     "games": 7.0
    },
    {
-    "cd_id": "CD_I1015862",
-    "rank": 530,
-    "rating": 42.6,
-    "name": "Conor Stone",
+    "cd_id": "CD_I1037021",
+    "rank": 595,
+    "rating": 43.7,
+    "name": "Sam Swadling",
+    "team": "COLL",
+    "games": 9.0
+   },
+   {
+    "cd_id": "CD_I1028561",
+    "rank": 597,
+    "rating": 42.9,
+    "name": "Tom Gross",
+    "team": "WCE",
+    "games": 4.0
+   },
+   {
+    "cd_id": "CD_I1032119",
+    "rank": 586,
+    "rating": 42.8,
+    "name": "James Leake",
     "team": "GWS",
-    "games": 10.0
+    "games": 5.0
    },
    {
     "cd_id": "CD_I1018987",
@@ -76494,14 +76566,6 @@
     "name": "Jayden Nguyen",
     "team": "ESS",
     "games": 5.0
-   },
-   {
-    "cd_id": "CD_I1027428",
-    "rank": 600,
-    "rating": 42.5,
-    "name": "Jay Polkinghorne",
-    "team": "GEEL",
-    "games": 8.0
    },
    {
     "cd_id": "CD_I1006143",
@@ -76536,6 +76600,14 @@
     "games": 0.0
    },
    {
+    "cd_id": "CD_I1009385",
+    "rank": 605,
+    "rating": 40.6,
+    "name": "Deven Robertson",
+    "team": "WCE",
+    "games": 4.0
+   },
+   {
     "cd_id": "CD_I999827",
     "rank": 605,
     "rating": 40.6,
@@ -76544,12 +76616,12 @@
     "games": 1.0
    },
    {
-    "cd_id": "CD_I293883",
-    "rank": 608,
-    "rating": 39.9,
-    "name": "Jed Bews",
-    "team": "GEEL",
-    "games": 0.0
+    "cd_id": "CD_I1027969",
+    "rank": 607,
+    "rating": 40.4,
+    "name": "Harvey Johnston",
+    "team": "WCE",
+    "games": 8.0
    },
    {
     "cd_id": "CD_I1028493",
@@ -76568,8 +76640,16 @@
     "games": 15.0
    },
    {
+    "cd_id": "CD_I1002795",
+    "rank": 593,
+    "rating": 39.5,
+    "name": "Jordan Boyd",
+    "team": "CARL",
+    "games": 2.0
+   },
+   {
     "cd_id": "CD_I1023346",
-    "rank": 580,
+    "rank": 594,
     "rating": 39.2,
     "name": "Liam Reidy",
     "team": "CARL",
@@ -76584,28 +76664,12 @@
     "games": 9.0
    },
    {
-    "cd_id": "CD_I1027382",
-    "rank": 607,
-    "rating": 38.9,
-    "name": "Charlie West",
-    "team": "COLL",
-    "games": 9.0
-   },
-   {
     "cd_id": "CD_I1029304",
-    "rank": 597,
+    "rank": 605,
     "rating": 37.2,
     "name": "Lachlan Gulbin",
     "team": "GCFC",
     "games": 11.0
-   },
-   {
-    "cd_id": "CD_I1023743",
-    "rank": 543,
-    "rating": 36.8,
-    "name": "Nicholas Madden",
-    "team": "GWS",
-    "games": 9.0
    },
    {
     "cd_id": "CD_I1023680",
@@ -76625,7 +76689,7 @@
    },
    {
     "cd_id": "CD_I1028526",
-    "rank": 583,
+    "rank": 600,
     "rating": 36.6,
     "name": "Harry O'Farrell",
     "team": "CARL",
@@ -76640,12 +76704,12 @@
     "games": 4.0
    },
    {
-    "cd_id": "CD_I1020877",
-    "rank": 584,
-    "rating": 35.9,
-    "name": "Flynn Young",
-    "team": "CARL",
-    "games": 3.0
+    "cd_id": "CD_I1029307",
+    "rank": 609,
+    "rating": 35.0,
+    "name": "Jai Murray",
+    "team": "GCFC",
+    "games": 9.0
    },
    {
     "cd_id": "CD_I1035198",
@@ -76664,8 +76728,16 @@
     "games": 3.0
    },
    {
+    "cd_id": "CD_I1023496",
+    "rank": 614,
+    "rating": 34.7,
+    "name": "Noah Long",
+    "team": "WCE",
+    "games": 0.0
+   },
+   {
     "cd_id": "CD_I1023681",
-    "rank": 617,
+    "rank": 610,
     "rating": 34.7,
     "name": "George Stevens",
     "team": "GEEL",
@@ -76688,28 +76760,12 @@
     "games": 10.0
    },
    {
-    "cd_id": "CD_I1027678",
-    "rank": 592,
-    "rating": 34.2,
-    "name": "Billy Wilson",
-    "team": "CARL",
-    "games": 17.0
-   },
-   {
     "cd_id": "CD_I1036104",
     "rank": 591,
     "rating": 34.2,
     "name": "Will Lewis",
     "team": "WB",
     "games": 13.0
-   },
-   {
-    "cd_id": "CD_I1017718",
-    "rank": 564,
-    "rating": 33.7,
-    "name": "Rhett Bazzo",
-    "team": "WCE",
-    "games": 14.0
    },
    {
     "cd_id": "CD_I1021108",
@@ -76752,12 +76808,12 @@
     "games": 6.0
    },
    {
-    "cd_id": "CD_I1028725",
-    "rank": 568,
-    "rating": 31.9,
-    "name": "Cooper Duff-Tytler",
-    "team": "WCE",
-    "games": 16.0
+    "cd_id": "CD_I1036426",
+    "rank": 611,
+    "rating": 32.0,
+    "name": "Talor Byrne",
+    "team": "CARL",
+    "games": 20.0
    },
    {
     "cd_id": "CD_I1027687",
@@ -76776,14 +76832,6 @@
     "games": 3.0
    },
    {
-    "cd_id": "CD_I1005972",
-    "rank": 570,
-    "rating": 31.1,
-    "name": "Milan Murdock",
-    "team": "WCE",
-    "games": 20.0
-   },
-   {
     "cd_id": "CD_I1022999",
     "rank": 628,
     "rating": 31.0,
@@ -76798,6 +76846,30 @@
     "name": "Jaxon Artemis",
     "team": "ESS",
     "games": 6.0
+   },
+   {
+    "cd_id": "CD_I1027382",
+    "rank": 623,
+    "rating": 29.7,
+    "name": "Charlie West",
+    "team": "COLL",
+    "games": 9.0
+   },
+   {
+    "cd_id": "CD_I1016140",
+    "rank": 617,
+    "rating": 29.4,
+    "name": "Wade Derksen",
+    "team": "CARL",
+    "games": 15.0
+   },
+   {
+    "cd_id": "CD_I1008543",
+    "rank": 625,
+    "rating": 29.2,
+    "name": "Harry Schoenberg",
+    "team": "WCE",
+    "games": 5.0
    },
    {
     "cd_id": "CD_I1006136",
@@ -76816,36 +76888,12 @@
     "games": 2.0
    },
    {
-    "cd_id": "CD_I1017745",
-    "rank": 628,
-    "rating": 28.2,
-    "name": "Liam Puncher",
-    "team": "COLL",
-    "games": 8.0
-   },
-   {
-    "cd_id": "CD_I1009385",
-    "rank": 576,
-    "rating": 28.1,
-    "name": "Deven Robertson",
-    "team": "WCE",
-    "games": 4.0
-   },
-   {
     "cd_id": "CD_I1017118",
     "rank": 633,
     "rating": 28.1,
     "name": "Josh Goater",
     "team": "NMFC",
     "games": 6.0
-   },
-   {
-    "cd_id": "CD_I1028561",
-    "rank": 579,
-    "rating": 27.8,
-    "name": "Tom Gross",
-    "team": "WCE",
-    "games": 4.0
    },
    {
     "cd_id": "CD_I1012386",
@@ -76856,12 +76904,12 @@
     "games": 6.0
    },
    {
-    "cd_id": "CD_I1005199",
-    "rank": 619,
-    "rating": 27.0,
-    "name": "Elliott Himmelberg",
-    "team": "GCFC",
-    "games": 0.0
+    "cd_id": "CD_I1017745",
+    "rank": 627,
+    "rating": 27.2,
+    "name": "Liam Puncher",
+    "team": "COLL",
+    "games": 8.0
    },
    {
     "cd_id": "CD_I1022371",
@@ -76897,7 +76945,7 @@
    },
    {
     "cd_id": "CD_I1023489",
-    "rank": 611,
+    "rank": 624,
     "rating": 25.2,
     "name": "Hudson O'Keeffe",
     "team": "CARL",
@@ -76928,20 +76976,28 @@
     "games": 0.0
    },
    {
-    "cd_id": "CD_I1027969",
-    "rank": 587,
-    "rating": 23.5,
-    "name": "Harvey Johnston",
-    "team": "WCE",
-    "games": 8.0
+    "cd_id": "CD_I1033568",
+    "rank": 635,
+    "rating": 24.2,
+    "name": "Dylan Patterson",
+    "team": "GCFC",
+    "games": 5.0
    },
    {
     "cd_id": "CD_I1032619",
-    "rank": 572,
+    "rank": 628,
     "rating": 23.0,
     "name": "Cody Angove",
     "team": "GWS",
     "games": 1.0
+   },
+   {
+    "cd_id": "CD_I1011950",
+    "rank": 639,
+    "rating": 22.6,
+    "name": "Ben Jepson",
+    "team": "GCFC",
+    "games": 5.0
    },
    {
     "cd_id": "CD_I998129",
@@ -76968,16 +77024,16 @@
     "games": 9.0
    },
    {
-    "cd_id": "CD_I1036426",
-    "rank": 624,
-    "rating": 20.9,
-    "name": "Talor Byrne",
-    "team": "CARL",
-    "games": 20.0
+    "cd_id": "CD_I1027101",
+    "rank": 642,
+    "rating": 20.4,
+    "name": "Oliver Francou",
+    "team": "WCE",
+    "games": 4.0
    },
    {
     "cd_id": "CD_I1008183",
-    "rank": 652,
+    "rank": 645,
     "rating": 19.9,
     "name": "Jack Henderson",
     "team": "MELB",
@@ -76992,8 +77048,16 @@
     "games": 2.0
    },
    {
+    "cd_id": "CD_I1033066",
+    "rank": 632,
+    "rating": 19.5,
+    "name": "Jack Ison",
+    "team": "CARL",
+    "games": 8.0
+   },
+   {
     "cd_id": "CD_I1022486",
-    "rank": 599,
+    "rank": 651,
     "rating": 18.4,
     "name": "Jacob Newton",
     "team": "WCE",
@@ -77016,20 +77080,20 @@
     "games": 13.0
    },
    {
+    "cd_id": "CD_I1029030",
+    "rank": 635,
+    "rating": 17.3,
+    "name": "Josaia Delana",
+    "team": "GWS",
+    "games": 9.0
+   },
+   {
     "cd_id": "CD_I1024173",
-    "rank": 659,
+    "rank": 653,
     "rating": 17.0,
     "name": "Aidan Johnson",
     "team": "MELB",
     "games": 1.0
-   },
-   {
-    "cd_id": "CD_I1029307",
-    "rank": 636,
-    "rating": 16.5,
-    "name": "Jai Murray",
-    "team": "GCFC",
-    "games": 9.0
    },
    {
     "cd_id": "CD_I1017043",
@@ -77046,22 +77110,6 @@
     "name": "Callum Coleman-Jones",
     "team": "NMFC",
     "games": 5.0
-   },
-   {
-    "cd_id": "CD_I1033072",
-    "rank": 662,
-    "rating": 16.1,
-    "name": "Xavier Taylor",
-    "team": "MELB",
-    "games": 3.0
-   },
-   {
-    "cd_id": "CD_I1033078",
-    "rank": 608,
-    "rating": 15.6,
-    "name": "Josh Lindsay",
-    "team": "WCE",
-    "games": 15.0
    },
    {
     "cd_id": "CD_I1026974",
@@ -77089,7 +77137,7 @@
    },
    {
     "cd_id": "CD_I1022452",
-    "rank": 636,
+    "rank": 643,
     "rating": 13.6,
     "name": "Lucas Camporeale",
     "team": "CARL",
@@ -77097,7 +77145,7 @@
    },
    {
     "cd_id": "CD_I1013278",
-    "rank": 670,
+    "rank": 666,
     "rating": 13.5,
     "name": "Reef McInnes",
     "team": "COLL",
@@ -77120,14 +77168,6 @@
     "games": 0.0
    },
    {
-    "cd_id": "CD_I1016140",
-    "rank": 639,
-    "rating": 12.5,
-    "name": "Wade Derksen",
-    "team": "CARL",
-    "games": 15.0
-   },
-   {
     "cd_id": "CD_I1028671",
     "rank": 678,
     "rating": 12.5,
@@ -77144,14 +77184,6 @@
     "games": 3.0
    },
    {
-    "cd_id": "CD_I1022614",
-    "rank": 676,
-    "rating": 12.3,
-    "name": "Noah Howes",
-    "team": "COLL",
-    "games": 2.0
-   },
-   {
     "cd_id": "CD_I1027702",
     "rank": 642,
     "rating": 11.8,
@@ -77160,20 +77192,12 @@
     "games": 2.0
    },
    {
-    "cd_id": "CD_I1032119",
-    "rank": 595,
-    "rating": 11.1,
-    "name": "James Leake",
-    "team": "GWS",
-    "games": 5.0
-   },
-   {
-    "cd_id": "CD_I1011950",
-    "rank": 651,
-    "rating": 10.9,
-    "name": "Ben Jepson",
-    "team": "GCFC",
-    "games": 5.0
+    "cd_id": "CD_I1033072",
+    "rank": 673,
+    "rating": 10.7,
+    "name": "Xavier Taylor",
+    "team": "MELB",
+    "games": 3.0
    },
    {
     "cd_id": "CD_I1031506",
@@ -77192,14 +77216,6 @@
     "games": 0.0
    },
    {
-    "cd_id": "CD_I1032042",
-    "rank": 598,
-    "rating": 10.1,
-    "name": "Phoenix Gothard",
-    "team": "GWS",
-    "games": 16.0
-   },
-   {
     "cd_id": "CD_I997501",
     "rank": 647,
     "rating": 9.2,
@@ -77208,12 +77224,20 @@
     "games": 4.0
    },
    {
-    "cd_id": "CD_I1029030",
-    "rank": 601,
-    "rating": 8.7,
-    "name": "Josaia Delana",
+    "cd_id": "CD_I1009301",
+    "rank": 678,
+    "rating": 8.8,
+    "name": "Jamarra Ugle-Hagan",
+    "team": "GCFC",
+    "games": 3.0
+   },
+   {
+    "cd_id": "CD_I1028562",
+    "rank": 661,
+    "rating": 8.4,
+    "name": "Harrison Oliver",
     "team": "GWS",
-    "games": 9.0
+    "games": 5.0
    },
    {
     "cd_id": "CD_I1017059",
@@ -77224,20 +77248,12 @@
     "games": 1.0
    },
    {
-    "cd_id": "CD_I1033066",
-    "rank": 652,
-    "rating": 8.0,
-    "name": "Jack Ison",
-    "team": "CARL",
-    "games": 8.0
-   },
-   {
-    "cd_id": "CD_I1029136",
-    "rank": 635,
-    "rating": 7.5,
-    "name": "Malakai Champion",
+    "cd_id": "CD_I1012828",
+    "rank": 686,
+    "rating": 7.9,
+    "name": "Finlay Macrae",
     "team": "WCE",
-    "games": 8.0
+    "games": 0.0
    },
    {
     "cd_id": "CD_I1028547",
@@ -77249,7 +77265,7 @@
    },
    {
     "cd_id": "CD_I1023174",
-    "rank": 692,
+    "rank": 685,
     "rating": 6.6,
     "name": "Jed Adams",
     "team": "MELB",
@@ -77257,7 +77273,7 @@
    },
    {
     "cd_id": "CD_I1013165",
-    "rank": 693,
+    "rank": 686,
     "rating": 6.4,
     "name": "Andy Moniz-Wakefield",
     "team": "MELB",
@@ -77273,7 +77289,7 @@
    },
    {
     "cd_id": "CD_I1024337",
-    "rank": 695,
+    "rank": 690,
     "rating": 5.8,
     "name": "Luker Kentfield",
     "team": "MELB",
@@ -77289,11 +77305,19 @@
    },
    {
     "cd_id": "CD_I1015301",
-    "rank": 696,
+    "rank": 691,
     "rating": 5.6,
     "name": "Lukas Cooke",
     "team": "MELB",
     "games": 2.0
+   },
+   {
+    "cd_id": "CD_I1027428",
+    "rank": 688,
+    "rating": 5.2,
+    "name": "Jay Polkinghorne",
+    "team": "GEEL",
+    "games": 8.0
    },
    {
     "cd_id": "CD_I1023487",
@@ -77312,20 +77336,20 @@
     "games": 0.0
    },
    {
+    "cd_id": "CD_I1022614",
+    "rank": 699,
+    "rating": 4.8,
+    "name": "Noah Howes",
+    "team": "COLL",
+    "games": 2.0
+   },
+   {
     "cd_id": "CD_I1029326",
     "rank": 629,
     "rating": 4.6,
     "name": "Daniel Annable",
     "team": "BL",
     "games": 3.0
-   },
-   {
-    "cd_id": "CD_I1032398",
-    "rank": 675,
-    "rating": 4.6,
-    "name": "Beau Addinsall",
-    "team": "GCFC",
-    "games": 9.0
    },
    {
     "cd_id": "CD_I1033076",
@@ -77345,11 +77369,19 @@
    },
    {
     "cd_id": "CD_I1018992",
-    "rank": 650,
+    "rank": 703,
     "rating": 3.6,
     "name": "Lucca Grego",
     "team": "WCE",
     "games": 0.0
+   },
+   {
+    "cd_id": "CD_I1028485",
+    "rank": 682,
+    "rating": 3.0,
+    "name": "Oliver Hannaford",
+    "team": "GWS",
+    "games": 5.0
    },
    {
     "cd_id": "CD_I1029589",
@@ -77361,7 +77393,7 @@
    },
    {
     "cd_id": "CD_I1004882",
-    "rank": 707,
+    "rank": 706,
     "rating": 1.5,
     "name": "Mitch Podhajski",
     "team": "COLL",
@@ -77381,6 +77413,14 @@
     "rating": 0.0,
     "name": "Oscar Berry",
     "team": "MELB",
+    "games": 0.0
+   },
+   {
+    "cd_id": "CD_I1005199",
+    "rank": null,
+    "rating": 0.0,
+    "name": "Elliott Himmelberg",
+    "team": "GCFC",
     "games": 0.0
    },
    {
@@ -77416,28 +77456,12 @@
     "games": 0.0
    },
    {
-    "cd_id": "CD_I1015798",
-    "rank": null,
-    "rating": 0.0,
-    "name": "Marcus Herbert",
-    "team": "WCE",
-    "games": 10.0
-   },
-   {
     "cd_id": "CD_I1017063",
     "rank": null,
     "rating": 0.0,
     "name": "Toby Conway",
     "team": "GEEL",
     "games": 0.0
-   },
-   {
-    "cd_id": "CD_I1017493",
-    "rank": null,
-    "rating": 0.0,
-    "name": "Caleb Lewis",
-    "team": "GCFC",
-    "games": 2.0
    },
    {
     "cd_id": "CD_I1017757",
@@ -77560,14 +77584,6 @@
     "games": 0.0
    },
    {
-    "cd_id": "CD_I1027101",
-    "rank": null,
-    "rating": 0.0,
-    "name": "Oliver Francou",
-    "team": "WCE",
-    "games": 4.0
-   },
-   {
     "cd_id": "CD_I1027145",
     "rank": null,
     "rating": 0.0,
@@ -77688,14 +77704,6 @@
     "games": 0.0
    },
    {
-    "cd_id": "CD_I1028485",
-    "rank": null,
-    "rating": 0.0,
-    "name": "Oliver Hannaford",
-    "team": "GWS",
-    "games": 5.0
-   },
-   {
     "cd_id": "CD_I1028496",
     "rank": null,
     "rating": 0.0,
@@ -77734,14 +77742,6 @@
     "name": "James Barrat",
     "team": "STK",
     "games": 0.0
-   },
-   {
-    "cd_id": "CD_I1028562",
-    "rank": null,
-    "rating": 0.0,
-    "name": "Harrison Oliver",
-    "team": "GWS",
-    "games": 5.0
    },
    {
     "cd_id": "CD_I1028566",
@@ -78046,14 +78046,6 @@
     "name": "Koby Coulson",
     "team": "GCFC",
     "games": 0.0
-   },
-   {
-    "cd_id": "CD_I1033568",
-    "rank": null,
-    "rating": 0.0,
-    "name": "Dylan Patterson",
-    "team": "GCFC",
-    "games": 5.0
    },
    {
     "cd_id": "CD_I1033572",
@@ -78382,6 +78374,14 @@
     "name": "Alex Dodson",
     "team": "STK",
     "games": 0.0
+   },
+   {
+    "cd_id": "CD_I1017493",
+    "rank": 706,
+    "rating": -1.1,
+    "name": "Caleb Lewis",
+    "team": "GCFC",
+    "games": 2.0
    }
   ]
  },
@@ -78528,8 +78528,8 @@
     },
     {
      "year": 2026,
-     "rank": 100,
-     "rating": 365.9,
+     "rank": 113,
+     "rating": 354.3,
      "team": "GEEL"
     }
    ]
@@ -78606,7 +78606,7 @@
     {
      "year": 2026,
      "rank": 67,
-     "rating": 401.2,
+     "rating": 402.9,
      "team": "COLL"
     }
    ]
@@ -81759,8 +81759,8 @@
     },
     {
      "year": 2026,
-     "rank": 151,
-     "rating": 337.7,
+     "rank": 158,
+     "rating": 333.3,
      "team": "GWS"
     }
    ]
@@ -82921,8 +82921,8 @@
     },
     {
      "year": 2026,
-     "rank": 332,
-     "rating": 219.6,
+     "rank": 328,
+     "rating": 228.6,
      "team": "MELB"
     }
    ]
@@ -83086,7 +83086,7 @@
     },
     {
      "year": 2026,
-     "rank": 438,
+     "rank": 430,
      "rating": 138.0,
      "team": "MELB"
     }
@@ -83427,8 +83427,8 @@
     },
     {
      "year": 2026,
-     "rank": 182,
-     "rating": 318.0,
+     "rank": 185,
+     "rating": 319.2,
      "team": "GEEL"
     }
    ]
@@ -84086,8 +84086,8 @@
     },
     {
      "year": 2026,
-     "rank": 273,
-     "rating": 261.8,
+     "rank": 373,
+     "rating": 191.5,
      "team": "WCE"
     }
    ]
@@ -84696,8 +84696,8 @@
     },
     {
      "year": 2026,
-     "rank": 148,
-     "rating": 333.4,
+     "rank": 149,
+     "rating": 335.0,
      "team": "COLL"
     }
    ]
@@ -85534,8 +85534,8 @@
     },
     {
      "year": 2026,
-     "rank": 124,
-     "rating": 345.3,
+     "rank": 120,
+     "rating": 350.2,
      "team": "COLL"
     }
    ]
@@ -85734,8 +85734,8 @@
     },
     {
      "year": 2026,
-     "rank": 78,
-     "rating": 397.7,
+     "rank": 72,
+     "rating": 389.5,
      "team": "GWS"
     }
    ]
@@ -85897,8 +85897,8 @@
     },
     {
      "year": 2026,
-     "rank": 60,
-     "rating": 416.1,
+     "rank": 50,
+     "rating": 428.7,
      "team": "COLL"
     }
    ]
@@ -86242,8 +86242,8 @@
     },
     {
      "year": 2026,
-     "rank": 259,
-     "rating": 267.6,
+     "rank": 365,
+     "rating": 198.9,
      "team": "WCE"
     }
    ]
@@ -86483,8 +86483,8 @@
     },
     {
      "year": 2026,
-     "rank": 377,
-     "rating": 184.8,
+     "rank": 340,
+     "rating": 213.8,
      "team": "MELB"
     }
    ]
@@ -88068,8 +88068,8 @@
     },
     {
      "year": 2026,
-     "rank": 65,
-     "rating": 404.1,
+     "rank": 63,
+     "rating": 414.4,
      "team": "GEEL"
     }
    ]
@@ -89274,8 +89274,8 @@
     },
     {
      "year": 2026,
-     "rank": 340,
-     "rating": 206.9,
+     "rank": 369,
+     "rating": 194.4,
      "team": "GWS"
     }
    ]
@@ -89644,8 +89644,8 @@
     },
     {
      "year": 2026,
-     "rank": 341,
-     "rating": 213.1,
+     "rank": 327,
+     "rating": 228.8,
      "team": "MELB"
     }
    ]
@@ -90100,8 +90100,8 @@
     },
     {
      "year": 2026,
-     "rank": 45,
-     "rating": 432.7,
+     "rank": 52,
+     "rating": 427.4,
      "team": "GCFC"
     }
    ]
@@ -90424,8 +90424,8 @@
     },
     {
      "year": 2026,
-     "rank": 126,
-     "rating": 355.8,
+     "rank": 87,
+     "rating": 373.2,
      "team": "GWS"
     }
    ]
@@ -91506,8 +91506,8 @@
     },
     {
      "year": 2026,
-     "rank": 97,
-     "rating": 378.7,
+     "rank": 341,
+     "rating": 217.6,
      "team": "GWS"
     }
    ]
@@ -92188,8 +92188,8 @@
     },
     {
      "year": 2026,
-     "rank": 387,
-     "rating": 175.5,
+     "rank": 325,
+     "rating": 228.7,
      "team": "GEEL"
     }
    ]
@@ -92411,8 +92411,8 @@
     },
     {
      "year": 2026,
-     "rank": 246,
-     "rating": 282.0,
+     "rank": 214,
+     "rating": 306.0,
      "team": "CARL"
     }
    ]
@@ -92744,8 +92744,8 @@
     },
     {
      "year": 2026,
-     "rank": 5,
-     "rating": 606.3,
+     "rank": 6,
+     "rating": 597.2,
      "team": "MELB"
     }
    ]
@@ -93305,8 +93305,8 @@
     },
     {
      "year": 2026,
-     "rank": 24,
-     "rating": 502.3,
+     "rank": 29,
+     "rating": 475.4,
      "team": "GCFC"
     }
    ]
@@ -93716,8 +93716,8 @@
     },
     {
      "year": 2026,
-     "rank": 33,
-     "rating": 466.8,
+     "rank": 34,
+     "rating": 460.6,
      "team": "CARL"
     }
    ]
@@ -94940,8 +94940,8 @@
     },
     {
      "year": 2026,
-     "rank": 98,
-     "rating": 378.1,
+     "rank": 157,
+     "rating": 334.2,
      "team": "GWS"
     }
    ]
@@ -95292,8 +95292,8 @@
     },
     {
      "year": 2026,
-     "rank": 111,
-     "rating": 362.0,
+     "rank": 146,
+     "rating": 339.8,
      "team": "CARL"
     }
    ]
@@ -95465,8 +95465,8 @@
     },
     {
      "year": 2026,
-     "rank": 131,
-     "rating": 342.6,
+     "rank": 145,
+     "rating": 337.0,
      "team": "COLL"
     }
    ]
@@ -95671,8 +95671,8 @@
     },
     {
      "year": 2026,
-     "rank": 369,
-     "rating": 190.7,
+     "rank": 381,
+     "rating": 185.3,
      "team": "GEEL"
     }
    ]
@@ -96393,8 +96393,8 @@
     },
     {
      "year": 2026,
-     "rank": 87,
-     "rating": 379.4,
+     "rank": 124,
+     "rating": 348.8,
      "team": "CARL"
     }
    ]
@@ -98534,8 +98534,8 @@
     },
     {
      "year": 2026,
-     "rank": 608,
-     "rating": 39.9,
+     "rank": 561,
+     "rating": 60.2,
      "team": "GEEL"
     }
    ]
@@ -99057,8 +99057,8 @@
     },
     {
      "year": 2026,
-     "rank": 300,
-     "rating": 248.8,
+     "rank": 250,
+     "rating": 279.5,
      "team": "MELB"
     }
    ]
@@ -99262,8 +99262,8 @@
     },
     {
      "year": 2026,
-     "rank": 225,
-     "rating": 296.1,
+     "rank": 233,
+     "rating": 289.4,
      "team": "COLL"
     }
    ]
@@ -100299,8 +100299,8 @@
     },
     {
      "year": 2026,
-     "rank": 278,
-     "rating": 260.1,
+     "rank": 293,
+     "rating": 250.4,
      "team": "MELB"
     }
    ]
@@ -100569,8 +100569,8 @@
     },
     {
      "year": 2026,
-     "rank": 338,
-     "rating": 216.0,
+     "rank": 330,
+     "rating": 222.1,
      "team": "COLL"
     }
    ]
@@ -100687,8 +100687,8 @@
     },
     {
      "year": 2026,
-     "rank": 290,
-     "rating": 255.2,
+     "rank": 313,
+     "rating": 237.0,
      "team": "CARL"
     }
    ]
@@ -100945,8 +100945,8 @@
     },
     {
      "year": 2026,
-     "rank": 246,
-     "rating": 274.8,
+     "rank": 252,
+     "rating": 275.1,
      "team": "WCE"
     }
    ]
@@ -101063,8 +101063,8 @@
     },
     {
      "year": 2026,
-     "rank": 280,
-     "rating": 258.9,
+     "rank": 251,
+     "rating": 275.5,
      "team": "COLL"
     }
    ]
@@ -101666,8 +101666,8 @@
     },
     {
      "year": 2026,
-     "rank": 537,
-     "rating": 72.8,
+     "rank": 472,
+     "rating": 108.0,
      "team": "GEEL"
     }
    ]
@@ -102204,7 +102204,7 @@
     {
      "year": 2026,
      "rank": 336,
-     "rating": 211.0,
+     "rating": 222.9,
      "team": "GWS"
     }
    ]
@@ -102625,8 +102625,8 @@
     },
     {
      "year": 2026,
-     "rank": 66,
-     "rating": 404.8,
+     "rank": 65,
+     "rating": 405.6,
      "team": "MELB"
     }
    ]
@@ -103244,8 +103244,8 @@
     },
     {
      "year": 2026,
-     "rank": 379,
-     "rating": 183.1,
+     "rank": 417,
+     "rating": 151.5,
      "team": "GCFC"
     }
    ]
@@ -103634,8 +103634,8 @@
     },
     {
      "year": 2026,
-     "rank": 139,
-     "rating": 338.9,
+     "rank": 137,
+     "rating": 340.6,
      "team": "COLL"
     }
    ]
@@ -105664,8 +105664,8 @@
     },
     {
      "year": 2026,
-     "rank": 234,
-     "rating": 294.3,
+     "rank": 248,
+     "rating": 280.0,
      "team": "GCFC"
     }
    ]
@@ -106144,8 +106144,8 @@
     },
     {
      "year": 2026,
-     "rank": 239,
-     "rating": 286.2,
+     "rank": 236,
+     "rating": 288.9,
      "team": "MELB"
     }
    ]
@@ -107268,8 +107268,8 @@
     },
     {
      "year": 2026,
-     "rank": 38,
-     "rating": 453.1,
+     "rank": 33,
+     "rating": 466.4,
      "team": "CARL"
     }
    ]
@@ -107936,8 +107936,8 @@
     },
     {
      "year": 2026,
-     "rank": 152,
-     "rating": 339.5,
+     "rank": 179,
+     "rating": 322.4,
      "team": "CARL"
     }
    ]
@@ -108247,8 +108247,8 @@
     },
     {
      "year": 2026,
-     "rank": 342,
-     "rating": 214.2,
+     "rank": 349,
+     "rating": 212.9,
      "team": "CARL"
     }
    ]
@@ -108483,7 +108483,7 @@
     {
      "year": 2026,
      "rank": 19,
-     "rating": 521.1,
+     "rating": 520.2,
      "team": "GCFC"
     }
    ]
@@ -108739,8 +108739,8 @@
     },
     {
      "year": 2026,
-     "rank": 199,
-     "rating": 311.8,
+     "rank": 125,
+     "rating": 348.6,
      "team": "CARL"
     }
    ]
@@ -109238,8 +109238,8 @@
     },
     {
      "year": 2026,
-     "rank": 224,
-     "rating": 296.7,
+     "rank": 217,
+     "rating": 298.9,
      "team": "COLL"
     }
    ]
@@ -110558,8 +110558,8 @@
     },
     {
      "year": 2026,
-     "rank": 123,
-     "rating": 353.7,
+     "rank": 121,
+     "rating": 349.6,
      "team": "CARL"
     }
    ]
@@ -110829,8 +110829,8 @@
     },
     {
      "year": 2026,
-     "rank": 156,
-     "rating": 334.2,
+     "rank": 165,
+     "rating": 327.4,
      "team": "GCFC"
     }
    ]
@@ -110971,8 +110971,8 @@
     },
     {
      "year": 2026,
-     "rank": 84,
-     "rating": 390.3,
+     "rank": 37,
+     "rating": 442.4,
      "team": "GWS"
     }
    ]
@@ -111136,8 +111136,8 @@
     },
     {
      "year": 2026,
-     "rank": 80,
-     "rating": 382.3,
+     "rank": 83,
+     "rating": 380.7,
      "team": "GCFC"
     }
    ]
@@ -112384,8 +112384,8 @@
     },
     {
      "year": 2026,
-     "rank": 134,
-     "rating": 351.8,
+     "rank": 155,
+     "rating": 334.3,
      "team": "GWS"
     }
    ]
@@ -113384,8 +113384,8 @@
     },
     {
      "year": 2026,
-     "rank": 237,
-     "rating": 278.3,
+     "rank": 256,
+     "rating": 273.5,
      "team": "WCE"
     }
    ]
@@ -113691,8 +113691,8 @@
     },
     {
      "year": 2026,
-     "rank": 252,
-     "rating": 279.0,
+     "rank": 251,
+     "rating": 280.1,
      "team": "CARL"
     }
    ]
@@ -114829,8 +114829,8 @@
     },
     {
      "year": 2026,
-     "rank": 324,
-     "rating": 228.8,
+     "rank": 364,
+     "rating": 199.6,
      "team": "WCE"
     }
    ]
@@ -114923,8 +114923,8 @@
     },
     {
      "year": 2026,
-     "rank": 165,
-     "rating": 327.0,
+     "rank": 155,
+     "rating": 333.0,
      "team": "COLL"
     }
    ]
@@ -115549,8 +115549,8 @@
     },
     {
      "year": 2026,
-     "rank": 110,
-     "rating": 360.8,
+     "rank": 112,
+     "rating": 354.4,
      "team": "GEEL"
     }
    ]
@@ -115744,8 +115744,8 @@
     },
     {
      "year": 2026,
-     "rank": 260,
-     "rating": 273.7,
+     "rank": 229,
+     "rating": 296.8,
      "team": "CARL"
     }
    ]
@@ -115875,7 +115875,7 @@
     {
      "year": 2026,
      "rank": 275,
-     "rating": 262.0,
+     "rating": 263.9,
      "team": "CARL"
     }
    ]
@@ -116346,8 +116346,8 @@
     },
     {
      "year": 2026,
-     "rank": 173,
-     "rating": 321.5,
+     "rank": 190,
+     "rating": 317.9,
      "team": "CARL"
     }
    ]
@@ -116411,8 +116411,8 @@
     },
     {
      "year": 2026,
-     "rank": 220,
-     "rating": 297.5,
+     "rank": 133,
+     "rating": 341.3,
      "team": "GEEL"
     }
    ]
@@ -116476,8 +116476,8 @@
     },
     {
      "year": 2026,
-     "rank": 180,
-     "rating": 317.0,
+     "rank": 213,
+     "rating": 300.9,
      "team": "WCE"
     }
    ]
@@ -116606,8 +116606,8 @@
     },
     {
      "year": 2026,
-     "rank": 242,
-     "rating": 282.3,
+     "rank": 246,
+     "rating": 284.1,
      "team": "GEEL"
     }
    ]
@@ -116765,7 +116765,7 @@
     },
     {
      "year": 2026,
-     "rank": 265,
+     "rank": 264,
      "rating": 266.6,
      "team": "COLL"
     }
@@ -117058,7 +117058,7 @@
     },
     {
      "year": 2026,
-     "rank": 403,
+     "rank": 406,
      "rating": 159.4,
      "team": "CARL"
     }
@@ -117387,8 +117387,8 @@
     },
     {
      "year": 2026,
-     "rank": 236,
-     "rating": 292.6,
+     "rank": 267,
+     "rating": 268.7,
      "team": "GCFC"
     }
    ]
@@ -117586,8 +117586,8 @@
     },
     {
      "year": 2026,
-     "rank": 362,
-     "rating": 197.3,
+     "rank": 283,
+     "rating": 258.6,
      "team": "GEEL"
     }
    ]
@@ -117839,8 +117839,8 @@
     },
     {
      "year": 2026,
-     "rank": 71,
-     "rating": 394.7,
+     "rank": 75,
+     "rating": 389.5,
      "team": "COLL"
     }
    ]
@@ -118057,7 +118057,7 @@
     },
     {
      "year": 2026,
-     "rank": 159,
+     "rank": 161,
      "rating": 329.6,
      "team": "COLL"
     }
@@ -118122,8 +118122,8 @@
     },
     {
      "year": 2026,
-     "rank": 272,
-     "rating": 264.6,
+     "rank": 285,
+     "rating": 256.9,
      "team": "GEEL"
     }
    ]
@@ -118479,8 +118479,8 @@
     },
     {
      "year": 2026,
-     "rank": 294,
-     "rating": 250.3,
+     "rank": 272,
+     "rating": 263.7,
      "team": "GEEL"
     }
    ]
@@ -119155,8 +119155,8 @@
     },
     {
      "year": 2026,
-     "rank": 619,
-     "rating": 27.0,
+     "rank": null,
+     "rating": 0.0,
      "team": "GCFC"
     }
    ]
@@ -119764,8 +119764,8 @@
     },
     {
      "year": 2026,
-     "rank": 46,
-     "rating": 432.6,
+     "rank": 49,
+     "rating": 430.5,
      "team": "COLL"
     }
    ]
@@ -119954,8 +119954,8 @@
     },
     {
      "year": 2026,
-     "rank": 284,
-     "rating": 256.6,
+     "rank": 338,
+     "rating": 214.3,
      "team": "WCE"
     }
    ]
@@ -120769,8 +120769,8 @@
     },
     {
      "year": 2026,
-     "rank": 93,
-     "rating": 377.7,
+     "rank": 99,
+     "rating": 360.5,
      "team": "WCE"
     }
    ]
@@ -120828,8 +120828,8 @@
     },
     {
      "year": 2026,
-     "rank": 88,
-     "rating": 378.1,
+     "rank": 106,
+     "rating": 354.7,
      "team": "MELB"
     }
    ]
@@ -121382,8 +121382,8 @@
     },
     {
      "year": 2026,
-     "rank": 148,
-     "rating": 342.1,
+     "rank": 108,
+     "rating": 358.2,
      "team": "CARL"
     }
    ]
@@ -121618,8 +121618,8 @@
     },
     {
      "year": 2026,
-     "rank": 273,
-     "rating": 262.4,
+     "rank": 316,
+     "rating": 235.6,
      "team": "CARL"
     }
    ]
@@ -121795,8 +121795,8 @@
     },
     {
      "year": 2026,
-     "rank": 207,
-     "rating": 302.2,
+     "rank": 180,
+     "rating": 322.0,
      "team": "GEEL"
     }
    ]
@@ -122007,8 +122007,8 @@
     },
     {
      "year": 2026,
-     "rank": 462,
-     "rating": 112.8,
+     "rank": 544,
+     "rating": 67.1,
      "team": "GCFC"
     }
    ]
@@ -122260,8 +122260,8 @@
     },
     {
      "year": 2026,
-     "rank": 117,
-     "rating": 361.5,
+     "rank": 205,
+     "rating": 308.4,
      "team": "GWS"
     }
    ]
@@ -122319,8 +122319,8 @@
     },
     {
      "year": 2026,
-     "rank": 152,
-     "rating": 337.2,
+     "rank": 143,
+     "rating": 341.1,
      "team": "GWS"
     }
    ]
@@ -122786,8 +122786,8 @@
     },
     {
      "year": 2026,
-     "rank": 129,
-     "rating": 347.5,
+     "rank": 122,
+     "rating": 348.6,
      "team": "GCFC"
     }
    ]
@@ -122845,8 +122845,8 @@
     },
     {
      "year": 2026,
-     "rank": 343,
-     "rating": 210.1,
+     "rank": 401,
+     "rating": 166.0,
      "team": "WCE"
     }
    ]
@@ -123232,8 +123232,8 @@
     },
     {
      "year": 2026,
-     "rank": 79,
-     "rating": 392.9,
+     "rank": 100,
+     "rating": 360.3,
      "team": "WCE"
     }
    ]
@@ -123425,8 +123425,8 @@
     },
     {
      "year": 2026,
-     "rank": 262,
-     "rating": 269.8,
+     "rank": 281,
+     "rating": 261.2,
      "team": "MELB"
     }
    ]
@@ -124311,8 +124311,8 @@
     },
     {
      "year": 2026,
-     "rank": 69,
-     "rating": 401.9,
+     "rank": 62,
+     "rating": 415.1,
      "team": "GEEL"
     }
    ]
@@ -124801,8 +124801,8 @@
     },
     {
      "year": 2026,
-     "rank": 107,
-     "rating": 367.8,
+     "rank": 110,
+     "rating": 356.9,
      "team": "GWS"
     }
    ]
@@ -125038,8 +125038,8 @@
     },
     {
      "year": 2026,
-     "rank": 328,
-     "rating": 224.1,
+     "rank": 363,
+     "rating": 201.6,
      "team": "MELB"
     }
    ]
@@ -125102,8 +125102,8 @@
     },
     {
      "year": 2026,
-     "rank": 14,
-     "rating": 538.1,
+     "rank": 15,
+     "rating": 538.9,
      "team": "GEEL"
     }
    ]
@@ -125208,8 +125208,8 @@
     },
     {
      "year": 2026,
-     "rank": 43,
-     "rating": 441.0,
+     "rank": 50,
+     "rating": 430.0,
      "team": "CARL"
     }
    ]
@@ -125261,8 +125261,8 @@
     },
     {
      "year": 2026,
-     "rank": 59,
-     "rating": 408.3,
+     "rank": 47,
+     "rating": 435.1,
      "team": "GEEL"
     }
    ]
@@ -126006,8 +126006,8 @@
     },
     {
      "year": 2026,
-     "rank": 222,
-     "rating": 302.1,
+     "rank": 241,
+     "rating": 284.9,
      "team": "GCFC"
     }
    ]
@@ -126141,8 +126141,8 @@
     },
     {
      "year": 2026,
-     "rank": 456,
-     "rating": 123.4,
+     "rank": 449,
+     "rating": 124.1,
      "team": "COLL"
     }
    ]
@@ -126369,8 +126369,8 @@
     },
     {
      "year": 2026,
-     "rank": 202,
-     "rating": 307.3,
+     "rank": 210,
+     "rating": 304.8,
      "team": "COLL"
     }
    ]
@@ -126598,8 +126598,8 @@
     },
     {
      "year": 2026,
-     "rank": 208,
-     "rating": 305.4,
+     "rank": 202,
+     "rating": 308.7,
      "team": "COLL"
     }
    ]
@@ -126821,8 +126821,8 @@
     },
     {
      "year": 2026,
-     "rank": 101,
-     "rating": 360.7,
+     "rank": 119,
+     "rating": 350.3,
      "team": "GCFC"
     }
    ]
@@ -126968,8 +126968,8 @@
     },
     {
      "year": 2026,
-     "rank": 76,
-     "rating": 385.9,
+     "rank": 90,
+     "rating": 374.4,
      "team": "MELB"
     }
    ]
@@ -127085,8 +127085,8 @@
     },
     {
      "year": 2026,
-     "rank": 56,
-     "rating": 418.8,
+     "rank": 70,
+     "rating": 398.4,
      "team": "MELB"
     }
    ]
@@ -127207,8 +127207,8 @@
     },
     {
      "year": 2026,
-     "rank": 122,
-     "rating": 357.3,
+     "rank": 131,
+     "rating": 347.5,
      "team": "GWS"
     }
    ]
@@ -128078,8 +128078,8 @@
     },
     {
      "year": 2026,
-     "rank": 301,
-     "rating": 246.0,
+     "rank": 227,
+     "rating": 295.6,
      "team": "WCE"
     }
    ]
@@ -128148,8 +128148,8 @@
     },
     {
      "year": 2026,
-     "rank": 223,
-     "rating": 288.3,
+     "rank": 238,
+     "rating": 292.4,
      "team": "GWS"
     }
    ]
@@ -128463,8 +128463,8 @@
     },
     {
      "year": 2026,
-     "rank": 210,
-     "rating": 294.4,
+     "rank": 172,
+     "rating": 326.7,
      "team": "GWS"
     }
    ]
@@ -128516,8 +128516,8 @@
     },
     {
      "year": 2026,
-     "rank": 464,
-     "rating": 107.5,
+     "rank": 452,
+     "rating": 121.1,
      "team": "CARL"
     }
    ]
@@ -128818,8 +128818,8 @@
     },
     {
      "year": 2026,
-     "rank": 58,
-     "rating": 426.5,
+     "rank": 64,
+     "rating": 410.5,
      "team": "GWS"
     }
    ]
@@ -128941,8 +128941,8 @@
     },
     {
      "year": 2026,
-     "rank": 334,
-     "rating": 220.6,
+     "rank": 404,
+     "rating": 161.5,
      "team": "WCE"
     }
    ]
@@ -129271,8 +129271,8 @@
     },
     {
      "year": 2026,
-     "rank": 364,
-     "rating": 187.0,
+     "rank": 515,
+     "rating": 93.1,
      "team": "WCE"
     }
    ]
@@ -129487,8 +129487,8 @@
     },
     {
      "year": 2026,
-     "rank": 234,
-     "rating": 280.8,
+     "rank": 290,
+     "rating": 252.9,
      "team": "GWS"
     }
    ]
@@ -129911,8 +129911,8 @@
     },
     {
      "year": 2026,
-     "rank": 8,
-     "rating": 569.4,
+     "rank": 17,
+     "rating": 531.6,
      "team": "GCFC"
     }
    ]
@@ -130052,8 +130052,8 @@
     },
     {
      "year": 2026,
-     "rank": 22,
-     "rating": 514.9,
+     "rank": 14,
+     "rating": 539.5,
      "team": "MELB"
     }
    ]
@@ -130099,8 +130099,8 @@
     },
     {
      "year": 2026,
-     "rank": 14,
-     "rating": 543.0,
+     "rank": 18,
+     "rating": 527.7,
      "team": "GCFC"
     }
    ]
@@ -130193,8 +130193,8 @@
     },
     {
      "year": 2026,
-     "rank": 68,
-     "rating": 403.5,
+     "rank": 35,
+     "rating": 459.5,
      "team": "GWS"
     }
    ]
@@ -130240,8 +130240,8 @@
     },
     {
      "year": 2026,
-     "rank": 99,
-     "rating": 368.5,
+     "rank": 81,
+     "rating": 381.4,
      "team": "MELB"
     }
    ]
@@ -130322,8 +130322,8 @@
     },
     {
      "year": 2026,
-     "rank": 515,
-     "rating": 57.1,
+     "rank": 625,
+     "rating": 29.2,
      "team": "WCE"
     }
    ]
@@ -130416,8 +130416,8 @@
     },
     {
      "year": 2026,
-     "rank": 235,
-     "rating": 288.4,
+     "rank": 203,
+     "rating": 304.0,
      "team": "GEEL"
     }
    ]
@@ -130510,8 +130510,8 @@
     },
     {
      "year": 2026,
-     "rank": 9,
-     "rating": 561.6,
+     "rank": 17,
+     "rating": 537.3,
      "team": "GWS"
     }
    ]
@@ -130850,8 +130850,8 @@
     },
     {
      "year": 2026,
-     "rank": 306,
-     "rating": 239.9,
+     "rank": 330,
+     "rating": 230.3,
      "team": "GWS"
     }
    ]
@@ -131146,7 +131146,7 @@
     },
     {
      "year": 2026,
-     "rank": 547,
+     "rank": 558,
      "rating": 61.4,
      "team": "GCFC"
     }
@@ -131375,8 +131375,8 @@
     },
     {
      "year": 2026,
-     "rank": 576,
-     "rating": 28.1,
+     "rank": 605,
+     "rating": 40.6,
      "team": "WCE"
     }
    ]
@@ -132060,8 +132060,8 @@
     },
     {
      "year": 2026,
-     "rank": 193,
-     "rating": 309.6,
+     "rank": 198,
+     "rating": 308.8,
      "team": "GEEL"
     }
    ]
@@ -132107,8 +132107,8 @@
     },
     {
      "year": 2026,
-     "rank": 398,
-     "rating": 161.6,
+     "rank": 408,
+     "rating": 158.7,
      "team": "CARL"
     }
    ]
@@ -132767,8 +132767,8 @@
     },
     {
      "year": 2026,
-     "rank": 359,
-     "rating": 198.9,
+     "rank": 332,
+     "rating": 229.0,
      "team": "CARL"
     }
    ]
@@ -133348,8 +133348,8 @@
     },
     {
      "year": 2026,
-     "rank": 374,
-     "rating": 187.0,
+     "rank": 385,
+     "rating": 182.1,
      "team": "GEEL"
     }
    ]
@@ -133471,8 +133471,8 @@
     },
     {
      "year": 2026,
-     "rank": 367,
-     "rating": 185.1,
+     "rank": 429,
+     "rating": 141.5,
      "team": "WCE"
     }
    ]
@@ -133635,8 +133635,8 @@
     },
     {
      "year": 2026,
-     "rank": 13,
-     "rating": 543.1,
+     "rank": 11,
+     "rating": 550.5,
      "team": "GEEL"
     }
    ]
@@ -133711,8 +133711,8 @@
     },
     {
      "year": 2026,
-     "rank": 73,
-     "rating": 394.3,
+     "rank": 78,
+     "rating": 382.8,
      "team": "MELB"
     }
    ]
@@ -133752,8 +133752,8 @@
     },
     {
      "year": 2026,
-     "rank": 99,
-     "rating": 366.6,
+     "rank": 122,
+     "rating": 347.7,
      "team": "COLL"
     }
    ]
@@ -133998,8 +133998,8 @@
     },
     {
      "year": 2026,
-     "rank": 531,
-     "rating": 46.6,
+     "rank": 686,
+     "rating": 7.9,
      "team": "WCE"
     }
    ]
@@ -134179,8 +134179,8 @@
     },
     {
      "year": 2026,
-     "rank": 530,
-     "rating": 42.6,
+     "rank": 516,
+     "rating": 76.8,
      "team": "GWS"
     }
    ]
@@ -134389,8 +134389,8 @@
     },
     {
      "year": 2026,
-     "rank": 263,
-     "rating": 269.3,
+     "rank": 286,
+     "rating": 256.1,
      "team": "GEEL"
     }
    ]
@@ -134447,8 +134447,8 @@
     },
     {
      "year": 2026,
-     "rank": 528,
-     "rating": 68.9,
+     "rank": 678,
+     "rating": 8.8,
      "team": "GCFC"
     }
    ]
@@ -134529,8 +134529,8 @@
     },
     {
      "year": 2026,
-     "rank": 391,
-     "rating": 173.6,
+     "rank": 409,
+     "rating": 159.0,
      "team": "GCFC"
     }
    ]
@@ -134652,8 +134652,8 @@
     },
     {
      "year": 2026,
-     "rank": 123,
-     "rating": 349.1,
+     "rank": 170,
+     "rating": 326.5,
      "team": "GCFC"
     }
    ]
@@ -134693,8 +134693,8 @@
     },
     {
      "year": 2026,
-     "rank": 277,
-     "rating": 260.1,
+     "rank": 308,
+     "rating": 241.1,
      "team": "MELB"
     }
    ]
@@ -134990,8 +134990,8 @@
     },
     {
      "year": 2026,
-     "rank": 525,
-     "rating": 62.9,
+     "rank": 593,
+     "rating": 39.5,
      "team": "CARL"
     }
    ]
@@ -135313,8 +135313,8 @@
     },
     {
      "year": 2026,
-     "rank": 497,
-     "rating": 102.4,
+     "rank": 526,
+     "rating": 83.1,
      "team": "MELB"
     }
    ]
@@ -135400,8 +135400,8 @@
     },
     {
      "year": 2026,
-     "rank": 333,
-     "rating": 223.8,
+     "rank": 383,
+     "rating": 180.2,
      "team": "CARL"
     }
    ]
@@ -135770,7 +135770,7 @@
     },
     {
      "year": 2026,
-     "rank": 670,
+     "rank": 666,
      "rating": 13.5,
      "team": "COLL"
     }
@@ -135920,8 +135920,8 @@
     },
     {
      "year": 2026,
-     "rank": 437,
-     "rating": 119.5,
+     "rank": 377,
+     "rating": 183.5,
      "team": "GWS"
     }
    ]
@@ -135990,7 +135990,7 @@
     },
     {
      "year": 2026,
-     "rank": 546,
+     "rank": 542,
      "rating": 68.0,
      "team": "MELB"
     }
@@ -136135,8 +136135,8 @@
     },
     {
      "year": 2026,
-     "rank": 118,
-     "rating": 353.3,
+     "rank": 126,
+     "rating": 347.5,
      "team": "GEEL"
     }
    ]
@@ -136240,8 +136240,8 @@
     },
     {
      "year": 2026,
-     "rank": 177,
-     "rating": 321.3,
+     "rank": 179,
+     "rating": 321.4,
      "team": "MELB"
     }
    ]
@@ -136281,8 +136281,8 @@
     },
     {
      "year": 2026,
-     "rank": 423,
-     "rating": 140.0,
+     "rank": 413,
+     "rating": 155.1,
      "team": "GCFC"
     }
    ]
@@ -136507,8 +136507,8 @@
     },
     {
      "year": 2026,
-     "rank": 4,
-     "rating": 629.1,
+     "rank": 3,
+     "rating": 627.5,
      "team": "COLL"
     }
    ]
@@ -136886,7 +136886,7 @@
     },
     {
      "year": 2026,
-     "rank": 355,
+     "rank": 359,
      "rating": 202.2,
      "team": "CARL"
     }
@@ -137153,8 +137153,8 @@
     },
     {
      "year": 2026,
-     "rank": 296,
-     "rating": 249.1,
+     "rank": 314,
+     "rating": 238.0,
      "team": "WCE"
     }
    ]
@@ -137223,7 +137223,7 @@
     },
     {
      "year": 2026,
-     "rank": 491,
+     "rank": 486,
      "rating": 103.8,
      "team": "MELB"
     }
@@ -137293,8 +137293,8 @@
     },
     {
      "year": 2026,
-     "rank": 564,
-     "rating": 33.7,
+     "rank": 484,
+     "rating": 106.0,
      "team": "WCE"
     }
    ]
@@ -137328,8 +137328,8 @@
     },
     {
      "year": 2026,
-     "rank": 152,
-     "rating": 335.7,
+     "rank": 130,
+     "rating": 342.1,
      "team": "GCFC"
     }
    ]
@@ -137398,8 +137398,8 @@
     },
     {
      "year": 2026,
-     "rank": 27,
-     "rating": 498.7,
+     "rank": 20,
+     "rating": 520.5,
      "team": "GWS"
     }
    ]
@@ -137747,8 +137747,8 @@
     },
     {
      "year": 2026,
-     "rank": 402,
-     "rating": 146.3,
+     "rank": 427,
+     "rating": 137.0,
      "team": "GWS"
     }
    ]
@@ -137817,8 +137817,8 @@
     },
     {
      "year": 2026,
-     "rank": 56,
-     "rating": 418.3,
+     "rank": 69,
+     "rating": 400.0,
      "team": "GEEL"
     }
    ]
@@ -137962,8 +137962,8 @@
     },
     {
      "year": 2026,
-     "rank": 571,
-     "rating": 58.2,
+     "rank": 551,
+     "rating": 62.4,
      "team": "GEEL"
     }
    ]
@@ -138008,8 +138008,8 @@
     },
     {
      "year": 2026,
-     "rank": 237,
-     "rating": 288.1,
+     "rank": 226,
+     "rating": 295.8,
      "team": "COLL"
     }
    ]
@@ -138223,8 +138223,8 @@
     },
     {
      "year": 2026,
-     "rank": 370,
-     "rating": 183.8,
+     "rank": 425,
+     "rating": 144.1,
      "team": "WCE"
     }
    ]
@@ -138395,7 +138395,7 @@
     },
     {
      "year": 2026,
-     "rank": 693,
+     "rank": 686,
      "rating": 6.4,
      "team": "MELB"
     }
@@ -138465,8 +138465,8 @@
     },
     {
      "year": 2026,
-     "rank": 434,
-     "rating": 124.6,
+     "rank": 412,
+     "rating": 154.1,
      "team": "WCE"
     }
    ]
@@ -138529,8 +138529,8 @@
     },
     {
      "year": 2026,
-     "rank": 577,
-     "rating": 53.9,
+     "rank": 589,
+     "rating": 48.4,
      "team": "COLL"
     }
    ]
@@ -138575,8 +138575,8 @@
     },
     {
      "year": 2026,
-     "rank": 494,
-     "rating": 90.7,
+     "rank": 502,
+     "rating": 96.5,
      "team": "GCFC"
     }
    ]
@@ -138633,8 +138633,8 @@
     },
     {
      "year": 2026,
-     "rank": 639,
-     "rating": 12.5,
+     "rank": 617,
+     "rating": 29.4,
      "team": "CARL"
     }
    ]
@@ -138703,8 +138703,8 @@
     },
     {
      "year": 2026,
-     "rank": 494,
-     "rating": 83.7,
+     "rank": 549,
+     "rating": 61.0,
      "team": "CARL"
     }
    ]
@@ -138883,8 +138883,8 @@
     },
     {
      "year": 2026,
-     "rank": 368,
-     "rating": 191.9,
+     "rank": 348,
+     "rating": 208.8,
      "team": "MELB"
     }
    ]
@@ -138964,8 +138964,8 @@
     },
     {
      "year": 2026,
-     "rank": 83,
-     "rating": 379.4,
+     "rank": 71,
+     "rating": 392.2,
      "team": "GCFC"
     }
    ]
@@ -139034,8 +139034,8 @@
     },
     {
      "year": 2026,
-     "rank": 227,
-     "rating": 292.0,
+     "rank": 233,
+     "rating": 290.3,
      "team": "MELB"
     }
    ]
@@ -139450,8 +139450,8 @@
     },
     {
      "year": 2026,
-     "rank": 256,
-     "rating": 273.1,
+     "rank": 300,
+     "rating": 244.8,
      "team": "GEEL"
     }
    ]
@@ -139669,8 +139669,8 @@
     },
     {
      "year": 2026,
-     "rank": 132,
-     "rating": 346.7,
+     "rank": 118,
+     "rating": 350.6,
      "team": "GCFC"
     }
    ]
@@ -139698,8 +139698,8 @@
     },
     {
      "year": 2026,
-     "rank": 432,
-     "rating": 126.7,
+     "rank": 334,
+     "rating": 216.6,
      "team": "WCE"
     }
    ]
@@ -139779,8 +139779,8 @@
     },
     {
      "year": 2026,
-     "rank": 192,
-     "rating": 310.1,
+     "rank": 186,
+     "rating": 315.2,
      "team": "WCE"
     }
    ]
@@ -139837,8 +139837,8 @@
     },
     {
      "year": 2026,
-     "rank": 528,
-     "rating": 47.8,
+     "rank": 614,
+     "rating": 34.7,
      "team": "WCE"
     }
    ]
@@ -139924,7 +139924,7 @@
     },
     {
      "year": 2026,
-     "rank": 295,
+     "rank": 294,
      "rating": 250.9,
      "team": "CARL"
     }
@@ -140011,8 +140011,8 @@
     },
     {
      "year": 2026,
-     "rank": 312,
-     "rating": 239.9,
+     "rank": 286,
+     "rating": 258.6,
      "team": "WCE"
     }
    ]
@@ -140040,8 +140040,8 @@
     },
     {
      "year": 2026,
-     "rank": 405,
-     "rating": 150.2,
+     "rank": 402,
+     "rating": 165.9,
      "team": "WCE"
     }
    ]
@@ -140121,8 +140121,8 @@
     },
     {
      "year": 2026,
-     "rank": 490,
-     "rating": 68.2,
+     "rank": 501,
+     "rating": 87.8,
      "team": "GWS"
     }
    ]
@@ -140150,8 +140150,8 @@
     },
     {
      "year": 2026,
-     "rank": 285,
-     "rating": 253.7,
+     "rank": 223,
+     "rating": 301.9,
      "team": "GWS"
     }
    ]
@@ -140179,8 +140179,8 @@
     },
     {
      "year": 2026,
-     "rank": 331,
-     "rating": 226.5,
+     "rank": 320,
+     "rating": 234.0,
      "team": "CARL"
     }
    ]
@@ -140433,8 +140433,8 @@
     },
     {
      "year": 2026,
-     "rank": 436,
-     "rating": 120.5,
+     "rank": 439,
+     "rating": 129.7,
      "team": "GWS"
     }
    ]
@@ -140502,7 +140502,7 @@
     },
     {
      "year": 2026,
-     "rank": 562,
+     "rank": 563,
      "rating": 60.5,
      "team": "COLL"
     }
@@ -140531,8 +140531,8 @@
     },
     {
      "year": 2026,
-     "rank": 457,
-     "rating": 124.4,
+     "rank": 515,
+     "rating": 86.9,
      "team": "GEEL"
     }
    ]
@@ -141052,8 +141052,8 @@
     },
     {
      "year": 2026,
-     "rank": 112,
-     "rating": 364.7,
+     "rank": 118,
+     "rating": 350.9,
      "team": "GWS"
     }
    ]
@@ -141155,7 +141155,7 @@
     },
     {
      "year": 2026,
-     "rank": 556,
+     "rank": 557,
      "rating": 62.1,
      "team": "COLL"
     }
@@ -141184,8 +141184,8 @@
     },
     {
      "year": 2026,
-     "rank": 257,
-     "rating": 271.1,
+     "rank": 301,
+     "rating": 245.8,
      "team": "COLL"
     }
    ]
@@ -141329,8 +141329,8 @@
     },
     {
      "year": 2026,
-     "rank": 433,
-     "rating": 125.6,
+     "rank": 495,
+     "rating": 101.8,
      "team": "WCE"
     }
    ]
@@ -141387,7 +141387,7 @@
     },
     {
      "year": 2026,
-     "rank": 692,
+     "rank": 685,
      "rating": 6.6,
      "team": "MELB"
     }
@@ -141456,7 +141456,7 @@
     },
     {
      "year": 2026,
-     "rank": 580,
+     "rank": 594,
      "rating": 39.2,
      "team": "CARL"
     }
@@ -141496,8 +141496,8 @@
     },
     {
      "year": 2026,
-     "rank": 495,
-     "rating": 102.8,
+     "rank": 536,
+     "rating": 75.1,
      "team": "MELB"
     }
    ]
@@ -141554,7 +141554,7 @@
     },
     {
      "year": 2026,
-     "rank": 611,
+     "rank": 624,
      "rating": 25.2,
      "team": "CARL"
     }
@@ -141761,8 +141761,8 @@
     },
     {
      "year": 2026,
-     "rank": 543,
-     "rating": 36.8,
+     "rank": 554,
+     "rating": 58.9,
      "team": "GWS"
     }
    ]
@@ -141915,8 +141915,8 @@
     },
     {
      "year": 2026,
-     "rank": 505,
-     "rating": 60.0,
+     "rank": 485,
+     "rating": 96.9,
      "team": "GWS"
     }
    ]
@@ -142063,8 +142063,8 @@
     },
     {
      "year": 2026,
-     "rank": 310,
-     "rating": 238.4,
+     "rank": 367,
+     "rating": 195.5,
      "team": "GCFC"
     }
    ]
@@ -142109,8 +142109,8 @@
     },
     {
      "year": 2026,
-     "rank": 328,
-     "rating": 231.4,
+     "rank": 386,
+     "rating": 179.9,
      "team": "GCFC"
     }
    ]
@@ -142132,8 +142132,8 @@
     },
     {
      "year": 2026,
-     "rank": 251,
-     "rating": 278.3,
+     "rank": 283,
+     "rating": 261.0,
      "team": "MELB"
     }
    ]
@@ -142178,8 +142178,8 @@
     },
     {
      "year": 2026,
-     "rank": 37,
-     "rating": 457.1,
+     "rank": 59,
+     "rating": 417.5,
      "team": "GEEL"
     }
    ]
@@ -142270,8 +142270,8 @@
     },
     {
      "year": 2026,
-     "rank": 171,
-     "rating": 322.7,
+     "rank": 182,
+     "rating": 320.7,
      "team": "GEEL"
     }
    ]
@@ -142408,7 +142408,7 @@
     },
     {
      "year": 2026,
-     "rank": 479,
+     "rank": 474,
      "rating": 110.9,
      "team": "COLL"
     }
@@ -142431,8 +142431,8 @@
     },
     {
      "year": 2026,
-     "rank": 309,
-     "rating": 238.6,
+     "rank": 323,
+     "rating": 229.6,
      "team": "MELB"
     }
    ]
@@ -142477,8 +142477,8 @@
     },
     {
      "year": 2026,
-     "rank": 492,
-     "rating": 91.9,
+     "rank": 496,
+     "rating": 99.2,
      "team": "GCFC"
     }
    ]
@@ -142569,8 +142569,8 @@
     },
     {
      "year": 2026,
-     "rank": 441,
-     "rating": 126.8,
+     "rank": 401,
+     "rating": 165.3,
      "team": "GCFC"
     }
    ]
@@ -142615,8 +142615,8 @@
     },
     {
      "year": 2026,
-     "rank": 576,
-     "rating": 54.0,
+     "rank": 571,
+     "rating": 55.1,
      "team": "COLL"
     }
    ]
@@ -142684,8 +142684,8 @@
     },
     {
      "year": 2026,
-     "rank": 159,
-     "rating": 331.1,
+     "rank": 88,
+     "rating": 376.3,
      "team": "WCE"
     }
    ]
@@ -142724,8 +142724,8 @@
     },
     {
      "year": 2026,
-     "rank": 268,
-     "rating": 264.4,
+     "rank": 159,
+     "rating": 332.6,
      "team": "GWS"
     }
    ]
@@ -142747,8 +142747,8 @@
     },
     {
      "year": 2026,
-     "rank": 470,
-     "rating": 106.8,
+     "rank": 454,
+     "rating": 120.8,
      "team": "GCFC"
     }
    ]
@@ -142770,7 +142770,7 @@
     },
     {
      "year": 2026,
-     "rank": 357,
+     "rank": 361,
      "rating": 200.9,
      "team": "CARL"
     }
@@ -142833,7 +142833,7 @@
     },
     {
      "year": 2026,
-     "rank": 523,
+     "rank": 534,
      "rating": 65.7,
      "team": "CARL"
     }
@@ -142936,8 +142936,8 @@
     },
     {
      "year": 2026,
-     "rank": 189,
-     "rating": 313.0,
+     "rank": 192,
+     "rating": 313.4,
      "team": "GEEL"
     }
    ]
@@ -143238,8 +143238,8 @@
     },
     {
      "year": 2026,
-     "rank": 482,
-     "rating": 109.8,
+     "rank": 523,
+     "rating": 81.8,
      "team": "GEEL"
     }
    ]
@@ -143353,7 +143353,7 @@
     },
     {
      "year": 2026,
-     "rank": 617,
+     "rank": 610,
      "rating": 34.7,
      "team": "GEEL"
     }
@@ -143410,8 +143410,8 @@
     },
     {
      "year": 2026,
-     "rank": 456,
-     "rating": 111.1,
+     "rank": 488,
+     "rating": 104.2,
      "team": "WCE"
     }
    ]
@@ -143450,8 +143450,8 @@
     },
     {
      "year": 2026,
-     "rank": 420,
-     "rating": 150.8,
+     "rank": 475,
+     "rating": 107.6,
      "team": "GEEL"
     }
    ]
@@ -143473,7 +143473,7 @@
     },
     {
      "year": 2026,
-     "rank": 695,
+     "rank": 690,
      "rating": 5.8,
      "team": "MELB"
     }
@@ -143559,8 +143559,8 @@
     },
     {
      "year": 2026,
-     "rank": 592,
-     "rating": 34.2,
+     "rank": 541,
+     "rating": 63.0,
      "team": "CARL"
     }
    ]
@@ -143605,8 +143605,8 @@
     },
     {
      "year": 2026,
-     "rank": 471,
-     "rating": 92.0,
+     "rank": 512,
+     "rating": 96.1,
      "team": "WCE"
     }
    ]
@@ -143777,8 +143777,8 @@
     },
     {
      "year": 2026,
-     "rank": 367,
-     "rating": 191.7,
+     "rank": 371,
+     "rating": 192.0,
      "team": "CARL"
     }
    ]
@@ -143823,8 +143823,8 @@
     },
     {
      "year": 2026,
-     "rank": 587,
-     "rating": 23.5,
+     "rank": 607,
+     "rating": 40.4,
      "team": "WCE"
     }
    ]
@@ -144041,8 +144041,8 @@
     },
     {
      "year": 2026,
-     "rank": 598,
-     "rating": 10.1,
+     "rank": 424,
+     "rating": 139.9,
      "team": "GWS"
     }
    ]
@@ -144064,8 +144064,8 @@
     },
     {
      "year": 2026,
-     "rank": 595,
-     "rating": 11.1,
+     "rank": 586,
+     "rating": 42.8,
      "team": "GWS"
     }
    ]
@@ -144087,8 +144087,8 @@
     },
     {
      "year": 2026,
-     "rank": 404,
-     "rating": 145.3,
+     "rank": 325,
+     "rating": 232.6,
      "team": "GWS"
     }
    ]
@@ -144242,8 +144242,8 @@
     },
     {
      "year": 2026,
-     "rank": 451,
-     "rating": 116.0,
+     "rank": 454,
+     "rating": 121.5,
      "team": "WCE"
     }
    ]
@@ -144293,8 +144293,8 @@
     },
     {
      "year": 2026,
-     "rank": 121,
-     "rating": 347.9,
+     "rank": 138,
+     "rating": 340.7,
      "team": "MELB"
     }
    ]
@@ -144412,8 +144412,8 @@
     },
     {
      "year": 2026,
-     "rank": 422,
-     "rating": 137.3,
+     "rank": 201,
+     "rating": 309.7,
      "team": "WCE"
     }
    ]
@@ -144429,8 +144429,8 @@
     },
     {
      "year": 2026,
-     "rank": 439,
-     "rating": 137.5,
+     "rank": 442,
+     "rating": 131.5,
      "team": "MELB"
     }
    ]
@@ -144525,8 +144525,8 @@
     },
     {
      "year": 2026,
-     "rank": 489,
-     "rating": 70.2,
+     "rank": 363,
+     "rating": 201.0,
      "team": "WCE"
     }
    ]
@@ -144576,7 +144576,7 @@
     },
     {
      "year": 2026,
-     "rank": 583,
+     "rank": 600,
      "rating": 36.6,
      "team": "CARL"
     }
@@ -144610,8 +144610,8 @@
     },
     {
      "year": 2026,
-     "rank": 579,
-     "rating": 27.8,
+     "rank": 597,
+     "rating": 42.9,
      "team": "WCE"
     }
    ]
@@ -144644,8 +144644,8 @@
     },
     {
      "year": 2026,
-     "rank": 494,
-     "rating": 67.8,
+     "rank": 406,
+     "rating": 159.9,
      "team": "WCE"
     }
    ]
@@ -144661,8 +144661,8 @@
     },
     {
      "year": 2026,
-     "rank": 401,
-     "rating": 165.3,
+     "rank": 413,
+     "rating": 153.9,
      "team": "COLL"
     }
    ]
@@ -144712,7 +144712,7 @@
     },
     {
      "year": 2026,
-     "rank": 572,
+     "rank": 628,
      "rating": 23.0,
      "team": "GWS"
     }
@@ -144729,7 +144729,7 @@
     },
     {
      "year": 2026,
-     "rank": 652,
+     "rank": 645,
      "rating": 19.9,
      "team": "MELB"
     }
@@ -144763,8 +144763,8 @@
     },
     {
      "year": 2026,
-     "rank": 522,
-     "rating": 52.7,
+     "rank": 440,
+     "rating": 131.7,
      "team": "WCE"
     }
    ]
@@ -144831,7 +144831,7 @@
     },
     {
      "year": 2026,
-     "rank": 659,
+     "rank": 653,
      "rating": 17.0,
      "team": "MELB"
     }
@@ -144933,7 +144933,7 @@
     },
     {
      "year": 2026,
-     "rank": 636,
+     "rank": 643,
      "rating": 13.6,
      "team": "CARL"
     }
@@ -144961,8 +144961,8 @@
     },
     {
      "year": 2026,
-     "rank": 584,
-     "rating": 35.9,
+     "rank": 561,
+     "rating": 53.6,
      "team": "CARL"
     }
    ]
@@ -144978,8 +144978,8 @@
     },
     {
      "year": 2026,
-     "rank": 566,
-     "rating": 58.9,
+     "rank": 590,
+     "rating": 48.1,
      "team": "COLL"
     }
    ]
@@ -144995,8 +144995,8 @@
     },
     {
      "year": 2026,
-     "rank": 448,
-     "rating": 123.9,
+     "rank": 394,
+     "rating": 174.7,
      "team": "GCFC"
     }
    ]
@@ -145012,8 +145012,8 @@
     },
     {
      "year": 2026,
-     "rank": 607,
-     "rating": 38.9,
+     "rank": 623,
+     "rating": 29.7,
      "team": "COLL"
     }
    ]
@@ -145029,8 +145029,8 @@
     },
     {
      "year": 2026,
-     "rank": 635,
-     "rating": 7.5,
+     "rank": 591,
+     "rating": 46.7,
      "team": "WCE"
     }
    ]
@@ -145097,8 +145097,8 @@
     },
     {
      "year": 2026,
-     "rank": 601,
-     "rating": 8.7,
+     "rank": 635,
+     "rating": 17.3,
      "team": "GWS"
     }
    ]
@@ -145148,8 +145148,8 @@
     },
     {
      "year": 2026,
-     "rank": 651,
-     "rating": 10.9,
+     "rank": 639,
+     "rating": 22.6,
      "team": "GCFC"
     }
    ]
@@ -145165,8 +145165,8 @@
     },
     {
      "year": 2026,
-     "rank": null,
-     "rating": 0.0,
+     "rank": 706,
+     "rating": -1.1,
      "team": "GCFC"
     }
    ]
@@ -145199,7 +145199,7 @@
     },
     {
      "year": 2026,
-     "rank": 650,
+     "rank": 703,
      "rating": 3.6,
      "team": "WCE"
     }
@@ -145267,7 +145267,7 @@
     },
     {
      "year": 2026,
-     "rank": 599,
+     "rank": 651,
      "rating": 18.4,
      "team": "WCE"
     }
@@ -145301,8 +145301,8 @@
     },
     {
      "year": 2026,
-     "rank": 676,
-     "rating": 12.3,
+     "rank": 699,
+     "rating": 4.8,
      "team": "COLL"
     }
    ]
@@ -145437,8 +145437,8 @@
     },
     {
      "year": 2026,
-     "rank": 600,
-     "rating": 42.5,
+     "rank": 688,
+     "rating": 5.2,
      "team": "GEEL"
     }
    ]
@@ -145533,8 +145533,8 @@
     },
     {
      "year": 2026,
-     "rank": null,
-     "rating": 0.0,
+     "rank": 682,
+     "rating": 3.0,
      "team": "GWS"
     }
    ]
@@ -145612,8 +145612,8 @@
     },
     {
      "year": 2026,
-     "rank": 493,
-     "rating": 84.4,
+     "rank": 435,
+     "rating": 132.0,
      "team": "CARL"
     }
    ]
@@ -145697,8 +145697,8 @@
     },
     {
      "year": 2026,
-     "rank": null,
-     "rating": 0.0,
+     "rank": 661,
+     "rating": 8.4,
      "team": "GWS"
     }
    ]
@@ -145878,7 +145878,7 @@
     },
     {
      "year": 2026,
-     "rank": 597,
+     "rank": 605,
      "rating": 37.2,
      "team": "GCFC"
     }
@@ -146224,6 +146224,28 @@
     }
    ]
   },
+  "CD_I1033115": {
+   "name": "Willem Duursma",
+   "seasons": [
+    {
+     "year": 2026,
+     "rank": 397,
+     "rating": 173.0,
+     "team": "WCE"
+    }
+   ]
+  },
+  "CD_I1005972": {
+   "name": "Milan Murdock",
+   "seasons": [
+    {
+     "year": 2026,
+     "rank": 418,
+     "rating": 148.6,
+     "team": "WCE"
+    }
+   ]
+  },
   "CD_I1043261": {
    "name": "Sullivan Robey",
    "seasons": [
@@ -146257,17 +146279,6 @@
     }
    ]
   },
-  "CD_I1023744": {
-   "name": "Angus Anderson",
-   "seasons": [
-    {
-     "year": 2026,
-     "rank": 463,
-     "rating": 119.7,
-     "team": "COLL"
-    }
-   ]
-  },
   "CD_I1027168": {
    "name": "Dyson Sharp",
    "seasons": [
@@ -146290,6 +146301,17 @@
     }
    ]
   },
+  "CD_I1023744": {
+   "name": "Angus Anderson",
+   "seasons": [
+    {
+     "year": 2026,
+     "rank": 472,
+     "rating": 111.9,
+     "team": "COLL"
+    }
+   ]
+  },
   "CD_I1027099": {
    "name": "Sam Cumming",
    "seasons": [
@@ -146298,6 +146320,39 @@
      "rank": 507,
      "rating": 98.9,
      "team": "RICH"
+    }
+   ]
+  },
+  "CD_I1033078": {
+   "name": "Josh Lindsay",
+   "seasons": [
+    {
+     "year": 2026,
+     "rank": 502,
+     "rating": 98.5,
+     "team": "WCE"
+    }
+   ]
+  },
+  "CD_I1029297": {
+   "name": "Zeke Uwland",
+   "seasons": [
+    {
+     "year": 2026,
+     "rank": 504,
+     "rating": 95.2,
+     "team": "GCFC"
+    }
+   ]
+  },
+  "CD_I1033084": {
+   "name": "Harry Dean",
+   "seasons": [
+    {
+     "year": 2026,
+     "rank": 499,
+     "rating": 88.2,
+     "team": "CARL"
     }
    ]
   },
@@ -146312,14 +146367,14 @@
     }
    ]
   },
-  "CD_I1017073": {
-   "name": "Joel Fitzgerald",
+  "CD_I1028725": {
+   "name": "Cooper Duff-Tytler",
    "seasons": [
     {
      "year": 2026,
-     "rank": 528,
-     "rating": 82.0,
-     "team": "MELB"
+     "rank": 537,
+     "rating": 71.7,
+     "team": "WCE"
     }
    ]
   },
@@ -146331,6 +146386,17 @@
      "rank": 544,
      "rating": 69.3,
      "team": "ESS"
+    }
+   ]
+  },
+  "CD_I1015798": {
+   "name": "Marcus Herbert",
+   "seasons": [
+    {
+     "year": 2026,
+     "rank": 550,
+     "rating": 64.2,
+     "team": "WCE"
     }
    ]
   },
@@ -146350,7 +146416,7 @@
    "seasons": [
     {
      "year": 2026,
-     "rank": 559,
+     "rank": 555,
      "rating": 61.9,
      "team": "MELB"
     }
@@ -146367,36 +146433,25 @@
     }
    ]
   },
-  "CD_I1037021": {
-   "name": "Sam Swadling",
+  "CD_I1032398": {
+   "name": "Beau Addinsall",
    "seasons": [
     {
      "year": 2026,
-     "rank": 571,
-     "rating": 56.8,
-     "team": "COLL"
-    }
-   ]
-  },
-  "CD_I1029297": {
-   "name": "Zeke Uwland",
-   "seasons": [
-    {
-     "year": 2026,
-     "rank": 558,
-     "rating": 55.9,
+     "rank": 583,
+     "rating": 48.6,
      "team": "GCFC"
     }
    ]
   },
-  "CD_I1033084": {
-   "name": "Harry Dean",
+  "CD_I1017073": {
+   "name": "Joel Fitzgerald",
    "seasons": [
     {
      "year": 2026,
-     "rank": 550,
-     "rating": 52.3,
-     "team": "CARL"
+     "rank": 584,
+     "rating": 48.5,
+     "team": "MELB"
     }
    ]
   },
@@ -146411,14 +146466,14 @@
     }
    ]
   },
-  "CD_I1033115": {
-   "name": "Willem Duursma",
+  "CD_I1037021": {
+   "name": "Sam Swadling",
    "seasons": [
     {
      "year": 2026,
-     "rank": 534,
-     "rating": 45.5,
-     "team": "WCE"
+     "rank": 595,
+     "rating": 43.7,
+     "team": "COLL"
     }
    ]
   },
@@ -146430,6 +146485,17 @@
      "rank": 606,
      "rating": 39.1,
      "team": "PORT"
+    }
+   ]
+  },
+  "CD_I1029307": {
+   "name": "Jai Murray",
+   "seasons": [
+    {
+     "year": 2026,
+     "rank": 609,
+     "rating": 35.0,
+     "team": "GCFC"
     }
    ]
   },
@@ -146455,25 +146521,14 @@
     }
    ]
   },
-  "CD_I1028725": {
-   "name": "Cooper Duff-Tytler",
+  "CD_I1036426": {
+   "name": "Talor Byrne",
    "seasons": [
     {
      "year": 2026,
-     "rank": 568,
-     "rating": 31.9,
-     "team": "WCE"
-    }
-   ]
-  },
-  "CD_I1005972": {
-   "name": "Milan Murdock",
-   "seasons": [
-    {
-     "year": 2026,
-     "rank": 570,
-     "rating": 31.1,
-     "team": "WCE"
+     "rank": 611,
+     "rating": 32.0,
+     "team": "CARL"
     }
    ]
   },
@@ -146493,8 +146548,8 @@
    "seasons": [
     {
      "year": 2026,
-     "rank": 628,
-     "rating": 28.2,
+     "rank": 627,
+     "rating": 27.2,
      "team": "COLL"
     }
    ]
@@ -146521,6 +146576,17 @@
     }
    ]
   },
+  "CD_I1033568": {
+   "name": "Dylan Patterson",
+   "seasons": [
+    {
+     "year": 2026,
+     "rank": 635,
+     "rating": 24.2,
+     "team": "GCFC"
+    }
+   ]
+  },
   "CD_I1033059": {
    "name": "Tom Burton",
    "seasons": [
@@ -146543,47 +146609,25 @@
     }
    ]
   },
-  "CD_I1036426": {
-   "name": "Talor Byrne",
+  "CD_I1027101": {
+   "name": "Oliver Francou",
    "seasons": [
     {
      "year": 2026,
-     "rank": 624,
-     "rating": 20.9,
-     "team": "CARL"
-    }
-   ]
-  },
-  "CD_I1029307": {
-   "name": "Jai Murray",
-   "seasons": [
-    {
-     "year": 2026,
-     "rank": 636,
-     "rating": 16.5,
-     "team": "GCFC"
-    }
-   ]
-  },
-  "CD_I1033072": {
-   "name": "Xavier Taylor",
-   "seasons": [
-    {
-     "year": 2026,
-     "rank": 662,
-     "rating": 16.1,
-     "team": "MELB"
-    }
-   ]
-  },
-  "CD_I1033078": {
-   "name": "Josh Lindsay",
-   "seasons": [
-    {
-     "year": 2026,
-     "rank": 608,
-     "rating": 15.6,
+     "rank": 642,
+     "rating": 20.4,
      "team": "WCE"
+    }
+   ]
+  },
+  "CD_I1033066": {
+   "name": "Jack Ison",
+   "seasons": [
+    {
+     "year": 2026,
+     "rank": 632,
+     "rating": 19.5,
+     "team": "CARL"
     }
    ]
   },
@@ -146620,14 +146664,14 @@
     }
    ]
   },
-  "CD_I1033066": {
-   "name": "Jack Ison",
+  "CD_I1033072": {
+   "name": "Xavier Taylor",
    "seasons": [
     {
      "year": 2026,
-     "rank": 652,
-     "rating": 8.0,
-     "team": "CARL"
+     "rank": 673,
+     "rating": 10.7,
+     "team": "MELB"
     }
    ]
   },
@@ -146647,7 +146691,7 @@
    "seasons": [
     {
      "year": 2026,
-     "rank": 696,
+     "rank": 691,
      "rating": 5.6,
      "team": "MELB"
     }
@@ -146661,17 +146705,6 @@
      "rank": 629,
      "rating": 4.6,
      "team": "BL"
-    }
-   ]
-  },
-  "CD_I1032398": {
-   "name": "Beau Addinsall",
-   "seasons": [
-    {
-     "year": 2026,
-     "rank": 675,
-     "rating": 4.6,
-     "team": "GCFC"
     }
    ]
   },
@@ -146691,7 +146724,7 @@
    "seasons": [
     {
      "year": 2026,
-     "rank": 707,
+     "rank": 706,
      "rating": 1.5,
      "team": "COLL"
     }
@@ -146716,17 +146749,6 @@
      "rank": null,
      "rating": 0.0,
      "team": "SYD"
-    }
-   ]
-  },
-  "CD_I1015798": {
-   "name": "Marcus Herbert",
-   "seasons": [
-    {
-     "year": 2026,
-     "rank": null,
-     "rating": 0.0,
-     "team": "WCE"
     }
    ]
   },
@@ -146760,17 +146782,6 @@
      "rank": null,
      "rating": 0.0,
      "team": "WB"
-    }
-   ]
-  },
-  "CD_I1027101": {
-   "name": "Oliver Francou",
-   "seasons": [
-    {
-     "year": 2026,
-     "rank": null,
-     "rating": 0.0,
-     "team": "WCE"
     }
    ]
   },
@@ -147051,17 +147062,6 @@
   },
   "CD_I1033555": {
    "name": "Koby Coulson",
-   "seasons": [
-    {
-     "year": 2026,
-     "rank": null,
-     "rating": 0.0,
-     "team": "GCFC"
-    }
-   ]
-  },
-  "CD_I1033568": {
-   "name": "Dylan Patterson",
    "seasons": [
     {
      "year": 2026,

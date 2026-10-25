@@ -15727,7 +15727,7 @@
      "result": "W",
      "disp": 10,
      "af": 43,
-     "rating": 10.5,
+     "rating": 9.9,
      "goals": 0
     },
     {
@@ -15760,7 +15760,7 @@
    ],
    "l5_disp": 10.5,
    "l5_af": 44.5,
-   "l5_rating": 7.2,
+   "l5_rating": 7.0,
    "l5_goals": 0.0,
    "played": 4
   },
@@ -17003,7 +17003,7 @@
      "result": "L",
      "disp": 12,
      "af": 72,
-     "rating": 13.2,
+     "rating": 12.6,
      "goals": 3
     },
     {
@@ -17027,7 +17027,7 @@
    ],
    "l5_disp": 12.0,
    "l5_af": 63.0,
-   "l5_rating": 9.7,
+   "l5_rating": 9.5,
    "l5_goals": 2.0,
    "played": 3
   },

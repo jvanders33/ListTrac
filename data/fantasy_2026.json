@@ -874,17 +874,6 @@
    "af_total": 2003
   },
   {
-   "cd_id": "CD_I994185",
-   "first_name": "Jordan",
-   "last_name": "De Goey",
-   "name": "Jordan De Goey",
-   "team": "COLL",
-   "position": "MIDFIELDER_FORWARD",
-   "games": 22.0,
-   "af_avg": 83.5,
-   "af_total": 1837
-  },
-  {
    "cd_id": "CD_I1023270",
    "first_name": "Marcus",
    "last_name": "Windhager",
@@ -894,6 +883,17 @@
    "games": 23.0,
    "af_avg": 83.5,
    "af_total": 1920
+  },
+  {
+   "cd_id": "CD_I994185",
+   "first_name": "Jordan",
+   "last_name": "De Goey",
+   "name": "Jordan De Goey",
+   "team": "COLL",
+   "position": "MIDFIELDER_FORWARD",
+   "games": 22.0,
+   "af_avg": 83.5,
+   "af_total": 1837
   },
   {
    "cd_id": "CD_I992468",
@@ -1215,17 +1215,6 @@
    "af_total": 1346
   },
   {
-   "cd_id": "CD_I998659",
-   "first_name": "Luke",
-   "last_name": "Ryan",
-   "name": "Luke Ryan",
-   "team": "FRE",
-   "position": "MEDIUM_DEFENDER",
-   "games": 26.0,
-   "af_avg": 79.1,
-   "af_total": 2056
-  },
-  {
    "cd_id": "CD_I1002222",
    "first_name": "James",
    "last_name": "Worpel",
@@ -1235,6 +1224,17 @@
    "games": 11.0,
    "af_avg": 79.1,
    "af_total": 870
+  },
+  {
+   "cd_id": "CD_I998659",
+   "first_name": "Luke",
+   "last_name": "Ryan",
+   "name": "Luke Ryan",
+   "team": "FRE",
+   "position": "MEDIUM_DEFENDER",
+   "games": 26.0,
+   "af_avg": 79.1,
+   "af_total": 2056
   },
   {
    "cd_id": "CD_I1017939",
@@ -1314,17 +1314,6 @@
    "af_total": 1724
   },
   {
-   "cd_id": "CD_I297354",
-   "first_name": "Karl",
-   "last_name": "Amon",
-   "name": "Karl Amon",
-   "team": "HAW",
-   "position": "MEDIUM_DEFENDER",
-   "games": 20.0,
-   "af_avg": 78.3,
-   "af_total": 1566
-  },
-  {
    "cd_id": "CD_I1023492",
    "first_name": "Harley",
    "last_name": "Reid",
@@ -1334,6 +1323,17 @@
    "games": 23.0,
    "af_avg": 78.3,
    "af_total": 1802
+  },
+  {
+   "cd_id": "CD_I297354",
+   "first_name": "Karl",
+   "last_name": "Amon",
+   "name": "Karl Amon",
+   "team": "HAW",
+   "position": "MEDIUM_DEFENDER",
+   "games": 20.0,
+   "af_avg": 78.3,
+   "af_total": 1566
   },
   {
    "cd_id": "CD_I1006013",
@@ -1941,17 +1941,6 @@
    "af_total": 721
   },
   {
-   "cd_id": "CD_I1017091",
-   "first_name": "Jai",
-   "last_name": "Serong",
-   "name": "Jai Serong",
-   "team": "SYD",
-   "position": "MIDFIELDER",
-   "games": 24.0,
-   "af_avg": 72.1,
-   "af_total": 1731
-  },
-  {
    "cd_id": "CD_I1033115",
    "first_name": "Willem",
    "last_name": "Duursma",
@@ -1963,15 +1952,15 @@
    "af_total": 1586
   },
   {
-   "cd_id": "CD_I1000963",
-   "first_name": "Harry",
-   "last_name": "Morrison",
-   "name": "Harry Morrison",
-   "team": "HAW",
+   "cd_id": "CD_I1017091",
+   "first_name": "Jai",
+   "last_name": "Serong",
+   "name": "Jai Serong",
+   "team": "SYD",
    "position": "MIDFIELDER",
-   "games": 15.0,
-   "af_avg": 72.0,
-   "af_total": 1080
+   "games": 24.0,
+   "af_avg": 72.1,
+   "af_total": 1731
   },
   {
    "cd_id": "CD_I997100",
@@ -1983,6 +1972,17 @@
    "games": 21.0,
    "af_avg": 72.0,
    "af_total": 1512
+  },
+  {
+   "cd_id": "CD_I1000963",
+   "first_name": "Harry",
+   "last_name": "Morrison",
+   "name": "Harry Morrison",
+   "team": "HAW",
+   "position": "MIDFIELDER",
+   "games": 15.0,
+   "af_avg": 72.0,
+   "af_total": 1080
   },
   {
    "cd_id": "CD_I1010174",
@@ -2975,17 +2975,6 @@
    "af_total": 1546
   },
   {
-   "cd_id": "CD_I291969",
-   "first_name": "Stephen",
-   "last_name": "Coniglio",
-   "name": "Stephen Coniglio",
-   "team": "GWS",
-   "position": "MIDFIELDER_FORWARD",
-   "games": 21.0,
-   "af_avg": 64.4,
-   "af_total": 1352
-  },
-  {
    "cd_id": "CD_I1017255",
    "first_name": "Francis",
    "last_name": "Evans",
@@ -2995,6 +2984,17 @@
    "games": 23.0,
    "af_avg": 64.4,
    "af_total": 1481
+  },
+  {
+   "cd_id": "CD_I291969",
+   "first_name": "Stephen",
+   "last_name": "Coniglio",
+   "name": "Stephen Coniglio",
+   "team": "GWS",
+   "position": "MIDFIELDER_FORWARD",
+   "games": 21.0,
+   "af_avg": 64.4,
+   "af_total": 1352
   },
   {
    "cd_id": "CD_I1011994",
@@ -3261,17 +3261,6 @@
    "af_total": 1245
   },
   {
-   "cd_id": "CD_I1017057",
-   "first_name": "Campbell",
-   "last_name": "Chesser",
-   "name": "Campbell Chesser",
-   "team": "CARL",
-   "position": "MIDFIELDER",
-   "games": 3.0,
-   "af_avg": 62.3,
-   "af_total": 187
-  },
-  {
    "cd_id": "CD_I1021122",
    "first_name": "Harry",
    "last_name": "Rowston",
@@ -3281,6 +3270,17 @@
    "games": 12.0,
    "af_avg": 62.3,
    "af_total": 748
+  },
+  {
+   "cd_id": "CD_I1017057",
+   "first_name": "Campbell",
+   "last_name": "Chesser",
+   "name": "Campbell Chesser",
+   "team": "CARL",
+   "position": "MIDFIELDER",
+   "games": 3.0,
+   "af_avg": 62.3,
+   "af_total": 187
   },
   {
    "cd_id": "CD_I1023272",
@@ -3932,17 +3932,6 @@
    "af_total": 1283
   },
   {
-   "cd_id": "CD_I1024982",
-   "first_name": "Oisin",
-   "last_name": "Mullin",
-   "name": "Oisin Mullin",
-   "team": "GEEL",
-   "position": "MIDFIELDER",
-   "games": 25.0,
-   "af_avg": 58.2,
-   "af_total": 1455
-  },
-  {
    "cd_id": "CD_I298211",
    "first_name": "Darcy",
    "last_name": "Fort",
@@ -3952,6 +3941,17 @@
    "games": 26.0,
    "af_avg": 58.2,
    "af_total": 1512
+  },
+  {
+   "cd_id": "CD_I1024982",
+   "first_name": "Oisin",
+   "last_name": "Mullin",
+   "name": "Oisin Mullin",
+   "team": "GEEL",
+   "position": "MIDFIELDER",
+   "games": 25.0,
+   "af_avg": 58.2,
+   "af_total": 1455
   },
   {
    "cd_id": "CD_I1020594",
@@ -3987,17 +3987,6 @@
    "af_total": 348
   },
   {
-   "cd_id": "CD_I993902",
-   "first_name": "Matt",
-   "last_name": "Flynn",
-   "name": "Matt Flynn",
-   "team": "WCE",
-   "position": "RUCK",
-   "games": 4.0,
-   "af_avg": 58.0,
-   "af_total": 232
-  },
-  {
    "cd_id": "CD_I1002264",
    "first_name": "Hunter",
    "last_name": "Clark",
@@ -4007,6 +3996,17 @@
    "games": 7.0,
    "af_avg": 58.0,
    "af_total": 406
+  },
+  {
+   "cd_id": "CD_I993902",
+   "first_name": "Matt",
+   "last_name": "Flynn",
+   "name": "Matt Flynn",
+   "team": "WCE",
+   "position": "RUCK",
+   "games": 4.0,
+   "af_avg": 58.0,
+   "af_total": 232
   },
   {
    "cd_id": "CD_I1023681",
@@ -4163,17 +4163,6 @@
    "af_total": 1022
   },
   {
-   "cd_id": "CD_I1012862",
-   "first_name": "Elijah",
-   "last_name": "Hollands",
-   "name": "Elijah Hollands",
-   "team": "CARL",
-   "position": "MIDFIELDER_FORWARD",
-   "games": 6.0,
-   "af_avg": 56.8,
-   "af_total": 341
-  },
-  {
    "cd_id": "CD_I296190",
    "first_name": "Jack",
    "last_name": "Martin",
@@ -4183,6 +4172,17 @@
    "games": 18.0,
    "af_avg": 56.8,
    "af_total": 1022
+  },
+  {
+   "cd_id": "CD_I1012862",
+   "first_name": "Elijah",
+   "last_name": "Hollands",
+   "name": "Elijah Hollands",
+   "team": "CARL",
+   "position": "MIDFIELDER_FORWARD",
+   "games": 6.0,
+   "af_avg": 56.8,
+   "af_total": 341
   },
   {
    "cd_id": "CD_I297255",
@@ -5351,17 +5351,6 @@
    "af_total": 341
   },
   {
-   "cd_id": "CD_I1026960",
-   "first_name": "Will",
-   "last_name": "Graham",
-   "name": "Will Graham",
-   "team": "GCFC",
-   "position": "MIDFIELDER_FORWARD",
-   "games": 12.0,
-   "af_avg": 48.6,
-   "af_total": 583
-  },
-  {
    "cd_id": "CD_I298437",
    "first_name": "Callum",
    "last_name": "Ah Chee",
@@ -5371,6 +5360,17 @@
    "games": 9.0,
    "af_avg": 48.6,
    "af_total": 437
+  },
+  {
+   "cd_id": "CD_I1026960",
+   "first_name": "Will",
+   "last_name": "Graham",
+   "name": "Will Graham",
+   "team": "GCFC",
+   "position": "MIDFIELDER_FORWARD",
+   "games": 12.0,
+   "af_avg": 48.6,
+   "af_total": 583
   },
   {
    "cd_id": "CD_I1005988",
@@ -5417,17 +5417,6 @@
    "af_total": 97
   },
   {
-   "cd_id": "CD_I290826",
-   "first_name": "Jamie",
-   "last_name": "Cripps",
-   "name": "Jamie Cripps",
-   "team": "WCE",
-   "position": "MEDIUM_FORWARD",
-   "games": 5.0,
-   "af_avg": 48.4,
-   "af_total": 242
-  },
-  {
    "cd_id": "CD_I1002220",
    "first_name": "Esava",
    "last_name": "Ratugolea",
@@ -5437,6 +5426,17 @@
    "games": 8.0,
    "af_avg": 48.4,
    "af_total": 387
+  },
+  {
+   "cd_id": "CD_I290826",
+   "first_name": "Jamie",
+   "last_name": "Cripps",
+   "name": "Jamie Cripps",
+   "team": "WCE",
+   "position": "MEDIUM_FORWARD",
+   "games": 5.0,
+   "af_avg": 48.4,
+   "af_total": 242
   },
   {
    "cd_id": "CD_I298421",
@@ -5670,17 +5670,6 @@
    "af_total": 330
   },
   {
-   "cd_id": "CD_I1027428",
-   "first_name": "Jay",
-   "last_name": "Polkinghorne",
-   "name": "Jay Polkinghorne",
-   "team": "GEEL",
-   "position": "KEY_FORWARD",
-   "games": 8.0,
-   "af_avg": 47.0,
-   "af_total": 376
-  },
-  {
    "cd_id": "CD_I1032619",
    "first_name": "Cody",
    "last_name": "Angove",
@@ -5690,6 +5679,17 @@
    "games": 1.0,
    "af_avg": 47.0,
    "af_total": 47
+  },
+  {
+   "cd_id": "CD_I1027428",
+   "first_name": "Jay",
+   "last_name": "Polkinghorne",
+   "name": "Jay Polkinghorne",
+   "team": "GEEL",
+   "position": "KEY_FORWARD",
+   "games": 8.0,
+   "af_avg": 47.0,
+   "af_total": 376
   },
   {
    "cd_id": "CD_I1002401",
@@ -5813,17 +5813,6 @@
    "af_total": 825
   },
   {
-   "cd_id": "CD_I1033488",
-   "first_name": "Kye",
-   "last_name": "Annand",
-   "name": "Kye Annand",
-   "team": "RICH",
-   "position": "KEY_DEFENDER",
-   "games": 11.0,
-   "af_avg": 45.8,
-   "af_total": 504
-  },
-  {
    "cd_id": "CD_I1017718",
    "first_name": "Rhett",
    "last_name": "Bazzo",
@@ -5833,6 +5822,17 @@
    "games": 14.0,
    "af_avg": 45.8,
    "af_total": 641
+  },
+  {
+   "cd_id": "CD_I1033488",
+   "first_name": "Kye",
+   "last_name": "Annand",
+   "name": "Kye Annand",
+   "team": "RICH",
+   "position": "KEY_DEFENDER",
+   "games": 11.0,
+   "af_avg": 45.8,
+   "af_total": 504
   },
   {
    "cd_id": "CD_I1009421",
@@ -5857,17 +5857,6 @@
    "af_total": 729
   },
   {
-   "cd_id": "CD_I1020097",
-   "first_name": "Ashton",
-   "last_name": "Moir",
-   "name": "Ashton Moir",
-   "team": "CARL",
-   "position": "MEDIUM_FORWARD",
-   "games": 2.0,
-   "af_avg": 45.5,
-   "af_total": 91
-  },
-  {
    "cd_id": "CD_I1027921",
    "first_name": "Max",
    "last_name": "Gruzewski",
@@ -5877,6 +5866,17 @@
    "games": 15.0,
    "af_avg": 45.5,
    "af_total": 683
+  },
+  {
+   "cd_id": "CD_I1020097",
+   "first_name": "Ashton",
+   "last_name": "Moir",
+   "name": "Ashton Moir",
+   "team": "CARL",
+   "position": "MEDIUM_FORWARD",
+   "games": 2.0,
+   "af_avg": 45.5,
+   "af_total": 91
   },
   {
    "cd_id": "CD_I291849",
@@ -6000,17 +6000,6 @@
    "af_total": 711
   },
   {
-   "cd_id": "CD_I1015827",
-   "first_name": "Nik",
-   "last_name": "Cox",
-   "name": "Nik Cox",
-   "team": "ESS",
-   "position": "MIDFIELDER_FORWARD",
-   "games": 8.0,
-   "af_avg": 44.3,
-   "af_total": 354
-  },
-  {
    "cd_id": "CD_I1028725",
    "first_name": "Cooper",
    "last_name": "Duff-Tytler",
@@ -6020,6 +6009,17 @@
    "games": 16.0,
    "af_avg": 44.3,
    "af_total": 708
+  },
+  {
+   "cd_id": "CD_I1015827",
+   "first_name": "Nik",
+   "last_name": "Cox",
+   "name": "Nik Cox",
+   "team": "ESS",
+   "position": "MIDFIELDER_FORWARD",
+   "games": 8.0,
+   "af_avg": 44.3,
+   "af_total": 354
   },
   {
    "cd_id": "CD_I297456",
@@ -6770,17 +6770,6 @@
    "af_total": 632
   },
   {
-   "cd_id": "CD_I1017757",
-   "first_name": "William",
-   "last_name": "Edwards",
-   "name": "William Edwards",
-   "team": "SYD",
-   "position": "KEY_DEFENDER",
-   "games": 14.0,
-   "af_avg": 37.2,
-   "af_total": 521
-  },
-  {
    "cd_id": "CD_I1028485",
    "first_name": "Oliver",
    "last_name": "Hannaford",
@@ -6790,6 +6779,17 @@
    "games": 5.0,
    "af_avg": 37.2,
    "af_total": 186
+  },
+  {
+   "cd_id": "CD_I1017757",
+   "first_name": "William",
+   "last_name": "Edwards",
+   "name": "William Edwards",
+   "team": "SYD",
+   "position": "KEY_DEFENDER",
+   "games": 14.0,
+   "af_avg": 37.2,
+   "af_total": 521
   },
   {
    "cd_id": "CD_I1028498",
