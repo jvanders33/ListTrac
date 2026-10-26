@@ -2490,8 +2490,17 @@ async function clubView(abbrev) {
 function timelineHTML(p) {
   const current = p.contract_status.find(cs => cs.is_current) || {};
   const startYear = p.drafted ? p.drafted.year + 1 : 2022;
-  const endYear = Math.max((current.contracted_through_year || 2026) + 1, 2027);
-  const from = Math.max(startYear, endYear - 11);
+  // Right edge = the furthest deal we actually know about. The DB status field
+  // can lag the contract events (a fresh trade + long deal), so take the max of
+  // both — otherwise a deal running to 2035 would still stop the strip at 2027.
+  const eventEnd = Math.max(0, ...(p.contract_events || [])
+    .filter(e => (e.kind === "signing" || e.kind === "extension") && e.end_year)
+    .map(e => e.end_year));
+  const through = Math.max(current.contracted_through_year || 0, eventEnd, 2026);
+  const endYear = through + 1;
+  // Show through the deal end always; cap the left edge so veterans don't sprawl
+  // (the strip scrolls horizontally when it's longer than the card).
+  const from = Math.max(startYear, endYear - 16);
   const statusCls = { restricted_fa: "rfa", unrestricted_fa: "ufa", out_of_contract: "warn", contracted: "ok" }[current.status] || "ok";
   // Reconstruct which seasons were under a known contract from the reported
   // signings/extensions, and flag the years a deal was actually signed.

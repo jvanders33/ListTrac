@@ -201,8 +201,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .hero-facts dd { margin: 2px 0 0; font-size: 14.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
 
 /* contract timeline */
-.timeline { display: flex; gap: 3px; margin-top: 6px; }
-.timeline .yr { flex: 1; min-width: 0; }
+.timeline { display: flex; gap: 3px; margin-top: 6px; overflow-x: auto; scrollbar-width: thin; padding-bottom: 2px; }
+.timeline .yr { flex: 1 0 34px; min-width: 34px; }
 .timeline .bar { height: 26px; border-radius: 3px; background: var(--card-2); }
 .timeline .bar.ok    { background: var(--ok); opacity: 0.75; }
 .timeline .bar.faded { background: var(--ok); opacity: 0.28; }
