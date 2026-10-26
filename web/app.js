@@ -408,17 +408,17 @@ async function landingView() {
 
         ${order ? `
         <div class="card">
-          <h3>Projected 2026 draft order</h3>
-          <p class="sub">Live — reverse ladder, ${order.as_of_round} games in, with
-            ${order.traded_slots || 0} already-traded 2026 picks applied. No bid-compensation
-            or priority adjustments yet.</p>
+          <h3>${order.resolved ? "2026 draft order" : "Projected 2026 draft order"}</h3>
+          <p class="sub">${order.resolved
+            ? `Official post-trade-period order — ${order.traded_slots || 0} picks changed hands, ${order.compensation_picks || 0} free-agency compensation picks in place. Academy and father-son bids resolve on draft night.`
+            : `Live — reverse ladder, ${order.as_of_round} games in, with ${order.traded_slots || 0} already-traded 2026 picks applied. No bid-compensation or priority adjustments yet.`}</p>
           <div class="tablewrap"><table>
             <thead><tr><th class="num">Pick</th><th>Club</th><th class="num">W–L</th><th class="num">%</th></tr></thead>
             <tbody>${order.picks.slice(0, 8).map(p => `
               <tr><td class="num"><b>${p.pick}</b></td>
                 <td>${clubTag(p.abbrev, p.club)}
-                  ${p.via ? `<span class="chip warn">via ${esc(p.via)}</span>` : ""}</td>
-                <td class="num">${p.wins}–${p.losses}</td><td class="num">${p.percentage}</td></tr>`).join("")}
+                  ${p.via ? `<span class="chip warn">via ${esc(p.via)}</span>` : ""}${p.kind === "compensation" ? `<span class="chip">FA comp${p.compensation_for ? " · " + esc(p.compensation_for) : ""}</span>` : ""}</td>
+                <td class="num">${p.wins != null ? `${p.wins}–${p.losses}` : ""}</td><td class="num">${p.percentage ?? ""}</td></tr>`).join("")}
             </tbody>
           </table></div>
           <p class="srcline"><a href="#/draft">Full order with pick outcome stats →</a> · <a href="#/draft/mock">run your own mock draft →</a></p>
@@ -590,8 +590,10 @@ async function draftOrderView(chrome = "") {
     const s = intel && intel.picks[n];
     return s ? `${s[key] ?? "—"}${s[key] != null ? suffix : ""}` : "—";
   };
-  const viaChip = p => p.via
-    ? ` <span class="chip warn" title="Natural slot belongs to ${esc(p.via)} — traded">via ${esc(p.via)}</span>` : "";
+  const viaChip = p => (p.via
+    ? ` <span class="chip warn" title="Natural slot belongs to ${esc(p.via)} — traded">via ${esc(p.via)}</span>` : "")
+    + (p.kind === "compensation"
+      ? ` <span class="chip" title="Free-agency compensation pick${p.compensation_for ? " for losing " + esc(p.compensation_for) : ""}">FA comp${p.compensation_for ? " · " + esc(p.compensation_for) : ""}</span>` : "");
 
   // Board = full list with outcome intel. Fixed column widths keep the numeric
   // columns evenly spaced; the club column absorbs the slack. Short stat
@@ -625,6 +627,7 @@ async function draftOrderView(chrome = "") {
       <p class="eyebrow">Reading this table</p>
       <dl>
         <div><dt>via</dt><dd>the pick changed hands — shown against the club that now owns it, named for the club whose ladder position sets the slot</dd></div>
+        <div><dt>FA comp</dt><dd>a free-agency compensation pick, awarded to the club that lost the named player — inserted into the order, so the picks after it shift down</dd></div>
         <div><dt>%</dt><dd>the club's ladder percentage — the tiebreaker that orders clubs level on wins–losses</dd></div>
         <div><dt>DVI</dt><dd>the pick's value on the AFL's official Draft Value Index — the points currency used to match academy and father-son bids</dd></div>
         <div><dt>Games</dt><dd>average career games played by every player ever taken at that pick</dd></div>
@@ -664,7 +667,7 @@ async function draftOrderView(chrome = "") {
     }
     const clubs = Object.values(byClub).sort((a, b) => b.pts - a.pts);
     const maxPts = Math.max(...clubs.map(c => c.pts), 1);
-    return `<p class="sub">Every 2026 pick a club currently holds across all four rounds, and its total Draft Value Index capital. Sorted by draft capital.</p>
+    return `<p class="sub">Every 2026 pick a club currently holds across every round, and its total Draft Value Index capital. Sorted by draft capital.</p>
       <div class="tablewrap"><table>
         <thead><tr><th>Club</th><th>Picks</th><th class="num">Total DVI</th></tr></thead>
         <tbody>${clubs.map((c, i) => `
@@ -680,12 +683,13 @@ async function draftOrderView(chrome = "") {
       : draftBoardMode === "club" ? clubHTML()
         : roundHTML(+draftBoardMode);
 
-  const TABS = [["board", "Board"], ["1", "R1"], ["2", "R2"], ["3", "R3"], ["4", "R4"], ["club", "By club"]];
+  const TABS = [["board", "Board"], ...rounds.map(r => [String(r.round), `R${r.round}`]), ["club", "By club"]];
   view.innerHTML = `${chrome}
     <div class="card">
-      <h3>Projected 2026 national draft order</h3>
-      <p class="sub">Live reverse ladder, ${order.as_of_round} games in, with all
-        ${order.traded_slots} already-traded 2026 picks applied ("via" / "from" = the club whose natural slot it is).</p>
+      <h3>${order.resolved ? "2026 national draft order" : "Projected 2026 national draft order"}</h3>
+      <p class="sub">${order.resolved
+        ? `Official post-trade-period order — ${order.traded_slots} picks have changed hands and ${order.compensation_picks || 0} free-agency compensation picks are in place ("via" / "from" = the club whose natural slot it is; academy and father-son bids resolve on draft night).`
+        : `Live reverse ladder, ${order.as_of_round} games in, with all ${order.traded_slots} already-traded 2026 picks applied ("via" / "from" = the club whose natural slot it is).`}</p>
       <div class="draftviews" role="tablist">
         ${TABS.map(([m, l]) => `<button data-m="${m}" role="tab">${l}</button>`).join("")}
       </div>

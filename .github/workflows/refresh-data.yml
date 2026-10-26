@@ -102,6 +102,14 @@ jobs:
         run: python scraper/aging.py
         continue-on-error: true
 
+      - name: Fetch the resolved national draft order (Wikipedia)
+        # once the trade period closes: the official order incl. free-agency
+        # compensation picks and each slot's trade chain. /api/draft-order
+        # prefers this over the reverse-ladder projection. Won't overwrite a
+        # good file if the page isn't published yet (<18 picks parsed).
+        run: python scraper/draft_order.py --year 2026
+        continue-on-error: true
+
       - name: Enrich prospect stats from the AFL (Champion Data)
         # official Coates Talent League / U18 champs / VFL / SANFL stats —
         # current-season + senior games RMC misses. Runs AFTER RMC to merge on.

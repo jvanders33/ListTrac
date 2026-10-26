@@ -1,0 +1,1410 @@
+{
+ "year": 2026,
+ "source": "Wikipedia",
+ "source_url": "https://en.wikipedia.org/wiki/2026_AFL_draft",
+ "attribution": "Official 2026 national draft order as published on Wikipedia (post-trade-period), including free-agency compensation picks and each slot's trade chain.",
+ "fetched_at": "2026-10-26T05:09Z",
+ "count": 97,
+ "rounds": 5,
+ "kinds": {
+  "natural": 47,
+  "traded": 43,
+  "compensation": 7
+ },
+ "picks": [
+  {
+   "pick": 1,
+   "round": 1,
+   "club": "ESS",
+   "origin": "ESS",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 2,
+   "round": 1,
+   "club": "RIC",
+   "origin": "RIC",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 3,
+   "round": 1,
+   "club": "WCE",
+   "origin": "WCE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 4,
+   "round": 1,
+   "club": "MEL",
+   "origin": "PA",
+   "via": "PA",
+   "chain": [
+    {
+     "club": "PA",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Port Adelaide"
+  },
+  {
+   "pick": 5,
+   "round": 1,
+   "club": "RIC",
+   "origin": "PA",
+   "via": "PA",
+   "chain": [
+    {
+     "club": "PA",
+     "year": null
+    }
+   ],
+   "kind": "compensation",
+   "compensation_for": "Butters",
+   "note": "← Port Adelaide Free Agency compensation pick ( Butters )"
+  },
+  {
+   "pick": 6,
+   "round": 1,
+   "club": "SYD",
+   "origin": "NM",
+   "via": "NM",
+   "chain": [
+    {
+     "club": "NM",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← North Melbourne"
+  },
+  {
+   "pick": 7,
+   "round": 1,
+   "club": "PA",
+   "origin": "GCS",
+   "via": "GCS",
+   "chain": [
+    {
+     "club": "MEL",
+     "year": null
+    },
+    {
+     "club": "GCS",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Melbourne ← Gold Coast ( 2025 )"
+  },
+  {
+   "pick": 8,
+   "round": 1,
+   "club": "GCS",
+   "origin": "GCS",
+   "via": null,
+   "chain": [],
+   "kind": "compensation",
+   "compensation_for": "King",
+   "note": "Free Agency compensation pick ( King )"
+  },
+  {
+   "pick": 9,
+   "round": 1,
+   "club": "GWS",
+   "origin": "GWS",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 10,
+   "round": 1,
+   "club": "STK",
+   "origin": "STK",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 11,
+   "round": 1,
+   "club": "COL",
+   "origin": "COL",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 12,
+   "round": 1,
+   "club": "PA",
+   "origin": "MEL",
+   "via": "MEL",
+   "chain": [
+    {
+     "club": "MEL",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Melbourne"
+  },
+  {
+   "pick": 13,
+   "round": 1,
+   "club": "CAR",
+   "origin": "CAR",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 14,
+   "round": 1,
+   "club": "MEL",
+   "origin": "WB",
+   "via": "WB",
+   "chain": [
+    {
+     "club": "WB",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Western Bulldogs"
+  },
+  {
+   "pick": 15,
+   "round": 1,
+   "club": "ADE",
+   "origin": "ADE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 16,
+   "round": 1,
+   "club": "STK",
+   "origin": "GEE",
+   "via": "GEE",
+   "chain": [
+    {
+     "club": "GEE",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Geelong"
+  },
+  {
+   "pick": 17,
+   "round": 1,
+   "club": "ESS",
+   "origin": "HAW",
+   "via": "HAW",
+   "chain": [
+    {
+     "club": "HAW",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Hawthorn"
+  },
+  {
+   "pick": 18,
+   "round": 1,
+   "club": "CAR",
+   "origin": "SYD",
+   "via": "SYD",
+   "chain": [
+    {
+     "club": "SYD",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Sydney ( 2025 )"
+  },
+  {
+   "pick": 19,
+   "round": 1,
+   "club": "FRE",
+   "origin": "FRE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 20,
+   "round": 1,
+   "club": "GWS",
+   "origin": "BRI",
+   "via": "BRI",
+   "chain": [
+    {
+     "club": "BRI",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Brisbane Lions"
+  },
+  {
+   "pick": 21,
+   "round": 2,
+   "club": "BRI",
+   "origin": "ESS",
+   "via": "ESS",
+   "chain": [
+    {
+     "club": "ESS",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Essendon"
+  },
+  {
+   "pick": 22,
+   "round": 2,
+   "club": "PA",
+   "origin": "RIC",
+   "via": "RIC",
+   "chain": [
+    {
+     "club": "RIC",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Richmond"
+  },
+  {
+   "pick": 23,
+   "round": 2,
+   "club": "WCE",
+   "origin": "WCE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 24,
+   "round": 2,
+   "club": "PA",
+   "origin": "PA",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 25,
+   "round": 2,
+   "club": "ESS",
+   "origin": "NM",
+   "via": "NM",
+   "chain": [
+    {
+     "club": "BRI",
+     "year": null
+    },
+    {
+     "club": "GWS",
+     "year": null
+    },
+    {
+     "club": "CAR",
+     "year": null
+    },
+    {
+     "club": "NM",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Brisbane Lions ← Greater Western Sydney ← Carlton ← North Melbourne ( 2025 )"
+  },
+  {
+   "pick": 26,
+   "round": 2,
+   "club": "GWS",
+   "origin": "GCS",
+   "via": "GCS",
+   "chain": [
+    {
+     "club": "CAR",
+     "year": null
+    },
+    {
+     "club": "GCS",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Carlton ← Gold Coast ( 2025 )"
+  },
+  {
+   "pick": 27,
+   "round": 2,
+   "club": "BRI",
+   "origin": "GWS",
+   "via": "GWS",
+   "chain": [
+    {
+     "club": "ESS",
+     "year": null
+    },
+    {
+     "club": "HAW",
+     "year": null
+    },
+    {
+     "club": "GWS",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Essendon ← Hawthorn ← Greater Western Sydney ( 2025 )"
+  },
+  {
+   "pick": 28,
+   "round": 2,
+   "club": "BRI",
+   "origin": "GWS",
+   "via": "GWS",
+   "chain": [
+    {
+     "club": "GWS",
+     "year": null
+    }
+   ],
+   "kind": "compensation",
+   "compensation_for": "Greene",
+   "note": "← Greater Western Sydney Free Agency compensation pick ( Greene )"
+  },
+  {
+   "pick": 29,
+   "round": 2,
+   "club": "HAW",
+   "origin": "STK",
+   "via": "STK",
+   "chain": [
+    {
+     "club": "WCE",
+     "year": 2025
+    },
+    {
+     "club": "STK",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← West Coast ( 2025 )← St Kilda ( 2025 )"
+  },
+  {
+   "pick": 30,
+   "round": 2,
+   "club": "COL",
+   "origin": "COL",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 31,
+   "round": 2,
+   "club": "CAR",
+   "origin": "MEL",
+   "via": "MEL",
+   "chain": [
+    {
+     "club": "GWS",
+     "year": null
+    },
+    {
+     "club": "GCS",
+     "year": 2025
+    },
+    {
+     "club": "MEL",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Greater Western Sydney ← Gold Coast ( 2025 )← Melbourne ( 2025 )"
+  },
+  {
+   "pick": 32,
+   "round": 2,
+   "club": "ADE",
+   "origin": "CAR",
+   "via": "CAR",
+   "chain": [
+    {
+     "club": "PA",
+     "year": null
+    },
+    {
+     "club": "CAR",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Port Adelaide ← Carlton ( 2025 )"
+  },
+  {
+   "pick": 33,
+   "round": 2,
+   "club": "NM",
+   "origin": "WB",
+   "via": "WB",
+   "chain": [
+    {
+     "club": "MEL",
+     "year": null
+    },
+    {
+     "club": "WB",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Melbourne ← Western Bulldogs"
+  },
+  {
+   "pick": 34,
+   "round": 2,
+   "club": "PA",
+   "origin": "ADE",
+   "via": "ADE",
+   "chain": [
+    {
+     "club": "ADE",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Adelaide"
+  },
+  {
+   "pick": 35,
+   "round": 2,
+   "club": "ADE",
+   "origin": "ADE",
+   "via": null,
+   "chain": [],
+   "kind": "compensation",
+   "compensation_for": "Butts",
+   "note": "Free Agency compensation pick ( Butts )"
+  },
+  {
+   "pick": 36,
+   "round": 2,
+   "club": "GEE",
+   "origin": "GEE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 37,
+   "round": 2,
+   "club": "HAW",
+   "origin": "HAW",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 38,
+   "round": 2,
+   "club": "SYD",
+   "origin": "SYD",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 39,
+   "round": 2,
+   "club": "SYD",
+   "origin": "SYD",
+   "via": null,
+   "chain": [],
+   "kind": "compensation",
+   "compensation_for": "Amartey",
+   "note": "Free Agency compensation pick ( Amartey )"
+  },
+  {
+   "pick": 40,
+   "round": 2,
+   "club": "FRE",
+   "origin": "FRE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 41,
+   "round": 2,
+   "club": "STK",
+   "origin": "BRI",
+   "via": "BRI",
+   "chain": [
+    {
+     "club": "BRI",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Brisbane Lions"
+  },
+  {
+   "pick": 42,
+   "round": 2,
+   "club": "WB",
+   "origin": "BRI",
+   "via": "BRI",
+   "chain": [
+    {
+     "club": "BRI",
+     "year": null
+    }
+   ],
+   "kind": "compensation",
+   "compensation_for": "Neale",
+   "note": "← Brisbane Lions Free Agency compensation pick ( Neale )"
+  },
+  {
+   "pick": 43,
+   "round": 3,
+   "club": "ADE",
+   "origin": "ESS",
+   "via": "ESS",
+   "chain": [
+    {
+     "club": "GCS",
+     "year": 2025
+    },
+    {
+     "club": "ESS",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Gold Coast ( 2025 )← Essendon ( 2025 )"
+  },
+  {
+   "pick": 44,
+   "round": 3,
+   "club": "RIC",
+   "origin": "RIC",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 45,
+   "round": 3,
+   "club": "BRI",
+   "origin": "WCE",
+   "via": "WCE",
+   "chain": [
+    {
+     "club": "MEL",
+     "year": null
+    },
+    {
+     "club": "WCE",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Melbourne ← West Coast"
+  },
+  {
+   "pick": 46,
+   "round": 3,
+   "club": "PA",
+   "origin": "PA",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 47,
+   "round": 3,
+   "club": "SYD",
+   "origin": "NM",
+   "via": "NM",
+   "chain": [
+    {
+     "club": "NM",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← North Melbourne"
+  },
+  {
+   "pick": 48,
+   "round": 3,
+   "club": "MEL",
+   "origin": "GCS",
+   "via": "GCS",
+   "chain": [
+    {
+     "club": "PA",
+     "year": null
+    },
+    {
+     "club": "GCS",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Port Adelaide ← Gold Coast ( 2025 )"
+  },
+  {
+   "pick": 49,
+   "round": 3,
+   "club": "NM",
+   "origin": "GWS",
+   "via": "GWS",
+   "chain": [
+    {
+     "club": "MEL",
+     "year": null
+    },
+    {
+     "club": "GWS",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Melbourne ← Greater Western Sydney ( 2025 )"
+  },
+  {
+   "pick": 50,
+   "round": 3,
+   "club": "CAR",
+   "origin": "GWS",
+   "via": "GWS",
+   "chain": [
+    {
+     "club": "GWS",
+     "year": null
+    }
+   ],
+   "kind": "compensation",
+   "compensation_for": "Briggs",
+   "note": "← Greater Western Sydney Free Agency compensation pick ( Briggs )"
+  },
+  {
+   "pick": 51,
+   "round": 3,
+   "club": "STK",
+   "origin": "STK",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 52,
+   "round": 3,
+   "club": "MEL",
+   "origin": "COL",
+   "via": "COL",
+   "chain": [
+    {
+     "club": "NM",
+     "year": null
+    },
+    {
+     "club": "SYD",
+     "year": null
+    },
+    {
+     "club": "COL",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← North Melbourne ← Sydney ← Collingwood ( 2025 )"
+  },
+  {
+   "pick": 53,
+   "round": 3,
+   "club": "WB",
+   "origin": "MEL",
+   "via": "MEL",
+   "chain": [
+    {
+     "club": "BRI",
+     "year": null
+    },
+    {
+     "club": "COL",
+     "year": 2025
+    },
+    {
+     "club": "MEL",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Brisbane Lions ← Collingwood ( 2025 )← Melbourne ( 2025 )"
+  },
+  {
+   "pick": 54,
+   "round": 3,
+   "club": "SYD",
+   "origin": "CAR",
+   "via": "CAR",
+   "chain": [
+    {
+     "club": "CAR",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Carlton ( 2025 )"
+  },
+  {
+   "pick": 55,
+   "round": 3,
+   "club": "WB",
+   "origin": "WB",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 56,
+   "round": 3,
+   "club": "ADE",
+   "origin": "ADE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 57,
+   "round": 3,
+   "club": "GEE",
+   "origin": "GEE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 58,
+   "round": 3,
+   "club": "WCE",
+   "origin": "SYD",
+   "via": "SYD",
+   "chain": [
+    {
+     "club": "HAW",
+     "year": 2025
+    },
+    {
+     "club": "SYD",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Hawthorn ( 2025 )← Sydney ( 2025 )"
+  },
+  {
+   "pick": 59,
+   "round": 3,
+   "club": "GWS",
+   "origin": "HAW",
+   "via": "HAW",
+   "chain": [
+    {
+     "club": "BRI",
+     "year": null
+    },
+    {
+     "club": "HAW",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Brisbane Lions ← Hawthorn ( 2025 )"
+  },
+  {
+   "pick": 60,
+   "round": 3,
+   "club": "FRE",
+   "origin": "FRE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 61,
+   "round": 3,
+   "club": "CAR",
+   "origin": "BRI",
+   "via": "BRI",
+   "chain": [
+    {
+     "club": "BRI",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Brisbane Lions ( 2025 )"
+  },
+  {
+   "pick": 62,
+   "round": 4,
+   "club": "GEE",
+   "origin": "ESS",
+   "via": "ESS",
+   "chain": [
+    {
+     "club": "ESS",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Essendon"
+  },
+  {
+   "pick": 63,
+   "round": 4,
+   "club": "FRE",
+   "origin": "RIC",
+   "via": "RIC",
+   "chain": [
+    {
+     "club": "RIC",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Richmond"
+  },
+  {
+   "pick": 64,
+   "round": 4,
+   "club": "WCE",
+   "origin": "WCE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 65,
+   "round": 4,
+   "club": "PA",
+   "origin": "PA",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 66,
+   "round": 4,
+   "club": "NM",
+   "origin": "NM",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 67,
+   "round": 4,
+   "club": "COL",
+   "origin": "GCS",
+   "via": "GCS",
+   "chain": [
+    {
+     "club": "GCS",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Gold Coast"
+  },
+  {
+   "pick": 68,
+   "round": 4,
+   "club": "COL",
+   "origin": "GWS",
+   "via": "GWS",
+   "chain": [
+    {
+     "club": "GWS",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Greater Western Sydney ( 2025 )"
+  },
+  {
+   "pick": 69,
+   "round": 4,
+   "club": "STK",
+   "origin": "STK",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 70,
+   "round": 4,
+   "club": "COL",
+   "origin": "COL",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 71,
+   "round": 4,
+   "club": "HAW",
+   "origin": "MEL",
+   "via": "MEL",
+   "chain": [
+    {
+     "club": "MEL",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Melbourne ( 2025 )"
+  },
+  {
+   "pick": 72,
+   "round": 4,
+   "club": "CAR",
+   "origin": "CAR",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 73,
+   "round": 4,
+   "club": "WCE",
+   "origin": "WB",
+   "via": "WB",
+   "chain": [
+    {
+     "club": "WB",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Western Bulldogs ( 2025 )"
+  },
+  {
+   "pick": 74,
+   "round": 4,
+   "club": "NM",
+   "origin": "ADE",
+   "via": "ADE",
+   "chain": [
+    {
+     "club": "ADE",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Adelaide ( 2025 )"
+  },
+  {
+   "pick": 75,
+   "round": 4,
+   "club": "GEE",
+   "origin": "GEE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 76,
+   "round": 4,
+   "club": "SYD",
+   "origin": "HAW",
+   "via": "HAW",
+   "chain": [
+    {
+     "club": "HAW",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Hawthorn ( 2025 )"
+  },
+  {
+   "pick": 77,
+   "round": 4,
+   "club": "GWS",
+   "origin": "SYD",
+   "via": "SYD",
+   "chain": [
+    {
+     "club": "COL",
+     "year": null
+    },
+    {
+     "club": "SYD",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Collingwood ← Sydney ( 2025 )"
+  },
+  {
+   "pick": 78,
+   "round": 4,
+   "club": "FRE",
+   "origin": "FRE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 79,
+   "round": 4,
+   "club": "BRI",
+   "origin": "BRI",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 80,
+   "round": 5,
+   "club": "ESS",
+   "origin": "ESS",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 81,
+   "round": 5,
+   "club": "GCS",
+   "origin": "RIC",
+   "via": "RIC",
+   "chain": [
+    {
+     "club": "RIC",
+     "year": 2025
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Richmond ( 2025 )"
+  },
+  {
+   "pick": 82,
+   "round": 5,
+   "club": "WCE",
+   "origin": "WCE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 83,
+   "round": 5,
+   "club": "WB",
+   "origin": "PA",
+   "via": "PA",
+   "chain": [
+    {
+     "club": "PA",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Port Adelaide"
+  },
+  {
+   "pick": 84,
+   "round": 5,
+   "club": "NM",
+   "origin": "NM",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 85,
+   "round": 5,
+   "club": "GCS",
+   "origin": "GCS",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 86,
+   "round": 5,
+   "club": "GWS",
+   "origin": "GWS",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 87,
+   "round": 5,
+   "club": "STK",
+   "origin": "STK",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 88,
+   "round": 5,
+   "club": "COL",
+   "origin": "COL",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 89,
+   "round": 5,
+   "club": "WB",
+   "origin": "MEL",
+   "via": "MEL",
+   "chain": [
+    {
+     "club": "MEL",
+     "year": null
+    }
+   ],
+   "kind": "traded",
+   "compensation_for": null,
+   "note": "← Melbourne"
+  },
+  {
+   "pick": 90,
+   "round": 5,
+   "club": "CAR",
+   "origin": "CAR",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 91,
+   "round": 5,
+   "club": "WB",
+   "origin": "WB",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 92,
+   "round": 5,
+   "club": "ADE",
+   "origin": "ADE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 93,
+   "round": 5,
+   "club": "GEE",
+   "origin": "GEE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 94,
+   "round": 5,
+   "club": "HAW",
+   "origin": "HAW",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 95,
+   "round": 5,
+   "club": "SYD",
+   "origin": "SYD",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 96,
+   "round": 5,
+   "club": "FRE",
+   "origin": "FRE",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  },
+  {
+   "pick": 97,
+   "round": 5,
+   "club": "BRI",
+   "origin": "BRI",
+   "via": null,
+   "chain": [],
+   "kind": "natural",
+   "compensation_for": null,
+   "note": null
+  }
+ ]
+}

@@ -681,13 +681,20 @@ SQUIGGLE = "https://api.squiggle.com.au/"
 SQUIGGLE_ALIASES = {"Brisbane Lions": "Brisbane"}  # Squiggle name -> DB club name
 
 
+DRAFT_ORDER_PATH = Path(__file__).resolve().parent.parent / "data" / "draft_order_2026.json"
+
+
 @app.get("/api/draft-order")
 def draft_order():
-    """Projected 2026 national draft order, rounds 1-4: live Squiggle ladder
-    reversed for slot order, then recorded 2026 pick trades (from Draftguru's
-    2025 trade-period blocks + admin entries) applied to ownership. Traded
-    slots carry a "via" marker. Still excluded: academy/father-son bid
-    compensation and priority picks. Cached 1 hour."""
+    """2026 national draft order. Once the trade period closes, the official
+    resolved order scraped from Wikipedia (data/draft_order_2026.json, via
+    scraper/draft_order.py) is served: every slot's owner, its trade chain and
+    the free-agency compensation picks in place. Before that file exists it
+    falls back to a projection — live Squiggle ladder reversed, with recorded
+    "2026 R# (Club)" futures trades applied — which cannot see trade-period
+    pick trades (Draftguru records those by a live pick number that drifts as
+    compensation picks are inserted). Academy/father-son bids resolve on draft
+    night either way. Cached 1 hour."""
     def build():
         resp = requests.get(SQUIGGLE, params={"q": "standings", "year": 2026},
                             headers={"User-Agent": "ListTrac (github.com/jvanders33/ListTrac)"}, timeout=10)
@@ -708,6 +715,49 @@ def draft_order():
                     ownership[(int(m.group(1)), origin["abbreviation"])] = h["owner"]
 
         abbrev_info = {v["abbreviation"]: v for v in club_info.values()}
+        games_played = max(t["wins"] + t["losses"] + t.get("draws", 0) for t in ladder)
+        # ladder context keyed by abbreviation (the natural slot's club)
+        rank_of = {}
+        for t in ladder:
+            ab = club_info.get(SQUIGGLE_ALIASES.get(t["name"], t["name"]), {}).get("abbreviation")
+            if ab:
+                rank_of[ab] = t
+
+        # Preferred: the official resolved order, once the trade period has closed.
+        resolved = None
+        if DRAFT_ORDER_PATH.exists():
+            import json
+            try:
+                resolved = json.loads(DRAFT_ORDER_PATH.read_text(encoding="utf-8"))
+            except ValueError:
+                resolved = None
+        if resolved and len(resolved.get("picks", [])) >= 18:
+            by_round: dict[int, list] = {}
+            for p in resolved["picks"]:
+                oinfo = abbrev_info.get(p["club"], {})
+                t = rank_of.get(p["origin"], {})
+                by_round.setdefault(p["round"], []).append({
+                    "pick": p["pick"], "round": p["round"],
+                    "club": oinfo.get("name", p["club"]), "abbrev": p["club"],
+                    "primary_color": oinfo.get("primary_color"),
+                    "via": p["via"], "kind": p["kind"],
+                    "compensation_for": p.get("compensation_for"), "chain": p.get("chain", []),
+                    "ladder_rank": t.get("rank"), "wins": t.get("wins"), "losses": t.get("losses"),
+                    "percentage": round(t["percentage"], 1) if t.get("percentage") is not None else None,
+                    "dvi": AFL_DVI[p["pick"] - 1] if p["pick"] <= len(AFL_DVI) else 0,
+                })
+            rounds = [{"round": r, "picks": by_round[r]} for r in sorted(by_round)]
+            picks = resolved["picks"]
+            return {"year": 2026, "as_of_round": games_played, "resolved": True,
+                    "picks": rounds[0]["picks"], "rounds": rounds,
+                    "traded_slots": sum(1 for p in picks if p["via"]),
+                    "compensation_picks": sum(1 for p in picks if p["kind"] == "compensation"),
+                    "source": resolved.get("source_url"), "fetched_at": resolved.get("fetched_at"),
+                    "method": ("official post-trade-period order (Wikipedia), incl. free-agency "
+                               "compensation picks and each slot's trade chain; academy/father-son "
+                               "bids resolve on draft night")}
+
+        # Fallback: projection from the live ladder + recorded futures trades.
         slot_order = [SQUIGGLE_ALIASES.get(t["name"], t["name"]) for t in reversed(ladder)]
         rounds, pick_no = [], 0
         for rnd in (1, 2, 3, 4):
@@ -722,19 +772,18 @@ def draft_order():
                     "pick": pick_no, "round": rnd,
                     "club": oinfo.get("name", slot_name), "abbrev": owner,
                     "primary_color": oinfo.get("primary_color"),
-                    "via": origin if owner != origin else None,
+                    "via": origin if owner != origin else None, "kind": "traded" if owner != origin else "natural",
                     "ladder_rank": team["rank"], "wins": team["wins"],
                     "losses": team["losses"], "percentage": round(team["percentage"], 1),
                     "dvi": AFL_DVI[pick_no - 1] if pick_no <= len(AFL_DVI) else 0,
                 })
             rounds.append({"round": rnd, "picks": rp})
 
-        games_played = max(t["wins"] + t["losses"] + t.get("draws", 0) for t in ladder)
-        return {"year": 2026, "as_of_round": games_played,
+        return {"year": 2026, "as_of_round": games_played, "resolved": False,
                 "picks": rounds[0]["picks"], "rounds": rounds,
                 "traded_slots": len(ownership), "source": "api.squiggle.com.au",
-                "method": ("reverse ladder + recorded 2026 pick trades; "
-                           "no academy/father-son bid compensation or priority picks")}
+                "method": ("projected: reverse ladder + recorded 2026 futures trades; "
+                           "trade-period pick trades and compensation picks not yet applied")}
     try:
         return cached("draft_order", 3600, build)
     except requests.RequestException:
