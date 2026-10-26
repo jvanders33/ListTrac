@@ -3,7 +3,7 @@
  "source_url": "https://www.afl.com.au/news",
  "attribution": "Contract & movement events from the AFL's own content API and AFLRATINGS' reporting, with hand-verified corrections; each event links to its source. The AFL does not disclose contract terms — no dollar figures are tracked.",
  "note": "Coverage runs from late 2021. end_estimated=true means the end year was inferred from the stated deal length, not quoted directly.",
- "count": 1645,
+ "count": 1766,
  "events": [
   {
    "name": "Scott Pendlebury",
@@ -29,7 +29,7 @@
    "end_year": null,
    "end_estimated": false,
    "reporter": "Wikipedia",
-   "source_url": "https://en.wikipedia.org/wiki/Jamie_Elliott",
+   "source_url": "https://en.wikipedia.org/wiki/Jamie_Elliott_(footballer,_born_1992)",
    "manual": true,
    "current": false
   },
@@ -174,6 +174,20 @@
    "current": false
   },
   {
+   "name": "Taylor Adams",
+   "norm": "tayloradams",
+   "date": "2013-10-23",
+   "kind": "trade",
+   "club": "COL",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "Collingwood FC",
+   "source_url": "https://www.collingwoodfc.com.au/news/120231/shawadams-deal-confirmed",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Elliot Yeo",
    "norm": "elliotyeo",
    "date": "2013-10-24",
@@ -184,6 +198,20 @@
    "end_estimated": false,
    "reporter": "Wikipedia (AFL trade record)",
    "source_url": "https://en.wikipedia.org/wiki/Elliot_Yeo",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Tom Lynch",
+   "norm": "tomlynch",
+   "date": "2013-11-19",
+   "kind": "extension",
+   "club": "GCS",
+   "length": 2,
+   "end_year": 2016,
+   "end_estimated": false,
+   "reporter": "Gold Coast Suns FC (date per Footywire)",
+   "source_url": "https://www.goldcoastfc.com.au/news/724630/lynch-extends-commitment-to-gc-suns",
    "manual": true,
    "current": false
   },
@@ -496,6 +524,20 @@
    "current": false
   },
   {
+   "name": "Jake Kolodjashnij",
+   "norm": "jakekolodjashnij",
+   "date": "2015-09-15",
+   "kind": "extension",
+   "club": "GEE",
+   "length": 2,
+   "end_year": 2017,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/198704/cats-lock-in-young-defender-kolodjashnij",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Alex Neal-Bullen",
    "norm": "alexnealbullen",
    "date": "2015-09-25",
@@ -566,6 +608,20 @@
    "current": false
   },
   {
+   "name": "Adam Treloar",
+   "norm": "adamtreloar",
+   "date": "2015-10-21",
+   "kind": "signing",
+   "club": "COL",
+   "length": 6,
+   "end_year": 2021,
+   "end_estimated": true,
+   "reporter": "Wikipedia (pointer)",
+   "source_url": "https://en.wikipedia.org/wiki/Adam_Treloar",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Luke Parker",
    "norm": "lukeparker",
    "date": "2016-01-15",
@@ -608,6 +664,20 @@
    "current": false
   },
   {
+   "name": "Taylor Adams",
+   "norm": "tayloradams",
+   "date": "2016-03-15",
+   "kind": "extension",
+   "club": "COL",
+   "length": 3,
+   "end_year": 2019,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/38797/collingwood-signs-four-players-to-new-deals",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Luke McDonald",
    "norm": "lukemcdonald",
    "date": "2016-04-05",
@@ -627,7 +697,7 @@
    "date": "2016-04-05",
    "kind": "extension",
    "club": "GCS",
-   "length": null,
+   "length": 2,
    "end_year": 2018,
    "end_estimated": false,
    "reporter": "Gold Coast Suns FC",
@@ -940,6 +1010,20 @@
    "end_estimated": true,
    "reporter": "AFL.com.au",
    "source_url": "https://www.theroar.com.au/2016/10/20/afl-trades-2016-did-jaeger-omeara-get-traded/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Dan Butler",
+   "norm": "danbutler",
+   "date": "2016-11-09",
+   "kind": "extension",
+   "club": "RIC",
+   "length": 1,
+   "end_year": 2017,
+   "end_estimated": false,
+   "reporter": "AFL.com.au / Richmond FC",
+   "source_url": "https://www.afl.com.au/news/90699/tigers-trio-sign-new-one-year-deals",
    "manual": true,
    "current": false
   },
@@ -1280,6 +1364,34 @@
    "current": false
   },
   {
+   "name": "Dan Butler",
+   "norm": "danbutler",
+   "date": "2017-08-24",
+   "kind": "extension",
+   "club": "RIC",
+   "length": 2,
+   "end_year": 2019,
+   "end_estimated": false,
+   "reporter": "The Courier / AFL.com.au",
+   "source_url": "https://www.thecourier.com.au/story/4877224/butler-extends-contract-to-2019/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Jake Kolodjashnij",
+   "norm": "jakekolodjashnij",
+   "date": "2017-08-25",
+   "kind": "extension",
+   "club": "GEE",
+   "length": 2,
+   "end_year": 2019,
+   "end_estimated": false,
+   "reporter": "Geelong Cats",
+   "source_url": "https://www.geelongcats.com.au/news/293703/cats-re-sign-young-trio",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Karl Amon",
    "norm": "karlamon",
    "date": "2017-09-07",
@@ -1290,6 +1402,20 @@
    "end_estimated": false,
    "reporter": "Port Adelaide FC official site",
    "source_url": "https://www.portadelaidefc.com.au/news/294265/amon-extends-contract-for-two-more-seasons",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Mason Cox",
+   "norm": "masoncox",
+   "date": "2017-09-11",
+   "kind": "extension",
+   "club": "COL",
+   "length": 3,
+   "end_year": 2020,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/80857/cox-to-remain-an-american-pie",
    "manual": true,
    "current": false
   },
@@ -1658,6 +1784,20 @@
    "current": false
   },
   {
+   "name": "Paddy Dow",
+   "norm": "paddydow",
+   "date": "2018-03-15",
+   "kind": "extension",
+   "club": "CAR",
+   "length": 3,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "Carlton FC",
+   "source_url": "https://www.carltonfc.com.au/news/2018-03-16/threeyear-extension-for-dow",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Clayton Oliver",
    "norm": "claytonoliver",
    "date": "2018-03-22",
@@ -1688,6 +1828,20 @@
   {
    "name": "Darcy Byrne-Jones",
    "norm": "darcybyrnejones",
+   "date": "2018-03-28",
+   "kind": "extension",
+   "club": "PA",
+   "length": 2,
+   "end_year": 2020,
+   "end_estimated": false,
+   "reporter": "Port Adelaide FC",
+   "source_url": "https://www.portadelaidefc.com.au/news/122604/byrnejones-easy-decision-to-stay",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Todd Marshall",
+   "norm": "toddmarshall",
    "date": "2018-03-28",
    "kind": "extension",
    "club": "PA",
@@ -2148,6 +2302,20 @@
    "current": false
   },
   {
+   "name": "Lincoln McCarthy",
+   "norm": "lincolnmccarthy",
+   "date": "2018-10-08",
+   "kind": "signing",
+   "club": "BRI",
+   "length": 3,
+   "end_year": 2021,
+   "end_estimated": true,
+   "reporter": "AFL.com.au (Dinny Navaratnam)",
+   "source_url": "http://www.afl.com.au/news/2018-10-08/lincoln-a-lion-fringe-cat-joins-brisbane",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Mitch McGovern",
    "norm": "mitchmcgovern",
    "date": "2018-10-10",
@@ -2400,6 +2568,20 @@
    "current": false
   },
   {
+   "name": "Dougal Howard",
+   "norm": "dougalhoward",
+   "date": "2018-12-03",
+   "kind": "extension",
+   "club": "PA",
+   "length": 3,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/2018-12-03/power-lock-in-key-defender-until-end-of-2022",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Blake Hardwick",
    "norm": "blakehardwick",
    "date": "2018-12-15",
@@ -2540,20 +2722,6 @@
    "current": false
   },
   {
-   "name": "Jamie Elliott",
-   "norm": "jamieelliott",
-   "date": "2019-02-15",
-   "kind": "extension",
-   "club": "COL",
-   "length": null,
-   "end_year": null,
-   "end_estimated": false,
-   "reporter": "NT News",
-   "source_url": "https://www.ntnews.com.au/sport/jamie-elliott-to-sign-new-magpies-deal-despite-surgery-to-impact-on-livewire-forwards-preseason/news-story/3dd7f822a6300daa915c290c958ecb1c",
-   "manual": true,
-   "current": false
-  },
-  {
    "name": "Jake Melksham",
    "norm": "jakemelksham",
    "date": "2019-02-15",
@@ -2564,6 +2732,20 @@
    "end_estimated": false,
    "reporter": "SEN",
    "source_url": "https://archive.sen.com.au/news/2019/02/15/melbourne-forward-signs-multi-year-contract-extension/index.html",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Jamie Elliott",
+   "norm": "jamieelliott",
+   "date": "2019-02-15",
+   "kind": "extension",
+   "club": "COL",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "NT News",
+   "source_url": "https://www.ntnews.com.au/sport/jamie-elliott-to-sign-new-magpies-deal-despite-surgery-to-impact-on-livewire-forwards-preseason/news-story/3dd7f822a6300daa915c290c958ecb1c",
    "manual": true,
    "current": false
   },
@@ -2620,6 +2802,20 @@
    "end_estimated": false,
    "reporter": "St Kilda FC (saints.com.au)",
    "source_url": "https://www.saints.com.au/news/100819/in-for-the-long-haul",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Jake Kolodjashnij",
+   "norm": "jakekolodjashnij",
+   "date": "2019-03-20",
+   "kind": "extension",
+   "club": "GEE",
+   "length": 2,
+   "end_year": 2021,
+   "end_estimated": false,
+   "reporter": "Geelong Cats",
+   "source_url": "https://www.geelongcats.com.au/news/239915/kolodjashnij-inks-new-deal",
    "manual": true,
    "current": false
   },
@@ -2746,6 +2942,20 @@
    "end_estimated": false,
    "reporter": "AFL.com.au / goldcoastfc.com.au",
    "source_url": "https://www.afl.com.au/news/50057/suns-secure-queensland-local-bowes-until-end-of-2024",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Sam Sturt",
+   "norm": "samsturt",
+   "date": "2019-05-23",
+   "kind": "extension",
+   "club": "FRE",
+   "length": 2,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "fremantlefc.com.au",
+   "source_url": "https://www.fremantlefc.com.au/news/84533/freo-duo-ink-new-deals",
    "manual": true,
    "current": false
   },
@@ -2918,6 +3128,20 @@
    "current": false
   },
   {
+   "name": "Taylor Adams",
+   "norm": "tayloradams",
+   "date": "2019-07-17",
+   "kind": "extension",
+   "club": "COL",
+   "length": 5,
+   "end_year": 2024,
+   "end_estimated": false,
+   "reporter": "Collingwood FC",
+   "source_url": "https://www.collingwoodfc.com.au/news/238725/adams-locked-in-until-2024",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Jack Darling",
    "norm": "jackdarling",
    "date": "2019-07-19",
@@ -3068,6 +3292,34 @@
    "end_estimated": false,
    "reporter": "GWS Giants (gwsgiants.com.au)",
    "source_url": "https://www.gwsgiants.com.au/news/249686/briggs-buys-in",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Bobby Hill",
+   "norm": "bobbyhill",
+   "date": "2019-08-15",
+   "kind": "extension",
+   "club": "GWS",
+   "length": 2,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/132863/another-giant-locked-and-loaded-electric-speedster-re-signs",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Peter Ladhams",
+   "norm": "peterladhams",
+   "date": "2019-08-15",
+   "kind": "extension",
+   "club": "PA",
+   "length": 3,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/114433/port-shores-up-its-key-position-future-with-two-new-deals",
    "manual": true,
    "current": false
   },
@@ -3310,6 +3562,20 @@
    "current": false
   },
   {
+   "name": "Dougal Howard",
+   "norm": "dougalhoward",
+   "date": "2019-10-15",
+   "kind": "signing",
+   "club": "STK",
+   "length": 5,
+   "end_year": 2024,
+   "end_estimated": true,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/2019-10-15/saints-double-delight-power-pair-off-to-moorabbin",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Marc Pittonet",
    "norm": "marcpittonet",
    "date": "2019-10-16",
@@ -3362,6 +3628,20 @@
    "end_estimated": false,
    "reporter": "Fremantle FC",
    "source_url": "https://www.fremantlefc.com.au/news/306300/hill-trade-delivers-acres-and-draft-windfall",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Dan Butler",
+   "norm": "danbutler",
+   "date": "2019-10-16",
+   "kind": "trade",
+   "club": "STK",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "Richmond FC / St Kilda FC",
+   "source_url": "https://www.richmondfc.com.au/news/306151/butler-traded-to-st-kilda",
    "manual": true,
    "current": false
   },
@@ -3618,6 +3898,20 @@
    "current": false
   },
   {
+   "name": "Liam Henry",
+   "norm": "liamhenry",
+   "date": "2020-03-15",
+   "kind": "extension",
+   "club": "FRE",
+   "length": 2,
+   "end_year": 2023,
+   "end_estimated": false,
+   "reporter": "fremantlefc.com.au",
+   "source_url": "https://fremantlefc.com.au/news/798120/henry",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Tom Green",
    "norm": "tomgreen",
    "date": "2020-03-18",
@@ -3754,6 +4048,20 @@
    "end_estimated": false,
    "reporter": "portadelaidefc.com.au",
    "source_url": "https://www.portadelaidefc.com.au/news/804713",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Mason Cox",
+   "norm": "masoncox",
+   "date": "2020-09-01",
+   "kind": "extension",
+   "club": "COL",
+   "length": 1,
+   "end_year": 2021,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/cox-to-extend-with-collingwood-though-contract-clause-afl-2-59406/",
    "manual": true,
    "current": false
   },
@@ -4202,6 +4510,20 @@
    "end_estimated": true,
    "reporter": "Bendigo Advertiser (AAP)",
    "source_url": "https://www.bendigoadvertiser.com.au/story/7010719/jye-caldwell-traded-from-gws-giants-to-essendon-in-shadows-of-deadline/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Adam Treloar",
+   "norm": "adamtreloar",
+   "date": "2020-11-12",
+   "kind": "signing",
+   "club": "WB",
+   "length": 5,
+   "end_year": 2025,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/525567/wholl-pay-up-dogs-pies-in-messy-stand-off-over-treloars-45m-deal",
    "manual": true,
    "current": false
   },
@@ -4780,6 +5102,20 @@
    "current": false
   },
   {
+   "name": "Dan Butler",
+   "norm": "danbutler",
+   "date": "2021-05-05",
+   "kind": "extension",
+   "club": "STK",
+   "length": 1,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "St Kilda FC",
+   "source_url": "https://www.saints.com.au/news/927627/butler-extends-stay-at-st-kilda",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Dayne Zorko",
    "norm": "daynezorko",
    "date": "2021-05-15",
@@ -4874,6 +5210,20 @@
    "end_estimated": false,
    "reporter": "North Melbourne FC",
    "source_url": "https://www.nmfc.com.au/news/954615/mckay-locks-in-two",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Jake Kolodjashnij",
+   "norm": "jakekolodjashnij",
+   "date": "2021-06-08",
+   "kind": "extension",
+   "club": "GEE",
+   "length": 3,
+   "end_year": 2024,
+   "end_estimated": true,
+   "reporter": "The Examiner (Geelong Cats Media)",
+   "source_url": "https://www.examiner.com.au/story/7287810/kolodjashnij-re-signs-with-geelong-for-three-years",
    "manual": true,
    "current": false
   },
@@ -5088,6 +5438,20 @@
    "current": false
   },
   {
+   "name": "Riley Garcia",
+   "norm": "rileygarcia",
+   "date": "2021-07-16",
+   "kind": "extension",
+   "club": "WB",
+   "length": 1,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "Western Bulldogs (club site)",
+   "source_url": "https://westernbulldogs.com.au/news/980010",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Sam Flanders",
    "norm": "samflanders",
    "date": "2021-07-19",
@@ -5112,6 +5476,20 @@
    "end_estimated": false,
    "reporter": "ESPN AFL",
    "source_url": "https://www.espn.com/afl/story/_/id/31842285/esava-ratugolea-signs-new-afl-deal-geelong-cats",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Cody Weightman",
+   "norm": "codyweightman",
+   "date": "2021-07-20",
+   "kind": "extension",
+   "club": "WB",
+   "length": 2,
+   "end_year": 2023,
+   "end_estimated": false,
+   "reporter": "AFL.com.au (Callum Twomey)",
+   "source_url": "https://www.afl.com.au/news/651246/western-bulldogs-reward-in-form-cody-weightman-with-a-new-two-year-deal",
    "manual": true,
    "current": false
   },
@@ -5592,6 +5970,20 @@
    "current": false
   },
   {
+   "name": "Peter Ladhams",
+   "norm": "peterladhams",
+   "date": "2021-10-13",
+   "kind": "signing",
+   "club": "SYD",
+   "length": 4,
+   "end_year": 2025,
+   "end_estimated": true,
+   "reporter": "Sydney Swans",
+   "source_url": "https://www.sydneyswans.com.au/news/1025580/ladhams-to-bring-healthy-competition",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Mabior Chol",
    "norm": "mabiorchol",
    "date": "2021-10-15",
@@ -5648,6 +6040,20 @@
    "current": false
   },
   {
+   "name": "Ben Miller",
+   "norm": "benmiller",
+   "date": "2021-10-18",
+   "kind": "extension",
+   "club": "RIC",
+   "length": 1,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "Richmond FC (richmondfc.com.au)",
+   "source_url": "https://www.richmondfc.com.au/news/1023293/stack-and-miller-locked-in-for-2022",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "John Noble",
    "norm": "johnnoble",
    "date": "2021-10-19",
@@ -5700,6 +6106,20 @@
    "end_estimated": false,
    "reporter": "Melbourne FC Media / AFL.com.au",
    "source_url": "https://www.melbournefc.com.au/news/1027305/new-deal-for-demon-defender",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Mason Cox",
+   "norm": "masoncox",
+   "date": "2021-10-28",
+   "kind": "extension",
+   "club": "COL",
+   "length": 1,
+   "end_year": 2022,
+   "end_estimated": false,
+   "reporter": "ESPN / Pilbara News",
+   "source_url": "https://www.pilbaranews.com.au/news/collingwood-re-signs-mason-cox-ahead-of-2022-afl-season-c-4355420",
    "manual": true,
    "current": false
   },
@@ -5924,6 +6344,20 @@
    "end_estimated": false,
    "reporter": "portadelaidefc.com.au",
    "source_url": "https://www.portadelaidefc.com.au/news/1038830/trio-of-young-stars-sign-on",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Todd Marshall",
+   "norm": "toddmarshall",
+   "date": "2021-12-13",
+   "kind": "extension",
+   "club": "PA",
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": false,
+   "reporter": "AFLRATINGS",
+   "source_url": "https://aflratings.com.au/2021/12/13/port-adelaide-update-todd-marshall/",
    "manual": true,
    "current": false
   },
@@ -6554,8 +6988,10 @@
    "length": 2,
    "end_year": 2024,
    "end_estimated": true,
-   "reporter": "Carlton",
-   "source_url": "https://aflratings.com.au/2022/04/01/contract-update-jack-carroll/"
+   "reporter": "AFLRATINGS",
+   "source_url": "https://aflratings.com.au/2022/04/01/contract-update-jack-carroll/",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Contract Updates: Collingwood",
@@ -6646,6 +7082,20 @@
    "end_estimated": false,
    "reporter": "Fremantle",
    "source_url": "https://aflratings.com.au/2022/04/08/contract-update-fremantle/"
+  },
+  {
+   "name": "Brandon Walker",
+   "norm": "brandonwalker",
+   "date": "2022-04-08",
+   "kind": "extension",
+   "club": "FRE",
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": false,
+   "reporter": "AFLRATINGS (Contract Updates: Fremantle) / fremantlefc.com.au",
+   "source_url": "https://aflratings.com.au/2022/04/08/contract-update-fremantle/",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Jayden Laverde",
@@ -7556,8 +8006,10 @@
    "length": 2,
    "end_year": 2024,
    "end_estimated": false,
-   "reporter": "St Kilda",
-   "source_url": "https://aflratings.com.au/2022/07/26/contract-update-dan-butler/"
+   "reporter": "AFLRATINGS / AFL.com.au / St Kilda FC",
+   "source_url": "https://aflratings.com.au/2022/07/26/contract-update-dan-butler/",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Contract Updates: Collingwood",
@@ -7744,8 +8196,8 @@
    "length": 3,
    "end_year": 2025,
    "end_estimated": false,
-   "reporter": "Collingwood FC (via AFLRATINGS)",
-   "source_url": "https://aflratings.com.au/2022/08/08/contract-update-jamie-elliott/",
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/817069/hot-pie-re-signs-forward-turns-back-on-free-agency/amp",
    "manual": true,
    "current": false
   },
@@ -7868,6 +8320,20 @@
    "current": false
   },
   {
+   "name": "Ben Miller",
+   "norm": "benmiller",
+   "date": "2022-08-11",
+   "kind": "extension",
+   "club": "RIC",
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": false,
+   "reporter": "Richmond FC (richmondfc.com.au) / AFLRATINGS",
+   "source_url": "https://www.richmondfc.com.au/news/1194596/emerging-trio-sign-richmond-extensions",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Contract Updates: GWS Giants",
    "norm": "contractupdatesgwsgiants",
    "date": "2022-08-12",
@@ -7880,20 +8346,6 @@
    "source_url": "https://aflratings.com.au/2022/08/12/contract-updates-gws-giants-3/"
   },
   {
-   "name": "Callum Brown",
-   "norm": "callumbrown",
-   "date": "2022-08-12",
-   "kind": "extension",
-   "club": "GWS",
-   "length": 1,
-   "end_year": 2023,
-   "end_estimated": true,
-   "reporter": "The42.ie",
-   "source_url": "https://www.the42.ie/callum-brown-derry-afl-new-deal-gws-giants-5839618-Aug2022/",
-   "manual": true,
-   "current": false
-  },
-  {
    "name": "Jesse Hogan",
    "norm": "jessehogan",
    "date": "2022-08-12",
@@ -7904,6 +8356,20 @@
    "end_estimated": false,
    "reporter": "AFLRATINGS",
    "source_url": "https://aflratings.com.au/2022/08/13/contract-update-jesse-hogan/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Callum Brown",
+   "norm": "callumbrown",
+   "date": "2022-08-12",
+   "kind": "extension",
+   "club": "GWS",
+   "length": 1,
+   "end_year": 2023,
+   "end_estimated": true,
+   "reporter": "The42.ie",
+   "source_url": "https://www.the42.ie/article.php?id=5839618",
    "manual": true,
    "current": false
   },
@@ -8224,6 +8690,20 @@
    "current": false
   },
   {
+   "name": "Riley Garcia",
+   "norm": "rileygarcia",
+   "date": "2022-08-30",
+   "kind": "extension",
+   "club": "WB",
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": false,
+   "reporter": "SEN",
+   "source_url": "https://archive.sen.com.au/news/2022/08/30/four-bulldogs-players-sign-on-as-premiership-tiger-also-extends/index.html",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Contract Updates: Port Adelaide",
    "norm": "contractupdatesportadelaide",
    "date": "2022-08-31",
@@ -8426,6 +8906,20 @@
    "current": false
   },
   {
+   "name": "Mason Cox",
+   "norm": "masoncox",
+   "date": "2022-09-06",
+   "kind": "extension",
+   "club": "COL",
+   "length": 1,
+   "end_year": 2023,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/mason-cox-confirms-2023-contract-extension-opens-up-on-ups-and-downs-of-2022-season-126989/",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Bailey Banfield",
    "norm": "baileybanfield",
    "date": "2022-09-07",
@@ -8514,6 +9008,20 @@
    "current": false
   },
   {
+   "name": "Matthew Owies",
+   "norm": "matthewowies",
+   "date": "2022-09-07",
+   "kind": "extension",
+   "club": "CAR",
+   "length": 2,
+   "end_year": 2024,
+   "end_estimated": false,
+   "reporter": "AFLRATINGS (via Carlton FC)",
+   "source_url": "https://aflratings.com.au/2022/09/07/contract-updates-carlton-3/",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Richmond Update: Jacob Hopper",
    "norm": "richmondupdatejacobhopper",
    "date": "2022-09-08",
@@ -8560,8 +9068,10 @@
    "length": 1,
    "end_year": 2023,
    "end_estimated": false,
-   "reporter": "Fremantle",
-   "source_url": "https://aflratings.com.au/2022/09/09/contract-update-sam-sturt/"
+   "reporter": "AFLRATINGS",
+   "source_url": "https://aflratings.com.au/2022/09/09/contract-update-sam-sturt/",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Todd Goldstein",
@@ -9424,6 +9934,20 @@
    "end_estimated": false,
    "reporter": "SEN / Richmond FC",
    "source_url": "https://www.richmondfc.com.au/news/1232474/taranto-becomes-a-tiger",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Bobby Hill",
+   "norm": "bobbyhill",
+   "date": "2022-10-03",
+   "kind": "signing",
+   "club": "COL",
+   "length": null,
+   "end_year": 2026,
+   "end_estimated": true,
+   "reporter": "AFLRATINGS",
+   "source_url": "https://aflratings.com.au/2022/10/03/collingwood-update-bobby-hill/",
    "manual": true,
    "current": false
   },
@@ -10762,6 +11286,20 @@
    "current": false
   },
   {
+   "name": "Cody Weightman",
+   "norm": "codyweightman",
+   "date": "2022-12-01",
+   "kind": "extension",
+   "club": "WB",
+   "length": 2,
+   "end_year": 2025,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/870609/new-jumper-new-contract-western-bulldogs-livewire-cody-weightman-locked-in-until-2025",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Oskar Baker",
    "norm": "oskarbaker",
    "date": "2022-12-05",
@@ -11960,7 +12498,7 @@
    "length": 2,
    "end_year": 2025,
    "end_estimated": false,
-   "reporter": "GWS Giants official site / Zero Hanger",
+   "reporter": "Zero Hanger / GWS Giants",
    "source_url": "https://www.zerohanger.com/gws-announce-new-deal-for-in-form-irishman-callum-brown-139530/",
    "manual": true,
    "current": false
@@ -12064,6 +12602,20 @@
    "current": false
   },
   {
+   "name": "Joshua Draper",
+   "norm": "joshuadraper",
+   "date": "2023-07-15",
+   "kind": "extension",
+   "club": "FRE",
+   "length": 2,
+   "end_year": 2025,
+   "end_estimated": false,
+   "reporter": "Fremantle FC (club site)",
+   "source_url": "https://www.fremantlefc.com.au/news/1347321/drapers-new-deal",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Lachie Ash",
    "norm": "lachieash",
    "date": "2023-07-19",
@@ -12116,6 +12668,20 @@
    "end_estimated": false,
    "reporter": "AFL.com.au",
    "source_url": "https://www.afl.com.au/news/985754/collingwood-magpies-defender-john-noble-earns-extension-after-career-best-season",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Mason Cox",
+   "norm": "masoncox",
+   "date": "2023-07-24",
+   "kind": "extension",
+   "club": "COL",
+   "length": 2,
+   "end_year": 2025,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/collingwood-mason-cox-agree-to-fresh-contract-extension-140267/",
    "manual": true,
    "current": false
   },
@@ -12230,6 +12796,34 @@
    "source_url": "https://www.lions.com.au/news/1393469/payne-signs-for-long-haul-after-landing-new-deal-with-lions",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Toby McMullin",
+   "norm": "tobymcmullin",
+   "date": "2023-08-11",
+   "kind": "extension",
+   "club": "GWS",
+   "length": 2,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1004888/new-deal-and-a-debut-giants-to-unveil-forward-in-port-clash/amp",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Sam Sturt",
+   "norm": "samsturt",
+   "date": "2023-08-14",
+   "kind": "extension",
+   "club": "FRE",
+   "length": 1,
+   "end_year": 2024,
+   "end_estimated": false,
+   "reporter": "AAP",
+   "source_url": "https://aapnews.aap.com.au/news/docker-sturt-s-stressful-journey-earns-him-2024-deal",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Ryan Lester",
@@ -12652,6 +13246,20 @@
    "current": false
   },
   {
+   "name": "Hugo Hall-Kahan",
+   "norm": "hugohallkahan",
+   "date": "2023-10-08",
+   "kind": "delist",
+   "club": "SYD",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "Sydney Swans",
+   "source_url": "https://www.sydneyswans.com.au/news/1449372/sydney-swans-make-six-list-changes",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Jordon Sweet",
    "norm": "jordonsweet",
    "date": "2023-10-09",
@@ -12764,6 +13372,20 @@
    "current": false
   },
   {
+   "name": "Taylor Adams",
+   "norm": "tayloradams",
+   "date": "2023-10-11",
+   "kind": "signing",
+   "club": "SYD",
+   "length": 3,
+   "end_year": 2026,
+   "end_estimated": true,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1051851/sydney-swans-seal-deal-to-land-collingwood-magpies-vice-captain-taylor-adams",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Jack Gunston",
    "norm": "jackgunston",
    "date": "2023-10-13",
@@ -12848,6 +13470,20 @@
    "current": false
   },
   {
+   "name": "Oscar Adams",
+   "norm": "oscaradams",
+   "date": "2023-10-15",
+   "kind": "delist",
+   "club": "STK",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "Draftguru",
+   "source_url": "https://www.draftguru.com.au/players/oscar_adams/1",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Lachie Schultz",
    "norm": "lachieschultz",
    "date": "2023-10-16",
@@ -12858,6 +13494,20 @@
    "end_estimated": false,
    "reporter": "Collingwood FC (collingwoodfc.com.au); contract length per footyinfo.com player tracker",
    "source_url": "https://www.collingwoodfc.com.au/news/1453158/shultz-pulls-on-the-stripes",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Liam Henry",
+   "norm": "liamhenry",
+   "date": "2023-10-16",
+   "kind": "signing",
+   "club": "STK",
+   "length": 4,
+   "end_year": 2027,
+   "end_estimated": true,
+   "reporter": "saints.com.au",
+   "source_url": "https://www.saints.com.au/news/1453121/henry-signs-with-saints",
    "manual": true,
    "current": true
   },
@@ -12988,6 +13638,20 @@
    "current": false
   },
   {
+   "name": "Paddy Dow",
+   "norm": "paddydow",
+   "date": "2023-10-18",
+   "kind": "trade",
+   "club": "STK",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1048832/former-top-10-picks-paddy-dow-nick-coffield-on-the-move-in-four-club-trade",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Ned Long",
    "norm": "nedlong",
    "date": "2023-10-19",
@@ -12998,6 +13662,20 @@
    "end_estimated": false,
    "reporter": "Zero Hanger",
    "source_url": "https://www.zerohanger.com/hawthorn-announce-trio-of-delistings-144817/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Jeremy Sharp",
+   "norm": "jeremysharp",
+   "date": "2023-10-26",
+   "kind": "delist",
+   "club": "GCS",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1057502/gold-coast-suns-cut-wa-wingman-jeremy-sharp-and-injured-former-gws-giant-jake-stein/amp",
    "manual": true,
    "current": false
   },
@@ -13142,6 +13820,20 @@
    "current": false
   },
   {
+   "name": "Jeremy Sharp",
+   "norm": "jeremysharp",
+   "date": "2023-11-27",
+   "kind": "signing",
+   "club": "FRE",
+   "length": null,
+   "end_year": 2025,
+   "end_estimated": true,
+   "reporter": "AAP / AFL.com.au (Zero Hanger headline: Frank Seal, 'Fremantle secure Jeremy Sharp through Supplemental Selection Period')",
+   "source_url": "https://aapnews.aap.com.au/news/jeremy-sharp-lachlan-bramble-handed-fresh-afl-chances",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Zak Butters",
    "norm": "zakbutters",
    "date": "2023-12-04",
@@ -13208,6 +13900,20 @@
    "end_estimated": false,
    "reporter": "Fox Sports (David Zita), via AFLRATINGS.com.au",
    "source_url": "https://aflratings.com.au/2023/12/13/sean-darcy-fre/",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Brandon Walker",
+   "norm": "brandonwalker",
+   "date": "2023-12-15",
+   "kind": "extension",
+   "club": "FRE",
+   "length": 3,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "fremantlefc.com.au",
+   "source_url": "https://www.fremantlefc.com.au/news/1472614/walks-signs-on-until-2027",
    "manual": true,
    "current": true
   },
@@ -13296,6 +14002,20 @@
    "current": false
   },
   {
+   "name": "Todd Marshall",
+   "norm": "toddmarshall",
+   "date": "2024-02-14",
+   "kind": "extension",
+   "club": "PA",
+   "length": 5,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": "AFL.com.au (Cal Twomey), via AFLRATINGS",
+   "source_url": "https://aflratings.com.au/2024/02/14/todd-marshall-pa-2/",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Josh Weddle",
    "norm": "joshweddle",
    "date": "2024-02-15",
@@ -13376,6 +14096,20 @@
    "end_estimated": false,
    "reporter": "SEN",
    "source_url": "https://archive.sen.com.au/news/2024/02/23/suns-re-sign-king-on-reported-massive-money-for-two-years/index.html",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Elijah Tsatas",
+   "norm": "elijahtsatas",
+   "date": "2024-02-23",
+   "kind": "extension",
+   "club": "ESS",
+   "length": 2,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "Essendon FC (essendonfc.com.au); date per Neos Kosmos report",
+   "source_url": "https://essendonfc.com.au/news/1493939/tsatas-signs-for-two-more",
    "manual": true,
    "current": false
   },
@@ -13758,6 +14492,20 @@
    "current": true
   },
   {
+   "name": "Shadeau Brain",
+   "norm": "shadeaubrain",
+   "date": "2024-05-01",
+   "kind": "extension",
+   "club": "BRI",
+   "length": 2,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "AFLRATINGS",
+   "source_url": "https://aflratings.com.au/2024/05/01/shadeau-brain-bri/",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Andrew McGrath",
    "norm": "andrewmcgrath",
    "date": "2024-05-02",
@@ -13912,6 +14660,20 @@
    "current": true
   },
   {
+   "name": "Saad El-Hawli",
+   "norm": "saadelhawli",
+   "date": "2024-05-30",
+   "kind": "signing",
+   "club": "ESS",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "Western Football Netball League (wfnl.com.au)",
+   "source_url": "https://wfnl.com.au/vikings-saad-el-hawli-drafted-to-essendon/",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Hugh McCluggage",
    "norm": "hughmccluggage",
    "date": "2024-06-03",
@@ -13954,20 +14716,6 @@
    "current": true
   },
   {
-   "name": "Ben Miller",
-   "norm": "benmiller",
-   "date": "2024-06-04",
-   "kind": "extension",
-   "club": "RIC",
-   "length": 2,
-   "end_year": 2026,
-   "end_estimated": false,
-   "reporter": "Richmond FC (richmondfc.com.au)",
-   "source_url": "https://www.richmondfc.com.au/news/1571361/miller-inks-richmond-extension",
-   "manual": true,
-   "current": false
-  },
-  {
    "name": "Will Hayward",
    "norm": "willhayward",
    "date": "2024-06-04",
@@ -13978,6 +14726,20 @@
    "end_estimated": false,
    "reporter": "Sydney Swans FC / SEN / ESPN AFL",
    "source_url": "https://www.sydneyswans.com.au/news/1570868/hayward-extends-for-five-years",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Ben Miller",
+   "norm": "benmiller",
+   "date": "2024-06-04",
+   "kind": "extension",
+   "club": "RIC",
+   "length": 2,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "Richmond FC (richmondfc.com.au) / AFLRATINGS",
+   "source_url": "https://www.richmondfc.com.au/news/1571361/miller-inks-richmond-extension",
    "manual": true,
    "current": false
   },
@@ -14022,6 +14784,20 @@
    "source_url": "https://aflratings.com.au/2024/06/13/tanner-bruhn-gee/",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Harvey Gallagher",
+   "norm": "harveygallagher",
+   "date": "2024-06-13",
+   "kind": "extension",
+   "club": "WB",
+   "length": 2,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "Western Bulldogs FC (westernbulldogs.com.au); date per AFLRATINGS post of 2024-06-13",
+   "source_url": "https://www.westernbulldogs.com.au/news/1576978/gallagher-bramble-remain-at-bulldogs",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Oliver Florent",
@@ -14178,6 +14954,20 @@
    "current": true
   },
   {
+   "name": "Tyrell Dewar",
+   "norm": "tyrelldewar",
+   "date": "2024-06-27",
+   "kind": "extension",
+   "club": "WCE",
+   "length": 1,
+   "end_year": 2025,
+   "end_estimated": false,
+   "reporter": "National Indigenous Times (corroborated by West Coast Eagles 'Emerging quartet sign on')",
+   "source_url": "https://nit.com.au/27-06-2024/12205/emerging-youngster-tyrell-dewar-extends-time-with-eagles-following-afl-debut",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Hudson O'Keeffe",
    "norm": "hudsonokeeffe",
    "date": "2024-06-28",
@@ -14274,6 +15064,20 @@
    "source_url": "https://www.goldcoastfc.com.au/news/1590899/sam-clohesy-signs-until-2026",
    "manual": true,
    "current": false
+  },
+  {
+   "name": "Cody Weightman",
+   "norm": "codyweightman",
+   "date": "2024-07-03",
+   "kind": "extension",
+   "club": "WB",
+   "length": 2,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "ESPN / AAP",
+   "source_url": "https://www.espn.com/afl/story/_/id/40486853/afl-western-bulldogs-forward-cody-weightman-re-signs-two-year-deal",
+   "manual": true,
+   "current": true
   },
   {
    "name": "Logan McDonald",
@@ -14612,6 +15416,20 @@
    "current": true
   },
   {
+   "name": "Joshua Draper",
+   "norm": "joshuadraper",
+   "date": "2024-08-12",
+   "kind": "extension",
+   "club": "FRE",
+   "length": 2,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Fremantle FC / AFLRATINGS (West Australian per Wikipedia)",
+   "source_url": "https://fremantlefc.com.au/news/1627156/draper-inks-two-more-years",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Changkuoth Jiath",
    "norm": "changkuothjiath",
    "date": "2024-08-14",
@@ -14682,6 +15500,20 @@
    "current": true
   },
   {
+   "name": "Kane McAuliffe",
+   "norm": "kanemcauliffe",
+   "date": "2024-08-16",
+   "kind": "extension",
+   "club": "RIC",
+   "length": 2,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Zero Hanger / Richmond FC",
+   "source_url": "https://www.zerohanger.com/richmond-youngster-puts-pen-to-paper-in-third-signing-coup-154092/",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Max Gawn",
    "norm": "maxgawn",
    "date": "2024-08-18",
@@ -14722,6 +15554,20 @@
    "source_url": "https://www.geelongcats.com.au/news/1634002/announcement",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Lincoln McCarthy",
+   "norm": "lincolnmccarthy",
+   "date": "2024-08-19",
+   "kind": "extension",
+   "club": "BRI",
+   "length": 1,
+   "end_year": 2025,
+   "end_estimated": false,
+   "reporter": "AFLRATINGS (via Brisbane Lions)",
+   "source_url": "https://aflratings.com.au/2024/08/19/lincoln-mccarthy-bri/",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Jack Viney",
@@ -14948,6 +15794,20 @@
    "current": false
   },
   {
+   "name": "Archer Reid",
+   "norm": "archerreid",
+   "date": "2024-09-02",
+   "kind": "extension",
+   "club": "WCE",
+   "length": 2,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/west-coast-confirm-contract-extensions-for-first-year-pair-154699/",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Cooper Sharman",
    "norm": "coopersharman",
    "date": "2024-09-04",
@@ -14988,6 +15848,34 @@
    "source_url": "https://www.nmfc.com.au/news/1645888/young-roos-re-sign",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Sam Sturt",
+   "norm": "samsturt",
+   "date": "2024-09-04",
+   "kind": "extension",
+   "club": "FRE",
+   "length": 2,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "The West Australian / Harvey Reporter",
+   "source_url": "https://harveyreporter.com.au/sport/fremantle-dockers/fremantle-dockers-lock-away-corey-wagner-sam-sturt-and-bailey-banfield-on-new-two-year-extensions--c-15940132",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Dan Butler",
+   "norm": "danbutler",
+   "date": "2024-09-04",
+   "kind": "extension",
+   "club": "STK",
+   "length": 2,
+   "end_year": 2026,
+   "end_estimated": true,
+   "reporter": "St Kilda FC / BigFooty",
+   "source_url": "https://www.bigfooty.com/2024/09/st-kilda-secures-key-forwards-with-new-contracts/",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Joe Fonti",
@@ -15424,6 +16312,20 @@
    "current": true
   },
   {
+   "name": "Riley Garcia",
+   "norm": "rileygarcia",
+   "date": "2024-10-09",
+   "kind": "extension",
+   "club": "WB",
+   "length": 3,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1242004/western-bulldogs-midfielder-riley-garcia-signs-new-deal-despite-sydney-swans-late-swoop",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Noah Balta",
    "norm": "noahbalta",
    "date": "2024-10-10",
@@ -15436,6 +16338,48 @@
    "source_url": "https://www.afl.com.au/news/1242286/noah-balta-signs-massive-seven-year-deal-with-richmond-tigers",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Dougal Howard",
+   "norm": "dougalhoward",
+   "date": "2024-10-10",
+   "kind": "extension",
+   "club": "STK",
+   "length": 1,
+   "end_year": 2025,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/saints-extend-veteran-pair-155921/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Jake Kolodjashnij",
+   "norm": "jakekolodjashnij",
+   "date": "2024-10-10",
+   "kind": "extension",
+   "club": "GEE",
+   "length": 2,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "Geelong Cats",
+   "source_url": "https://www.geelongcats.com.au/news/1675234/aaa",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Conor Stone",
+   "norm": "conorstone",
+   "date": "2024-10-10",
+   "kind": "extension",
+   "club": "GWS",
+   "length": 2,
+   "end_year": 2026,
+   "end_estimated": true,
+   "reporter": "AFLRATINGS (via GWS)",
+   "source_url": "https://aflratings.com.au/afl-news-conor-stone/",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Jacob Weitering",
@@ -15562,6 +16506,20 @@
    "source_url": "https://www.afl.com.au/news/1242467/collingwood-port-adelaide-and-gold-coast-complete-mega-trade-as-houston-noble-lukosius-richards-and-atkins-move-clubs",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Matthew Owies",
+   "norm": "matthewowies",
+   "date": "2024-10-15",
+   "kind": "signing",
+   "club": "WCE",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFLRATINGS",
+   "source_url": "https://aflratings.com.au/2024/10/15/matthew-owies-joins-west-coast/",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Bailey Smith",
@@ -15774,6 +16732,20 @@
    "current": true
   },
   {
+   "name": "Jack Carroll",
+   "norm": "jackcarroll",
+   "date": "2024-10-22",
+   "kind": "delist",
+   "club": "CAR",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1248288/carlton-blues-delist-three-including-jack-carroll-duo-sam-durdin-matt-caroll-offered-train-on-chance",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Jaxon Prior",
    "norm": "jaxonprior",
    "date": "2024-10-23",
@@ -15898,6 +16870,20 @@
    "source_url": "https://www.collingwoodfc.com.au/news/1686881/membrey-a-magpie",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Jack Carroll",
+   "norm": "jackcarroll",
+   "date": "2024-11-08",
+   "kind": "signing",
+   "club": "STK",
+   "length": 2,
+   "end_year": 2026,
+   "end_estimated": true,
+   "reporter": "SEN",
+   "source_url": "https://www.sen.com.au/news/2024/11/08/saints-sign-former-blue-in-delisted-free-agency-swoop",
+   "manual": true,
+   "current": false
   },
   {
    "name": "James O'Donnell",
@@ -16040,6 +17026,20 @@
    "current": true
   },
   {
+   "name": "Alix Tauru",
+   "norm": "alixtauru",
+   "date": "2024-11-20",
+   "kind": "signing",
+   "club": "STK",
+   "length": null,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Zero Hanger (player profile); also Footywire, AFL.com.au",
+   "source_url": "https://www.zerohanger.com/afl/players/alixzander-tauru/",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Sam Marshall",
    "norm": "sammarshall",
    "date": "2024-11-21",
@@ -16136,6 +17136,20 @@
    "source_url": "https://www.themercury.com.au/sport/afl/luke-nankervis-inks-twoyear-contract-extension-with-adelaide/news-story/70ec3ce92f7c309422de842a75f74ee9",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Calsher Dear",
+   "norm": "calsherdear",
+   "date": "2024-12-19",
+   "kind": "extension",
+   "club": "HAW",
+   "length": 1,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "AFL.com.au (Josh Gabelich)",
+   "source_url": "https://www.afl.com.au/news/1264058/back-issue-leaves-hawks-forward-facing-delayed-start-to-2025/amp",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Alex Pearce",
@@ -16558,6 +17572,20 @@
    "current": true
   },
   {
+   "name": "Shadeau Brain",
+   "norm": "shadeaubrain",
+   "date": "2025-03-31",
+   "kind": "extension",
+   "club": "BRI",
+   "length": 1,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Brisbane Lions (lions.com.au)",
+   "source_url": "https://www.lions.com.au/news/1745506/youi-brisbane-lions-academy-young-guns-sign-new-deals",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Sam De Koning",
    "norm": "samdekoning",
    "date": "2025-04-01",
@@ -16626,6 +17654,20 @@
    "source_url": "https://www.espn.com/afl/story/_/id/44828605/afl-sydney-swans-chad-warner-re-signs-two-year-contract",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Bobby Hill",
+   "norm": "bobbyhill",
+   "date": "2025-04-30",
+   "kind": "extension",
+   "club": "COL",
+   "length": 4,
+   "end_year": 2030,
+   "end_estimated": false,
+   "reporter": "Collingwood FC",
+   "source_url": "https://www.collingwoodfc.com.au/news/1769292/four-more-years-for-hill",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Luke Trainor",
@@ -16824,6 +17866,20 @@
    "current": true
   },
   {
+   "name": "Tyrell Dewar",
+   "norm": "tyrelldewar",
+   "date": "2025-05-23",
+   "kind": "extension",
+   "club": "WCE",
+   "length": 3,
+   "end_year": 2028,
+   "end_estimated": false,
+   "reporter": "National Indigenous Times (corroborated by West Coast Eagles club site and AFL.com.au)",
+   "source_url": "https://nit.com.au/23-05-2025/18111/kelly-dewar-sign-on-at-waalitj-marawar",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Mark Blicavs",
    "norm": "markblicavs",
    "date": "2025-05-26",
@@ -16850,6 +17906,20 @@
    "source_url": "https://www.sydneyswans.com.au/news/1791714",
    "manual": true,
    "current": false
+  },
+  {
+   "name": "Caiden Cleary",
+   "norm": "caidencleary",
+   "date": "2025-05-26",
+   "kind": "extension",
+   "club": "SYD",
+   "length": 2,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Zero Hanger / Sydney Swans Media",
+   "source_url": "https://www.zerohanger.com/sydney-sees-three-youngsters-sign-extensions-162994/",
+   "manual": true,
+   "current": true
   },
   {
    "name": "Darcy Jones",
@@ -17482,6 +18552,20 @@
    "current": true
   },
   {
+   "name": "Oscar Adams",
+   "norm": "oscaradams",
+   "date": "2025-08-06",
+   "kind": "extension",
+   "club": "GCS",
+   "length": 1,
+   "end_year": 2026,
+   "end_estimated": true,
+   "reporter": "AFL.com.au (Josh Gabelich)",
+   "source_url": "https://x.com/AFL/status/1953037708491932019",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Tom Lynch",
    "norm": "tomlynch",
    "date": "2025-08-08",
@@ -17490,10 +18574,10 @@
    "length": 1,
    "end_year": 2026,
    "end_estimated": false,
-   "reporter": "Zero Hanger / Richmond FC",
+   "reporter": "Richmond FC / AAP",
    "source_url": "https://www.richmondfc.com.au/news/1853849/lynch-locked-in-for-2026",
    "manual": true,
-   "current": true
+   "current": false
   },
   {
    "name": "Darcy Cameron",
@@ -17690,6 +18774,34 @@
    "source_url": "https://www.zerohanger.com/st-kilda-lock-away-five-for-2026/",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Dougal Howard",
+   "norm": "dougalhoward",
+   "date": "2025-08-20",
+   "kind": "extension",
+   "club": "STK",
+   "length": 1,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/st-kilda-lock-away-five-for-2026/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Paddy Dow",
+   "norm": "paddydow",
+   "date": "2025-08-20",
+   "kind": "extension",
+   "club": "STK",
+   "length": 1,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/st-kilda-lock-away-five-for-2026-167147/",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Jobe Shanahan",
@@ -17968,6 +19080,20 @@
    "current": true
   },
   {
+   "name": "Jeremy Sharp",
+   "norm": "jeremysharp",
+   "date": "2025-09-11",
+   "kind": "extension",
+   "club": "FRE",
+   "length": 2,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Fremantle FC",
+   "source_url": "https://www.fremantlefc.com.au/news/1890982/three-put-pen-to-paper-and-sign-on",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Dylan Moore",
    "norm": "dylanmoore",
    "date": "2025-09-15",
@@ -18024,18 +19150,18 @@
    "current": true
   },
   {
-   "name": "Jamie Elliott",
-   "norm": "jamieelliott",
-   "date": "2025-09-17",
+   "name": "Adam Treloar",
+   "norm": "adamtreloar",
+   "date": "2025-09-15",
    "kind": "extension",
-   "club": "COL",
-   "length": null,
-   "end_year": null,
+   "club": "WB",
+   "length": 1,
+   "end_year": 2026,
    "end_estimated": false,
-   "reporter": "Courier-Mail / NT News",
-   "source_url": "https://www.couriermail.com.au/sport/afl/jamie-elliott-resigns-with-magpies-neil-balme-addresses-crows-petracca-links/news-story/19abe787f51380184613277f161af090",
+   "reporter": "SEN",
+   "source_url": "https://www.sen.com.au/news/2025/09/15/afl-2025-adam-treloar-re-signs-for-the-western-bulldogs-one-year-deal",
    "manual": true,
-   "current": true
+   "current": false
   },
   {
    "name": "Marcus Windhager",
@@ -18148,6 +19274,20 @@
    "source_url": "https://www.hawthornfc.com.au/news/1907761/two-more-for-butler",
    "manual": true,
    "current": false
+  },
+  {
+   "name": "Jamie Elliott",
+   "norm": "jamieelliott",
+   "date": "2025-10-01",
+   "kind": "extension",
+   "club": "COL",
+   "length": 2,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1435508/in-demand-collingwood-magpies-forward-jamie-elliott-makes-contract-call-amid-gold-coast-suns-interest",
+   "manual": true,
+   "current": true
   },
   {
    "name": "Harry Rowston",
@@ -18660,6 +19800,20 @@
    "current": true
   },
   {
+   "name": "Toby McMullin",
+   "norm": "tobymcmullin",
+   "date": "2025-10-11",
+   "kind": "extension",
+   "club": "GWS",
+   "length": 2,
+   "end_year": 2028,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/more-for-mcmullin-giant-utility-pens-new-deal-169748/",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Will Brodie Joins Port Adelaide",
    "norm": "willbrodiejoinsportadelaide",
    "date": "2025-10-13",
@@ -19076,6 +20230,20 @@
    "current": false
   },
   {
+   "name": "Peter Ladhams",
+   "norm": "peterladhams",
+   "date": "2025-10-15",
+   "kind": "extension",
+   "club": "SYD",
+   "length": 2,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Sydney Swans",
+   "source_url": "https://www.sydneyswans.com.au/news/1907841/peter-ladhams-signs-on-with-sydney",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Levi Ashcroft",
    "norm": "leviashcroft",
    "date": "2025-10-17",
@@ -19090,6 +20258,20 @@
    "current": true
   },
   {
+   "name": "Mason Cox",
+   "norm": "masoncox",
+   "date": "2025-10-18",
+   "kind": "delist",
+   "club": "COL",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "ESPN (AAP)",
+   "source_url": "https://www.espn.com/afl/story/_/id/46632509/collingwood-cult-hero-mason-cox-not-offered-new-contract",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Lachlan Sullivan",
    "norm": "lachlansullivan",
    "date": "2025-10-21",
@@ -19102,6 +20284,20 @@
    "source_url": "https://www.collingwoodfc.com.au/news/1918871/rookie-duo-howes-and-sullivan-sign-on",
    "manual": true,
    "current": true
+  },
+  {
+   "name": "Conor Stone",
+   "norm": "conorstone",
+   "date": "2025-10-21",
+   "kind": "delist",
+   "club": "GWS",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFLRATINGS (via GWS)",
+   "source_url": "https://aflratings.com.au/afl-news-conor-stone/",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Zac Bailey",
@@ -19130,6 +20326,20 @@
    "current": true
   },
   {
+   "name": "Oliver Wiltshire",
+   "norm": "oliverwiltshire",
+   "date": "2025-10-23",
+   "kind": "extension",
+   "club": "GEE",
+   "length": 1,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "AFLRATINGS (via Geelong)",
+   "source_url": "https://aflratings.com.au/afl-news-oliver-wiltshire/",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Conor McKenna",
    "norm": "conormckenna",
    "date": "2025-10-24",
@@ -19154,6 +20364,20 @@
    "end_estimated": false,
    "reporter": "Zero Hanger",
    "source_url": "https://www.zerohanger.com/carlton-delist-contracted-pair-elijah-hollands-jaxon-binns-170249/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Lincoln McCarthy",
+   "norm": "lincolnmccarthy",
+   "date": "2025-10-24",
+   "kind": "delist",
+   "club": "BRI",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFLRATINGS (via Michael Whiting)",
+   "source_url": "https://aflratings.com.au/afl-news-lincoln-mccarthy/",
    "manual": true,
    "current": false
   },
@@ -19322,6 +20546,62 @@
    "current": true
   },
   {
+   "name": "Sullivan Robey",
+   "norm": "sullivanrobey",
+   "date": "2025-11-19",
+   "kind": "signing",
+   "club": "ESS",
+   "length": 3,
+   "end_year": 2028,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/afl/players/sullivan-robey/",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Josh Lindsay",
+   "norm": "joshlindsay",
+   "date": "2025-11-19",
+   "kind": "signing",
+   "club": "WCE",
+   "length": 3,
+   "end_year": 2028,
+   "end_estimated": true,
+   "reporter": "Zero Hanger / Footywire",
+   "source_url": "https://www.zerohanger.com/afl/players/josh-lindsay/",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Zeke Uwland",
+   "norm": "zekeuwland",
+   "date": "2025-11-19",
+   "kind": "signing",
+   "club": "GCS",
+   "length": 3,
+   "end_year": 2028,
+   "end_estimated": true,
+   "reporter": "Gold Coast SUNS (goldcoastfc.com.au); Footywire; Zero Hanger",
+   "source_url": "https://www.goldcoastfc.com.au/news/1932022/zeke-uwland-drafted-to-the-gold-coast-suns",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Latrelle Pickett",
+   "norm": "latrellepickett",
+   "date": "2025-11-19",
+   "kind": "signing",
+   "club": "MEL",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "Melbourne FC",
+   "source_url": "https://www.melbournefc.com.au/news/1931960/afl-draft-pick-12-latrelle-pickett",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "2025 AFL Draft: Day 1",
    "norm": "afldraftday",
    "date": "2025-11-20",
@@ -19428,6 +20708,34 @@
    "current": true
   },
   {
+   "name": "Conor Stone",
+   "norm": "conorstone",
+   "date": "2025-11-21",
+   "kind": "signing",
+   "club": "GWS",
+   "length": 1,
+   "end_year": 2026,
+   "end_estimated": true,
+   "reporter": "AFLRATINGS (via GWS)",
+   "source_url": "https://aflratings.com.au/afl-news-conor-stone/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Lincoln McCarthy",
+   "norm": "lincolnmccarthy",
+   "date": "2025-11-21",
+   "kind": "signing",
+   "club": "BRI",
+   "length": 1,
+   "end_year": 2026,
+   "end_estimated": true,
+   "reporter": "AFLRATINGS",
+   "source_url": "https://aflratings.com.au/2025-afl-draft/",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "2025 AFL Draft: Day 3",
    "norm": "afldraftday",
    "date": "2025-11-22",
@@ -19474,6 +20782,20 @@
    "end_estimated": false,
    "reporter": "AFLRATINGS",
    "source_url": "https://aflratings.com.au/2025/11/24/jayden-laverde-joins-gws/",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Mason Cox",
+   "norm": "masoncox",
+   "date": "2025-11-24",
+   "kind": "signing",
+   "club": "FRE",
+   "length": 2,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Fremantle FC / AFL.com.au",
+   "source_url": "https://www.fremantlefc.com.au/news/1933927/fremantle-welcomes-mason-cox",
    "manual": true,
    "current": true
   },
@@ -19650,6 +20972,20 @@
    "end_estimated": false,
    "reporter": "Fremantle FC / Zero Hanger",
    "source_url": "https://www.fremantlefc.com.au/news/1942840/freo-lock-away-key-forward",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Angus Clarke",
+   "norm": "angusclarke",
+   "date": "2025-12-23",
+   "kind": "extension",
+   "club": "ESS",
+   "length": 2,
+   "end_year": 2028,
+   "end_estimated": false,
+   "reporter": "Essendon FC (club site); SE Voice",
+   "source_url": "https://www.essendonfc.com.au/news/1943044/afl-young-don-locked-in-until-the-end-of-2028",
    "manual": true,
    "current": true
   },
@@ -20284,6 +21620,20 @@
    "current": true
   },
   {
+   "name": "Hugo Hall-Kahan",
+   "norm": "hugohallkahan",
+   "date": "2026-05-26",
+   "kind": "signing",
+   "club": "ADE",
+   "length": null,
+   "end_year": 2026,
+   "end_estimated": true,
+   "reporter": "Adelaide Crows",
+   "source_url": "https://www.afc.com.au/news/2033935/crows-select-hugo-hall-kahan-in-mid-season-rookie-draft",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "George Wardlaw",
    "norm": "georgewardlaw",
    "date": "2026-05-28",
@@ -20652,6 +22002,34 @@
    "current": false
   },
   {
+   "name": "Taylor Adams",
+   "norm": "tayloradams",
+   "date": "2026-06-22",
+   "kind": "retire",
+   "club": "SYD",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1546461/sydney-swan-taylor-adams-announces-retirement",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Oliver Wiltshire",
+   "norm": "oliverwiltshire",
+   "date": "2026-06-22",
+   "kind": "extension",
+   "club": "GEE",
+   "length": 1,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Geelong Cats (geelongcats.com.au)",
+   "source_url": "https://www.geelongcats.com.au/news/2052447/oconnor-and-wiltshire-commit-to-the-cats",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Corey Wagner",
    "norm": "coreywagner",
    "date": "2026-06-23",
@@ -20804,16 +22182,16 @@
    "current": true
   },
   {
-   "name": "Ben Miller",
-   "norm": "benmiller",
-   "date": "2026-07-08",
+   "name": "Archer Reid",
+   "norm": "archerreid",
+   "date": "2026-07-03",
    "kind": "extension",
-   "club": "RIC",
-   "length": 2,
-   "end_year": 2029,
+   "club": "WCE",
+   "length": 3,
+   "end_year": 2030,
    "end_estimated": false,
-   "reporter": "Richmond FC (richmondfc.com.au)",
-   "source_url": "https://www.richmondfc.com.au/news/2064766/miller-locked-in-until-end-of-2029",
+   "reporter": "The West Australian / West Coast Eagles",
+   "source_url": "https://www.westcoasteagles.com.au/news/2058674/reid-extends-until-2030",
    "manual": true,
    "current": true
   },
@@ -20828,6 +22206,20 @@
    "end_estimated": false,
    "reporter": "Carlton FC (carltonfc.com.au)",
    "source_url": "https://www.carltonfc.com.au/news/2063865/wilson-locks-in-for-two-more",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Ben Miller",
+   "norm": "benmiller",
+   "date": "2026-07-08",
+   "kind": "extension",
+   "club": "RIC",
+   "length": 2,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": "Richmond FC (richmondfc.com.au)",
+   "source_url": "https://www.richmondfc.com.au/news/2064766/miller-locked-in-until-end-of-2029",
    "manual": true,
    "current": true
   },
@@ -21014,6 +22406,20 @@
    "current": true
   },
   {
+   "name": "Oscar Adams",
+   "norm": "oscaradams",
+   "date": "2026-07-15",
+   "kind": "extension",
+   "club": "GCS",
+   "length": 2,
+   "end_year": 2028,
+   "end_estimated": false,
+   "reporter": "Gold Coast FC",
+   "source_url": "https://www.goldcoastfc.com.au/news/2071171/big-o-extends-until-2028",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Bailey J. Williams",
    "norm": "baileyjwilliams",
    "date": "2026-07-20",
@@ -21188,6 +22594,20 @@
    "current": false
   },
   {
+   "name": "Bobby Hill",
+   "norm": "bobbyhill",
+   "date": "2026-07-31",
+   "kind": "delist",
+   "club": "COL",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/afl-2026-collingwood-and-bobby-hill-officially-part-ways-180557/",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Callum Ah Chee",
    "norm": "callumahchee",
    "date": "2026-08-01",
@@ -21212,6 +22632,48 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2026/08/04/afl-trade-news-tom-sparrow/"
+  },
+  {
+   "name": "Hugo Hall-Kahan",
+   "norm": "hugohallkahan",
+   "date": "2026-08-04",
+   "kind": "extension",
+   "club": "ADE",
+   "length": 2,
+   "end_year": 2028,
+   "end_estimated": false,
+   "reporter": "Adelaide Crows",
+   "source_url": "https://www.afc.com.au/news/2090617/crows-trio-sign-on",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Jacob Farrow",
+   "norm": "jacobfarrow",
+   "date": "2026-08-10",
+   "kind": "extension",
+   "club": "ESS",
+   "length": 2,
+   "end_year": 2030,
+   "end_estimated": false,
+   "reporter": "Essendon FC / Zero Hanger",
+   "source_url": "https://www.essendonfc.com.au/news/2095987/signed-til-2030-first-year-guns-commit-to-bombers-future",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Dyson Sharp",
+   "norm": "dysonsharp",
+   "date": "2026-08-10",
+   "kind": "extension",
+   "club": "ESS",
+   "length": 2,
+   "end_year": 2030,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/pair-of-essendon-rookies-sign-new-extensions-181064/",
+   "manual": true,
+   "current": true
   },
   {
    "name": "James Borlase Contract News",
@@ -21274,6 +22736,20 @@
    "source_url": "https://aflratings.com.au/2026/08/18/taj-hotton-contract-news/"
   },
   {
+   "name": "Jonty Faull",
+   "norm": "jontyfaull",
+   "date": "2026-08-18",
+   "kind": "extension",
+   "club": "RIC",
+   "length": 2,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": "AFLRATINGS",
+   "source_url": "https://aflratings.com.au/2026/08/18/jonty-faull-contract-news/",
+   "manual": true,
+   "current": true
+  },
+  {
    "name": "Mitch Georgiades Contract News",
    "norm": "mitchgeorgiadescontractnews",
    "date": "2026-08-19",
@@ -21284,6 +22760,20 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2026/08/19/mitch-georgiades-contract-news/"
+  },
+  {
+   "name": "Dougal Howard",
+   "norm": "dougalhoward",
+   "date": "2026-08-19",
+   "kind": "retire",
+   "club": "STK",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1589767/saints-defender-to-hang-up-the-boots-after-two-club-12-season-career",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Jake Stringer",
@@ -21298,6 +22788,20 @@
    "source_url": "https://www.afl.com.au/news/1589872/stringer-confirms-giants-exit-plans-to-play-on-in-2027/amp",
    "manual": true,
    "current": false
+  },
+  {
+   "name": "Tom Lynch",
+   "norm": "tomlynch",
+   "date": "2026-08-21",
+   "kind": "extension",
+   "club": "RIC",
+   "length": 1,
+   "end_year": 2027,
+   "end_estimated": false,
+   "reporter": "Zero Hanger / Richmond FC",
+   "source_url": "https://www.zerohanger.com/richmond-veteran-youngster-signs-contract-extensions-lalor-181572/",
+   "manual": true,
+   "current": true
   },
   {
    "name": "Ben King Free Agency News",
@@ -21336,6 +22840,20 @@
    "source_url": "https://aflratings.com.au/2026/08/24/zak-butters-free-agency-news/"
   },
   {
+   "name": "Paddy Dow",
+   "norm": "paddydow",
+   "date": "2026-08-27",
+   "kind": "delist",
+   "club": "STK",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1595742/former-top-three-pick-paddy-dow-among-three-players-delisted-by-st-kilda-saints",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Scott Pendlebury Free Agency News",
    "norm": "scottpendleburyfreeagencynews",
    "date": "2026-08-29",
@@ -21346,6 +22864,20 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2026/08/29/scott-pendlebury-free-agency-news/"
+  },
+  {
+   "name": "Jake Rogers",
+   "norm": "jakerogers",
+   "date": "2026-09-03",
+   "kind": "extension",
+   "club": "GCS",
+   "length": 3,
+   "end_year": 2029,
+   "end_estimated": false,
+   "reporter": "Zero Hanger / Gold Coast FC",
+   "source_url": "https://www.zerohanger.com/gold-coast-suns-sign-homegrown-trio-to-new-contracts-182207/",
+   "manual": true,
+   "current": true
   },
   {
    "name": "Tom Liberatore retires",
@@ -21384,6 +22916,20 @@
    "source_url": "https://aflratings.com.au/2026/09/09/adam-treloar-announces-retirement/"
   },
   {
+   "name": "Adam Treloar",
+   "norm": "adamtreloar",
+   "date": "2026-09-09",
+   "kind": "retire",
+   "club": "WB",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFLRATINGS",
+   "source_url": "https://aflratings.com.au/2026/09/09/adam-treloar-announces-retirement/",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Butters nominates Bulldogs",
    "norm": "buttersnominatesbulldogs",
    "date": "2026-09-12",
@@ -21406,6 +22952,34 @@
    "end_estimated": false,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2026/09/15/logan-morris-contract-news/"
+  },
+  {
+   "name": "Elijah Tsatas",
+   "norm": "elijahtsatas",
+   "date": "2026-09-15",
+   "kind": "delist",
+   "club": "ESS",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/essendon-delists-former-top-five-afl-draft-pick-182683/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Saad El-Hawli",
+   "norm": "saadelhawli",
+   "date": "2026-09-15",
+   "kind": "delist",
+   "club": "ESS",
+   "length": null,
+   "end_year": 2026,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1612850/former-top-10-pick-elijah-tsatas-free-agent-jade-gresham-among-five-essendon-bombers-delisted",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Toby Greene to join Cats",
@@ -21444,6 +23018,34 @@
    "end_estimated": true,
    "reporter": null,
    "source_url": "https://aflratings.com.au/2026/09/29/devils-confirm-8-signings/"
+  },
+  {
+   "name": "Sam Sturt",
+   "norm": "samsturt",
+   "date": "2026-09-29",
+   "kind": "delist",
+   "club": "FRE",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/fremantle-announces-four-delistings-veteran-and-former-first-round-draft-pick-cut-183285/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Jake Kolodjashnij",
+   "norm": "jakekolodjashnij",
+   "date": "2026-09-29",
+   "kind": "retire",
+   "club": "GEE",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "Geelong Cats",
+   "source_url": "https://www.geelongcats.com.au/news/2143507/thank-you-jake-kolodjashnij-retires",
+   "manual": true,
+   "current": false
   },
   {
    "name": "Lachie Neale joins Magpies",
@@ -21546,6 +23148,34 @@
    "end_estimated": true,
    "reporter": "Collingwood FC / SEN / Illawarra Mercury (AAP)",
    "source_url": "https://www.collingwoodfc.com.au/news/2144897/neale-becomes-a-magpie",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Calsher Dear",
+   "norm": "calsherdear",
+   "date": "2026-10-02",
+   "kind": "extension",
+   "club": "HAW",
+   "length": 2,
+   "end_year": 2028,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/in-demand-hawthorn-forward-makes-contract-call-amid-rival-interest-183379/",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Dan Butler",
+   "norm": "danbutler",
+   "date": "2026-10-02",
+   "kind": "extension",
+   "club": "STK",
+   "length": 1,
+   "end_year": 2027,
+   "end_estimated": true,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/essendon-chases-docker-st-kilda-signs-forward-brisbane-defender-open-to-move-afl-trade-news-183420/",
    "manual": true,
    "current": true
   },
@@ -22278,6 +23908,20 @@
    "current": true
   },
   {
+   "name": "Harvey Gallagher",
+   "norm": "harveygallagher",
+   "date": "2026-10-15",
+   "kind": "delist",
+   "club": "WB",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "Western Bulldogs FC (westernbulldogs.com.au); corroborated by AFLRATINGS",
+   "source_url": "https://www.westernbulldogs.com.au/news/2151898/ins-and-outs-western-bulldogs-list-changes-after-the-trade-period",
+   "manual": true,
+   "current": false
+  },
+  {
    "name": "Jake Stringer joins Saints",
    "norm": "jakestringerjoinssaints",
    "date": "2026-10-19",
@@ -22300,6 +23944,62 @@
    "end_estimated": false,
    "reporter": "AFL.com.au",
    "source_url": "https://www.afl.com.au/news/1634074/jake-stringer-lands-at-fourth-club-st-kilda-saints-after-departing-greater-western-sydney-giants-for-family-reasons",
+   "manual": true,
+   "current": true
+  },
+  {
+   "name": "Conor Stone",
+   "norm": "conorstone",
+   "date": "2026-10-21",
+   "kind": "delist",
+   "club": "GWS",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFL.com.au",
+   "source_url": "https://www.afl.com.au/news/1634330",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Matthew Owies",
+   "norm": "matthewowies",
+   "date": "2026-10-21",
+   "kind": "delist",
+   "club": "WCE",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "AFLRATINGS",
+   "source_url": "https://aflratings.com.au/afl-news-matthew-owies/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Jack Carroll",
+   "norm": "jackcarroll",
+   "date": "2026-10-22",
+   "kind": "delist",
+   "club": "STK",
+   "length": null,
+   "end_year": null,
+   "end_estimated": false,
+   "reporter": "Zero Hanger",
+   "source_url": "https://www.zerohanger.com/st-kilda-makes-surprise-delisting-184119/",
+   "manual": true,
+   "current": false
+  },
+  {
+   "name": "Lincoln McCarthy",
+   "norm": "lincolnmccarthy",
+   "date": "2026-10-24",
+   "kind": "extension",
+   "club": "BRI",
+   "length": 1,
+   "end_year": 2027,
+   "end_estimated": true,
+   "reporter": "Brisbane Lions (lions.com.au)",
+   "source_url": "https://www.lions.com.au/news/2157293/experienced-trio-sign-on",
    "manual": true,
    "current": true
   }
