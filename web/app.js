@@ -238,7 +238,7 @@ const monthYear = d => {
 
 async function landingView() {
   const [summary, order, newsItems, trend, clubList, adminUpdates, trendingPlayers, tvBoard, movers,
-         brownlow, rising, miles, flag, expiry] = await Promise.all([
+         brownlow, rising, miles, flag, expiry, suggests] = await Promise.all([
     api("/api/summary"),
     api("/api/draft-order").catch(() => null),
     api("/api/news").catch(() => []),
@@ -253,6 +253,7 @@ async function landingView() {
     api("/api/milestones").catch(() => null),
     api("/api/flag-race").catch(() => null),
     api("/api/contract-expiry").catch(() => null),
+    api("/api/suggests").catch(() => null),
   ]);
   const s = summary.contract_statuses;
   const rfas = trend.filter(t => t.kind === "rfa");
@@ -286,6 +287,7 @@ async function landingView() {
   const leads = stories.slice(0, 3);
 
   view.innerHTML = `
+    ${askHeroHTML(suggests)}
     <div class="cols">
       <div>
         ${leads.length ? `
@@ -3714,3 +3716,67 @@ document.getElementById("search-form").addEventListener("submit", e => {
 });
 window.addEventListener("hashchange", route);
 route();
+
+/* ---------- Ask ListTrac: the landing hero ---------- */
+/* One box that takes a player, a club, or a question. Resolves straight to a
+   page when it can; otherwise shows the verified records behind the answer
+   (source cards with a confirmed/reported badge), plus a model-written
+   summary only when synthesis is switched on server-side. */
+function askHeroHTML(suggests) {
+  const date = new Date().toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long" }).toUpperCase();
+  const cards = ((suggests && suggests.cards) || []).map(c => `
+    <a class="ask-card" href="${esc(c.href)}">
+      <b>${esc(c.title)}</b>
+      <span class="ask-sub ${c.tone === "alert" ? "alert" : ""}">${esc(c.sub)}</span>
+      <span class="ask-cta">${esc(c.cta)}</span>
+    </a>`).join("");
+  return `
+  <section class="ask-hero">
+    <p class="ask-date">${date}</p>
+    <h2 class="ask-title">What do you want to settle today?</h2>
+    <form class="ask-form" id="ask-form" autocomplete="off">
+      <input id="ask-input" type="search" placeholder="A player, a club, or a question — “Is Butters out of contract?”" aria-label="Ask ListTrac">
+      <button class="ask-go" type="submit">Go</button>
+    </form>
+    <div id="ask-results" aria-live="polite"></div>
+    ${cards ? `<div class="ask-suggests">
+      <p class="ask-eyebrow"><span class="ask-mark">L</span> ListTrac suggests</p>
+      <div class="ask-grid">${cards}</div>
+      <p class="ask-more"><a href="#/contracts">See everyone who's up →</a></p>
+    </div>` : ""}
+  </section>`;
+}
+
+document.addEventListener("submit", async e => {
+  const f = e.target;
+  if (!f || f.id !== "ask-form") return;
+  e.preventDefault();
+  const q = f.querySelector("#ask-input").value.trim();
+  const out = document.getElementById("ask-results");
+  if (!q || !out) return;
+  out.innerHTML = `<p class="ask-status">Checking the verified records…</p>`;
+  let r;
+  try { r = await api(`/api/ask?q=${encodeURIComponent(q)}`); }
+  catch (err) { out.innerHTML = `<p class="ask-status error">Couldn't reach ListTrac — ${esc(err.message)}</p>`; return; }
+  const res = r.resolved || {};
+  if (res.navigate && res.href) { location.hash = res.href; return; }
+  const badge = c => `<span class="ask-badge ${c.status}">${c.status}</span>`;
+  const rec = c => `
+    <div class="ask-rec">
+      <div class="ask-rec-head"><b>${esc(c.name)}</b> ${badge(c)}${c.current ? ` <span class="chip">current deal</span>` : ""}</div>
+      <div class="ask-rec-body">${esc(c.kind)} · ${esc(c.club || "")}${c.end_year ? ` · ends ${c.end_year}` : ""} · ${esc(c.date)}</div>
+      <div class="ask-rec-src">${c.source_url
+        ? `<a href="${esc(c.source_url)}" target="_blank" rel="noopener">${esc(c.reporter || "source")} ↗</a>`
+        : esc(c.reporter || "")} · verified ${esc(c.verified)}</div>
+    </div>`;
+  const options = res.type === "players"
+    ? `<p class="ask-status">Did you mean: ${res.options.map(o => `<a href="#/player/${o.id}">${esc(o.name)}</a> (${esc(o.club)})`).join(" · ")}</p>` : "";
+  const lead = res.type === "player"
+    ? `<p class="ask-status">Verified records for <a href="${esc(res.href)}"><b>${esc(res.name)}</b></a> (${esc(res.club)}):</p>`
+    : res.type === "club" ? `<p class="ask-status">Current deals at <a href="${esc(res.href)}"><b>${esc(res.name)}</b></a>:</p>` : "";
+  const answer = r.answer ? `<div class="ask-answer">${esc(r.answer)}</div>`
+    : r.synthesis === "off" ? `<p class="ask-status thin">Showing the verified records. AI synthesis is switched off in this prototype.</p>`
+    : (r.synthesis === "capped" || r.synthesis === "rate_limited") ? `<p class="ask-status thin">Showing the verified records — the AI answer is paused (usage cap).</p>` : "";
+  if (!r.cards.length && !options) { out.innerHTML = `<p class="ask-status">No verified data yet on that. Try a player or club name.</p>`; return; }
+  out.innerHTML = `${options}${lead}${answer}<div class="ask-recs">${r.cards.map(rec).join("")}</div>`;
+});

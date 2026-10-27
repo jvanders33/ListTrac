@@ -16,7 +16,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 import requests
-from fastapi import FastAPI, HTTPException
+from fastapi import Request, FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 
 DB_PATH = Path(__file__).resolve().parent.parent / "data" / "listtrac.db"
@@ -2343,5 +2343,239 @@ def contract_status(status: str | None = None, club: str | None = None):
 # static frontend — mounted last so API routes win. Guarded: if the directory
 # is missing from a serverless bundle, degrade to API-only instead of crashing
 # the whole function at import time (StaticFiles raises on a missing dir).
+# ---------------------------------------------------------------------------
+# Ask ListTrac - the landing "what do you want to settle today?" box.
+#
+# Three tiers, cheapest first, so most queries never touch a model:
+#   0. resolve    - a player/club name or a recognised intent routes straight
+#                   to the right page/board (free, instant).
+#   1. retrieve   - the matching verified records (contract events, expiry)
+#                   as source cards with a confirmed/reported badge and a
+#                   verified date (free).
+#   2. synthesise - OPTIONAL: a small model writes 2-3 sentences ONLY from
+#                   those cards, citing them, or says "no verified data".
+#                   Dormant unless ANTHROPIC_API_KEY is set; guarded by a hard
+#                   daily cap, a per-IP rate limit and a cache. No key = tiers
+#                   0-1 only, which still answers the lookups people ask most.
+# ---------------------------------------------------------------------------
+import os as _os
+import time as _time
+import datetime as _dt
+
+ASK_MODEL = _os.environ.get("LISTTRAC_AI_MODEL", "claude-haiku-5-5")
+ASK_DAILY_CAP = int(_os.environ.get("LISTTRAC_AI_DAILY_CAP", "200"))   # synth calls per UTC day
+ASK_RATE_PER_MIN = int(_os.environ.get("LISTTRAC_AI_RATE_PER_MIN", "8"))
+_ask_cache: dict = {}            # question -> answer text (synthesis only)
+_ask_spend = {"day": None, "calls": 0}
+_ask_hits: dict = {}             # ip -> [epoch seconds]
+_ask_players: list = []          # [(norm, id, name, club)] cached roster index
+
+# Official sources count as confirmed. Everything else (aggregators, news) is reported.
+OFFICIAL_DOMAINS = (
+    "afl.com.au", "afc.com.au", "lions.com.au", "carltonfc.com.au", "collingwoodfc.com.au",
+    "essendonfc.com.au", "fremantlefc.com.au", "geelongcats.com.au", "goldcoastfc.com.au",
+    "gwsgiants.com.au", "hawthornfc.com.au", "melbournefc.com.au", "nmfc.com.au",
+    "portadelaidefc.com.au", "richmondfc.com.au", "saints.com.au", "sydneyswans.com.au",
+    "westcoasteagles.com.au", "westernbulldogs.com.au",
+)
+_STOP = {"the", "and", "for", "who", "what", "when", "contract", "does", "has", "his", "with", "until"}
+
+
+def _rec_status(e: dict) -> str:
+    dom = re.sub(r"^https?://(www\.)?", "", e.get("source_url") or "").split("/")[0].lower()
+    return "confirmed" if any(dom == d or dom.endswith("." + d) for d in OFFICIAL_DOMAINS) else "reported"
+
+
+def _ask_roster() -> list:
+    global _ask_players
+    if not _ask_players:
+        with db() as conn:
+            _ask_players = [(_norm(f"{r['first_name']} {r['last_name']}"), r["id"],
+                             f"{r['first_name']} {r['last_name']}", r["club"])
+                            for r in conn.execute(
+                                """SELECT p.id, p.first_name, p.last_name, c.abbreviation club
+                                   FROM player p JOIN club c ON c.id = p.current_club_id
+                                   WHERE p.status = 'listed'""")]
+    return _ask_players
+
+
+def _event_card(e: dict) -> dict:
+    return {"type": "contract", "name": e["name"], "kind": e["kind"], "date": e["date"],
+            "club": e.get("club"), "end_year": e.get("end_year"), "current": bool(e.get("current")),
+            "status": _rec_status(e), "verified": e["date"],   # a true verified_at lands with the review queue
+            "reporter": e.get("reporter"), "source_url": e.get("source_url")}
+
+
+def _ask_resolve(q: str) -> dict:
+    """Tier 0: route a name or a recognised intent. A player mentioned inside a
+    longer question resolves to that player but does NOT navigate - the records
+    answer it in place; a bare name navigates straight to the page."""
+    ql, qn = q.lower().strip(), _norm(q)
+    words = set(re.findall(r"[a-z]+", ql))
+    full, by_surname = [], []
+    for n, pid, name, club in _ask_roster():
+        toks = [t for t in re.findall(r"[a-z]+", name.lower()) if len(t) >= 3]
+        if not toks:
+            continue
+        if n == qn or all(t in words for t in toks):
+            full.append((pid, name, club))
+        elif len(toks[-1]) >= 4 and toks[-1] in words:
+            by_surname.append((pid, name, club))
+    # a full-name match beats surname-only matches ("Ben King" must not drag in the Max Kings)
+    hits = list({h[0]: h for h in (full or by_surname)}.values())
+    if len(hits) == 1:
+        pid, name, club = hits[0]
+        bare = words <= set(re.findall(r"[a-z]+", name.lower()))
+        return {"type": "player", "id": pid, "name": name, "club": club,
+                "href": f"#/player/{pid}", "navigate": bare}
+    if 1 < len(hits) <= 6:
+        return {"type": "players", "options": [{"id": h[0], "name": h[1], "club": h[2]} for h in hits]}
+    with db() as conn:
+        for r in conn.execute("SELECT name, abbreviation FROM club"):
+            if ql == r["abbreviation"].lower() or r["name"].lower() in ql or _norm(r["name"]) == qn:
+                bare = _norm(r["name"]) == qn or ql == r["abbreviation"].lower()
+                return {"type": "club", "abbrev": r["abbreviation"], "name": r["name"],
+                        "href": f"#/club/{r['abbreviation']}", "navigate": bare}
+    m = re.search(r"out of contract\D*(20\d\d)?", ql)
+    if m or "off contract" in ql or "expir" in ql:
+        return {"type": "board", "label": "Contract expiry board", "href": "#/contracts",
+                "year": int(m.group(1)) if m and m.group(1) else None, "navigate": True}
+    if re.search(r"\bpick\s*\d+|draft order|draft board|who holds", ql):
+        return {"type": "board", "label": "2026 draft board", "href": "#/draft", "navigate": True}
+    if "free agent" in ql or "free agency" in ql:
+        return {"type": "board", "label": "Free agents", "href": "#/free-agents", "navigate": True}
+    return {"type": "none"}
+
+
+def _ask_retrieve(q: str, resolved: dict) -> list:
+    """Tier 1: the verified records behind the question."""
+    cards, by = [], _contracts_by_name().get("_by_name", {})
+    if resolved.get("type") == "player":
+        for e in sorted(by.get(_norm(resolved["name"]), []), key=lambda x: x["date"], reverse=True)[:8]:
+            cards.append(_event_card(e))
+    elif resolved.get("type") == "club":
+        ab = resolved["abbrev"]
+        evs = [e for lst in by.values() for e in lst if e.get("club") == ab and e.get("current")]
+        for e in sorted(evs, key=lambda x: (x.get("end_year") or 0), reverse=True)[:8]:
+            cards.append(_event_card(e))
+    else:
+        words = [w for w in re.findall(r"[a-z]{3,}", q.lower()) if w not in _STOP]
+        scored = []
+        for lst in by.values():
+            for e in lst:
+                hay = f"{e['name']} {e.get('note', '')} {e.get('club', '')}".lower()
+                s = sum(1 for w in words if w in hay)
+                if s:
+                    scored.append((-s, e["date"], e))
+        for _, _, e in sorted(scored, key=lambda t: (t[0], t[1]))[:6]:
+            cards.append(_event_card(e))
+    return cards
+
+
+def _ask_synthesise(q: str, cards: list, ip: str):
+    """Tier 2 (dormant without a key). Returns (answer, mode)."""
+    if not _os.environ.get("ANTHROPIC_API_KEY"):
+        return None, "off"
+    if not cards:
+        return None, "no_records"
+    key = q.strip().lower()
+    if key in _ask_cache:
+        return _ask_cache[key], "cached"
+    now = _time.time()
+    hits = [t for t in _ask_hits.get(ip, []) if now - t < 60]
+    if len(hits) >= ASK_RATE_PER_MIN:
+        return None, "rate_limited"
+    today = _dt.datetime.now(_dt.timezone.utc).date()
+    if _ask_spend["day"] != today:
+        _ask_spend.update(day=today, calls=0)
+    if _ask_spend["calls"] >= ASK_DAILY_CAP:
+        return None, "capped"
+    try:
+        import anthropic  # lazy: the app must boot without the SDK installed
+    except ImportError:
+        return None, "sdk_missing"
+    system = ("You are Ask ListTrac, the verified AFL contract and list-data reference. Answer the "
+              "question in 2-3 plain sentences using ONLY the records provided. Cite each claim with "
+              "the record number in square brackets like [2]. Never guess, never add outside knowledge, "
+              "never mention dollar figures. If the records don't answer the question, reply exactly: "
+              "No verified data yet on that.")
+    user = f"Question: {q}\n\nRecords:\n" + "\n".join(
+        f"[{i + 1}] {c['name']} - {c['kind']} - {c['club']} - {c['date']} - ends {c.get('end_year') or 'n/a'} - "
+        f"{c['status']} - current={c['current']}" for i, c in enumerate(cards))
+    try:
+        client = anthropic.Anthropic()
+        resp = client.messages.create(model=ASK_MODEL, max_tokens=400, system=system,
+                                      output_config={"effort": "low"},
+                                      messages=[{"role": "user", "content": user}])
+    except anthropic.RateLimitError:
+        return None, "rate_limited"
+    except anthropic.APIStatusError:
+        return None, "error"
+    except anthropic.APIConnectionError:
+        return None, "error"
+    if resp.stop_reason == "refusal":
+        return None, "refused"
+    text = "".join(b.text for b in resp.content if b.type == "text").strip()
+    _ask_hits[ip] = hits + [now]
+    _ask_spend["calls"] += 1
+    _ask_cache[key] = text
+    return text, "ok"
+
+
+@app.get("/api/ask")
+def ask(q: str, request: Request = None):
+    q = (q or "").strip()
+    if not q:
+        raise HTTPException(400, "empty question")
+    resolved = _ask_resolve(q)
+    cards = _ask_retrieve(q, resolved)
+    # the roster's current_club can lag a fresh move; the current deal is the truth
+    if resolved.get("type") == "player":
+        cur = next((c for c in cards if c.get("current") and c.get("club")), None)
+        if cur:
+            resolved["club"] = cur["club"]
+    ip = request.client.host if request and request.client else "anon"
+    answer, mode = _ask_synthesise(q, cards, ip)
+    return {"q": q, "resolved": resolved, "cards": cards, "answer": answer, "synthesis": mode,
+            "model": ASK_MODEL if mode not in ("off", "sdk_missing") else None}
+
+
+@app.get("/api/suggests")
+def suggests():
+    """The 'ListTrac suggests' cards - proactive, computed from verified data, no model."""
+    out = []
+    try:
+        ex = contract_expiry()
+        cy = ex["current_year"]
+        top = [p for p in ex["buckets"].get(cy, ex["buckets"].get(str(cy), [])) if p.get("rating")][:3]
+        if top:
+            out.append({"title": "Biggest names in a contract year", "tone": "alert",
+                        "sub": ", ".join(p["name"] for p in top) + f" are unsigned beyond {cy}",
+                        "cta": "See the expiry board", "href": "#/contracts"})
+        nxt = ex["counts"].get(cy + 1, ex["counts"].get(str(cy + 1)))
+        if nxt:
+            out.append({"title": f"{nxt} players out of contract {cy + 1}", "tone": "alert",
+                        "sub": "Every listed player whose deal ends next season",
+                        "cta": "Open the list", "href": "#/contracts"})
+    except Exception:
+        pass
+    try:
+        evs = [e for lst in _contracts_by_name().get("_by_name", {}).values() for e in lst if e.get("manual")]
+        latest = sorted(evs, key=lambda e: e["date"], reverse=True)[:3]
+        if latest:
+            out.append({"title": "Latest verified changes", "tone": "steady",
+                        "sub": "; ".join(f"{e['name']} - {e['kind']} ({e['date']})" for e in latest),
+                        "cta": "Browse players", "href": "#/players"})
+    except Exception:
+        pass
+    if DRAFT_ORDER_PATH.exists():
+        out.append({"title": "Draft board updated post-trade period", "tone": "steady",
+                    "sub": "Official 2026 order - trade chains and compensation picks applied",
+                    "cta": "See the board", "href": "#/draft"})
+    return {"cards": out[:4]}
+
+
 if WEB_DIR.is_dir():
+
+
     app.mount("/", StaticFiles(directory=WEB_DIR, html=True), name="web")
