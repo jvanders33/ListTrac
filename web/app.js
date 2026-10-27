@@ -3733,7 +3733,7 @@ function askHeroHTML(suggests) {
   return `
   <section class="ask-hero">
     <p class="ask-date">${date}</p>
-    <h2 class="ask-title">What do you want to settle today?</h2>
+    <h2 class="ask-title">What do you want to know today?</h2>
     <form class="ask-form" id="ask-form" autocomplete="off">
       <input id="ask-input" type="search" placeholder="A player, a club, or a question — “Is Butters out of contract?”" aria-label="Ask ListTrac">
       <button class="ask-go" type="submit">Go</button>
