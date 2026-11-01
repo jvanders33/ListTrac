@@ -2,15 +2,23 @@
  "source": "AFL.com.au",
  "source_url": "https://www.afl.com.au/news",
  "note": "Contract / free-agency / trade movement coverage from the AFL — headline & link only.",
- "count": 1,
+ "count": 2,
  "items": [
   {
-   "title": "Off-season watch: Flag Lion knocks back rival interest, Pies look to make bold draft move",
+   "title": "Off-season watch: Cats footy boss makes call amid Tassie interest",
    "summary": "Get the latest draft whispers and player moves ahead of the 2027 season",
-   "date": "2026-10-25",
+   "date": "2026-11-01",
    "author": "staff writers",
    "tag": "Trade",
-   "url": "https://www.afl.com.au/news/1633362/off-season-watch-ex-blue-meets-bombers-flag-tigers-land-coaching-gigs"
+   "url": "https://www.afl.com.au/news/1636417/off-season-watch-all-the-list-changes-player-movement-rumours-and-more-ahead-of-the-2026-draft"
+  },
+  {
+   "title": "Giants star makes decision on future amid Tasmania's interest",
+   "summary": "Giants midfielder Tom Green has made a call on his future amid rival interest",
+   "date": "2026-10-30",
+   "author": "Staff writer",
+   "tag": "Contract",
+   "url": "https://www.afl.com.au/news/1636628/greater-western-sydney-giants-star-tom-green-makes-decision-on-future-amid-tasmanias-interest"
   }
  ]
 }
