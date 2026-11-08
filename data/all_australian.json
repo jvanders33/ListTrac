@@ -18,7 +18,7 @@
  "by_year": {
   "2015": {
    "team": [
-    "Robert Murphy",
+    "Bob Murphy",
     "Josh Kennedy",
     "Fox Sports",
     "News Corp Australia",
@@ -84,7 +84,7 @@
     "Matt Priddis",
     "Matthew Boyd",
     "Luke Dahlhaus",
-    "Robert Murphy",
+    "Bob Murphy",
     "Jake Stringer",
     "Easton Wood"
    ]
@@ -807,8 +807,8 @@
   }
  },
  "players": {
-  "robert murphy": {
-   "name": "Robert Murphy",
+  "bob murphy": {
+   "name": "Bob Murphy",
    "team_years": [
     2015
    ],

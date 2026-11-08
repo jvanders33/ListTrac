@@ -47,7 +47,7 @@
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
    "top10": 6.7,
-   "top25": 17.3,
+   "top25": 17.0,
    "aa_hit_rate": 0.576,
    "aa_hits": 38,
    "aa_n": 66,
@@ -60,7 +60,7 @@
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
    "top10": 6.7,
-   "top25": 17.3,
+   "top25": 17.0,
    "aa_hit_rate": 0.576,
    "aa_hits": 38,
    "aa_n": 66,
@@ -106,7 +106,7 @@
    "label": "ListTrac Brownlow model",
    "spearman": 0.664,
    "top10": 6.7,
-   "top25": 17.3,
+   "top25": 17.0,
    "aa_hit_rate": 0.576,
    "aa_hits": 38,
    "aa_n": 66,
@@ -178,7 +178,7 @@
     "predictor": {
      "spearman": 0.662,
      "top10": 7,
-     "top25": 19,
+     "top25": 18,
      "aa_hits": 12,
      "aa_n": 22
     }
